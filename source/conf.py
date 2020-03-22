@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'مستندات شخصی احسان احمدی'
+project = 'Ehsan Ahmadi Personal Docs'
 copyright = '2020, EHSAN AHMADI'
 author = 'EHSAN AHMADI'
 
