@@ -1,8 +1,8 @@
 Ehsan Ahmadi Personal Docs
 ==========================
 
-Taable of Contents
-==================
+Table of Contents
+=================
 
 .. toctree::
    :maxdepth: 2
