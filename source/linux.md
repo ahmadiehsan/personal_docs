@@ -217,3 +217,7 @@ if you have problem with mysql, run the below commands
 sudo os-prober
 sudo update-grub
 ```
+
+## linux version
+
+`cat /etc/*-release`
