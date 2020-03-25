@@ -1,8 +1,3 @@
 # Kubernetes
 
-## generate secret
-
-```
-
-```
-
+Nothing Here But Love :)
