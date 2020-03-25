@@ -193,137 +193,94 @@ def debug_task(self):
 
 ## after start project checklist
 
-- imports:
+```python
+# settings.py
 
-  ```python
-  import datetime
-  import locale
-  import logging.config
-  ```
+import datetime
+import locale
+import logging.config
 
-- BASE_DIR:
+os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-  ```python
-  os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-  ```
+DJANGO_APPS = []
+PROJECT_APPS = []
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
 
-- Apps:
+'DIRS': [os.path.join(BASE_DIR, 'templates')], # Templates
+    
+LANGUAGE_CODE = 'fa-ir'  # django 2
+LANGUAGE_CODE = 'fa'  # django 3
+locale.setlocale(locale.LC_ALL, 'fa_IR')
+TIME_ZONE = 'Asia/Tehran'
 
-  ```python
-  DJANGO_APPS = []
-  PROJECT_APPS = []
-  INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
-  ```
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-- Templates:
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{name} {levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'fileDebug': {
+            'class': 'logging.FileHandler',
+            'filename': '/var/log/<project name: karestoon>/debug.log',
+            'formatter': 'verbose',
+            'level': 'DEBUG',
+        },
+        'fileError': {
+            'class': 'logging.FileHandler',
+            'filename': '/var/log/<project name: karestoon>/error.log',
+            'formatter': 'verbose',
+            'level': 'ERROR',
+        },
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+            'level': 'WARNING',
+        }
+    },
+    'loggers': {
+        'suds': {
+            'handlers': [],
+            'propagate': True,
+            'level': 'CRITICAL',
+        },
+        '': {
+            'handlers': ['fileDebug', 'fileError', 'console'],
+            'propagate': True,
+            'level': 'DEBUG',
+        },
+    },
+}
+logging.config.dictConfig(LOGGING)
+LOGGER_V1 = logging.getLogger(__name__)
 
-  ```python
-  'DIRS': [os.path.join(BASE_DIR, 'templates')],
-  ```
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-- Time and Language:
+LOGIN_REDIRECT_URL = "/profile/"
+LOGOUT_REDIRECT_URL = "/"
 
-  ```python
-  LANGUAGE_CODE = 'fa-ir'  # django 2
-  LANGUAGE_CODE = 'fa'  # django 3
-  locale.setlocale(locale.LC_ALL, 'fa_IR')
-  TIME_ZONE = 'Asia/Tehran'
-  ```
+LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
 
-- Static:
+MIDDLEWARE = ['django.middleware.gzip.GZipMiddleware',]
+```
 
-  ```python
-  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-  ```
+```python
+# urls.py
 
-- Logging:
+from django.conf import settings
+from django.conf.urls.static import static
 
-  ```python
-  # Logging
-  LOGGING = {
-      'version': 1,
-      'disable_existing_loggers': False,
-      'formatters': {
-          'verbose': {
-              'format': '{name} {levelname} {asctime} {module} {process:d} {thread:d} {message}',
-              'style': '{',
-          },
-          'simple': {
-              'format': '{levelname} {message}',
-              'style': '{',
-          },
-      },
-      'handlers': {
-          'fileDebug': {
-              'class': 'logging.FileHandler',
-              'filename': '/var/log/<project name: karestoon>/debug.log',
-              'formatter': 'verbose',
-              'level': 'DEBUG',
-          },
-          'fileError': {
-              'class': 'logging.FileHandler',
-              'filename': '/var/log/<project name: karestoon>/error.log',
-              'formatter': 'verbose',
-              'level': 'ERROR',
-          },
-          'console': {
-              'class': 'logging.StreamHandler',
-              'formatter': 'simple',
-              'level': 'WARNING',
-          }
-      },
-      'loggers': {
-          'suds': {
-              'handlers': [],
-              'propagate': True,
-              'level': 'CRITICAL',
-          },
-          '': {
-              'handlers': ['fileDebug', 'fileError', 'console'],
-              'propagate': True,
-              'level': 'DEBUG',
-          },
-      },
-  }
-  logging.config.dictConfig(LOGGING)
-  LOGGER_V1 = logging.getLogger(__name__)
-  ```
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
 
-- MEDIA:
-
-  ```python
-  MEDIA_URL = '/media/'
-  MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-  ```
-  
-  For MEDIA in local and debug mode
-  
-  ```python
-  from django.conf import settings
-  from django.conf.urls.static import static
-  
-  if settings.DEBUG:
-      urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-  ```
-
-
-- Login and Logout:
-
-  ```python
-  LOGIN_REDIRECT_URL = "/profile/"
-  LOGOUT_REDIRECT_URL = "/"
-  ```
-
-- locale:
-
-  ```python
-  LOCALE_PATHS = [os.path.join(BASE_DIR, "locale")]
-  ```
-
-- gzip:
-
-  ```python
-  MIDDLEWARE = [
-      'django.middleware.gzip.GZipMiddleware',
-  ]
-  ```
