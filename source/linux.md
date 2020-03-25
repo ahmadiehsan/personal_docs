@@ -218,6 +218,11 @@ sudo os-prober
 sudo update-grub
 ```
 
-## linux version
+## machine version
 
 `cat /etc/*-release`
+
+## machine config
+
+- cpu: `lscpu`
+- memory: `free -h`

@@ -144,12 +144,23 @@ commands:
 
 ## celery
 
-add `celery_config.py` contents to your django `settings.py` file
+```python
+# settings.py
 
-then add `celery.py` file to main django folder
+# config variables must start with "namespace" in .config_from_object function
+# for example: CELERY_
+
+CELERY_IMPORTS = ('apps.job.tasks',)  # task files address
+CELERY_BROKER_URL = 'redis://localhost:6379/'  # redis as broker
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/'  # redis as small db
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'pickle'  # default: 'json'
+CELERY_RESULT_SERIALIZER = 'pickle'  # default: 'json'
+CELERY_TIMEZONE = 'Asia/Tehran'
+```
 
 ```python
-# celery.py
+# DJANGO_MAIN_APP/celery.py
 
 from __future__ import absolute_import, unicode_literals
 import os
