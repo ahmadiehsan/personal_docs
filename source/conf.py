@@ -14,6 +14,8 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import sphinx_material
+
 
 # -- Project information -----------------------------------------------------
 
@@ -33,6 +35,8 @@ release = '1.0.0'
 extensions = [
     'recommonmark',
     'sphinx_markdown_tables',
+    'sphinx_material',
+    'sphinx_copybutton',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -65,11 +69,16 @@ source_suffix = {
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_material'
 html_theme_options = {
-    'logo_only': False,
-    'display_version': True,
+    'color_primary': 'indigo',
+    'color_accent': 'blue',
+    'logo_icon': '&#xe869',
+    'master_doc': False,
 }
+html_theme_path = sphinx_material.html_theme_path()
+html_context = sphinx_material.get_html_context()
+
 #def setup(app):
 #    app.add_stylesheet('_themes/readthedocs-rtl/css/extra.css')
 
