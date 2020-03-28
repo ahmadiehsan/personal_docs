@@ -226,3 +226,10 @@ sudo update-grub
 
 - cpu: `lscpu`
 - memory: `free -h`
+
+## minimal curl
+
+```bash
+curl -i -H "Accept: text/html" 127.0.0.1:31001 -v
+```
+
