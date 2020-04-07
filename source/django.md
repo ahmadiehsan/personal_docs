@@ -263,6 +263,10 @@ LOGGING = {
 logging.config.dictConfig(LOGGING)
 LOGGER_V1 = logging.getLogger(__name__)
 
+SESSION_COOKIE_NAME = '<project name: karestoon>_sessionid'
+CSRF_COOKIE_NAME = '<project name: karestoon>_csrftoken'
+LANGUAGE_COOKIE_NAME = '<project name: karestoon>_language'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
