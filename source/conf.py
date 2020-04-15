@@ -78,6 +78,9 @@ html_theme_options = {
 }
 html_theme_path = sphinx_material.html_theme_path()
 html_context = sphinx_material.get_html_context()
+html_sidebars = {
+    "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
