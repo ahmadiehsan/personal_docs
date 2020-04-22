@@ -214,6 +214,7 @@ locale.setlocale(locale.LC_ALL, 'fa_IR')
 TIME_ZONE = 'Asia/Tehran'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGGING = {
     'version': 1,

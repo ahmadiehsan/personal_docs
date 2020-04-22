@@ -89,3 +89,7 @@
 ## postgres version
 
 `SHOW server_version`
+
+## run command by sudo
+
+`sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"`

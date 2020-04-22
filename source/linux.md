@@ -101,6 +101,10 @@ fi
 dns-nameservers 185.51.200.2 178.22.122.100
 ```
 
+```bash
+sudo service networking restart
+```
+
 ## Tmux
 
 commands:
