@@ -237,3 +237,9 @@ sudo update-grub
 curl -i -H "Accept: text/html" 127.0.0.1:31001 -v
 ```
 
+## vim replace all
+
+```
+:%s/foo/bar/g
+```
+

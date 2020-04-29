@@ -6,13 +6,15 @@
 
 - import data to database from sql file:
 
-  `pg_restore -d <db name> < <file_name.sql>`
-  `psql ...`
+  `psql -d <db name> -f <file_name.sql>`
 
 - export data from database to sql file:
 
-  `pg_dump -d <db name> > <file_name.sql>`
-  `psql ...`
+  `pg_dump --no-owner -d <database_name> -t <table_name> > <file_name>.sql`
+  
+- insert to table from other table
+
+  `INSERT INTO <table1> select * from <table2>`
 
 ## user
 
@@ -73,6 +75,22 @@
   for creating new column need to temporarily disable all connections to table
 
   `ALTER TABLE <table name> ADD COLUMN <column name> <data type> [NOT NULL] [DEFAULT <value>]`
+  
+- show table column
+
+  `select column_name, data_type from information_schema.columns where table_name = '<table name>'`
+
+- make column nullable
+
+  `ALTER TABLE <table name> ALTER COLUMN <column name> DROP NOT NULL`
+
+- make column not nullable
+
+  `ALTER TABLE <table name> ALTER COLUMN <column name> SET NOT NULL`
+
+- update column value base other column
+
+  `Update <table> SET <column one> = <column two>`
 
 ## temporarily disable all connections to table
 
