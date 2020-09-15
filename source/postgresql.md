@@ -108,6 +108,10 @@
 
 `SHOW server_version`
 
+## Change sequence number
+
+`ALTER SEQUENCE <table>_id_seq RESTART WITH <number: 100>`
+
 ## run command by sudo
 
 `sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"`
