@@ -21,7 +21,7 @@
   ssh-add
   ```
 
-- list of private kies: `ssh-add -l`
+- list of private keys: `ssh-add -l`
 
 - you can access to you public ssh key by this command: `cat ~/.ssh/id_rsa.pub`
 
@@ -37,13 +37,13 @@
 
 ```shell
 # compress
-tar -czvf <name-of-archive.tar.tgz> </path/to/directory>
-tar -czvf <name-of-archive.tar.tgz> </path/to/directory>/.	# include hidden files
-tar -czvf <name-of-archive.tar.tgz> </path/to/file>
+tar -czvf <name-of-archive.tgz> </path/to/directory>
+tar -czvf <name-of-archive.tgz> </path/to/directory>/.	# include hidden files
+tar -czvf <name-of-archive.tgz> </path/to/file>
 
 # extract
-tar -xzvf <name-of-archive.tar.tgz>
-tar -xzvf <name-of-archive.tar.tgz> -C </path/to/directory>
+tar -xzvf <name-of-archive.tgz>
+tar -xzvf <name-of-archive.tgz> -C </path/to/directory>
 ```
 
 ## Cron
