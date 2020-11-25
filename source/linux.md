@@ -33,6 +33,19 @@
   ServerAliveInterval 60
   ```
 
+## Compress and Extract
+
+```shell
+# compress
+tar -czvf <name-of-archive.tar.tgz> </path/to/directory>
+tar -czvf <name-of-archive.tar.tgz> </path/to/directory>/.	# include hidden files
+tar -czvf <name-of-archive.tar.tgz> </path/to/file>
+
+# extract
+tar -xzvf <name-of-archive.tar.tgz>
+tar -xzvf <name-of-archive.tar.tgz> -C </path/to/directory>
+```
+
 ## Cron
 
 1. add file without ".sh" to `/etc/cron.daily/`
