@@ -136,6 +136,10 @@ commands:
 
 Extensions:
 
+- workspace thumbnails:
+
+  https://extensions.gnome.org/extension/1516/workspace-switcher-popup-with-thumbnails/
+
 - workspace like unity:
 
   https://extensions.gnome.org/extension/1485/workspace-matrix/
