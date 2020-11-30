@@ -260,3 +260,9 @@ curl -i -H "Accept: text/html" 127.0.0.1:31001 -v
 :%s/foo/bar/g
 ```
 
+## merge two directory
+
+```
+rsync -a <other/dir> <destination/dir>
+```
+
