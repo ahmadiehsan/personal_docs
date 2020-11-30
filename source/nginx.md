@@ -6,6 +6,29 @@
 ## test
 `sudo nginx -t`
 
+## simple config
+
+```
+server {
+    listen 443 ssl;
+    server_name video.darsup.org;
+    location / {
+        include proxy_params;
+        proxy_pass http://localhost:8002;
+    }
+}
+
+server {
+    if ($host = marketing.darsup.org) {
+        return 301 https://$host$request_uri;
+    }
+
+    listen 80;
+    server_name marketing.darsup.org;
+    return 404;
+}
+```
+
 ## gzip
 
 ```
