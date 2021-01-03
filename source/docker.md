@@ -25,3 +25,26 @@ sudo usermod -aG docker your-user
 sudo sh -c "truncate -s 0 /var/lib/docker/containers/*/*-json.log"
 ```
 
+## keep container alive
+
+```
+CMD ["tail", "-f", "/dev/null"]
+```
+
+## build image
+
+```bash
+docker build . --tag <image_tag>
+```
+
+## create container from image
+
+```bash
+docker run --name <container_name> -d <image_tag>
+```
+
+## run command in container
+
+```bash
+docker exec -it <container_name> bash
+```
