@@ -43,8 +43,21 @@ docker build . --tag <image_tag>
 docker run --name <container_name> -d <image_tag>
 ```
 
+## create image from container
+
+```
+docker commit <container_name>
+docker tag <created_image_id> <image_name:image_tag>
+```
+
 ## run command in container
 
 ```bash
 docker exec -it <container_name> bash
+```
+
+## build and run by docker-compose
+
+```bash
+docker-compose up
 ```
