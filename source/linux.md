@@ -49,7 +49,8 @@ tar -xzvf <name-of-archive.tgz> -C </path/to/directory>
 ## Cron
 
 1. add file without ".sh" to `/etc/cron.daily/`
-2. test for correct run: `run-parts --test /etc/cron.daily`
+2. or add corn command to `/etc/crontab`
+3. test for correct run: `run-parts --test /etc/cron.daily`
 
 ## Firewall
 
