@@ -61,3 +61,12 @@ docker exec -it <container_name> bash
 ```bash
 docker-compose up
 ```
+
+## login and push to other registry
+
+```
+docker login mgit.mparsict.com:5050
+docker build -t mgit.mparsict.com:5050/edx/darsup/mp-media-service:juniper.master .
+docker push mgit.mparsict.com:5050/edx/darsup/mp-media-service:juniper.master
+docker logout mgit.mparsict.com:5050
+```
