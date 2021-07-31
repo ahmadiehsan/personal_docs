@@ -33,17 +33,35 @@
   ServerAliveInterval 60
   ```
 
+## Contrib / non-free repo
+
+```
+# /etc/apt/sources.list
+
+deb http://deb.debian.org/debian/ buster main contrib non-free
+deb-src http://deb.debian.org/debian/ buster main contrib non-free
+
+deb http://security.debian.org/debian-security buster/updates main contrib non-free
+deb-src http://security.debian.org/debian-security buster/updates main contrib non-free
+
+deb http://deb.debian.org/debian/ buster-updates main contrib non-free
+deb-src http://deb.debian.org/debian/ buster-updates main contrib non-free
+```
+
 ## Compress and Extract
 
 ```shell
-# compress
+# compress (tar)
 tar -czvf <name-of-archive.tgz> </path/to/directory>
 tar -czvf <name-of-archive.tgz> </path/to/directory>/.	# include hidden files
 tar -czvf <name-of-archive.tgz> </path/to/file>
 
-# extract
+# extract (tar)
 tar -xzvf <name-of-archive.tgz>
 tar -xzvf <name-of-archive.tgz> -C </path/to/directory>
+
+# extract (tar)  # sudo apt-get install unrar
+unrar x -r </path/to/file.rar>
 ```
 
 ## Cron

@@ -40,7 +40,7 @@ docker build . --tag <image_tag>
 ## create container from image
 
 ```bash
-docker run --name <container_name> -d <image_tag>
+docker run -p 80:80 --name <container_name> -d <image_tag>
 ```
 
 ## create image from container
