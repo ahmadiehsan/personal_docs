@@ -113,17 +113,6 @@ unrar x -r </path/to/file.rar>
 
 `ctrl + alt + f5`
 
-## sample .sh file
-
-```bash
-#!/bin/bash
-
-# If started as root, then re-start as user "ehsan":
-if [ "$(id -u)" -eq 0 ]; then
-    exec sudo -H -u ehsan $0 "$@"
-fi
-```
-
 ## dns change
 
 ```bash
@@ -183,60 +172,6 @@ Extensions:
 
   https://extensions.gnome.org/extension/949/bottompanel/
 
-## Xampp
-
-install:
-
-1. donload from [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html)
-2. `chmod +x <.run file>`
-3. `./<.run file>`
-
-commands:
-
-`sudo /opt/lampp/xampp <action name>`
-
-| Action         | Description                                               |
-| -------------- | --------------------------------------------------------- |
-| `start`        | Start XAMPP (Apache, MySQL and eventually others)         |
-| `startapache`  | Start only Apache                                         |
-| `startmysql`   | Start only MySQL                                          |
-| `startftp`     | Start only ProFTPD                                        |
-| `stop`         | Stop XAMPP (Apache, MySQL and eventually others)          |
-| `stopapache`   | Stop only Apache                                          |
-| `stopmysql`    | Stop only MySQL                                           |
-| `stopftp`      | Stop only ProFTPD                                         |
-| `reload`       | Reload XAMPP (Apache, MySQL and eventually others)        |
-| `reloadapache` | Reload only Apache                                        |
-| `reloadmysql`  | Reload only MySQL                                         |
-| `reloadftp`    | Reload only ProFTPD                                       |
-| `restart`      | Stop and start XAMPP                                      |
-| `security`     | Check XAMPP's security                                    |
-| `enablessl`    | Enable SSL support for Apache                             |
-| `disablessl`   | Disable SSL support for Apache                            |
-| `backup`       | Make backup file of your XAMPP config, log and data files |
-| `oci8`         | Enable the oci8 extenssion                                |
-| `panel`        | Starts graphical XAMPP control panel                      |
-
-### htdocs
-
-`/opt/lamp/htdocs`
-
-### Other
-
-#### mysql problem
-
-if you have problem with mysql, run the below commands
-
-`sudo service mysql stop`
-`sudo /opt/lampp/xampp restart`
-
-#### permission problem
-
-1. go to this path
-   `/opt/lampp/etc/httpd.conf`
-2. change `User` and `Group` to your Linux user
-3. restart xampp
-
 ## Grub problem
 
 1. To install and fix grub, you need Live CD or Live USB of Ubuntu
@@ -247,9 +182,15 @@ if you have problem with mysql, run the below commands
 4. Make sure to select “recommended repair” option to repair grub. Reboot
 5. You will now have a Grub menu on boot, where you can choose from Ubuntu, and Windows
 
-## new document in right click
+## disable sudo password for specific command
 
-`touch ~/Templates/"Untitled Document"`
+run `sudo EDITOR=vim visudo`
+
+and add below line after  `%sudo ...` line
+
+```
+<user>  ALL=NOPASSWD: <command: /bin/systemctl>
+```
 
 ## add windows to boot loader
 
