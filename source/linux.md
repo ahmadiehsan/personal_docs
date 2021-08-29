@@ -226,3 +226,11 @@ curl -i -H "Accept: text/html" 127.0.0.1:31001 -v
 rsync -a <other/dir> <destination/dir>
 ```
 
+## get all process with their threads
+
+NLWP = threads
+
+```
+ps -eLf | less
+```
+
