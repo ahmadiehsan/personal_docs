@@ -182,7 +182,7 @@ Extensions:
 4. Make sure to select “recommended repair” option to repair grub. Reboot
 5. You will now have a Grub menu on boot, where you can choose from Ubuntu, and Windows
 
-## disable sudo password for specific command
+## disable sudo password for specific or all commands
 
 run `sudo EDITOR=vim visudo`
 
@@ -190,6 +190,7 @@ and add below line after  `%sudo ...` line
 
 ```
 <user>  ALL=NOPASSWD: <command: /bin/systemctl>
+<user>  ALL=(ALL) NOPASSWD: ALL
 ```
 
 ## add windows to boot loader
