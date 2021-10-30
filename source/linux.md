@@ -235,3 +235,43 @@ NLWP = threads
 ps -eLf | less
 ```
 
+## Mount and Partition
+
+- See Disk Usage:
+
+  ```
+  sudo lsblk
+  ```
+
+-  Create Primary Partition:
+
+  ```
+  sudo fdisk /dev/sda
+  
+  ... Command (m for help): n
+  ... Select (default p): p
+  ... Partition number (1-4, default 1):
+  ... First sector (46483456-62914559, default 46483456):
+  ... Last sector, +/- sectors or +/-size{K,M,G,T,P} (46483456-62914559, default 62914559):
+  
+  ... Command (m for help): w
+  ```
+
+- Create File system:
+
+  ```
+  sudo mkfs.ext4 /dev/sda1
+  ```
+
+- Mount Partition:‍
+
+  ```
+  sudo mkdir /sample_dir
+  sudo mount /dev/sda1 /sample_dir
+  ```
+
+- Determine the File System Type:
+
+  ```
+  sudo fsck -N /dev/sda1
+  ```
