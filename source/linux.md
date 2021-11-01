@@ -267,7 +267,9 @@ ps -eLf | less
 
   ```
   sudo mkdir /sample_dir
-  sudo mount /dev/sda1 /sample_dir
+  
+  sudo mount /dev/sda1 /sample_dir  # for mount
+  sudo umount /sample_dir  # for unmount
   ```
 
 - Determine the File System Type:
