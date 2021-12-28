@@ -97,3 +97,7 @@ E.X. `git config --global alias.hist "log --all --oneline --graph --decorate"`
 ## last pull time
 
 `stat -c %y .git/FETCH_HEAD`
+
+## ssl problem
+
+`git config --global http.sslverify false`
