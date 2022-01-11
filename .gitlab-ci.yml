@@ -3,9 +3,9 @@ stages:
 
 variables:
   PROJECT_DIR: "/docs/app/ahmadiehsan"
-  GITLAB_USERNAME: "docs+deploy-token"
-  GITLAB_TOKEN: "4ZnyXzDmaZydVuBXPysL"
-  GITLAB_URL: "https://${GITLAB_USERNAME}:${GITLAB_TOKEN}@mgit.mparsict.com/docs/darsup/${CI_PROJECT_NAME}.git"
+  GITLAB_USERNAME: "ahmadiehsan+deploy-token"
+  GITLAB_TOKEN: "xfyGL9FbK8Lf8ofB-NMm"
+  GITLAB_URL: "https://${GITLAB_USERNAME}:${GITLAB_TOKEN}@mgit.mparsict.com/ahmadiehsan/${CI_PROJECT_NAME}.git"
 
 deploy:
   stage: deploy
