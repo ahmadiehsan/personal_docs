@@ -1,0 +1,28 @@
+stages:
+  - deploy
+
+variables:
+  PROJECT_DIR: "/docs/app/ahmadiehsan"
+  GITLAB_USERNAME: "docs+deploy-token"
+  GITLAB_TOKEN: "4ZnyXzDmaZydVuBXPysL"
+  GITLAB_URL: "https://${GITLAB_USERNAME}:${GITLAB_TOKEN}@mgit.mparsict.com/docs/darsup/${CI_PROJECT_NAME}.git"
+
+deploy:
+  stage: deploy
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+  variables:
+    GIT_STRATEGY: none
+    GIT_BRANCH: master
+  script:
+    - cd ${PROJECT_DIR}
+    - git remote set-url origin ${GITLAB_URL}
+    - git reset --hard
+    - git fetch -p
+    - git checkout ${GIT_BRANCH}
+    - git pull origin ${GIT_BRANCH}
+    - source /docs/app/ahmadiehsan/venv/bin/activate
+    - pip install -r requirements.txt
+    - make clean
+    - make html
+
