@@ -18,6 +18,10 @@ curl -X DELETE "http://localhost:9200/*"
 curl -X PUT "http://localhost:9200/<IndexName>/<TypeName>"
 ```
 
+## clustering
+
+![](_static/images/elasticsearch/elasticsearch_cluster.jpg)
+
 ## Elasticsearch DSL and Django ORM
 
-![django_orm_map_to_elasticsearch_dsl](_static/images/elasticsearch/django_orm_map_to_elasticsearch_dsl.jpg)
+![](_static/images/elasticsearch/django_orm_map_to_elasticsearch_dsl.jpg)
