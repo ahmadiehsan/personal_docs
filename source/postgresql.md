@@ -2,6 +2,10 @@
 
 `sudo apt install postgresql`
 
+## connection url
+
+`postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]`
+
 ## export/import
 
 - import data to database from sql file:
