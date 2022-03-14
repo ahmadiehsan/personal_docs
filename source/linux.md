@@ -152,6 +152,10 @@ Extensions:
 
   https://extensions.gnome.org/extension/1485/workspace-matrix/
 
+- Drop Down Terminal
+
+  https://extensions.gnome.org/extension/1509/drop-down-terminal-x/
+  
 - no title bar:
 
   https://extensions.gnome.org/extension/1267/no-title-bar/
