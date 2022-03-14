@@ -14,6 +14,10 @@
 
   `sudo mysqldump -u <username: root> -p <db name> > <file path>`
 
+## connection
+
+`mysql -u root -p`
+
 ## user
 
 - show all users: `SELECT User FROM mysql.user`
