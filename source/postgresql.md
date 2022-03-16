@@ -28,8 +28,6 @@
 
 - drop user: `DROP USER <username>`
 
-- change current user password: `\password`
-
 - change pass for any user:
 
   `ALTER USER <username> WITH PASSWORD '<new password>'`
