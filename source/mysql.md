@@ -1,8 +1,19 @@
 # MySQL
 
-`sudo apt-get install mysql-server`
+## Installation
 
-`sudo mysql_secure_installation`
+tip: installation process need active VPN
+
+```
+sudo apt update
+sudo apt install gnupg
+cd /tmp
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb
+sudo dpkg -i mysql-apt-config*
+sudo apt update
+sudo apt install mysql-server
+sudo mysql_secure_installation
+```
 
 ## export/import
 
