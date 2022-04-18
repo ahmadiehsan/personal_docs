@@ -51,6 +51,8 @@ sudo mysql_secure_installation
 
 - drop database: `DROP DATABASE <db name>`
 
+- show database owner: `SHOW processlist`
+
 - change db owner: ``
 
 - connect to database: `USE <db name>`
