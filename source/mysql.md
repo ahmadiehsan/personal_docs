@@ -19,11 +19,11 @@ sudo mysql_secure_installation
 
 - import data to database:
 
-  `sudo mysql -u <username: root> -p <db name> < <file_path/file_name.sql>`
+  `mysql -u <username: root> -p <db name> < <file_path/file_name.sql>`
 
 - export data from database:
 
-  `sudo mysqldump -u <username: root> -p <db name> > <file_path/file_name.sql>`
+  `mysqldump -u <username: root> -p <db name> > <file_path/file_name.sql>`
 
 ## connection
 
