@@ -64,9 +64,9 @@ sudo mysql_secure_installation
 ## tables
 
 - show all of db tables: `SHOW TABLES`
-- show table schema: ``
+- show table schema: `DESCRIBE <tablename>`
 - create table: `CREATE TABLE <tablename>`
-- create table based on other talbe: ``
+- create table based on other table: ``
 - delete table: `DROP TABLE <tablename>`
 - show indexes: `SHOW INDEXES IN <tablename>`
 
