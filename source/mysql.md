@@ -27,7 +27,8 @@ sudo mysql_secure_installation
 
 ## connection
 
-`mysql -u root -p`
+- connect to MySQL interactive shell: `mysql -u root -p`
+- run command without connection: `mysql -u root -p <<< 'SHOW DATABASES;'`
 
 ## user
 
