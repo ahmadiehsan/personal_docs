@@ -130,6 +130,14 @@ sudo service networking restart
 
 commands:
 
+- create new terminal: `tmux`
+
+- split current terminal vertically: `ctrl+b %`
+
+- split current terminal horizontally: `ctrl+b "`
+
+- switch between terminals: `ctrl+b o`
+
 - create new session: `tmux new -s <session name>`
 
 - connect to session: `tmux attach-session -t <session name>`
