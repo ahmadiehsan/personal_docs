@@ -150,6 +150,7 @@ Commands:
 
 - colored shell: `set -g default-terminal "screen-256color"`
 - mouse activation: `set -g mouse on`
+- resize split screen with mouse: `set -g mouse-resize-pane on`
 
 ## Gnome
 
