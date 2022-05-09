@@ -146,13 +146,10 @@ commands:
 
 - destroy session: `ctrl+d`
 
-colored terminal:
+`~/.tmux.conf` file:
 
-```
-adding the following line to ~/.tmux.conf
-
-set -g default-terminal "screen-256color"
-```
+- colored shell: `set -g default-terminal "screen-256color"`
+- mouse scroll: `set -g mouse on`
 
 ## Gnome
 
