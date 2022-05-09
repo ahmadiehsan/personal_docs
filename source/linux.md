@@ -136,6 +136,8 @@ Commands:
 
 - split current terminal horizontally: `ctrl+b "`
 
+- maximize and minimize terminal: `ctrl+b z`
+
 - switch between terminals: `ctrl+b o`
 
 - create new session: `tmux new -s <session name>`
