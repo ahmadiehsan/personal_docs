@@ -146,6 +146,14 @@ commands:
 
 - destroy session: `ctrl+d`
 
+colored terminal:
+
+```
+adding the following line to ~/.tmux.conf
+
+set -g default-terminal "screen-256color"
+```
+
 ## Gnome
 
 `sudo apt install gnome-tweak-tool chrome-gnome-shell`
