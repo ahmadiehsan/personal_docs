@@ -128,7 +128,7 @@ sudo service networking restart
 
 ## Tmux
 
-commands:
+Commands:
 
 - create new terminal: `tmux`
 
@@ -149,7 +149,7 @@ commands:
 `~/.tmux.conf` file:
 
 - colored shell: `set -g default-terminal "screen-256color"`
-- mouse scroll: `set -g mouse on`
+- mouse activation: `set -g mouse on`
 
 ## Gnome
 
