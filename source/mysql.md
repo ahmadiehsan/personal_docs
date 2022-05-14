@@ -32,9 +32,11 @@ sudo mysql_secure_installation
 
 ## user
 
-- show all users: `SELECT User FROM mysql.user`
+- show all users: `SELECT user, host FROM mysql.user`
 
-- create user: `CREATE USER '<username>'@'localhost' IDENTIFIED BY '<password>`
+- accepting all IPs: `UPDATE mysql.user SET host='<host: %>' WHERE user='<user: root>';`
+
+- create user: `CREATE USER '<username>'@'localhost' IDENTIFIED BY '<password>'`
 
 - drop user: ``
 
