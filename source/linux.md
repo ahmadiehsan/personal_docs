@@ -70,6 +70,11 @@ unrar x -r </path/to/file.rar>
 2. or add corn command to `/etc/crontab`
 3. test for correct run: `run-parts --test /etc/cron.daily`
 
+## xmodmap
+
+- remove a key from a mod: `xmodmap -e 'add Mod3 = Alt_R'`
+- add a key to a mod: `xmodmap -e 'remove Mod1 = Alt_R'`
+
 ## Firewall
 
 - enable and disable firewall: `sudo ufw enable/disable`
