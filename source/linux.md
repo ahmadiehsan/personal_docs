@@ -72,8 +72,8 @@ unrar x -r </path/to/file.rar>
 
 ## xmodmap
 
-- remove a key from a mod: `xmodmap -e 'add Mod3 = Alt_R'`
-- add a key to a mod: `xmodmap -e 'remove Mod1 = Alt_R'`
+- remove a key from a mod: `xmodmap -e 'remove Mod1 = Alt_R'`
+- add a key to a mod: `xmodmap -e 'add Mod3 = Alt_R'`
 
 ## Firewall
 
