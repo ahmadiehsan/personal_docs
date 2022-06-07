@@ -42,6 +42,8 @@ sudo mysql_secure_installation
 
 - change pass for any user: ``
 
+- change pass of root user: `ALTER USER 'root'@'%' IDENTIFIED BY '<new password>';`
+
 - add all privileges to user for one database:
 
   `GRANT ALL PRIVILEGES ON <db name>.* TO '<user>'@'localhost'`
