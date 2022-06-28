@@ -118,18 +118,12 @@ unrar x -r </path/to/file.rar>
 
 `ctrl + alt + f5`
 
-## dns change
+## NetworkManager
 
-```bash
-# /etc/network/interfaces
-
-# The primary network interface
-dns-nameservers 185.51.200.2 178.22.122.100
-```
-
-```bash
-sudo service networking restart
-```
+- list of connections: `nmcli connection`
+- change DNS: `nmcli connection modify <connection name> ipv4.dns "<dns one:8.8.8.8> <dns two:8.8.4.4>"`
+- connection down (need for restart): `nmcli connection down <connection name>`
+- connection up (need for restart): `nmcli connection up <connection name>`
 
 ## Tmux
 
