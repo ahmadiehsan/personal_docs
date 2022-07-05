@@ -23,7 +23,7 @@ sudo mysql_secure_installation
 
 - export data from database:
 
-  `mysqldump [-h <host>] -u <username: root> -p [--no-data --set-gtid-purged=OFF] <db name> > <file_path/file_name.sql>`
+  `mysqldump [-h <host>] -u <username: root> -p [--no-data] [--set-gtid-purged=OFF] <db name> > <file_path/file_name.sql>`
 
 ## connection
 
