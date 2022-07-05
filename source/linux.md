@@ -4,6 +4,13 @@
 
 `df -h`
 
+## Install .deb package
+
+```
+sudo dpkg -i path/to/deb/file.deb
+sudo apt-get install -f
+```
+
 ## ssh
 
 - download to local:
