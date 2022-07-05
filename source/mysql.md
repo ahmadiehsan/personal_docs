@@ -19,11 +19,11 @@ sudo mysql_secure_installation
 
 - import data to database:
 
-  `mysql -u <username: root> -p <db name> < <file_path/file_name.sql>`
+  `mysql [-h <host>] -u <username: root> -p <db name> < <file_path/file_name.sql>`
 
 - export data from database:
 
-  `mysqldump -u <username: root> -p <db name> > <file_path/file_name.sql>`
+  `mysqldump [-h <host>] -u <username: root> -p [--no-data --set-gtid-purged=OFF] <db name> > <file_path/file_name.sql>`
 
 ## connection
 
