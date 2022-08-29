@@ -58,16 +58,22 @@ deb-src http://deb.debian.org/debian/ buster-updates main contrib non-free
 ## Compress and Extract
 
 ```shell
-# compress (tar)
+# compress (tgz)
 tar -czvf <name-of-archive.tgz> </path/to/directory>
 tar -czvf <name-of-archive.tgz> </path/to/directory>/.	# include hidden files
 tar -czvf <name-of-archive.tgz> </path/to/file>
 
-# extract (tar)
+# extract (tgz)
 tar -xzvf <name-of-archive.tgz>
 tar -xzvf <name-of-archive.tgz> -C </path/to/directory>
 
-# extract (tar)  # sudo apt-get install unrar
+# split into multiple files (tgz)
+split --bytes=<split_size: 10m> --suffix-length=4 --numeric-suffix <source_file.tgz> <destination_file.tgz.>
+
+# extract from splitted files (tgz)
+cat <destination_file.tgz.*> | tar -xzvf -
+
+# extract (rar)  # sudo apt-get install unrar
 unrar x -r </path/to/file.rar>
 ```
 
