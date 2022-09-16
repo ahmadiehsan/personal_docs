@@ -3,7 +3,25 @@
 ## simple query
 
 ```bash
-curl -X GET "http://localhost:9200/_search?pretty"
+curl -X GET "http://localhost:9200/_search?pretty" -u <username_and_password: elastic:pass123>
+```
+
+## complex query
+
+```bash
+curl -X GET "http://localhost:9200/<index_name>/<_search or _count>?pretty" -H 'Content-Type: application/json' -d '{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "order": "1"
+          }
+        }
+      ]
+    }
+  }
+}'
 ```
 
 ## remove all data
