@@ -16,7 +16,7 @@ docker container rm $(docker ps -a -q)
 ## add user to docker group
 
 ```bash
-sudo usermod -aG docker your-user
+sudo usermod -aG docker $USER
 ```
 
 ## remove all containers log
@@ -54,12 +54,6 @@ docker tag <created_image_id> <image_name:image_tag>
 
 ```bash
 docker exec -it <container_name> bash
-```
-
-## build and run by docker-compose
-
-```bash
-docker-compose up
 ```
 
 ## login and push to other registry
