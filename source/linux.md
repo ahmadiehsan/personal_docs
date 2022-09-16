@@ -79,9 +79,11 @@ unrar x -r </path/to/file.rar>
 
 ## Cron
 
-1. add file without ".sh" to `/etc/cron.daily/`
-2. or add corn command to `/etc/crontab`
-3. test for correct run: `run-parts --test /etc/cron.daily`
+1. create a bash file that starts with `#!/bin/bash` and without the `.sh` filename suffix
+2. change the file to runnable mode with the `sudo chmod +x` command
+3. create a soft link in the `/etc/cron.daily/`
+4. or add it to the `/etc/crontab`
+5. test for correct run: `run-parts --test /etc/cron.daily`
 
 ## xmodmap
 
