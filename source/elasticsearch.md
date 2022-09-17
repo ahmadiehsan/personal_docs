@@ -12,13 +12,9 @@ curl -X GET "http://localhost:9200/_search?pretty" -u <username_and_password: el
 curl -X GET "http://localhost:9200/<index_name>/<_search or _count>?pretty" -H 'Content-Type: application/json' -d '{
   "query": {
     "bool": {
-      "must": [
-        {
-          "match": {
-            "order": "1"
-          }
-        }
-      ]
+      "must": {
+        "match": {"<field>": "<value>"}
+      }
     }
   }
 }'
