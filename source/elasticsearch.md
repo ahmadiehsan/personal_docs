@@ -12,13 +12,19 @@ curl -X GET "http://localhost:9200/_search?pretty" -u <username_and_password: el
 
 ```bash
 curl -X GET "http://localhost:9200/<index_name>/<_search or _count>?pretty" -H 'Content-Type: application/json' -d '{
+  "from": <offset: 5>,
+  "size": <limit: 20>,
   "query": {
     "bool": {
       "must": {
         "match": {"<field>": "<value>"}
       }
     }
-  }
+  },
+  "sort": [
+    {"<field1>": "asc"},
+    {"<field2>": "asc"}      
+  ]
 }'
 ```
 
