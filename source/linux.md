@@ -268,6 +268,12 @@ NLWP = threads
 ps -eLf | less
 ```
 
+## kernel logs
+
+```
+dmesg -l err
+```
+
 ## Mount and Partition
 
 - See Disk Usage:
