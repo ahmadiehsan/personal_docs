@@ -32,29 +32,22 @@ tip: with this command you can use `git pull` and `git push` without need to spe
   - add tag to specific commit `git tag <tag name> <commit id>`
 
 - update:
-
   `git tag -f <tag name> <commit id>`
-
   `git tag -f <tag name> -m "message"`
 
 - list of tags:
-
   `git tag`
-
   `git tag --list`
 
 - delete:
-
   - for local repo: `git tag --delete <tag name>`
-
   - for remote repo `git push origin :<tag name>`
 
 - tag data: `git show <tag name>`
 
 - push tags
-
-- single tag: `git push origin <tag name>`
-- all tags: `git push origin master --tags`
+  - single tag: `git push origin <tag name>`
+  - all tags: `git push origin master --tags`
 
 ## ssh
 
