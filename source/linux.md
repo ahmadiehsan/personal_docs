@@ -205,7 +205,16 @@ Extensions:
 
   https://extensions.gnome.org/extension/949/bottompanel/
 
-## Grub problem
+## Grub
+
+### Edit
+
+```
+sudo vim /etc/default/grub
+sudo update-grub
+```
+
+### Grub problem
 
 1. To install and fix grub, you need Live CD or Live USB of Ubuntu
 2. Once you load Live Ubuntu, Open Terminal and fire following commands to install boot-repair and let it fix the Grub
