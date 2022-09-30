@@ -32,10 +32,12 @@ tip: with this command you can use `git pull` and `git push` without need to spe
   - add tag to specific commit `git tag <tag name> <commit id>`
 
 - update:
+
   `git tag -f <tag name> <commit id>`
   `git tag -f <tag name> -m "message"`
 
 - list of tags:
+
   `git tag`
   `git tag --list`
 
