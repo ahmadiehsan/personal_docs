@@ -98,3 +98,48 @@ E.X. `git config --global alias.hist "log --all --oneline --graph --decorate"`
 ## ssl problem
 
 `git config --global http.sslverify false`
+
+## history change!
+
+```bash
+#!/bin/bash
+
+git filter-branch -f --env-filter '
+ea_name="Ehsan Ahmadi"
+ea_email="1374ea@gmail.com"
+
+export GIT_AUTHOR_NAME=$ea_name
+export GIT_COMMITTER_NAME=$ea_name
+export GIT_AUTHOR_EMAIL=$ea_email
+export GIT_COMMITTER_EMAIL=$ea_email
+
+cd="$GIT_COMMITTER_DATE"
+
+cd_timestamp=$(echo $cd | cut -d" " -f1 | xargs -IT  date -d T +"%s" )
+
+offset=9331200
+compress=1
+
+if test -n "${last_commit_timestamp}"
+then
+	result=$(( (cd_timestamp - last_cd_timestamp) / $compress ))
+
+	if [ $result -lt 86400 ]
+	then
+		number=86400
+	else
+		number=$result
+	fi
+
+	commit_timestamp=$(( last_commit_timestamp + number ))
+else
+	commit_timestamp=$(( $(date -d T +"%s") - $offset ))
+fi
+
+export GIT_AUTHOR_DATE="$commit_timestamp"
+export GIT_COMMITTER_DATE="$commit_timestamp"
+
+last_cd_timestamp=$cd_timestamp
+last_commit_timestamp=$commit_timestamp
+'
+```
