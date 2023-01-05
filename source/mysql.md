@@ -70,6 +70,7 @@ sudo mysql_secure_installation
 
 - show all of db tables: `SHOW TABLES`
 - show table schema: `DESCRIBE <tablename>`
+- show table full schema: `SHOW FULL COLUMNS FROM <tablename>;`
 - create table: `CREATE TABLE <tablename>`
 - create table based on other table: ``
 - delete table: `DROP TABLE <tablename>`
