@@ -311,13 +311,22 @@ dmesg -l err
   sudo mkfs.ext4 /dev/sda1
   ```
 
-- Mount Partition:‍
+- Mount Partition
 
   ```
   sudo mkdir /sample_dir
   
   sudo mount /dev/sda1 /sample_dir  # for mount
   sudo umount /sample_dir  # for unmount
+  ```
+  
+- Mount Directory
+
+  ```
+  sudo mkdir /source_dir
+  sudo mkdir /destination_dir
+  
+  sudo mount --bind /source_dir /destination_dir
   ```
 
 - Determine the File System Type:
