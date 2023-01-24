@@ -14,6 +14,8 @@ curl -X GET "http://localhost:9200/_search?pretty" -u <username_and_password: el
 curl -X GET "http://localhost:9200/<index_name>/<_search or _count>?pretty" -H 'Content-Type: application/json' -d '{
   "from": <offset: 5>,
   "size": <limit: 20>,
+  "fields": ["<field_1>", "<field_2>"],
+  "_source": false,
   "query": {
     "bool": {
       "must": {
@@ -25,6 +27,23 @@ curl -X GET "http://localhost:9200/<index_name>/<_search or _count>?pretty" -H '
     {"<field1>": "asc"},
     {"<field2>": "asc"}      
   ]
+}'
+```
+
+### aggregate
+
+```bash
+curl -X GET "http://localhost:9200/<index_name>/_search?pretty" -H 'Content-Type: application/json' -d '{
+  "size": 0,  # will only return aggregate results
+  "aggs": {
+    "<agg_name_1>": {"avg": {"field": "<field>"}},
+    "<agg_name_2>": {
+      "filter": {"match": {"<field>": "<value>"}},
+      "aggs": {
+        "<nested_agg_name_1>": {"avg": {"field": "<field>"}}
+      }
+    }
+  }
 }'
 ```
 
