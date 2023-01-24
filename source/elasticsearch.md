@@ -23,6 +23,14 @@ curl -X GET "http://localhost:9200/<index_name>/<_search or _count>?pretty" -H '
       }
     }
   },
+  "runtime_mappings": {
+    "<custom_field>": {
+      "type": "<field_type_in_java_format: double>",
+      "script": {
+        "source": "emit(doc[\"<another_field>\"].value * 2)"
+      }
+    }
+  },
   "sort": [
     {"<field1>": "asc"},
     {"<field2>": "asc"}      
