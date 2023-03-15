@@ -59,13 +59,20 @@ deb-src http://deb.debian.org/debian/ buster-updates main contrib non-free
 
 ```shell
 # compress (tgz)
-tar -czvf <name-of-archive.tgz> </path/to/directory>
-tar -czvf <name-of-archive.tgz> </path/to/directory>/.	# include hidden files
-tar -czvf <name-of-archive.tgz> </path/to/file>
+tar -czvf <file_name.tgz> </path/to/directory>
+tar -czvf <file_name.tgz> </path/to/directory>/.	# include hidden files
+tar -czvf <file_name.tgz> </path/to/file>
 
 # extract (tgz)
-tar -xzvf <name-of-archive.tgz>
-tar -xzvf <name-of-archive.tgz> -C </path/to/directory>
+tar -xzvf <file_name.tgz>
+tar -xzvf <file_name.tgz> -C </path/to/directory>
+
+# compress (zip)
+zip <filename.zip> <file>
+
+# extract (zip)  # sudo apt install unzip
+unzip <file_name.zip>
+unzip '*.zip'
 
 # split into multiple files (tgz)
 split --bytes=<split_size: 10m> --suffix-length=4 --numeric-suffix <source_file.tgz> <destination_file.tgz.>
@@ -277,10 +284,32 @@ NLWP = threads
 ps -eLf | less
 ```
 
-## kernel logs
+## Kernel logs
 
 ```
 dmesg -l err
+```
+
+## NVIDIA driver
+
+First we will install the proper driver:
+
+```
+sudo apt install nvidia-detect
+nvidia-detect
+sudo apt install <suggested_package_from_previous_step>
+```
+
+After restarting the system driver should work properly, if not we will install the below packages:
+
+```
+sudo apt-get install bumblebee bumblebee-nvidia linux-headers-generic
+```
+
+Now each time that we want to use the NVIDIA GPU should run the bellow command! (While the below command is run we can run every program that we want to use NVIDIA GPU)
+
+```
+sudo optirun nvidia-settings -c :8
 ```
 
 ## Mount and Partition
