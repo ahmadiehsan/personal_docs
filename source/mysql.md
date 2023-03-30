@@ -71,7 +71,7 @@ sudo mysql_secure_installation
 - show all of db tables: `SHOW TABLES`
 - show table schema: `DESCRIBE <tablename>`
 - show table full schema: `SHOW FULL COLUMNS FROM <tablename>;`
-- create table: `CREATE TABLE <tablename>(id INT, <column2> <datatype>, PRIMARY KEY(id))`
+- create table: `CREATE TABLE <tablename> (id INT NOT NULL AUTO_INCREMENT, <column2> <datatype>, PRIMARY KEY(id))`
 - create table based on other table: ``
 - delete table: `DROP TABLE <tablename>`
 - show indexes: `SHOW INDEXES IN <tablename>`
