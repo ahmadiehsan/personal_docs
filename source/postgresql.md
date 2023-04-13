@@ -1,7 +1,5 @@
 # PostgreSQL
 
-`sudo apt install postgresql`
-
 ## connection url
 
 `postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]`
@@ -10,11 +8,11 @@
 
 - import data to database from sql file:
 
-  `psql -d <db name> -f <file_name.sql>`
+  `psql -d <db_name> -f <file_name.sql>`
 
 - export data from database to sql file:
 
-  `pg_dump --no-owner -d <database_name> -t <table_name> > <file_name>.sql`
+  `pg_dump -U <db_user> <db_name> > <file_name>.sql`
   
 - insert to table from other table
 
