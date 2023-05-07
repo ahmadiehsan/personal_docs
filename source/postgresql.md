@@ -1,5 +1,11 @@
 # PostgreSQL
 
+## Links
+
+- [Peer Authentication Failed For User "Postgres"](https://stackoverflow.com/questions/8167602/django-connection-to-postgresql-peer-authentication-failed#answer-8232004)
+- [Peer Authentication Failed For User "Postgres" V2](https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge#answer-18664239)
+- [Postgresql Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
+
 ## connection url
 
 `postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]`
