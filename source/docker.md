@@ -1,5 +1,12 @@
 # Docker
 
+## Links
+
+- [Delete Images By Tag](https://stackoverflow.com/questions/32490229/how-can-i-delete-docker-images-by-tag-preferably-with-wildcarding/32491527#32491527)
+- [Docker Prune](https://stackoverflow.com/questions/46672001/is-it-safe-to-clean-docker-overlay2/46672068#46672068)
+- [Check For Docker Proper Install](https://github.com/docker/docker-bench-security)
+- [Multiple Databases With The Official Postgresql Docker Image](https://github.com/mrts/docker-postgresql-multiple-databases)
+
 ## remove none images
 
 ```bash

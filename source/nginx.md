@@ -1,6 +1,15 @@
 # Nginx
 
+## Links
+
+- [Leverage Browser Caching](https://stackoverflow.com/questions/20147587/how-to-leverage-browser-caching-in-django#answer-20147630)
+- [Minimal Standard Proxy_Pass](https://serverfault.com/questions/112795/how-to-run-a-server-on-port-80-as-a-normal-user-on-linux#answer-450513)
+- [Request Entity Too Large](https://www.cyberciti.biz/faq/linux-unix-bsd-nginx-413-request-entity-too-large/)
+- [Log Variables](https://serverfault.com/questions/404626/how-to-output-variable-in-nginx-log-for-debugging/580739#580739)
+- [Https://Certbot.Eff.Org/Instructions?Ws=Nginx&Amp;Os=Debianbuster](https://certbot.eff.org/instructions?ws=nginx&os=debianbuster)
+
 ## run nginx on startup
+
 `sudo update-rc.d nginx enable`
 
 ## test

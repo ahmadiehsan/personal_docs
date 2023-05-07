@@ -1,5 +1,35 @@
 # Linux
 
+## Links
+
+- [Install Java](https://www.addictivetips.com/ubuntu-linux-tips/install-java-on-linux/)
+- [Reset Gnome Desktop](http://ubuntuhandbook.org/index.php/2018/06/reset-gnome-desktop-ubuntu-18-04/)
+- [Terminal Autocomplete Doesn&#39;T Work Properly](https://askubuntu.com/questions/545540/terminal-autocomplete-doesnt-work-properly#answer-545578)
+- [Sudo Password Cache](https://apple.stackexchange.com/questions/10139/how-do-i-increase-sudo-password-remember-timeout#answer-51763)
+- [Open Rar File](https://askubuntu.com/questions/566407/whats-the-easiest-way-to-unrar-a-file-on-ubuntu-12-04#answer-566409)
+- [Vt-X Is Disabled In The Bios For Both All Cpu Modes](https://stackoverflow.com/questions/33304393/vt-x-is-disabled-in-the-bios-for-both-all-cpu-modes-verr-vmx-msr-all-vmx-disabl#answer-36018231)
+- [Reset Iptables To Default](https://medium.com/@gokhanefendi/how-to-reset-iptables-to-default-d60ca88f6e5e)
+- [Disable Swap](https://askubuntu.com/questions/214805/how-do-i-disable-swap#answer-465200)
+- [Debian Mirror Sites](https://www.debian.org/mirror/list)
+- [Very Large Log Files](https://askubuntu.com/questions/515146/very-large-log-files-what-should-i-do#answer-515151)
+- [Default .Bashrc For Ubuntu](https://gist.github.com/marioBonales/1637696)
+- [Vim Readonly Save Problem](https://superuser.com/questions/694450/using-vim-to-force-edit-a-file-when-you-opened-without-permissions/785016#785016)
+- [Vim Replace All](https://stackoverflow.com/questions/19994922/find-and-replace-strings-in-vim-on-multiple-lines/19995072#19995072)
+- [Delete A Git Branch Locally And Remotely](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely/2003515#2003515)
+- [Makefile Silent Mode](https://stackoverflow.com/questions/9967105/suppress-echo-of-command-invocation-in-makefile/51957080#51957080)
+- [Start Ubuntu In Console Mode](https://askubuntu.com/a/859640)
+- [Changing Max_Map_Count Of Virtual Memory](https://www.elastic.co/guide/en/elasticsearch/reference/5.0/vm-max-map-count.html#vm-max-map-count)
+- [Rabbitmq Credentials Verification](https://stackoverflow.com/questions/17148683/verify-rabbitmq-credentials-are-valid/50666846#50666846)
+- [Change Gitlab Ci Runner User](https://stackoverflow.com/questions/37187899/change-gitlab-ci-runner-user/40703269#40703269)
+- [Disk Space Usage Analyser](https://unix.stackexchange.com/questions/125429/tracking-down-where-disk-space-has-gone-on-linux/125451#125451)
+- [Gitlab Runner: Job Failed Preparing Environment](https://stackoverflow.com/questions/63154881/the-runner-of-type-shell-dont-work-job-failed-system-failure-preparing-envi/66285094#66285094)
+- [Youcompleteme Unavailable: Requires Vim 8.1.2269+](https://github.com/ycm-core/YouCompleteMe/issues/3764#issuecomment-755816205)
+- [Ubuntu &Lt;=&Gt; Debian](https://askubuntu.com/questions/445487/what-debian-version-are-the-different-ubuntu-versions-based-on/445496#445496)
+- [Possible Missing Firmware](https://unix.stackexchange.com/questions/556946/possible-missing-firmware-lib-firmware-i915-for-module-i915/557015#557015)
+- [Crontab Generator](https://crontab-generator.org/)
+- [Vim Configuration](https://jadi.net/2020/05/vim-prat-3/)
+- [Screen Recorder](https://obsproject.com/wiki/unofficial-linux-builds#debian)
+
 ## disk space
 
 `df -h`
