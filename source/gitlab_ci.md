@@ -1,24 +1,24 @@
-# GitLab CI
+# Gitlab Ci
 
-## install gitlab-runner on server
+## Install Gitlab-Runner On Server
 
 Follow [installation guide](https://docs.gitlab.com/runner/install/#containers)
 
-## create system service
+## Create System Service
 
 `sudo gitlab-runner install --working-directory /home/<unix_user> --user <unix_user>`
 
 `sudo service gitlab-runner <status|start|stop|restart>`
 
-## create new runner
+## Create New Runner
 
 `sudo gitlab-runner register`
 
-## get list of runners
+## Get List Of Runners
 
 `sudo gitlab-runner verify`
 
-## delete removed runners
+## Delete Removed Runners
 
 `sudo gitlab-runner verify --delete`
 

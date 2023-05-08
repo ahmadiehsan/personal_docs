@@ -1,4 +1,4 @@
-# PostgreSQL
+# Postgresql
 
 ## Links
 
@@ -6,11 +6,11 @@
 - [Peer Authentication Failed For User "Postgres" V2](https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge#answer-18664239)
 - [Postgresql Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
 
-## connection url
+## Connection Url
 
 `postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]`
 
-## export/import
+## Export/Import
 
 - import data to database from sql file:
 
@@ -24,7 +24,7 @@
 
   `INSERT INTO <table1> select * from <table2>`
 
-## user
+## User
 
 - show all users: `\du`
 
@@ -36,7 +36,7 @@
 
   `ALTER USER <username> WITH PASSWORD '<new password>'`
 
-## database
+## Database
 
 - show all database: `\l`
 - create db: `CREATE DATABASE <db name>`
@@ -44,7 +44,7 @@
 - change db owner: `ALTER DATABASE <db name> OWNER TO <username>`
 - connect to database: `\c <db name>`
 
-## tables
+## Tables
 
 - show all of db tables: `\dt`
 
@@ -58,7 +58,7 @@
 
 - delete table: `DROP TABLE <table name>`
 
-## row
+## Row
 
 - updating row: `UPDATE <table name> SET <column A>=<value>`
 
@@ -74,7 +74,7 @@
 
   `DELETE FROM <table name> WHERE <column A>=<value>`
 
-## column
+## Column
 
 - create column in table:
 
@@ -98,26 +98,26 @@
 
   `Update <table> SET <column one> = <column two>`
 
-## temporarily disable all connections to table
+## Temporarily Disable All Connections To Table
 
 `select oid from pg_class where relname='<table name>'`
 
-## partial index
+## Partial Index
 
 `CREATE [UNIQUE] INDEX <index name> ON <table> (<column A, column B>) WHERE <conditions>`
 
-#### vertical show fields
+#### Vertical Show Fields
 
 `\x`
 
-## postgres version
+## Postgres Version
 
 `SHOW server_version`
 
-## Change sequence number
+## Change Sequence Number
 
 `ALTER SEQUENCE <table>_id_seq RESTART WITH <number: 100>`
 
-## run command by sudo
+## Run Command By Sudo
 
 `sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"`

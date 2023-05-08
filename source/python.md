@@ -104,7 +104,7 @@
 - [Best Python Formatter And Beautifier](https://codebeautify.org/python-formatter-beautifier)
 - [Time Complexity (Big O)](https://wiki.python.org/moin/TimeComplexity)
 
-## Get all import able modules and packages
+## Get All Import Able Modules And Packages
 
 ```
 import pkgutil
@@ -193,9 +193,9 @@ tip: run commands in `docs` directory
 
 commands source page: <https://www.sphinx-doc.org/en/master/man/sphinx-build.html>
 
-### theming
+### Theming
 
-#### read the docs theme
+#### Read The Docs Theme
 
  `pip install sphinx_rtd_theme`
 
@@ -206,7 +206,7 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_path = ['_templates',]
 ```
 
-#### custom style
+#### Custom Style
 
 add `extra.css` in `_static/css` directory
 
@@ -217,9 +217,9 @@ def setup(app):
     app.add_stylesheet('css/extra.css')
 ```
 
-### extensions
+### Extensions
 
-#### autodoc
+#### Autodoc
 
 ```python
 # conf.py
@@ -231,7 +231,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 extensions = ['sphinx.ext.autodoc']
 ```
 
-##### autodoc sample usage
+##### Autodoc Sample Usage
 
 ```rst
 .. automodule:: <python file path: apps.core.models.user>
@@ -240,7 +240,7 @@ extensions = ['sphinx.ext.autodoc']
    :show-inheritance:
 ```
 
-#### other doctype support
+#### Other Doctype Support
 
 ```python
 # conf.py
@@ -261,7 +261,7 @@ napoleon_use_param = True
 napoleon_use_rtype = True
 ```
 
-#### markdown support
+#### Markdown Support
 
 `pip install recommonmark`
 
@@ -277,7 +277,7 @@ source_suffix = {
 }
 ```
 
-#### markdown table support
+#### Markdown Table Support
 
 `pip install sphinx-markdown-tables`
 

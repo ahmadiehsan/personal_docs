@@ -1,6 +1,6 @@
 # Django
 
-## postgres
+## Postgres
 
 `sudo apt install postgresql`
 
@@ -20,7 +20,7 @@ DATABASES = {
 }
 ```
 
-## redis
+## Redis
 
 `sudo apt install redis-server`
 
@@ -41,7 +41,7 @@ CACHES = {
 }
 ```
 
-## memcached
+## Memcached
 
 `sudo apt install memcached`
 
@@ -59,7 +59,7 @@ CACHES = {
 }
 ```
 
-## cache
+## Cache
 
 first add memcached or redis as cache database to django settings.py
 
@@ -105,7 +105,7 @@ first add memcached or redis as cache database to django settings.py
   cache.get('<key>')
   ```
 
-## password hashing
+## Password Hashing
 
 `pip install bcrypt django[argon2]`
 
@@ -120,7 +120,7 @@ PASSWORD_HASHERS = [
 ]
 ```
 
-## internationalization (i18n)
+## Internationalization (I18N)
 
 ```python
 # settings.py
@@ -142,7 +142,7 @@ commands:
 
   `django-admin compilemessages`
 
-## celery
+## Celery
 
 ```python
 # settings.py
@@ -191,7 +191,7 @@ def debug_task(self):
 
 ```
 
-## after start project checklist
+## After Start Project Checklist
 
 ```python
 # settings.py

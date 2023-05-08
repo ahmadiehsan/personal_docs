@@ -30,18 +30,18 @@
 - [Vim Configuration](https://jadi.net/2020/05/vim-prat-3/)
 - [Screen Recorder](https://obsproject.com/wiki/unofficial-linux-builds#debian)
 
-## disk space
+## Disk Space
 
 `df -h`
 
-## Install .deb package
+## Install .Deb Package
 
 ```
 sudo dpkg -i path/to/deb/file.deb
 sudo apt-get install -f
 ```
 
-## ssh
+## Ssh
 
 - download to local:
 
@@ -70,7 +70,7 @@ sudo apt-get install -f
   ServerAliveInterval 60
   ```
 
-## Contrib / non-free repo
+## Contrib / Non-Free Repo
 
 ```
 # /etc/apt/sources.list
@@ -85,7 +85,7 @@ deb http://deb.debian.org/debian/ buster-updates main contrib non-free
 deb-src http://deb.debian.org/debian/ buster-updates main contrib non-free
 ```
 
-## Compress and Extract
+## Compress And Extract
 
 ```shell
 # compress (tgz)
@@ -122,7 +122,7 @@ unrar x -r </path/to/file.rar>
 4. or add it to the `/etc/crontab`
 5. test for correct run: `run-parts --test /etc/cron.daily`
 
-## xmodmap
+## Xmodmap
 
 - remove a key from a mod: `xmodmap -e 'remove Mod1 = Alt_R'`
 - add a key to a mod: `xmodmap -e 'add Mod3 = Alt_R'`
@@ -145,7 +145,7 @@ unrar x -r </path/to/file.rar>
   
   `sudo ufw delete allow in "<app name>"`
 
-## Add proxy to apt-get
+## Add Proxy To Apt-Get
 
 1. go to https://free-proxy-list.net/ and find an free proxy address
 
@@ -159,18 +159,18 @@ unrar x -r </path/to/file.rar>
 
      `Acquire::http::Proxy "http://<username>:<password>@<proxyaddress>:<proxyport>";`
 
-## remove launcher entry
+## Remove Launcher Entry
 
 1. go to
    - `~/.local/share/applications/` if you create entry for you user only
    - `/usr/share/applications/` if you create entry for all users
 2. remove `<your application name: jetbrains-pycharm.desktop>`
 
-## open shell without login
+## Open Shell Without Login
 
 `ctrl + alt + f5`
 
-## NetworkManager
+## Networkmanager
 
 - list of connections: `nmcli connection`
 - change DNS: `nmcli connection modify <connection name> ipv4.dns "<dns one:8.8.8.8> <dns two:8.8.4.4>"`
@@ -251,7 +251,7 @@ sudo vim /etc/default/grub
 sudo update-grub
 ```
 
-### Grub problem
+### Grub Problem
 
 1. To install and fix grub, you need Live CD or Live USB of Ubuntu
 2. Once you load Live Ubuntu, Open Terminal and fire following commands to install boot-repair and let it fix the Grub
@@ -261,7 +261,7 @@ sudo update-grub
 4. Make sure to select “recommended repair” option to repair grub. Reboot
 5. You will now have a Grub menu on boot, where you can choose from Ubuntu, and Windows
 
-## disable sudo password for specific or all commands
+## Disable Sudo Password For Specific Or All Commands
 
 run `sudo EDITOR=vim visudo`
 
@@ -272,41 +272,41 @@ and add below line after  `%sudo ...` line
 <user>  ALL=(ALL) NOPASSWD: ALL
 ```
 
-## add windows to boot loader
+## Add Windows To Boot Loader
 
 ```
 sudo os-prober
 sudo update-grub
 ```
 
-## machine version
+## Machine Version
 
 `cat /etc/*-release`
 
-## machine config
+## Machine Config
 
 - cpu: `lscpu`
 - memory: `free -h`
 
-## minimal curl
+## Minimal Curl
 
 ```bash
 curl -i -H "Accept: text/html" 127.0.0.1:31001 -v
 ```
 
-## vim replace all
+## Vim Replace All
 
 ```
 :%s/foo/bar/g
 ```
 
-## merge two directory
+## Merge Two Directory
 
 ```
 rsync -a <other/dir> <destination/dir>
 ```
 
-## get all process with their threads
+## Get All Process With Their Threads
 
 NLWP = threads
 
@@ -314,13 +314,13 @@ NLWP = threads
 ps -eLf | less
 ```
 
-## Kernel logs
+## Kernel Logs
 
 ```
 dmesg -l err
 ```
 
-## NVIDIA driver
+## Nvidia Driver
 
 First we will install the proper driver:
 
@@ -342,7 +342,7 @@ Now each time that we want to use the NVIDIA GPU should run the bellow command! 
 sudo optirun nvidia-settings -c :8
 ```
 
-## Mount and Partition
+## Mount And Partition
 
 - See Disk Usage:
 

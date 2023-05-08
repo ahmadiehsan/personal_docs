@@ -1,16 +1,16 @@
 # Git
 
-## commands history
+## Commands History
 
 `git reflog`
 
-## change default branch
+## Change Default Branch
 
 `git branch --set-upstream-to=origin/<BRANCH NAME>`
 
 tip: with this command you can use `git pull` and `git push` without need to specify a branch name
 
-## stash
+## Stash
 
 - apply: `git stash apply [stash@{<index>}]`
 
@@ -24,7 +24,7 @@ tip: with this command you can use `git pull` and `git push` without need to spe
 
 - show (files that changed in this stash): `git stash show [stash@{<index>}]`
 
-## tag
+## Tag
 
 - create:
   - unannotated tag, without message: `git tag <tag name>`
@@ -53,7 +53,7 @@ tip: with this command you can use `git pull` and `git push` without need to spe
   - single tag: `git push origin <tag name>`
   - all tags: `git push origin master --tags`
 
-## ssh
+## Ssh
 
 1. generate ssh key: `ssh-keygen -t rsa`
 2. add private key to system by: `ssh-add`
@@ -62,7 +62,7 @@ tip: with this command you can use `git pull` and `git push` without need to spe
 5. change project remote URL, to ssh type
 6. connect to git: `ssh -T git@github.com`
 
-## token and in url auth
+## Token And In Url Auth
 
 - personal access token usage:
 
@@ -78,28 +78,28 @@ tip: with this command you can use `git pull` and `git push` without need to spe
 
   `git+http://<deploy token username>:<projects deploy tocken>@gitlab.com/myrepo.git`
 
-## alias
+## Alias
 `git config --global alias.<command name> "<command>"`
 
 E.X. `git config --global alias.hist "log --all --oneline --graph --decorate"`
 
-## default editor
+## Default Editor
 
 `git config --global core.editor "<editor name: vim>"`
 
-## password cache
+## Password Cache
 
 `git config --global credential.helper 'cache --timeout=<time in seconds: 3600>'`
 
-## last pull time
+## Last Pull Time
 
 `stat -c %y .git/FETCH_HEAD`
 
-## ssl problem
+## Ssl Problem
 
 `git config --global http.sslverify false`
 
-## history change!
+## History Change!
 
 ```bash
 #!/bin/bash

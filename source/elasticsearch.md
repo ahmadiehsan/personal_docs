@@ -10,13 +10,13 @@
 
 ## Document
 
-### query simple
+### Query Simple
 
 ```bash
 curl -X GET "http://localhost:9200/_search?pretty" -u <username_and_password: elastic:pass123>
 ```
 
-### query complex
+### Query Complex
 
 ```bash
 curl -X GET "http://localhost:9200/<index_name>/<_search or _count>?pretty" -H 'Content-Type: application/json' -d '{
@@ -46,7 +46,7 @@ curl -X GET "http://localhost:9200/<index_name>/<_search or _count>?pretty" -H '
 }'
 ```
 
-### aggregate
+### Aggregate
 
 ```bash
 curl -X GET "http://localhost:9200/<index_name>/_search?pretty" -H 'Content-Type: application/json' -d '{
@@ -63,7 +63,7 @@ curl -X GET "http://localhost:9200/<index_name>/_search?pretty" -H 'Content-Type
 }'
 ```
 
-### create
+### Create
 
 ```bash
 curl -X POST "http://localhost:9200/<index_name>/_doc?pretty" -H 'Content-Type: application/json' -d '{
@@ -71,7 +71,7 @@ curl -X POST "http://localhost:9200/<index_name>/_doc?pretty" -H 'Content-Type: 
 }'
 ```
 
-### update
+### Update
 
 ```bash
 # fully replace
@@ -80,7 +80,7 @@ curl -X PUT "http://localhost:9200/<index_name>/_doc/<_id>?pretty" -H 'Content-T
 }'
 ```
 
-### get
+### Get
 
 ```bash
 # return document and its related data
@@ -92,13 +92,13 @@ curl -X GET "http://localhost:9200/<index_name>/_doc/<_id>?pretty"
 curl -X GET "http://localhost:9200/<index_name>/_source/<_id>?pretty"
 ```
 
-### delete
+### Delete
 
 ```bash
 curl -X DELETE "http://localhost:9200/<index_name>/_doc/<_id>?pretty"
 ```
 
-### bulk
+### Bulk
 
 Provides a way to perform multiple `index`, `create`, `delete`, and `update` actions in a single request.
 
@@ -125,19 +125,19 @@ curl -X POST "http://localhost:9200/<index_name>/_bulk?pretty" -H 'Content-Type:
 
 ## Index
 
-### get all
+### Get All
 
 ```bash
 curl -X GET "http://localhost:9200/_aliases?pretty"
 ```
 
-### create simple
+### Create Simple
 
 ```bash
 curl -X PUT "http://localhost:9200/<index_name>?pretty"
 ```
 
-### create with mapping
+### Create With Mapping
 
 ```bash
 curl -X PUT "http://localhost:9200/<index_name>?pretty" -H 'Content-Type: application/json' -d '{
@@ -152,7 +152,7 @@ curl -X PUT "http://localhost:9200/<index_name>?pretty" -H 'Content-Type: applic
 }'
 ```
 
-### delete
+### Delete
 
 ```bash
 curl -X DELETE "http://localhost:9200/<index_name>?pretty"
@@ -169,13 +169,13 @@ curl -X DELETE "http://localhost:9200/*?pretty"
 
 ## Mapping
 
-### get current
+### Get Current
 
 ```bash
 curl -X GET "http://localhost:9200/<index_name>/_mapping?pretty"
 ```
 
-### create or update
+### Create Or Update
 
 ```bash
 curl -X PUT "http://localhost:9200/<index_name>/_mapping?pretty" -H 'Content-Type: application/json' -d '{
@@ -188,14 +188,14 @@ curl -X PUT "http://localhost:9200/<index_name>/_mapping?pretty" -H 'Content-Typ
 }'
 ```
 
-### delete
+### Delete
 
 There is no way to delete a field from mapping. Even if you delete all documents that contain this field
 
-## clustering
+## Clustering
 
 ![](_static/images/elasticsearch/elasticsearch_cluster.jpg)
 
-## Elasticsearch DSL and Django ORM
+## Elasticsearch Dsl And Django Orm
 
 ![](_static/images/elasticsearch/django_orm_map_to_elasticsearch_dsl.jpg)

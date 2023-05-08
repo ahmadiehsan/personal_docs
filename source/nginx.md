@@ -8,14 +8,14 @@
 - [Log Variables](https://serverfault.com/questions/404626/how-to-output-variable-in-nginx-log-for-debugging/580739#580739)
 - [Https://Certbot.Eff.Org/Instructions?Ws=Nginx&Amp;Os=Debianbuster](https://certbot.eff.org/instructions?ws=nginx&os=debianbuster)
 
-## run nginx on startup
+## Run Nginx On Startup
 
 `sudo update-rc.d nginx enable`
 
-## test
+## Test
 `sudo nginx -t`
 
-## simple config
+## Simple Config
 
 ```
 server {
@@ -28,7 +28,7 @@ server {
 }
 ```
 
-## ssl config
+## Ssl Config
 
 ```
 server {
@@ -56,7 +56,7 @@ server {
 }
 ```
 
-## gzip
+## Gzip
 
 ```
 server {
