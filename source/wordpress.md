@@ -1,4 +1,4 @@
-# WordPress
+# Wordpress
 
 ## Links
 
@@ -8,7 +8,7 @@
 - [Free Divi Layouts - Best Layout Packs For The Divi Wordpress Theme 2019](https://ohklyn.com/free-divi-layouts/)
 - [Divi Theme Layouts Directory Lists All The Best Layouts For Divi](https://www.divilayouts.com/)
 
-## debug mode
+## Debug Mode
 
 1. add below lines to wp-config.php
 

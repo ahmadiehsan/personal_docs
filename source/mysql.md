@@ -1,4 +1,4 @@
-# MySQL
+# Mysql
 
 ## Installation
 
@@ -15,7 +15,7 @@ sudo apt install mysql-server
 sudo mysql_secure_installation
 ```
 
-## export/import
+## Export/Import
 
 - import data to database:
 
@@ -25,12 +25,12 @@ sudo mysql_secure_installation
 
   `mysqldump [-h <host>] -u <username: root> -p [--no-data] [--set-gtid-purged=OFF] <db name> > <file_path/file_name.sql>`
 
-## connection
+## Connection
 
 - connect to MySQL interactive shell: `mysql -u root -p`
 - run command without connection: `mysql -u root -p <<< 'SHOW DATABASES;'`
 
-## user
+## User
 
 - show all users: `SELECT user, host FROM mysql.user`
 
@@ -48,7 +48,7 @@ sudo mysql_secure_installation
 
   `GRANT ALL PRIVILEGES ON <db name>.* TO '<user>'@'localhost'`
 
-## database
+## Database
 
 - show all database: `SHOW DATABASES`
 
@@ -66,7 +66,7 @@ sudo mysql_secure_installation
 
   `SELECT table_schema "<db name>", ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" FROM information_schema.tables GROUP BY table_schema`
 
-## tables
+## Tables
 
 - show all of db tables: `SHOW TABLES`
 - show table schema: `DESCRIBE <tablename>`
@@ -76,7 +76,7 @@ sudo mysql_secure_installation
 - delete table: `DROP TABLE <tablename>`
 - show indexes: `SHOW INDEXES IN <tablename>`
 
-## row
+## Row
 
 - updating row: `UPDATE <table name> SET <column A>=<value>`
 
@@ -90,15 +90,15 @@ sudo mysql_secure_installation
 
   `DELETE FROM <table name> WHERE <column A>=<value>`
 
-## partial index
+## Partial Index
 
 `CREATE [UNIQUE] INDEX <index name> ON <table> (<column A, column B>) WHERE <conditions>`
 
-#### vertical show fields
+#### Vertical Show Fields
 
 `select * from table\G`
 
-## postgres version
+## Postgres Version
 
 `SHOW server_version`
 
