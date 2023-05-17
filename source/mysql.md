@@ -2,7 +2,7 @@
 
 ## Installation
 
-tip: installation process need active VPN
+Tip: installation flow needs an active VPN
 
 ```
 sudo apt update
@@ -94,11 +94,11 @@ sudo mysql_secure_installation
 
 `CREATE [UNIQUE] INDEX <index name> ON <table> (<column A, column B>) WHERE <conditions>`
 
-#### Vertical Show Fields
+## Vertical Show Fields
 
-`select * from table\G`
+`SELECT * FROM <table_name>\G`
 
-## Postgres Version
+## MySQL Version
 
-`SHOW server_version`
+`SHOW VARIABLES LIKE "%version%";`
 

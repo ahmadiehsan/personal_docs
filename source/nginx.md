@@ -25,10 +25,13 @@ server {
         include proxy_params;
         proxy_pass http://localhost:8002;
     }
+    location /static/ {
+        root /path/to/parent_dir/of/static_dir;
+    }
 }
 ```
 
-## Ssl Config
+## SSL Config
 
 ```
 server {
