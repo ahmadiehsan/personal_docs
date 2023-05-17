@@ -187,6 +187,8 @@ Commands:
 
 - split current terminal horizontally: `ctrl+b "`
 
+- new window (tab): `ctrl+b c`
+
 - maximize and minimize terminal: `ctrl+b z`
 
 - switch between terminals: `ctrl+b o`
@@ -198,11 +200,6 @@ Commands:
 - disconnect from session: `ctrl+b + d`
 
 - destroy session: `ctrl+d`
-
-`~/.tmux.conf` file:
-
-- colored shell: `set -g default-terminal "screen-256color"`
-- mouse activation: `set -g mouse on`
 
 ## Gnome
 
