@@ -1,5 +1,9 @@
 # Git
 
+## Links
+
+- [Git assume a file unchanged](https://stackoverflow.com/a/10881296)
+
 ## Commands History
 
 `git reflog`
