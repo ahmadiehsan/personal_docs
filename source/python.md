@@ -24,9 +24,10 @@
 - [Python Dates Types](https://www.w3schools.com/python/python_datetime.asp)
 - [Convert Python File To .Exe](https://m.youtube.com/watch?feature=youtu.be&v=UZX5kH72Yx4)
 - [Get The Filepath For A Class](https://stackoverflow.com/questions/697320/how-do-i-get-the-filepath-for-a-class-in-python/697395#697395)
-- [All File Open Modes](https://stackoverflow.com/questions/6648493/how-to-open-a-file-for-both-reading-and-writing/58925279#58925279)
+- [File Open Modes](https://stackoverflow.com/questions/6648493/how-to-open-a-file-for-both-reading-and-writing/58925279#58925279)
 - [Time Complexity (Big O)](https://wiki.python.org/moin/TimeComplexity)
 - [Number of Gunicorn workers in Kubernetes](https://forum.djangoproject.com/t/gunicorn-workers-in-kubernetes/7918/2)
+- [Best python profiler](https://github.com/plasma-umass/scalene)
 
 ## Get All Import Able Modules And Packages
 
