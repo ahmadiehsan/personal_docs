@@ -6,7 +6,8 @@
 
 ## Commands History
 
-`git reflog`
+1. See logs: `git reflog`
+2. Undo an action: `git reset --hard <reflog_id: HEAD@{2}>`
 
 ## Change Default Branch
 
