@@ -1,6 +1,6 @@
 # Rabbitmq
 
-### User Auth Test
+## User Auth Test
 
 ```
 sudo rabbitmqctl authenticate_user <user>  <password>
