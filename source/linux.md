@@ -29,6 +29,7 @@
 - [Crontab Generator](https://crontab-generator.org/)
 - [Vim Configuration](https://jadi.net/2020/05/vim-prat-3/)
 - [Screen Recorder](https://obsproject.com/wiki/unofficial-linux-builds#debian)
+- [Useful Commands Cheatsheet](https://xmind.app/m/WwtB/)
 
 ## Disk Space
 
