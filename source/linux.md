@@ -35,12 +35,20 @@
 
 `df -h`
 
-## Install .Deb Package
+## Install Package
 
-```
-sudo dpkg -i path/to/deb/file.deb
-sudo apt-get install -f
-```
+- .deb
+
+  ```
+  sudo dpkg -i path/to/file.deb
+  sudo apt-get install -f
+  ```
+
+- .rpm
+
+  ```
+  sudo alien -i path/to/file.rpm
+  ```
 
 ## Ssh
 
