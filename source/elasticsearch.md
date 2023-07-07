@@ -180,7 +180,7 @@ curl -X DELETE "http://localhost:9200/*?pretty"
 2. Clone
 
    ```
-   curl -X POST "localhost:9200/<source_index_name>/_clone/<destination_index_name>?pretty"
+   curl -X POST "http://localhost:9200/<source_index_name>/_clone/<destination_index_name>?pretty"
    ```
 
 3. Make the source index write able
