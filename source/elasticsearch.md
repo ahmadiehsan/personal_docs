@@ -166,6 +166,41 @@ curl -X DELETE "http://localhost:9200/<index1>,<index2>,<index3>?pretty"
 curl -X DELETE "http://localhost:9200/*?pretty"
 ```
 
+### Clone
+
+1. Make the source index readonly
+
+   ```
+   curl -X PUT "http://localhost:9200/<source_index_name>/_settings?pretty" -H 'Content-Type: application/json' -d'
+   {
+     "settings": {"index.blocks.write": true}
+   }'
+   ```
+
+2. Clone
+
+   ```
+   curl -X POST "localhost:9200/<source_index_name>/_clone/<destination_index_name>?pretty"
+   ```
+
+3. Make the source index write able
+
+   ```
+   curl -X PUT "http://localhost:9200/<source_index_name>/_settings?pretty" -H 'Content-Type: application/json' -d'
+   {
+     "settings": {"index.blocks.write": false}
+   }'
+   ```
+
+### Reindex
+
+```bash
+curl -X POST "http://localhost:9200/_reindex?pretty" -H 'Content-Type: application/json' -d'{
+  "source": {"index": "<source_index_name>"},
+  "dest": {"index": "<destination_index_name>"}
+}'
+```
+
 ## Mapping
 
 ### Get Current
@@ -175,6 +210,8 @@ curl -X GET "http://localhost:9200/<index_name>/_mapping?pretty"
 ```
 
 ### Create Or Update
+
+Tip: We can’t change the mapping or field type of an existing field. Changing an existing field could invalidate data that’s already indexed.
 
 ```bash
 curl -X PUT "http://localhost:9200/<index_name>/_mapping?pretty" -H 'Content-Type: application/json' -d '{
