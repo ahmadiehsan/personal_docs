@@ -75,7 +75,20 @@ sudo mysql_secure_installation
 - show all of db tables: `SHOW TABLES`
 - show table schema: `DESCRIBE <tablename>`
 - show table full schema: `SHOW FULL COLUMNS FROM <tablename>;`
-- create table: `CREATE TABLE <tablename> (id INT NOT NULL AUTO_INCREMENT, <column2> <datatype>, PRIMARY KEY(id))`
+- create table simple: `CREATE TABLE <tablename> (id INT NOT NULL AUTO_INCREMENT, <column2> <datatype>, PRIMARY KEY(id))`
+- create table complex:
+
+  ```
+  CREATE TABLE <tablename> (
+      id BINARY(16) PRIMARY KEY,  # UUID
+      created DATETIME(6) NOT NULL,
+      <column3> INT NOT NULL DEFAULT 0,
+      <column4> BINARY(16) UNIQUE NOT NULL,  # FK (1:1)
+  
+  	INDEX (<column3>),  # custom index
+  	FOREIGN KEY (<column4>) REFERENCES <othertable>(id)  # automatically will create an index
+  );
+  ```
 - create table based on other table: ``
 - delete table: `DROP TABLE <tablename>`
 - show indexes: `SHOW INDEXES IN <tablename>`
