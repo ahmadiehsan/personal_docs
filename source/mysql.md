@@ -85,8 +85,8 @@ sudo mysql_secure_installation
       <column3> INT NOT NULL DEFAULT 0,
       <column4> BINARY(16) UNIQUE NOT NULL,  # FK (1:1)
   
-  	INDEX (<column3>),  # custom index
-  	FOREIGN KEY (<column4>) REFERENCES <othertable>(id)  # automatically will create an index
+      INDEX (<column3>),  # custom index
+      FOREIGN KEY (<column4>) REFERENCES <othertable>(id)  # automatically will create an index
   );
   ```
 - create table based on other table: ``
