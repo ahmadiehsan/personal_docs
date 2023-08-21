@@ -38,6 +38,18 @@ all_modules = [x[1] for x in pkgutil.iter_modules(path=search_path)]
 print(all_modules)
 ```
 
+## Get a Function Path
+
+```
+import os
+import inspect
+
+def foo():
+  pass
+    
+print(os.path.abspath(inspect.getfile(foo)))
+```
+
 ## Celery
 
 Install:
