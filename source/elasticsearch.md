@@ -21,8 +21,7 @@ curl -X GET "http://localhost:9200/_search?pretty" -u <username_and_password: el
 curl -X GET "http://localhost:9200/<index_name>/<_search or _count>?pretty" -H 'Content-Type: application/json' -d '{
   "from": <offset: 5>,
   "size": <limit: 20>,
-  "fields": ["<field_1>", "<field_2>"],
-  "_source": false,
+  "_source": ["<field_1>", "<field_2>"],
   "query": {
     "bool": {
       "must": {
