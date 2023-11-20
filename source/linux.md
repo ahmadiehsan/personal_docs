@@ -34,6 +34,16 @@
   sudo alien -i path/to/file.rpm
   ```
 
+## Check Boot Type
+
+1. Run `cat /etc/fstab`
+
+2. If there is a line like this, it means the system boot mode is UEFI, otherwise, it is Legacy BIOS
+
+   ```
+   UUID=xxx /boot/efi ntfs defaults 0 1
+   ```
+
 ## Ssh
 
 - download to local:
@@ -195,6 +205,14 @@ Commands:
 - destroy session: `ctrl+d`
 
 ## Gnome
+
+Activate NumLock in the login screen for GDM by default:
+
+```shell
+gsettings set org.gnome.desktop.peripherals.keyboard numlock-state true
+```
+
+Additional packages:
 
 `sudo apt install gnome-tweak-tool chrome-gnome-shell`
 
