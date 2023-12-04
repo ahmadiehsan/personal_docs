@@ -153,7 +153,7 @@ curl -X PUT "http://localhost:9200/<index_name>?pretty" -H 'Content-Type: applic
 ### Add alias to index
 
 ```bash
-curl -X POST "localhost:9200/_aliases?pretty" -H 'Content-Type: application/json' -d'{
+curl -X POST "http://localhost:9200/_aliases?pretty" -H 'Content-Type: application/json' -d'{
   "actions": [
     {
       "add": {
