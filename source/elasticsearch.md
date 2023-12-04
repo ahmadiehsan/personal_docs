@@ -150,17 +150,25 @@ curl -X PUT "http://localhost:9200/<index_name>?pretty" -H 'Content-Type: applic
 }'
 ```
 
-### Add alias to index
+### Alias
+
+Tip: The `remove` action will remove this alias from other indices
 
 ```bash
 curl -X POST "http://localhost:9200/_aliases?pretty" -H 'Content-Type: application/json' -d'{
   "actions": [
     {
+      "remove": {
+        "index": "*",
+        "alias": "<alias_name>"
+      }
+    },
+    {
       "add": {
         "index": "<index_name>",
         "alias": "<alias_name>"
       }
-    }
+    },
   ]
 }'
 ```
