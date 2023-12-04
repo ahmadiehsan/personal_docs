@@ -168,7 +168,7 @@ curl -X POST "http://localhost:9200/_aliases?pretty" -H 'Content-Type: applicati
         "index": "<index_name>",
         "alias": "<alias_name>"
       }
-    },
+    }
   ]
 }'
 ```
