@@ -269,16 +269,23 @@ sudo update-grub
 4. Make sure to select “recommended repair” option to repair grub. Reboot
 5. You will now have a Grub menu on boot, where you can choose from Ubuntu, and Windows
 
-## Disable Sudo Password For Specific Or All Commands
+## Disable Sudo Password
 
-run `sudo EDITOR=vim visudo`
+1. run `sudo EDITOR=vim visudo`
 
-and add below line after  `%sudo ...` line
+2. and add below line after  `%sudo` line
 
-```
-<user>  ALL=NOPASSWD: <command: /bin/systemctl>
-<user>  ALL=(ALL) NOPASSWD: ALL
-```
+   - For specific user
+
+     ```
+     <username>	ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
+     ```
+
+   - For all users
+
+     ```
+     ALL	ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
+     ```
 
 ## Add Windows To Boot Loader
 
