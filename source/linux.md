@@ -335,6 +335,22 @@ ps -eLf | less
 dmesg -l err
 ```
 
+## Alt+Shift+<any_other_key> doesn't work
+
+The problem is related to the change-layout shortcut, by default it is set to Alt+Shift, for this reason, the system intercepts it for itself and doesn't let it reach some programs like Pycharm or VSCode.
+
+To solve, update `/etc/default/keyboard` and replace
+
+```
+XKBOPTIONS="grp:alt_shift_toggle,grp_led:scroll"
+```
+
+With
+
+```
+XKBOPTIONS="grp:super_space_toggle,grp_led:scroll"
+```
+
 ## Nvidia Driver
 
 First we will install the proper driver:
