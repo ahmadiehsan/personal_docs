@@ -1,4 +1,4 @@
-# Data Science
+# Data Science / AI
 
 ## Links
 
@@ -9,3 +9,4 @@
 - [Dimensionality Reduction With Random Forests And Pca](https://builtin.com/data-science/dimensionality-reduction-python)
 - [Top 10 Machine Learning Algorithms](https://builtin.com/data-science/tour-top-10-algorithms-machine-learning-newbies)
 - [Automl](https://www.ml4aad.org/automl/)
+- [How Train Sentence Transformers](https://huggingface.co/blog/how-to-train-sentence-transformers)
