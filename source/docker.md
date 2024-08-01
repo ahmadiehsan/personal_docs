@@ -7,18 +7,26 @@
 
 ## Image
 
-- remove none images: `docker rmi $(docker images --filter "dangling=true" -q --no-trunc)`
+- Remove none images:
 
-- build image: `docker build . --tag <image_tag>`
+  ```
+  docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+  ```
 
-- create image from container:
+- Build image:
+
+  ```
+  docker build . --tag <image_tag>
+  ```
+
+- Create image from container:
 
   ```
   docker commit <container_name>
   docker tag <created_image_id> <image_name:image_tag>
   ```
 
-- login & push to other registry:
+- Login & push to other registry:
 
   ```
   docker login mgit.mparsict.com:5050
@@ -29,16 +37,42 @@
 
 ## Container
 
-- stop all containers: `docker container stop $(docker ps -a -q)`
-- remove all containers: `docker container rm $(docker ps -a -q)`
-- keep container alive: `CMD ["tail", "-f", "/dev/null"]`
-- create container from image: `docker run -p 80:80 --name <container_name> -d <image_tag>`
-- run command in container: `docker exec -it <container_name> <command: bash>`
+- Stop all containers:
 
-## Log
+  ```
+  docker container stop $(docker ps -a -q)
+  ```
+- Remove all containers:
 
-- remove all containers log: `sudo sh -c "truncate -s 0 /var/lib/docker/containers/*/*-json.log"`
+  ```
+  docker container rm $(docker ps -a -q)
+  ```
+- Keep container alive:
 
-## Docker Group
+  ```
+  CMD ["tail", "-f", "/dev/null"]
+  ```
+- Create container from image:
 
-- add the current user: `sudo usermod -aG docker $USER`
+  ```
+  docker run -p 80:80 --name <container_name> -d <image_tag>
+  ```
+- Run command in container:
+
+  ```
+  docker exec -it <container_name> <command: bash>
+  ```
+
+## Other
+
+- Add the current user to the Docker group:
+
+  ```
+  sudo usermod -aG docker $USER
+  ```
+
+- Remove all containers log:
+
+  ```
+  sudo sh -c "truncate -s 0 /var/lib/docker/containers/*/*-json.log"
+  ```

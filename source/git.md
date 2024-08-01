@@ -7,90 +7,207 @@
 
 ## Reflog
 
-1. See logs: `git reflog`
-2. Undo an action: `git reset --hard <reflog_id: HEAD@{2}>`
+1. See logs:
+
+   ```
+   git reflog
+   ```
+2. Undo an action:
+
+   ```
+   git reset --hard <reflog_id: HEAD@{2}>
+   ```
 
 ## Stash
 
-- apply: `git stash apply stash@{<index>}`
+- Apply: 
 
-- list of stashes: `git stash list`
+  ```
+  git stash apply stash@{<index>}
+  ```
 
-- drop: `git stash drop stash@{<index>}`
+- List of stashes:
 
-- clear (drop all stashes): `git stash clear`
+  ```
+  git stash list
+  ```
 
-- pop (apply and drop): `git stash pop stash@{<index>}`
+- Drop:
 
-- show (files that changed in this stash): `git stash show stash@{<index>}`
+  ```
+  git stash drop stash@{<index>}
+  ```
+
+- Clear (drop all stashes):
+
+  ```
+  git stash clear
+  ```
+
+- Pop (apply and drop):
+
+  ```
+  git stash pop stash@{<index>}
+  ```
+
+- Show (files that changed in this stash):
+
+  ```
+  git stash show stash@{<index>}
+  ```
 
 ## Tag
 
-- create:
+- Create:
   
-  - without message: `git tag <tag_name>`
-  - with message: `git tag <tag_name> -m "<message>"`
-  - add tag to specific commit `git tag <tag_name> <commit_id>`
+  ```
+  # Without message
+  git tag <tag_name>
   
-- update:
+  # with message
+  git tag <tag_name> -m "<message>"
+  
+  # Add tag to specific commit
+  git tag <tag_name> <commit_id>
+  ```
+  
+- Update:
 
-  `git tag -f <tag_name> <commit_id>`
+  ```
+  # Without message
+  git tag -f <tag_name> <commit_id>
+  
+  # with message
+  git tag -f <tag_name> -m "<message>"
+  ```
 
-  `git tag -f <tag_name> -m "<message>"`
+- List of tags:
 
-- list of tags:
+  ```
+  # Simple
+  git tag
+  
+  # More verbose
+  git tag --list
+  ```
 
-  `git tag`
+- Delete:
+  
+  ```
+  # For local repo
+  git tag --delete <tag_name>
+  
+  # For remote repo
+  git push origin --delete <tag_name>
+  ```
+  
+- Tag data:
 
-  `git tag --list`
+  ```
+  git show <tag_name>
+  ```
 
-- delete:
-  - for local repo: `git tag --delete <tag_name>`
-  - for remote repo `git push origin --delete <tag_name>`
+- Push tags:
+  
+  ```
+  # Single tag
+  git push origin <tag_name>
+  
+  # All tags
+  git push origin master --tags
+  ```
 
-- tag data: `git show <tag_name>`
+## Auth (SSH):
 
-- push tags:
-  - single tag: `git push origin <tag_name>`
-  - all tags: `git push origin master --tags`
+1. Generate ssh key:
 
-## Auth
+   ```
+   ssh-keygen -t rsa
+   ```
+2. Add private key to system by:
 
-- ssh:
+   ```
+   ssh-add
+   ```
+3. Get public ssh key by this command:
 
-  1. generate ssh key: `ssh-keygen -t rsa`
-  2. add private key to system by: `ssh-add`
-  3. get public ssh key by this command: `cat ~/.ssh/id_rsa.pub`
-  4. add public ssh key to git profile setting: [https://github.com/settings/keys](https://github.com/settings/keys)
-  5. change project remote URL, to ssh type
-  6. connect to git: `ssh -T git@github.com`
+   ```
+   cat ~/.ssh/id_rsa.pub
+   ```
+4. Add public ssh key to git profile setting:
 
-- token & in url auth:
+   [https://github.com/settings/keys](https://github.com/settings/keys)
+5. Change project remote URL, to ssh type
+6. Connect to git:
 
-  - personal access token:
+   ```
+   ssh -T git@github.com
+   ```
 
-    `git clone https://oauth2:<access_token>@gitlab.com/myrepo.git`
+## Auth (Token & In-URL Auth)
 
-    `git clone https://<username>:<access_token>@gitlab.com/myrepo.git`
+- Personal access token:
 
-  - simple auth: `git clone https://<username>:<password>@gitlab.com/myrepo.git`
+  ```
+  # With OAuth2
+  git clone https://oauth2:<access_token>@gitlab.com/myrepo.git
+  
+  # With username
+  git clone https://<username>:<access_token>@gitlab.com/myrepo.git
+  ```
 
-  - pip: `git+https://<username>:<access_token>@gitlab.com/myrepo.git@<tag>`
+- Simple auth:
 
-  - npm: `git+https://<username>:<access_token>@gitlab.com/myrepo.git`
+  ```
+  git clone https://<username>:<password>@gitlab.com/myrepo.git
+  ```
+
+- PIP:
+
+  ```
+  git+https://<username>:<access_token>@gitlab.com/myrepo.git@<tag>
+  ```
+
+- NPM:
+
+  ```
+  git+https://<username>:<access_token>@gitlab.com/myrepo.git
+  ```
 
 
 ## Alias
 
-- add: `git config --global alias.<command_name> "<command>"`
-- example: `git config --global alias.hist "log --all --oneline --graph --decorate"`
+- Add:
+
+  ```
+  git config --global alias.<command_name> "<command>"
+  
+  # Example
+  git config --global alias.hist "log --all --oneline --graph --decorate"
+  ```
 
 ## Config
 
-- default editor: `git config --global core.editor "<editor name: vim>"`
-- password cache: `git config --global credential.helper 'cache --timeout=<time in seconds: 3600>'`
-- ssl problem: `git config --global http.sslverify false`
+- Default editor:
+
+  ```
+  git config --global core.editor "<editor name: vim>"
+  ```
+- Password cache:
+
+  ```
+  git config --global credential.helper 'cache --timeout=<time in seconds: 3600>'
+  ```
+- SSL problem:
+
+  ```
+  git config --global http.sslverify false
+  ```
 
 ## Pull/Push
 
-- last pull time: `stat -c %y .git/FETCH_HEAD`
+- Last pull time:
+
+  ```
+  stat -c %y .git/FETCH_HEAD
+  ```
