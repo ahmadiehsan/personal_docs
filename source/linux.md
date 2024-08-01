@@ -2,386 +2,391 @@
 
 ## Links
 
-- [Reset Gnome desktop](http://ubuntuhandbook.org/index.php/2018/06/reset-gnome-desktop-ubuntu-18-04/)
 - [Sudo password cache](https://apple.stackexchange.com/questions/10139/how-do-i-increase-sudo-password-remember-timeout#answer-51763)
 - [Debian mirror sites](https://www.debian.org/mirror/list)
 - [Vim readonly save problem](https://superuser.com/questions/694450/using-vim-to-force-edit-a-file-when-you-opened-without-permissions/785016#785016)
 - [Start Ubuntu in console mode](https://askubuntu.com/a/859640)
 - [Youcompleteme unavailable: requires Vim 8.1.2269+](https://github.com/ycm-core/YouCompleteMe/issues/3764#issuecomment-755816205)
-- [Ubuntu &Lt;=&Gt; Debian](https://askubuntu.com/questions/445487/what-debian-version-are-the-different-ubuntu-versions-based-on/445496#445496)
+- [Ubuntu <=> Debian](https://askubuntu.com/questions/445487/what-debian-version-are-the-different-ubuntu-versions-based-on/445496#445496)
 - [Possible missing firmware](https://unix.stackexchange.com/questions/556946/possible-missing-firmware-lib-firmware-i915-for-module-i915/557015#557015)
 - [Vim configuration](https://jadi.net/2020/05/vim-prat-3/)
 - [Screen recorder](https://obsproject.com/wiki/unofficial-linux-builds#debian)
 - [Useful commands cheatsheet](https://xmind.app/m/WwtB/)
 
-## Disk Space
+## SSH
 
-- simple: `df -h`
-- advanced: `ncdu`
-
-## Install Package
-
-- .deb
+- Download to local:
 
   ```
-  sudo dpkg -i path/to/file.deb
-  sudo apt-get install -f
+  scp -[r]P <port> <user>@<ip>:<path/to/folder> <path/to/local>
   ```
 
-- .rpm
+- Upload to server:
 
   ```
-  sudo alien -i path/to/file.rpm
+  scp -[r]P <port> <source file> <username>@<destination server>:<destination directory>
   ```
 
-## Check Boot Type
-
-1. run `cat /etc/fstab`
-
-2. if there is a line like this, it means the system boot mode is UEFI, otherwise, it is Legacy BIOS
-
-   ```
-   UUID=xxx /boot/efi ntfs defaults 0 1
-   ```
-
-## Ssh
-
-- download to local:
-
-  `scp -[r]P <port> <user>@<ip>:<path/to/folder> <path/to/local>`
-
-- upload to server:
-
-  `scp -[r]P <port> <source file> <username>@<destination server>:<destination directory>`
-
-- generate ssh key:
+- Generate ssh key:
 
   ```
   ssh-keygen -t rsa
   ssh-add
   ```
 
-- list of private keys: `ssh-add -l`
+- List of private keys:
 
-- you can access to you public ssh key by this command: `cat ~/.ssh/id_rsa.pub`
+  ```
+  ssh-add -l
+  ```
 
-- prevent SSH from disconnecting:
+- Access to public ssh key:
+
+  ```
+  cat ~/.ssh/id_rsa.pub
+  ```
+
+- Prevent SSH from disconnecting:
 
   ```shell
   # /etc/ssh/ssh_config or ~/.ssh/config
-  
   ServerAliveInterval 60
   ```
 
-## Contrib / Non-Free Repo
+## Compress & Extract
 
-```
-# /etc/apt/sources.list
+- .tgz:
 
-deb http://deb.debian.org/debian/ buster main contrib non-free
-deb-src http://deb.debian.org/debian/ buster main contrib non-free
+  ```
+  # Compress
+  tar -czvf <file_name.tgz> </path/to/directory>
+  tar -czvf <file_name.tgz> </path/to/directory>/.  # include hidden files
+  tar -czvf <file_name.tgz> </path/to/file>
+  
+  # Extract
+  tar -xzvf <file_name.tgz>
+  tar -xzvf <file_name.tgz> -C </path/to/directory>
+  
+  # Split into multiple files
+  split --bytes=<split_size: 10m> --suffix-length=4 --numeric-suffix <source_file.tgz> <destination_file.tgz.>
+  
+  # Extract from splitted files (tgz)
+  cat <destination_file.tgz.*> | tar -xzvf -
+  ```
 
-deb http://security.debian.org/debian-security buster/updates main contrib non-free
-deb-src http://security.debian.org/debian-security buster/updates main contrib non-free
+- .zip:
 
-deb http://deb.debian.org/debian/ buster-updates main contrib non-free
-deb-src http://deb.debian.org/debian/ buster-updates main contrib non-free
-```
+  ```
+  # Compress
+  zip <filename.zip> <file>
+  
+  # Extract (`sudo apt install unzip`)
+  unzip <file_name.zip>
+  unzip '*.zip'
+  ```
 
-## Compress And Extract
+- .rar
 
-```shell
-# compress (tgz)
-tar -czvf <file_name.tgz> </path/to/directory>
-tar -czvf <file_name.tgz> </path/to/directory>/.	# include hidden files
-tar -czvf <file_name.tgz> </path/to/file>
-
-# extract (tgz)
-tar -xzvf <file_name.tgz>
-tar -xzvf <file_name.tgz> -C </path/to/directory>
-
-# compress (zip)
-zip <filename.zip> <file>
-
-# extract (zip)  # sudo apt install unzip
-unzip <file_name.zip>
-unzip '*.zip'
-
-# split into multiple files (tgz)
-split --bytes=<split_size: 10m> --suffix-length=4 --numeric-suffix <source_file.tgz> <destination_file.tgz.>
-
-# extract from splitted files (tgz)
-cat <destination_file.tgz.*> | tar -xzvf -
-
-# extract (rar)  # sudo apt-get install unrar
-unrar x -r </path/to/file.rar>
-```
+  ```
+  # Extract (sudo apt-get install unrar)
+  unrar x -r </path/to/file.rar>
+  ```
 
 ## Cron
 
-1. create a bash file that starts with `#!/bin/bash` and without the `.sh` filename suffix
-2. change the file to runnable mode with the `sudo chmod +x` command
-3. create a soft link in the `/etc/cron.daily/`
-4. or add it to the `/etc/crontab`
-5. test for correct run: `run-parts --test /etc/cron.daily`
+1. Create a bash file that starts with `#!/bin/bash` and without the `.sh` filename suffix
+2. Change the file to runnable mode with the `sudo chmod +x` command
+3. ceate a soft link in the `/etc/cron.daily/` or add it to the `/etc/crontab`
+5. Test for correct run: `run-parts --test /etc/cron.daily`
 
 ## Xmodmap
 
-- remove a key from a mod: `xmodmap -e 'remove Mod1 = Alt_R'`
-- add a key to a mod: `xmodmap -e 'add Mod3 = Alt_R'`
+- Remove a key from a mod:
+
+  ```
+  xmodmap -e 'remove Mod1 = Alt_R'
+  ```
+- Add a key to a mod:
+
+  ```
+  xmodmap -e 'add Mod3 = Alt_R'
+  ```
 
 ## Firewall
 
-- enable and disable firewall: `sudo ufw enable/disable`
+- Enable and disable firewall:
 
-- get status of firewall and all available ports: `sudo ufw status verbose`
+  ```
+  sudo ufw enable/disable
+  ```
 
-- get list of apps that wanna firewall access: `sudo ufw app list`
+- Get status of firewall and all available ports:
 
-- set or get firewall access for app:
+  ```
+  sudo ufw status verbose
+  ```
 
-  `sudo ufw allow <port>`
+- Get list of apps that wanna firewall access:
+
+  ```
+  sudo ufw app list
+  ```
+
+- Set or get firewall access for port:
+
+  ```
+  sudo ufw allow <port>
+  sudo ufw delete allow <port>
+  ```
   
-  `sudo ufw delete allow <port>`
-  
-  `sudo ufw allow in "<app name>"`
-  
-  `sudo ufw delete allow in "<app name>"`
+- Set or get firewall access for app:
+
+  ```
+  sudo ufw allow in "<app name>"
+  sudo ufw delete allow in "<app name>"
+  ```
 
 ## Add Proxy To Apt-Get
 
-1. go to https://free-proxy-list.net/ and find an free proxy address
+1. Go to https://free-proxy-list.net/ and find an free proxy address
 
-2. add below code to `/etc/apt/apt.conf`
+2. Add below code to `/etc/apt/apt.conf`:
 
-   - if your proxy has not password
-
-     `Acquire::http::Proxy "http://<yourproxyaddress>:<proxyport>";`
-
-   - if your proxy has password
-
-     `Acquire::http::Proxy "http://<username>:<password>@<proxyaddress>:<proxyport>";`
+   ```
+   # If your proxy has not password
+   Acquire::http::Proxy "http://<yourproxyaddress>:<proxyport>";
+   
+   # If your proxy has password
+   Acquire::http::Proxy "http://<username>:<password>@<proxyaddress>:<proxyport>";
+   ```
 
 ## Remove Launcher Entry
 
-1. go to
-   - `~/.local/share/applications/` if you create entry for you user only
-   - `/usr/share/applications/` if you create entry for all users
-2. remove `<your application name: jetbrains-pycharm.desktop>`
-
-## Open Shell Without Login
-
-`ctrl + alt + f5`
+1. Go to `~/.local/share/applications/` or `/usr/share/applications/`
+2. Remove `<your application name: jetbrains-pycharm.desktop>`
 
 ## Networkmanager
 
-- list of connections: `nmcli connection`
-- change DNS: `nmcli connection modify <connection name> ipv4.dns "<dns one:8.8.8.8> <dns two:8.8.4.4>"`
-- connection down (need for restart): `nmcli connection down <connection name>`
-- connection up (need for restart): `nmcli connection up <connection name>`
+- List of connections:
+
+  ```
+  nmcli connection
+  ```
+- Change DNS:
+
+  ```
+  nmcli connection modify <connection name> ipv4.dns "<dns one:8.8.8.8> <dns two:8.8.4.4>"
+  ```
+- Connection down (need to restart):
+
+  ```
+  nmcli connection down <connection name>
+  ```
+- Connection up (need to restart):
+
+  ```
+  nmcli connection up <connection name>
+  ```
 
 ## Tmux
 
-Commands:
+- Create new terminal:
 
-- create new terminal: `tmux`
+  ```
+  tmux
+  ```
 
-- split current terminal vertically: `ctrl+b %`
+- Split current terminal vertically:
 
-- split current terminal horizontally: `ctrl+b "`
+  ```
+  ctrl+b %
+  ```
 
-- new window (tab): `ctrl+b c`
+- Split current terminal horizontally:
 
-- maximize and minimize terminal: `ctrl+b z`
+  ```
+  ctrl+b "
+  ```
 
-- switch between terminals: `ctrl+b o`
+- New window (tab):
 
-- create new session: `tmux new -s <session name>`
+  ```
+  ctrl+b c
+  ```
 
-- connect to session: `tmux attach-session -t <session name>`
+- Maximize and minimize terminal:
 
-- disconnect from session: `ctrl+b + d`
+  ```
+  ctrl+b z
+  ```
 
-- destroy session: `ctrl+d`
+- Switch between terminals:
 
-## Gnome
+  ```
+  ctrl+b o
+  ```
 
-Activate NumLock in the login screen for GDM by default:
+- Create new session:
 
-```shell
-gsettings set org.gnome.desktop.peripherals.keyboard numlock-state true
-```
+  ```
+  tmux new -s <session_name>
+  ```
 
-Additional packages:
+- Connect to session:
 
-`sudo apt install gnome-tweak-tool chrome-gnome-shell`
+  ```
+  tmux attach-session -t <session_name>
+  ```
 
-Extensions:
+- Disconnect from session:
 
-- workspace thumbnails:
+  ```
+  ctrl+b + d
+  ```
 
-  https://extensions.gnome.org/extension/1516/workspace-switcher-popup-with-thumbnails/
+- Destroy session:
 
-- workspace like unity:
-
-  https://extensions.gnome.org/extension/1485/workspace-matrix/
-
-- Drop Down Terminal
-
-  https://extensions.gnome.org/extension/1509/drop-down-terminal-x/
-  
-- no title bar:
-
-  https://extensions.gnome.org/extension/1267/no-title-bar/
-
-- hide top bar:
-
-  https://extensions.gnome.org/extension/545/hide-top-bar/
-
-- top bar back and text color changer
-
-  https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/
-
-- workspace grid:
-
-  https://extensions.gnome.org/extension/484/workspace-grid/
-
-- move top bar to bottom:
-
-  https://extensions.gnome.org/extension/949/bottompanel/
+  ```
+  ctrl+d
+  ```
 
 ## Grub
 
-### Edit
+- Edit configs:
 
-```
-sudo vim /etc/default/grub
-sudo update-grub
-```
+  ```
+  sudo vim /etc/default/grub
+  sudo update-grub
+  ```
 
-### Grub Problem
+- Grub Problem:
 
-1. To install and fix grub, you need Live CD or Live USB of Ubuntu
-2. Once you load Live Ubuntu, Open Terminal and fire following commands to install boot-repair and let it fix the Grub
-   `sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt-get update`
-   `sudo apt-get install -y boot-repair && boot-repair`
-3. After installation, boot-repair will get automatically launched
-4. Make sure to select “recommended repair” option to repair grub. Reboot
-5. You will now have a Grub menu on boot, where you can choose from Ubuntu, and Windows
+  1. To install and fix grub, you need Live CD or Live USB of Ubuntu
+
+  2. Once you load Live Ubuntu, Open Terminal and fire following commands to install boot-repair and let it fix the Grub
+
+     ```
+     sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt-get update
+     sudo apt-get install -y boot-repair && boot-repair
+     ```
+
+  3. After installation, boot-repair will get automatically launched
+
+  4. Make sure to select “recommended repair” option to repair grub. Reboot
+
+  5. You will now have a Grub menu on boot, where you can choose from Ubuntu, and Windows
+
+- Add Windows to boot loader:
+
+  ```
+  sudo os-prober
+  sudo update-grub
+  ```
 
 ## Disable Sudo Password
 
-1. run `sudo EDITOR=vim visudo`
+1. Run:
 
-2. and add below line after  `%sudo` line
+   ```
+   sudo EDITOR=vim visudo
+   ```
 
-   - For specific user
+2. And add below line after  `%sudo` line:
 
-     ```
-     <username>	ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
-     ```
+   ```
+   # For specific user
+   <username>	ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
+   
+   # For all users
+   ALL	ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
+   ```
 
-   - For all users
+## Machine
 
-     ```
-     ALL	ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
-     ```
+- Version:
 
-## Add Windows To Boot Loader
+  ````
+  cat /etc/*-release
+  ````
 
-```
-sudo os-prober
-sudo update-grub
-```
+- CPU:
 
-## Machine Version
+  ```
+  lscpu
+  ```
 
-`cat /etc/*-release`
+- Memory:
 
-## Machine Config
+  ```
+  free -h
+  ```
 
-- cpu: `lscpu`
-- memory: `free -h`
+- Disk space:
 
-## Minimal Curl
+  ```
+  # Simple
+  df -h
+  
+  # Advanced
+  ncdu
+  ```
 
-```bash
-curl -i -H "Accept: text/html" 127.0.0.1:31001 -v
-```
+- Install package:
 
-## Vim Replace All
+  ```
+  # .dev
+  sudo dpkg -i path/to/file.deb
+  sudo apt-get install -f
+  
+  # .rpm
+  sudo alien -i path/to/file.rpm
+  ```
 
-```
-:%s/foo/bar/g
-```
+- Boot type:
 
-## Merge Two Directory
+  ```
+  cat /etc/fstab
+  
+  # If there is a line like `UUID=xxx /boot/efi ntfs defaults 0 1`, it means the system boot mode is UEFI, otherwise, it is Legacy BIOS
+  ```
 
-```
-rsync -a <other/dir> <destination/dir>
-```
+- Kernel logs:
 
-## Get All Process With Their Threads
-
-NLWP = threads
-
-```
-ps -eLf | less
-```
-
-## Kernel Logs
-
-```
-dmesg -l err
-```
-
-## Alt+Shift+<any_other_key> doesn't work
-
-The problem is related to the change-layout shortcut, by default it is set to Alt+Shift, for this reason, the system intercepts it for itself and doesn't let it reach some programs like Pycharm or VSCode.
-
-To solve, update `/etc/default/keyboard` and replace
-
-```
-XKBOPTIONS="grp:alt_shift_toggle,grp_led:scroll"
-```
-
-With
-
-```
-XKBOPTIONS="grp:super_space_toggle,grp_led:scroll"
-```
+  ```
+  dmesg -l err
+  ```
 
 ## Nvidia Driver
 
-First we will install the proper driver:
+1. First we will install the proper driver:
 
-```
-sudo apt install nvidia-detect
-nvidia-detect
-sudo apt install <suggested_package_from_previous_step>
-```
+   ```
+   sudo apt install nvidia-detect
+   nvidia-detect
+   sudo apt install <suggested_package_from_previous_step>
+   ```
 
-After restarting the system driver should work properly, if not we will install the below packages:
+2. After restarting the system driver should work properly, if not we will install the below packages:
 
-```
-sudo apt-get install bumblebee bumblebee-nvidia linux-headers-generic
-```
+   ```
+   sudo apt-get install bumblebee bumblebee-nvidia linux-headers-generic
+   ```
 
-Now each time that we want to use the NVIDIA GPU should run the bellow command! (While the below command is run we can run every program that we want to use NVIDIA GPU)
+3. Now each time that we want to use the NVIDIA GPU should run the following command! (While the following command is runnuing we can run every program that we want to use NVIDIA GPU)
 
-```
-sudo optirun nvidia-settings -c :8
-```
+   ```
+   sudo optirun nvidia-settings -c :8
+   ```
 
-## Mount And Partition
+## Mount & Partition
 
-- See Disk Usage:
+- See disk usage:
 
   ```
   sudo lsblk
   ```
 
--  Create Primary Partition:
+-  Create primary partition:
 
   ```
   sudo fdisk /dev/sda
@@ -395,13 +400,13 @@ sudo optirun nvidia-settings -c :8
   ... Command (m for help): w
   ```
 
-- Create File system:
+- Create file system:
 
   ```
   sudo mkfs.ext4 /dev/sda1
   ```
 
-- Mount Partition
+- Mount partition
 
   ```
   sudo mkdir /sample_dir
@@ -410,7 +415,7 @@ sudo optirun nvidia-settings -c :8
   sudo umount /sample_dir  # for unmount
   ```
   
-- Mount Directory
+- Mount directory
 
   ```
   sudo mkdir /source_dir
@@ -419,8 +424,45 @@ sudo optirun nvidia-settings -c :8
   sudo mount --bind /source_dir /destination_dir
   ```
 
-- Determine the File System Type:
+- Determine the file system type:
 
   ```
   sudo fsck -N /dev/sda1
   ```
+
+## `Alt+Shift+<any_other_key>` doesn't work:
+
+The problem is related to the change-layout shortcut, by default it is set to Alt+Shift, for this reason, the system intercepts it for itself and doesn't let it reach some programs like Pycharm or VSCode.
+
+To solve, update `/etc/default/keyboard` and replace
+
+```
+XKBOPTIONS="grp:alt_shift_toggle,grp_led:scroll"
+```
+
+with
+
+```
+XKBOPTIONS="grp:super_space_toggle,grp_led:scroll"
+```
+
+## Other
+
+- Minimal Curl:
+
+  ```
+  curl -i -H "Accept: text/html" 127.0.0.1:31001 -v
+  ```
+
+- Vim replace all:
+
+  ```
+  :%s/foo/bar/g
+  ```
+
+- Open shell without login:
+
+  ```
+  ctrl + alt + f5
+  ```
+

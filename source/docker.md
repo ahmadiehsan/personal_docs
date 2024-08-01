@@ -65,7 +65,7 @@
 
 ## Other
 
-- Add the current user to the Docker group:
+- Add current user to Docker group:
 
   ```
   sudo usermod -aG docker $USER

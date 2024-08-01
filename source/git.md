@@ -117,7 +117,7 @@
   git push origin master --tags
   ```
 
-## Auth (SSH):
+## Auth (SSH)
 
 1. Generate ssh key:
 
