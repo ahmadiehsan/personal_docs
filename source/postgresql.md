@@ -6,118 +6,216 @@
 - [Peer Authentication Failed For User "Postgres" V2](https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge#answer-18664239)
 - [Postgresql Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
 
-## Connection Url
-
-`postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]`
-
 ## Export/Import
 
-- import data to database from sql file:
+- Import data to database from sql file:
 
-  `psql -d <db_name> -f <file_name.sql>`
+  ```
+  psql -d <db_name> -f <file_name.sql>
+  ```
 
-- export data from database to sql file:
+- Export data from database to sql file:
 
-  `pg_dump -U <db_user> <db_name> > <file_name>.sql`
+  ```
+  pg_dump -U <db_user> <db_name> > <file_name>.sql
+  ```
   
-- insert to table from other table
+- Insert to table from other table:
 
-  `INSERT INTO <table1> select * from <table2>`
+  ```
+  INSERT INTO <table1> select * from <table2>
+  ```
+
+## Shell
+
+- Connect:
+
+  ```
+  psql
+  ```
+
+- Run command by sudo:
+
+  ```
+  sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"
+  ```
+
+- Vertical show fields:
+
+  ```
+  \x
+  ```
 
 ## User
 
-- show all users: `\du`
+- Show all users:
 
-- create user: `CREATE USER <username>`
+  ```
+  \du
+  ```
 
-- drop user: `DROP USER <username>`
+- Create user:
 
-- change pass for any user:
+  ```
+  CREATE USER <username>
+  ```
 
-  `ALTER USER <username> WITH PASSWORD '<new password>'`
+- Drop user:
+
+  ```
+  DROP USER <username>
+  ```
+
+- Change pass for any user:
+
+  ```
+  ALTER USER <username> WITH PASSWORD '<new_password>'
+  ```
 
 ## Database
 
-- show all database: `\l`
-- create db: `CREATE DATABASE <db name>`
-- drop database: `DROP DATABASE <db name>`
-- change db owner: `ALTER DATABASE <db name> OWNER TO <username>`
-- connect to database: `\c <db name>`
+- Show all database:
+
+  ```
+  \l
+  ```
+- Create db:
+
+  ```
+  CREATE DATABASE <db_name>
+  ```
+- Drop database:
+
+  ```
+  DROP DATABASE <db_name>
+  ```
+- Change db owner:
+
+  ```
+  ALTER DATABASE <db_name> OWNER TO <username>
+  ```
+- Connect to database:
+
+  ```
+  \c <db_name>
+  ```
 
 ## Tables
 
-- show all of db tables: `\dt`
+- Show all of db tables:
 
-- show table schema: `\d+ <table name>`
+  ```
+  \dt
+  ```
 
-- create table: `CREATE TABLE <table name>`
+- Show table schema:
 
-- create table based on other talbe:
+  ```
+  \d+ <table_name>
+  ```
 
-  `CREATE TABLE <table name> (LIKE <other table name> INCLUDING ALL);`
+- Create table:
 
-- delete table: `DROP TABLE <table name>`
+  ```
+  CREATE TABLE <table_name>
+  ```
+
+- Create table based on other talbe:
+
+  ```
+  CREATE TABLE <table_name> (LIKE <other_table_name> INCLUDING ALL);
+  ```
+
+- Delete table:
+
+  ```
+  DROP TABLE <table_name>
+  ```
+
+- Temporarily disable all connections to table:
+
+  ```
+  select oid from pg_class where relname='<table_name>'
+  ```
 
 ## Row
 
-- updating row: `UPDATE <table name> SET <column A>=<value>`
+- Updating row:
 
-- create row in table:
+  ```
+  UPDATE <table_name> SET <column1>=<value>
+  ```
 
-  `INSERT INTO <table name> (column A, column B) VALUES (value a, value b)`
+- Create row in table:
 
-- create row in table base on other table rows:
+  ```
+  INSERT INTO <table_name> (column1, column2) VALUES (value1, value2)
+  ```
 
-  `INSERT INTO <table name> SELECT * FROM <other table name>;`
+- Create row in table base on other table rows:
 
-- delete row in table:
+  ```
+  INSERT INTO <table_name> SELECT * FROM <other_table_name>
+  ```
 
-  `DELETE FROM <table name> WHERE <column A>=<value>`
+- Delete row in table:
+
+  ```
+  DELETE FROM <table_name> WHERE <column1>=<value>
+  ```
 
 ## Column
 
-- create column in table:
+- Create column in table: For creating new column need to temporarily disable all connections to table
 
-  for creating new column need to temporarily disable all connections to table
-
-  `ALTER TABLE <table name> ADD COLUMN <column name> <data type> [NOT NULL] [DEFAULT <value>]`
+  ```
+  ALTER TABLE <table_name> ADD COLUMN <column_name> <data_type> [NOT NULL] [DEFAULT <value>]
+  ```
   
-- show table column
+- Show table column:
 
-  `select column_name, data_type from information_schema.columns where table_name = '<table name>'`
+  ```
+  select column_name, data_type from information_schema.columns where table_name='<table_name>'
+  ```
 
-- make column nullable
+- Make column nullable:
 
-  `ALTER TABLE <table name> ALTER COLUMN <column name> DROP NOT NULL`
+  ```
+  ALTER TABLE <table_name> ALTER COLUMN <column_name> DROP NOT NULL
+  ```
 
-- make column not nullable
+- Make column not nullable:
 
-  `ALTER TABLE <table name> ALTER COLUMN <column name> SET NOT NULL`
+  ```
+  ALTER TABLE <table_name> ALTER COLUMN <column_name> SET NOT NULL
+  ```
 
-- update column value base other column
+- Update column value base other column:
 
-  `Update <table> SET <column one> = <column two>`
+  ```
+  Update <table> SET <column1>=<column2>
+  ```
 
-## Temporarily Disable All Connections To Table
+## Index
 
-`select oid from pg_class where relname='<table name>'`
+- Partial index:
 
-## Partial Index
+  ```
+  CREATE [UNIQUE] INDEX <index_name> ON <table> (<column1, column2>) WHERE <conditions>
+  ```
 
-`CREATE [UNIQUE] INDEX <index name> ON <table> (<column A, column B>) WHERE <conditions>`
+## Other
 
-#### Vertical Show Fields
+- Version:
 
-`\x`
+  ```
+  SHOW server_version
+  ```
 
-## Postgres Version
+- Connection URL:
 
-`SHOW server_version`
+  ```
+  postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]
+  ```
 
-## Change Sequence Number
-
-`ALTER SEQUENCE <table>_id_seq RESTART WITH <number: 100>`
-
-## Run Command By Sudo
-
-`sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"`
+  

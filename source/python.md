@@ -19,46 +19,62 @@
 - [Number of Gunicorn Workers In Kubernetes](https://forum.djangoproject.com/t/gunicorn-workers-in-kubernetes/7918/2)
 - [3rd-Party python {rofiler](https://github.com/plasma-umass/scalene)
 
-## File Open Modes
+## File
 
-![](_static/images/python/file_open_modes.png)
+- Open modes:
 
-![file_open_modes_decision_tree](_static/images/python/file_open_modes_decision_tree.png)
+  ![](_static/images/python/file_open_modes.png)
 
-## cProfile Example
+- Open modes decision tree:
 
-![](_static/images/python/cprofile_example.jpg)
+  ![file_open_modes_decision_tree](_static/images/python/file_open_modes_decision_tree.png)
 
-## Get All Import Able Modules And Packages
+## Class & Function
 
-```
-import pkgutil
-search_path = ['.'] # set to None to see all modules importable from sys.path
-all_modules = [x[1] for x in pkgutil.iter_modules(path=search_path)]
-print(all_modules)
-```
+- Get full path:
 
-## Get a Function/Class Path
+  ```
+  import os
+  import inspect
+  
+  def foo():
+    pass
+  
+  print(os.path.abspath(inspect.getfile(foo)))
+  
+  class Bar:
+    pass
+  
+  print(os.path.abspath(inspect.getfile(Bar.__class__)))
+  ```
 
-```
-import os
-import inspect
+## Modules & Packages
 
-def foo():
-  pass
+- Get all import able modules & packages:
 
-print(os.path.abspath(inspect.getfile(foo)))
-
-class Bar:
-  pass
-
-print(os.path.abspath(inspect.getfile(Bar.__class__)))
-```
+  ```
+  import pkgutil
+  search_path = ['.'] # set to None to see all modules importable from sys.path
+  all_modules = [x[1] for x in pkgutil.iter_modules(path=search_path)]
+  print(all_modules)
+  ```
 
 ## Celery
 
-- kill celery process:
+- Kill celery process:
 
-  `kill -9 $(ps aux | grep celery | grep -v grep | awk '{print $2}' | tr '\n' ' ') > /dev/null 2>&1`
+  ```
+  kill -9 $(ps aux | grep celery | grep -v grep | awk '{print $2}' | tr '\n' ' ') > /dev/null 2>&1
+  ```
 
-- view worker logs: `celery -A <worker name: karestoon> worker --loglevel=info`
+- View worker logs:
+
+  ```
+  celery -A <worker name: karestoon> worker --loglevel=info
+  ```
+
+## Other
+
+- cProfile example:
+
+  ![](_static/images/python/cprofile_example.jpg)
