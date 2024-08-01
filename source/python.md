@@ -27,7 +27,7 @@
 
 - Open modes decision tree:
 
-  ![file_open_modes_decision_tree](_static/images/python/file_open_modes_decision_tree.png)
+  ![](_static/images/python/file_open_modes_decision_tree.png)
 
 ## Class & Function
 
