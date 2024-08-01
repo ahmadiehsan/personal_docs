@@ -185,7 +185,7 @@
   # Multiple indices
   curl -X DELETE "http://localhost:9200/<index1>,<index2>,<index3>?pretty"
   
-  # All (it needs: action.destructive_requires_name=false)
+  # All (it needs: `action.destructive_requires_name=false`)
   curl -X DELETE "http://localhost:9200/*?pretty"
   ```
 
