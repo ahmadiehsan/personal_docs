@@ -36,9 +36,9 @@
 
 ## Check Boot Type
 
-1. Run `cat /etc/fstab`
+1. run `cat /etc/fstab`
 
-2. If there is a line like this, it means the system boot mode is UEFI, otherwise, it is Legacy BIOS
+2. if there is a line like this, it means the system boot mode is UEFI, otherwise, it is Legacy BIOS
 
    ```
    UUID=xxx /boot/efi ntfs defaults 0 1

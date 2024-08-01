@@ -2,71 +2,43 @@
 
 ## Links
 
-- [Docker Prune](https://stackoverflow.com/questions/46672001/is-it-safe-to-clean-docker-overlay2/46672068#46672068)
-- [Check For Docker Proper Install On The Production Server](https://github.com/docker/docker-bench-security)
+- [Check For Docker Proper Installation On The Production Server](https://github.com/docker/docker-bench-security)
 - [Multiple Databases With The Official Postgresql Docker Image](https://github.com/mrts/docker-postgresql-multiple-databases)
 
-## Remove None Images
+## Image
 
-```bash
-docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
-```
+- remove none images: `docker rmi $(docker images --filter "dangling=true" -q --no-trunc)`
 
-## Stop/Remove All Containers
+- build image: `docker build . --tag <image_tag>`
 
-```bash
-docker container stop $(docker ps -a -q)
-docker container rm $(docker ps -a -q)
-```
+- create image from container:
 
-## Add User To Docker Group
+  ```
+  docker commit <container_name>
+  docker tag <created_image_id> <image_name:image_tag>
+  ```
 
-```bash
-sudo usermod -aG docker $USER
-```
+- login & push to other registry:
 
-## Remove All Containers Log
+  ```
+  docker login mgit.mparsict.com:5050
+  docker build -t mgit.mparsict.com:5050/edx/darsup/mp-media-service:juniper.master .
+  docker push mgit.mparsict.com:5050/edx/darsup/mp-media-service:juniper.master
+  docker logout mgit.mparsict.com:5050
+  ```
 
-```bash
-sudo sh -c "truncate -s 0 /var/lib/docker/containers/*/*-json.log"
-```
+## Container
 
-## Keep Container Alive
+- stop all containers: `docker container stop $(docker ps -a -q)`
+- remove all containers: `docker container rm $(docker ps -a -q)`
+- keep container alive: `CMD ["tail", "-f", "/dev/null"]`
+- create container from image: `docker run -p 80:80 --name <container_name> -d <image_tag>`
+- run command in container: `docker exec -it <container_name> <command: bash>`
 
-```
-CMD ["tail", "-f", "/dev/null"]
-```
+## Log
 
-## Build Image
+- remove all containers log: `sudo sh -c "truncate -s 0 /var/lib/docker/containers/*/*-json.log"`
 
-```bash
-docker build . --tag <image_tag>
-```
+## Docker Group
 
-## Create Container From Image
-
-```bash
-docker run -p 80:80 --name <container_name> -d <image_tag>
-```
-
-## Create Image From Container
-
-```
-docker commit <container_name>
-docker tag <created_image_id> <image_name:image_tag>
-```
-
-## Run Command In Container
-
-```bash
-docker exec -it <container_name> bash
-```
-
-## Login And Push To Other Registry
-
-```
-docker login mgit.mparsict.com:5050
-docker build -t mgit.mparsict.com:5050/edx/darsup/mp-media-service:juniper.master .
-docker push mgit.mparsict.com:5050/edx/darsup/mp-media-service:juniper.master
-docker logout mgit.mparsict.com:5050
-```
+- add the current user: `sudo usermod -aG docker $USER`
