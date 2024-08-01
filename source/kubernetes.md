@@ -13,10 +13,13 @@
 - [Pvc Not Binding To Pv](https://github.com/kubernetes/kops/issues/2624#issuecomment-305827839)
 - [Kubernetes Debian10 Iptables Problem](https://github.com/kubernetes/kubernetes/issues/71305#issuecomment-509394152)
 - [Remove Node From Cluster](https://stackoverflow.com/questions/35757620/how-to-gracefully-remove-a-node-from-kubernetes#answer-54220808)
-- [Kubernetes Dashboard](https://github.com/kubernetes/dashboard)
 - [Rook - Open-Source, Cloud-Native Storage For Kubernetes](https://rook.io/)
 - [Rook-Ceph Sample Installation](https://itnext.io/deploy-a-ceph-cluster-on-kubernetes-with-rook-d75a20c3f5b1)
 - [Gluster (File System)](https://www.gluster.org/)
+
+## Projects
+
+- [Simple Dashboard (K8s Dashboard)](https://github.com/kubernetes/dashboard)
 - [Argo CD (K8s Dashboard)](https://github.com/argoproj/argo-cd)
 - [Portainer (K8s Dashboard)](https://github.com/portainer/portainer)
 - [Rancher (K8s Dashboard)](https://github.com/rancher/rancher)
