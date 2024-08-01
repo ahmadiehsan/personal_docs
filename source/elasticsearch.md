@@ -108,7 +108,7 @@
   - `delete` does not expect a source on the next line
 
   ```
-  # Tip: Because this format uses literal `\n`'s as delimiters, make sure that the JSON actions and sources are not pretty printed
+  # Tip: Because this format uses literal "\n" as delimiters, make sure that the JSON actions and sources are not pretty printed
   
   curl -X POST "http://localhost:9200/<index_name>/_bulk?pretty" -H 'Content-Type: application/json' -d '
   {"index": {"_id": "<document_id>"}}
@@ -156,7 +156,7 @@
 - Alias:
 
   ```
-# Tip: The `remove` action will remove this alias from other indices
+# Tip: The "remove" action will remove this alias from other indices
   
   curl -X POST "http://localhost:9200/_aliases?pretty" -H 'Content-Type: application/json' -d'{
     "actions": [
