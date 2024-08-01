@@ -17,7 +17,7 @@
 - [Convert Python File To .Exe](https://m.youtube.com/watch?feature=youtu.be&v=UZX5kH72Yx4)
 - [Time Complexity (Big O)](https://wiki.python.org/moin/TimeComplexity)
 - [Number of Gunicorn Workers In Kubernetes](https://forum.djangoproject.com/t/gunicorn-workers-in-kubernetes/7918/2)
-- [3rd-Party python {rofiler](https://github.com/plasma-umass/scalene)
+- [3rd-Party python profiler](https://github.com/plasma-umass/scalene)
 
 ## File
 
