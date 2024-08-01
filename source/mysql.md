@@ -4,7 +4,7 @@
 
 - [MySQL Data Types](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
 
-## Installation
+## Install
 
 Tip: installation flow needs an active VPN
 
@@ -21,101 +21,216 @@ sudo mysql_secure_installation
 
 ## Export/Import
 
-- import data to database:
+- Import data to database:
 
-  `mysql [-h <host>] -u <username: root> -p <db name> < <file_path/file_name.sql>`
+  ```
+  mysql [-h <host>] -u <username: root> -p <db_name> < <file_path/file_name.sql>
+  ```
 
-- export data from database:
+- Export data from database:
 
-  `mysqldump [-h <host>] -u <username: root> -p [--no-data] [--set-gtid-purged=OFF] <db name> > <file_path/file_name.sql>`
+  ```
+  mysqldump [-h <host>] -u <username: root> -p [--no-data] [--set-gtid-purged=OFF] <db_name> > <file_path/file_name.sql>
+  ```
 
-## Connection
+## Shell
 
-- connect to MySQL interactive shell: `mysql -u root -p`
-- run command without connection: `mysql -u root -p <<< 'SHOW DATABASES;'`
+- Connect:
+
+  ```
+  mysql -u root -p
+  ```
+
+- Run command without connection:
+
+  ```
+  mysql -u root -p <<< 'SHOW DATABASES;'
+  ```
+
+- Vertical show fields:
+
+  ```
+  SELECT * FROM <table_name>\G
+  ```
 
 ## User
 
-- show all users: `SELECT user, host FROM mysql.user`
+- Show all users:
 
-- accepting all IPs: `UPDATE mysql.user SET host='<host: %>' WHERE user='<user: root>';`
+  ```
+  SELECT user, host FROM mysql.user
+  ```
 
-- create user: `CREATE USER '<username>'@'localhost' IDENTIFIED BY '<password>'`
+- Accepting all IPs:
 
-- drop user: ``
+  ```
+  UPDATE mysql.user SET host='<host: %>' WHERE user='<user: root>'
+  ```
 
-- change pass for any user: ``
+- Create user:
 
-- change pass of root user: `ALTER USER 'root'@'%' IDENTIFIED BY '<new password>';`
+  ```
+  CREATE USER '<username>'@'localhost' IDENTIFIED BY '<password>'
+  ```
 
-- add all privileges to user for one database:
+- Drop user:
 
-  `GRANT ALL PRIVILEGES ON <db name>.* TO '<user>'@'localhost'`
+  ```
+  
+  ```
+
+- Change pass for any user:
+
+  ```
+  
+  ```
+
+- Change pass of root user:
+
+  ```
+  ALTER USER 'root'@'%' IDENTIFIED BY '<new_password>'
+  ```
+
+- Add all privileges to user for one database:
+
+  ```
+  GRANT ALL PRIVILEGES ON <db_name>.* TO '<user>'@'localhost'
+  ```
 
 ## Database
 
-- show all database: `SHOW DATABASES`
+- Show all database:
 
-- create db: `CREATE DATABASE <db name>`
+  ```
+  SHOW DATABASES
+  ```
 
-- drop database: `DROP DATABASE <db name>`
+- Create db:
 
-- show database owner: `SHOW processlist`
+  ```
+  CREATE DATABASE <db_name>
+  ```
 
-- change db owner: ``
+- Drop database:
 
-- connect to database: `USE <db name>`
+  ```
+  DROP DATABASE <db_name>
+  ```
 
-- get size of databases:
+- Show database owner:
 
-  `SELECT table_schema "<db name>", ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" FROM information_schema.tables GROUP BY table_schema`
+  ```
+  SHOW processlist
+  ```
+
+- Change db owner:
+
+  ```
+  
+  ```
+
+- Connect to database:
+
+  ```
+  USE <db_name>
+  ```
+
+- Get size of databases:
+
+  ```
+  SELECT table_schema "<db_name>", ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" FROM information_schema.tables GROUP BY table_schema
+  ```
 
 ## Tables
 
-- show all of db tables: `SHOW TABLES`
-- show table schema: `DESCRIBE <tablename>`
-- show table full schema: `SHOW FULL COLUMNS FROM <tablename>;`
-- create table simple: `CREATE TABLE <tablename> (id INT NOT NULL AUTO_INCREMENT, <column2> <datatype>, PRIMARY KEY(id))`
-- create table complex:
+- Show all of db tables:
 
   ```
-  CREATE TABLE <tablename> (
+  SHOW TABLES
+  ```
+- Show table schema:
+
+  ```
+  DESCRIBE <table_name>
+  ```
+- Show table full schema:
+
+  ```
+  SHOW FULL COLUMNS FROM <table_name>
+  ```
+- Create table simple:
+
+  ```
+  CREATE TABLE <table_name> (id INT NOT NULL AUTO_INCREMENT, <column2> <datatype>, PRIMARY KEY(id))
+  ```
+- Create table complex:
+
+  ```
+  CREATE TABLE <table_name> (
       id BINARY(16) PRIMARY KEY,  # UUID
       created DATETIME(6) NOT NULL,
       <column3> INT NOT NULL DEFAULT 0,
       <column4> BINARY(16) UNIQUE NOT NULL,  # FK (1:1)
   
       INDEX (<column3>),  # custom index
-      FOREIGN KEY (<column4>) REFERENCES <othertable>(id)  # automatically will create an index
+      FOREIGN KEY (<column4>) REFERENCES <other_table>(id)  # automatically will create an index
   );
   ```
-- create table based on other table: ``
-- delete table: `DROP TABLE <tablename>`
-- show indexes: `SHOW INDEXES IN <tablename>`
+- Create table based on other table:
+
+  ```
+  
+  ```
+- Delete table:
+
+  ```
+  DROP TABLE <table_name>
+  ```
+- Show indexes:
+
+  ```
+  SHOW INDEXES IN <table_name>
+  ```
 
 ## Row
 
-- updating row: `UPDATE <table name> SET <column A>=<value>`
+- Updating row:
 
-- create row in table:
+  ```
+  UPDATE <table_name> SET <column1>=<value>
+  ```
 
-  `INSERT INTO <table name> (column A, column B) VALUES (value a, value b)`
+- Create row in table:
 
-- create row in table base on other table rows: ``
+  ```
+  INSERT INTO <table_name> (column1, column2) VALUES (value1, value2)
+  ```
 
-- delete row in table:
+- Create row in table base on other table rows:
 
-  `DELETE FROM <table name> WHERE <column A>=<value>`
+  ```
+  
+  ```
 
-## Partial Index
+- Delete row in table:
 
-`CREATE [UNIQUE] INDEX <index name> ON <table> (<column A, column B>) WHERE <conditions>`
+  ```
+  DELETE FROM <table_name> WHERE <column1>=<value>
+  ```
 
-## Vertical Show Fields
+## Index
 
-`SELECT * FROM <table_name>\G`
+- Partial index:
 
-## MySQL Version
+  ```
+  CREATE [UNIQUE] INDEX <index_name> ON <table> (<column1, column2>) WHERE <conditions>
+  ```
 
-`SHOW VARIABLES LIKE "%version%";`
+## Other
+
+- Version:
+
+  ```
+  SHOW VARIABLES LIKE "%version%";
+  ```
 
