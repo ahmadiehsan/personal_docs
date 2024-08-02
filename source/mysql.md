@@ -51,7 +51,7 @@ sudo mysql_secure_installation
   | DECIMAL(size, d), DEC(size, d) | Depends on the precision and scale                      | Depends on the precision and scale | Varies       |
   | BIT(size)                      | Not applicable                                          | 1 to 64                            | Varies       |
 
-- Date & Time:
+- Date and time:
 
   | Data Type      | Range                                              | Storage size |
   | -------------- | -------------------------------------------------- | ------------ |
