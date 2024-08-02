@@ -17,16 +17,16 @@
 
 - Integer:
 
-  | Data Type | Description              | Range                                                   | Memory Size |
-  | --------- | ------------------------ | ------------------------------------------------------- | ----------- |
-  | byte      | Unsigned 8-bit integers  | 0 to 255                                                | 1 byte      |
-  | ushort    | Unsigned 16-bit integers | 0 to 65,535                                             | 2 bytes     |
-  | uint      | Unsigned 32-bit integers | 0 to 4,294,967,295                                      | 4 bytes     |
-  | ulong     | Unsigned 64-bit integers | 0 to 18,446,744,073,709,551,615                         | 8 bytes     |
-  | sbyte     | Signed 8-bit integers    | -128 to 127                                             | 1 byte      |
-  | short     | Signed 16-bit integers   | -32,768 to 32,767                                       | 2 bytes     |
-  | int       | Signed 32-bit integers   | -2,147,483,648 to 2,147,483,647                         | 4 bytes     |
-  | long      | Signed 64-bit integers   | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 8 bytes     |
+  | Data Type | Description             | Range                                                   | Memory Size |
+  | --------- | ----------------------- | ------------------------------------------------------- | ----------- |
+  | byte      | Unsigned 8-bit integer  | 0 to 255                                                | 1 byte      |
+  | ushort    | Unsigned 16-bit integer | 0 to 65,535                                             | 2 bytes     |
+  | uint      | Unsigned 32-bit integer | 0 to 4,294,967,295                                      | 4 bytes     |
+  | ulong     | Unsigned 64-bit integer | 0 to 18,446,744,073,709,551,615                         | 8 bytes     |
+  | sbyte     | Signed 8-bit integer    | -128 to 127                                             | 1 byte      |
+  | short     | Signed 16-bit integer   | -32,768 to 32,767                                       | 2 bytes     |
+  | int       | Signed 32-bit integer   | -2,147,483,648 to 2,147,483,647                         | 4 bytes     |
+  | long      | Signed 64-bit integer   | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 8 bytes     |
   
 - Float:
 
