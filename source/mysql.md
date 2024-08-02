@@ -27,11 +27,11 @@ sudo mysql_secure_installation
   | ------------- | ---------------------------------- | ------------------------- |
   | CHAR(size)    | Fixed length, 0 to 255 chars       | 1 to 255 bytes            |
   | VARCHAR(size) | Variable length, 0 to 65,535 chars | 1 to 65,535 bytes         |
-  | TEXT(size)    | Up to 65,535 chars                 | Up to 65,535 bytes        |
+  | TEXT          | Up to 65,535 chars                 | Up to 65,535 bytes        |
   | MEDIUMTEXT    | Up to 16,777,215 chars             | Up to 16,777,215 bytes    |
   | LONGTEXT      | Up to 4,294,967,295 chars          | Up to 4,294,967,295 bytes |
   | TINYBLOB      | Up to 255 bytes                    | Up to 255 bytes           |
-  | BLOB(size)    | Up to 65,535 bytes                 | Up to 65,535 bytes        |
+  | BLOB          | Up to 65,535 bytes                 | Up to 65,535 bytes        |
   | MEDIUMBLOB    | Up to 16,777,215 bytes             | Up to 16,777,215 bytes    |
   | LONGBLOB      | Up to 4,294,967,295 bytes          | Up to 4,294,967,295 bytes |
   | ENUM          | Enumerated list of values          | Depends on values         |
@@ -39,7 +39,7 @@ sudo mysql_secure_installation
 
 - Numeric:
 
-  | Data Type                      | Range (unsigned)                   | Range (signed)                                          | Storage size |
+  | Data Type                      | Range (unsigned)                   | Range (signed) (Default)                                | Storage size |
   | ------------------------------ | ---------------------------------- | ------------------------------------------------------- | ------------ |
   | TINYINT(size)                  | 0 to 255                           | -128 to 127                                             | 1 byte       |
   | SMALLINT(size)                 | 0 to 65,535                        | -32,768 to 32,767                                       | 2 bytes      |
@@ -65,7 +65,7 @@ sudo mysql_secure_installation
 
   | Data Type     | Range  | Storage size |
   | ------------- | ------ | ------------ |
-  | BOOL, BOOLEAN | 0 to 1 | 1 byte       |
+  | BOOL, BOOLEAN | 0 or 1 | 1 byte       |
 
 ## Export/Import
 
