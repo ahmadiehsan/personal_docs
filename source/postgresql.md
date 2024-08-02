@@ -36,13 +36,13 @@
   
 - Date and time:
 
-  | Data Type   | Range                                        | Storage Size |
-  | ----------- | -------------------------------------------- | ------------ |
-  | DATE        | 4713-01-01 to 5874897-12-31                  | 4 bytes      |
-  | TIMESTAMP   | 4713-01-01 00:00:00 to 294276-12-31 23:59:59 | 8 bytes      |
-  | TIMESTAMPTZ | 4713-01-01 00:00:00 to 294276-12-31 23:59:59 | 8 bytes      |
-  | TIME        | 00:00:00 to 24:00:00                         | 8 bytes      |
-  | INTERVAL    | Varies, up to 178000 years                   | 16 bytes     |
+  | Data Type   | Range                                                  | Storage Size |
+  | ----------- | ------------------------------------------------------ | ------------ |
+  | DATE        | 4713-01-01 (BC) to 5874897-12-31 (AD)                  | 4 bytes      |
+  | TIMESTAMP   | 4713-01-01 00:00:00 (BC) to 294276-12-31 23:59:59 (AD) | 8 bytes      |
+  | TIMESTAMPTZ | 4713-01-01 00:00:00 (BC) to 294276-12-31 23:59:59 (AD) | 8 bytes      |
+  | TIME        | 00:00:00 to 24:00:00                                   | 8 bytes      |
+  | INTERVAL    | Varies, up to 178000 years                             | 16 bytes     |
 
 - Boolean:
 
