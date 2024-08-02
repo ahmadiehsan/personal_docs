@@ -19,6 +19,48 @@ sudo apt install mysql-server
 sudo mysql_secure_installation
 ```
 
+## Data Types
+
+- String:
+
+  | Data Type  | Range                              | Storage size              |
+  | ---------- | ---------------------------------- | ------------------------- |
+  | CHAR       | Fixed length, 0 to 255 chars       | 1 to 255 bytes            |
+  | VARCHAR    | Variable length, 0 to 65,535 chars | 1 to 65,535 bytes         |
+  | TEXT       | Up to 65,535 chars                 | Up to 65,535 bytes        |
+  | MEDIUMTEXT | Up to 16,777,215 chars             | Up to 16,777,215 bytes    |
+  | LONGTEXT   | Up to 4,294,967,295 chars          | Up to 4,294,967,295 bytes |
+  | TINYBLOB   | Up to 255 bytes                    | Up to 255 bytes           |
+  | BLOB       | Up to 65,535 bytes                 | Up to 65,535 bytes        |
+  | MEDIUMBLOB | Up to 16,777,215 bytes             | Up to 16,777,215 bytes    |
+  | LONGBLOB   | Up to 4,294,967,295 bytes          | Up to 4,294,967,295 bytes |
+  | ENUM       | Enumerated list of values          | Depends on values         |
+  | SET        | Set of values                      | Depends on values         |
+
+- Numeric:
+
+  | Data Type | Range (unsigned)                   | Range (signed)                                          | Storage size |
+  | --------- | ---------------------------------- | ------------------------------------------------------- | ------------ |
+  | TINYINT   | 0 to 255                           | -128 to 127                                             | 1 byte       |
+  | SMALLINT  | 0 to 65,535                        | -32,768 to 32,767                                       | 2 bytes      |
+  | MEDIUMINT | 0 to 16,777,215                    | -8,388,608 to 8,388,607                                 | 3 bytes      |
+  | INT       | 0 to 4,294,967,295                 | -2,147,483,648 to 2,147,483,647                         | 4 bytes      |
+  | BIGINT    | 0 to 18,446,744,073,709,551,615    | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 8 bytes      |
+  | FLOAT     | Not applicable                     | -3.402823466E+38 to 3.402823466E+38                     | 4 bytes      |
+  | DOUBLE    | Not applicable                     | -1.7976931348623157E+308 to 1.7976931348623157E+308     | 8 bytes      |
+  | DECIMAL   | Depends on the precision and scale | Depends on the precision and scale                      | Varies       |
+  | BIT       | 1 to 64                            | Not applicable                                          | Varies       |
+
+- Date & Time:
+
+  | Data Type | Range                                              | Storage size |
+  | --------- | -------------------------------------------------- | ------------ |
+  | DATE      | 1000-01-01 to 9999-12-31                           | 3 bytes      |
+  | DATETIME  | 1000-01-01 00:00:00 to 9999-12-31 23:59:59         | 8 bytes      |
+  | TIMESTAMP | 1970-01-01 00:00:01 UTC to 2038-01-19 03:14:07 UTC | 4 bytes      |
+  | TIME      | -838:59:59 to 838:59:59                            | 3 bytes      |
+  | YEAR      | 1901 to 2155                                       | 1 byte       |
+
 ## Export/Import
 
 - Import data to database:
