@@ -10,6 +10,46 @@
 
 - [Docker Elk](https://github.com/deviantony/docker-elk)
 
+## Data Types
+
+- String:
+
+  | Data Type | Description                          |
+  | --------- | ------------------------------------ |
+  | keyword   | Not analyzed, used for exact matches |
+  | text      | Analyzed for full-text search        |
+  | binary    | Binary data, encoded as base64       |
+
+- Numeric:
+
+  | Data Type | Description                     | Range                                                   |
+  | --------- | ------------------------------- | ------------------------------------------------------- |
+  | byte      | 8-bit signed integer            | -128 to 127                                             |
+  | short     | 16-bit signed integer           | -32,768 to 32,767                                       |
+  | integer   | 32-bit signed integer           | -2,147,483,648 to 2,147,483,647                         |
+  | long      | 64-bit signed integer           | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+  | float     | Single-precision floating point | Approx. ±3.4 × 10^38                                    |
+  | double    | Double-precision floating point | Approx. ±1.7 × 10^308                                   |
+
+- Date and time:
+
+  | Data Type | Description                                      |
+  | --------- | ------------------------------------------------ |
+  | date      | Date and time values, format defined by the user |
+
+- Boolean:
+
+  | Data Type | Description   |
+  | --------- | ------------- |
+  | boolean   | True or false |
+
+- Vector:
+
+  | Data Type     | Description                     |
+  | ------------- | ------------------------------- |
+  | dense_vector  | Vector with fixed dimensions    |
+  | sparse_vector | Vector with variable dimensions |
+
 ## Document
 
 - Simple query:
