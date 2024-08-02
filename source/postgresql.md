@@ -6,6 +6,23 @@
 - [Peer Authentication Failed For User "Postgres" V2](https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge#answer-18664239)
 - [Postgresql Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
 
+## Data Types
+
+- Numeric:
+
+  | Data Type        | Range                                                        | Storage size |
+  | ---------------- | ------------------------------------------------------------ | ------------ |
+  | SMALLINT         | -32,768 to +32,767                                           | 2 bytes      |
+  | INTEGER          | -2,147,483,648 to +2,147,483,647                             | 4 bytes      |
+  | BIGINT           | -9,223,372,036,854,775,808 to +9,223,372,036,854,775,807     | 8 bytes      |
+  | DECIMAL          | Up to 131,072 digits before the decimal point; up to 16,383 digits after the decimal point | Variable     |
+  | NUMERIC          | Up to 131,072 digits before the decimal point; up to 16,383 digits after the decimal point | Variable     |
+  | REAL             | Approx. ±1.7E–308 to ±1.7E+308 (6 decimal digits precision)  | 4 bytes      |
+  | DOUBLE PRECISION | Approx. ±1.7E–308 to ±1.7E+308 (15 decimal digits precision) | 8 bytes      |
+  | SMALLSERIAL      | 1 to 32,767                                                  | 2 bytes      |
+  | SERIAL           | 1 to 2,147,483,647                                           | 4 bytes      |
+  | BIGSERIAL        | 1 to 9,223,372,036,854,775,807                               | 8 bytes      |
+
 ## Export/Import
 
 - Import data to database from sql file:
