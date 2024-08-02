@@ -39,17 +39,17 @@ sudo mysql_secure_installation
 
 - Numeric:
 
-  | Data Type                      | Range (unsigned)                   | Range (signed) (Default)                                | Storage size |
-  | ------------------------------ | ---------------------------------- | ------------------------------------------------------- | ------------ |
-  | TINYINT(size)                  | 0 to 255                           | -128 to 127                                             | 1 byte       |
-  | SMALLINT(size)                 | 0 to 65,535                        | -32,768 to 32,767                                       | 2 bytes      |
-  | MEDIUMINT(size)                | 0 to 16,777,215                    | -8,388,608 to 8,388,607                                 | 3 bytes      |
-  | INT(size), INTEGER(size)       | 0 to 4,294,967,295                 | -2,147,483,648 to 2,147,483,647                         | 4 bytes      |
-  | BIGINT(size)                   | 0 to 18,446,744,073,709,551,615    | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 8 bytes      |
-  | FLOAT(size, d)                 | Not applicable                     | -3.402823466E+38 to 3.402823466E+38                     | 4 bytes      |
-  | DOUBLE(size, d)                | Not applicable                     | -1.7976931348623157E+308 to 1.7976931348623157E+308     | 8 bytes      |
-  | DECIMAL(size, d), DEC(size, d) | Depends on the precision and scale | Depends on the precision and scale                      | Varies       |
-  | BIT(size)                      | 1 to 64                            | Not applicable                                          | Varies       |
+  | Data Type                      | Range (signed) (Default)                                | Range (unsigned)                   | Storage size |
+  | ------------------------------ | ------------------------------------------------------- | ---------------------------------- | ------------ |
+  | TINYINT(size)                  | -128 to 127                                             | 0 to 255                           | 1 byte       |
+  | SMALLINT(size)                 | -32,768 to 32,767                                       | 0 to 65,535                        | 2 bytes      |
+  | MEDIUMINT(size)                | -8,388,608 to 8,388,607                                 | 0 to 16,777,215                    | 3 bytes      |
+  | INT(size), INTEGER(size)       | -2,147,483,648 to 2,147,483,647                         | 0 to 4,294,967,295                 | 4 bytes      |
+  | BIGINT(size)                   | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 0 to 18,446,744,073,709,551,615    | 8 bytes      |
+  | FLOAT(size, d)                 | -3.402823466E+38 to 3.402823466E+38                     | Not applicable                     | 4 bytes      |
+  | DOUBLE(size, d)                | -1.7976931348623157E+308 to 1.7976931348623157E+308     | Not applicable                     | 8 bytes      |
+  | DECIMAL(size, d), DEC(size, d) | Depends on the precision and scale                      | Depends on the precision and scale | Varies       |
+  | BIT(size)                      | Not applicable                                          | 1 to 64                            | Varies       |
 
 - Date & Time:
 
