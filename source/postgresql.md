@@ -8,20 +8,47 @@
 
 ## Data Types
 
+- String:
+
+  | Data Type     | Range                              | Storage Size              |
+  | ------------- | ---------------------------------- | ------------------------- |
+  | CHAR(size)    | Fixed length, 1 to 1,024 chars     | 1 to 1,024 bytes          |
+  | VARCHAR(size) | Variable length, 1 to 65,535 chars | 1 to 65,535 bytes         |
+  | TEXT          | Up to 1 GB of text                 | Up to 1 GB                |
+  | BYTEA         | Up to 1 GB of binary data          | Up to 1 GB                |
+  | ENUM          | Enumerated list of values          | Depends on values         |
+  | ARRAY         | Array of any data type             | Depends on the array size |
+  
 - Numeric:
 
-  | Data Type        | Range (signed) (Default)                                     | Range (unsigned) | Storage size |
-  | ---------------- | ------------------------------------------------------------ | ---------------- | ------------ |
-  | SMALLINT         | -32,768 to +32,767                                           | Doesn't exist    | 2 bytes      |
-  | INTEGER          | -2,147,483,648 to +2,147,483,647                             | Doesn't exist    | 4 bytes      |
-  | BIGINT           | -9,223,372,036,854,775,808 to +9,223,372,036,854,775,807     | Doesn't exist    | 8 bytes      |
-  | DECIMAL          | Up to 131,072 digits before the decimal point; up to 16,383 digits after the decimal point | Doesn't exist    | Variable     |
-  | NUMERIC          | Up to 131,072 digits before the decimal point; up to 16,383 digits after the decimal point | Doesn't exist    | Variable     |
-  | REAL             | Approx. ±1.7E–308 to ±1.7E+308 (6 decimal digits precision)  | Doesn't exist    | 4 bytes      |
-  | DOUBLE PRECISION | Approx. ±1.7E–308 to ±1.7E+308 (15 decimal digits precision) | Doesn't exist    | 8 bytes      |
-  | SMALLSERIAL      | 1 to 32,767                                                  | Doesn't exist    | 2 bytes      |
-  | SERIAL           | 1 to 2,147,483,647                                           | Doesn't exist    | 4 bytes      |
-  | BIGSERIAL        | 1 to 9,223,372,036,854,775,807                               | Doesn't exist    | 8 bytes      |
+  | Data Type        | Range                                                    | Storage Size |
+  | ---------------- | -------------------------------------------------------- | ------------ |
+  | SMALLINT         | -32,768 to 32,767                                        | 2 bytes      |
+  | INT, INTEGER     | -2,147,483,648 to 2,147,483,647                          | 4 bytes      |
+  | BIGINT           | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807  | 8 bytes      |
+  | NUMERIC(p, s)    | Depends on precision (p) and scale (s)                   | Varies       |
+  | DECIMAL(p, s)    | Depends on precision (p) and scale (s)                   | Varies       |
+  | REAL             | -3.4028235E+38 to 3.4028235E+38                          | 4 bytes      |
+  | DOUBLE PRECISION | -1.7976931348623157E+308 to 1.7976931348623157E+308      | 8 bytes      |
+  | SERIAL           | Auto-incrementing integer (equivalent to INTEGER)        | 4 bytes      |
+  | BIGSERIAL        | Auto-incrementing large integer (equivalent to BIGINT)   | 8 bytes      |
+  | SMALLSERIAL      | Auto-incrementing small integer (equivalent to SMALLINT) | 2 bytes      |
+  
+- Date and time:
+
+  | Data Type   | Range                                        | Storage Size |
+  | ----------- | -------------------------------------------- | ------------ |
+  | DATE        | 4713-01-01 to 5874897-12-31                  | 4 bytes      |
+  | TIMESTAMP   | 4713-01-01 00:00:00 to 294276-12-31 23:59:59 | 8 bytes      |
+  | TIMESTAMPTZ | 4713-01-01 00:00:00 to 294276-12-31 23:59:59 | 8 bytes      |
+  | TIME        | 00:00:00 to 24:00:00                         | 8 bytes      |
+  | INTERVAL    | Varies, up to 178000 years                   | 16 bytes     |
+
+- Boolean:
+
+  | Data Type | Range         | Storage Size |
+  | --------- | ------------- | ------------ |
+  | BOOLEAN   | TRUE or FALSE | 1 byte       |
 
 ## Export/Import
 
