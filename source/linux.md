@@ -378,6 +378,14 @@
    sudo optirun nvidia-settings -c :8
    ```
 
+## Gnome
+
+- Reset an extension configs:
+
+  ```
+  dconf reset -f /org/gnome/shell/extensions/<extension_name>
+  ```
+
 ## Mount & Partition
 
 - See disk usage:
