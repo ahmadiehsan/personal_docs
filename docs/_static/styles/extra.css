@@ -1,0 +1,30 @@
+.md-grid {
+    max-width: 80rem;
+}
+
+#table-of-contents ~ h2 {
+    font-size: 1.2em;
+    margin: 1em 0 .2em;
+}
+
+#table-of-contents ~ h3 {
+    font-size: 1em;
+    margin: 0 1em;
+}
+
+.md-typeset table:not([class]) th {
+    background-color: rgba(0, 0, 0, .54);
+    color: #ffffff;
+}
+
+@media only screen and (min-width: 76.25em) {
+    .md-search__inner {
+        margin-right: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    .md-search__inner {
+        margin-right: .8rem;
+    }
+}

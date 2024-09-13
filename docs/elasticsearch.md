@@ -82,7 +82,7 @@
     },
     "sort": [
       {"<field1>": "asc"},
-      {"<field2>": "asc"}      
+      {"<field2>": "asc"}
     ]
   }'
   ```
@@ -149,16 +149,16 @@
 
   ```
   # Tip: Because this format uses literal `\n`'s as delimiters, make sure that the JSON actions and sources are not pretty printed
-  
+
   curl -X POST "http://localhost:9200/<index_name>/_bulk?pretty" -H 'Content-Type: application/json' -d '
   {"index": {"_id": "<document_id>"}}
   {"<field>": "<value>"}
-  
+
   {"delete": {"_id": "<document_id>"}}
-  
+
   {"create": {"_id": "<document_id>"}}
   {"<field>": "<value>"}
-  
+
   {"update": {"_id": "<document_id>"}}
   {"doc": {"<field>": "<value>"}}
   '
@@ -197,7 +197,7 @@
 
   ```
   # Tip: The `remove` action will remove this alias from other indices
-  
+
   curl -X POST "http://localhost:9200/_aliases?pretty" -H 'Content-Type: application/json' -d'{
     "actions": [
       {
@@ -221,10 +221,10 @@
   ```
   # One index
   curl -X DELETE "http://localhost:9200/<index_name>?pretty"
-  
+
   # Multiple indices
   curl -X DELETE "http://localhost:9200/<index1>,<index2>,<index3>?pretty"
-  
+
   # All (it needs: `action.destructive_requires_name=false`)
   curl -X DELETE "http://localhost:9200/*?pretty"
   ```
@@ -237,10 +237,10 @@
   {
     "settings": {"index.blocks.write": true}
   }'
-  
+
   # Clone
   curl -X POST "http://localhost:9200/<source_index_name>/_clone/<destination_index_name>?pretty"
-  
+
   # Make the source index write able
   curl -X PUT "http://localhost:9200/<source_index_name>/_settings?pretty" -H 'Content-Type: application/json' -d'
   {
@@ -269,7 +269,7 @@
 
   ```
   # Tip: We can’t change the mapping or field type of an existing field. Changing an existing field could invalidate data that’s already indexed
-  
+
   curl -X PUT "http://localhost:9200/<index_name>/_mapping?pretty" -H 'Content-Type: application/json' -d '{
     "dynamic": "<dynamic_type: strict>",
     "properties": {

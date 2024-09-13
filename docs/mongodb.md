@@ -15,7 +15,7 @@
   ```
   # Quick
   show databases
-  
+
   # Normal
   db.adminCommand({listDatabases: 1})
   ```
@@ -27,7 +27,7 @@
   ```
   # Quick
   show collections
-  
+
   # Normal
   db.runCommand({listCollections: 1})
   ```

@@ -1,0 +1,17 @@
+site_name: Ehsan Ahmadi's Personal Docs
+copyright: ©2020-2024 Ehsan Ahmadi
+theme:
+  name: material
+  layout:
+    width: full
+  features:
+    - content.code.copy
+plugins:
+  - search
+  - toc-md:
+      toc_page_title: Table of Contents
+      header_level: 2
+markdown_extensions:
+  - pymdownx.superfences
+extra_css:
+  - _static/styles/extra.css

@@ -27,7 +27,7 @@
   | short     | Signed 16-bit integer   | -32,768 to 32,767                                       | 2 bytes     |
   | int       | Signed 32-bit integer   | -2,147,483,648 to 2,147,483,647                         | 4 bytes     |
   | long      | Signed 64-bit integer   | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 8 bytes     |
-  
+
 - Float:
 
   | Data Type | Description                          | Range                  | Memory Size |
@@ -35,7 +35,7 @@
   | float     | 32-bit signed floating-point number  | -3.4e+38 to 3.4e+38    | 4 bytes     |
   | double    | 64-bit signed floating-point number  | -1.7e+308 to +1.7e+308 | 8 bytes     |
   | decimal   | 128-bit signed floating-point number |                        | 16 bytes    |
-  
+
 - String:
 
   | Data Type | Description                      | Memory Size           |
@@ -48,5 +48,3 @@
   | Data Type | Description                            | Memory Size |
   | --------- | -------------------------------------- | ----------- |
   | bool      | Can only take the values true or false | 1 bit       |
-
-  

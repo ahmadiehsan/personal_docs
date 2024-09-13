@@ -62,14 +62,14 @@
   tar -czvf <file_name.tgz> </path/to/directory>
   tar -czvf <file_name.tgz> </path/to/directory>/.  # include hidden files
   tar -czvf <file_name.tgz> </path/to/file>
-  
+
   # Extract
   tar -xzvf <file_name.tgz>
   tar -xzvf <file_name.tgz> -C </path/to/directory>
-  
+
   # Split into multiple files
   split --bytes=<split_size: 10m> --suffix-length=4 --numeric-suffix <source_file.tgz> <destination_file.tgz.>
-  
+
   # Extract from splitted files (tgz)
   cat <destination_file.tgz.*> | tar -xzvf -
   ```
@@ -79,7 +79,7 @@
   ```
   # Compress
   zip <filename.zip> <file>
-  
+
   # Extract (`sudo apt install unzip`)
   unzip <file_name.zip>
   unzip '*.zip'
@@ -138,7 +138,7 @@
   sudo ufw allow <port>
   sudo ufw delete allow <port>
   ```
-  
+
 - Set or get firewall access for app:
 
   ```
@@ -155,7 +155,7 @@
    ```
    # If your proxy has not password
    Acquire::http::Proxy "http://<yourproxyaddress>:<proxyport>";
-   
+
    # If your proxy has password
    Acquire::http::Proxy "http://<username>:<password>@<proxyaddress>:<proxyport>";
    ```
@@ -296,7 +296,7 @@
    ```
    # For specific user
    <username>	ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
-   
+
    # For all users
    ALL	ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
    ```
@@ -326,7 +326,7 @@
   ```
   # Simple
   df -h
-  
+
   # Advanced
   ncdu
   ```
@@ -337,7 +337,7 @@
   # .dev
   sudo dpkg -i path/to/file.deb
   sudo apt-get install -f
-  
+
   # .rpm
   sudo alien -i path/to/file.rpm
   ```
@@ -346,7 +346,7 @@
 
   ```
   cat /etc/fstab
-  
+
   # If there is a line like `UUID=xxx /boot/efi ntfs defaults 0 1`, it means the system boot mode is UEFI, otherwise, it is Legacy BIOS
   ```
 
@@ -398,13 +398,13 @@
 
   ```
   sudo fdisk /dev/sda
-  
+
   ... Command (m for help): n
   ... Select (default p): p
   ... Partition number (1-4, default 1):
   ... First sector (46483456-62914559, default 46483456):
   ... Last sector, +/- sectors or +/-size{K,M,G,T,P} (46483456-62914559, default 62914559):
-  
+
   ... Command (m for help): w
   ```
 
@@ -418,17 +418,17 @@
 
   ```
   sudo mkdir /sample_dir
-  
+
   sudo mount /dev/sda1 /sample_dir  # for mount
   sudo umount /sample_dir  # for unmount
   ```
-  
+
 - Mount directory
 
   ```
   sudo mkdir /source_dir
   sudo mkdir /destination_dir
-  
+
   sudo mount --bind /source_dir /destination_dir
   ```
 
@@ -473,4 +473,3 @@ XKBOPTIONS="grp:super_space_toggle,grp_led:scroll"
   ```
   ctrl + alt + f5
   ```
-

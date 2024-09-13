@@ -35,7 +35,7 @@
   | float64    | 64-bit signed floating-point number                  | -1.7e+308 to +1.7e+308 | 8 bytes     |
   | complex64  | Complex number with float32 real and imaginary parts |                        |             |
   | complex128 | Complex number with float64 real and imaginary parts |                        |             |
-  
+
 - String:
 
   | Data Type | Description                                      |
@@ -47,5 +47,3 @@
   | Data Type | Description                            | Memory Size |
   | --------- | -------------------------------------- | ----------- |
   | bool      | Can only take the values true or false | 1 bit       |
-
-  

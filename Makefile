@@ -1,25 +1,45 @@
-# Minimal makefile for Sphinx documentation
-#
+# =========================
+# Init
+# =====
+ARGS := $(wordlist 2, $(words $(MAKECMDGOALS)), $(MAKECMDGOALS))
+$(eval $(ARGS):;@:)  # Change the target-level arguments into do-nothing targets
 
-# You can set these variables from the command line.
-SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
-SOURCEDIR     = source
-BUILDDIR      = build
-
-# Put it first so that "make" without argument is like "make help".
+# =========================
+# Help (Put it first so that "make" without argument is like "make help")
+# =====
 help:
-	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-
-.PHONY: help Makefile
-
-# Catch-all target: route all unknown targets to Sphinx using the new
-# "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
-%: Makefile
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@echo "Available targets:"
+	@grep -E '^[a-zA-Z0-9][a-zA-Z0-9._-]*:' Makefile | sort | awk -F: '{print "  "$$1}'
 
 # =========================
 # PreCommit
 # =====
 pre_commit.init:
+	pre-commit install
+	pre-commit install --hook-type pre-push
+	pre-commit install --hook-type commit-msg
 	oco hook set
+
+pre_commit.run_for_all:
+	pre-commit run --all-files
+
+# =========================
+# Requirements
+# =====
+requirements.compile:
+	rm -f requirements/compiled/*.txt
+	pip install -r requirements/prerequisite/pip-tools.txt
+	pip-compile -v requirements/raw/dev.in -o requirements/compiled/dev.txt
+
+requirements.install:
+	pip install -r requirements/prerequisite/pip-tools.txt
+	pip-sync requirements/compiled/dev.txt
+
+# =========================
+# App (Main Application)
+# =====
+app.serve:
+	mkdocs serve
+
+app.build:
+	mkdocs build
