@@ -8,6 +8,11 @@
 - [Top 10 Machine Learning Algorithms](https://builtin.com/data-science/tour-top-10-algorithms-machine-learning-newbies)
 - [Automl](https://www.ml4aad.org/automl/)
 - [How Train Sentence Transformers](https://huggingface.co/blog/how-to-train-sentence-transformers)
+- [Best NLP Challenges](https://www.kaggle.com/discussions/general/203318)
+- [Efficient Few-Shot Learning With Sentence Transformers](https://github.com/huggingface/setfit)
+- [HF Evaluate Library](https://huggingface.co/docs/evaluate/a_quick_tour#combining-several-evaluations)
+- [Transformer Explainer](https://poloclub.github.io/transformer-explainer/)
+- [GloVe (Similar to Word2Vec)](https://nlp.stanford.edu/projects/glove/)
 
 ## Projects
 
