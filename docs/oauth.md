@@ -86,13 +86,13 @@ access token: به توکن صادر شده توسط authorization server برا
 
 
 
-2 اصطلاح مهم دیگر داخل Oauth 2.0 : 
+2 اصطلاح مهم دیگر داخل Oauth 2.0 :
 
 ![slide_10](_static/images/oauth/slide_10.jpg)
 
 scope : برای تعیین سطح و نوع دسترسی به اطلاعات استفاده می شود.
 
-مثلا دسترسی خواندن ایمیل ها == >>  scope = read emails 
+مثلا دسترسی خواندن ایمیل ها == >>  scope = read emails
 
 گاهی مشاهده شده که بدیم صورت نیز استفاده می شود == >>  scope = emalis.read
 
@@ -112,7 +112,7 @@ back channel : به ارتباط بین ۲ سرور (سرورهای  backend) ب
 
 front channel : به ارتباطی که یک طرف آن یعنی درخواست دهنده یا پاسخ دهنده کلاینت (منظور browser هست) باشد، ارتباط  front-channel می گویند.
 
-**نکات مهم** : 
+**نکات مهم** :
 
 - امنیت back channel بسیار بالاتر از front channel هست.
 - در front channel چون یک طرف ارتباط browser ها هستند و امنیت کمتری نسبت به سرور ها دارند.(چون که ما در مورد کد browser ها اطلاعات زیادی نداریم و خودمان آنها را نساختیم و کلی روزنه داخلشان وجود دارد که میتواند منجر به فاش شدن اطلاعات شود. همچنین با یک inspect element و باز کردن تب console یا network می توان اطلاعات مهمی از browser بیرون کشید)
@@ -348,7 +348,7 @@ resource server نیاز دارد تا از لیست scope های مرتبط ب�
 POST /token_info HTTP/1.1
 Host: authorization-server.com
 Authorization: Basic Y4NmE4MzFhZGFkNzU2YWRhN
- 
+
 token=c1MGYwNDJiYmYxNDFkZjVkOGI0MSAgLQ
 ```
 
@@ -379,7 +379,7 @@ response example :
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
- 
+
 {
   "active": true,
   "scope": "read write email",
@@ -398,7 +398,7 @@ error response :
 ```http
 HTTP/1.1 401 Unauthorized
 Content-Type: application/json; charset=utf-8
- 
+
 {
   "error": "invalid_client",
   "error_description": "The client authentication was invalid"
@@ -414,7 +414,7 @@ Content-Type: application/json; charset=utf-8
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
- 
+
 {
   "active": false
 }
@@ -426,7 +426,7 @@ Content-Type: application/json; charset=utf-8
 
 - استفاده از token introspection به این معناست که ، هر resource server ای برای تعیین این که access token ای که ارسال کرده است active هست یا نه میتواند به این endpoint اتکا کند. (مثلا گوگل کلی resource server متفاوت که برخی از آنها در عکس زیر آمده است دارد که برای همه آنها به از endpoint برای راستی آزمایی access token استفاده می کنند)
 
-   
+
 
    ![google-apis](_static/images/oauth/google-apis.png)
 
@@ -438,7 +438,7 @@ Content-Type: application/json; charset=utf-8
 
 - introspection endpoint باید تمام چک های لازم و مناسب را برای access token انجام دهد، اعم از token's state و token's exp و token's signature .
 
-  
+
 
 #### عمل فیشینگ توکن ها
 
@@ -499,36 +499,36 @@ introspection endpoint نباید لزوما یک پاسخ یا response یکس�
 ```php
 <?php
 use \Firebase\JWT\JWT;
- 
+
 # Define the secret key used to create and verify the signature
 $jwt_key = 'secret';
- 
+
 # Set the user ID of the user this token is for
 $user_id = 1000;
- 
+
 # Set the client ID of the app that is generating this token
 $client_id = 'https://example-app.com';
- 
+
 # Provide the list of scopes this token is valid for
 $scope = 'read write';
- 
+
 $token_data = array(
- 
+
   # Subject (The user ID)
   'sub' => $user_id,
- 
+
   # Issuer (the token endpoint)
   'iss' => 'https://' . $_SERVER['PHP_SELF'],
- 
+
   # Client ID (this is a non-standard claim)
   'cid' => $client_id,
- 
+
   # Issued At
   'iat' => time(),
- 
+
   # Expires At
   'exp' => time()+7200, // Valid for 2 hours
- 
+
   # The list of OAuth scopes this token includes
   'scope' => $scope
 );
@@ -569,7 +569,7 @@ yaXRlIn0.QiIrnmaC4VrbAYAsu0YPeuJ992p20fSxrXWPLw-gkFA
    }
    ```
 
-   
+
 
 3. قسمت سوم توکن مشخص کننده امضا یا signature توکن می باشد.
 
@@ -608,7 +608,7 @@ yaXRlIn0.QiIrnmaC4VrbAYAsu0YPeuJ992p20fSxrXWPLw-gkFA
 
 
 
-#### بازگشایی رمز 
+#### بازگشایی رمز
 
 (decoding)
 
@@ -621,7 +621,7 @@ yaXRlIn0.QiIrnmaC4VrbAYAsu0YPeuJ992p20fSxrXWPLw-gkFA
 
 ```php
 try {
-  # Note: You must provide the list of supported algorithms in order to prevent 
+  # Note: You must provide the list of supported algorithms in order to prevent
   # an attacker from bypassing the signature verification. See:
   # https://auth0.com/blog/critical-vulnerabilities-in-json-web-token-libraries/
   $token = JWT::decode($token_string, $jwt_key, ['HS256']);
@@ -639,11 +639,11 @@ try {
   $error = 'unauthorized';
   $error_description = $e->getMessage();
 }
- 
+
 if($error) {
   header('HTTP/1.1 401 Unauthorized');
   echo json_encode(array(
-    'error'=>$error, 
+    'error'=>$error,
     'error_description'=>$error_description
   ));
   die();
@@ -653,7 +653,7 @@ if($error) {
 }
 ```
 
-در این نقطه سرویس به تمام اطلاعات مورد نیاز خود از جمله id و scope و ... داخل توکن باز شده دسترسی خواهد داشت بدون آنکه به هیچ کوئری دیتابیسی نیاز داشته باشد. 
+در این نقطه سرویس به تمام اطلاعات مورد نیاز خود از جمله id و scope و ... داخل توکن باز شده دسترسی خواهد داشت بدون آنکه به هیچ کوئری دیتابیسی نیاز داشته باشد.
 
 
 
@@ -673,7 +673,7 @@ if($error) {
 
 اگر شما از یک دیتابیس برای ذخیره کردن توکن های ساخته شده استفاده می کنید، راستی آزمایی کردن هر توکن با یک کوئری دیتابیسی ساده قابل انجام خواهد بود.
 
- 
+
 
 ## توکن های دسترسی مادام العمر
 
@@ -683,34 +683,33 @@ if($error) {
 
    (Short-lived access tokens and long-lived refresh tokens)
 
-   
+
 
    - هنگام استفاده از self-encoded token ها کاربرد دارد
    - برای محدود کردن ریسک لو رفتن access token
    - فراهم کردن یک sdk که می تواند برای handle کردن منطق پیاده سازی refresh code برای developer ها شفاف سازی کند.
 
-   
+
 
 2. access token های با تاریخ انقضای کوتاه بدون ساخت refresh token ها
 
    (Short-lived access tokens and no refresh tokens)
 
-   
+
 
    - برای محافظت بیشتر از لو رفتن access token
    - هنگامی که می خواهیم همیشه کاربر از دسترسی سرویس ثالث به اطلاعاتش مطلع باشد
    - هنگامی که نمی خواهیم سرویس های ثالث به صورت آفلاین به داده های کاربر دسترسی داشته باشند.
 
-   
+
 
 3.  access token های بدون تاریخ انقضا
 
    (Non-expiring access tokens)
 
-   
+
 
    - هنگامی که یک مکانیزم خاص برای باطل کردن access token ها داریم
    - هنگامی که لو رفتن توکن باعث ریسک زیادی برای ما نباشد (زیاد خطر آفرین نباشد)
    - هنگامی که می خواهید یک مکانیزم احراز هویت راحت برای developer ها فراهم کنید
    - هنگامی که می خواهید به سرویس های ثالث اجازه دسترسی آفلاین به داده های کاربران را بدهید
-

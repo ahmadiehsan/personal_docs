@@ -7,4 +7,3 @@
   ```
   sudo rabbitmqctl authenticate_user <user> <password>
   ```
-

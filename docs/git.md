@@ -20,7 +20,7 @@
 
 ## Stash
 
-- Apply: 
+- Apply:
 
   ```
   git stash apply stash@{<index>}
@@ -59,24 +59,24 @@
 ## Tag
 
 - Create:
-  
+
   ```
   # Without message
   git tag <tag_name>
-  
+
   # with message
   git tag <tag_name> -m "<message>"
-  
+
   # Add tag to specific commit
   git tag <tag_name> <commit_id>
   ```
-  
+
 - Update:
 
   ```
   # Without message
   git tag -f <tag_name> <commit_id>
-  
+
   # with message
   git tag -f <tag_name> -m "<message>"
   ```
@@ -86,21 +86,21 @@
   ```
   # Simple
   git tag
-  
+
   # More verbose
   git tag --list
   ```
 
 - Delete:
-  
+
   ```
   # For local repo
   git tag --delete <tag_name>
-  
+
   # For remote repo
   git push origin --delete <tag_name>
   ```
-  
+
 - Tag data:
 
   ```
@@ -108,11 +108,11 @@
   ```
 
 - Push tags:
-  
+
   ```
   # Single tag
   git push origin <tag_name>
-  
+
   # All tags
   git push origin master --tags
   ```
@@ -151,7 +151,7 @@
   ```
   # With OAuth2
   git clone https://oauth2:<access_token>@gitlab.com/myrepo.git
-  
+
   # With username
   git clone https://<username>:<access_token>@gitlab.com/myrepo.git
   ```
@@ -181,7 +181,7 @@
 
   ```
   git config --global alias.<command_name> "<command>"
-  
+
   # Example
   git config --global alias.hist "log --all --oneline --graph --decorate"
   ```

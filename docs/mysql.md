@@ -124,13 +124,13 @@ sudo mysql_secure_installation
 - Drop user:
 
   ```
-  
+
   ```
 
 - Change pass for any user:
 
   ```
-  
+
   ```
 
 - Change pass of root user:
@@ -174,7 +174,7 @@ sudo mysql_secure_installation
 - Change db owner:
 
   ```
-  
+
   ```
 
 - Connect to database:
@@ -219,7 +219,7 @@ sudo mysql_secure_installation
       created DATETIME(6) NOT NULL,
       <column3> INT NOT NULL DEFAULT 0,
       <column4> BINARY(16) UNIQUE NOT NULL,  # FK (1:1)
-  
+
       INDEX (<column3>),  # custom index
       FOREIGN KEY (<column4>) REFERENCES <other_table>(id)  # automatically will create an index
   );
@@ -227,7 +227,7 @@ sudo mysql_secure_installation
 - Create table based on other table:
 
   ```
-  
+
   ```
 - Delete table:
 
@@ -257,7 +257,7 @@ sudo mysql_secure_installation
 - Create row in table base on other table rows:
 
   ```
-  
+
   ```
 
 - Delete row in table:
@@ -281,4 +281,3 @@ sudo mysql_secure_installation
   ```
   SHOW VARIABLES LIKE "%version%";
   ```
-

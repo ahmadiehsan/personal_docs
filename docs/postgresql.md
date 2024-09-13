@@ -18,7 +18,7 @@
   | BYTEA         | Up to 1 GB of binary data          | Up to 1 GB                |
   | ENUM          | Enumerated list of values          | Depends on values         |
   | ARRAY         | Array of any data type             | Depends on the array size |
-  
+
 - Numeric:
 
   | Data Type        | Range                                                    | Storage Size |
@@ -33,7 +33,7 @@
   | SERIAL           | Auto-incrementing integer (equivalent to INTEGER)        | 4 bytes      |
   | BIGSERIAL        | Auto-incrementing large integer (equivalent to BIGINT)   | 8 bytes      |
   | SMALLSERIAL      | Auto-incrementing small integer (equivalent to SMALLINT) | 2 bytes      |
-  
+
 - Date and time:
 
   | Data Type   | Range                                                  | Storage Size |
@@ -63,7 +63,7 @@
   ```
   pg_dump -U <db_user> <db_name> > <file_name>.sql
   ```
-  
+
 - Insert to table from other table:
 
   ```
@@ -215,7 +215,7 @@
   ```
   ALTER TABLE <table_name> ADD COLUMN <column_name> <data_type> [NOT NULL] [DEFAULT <value>]
   ```
-  
+
 - Show table column:
 
   ```
@@ -261,5 +261,3 @@
   ```
   postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]
   ```
-
-  

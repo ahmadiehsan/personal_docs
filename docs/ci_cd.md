@@ -13,7 +13,7 @@
 
   ```
   sudo gitlab-runner install --working-directory /home/<unix_user> --user <unix_user>
-  
+
   sudo service gitlab-runner <status|start|stop|restart>
   ```
 

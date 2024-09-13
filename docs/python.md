@@ -36,15 +36,15 @@
   ```
   import os
   import inspect
-  
+
   def foo():
     pass
-  
+
   print(os.path.abspath(inspect.getfile(foo)))
-  
+
   class Bar:
     pass
-  
+
   print(os.path.abspath(inspect.getfile(Bar.__class__)))
   ```
 
