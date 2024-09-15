@@ -22,37 +22,26 @@
 ## Stash
 
 - Apply:
-
   ```
   git stash apply stash@{<index>}
   ```
-
 - List of stashes:
-
   ```
   git stash list
   ```
-
 - Drop:
-
   ```
   git stash drop stash@{<index>}
   ```
-
 - Clear (drop all stashes):
-
   ```
   git stash clear
   ```
-
 - Pop (apply and drop):
-
   ```
   git stash pop stash@{<index>}
   ```
-
 - Show (files that changed in this stash):
-
   ```
   git stash show stash@{<index>}
   ```
@@ -60,7 +49,6 @@
 ## Tag
 
 - Create:
-
   ```
   # Without message
   git tag <tag_name>
@@ -71,9 +59,7 @@
   # Add tag to specific commit
   git tag <tag_name> <commit_id>
   ```
-
 - Update:
-
   ```
   # Without message
   git tag -f <tag_name> <commit_id>
@@ -81,9 +67,7 @@
   # with message
   git tag -f <tag_name> -m "<message>"
   ```
-
 - List of tags:
-
   ```
   # Simple
   git tag
@@ -91,9 +75,7 @@
   # More verbose
   git tag --list
   ```
-
 - Delete:
-
   ```
   # For local repo
   git tag --delete <tag_name>
@@ -101,15 +83,11 @@
   # For remote repo
   git push origin --delete <tag_name>
   ```
-
 - Tag data:
-
   ```
   git show <tag_name>
   ```
-
 - Push tags:
-
   ```
   # Single tag
   git push origin <tag_name>
@@ -152,7 +130,6 @@
 ## Auth (Token & In-URL Auth)
 
 - Personal access token:
-
   ```
   # With OAuth2
   git clone https://oauth2:<access_token>@gitlab.com/myrepo.git
@@ -160,21 +137,15 @@
   # With username
   git clone https://<username>:<access_token>@gitlab.com/myrepo.git
   ```
-
 - Simple auth:
-
   ```
   git clone https://<username>:<password>@gitlab.com/myrepo.git
   ```
-
 - PIP:
-
   ```
   git+https://<username>:<access_token>@gitlab.com/myrepo.git@<tag>
   ```
-
 - NPM:
-
   ```
   git+https://<username>:<access_token>@gitlab.com/myrepo.git
   ```
@@ -183,7 +154,6 @@
 ## Alias
 
 - Add:
-
   ```
   git config --global alias.<command_name> "<command>"
 
@@ -194,19 +164,14 @@
 ## Config
 
 - Default editor:
-
   ```
   git config --global core.editor "<editor name: vim>"
   ```
-
 - Password cache:
-
   ```
   git config --global credential.helper 'cache --timeout=<time in seconds: 3600>'
   ```
-
 - SSL problem:
-
   ```
   git config --global http.sslverify false
   ```
@@ -214,7 +179,6 @@
 ## Pull/Push
 
 - Last pull time:
-
   ```
   stat -c %y .git/FETCH_HEAD
   ```
