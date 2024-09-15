@@ -16,38 +16,27 @@
 ## SSH
 
 - Download to local:
-
   ```
   scp -[r]P <port> <user>@<ip>:<path/to/folder> <path/to/local>
   ```
-
 - Upload to server:
-
   ```
   scp -[r]P <port> <source file> <username>@<destination server>:<destination directory>
   ```
-
 - Generate ssh key:
-
   ```
   ssh-keygen -t rsa
   ssh-add
   ```
-
 - List of private keys:
-
   ```
   ssh-add -l
   ```
-
 - Access to public ssh key:
-
   ```
   cat ~/.ssh/id_rsa.pub
   ```
-
 - Prevent SSH from disconnecting:
-
   ```shell
   # /etc/ssh/ssh_config or ~/.ssh/config
   ServerAliveInterval 60
@@ -56,7 +45,6 @@
 ## Compress & Extract
 
 - .tgz:
-
   ```
   # Compress
   tar -czvf <file_name.tgz> </path/to/directory>
@@ -73,9 +61,7 @@
   # Extract from splitted files (tgz)
   cat <destination_file.tgz.*> | tar -xzvf -
   ```
-
 - .zip:
-
   ```
   # Compress
   zip <filename.zip> <file>
@@ -84,9 +70,7 @@
   unzip <file_name.zip>
   unzip '*.zip'
   ```
-
-- .rar
-
+- .rar:
   ```
   # Extract (sudo apt-get install unrar)
   unrar x -r </path/to/file.rar>
@@ -102,13 +86,10 @@
 ## Xmodmap
 
 - Remove a key from a mod:
-
   ```
   xmodmap -e 'remove Mod1 = Alt_R'
   ```
-
 - Add a key to a mod:
-
   ```
   xmodmap -e 'add Mod3 = Alt_R'
   ```
@@ -116,32 +97,23 @@
 ## Firewall
 
 - Enable and disable firewall:
-
   ```
   sudo ufw enable/disable
   ```
-
 - Get status of firewall and all available ports:
-
   ```
   sudo ufw status verbose
   ```
-
 - Get list of apps that wanna firewall access:
-
   ```
   sudo ufw app list
   ```
-
 - Set or get firewall access for port:
-
   ```
   sudo ufw allow <port>
   sudo ufw delete allow <port>
   ```
-
 - Set or get firewall access for app:
-
   ```
   sudo ufw allow in "<app name>"
   sudo ufw delete allow in "<app name>"
@@ -187,61 +159,42 @@
 ## Tmux
 
 - Create new terminal:
-
   ```
   tmux
   ```
-
 - Split current terminal vertically:
-
   ```
   ctrl+b %
   ```
-
 - Split current terminal horizontally:
-
   ```
   ctrl+b "
   ```
-
 - New window (tab):
-
   ```
   ctrl+b c
   ```
-
 - Maximize and minimize terminal:
-
   ```
   ctrl+b z
   ```
-
 - Switch between terminals:
-
   ```
   ctrl+b o
   ```
-
 - Create new session:
-
   ```
   tmux new -s <session_name>
   ```
-
 - Connect to session:
-
   ```
   tmux attach-session -t <session_name>
   ```
-
 - Disconnect from session:
-
   ```
   ctrl+b + d
   ```
-
 - Destroy session:
-
   ```
   ctrl+d
   ```
@@ -249,12 +202,10 @@
 ## Grub
 
 - Edit configs:
-
   ```
   sudo vim /etc/default/grub
   sudo update-grub
   ```
-
 - Grub Problem:
 
   1. To install and fix grub, you need Live CD or Live USB of Ubuntu
@@ -273,7 +224,6 @@
   5. You will now have a Grub menu on boot, where you can choose from Ubuntu, and Windows
 
 - Add Windows to boot loader:
-
   ```
   sudo os-prober
   sudo update-grub
@@ -300,25 +250,18 @@
 ## Machine
 
 - Version:
-
-  ````
+  ```
   cat /etc/*-release
-  ````
-
+  ```
 - CPU:
-
   ```
   lscpu
   ```
-
 - Memory:
-
   ```
   free -h
   ```
-
 - Disk space:
-
   ```
   # Simple
   df -h
@@ -326,9 +269,7 @@
   # Advanced
   ncdu
   ```
-
 - Install package:
-
   ```
   # .dev
   sudo dpkg -i path/to/file.deb
@@ -337,17 +278,13 @@
   # .rpm
   sudo alien -i path/to/file.rpm
   ```
-
 - Boot type:
-
   ```
   cat /etc/fstab
 
   # If there is a line like `UUID=xxx /boot/efi ntfs defaults 0 1`, it means the system boot mode is UEFI, otherwise, it is Legacy BIOS
   ```
-
 - Kernel logs:
-
   ```
   dmesg -l err
   ```
@@ -372,7 +309,6 @@
 ## Gnome
 
 - Reset an extension configs:
-
   ```
   dconf reset -f /org/gnome/shell/extensions/<extension_name>
   ```
@@ -380,13 +316,10 @@
 ## Mount & Partition
 
 - See disk usage:
-
   ```
   sudo lsblk
   ```
-
 -  Create primary partition:
-
   ```
   sudo fdisk /dev/sda
 
@@ -398,33 +331,25 @@
 
   ... Command (m for help): w
   ```
-
 - Create file system:
-
   ```
   sudo mkfs.ext4 /dev/sda1
   ```
-
-- Mount partition
-
+- Mount partition:
   ```
   sudo mkdir /sample_dir
 
   sudo mount /dev/sda1 /sample_dir  # for mount
   sudo umount /sample_dir  # for unmount
   ```
-
-- Mount directory
-
+- Mount directory:
   ```
   sudo mkdir /source_dir
   sudo mkdir /destination_dir
 
   sudo mount --bind /source_dir /destination_dir
   ```
-
 - Determine the file system type:
-
   ```
   sudo fsck -N /dev/sda1
   ```
@@ -448,19 +373,14 @@ XKBOPTIONS="grp:super_space_toggle,grp_led:scroll"
 ## Other
 
 - Minimal Curl:
-
   ```
   curl -i -H "Accept: text/html" 127.0.0.1:31001 -v
   ```
-
 - Vim replace all:
-
   ```
   :%s/foo/bar/g
   ```
-
 - Open shell without login:
-
   ```
   ctrl + alt + f5
   ```

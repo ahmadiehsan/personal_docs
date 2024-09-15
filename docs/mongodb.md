@@ -3,7 +3,6 @@
 ## Shell
 
 - Connect:
-
   ```
   mongo <db_name> -u <user> -p <pass>
   ```
@@ -11,7 +10,6 @@
 ## Database
 
 - List:
-
   ```
   # Quick
   show databases
@@ -23,7 +21,6 @@
 ## Collection
 
 - List:
-
   ```
   # Quick
   show collections
@@ -35,14 +32,11 @@
 ## Document
 
 - Simple query:
-
   ```
   db.<collection_name>.find().pretty()  # find() or findOne()
   db.<collection_name>.find({<query_field>: "<value>"})
   ```
-
 - Complex query:
-
   ```
   db.<collection_name>.find(
   	{"<query_field>.<child_query_field>": "<value>"},

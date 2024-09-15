@@ -22,7 +22,6 @@ sudo mysql_secure_installation
 ## Data Types
 
 - String:
-
   | Data Type     | Range                              | Storage size              |
   | ------------- | ---------------------------------- | ------------------------- |
   | CHAR(size)    | Fixed length, 0 to 255 chars       | 1 to 255 bytes            |
@@ -36,9 +35,7 @@ sudo mysql_secure_installation
   | LONGBLOB      | Up to 4,294,967,295 bytes          | Up to 4,294,967,295 bytes |
   | ENUM          | Enumerated list of values          | Depends on values         |
   | SET           | Set of values                      | Depends on values         |
-
 - Numeric:
-
   | Data Type                      | Range (signed) (Default)                                | Range (unsigned)                   | Storage size |
   | ------------------------------ | ------------------------------------------------------- | ---------------------------------- | ------------ |
   | TINYINT(size)                  | -128 to 127                                             | 0 to 255                           | 1 byte       |
@@ -52,7 +49,6 @@ sudo mysql_secure_installation
   | BIT(size)                      | Not applicable                                          | 1 to 64                            | Varies       |
 
 - Date and time:
-
   | Data Type      | Range                                              | Storage size |
   | -------------- | -------------------------------------------------- | ------------ |
   | DATE           | 1000-01-01 to 9999-12-31                           | 3 bytes      |
@@ -62,7 +58,6 @@ sudo mysql_secure_installation
   | YEAR           | 1901 to 2155                                       | 1 byte       |
 
 - Boolean:
-
   | Data Type     | Range  | Storage size |
   | ------------- | ------ | ------------ |
   | BOOL, BOOLEAN | 0 or 1 | 1 byte       |
@@ -70,13 +65,10 @@ sudo mysql_secure_installation
 ## Export/Import
 
 - Import data to database:
-
   ```
   mysql [-h <host>] -u <username: root> -p <db_name> < <file_path/file_name.sql>
   ```
-
 - Export data from database:
-
   ```
   mysqldump [-h <host>] -u <username: root> -p [--no-data] [--set-gtid-purged=OFF] <db_name> > <file_path/file_name.sql>
   ```
@@ -84,19 +76,14 @@ sudo mysql_secure_installation
 ## Shell
 
 - Connect:
-
   ```
   mysql -u root -p
   ```
-
 - Run command without connection:
-
   ```
   mysql -u root -p <<< 'SHOW DATABASES;'
   ```
-
 - Vertical show fields:
-
   ```
   SELECT * FROM <table_name>\G
   ```
@@ -104,43 +91,30 @@ sudo mysql_secure_installation
 ## User
 
 - Show all users:
-
   ```
   SELECT user, host FROM mysql.user
   ```
-
 - Accepting all IPs:
-
   ```
   UPDATE mysql.user SET host='<host: %>' WHERE user='<user: root>'
   ```
-
 - Create user:
-
   ```
   CREATE USER '<username>'@'localhost' IDENTIFIED BY '<password>'
   ```
-
 - Drop user:
-
   ```
 
   ```
-
 - Change pass for any user:
-
   ```
 
   ```
-
 - Change pass of root user:
-
   ```
   ALTER USER 'root'@'%' IDENTIFIED BY '<new_password>'
   ```
-
 - Add all privileges to user for one database:
-
   ```
   GRANT ALL PRIVILEGES ON <db_name>.* TO '<user>'@'localhost'
   ```
@@ -148,43 +122,30 @@ sudo mysql_secure_installation
 ## Database
 
 - Show all database:
-
   ```
   SHOW DATABASES
   ```
-
 - Create db:
-
   ```
   CREATE DATABASE <db_name>
   ```
-
 - Drop database:
-
   ```
   DROP DATABASE <db_name>
   ```
-
 - Show database owner:
-
   ```
   SHOW processlist
   ```
-
 - Change db owner:
-
   ```
 
   ```
-
 - Connect to database:
-
   ```
   USE <db_name>
   ```
-
 - Get size of databases:
-
   ```
   SELECT table_schema "<db_name>", ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" FROM information_schema.tables GROUP BY table_schema
   ```
@@ -192,27 +153,22 @@ sudo mysql_secure_installation
 ## Tables
 
 - Show all of db tables:
-
   ```
   SHOW TABLES
   ```
 - Show table schema:
-
   ```
   DESCRIBE <table_name>
   ```
 - Show table full schema:
-
   ```
   SHOW FULL COLUMNS FROM <table_name>
   ```
 - Create table simple:
-
   ```
   CREATE TABLE <table_name> (id INT NOT NULL AUTO_INCREMENT, <column2> <datatype>, PRIMARY KEY(id))
   ```
 - Create table complex:
-
   ```
   CREATE TABLE <table_name> (
       id BINARY(16) PRIMARY KEY,  # UUID
@@ -225,17 +181,14 @@ sudo mysql_secure_installation
   );
   ```
 - Create table based on other table:
-
   ```
 
   ```
 - Delete table:
-
   ```
   DROP TABLE <table_name>
   ```
 - Show indexes:
-
   ```
   SHOW INDEXES IN <table_name>
   ```
@@ -243,25 +196,18 @@ sudo mysql_secure_installation
 ## Row
 
 - Updating row:
-
   ```
   UPDATE <table_name> SET <column1>=<value>
   ```
-
 - Create row in table:
-
   ```
   INSERT INTO <table_name> (column1, column2) VALUES (value1, value2)
   ```
-
 - Create row in table base on other table rows:
-
   ```
 
   ```
-
 - Delete row in table:
-
   ```
   DELETE FROM <table_name> WHERE <column1>=<value>
   ```
@@ -269,7 +215,6 @@ sudo mysql_secure_installation
 ## Index
 
 - Partial index:
-
   ```
   CREATE [UNIQUE] INDEX <index_name> ON <table> (<column1, column2>) WHERE <conditions>
   ```
@@ -277,7 +222,6 @@ sudo mysql_secure_installation
 ## Other
 
 - Version:
-
   ```
   SHOW VARIABLES LIKE "%version%";
   ```
