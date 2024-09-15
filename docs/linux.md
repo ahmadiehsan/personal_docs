@@ -168,25 +168,18 @@
 ## Networkmanager
 
 - List of connections:
-
   ```
   nmcli connection
   ```
-
 - Change DNS:
-
   ```
   nmcli connection modify <connection name> ipv4.dns "<dns one:8.8.8.8> <dns two:8.8.4.4>"
   ```
-
 - Connection down (need to restart):
-
   ```
   nmcli connection down <connection name>
   ```
-
 - Connection up (need to restart):
-
   ```
   nmcli connection up <connection name>
   ```
