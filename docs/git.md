@@ -8,13 +8,10 @@
 ## Reflog
 
 1. See logs:
-
    ```
    git reflog
    ```
-
 2. Undo an action:
-
    ```
    git reset --hard <reflog_id: HEAD@{2}>
    ```
@@ -99,30 +96,23 @@
 ## Auth (SSH)
 
 1. Generate ssh key:
-
    ```
    ssh-keygen -t rsa
    ```
-
 2. Add private key to system by:
-
    ```
    ssh-add
    ```
-
 3. Get public ssh key by this command:
-
    ```
    cat ~/.ssh/id_rsa.pub
    ```
-
 4. Add public ssh key to git profile setting:
 
    [https://github.com/settings/keys](https://github.com/settings/keys)
 
 5. Change project remote URL, to ssh type
 6. Connect to git:
-
    ```
    ssh -T git@github.com
    ```

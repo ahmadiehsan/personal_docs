@@ -13,6 +13,7 @@
 ## Data Types
 
 - Integer:
+
   | Data Type | Description                                            | Range                                       | Memory Size |
   | --------- | ------------------------------------------------------ | ------------------------------------------- | ----------- |
   | uint8     | Unsigned 8-bit integer                                 | 0 to 255                                    | 1 byte      |
@@ -26,6 +27,7 @@
   | int64     | Signed 64-bit integer                                  | -9223372036854775808 to 9223372036854775807 | 8 bytes     |
   | int       | int32 in 32 bit systems<br />int64 in 64 bit systems   |                                             |             |
 - Float:
+
   | Data Type  | Description                                          | Range                  | Memory Size |
   | ---------- | ---------------------------------------------------- | ---------------------- | ----------- |
   | float32    | 32-bit signed floating-point number                  | -3.4e+38 to 3.4e+38    | 4 bytes     |
@@ -33,10 +35,12 @@
   | complex64  | Complex number with float32 real and imaginary parts |                        |             |
   | complex128 | Complex number with float64 real and imaginary parts |                        |             |
 - String:
+
   | Data Type | Description                                      |
   | --------- | ------------------------------------------------ |
   | string    | Is used to store a sequence of characters (text) |
 - Boolean:
+
   | Data Type | Description                            | Memory Size |
   | --------- | -------------------------------------- | ----------- |
   | bool      | Can only take the values true or false | 1 bit       |
