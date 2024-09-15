@@ -2,16 +2,17 @@ site_name: Ehsan Ahmadi's Personal Docs
 copyright: ©2020-2024 Ehsan Ahmadi
 theme:
   name: material
-  layout:
-    width: full
   features:
-    - content.code.copy
+    - content.code.copy  # Adds a copy button to each code block
 plugins:
   - search
-  - toc-md:
+  - toc-md:  # Automatically generates an 'index.md' file and populates it with a table of contents
       toc_page_title: Table of Contents
       header_level: 2
 markdown_extensions:
-  - pymdownx.superfences
+  - pymdownx.superfences  # Add code blocks support
+  - mdx_truly_sane_lists:  # Add nested lists support
+      truly_sane: false  # Allow for unlimited newlines between elements of a list
 extra_css:
   - _static/styles/extra.css
+  - _static/styles/iransans.css

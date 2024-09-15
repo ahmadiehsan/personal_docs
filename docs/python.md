@@ -22,15 +22,18 @@
 ## File
 
 - Open modes:
+
   ![](_static/images/python/file_open_modes.png)
 
 - Open modes decision tree:
+
   ![](_static/images/python/file_open_modes_decision_tree.png)
 
 ## Class & Function
 
 - Get full path:
-  ```
+
+  ```python
   import os
   import inspect
 
@@ -48,7 +51,8 @@
 ## Modules & Packages
 
 - Get all import able modules & packages:
-  ```
+
+  ```python
   import pkgutil
   search_path = ['.'] # set to None to see all modules importable from sys.path
   all_modules = [x[1] for x in pkgutil.iter_modules(path=search_path)]
@@ -58,15 +62,19 @@
 ## Celery
 
 - Kill celery process:
-  ```
+
+  ```shell
   kill -9 $(ps aux | grep celery | grep -v grep | awk '{print $2}' | tr '\n' ' ') > /dev/null 2>&1
   ```
+
 - View worker logs:
-  ```
+
+  ```shell
   celery -A <worker name: karestoon> worker --loglevel=info
   ```
 
 ## Other
 
 - cProfile example:
+
   ![](_static/images/python/cprofile_example.jpg)
