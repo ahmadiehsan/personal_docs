@@ -9,19 +9,26 @@
 
 - Install Gitlab-Runner on server: [installation guide](https://docs.gitlab.com/runner/install/#containers)
 - Create system service:
-  ```
+
+  ```shell
   sudo gitlab-runner install --working-directory /home/<unix_user> --user <unix_user>
   sudo service gitlab-runner <status|start|stop|restart>
   ```
+
 - Create new runner:
-  ```
+
+  ```shell
   sudo gitlab-runner register
   ```
+
 - List of runners:
-  ```
+
+  ```shell
   sudo gitlab-runner verify
   ```
+
 - Delete removed runners:
-  ```
+
+  ```shell
   sudo gitlab-runner verify --delete
   ```

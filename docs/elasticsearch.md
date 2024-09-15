@@ -13,12 +13,15 @@
 ## Data Types
 
 - String:
+
   | Data Type | Description                          |
   | --------- | ------------------------------------ |
   | keyword   | Not analyzed, used for exact matches |
   | text      | Analyzed for full-text search        |
   | binary    | Binary data, encoded as base64       |
+
 - Numeric:
+
   | Data Type | Description                     | Range                                                   |
   | --------- | ------------------------------- | ------------------------------------------------------- |
   | byte      | 8-bit signed integer            | -128 to 127                                             |
@@ -27,15 +30,21 @@
   | long      | 64-bit signed integer           | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
   | float     | Single-precision floating point | Approx. ±3.4 × 10^38                                    |
   | double    | Double-precision floating point | Approx. ±1.7 × 10^308                                   |
+
 - Date and time:
+
   | Data Type | Description                                      |
   | --------- | ------------------------------------------------ |
   | date      | Date and time values, format defined by the user |
+
 - Boolean:
+
   | Data Type | Description   |
   | --------- | ------------- |
   | boolean   | True or false |
+
 - Vector:
+
   | Data Type     | Description                     |
   | ------------- | ------------------------------- |
   | dense_vector  | Vector with fixed dimensions    |
@@ -44,11 +53,14 @@
 ## Document
 
 - Simple query:
-  ```
+
+  ```shell
   curl -X GET "http://localhost:9200/_search?pretty" -u <username_and_password: elastic:pass123>
   ```
+
 - Complex query:
-  ```
+
+  ```shell
   curl -X GET "http://localhost:9200/<index_name>/<_search or _count>?pretty" -H 'Content-Type: application/json' -d '{
     "from": <offset: 5>,
     "size": <limit: 20>,
@@ -74,8 +86,10 @@
     ]
   }'
   ```
+
 - Aggregate:
-  ```
+
+  ```shell
   curl -X GET "http://localhost:9200/<index_name>/_search?pretty" -H 'Content-Type: application/json' -d '{
     "size": 0,  # will only return aggregate results
     "aggs": {
@@ -89,33 +103,40 @@
     }
   }'
   ```
+
 - Create:
-  ```
+
+  ```shell
   curl -X POST "http://localhost:9200/<index_name>/_doc?pretty" -H 'Content-Type: application/json' -d '{
     "<field>": "<value>"
   }'
   ```
+
 - Update:
-  ```
+
+  ```shell
   # fully replace
   curl -X PUT "http://localhost:9200/<index_name>/_doc/<_id>?pretty" -H 'Content-Type: application/json' -d '{
     "<field>": "<value>"
   }'
   ```
+
 - Get:
-  ```
+
+  ```shell
   # return document and its related data
   curl -X GET "http://localhost:9200/<index_name>/_doc/<_id>?pretty"
-  ```
 
-  ```
   # return document only
   curl -X GET "http://localhost:9200/<index_name>/_source/<_id>?pretty"
   ```
+
 - Delete:
-  ```
+
+  ```shell
   curl -X DELETE "http://localhost:9200/<index_name>/_doc/<_id>?pretty"
   ```
+
 - Bulk:
 
   Provides a way to perform multiple `index`, `create`, `delete`, and `update` actions in a single request.
@@ -144,15 +165,20 @@
 ## Index
 
 - Get all:
-  ```
+
+  ```shell
   curl -X GET "http://localhost:9200/_aliases?pretty"
   ```
+
 - Create simple:
-  ```
+
+  ```shell
   curl -X PUT "http://localhost:9200/<index_name>?pretty"
   ```
+
 - Create with mapping:
-  ```
+
+  ```shell
   curl -X PUT "http://localhost:9200/<index_name>?pretty" -H 'Content-Type: application/json' -d '{
     "mappings": {
       "dynamic": "<dynamic_type: strict>",
@@ -164,8 +190,10 @@
     }
   }'
   ```
+
 - Alias:
-  ```
+
+  ```shell
   # Tip: The `remove` action will remove this alias from other indices
 
   curl -X POST "http://localhost:9200/_aliases?pretty" -H 'Content-Type: application/json' -d'{
@@ -185,8 +213,10 @@
     ]
   }'
   ```
+
 - Delete:
-  ```
+
+  ```shell
   # One index
   curl -X DELETE "http://localhost:9200/<index_name>?pretty"
 
@@ -196,8 +226,10 @@
   # All (it needs: `action.destructive_requires_name=false`)
   curl -X DELETE "http://localhost:9200/*?pretty"
   ```
+
 - Clone:
-  ```
+
+  ```shell
   # Make the source index readonly
   curl -X PUT "http://localhost:9200/<source_index_name>/_settings?pretty" -H 'Content-Type: application/json' -d'
   {
@@ -213,8 +245,10 @@
     "settings": {"index.blocks.write": false}
   }'
   ```
+
 - Reindex:
-  ```
+
+  ```shell
   curl -X POST "http://localhost:9200/_reindex?pretty" -H 'Content-Type: application/json' -d'{
     "source": {"index": "<source_index_name>"},
     "dest": {"index": "<destination_index_name>"}
@@ -224,11 +258,14 @@
 ## Mapping
 
 - Get current:
-  ```
+
+  ```shell
   curl -X GET "http://localhost:9200/<index_name>/_mapping?pretty"
   ```
+
 - Create or update:
-  ```
+
+  ```shell
   # Tip: We can’t change the mapping or field type of an existing field. Changing an existing field could invalidate data that’s already indexed
 
   curl -X PUT "http://localhost:9200/<index_name>/_mapping?pretty" -H 'Content-Type: application/json' -d '{
@@ -240,12 +277,15 @@
     }
   }'
   ```
+
 - Delete: There is no way to delete a field from mapping. Even if you delete all documents that contain this field
 
 ## Other
 
 - Clustering:
+
   ![](_static/images/elasticsearch/elasticsearch_cluster.jpg)
 
 - Elasticsearch DSL & Django ORM:
+
   ![](_static/images/elasticsearch/django_orm_map_to_elasticsearch_dsl.jpg)

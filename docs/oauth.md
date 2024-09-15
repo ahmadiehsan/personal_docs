@@ -1,6 +1,11 @@
+<script>
+document.querySelector('.md-content').setAttribute('dir', 'rtl');
+document.querySelector('.md-sidebar--secondary').setAttribute('dir', 'rtl');
+</script>
+
 # Oauth
 
-## Functionality
+## عملکرد
 
 ![](_static/images/oauth/oauth2.jpg)
 
@@ -366,7 +371,9 @@ Content-Type: application/json; charset=utf-8
 (security consideration)
 
 - استفاده از token introspection به این معناست که ، هر resource server ای برای تعیین این که access token ای که ارسال کرده است active هست یا نه میتواند به این endpoint اتکا کند. (مثلا گوگل کلی resource server متفاوت که برخی از آنها در عکس زیر آمده است دارد که برای همه آنها به از endpoint برای راستی آزمایی access token استفاده می کنند)
+
   ![google-apis](_static/images/oauth/google-apis.png)
+
 - introspection endpoint صرفا فقط مسئولیت تصمیم گیری در مورد موفقیت درخواست های API را برعهدا دارد.
 - introspection endpoint باید تمام چک های لازم و مناسب را برای access token انجام دهد، اعم از token's state و token's exp و token's signature .
 
@@ -472,13 +479,16 @@ yaXRlIn0.QiIrnmaC4VrbAYAsu0YPeuJ992p20fSxrXWPLw-gkFA
 این توکن از 3 بخش اصلی تشکیل شده که با نقطه جدا شده اند که هرکدام از بخش های آن به ترتیب زیر معرف یک اطلاعاتی می باشند.
 
 1. قسمت اول توکن مشخص کننده نوع توکن و الگوریتم رمزگذاری استفاده شده در آن است.
+
    ```
    {
       "typ":"JWT",
       "alg":"HS256”
     }
    ```
+
 2. قسمت دوم توکن حاوی اطلاعات اصلی و محتوای مورد نیاز ماست.
+
    ```
    {
      "sub": 1000,
@@ -489,34 +499,41 @@ yaXRlIn0.QiIrnmaC4VrbAYAsu0YPeuJ992p20fSxrXWPLw-gkFA
      "scope": "read write"
    }
    ```
+
 3. قسمت سوم توکن مشخص کننده امضا یا signature توکن می باشد.
 
    - الگووریتم رمز گذاری Base64-encoding قسمت اول و دوم توکن را که صورت های زیر هستند ترکیب کرده و یک امضا(رمز گذاری دیگر) روی آنها قرار می دهد.
 
      - قسمت اول:
-     ```
-     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
-     ```
+
+       ```
+       eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+       ```
+
      - قسمت دوم:
-     ```
-     eyJzdWIiOjEwMDAsImlzcyI6Imh0dHBzOi8vYXV0aG9yaXphdGlvbi1z
-     ZXJ2ZXIuY29tIiwiY2lkIjoiaHR0cHM6Ly9leGFtcGxlLWFwcC5jb20i
-     LCJpYXQiOjE0NzAwMDI3MDMsImV4cCI6MTUyOTE3NDg1MSwic2NvcGUi
-     OiJyZWFkIHdyaXRlIn0
-     ```
+
+       ```
+       eyJzdWIiOjEwMDAsImlzcyI6Imh0dHBzOi8vYXV0aG9yaXphdGlvbi1z
+       ZXJ2ZXIuY29tIiwiY2lkIjoiaHR0cHM6Ly9leGFtcGxlLWFwcC5jb20i
+       LCJpYXQiOjE0NzAwMDI3MDMsImV4cCI6MTUyOTE3NDg1MSwic2NvcGUi
+       OiJyZWFkIHdyaXRlIn0
+       ```
+
      - قسمت سوم: ترکیب این دو با استفاده از secret key خود سرور و ساخت امضا(قسمت سوم):
 
-     ```
-     QiIrnmaC4VrbAYAsu0YPeuJ992p20fSxrXWPLw-gkF
-     ```
-     خروجی ترکیب این 3 با هم به صورت زیر در می آید:
-     ```
-     eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEwMDAsI
-     mlzcyI6Imh0dHBzOi8vYXV0aG9yaXphdGlvbi1zZXJ2ZXIuY29tIiw
-     iY2lkIjoiaHR0cHM6Ly9leGFtcGxlLWFwcC5jb20iLCJpYXQiOjE0N
-     zAwMDI3MDMsImV4cCI6MTUyOTE3NDg1MSwic2NvcGUiOiJyZWFkIHd
-     yaXRlIn0.QiIrnmaC4VrbAYAsu0YPeuJ992p20fSxrXWPLw-gkFA
-     ```
+       ```
+       QiIrnmaC4VrbAYAsu0YPeuJ992p20fSxrXWPLw-gkF
+       ```
+
+       خروجی ترکیب این 3 با هم به صورت زیر در می آید:
+
+       ```
+       eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEwMDAsI
+       mlzcyI6Imh0dHBzOi8vYXV0aG9yaXphdGlvbi1zZXJ2ZXIuY29tIiw
+       iY2lkIjoiaHR0cHM6Ly9leGFtcGxlLWFwcC5jb20iLCJpYXQiOjE0N
+       zAwMDI3MDMsImV4cCI6MTUyOTE3NDg1MSwic2NvcGUiOiJyZWFkIHd
+       yaXRlIn0.QiIrnmaC4VrbAYAsu0YPeuJ992p20fSxrXWPLw-gkFA
+       ```
 
 #### بازگشایی رمز
 

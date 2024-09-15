@@ -11,6 +11,7 @@
 ## Config
 
 - Simple:
+
   ```
   server {
       listen 80;
@@ -24,7 +25,9 @@
       }
   }
   ```
+
 - SSL:
+
   ```
   server {
       server_name video.darsup.org;
@@ -50,7 +53,9 @@
       return 404;
   }
   ```
+
 - GZip:
+
   ```
   server {
   	gzip on;
@@ -69,10 +74,13 @@
 ## Other
 
 - Run Nginx on startup:
-  ```
+
+  ```shell
   sudo update-rc.d nginx enable
   ```
+
 - Test:
-  ```
+
+  ```shell
   sudo nginx -t
   ```
