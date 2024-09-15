@@ -106,6 +106,7 @@
   ```
   xmodmap -e 'remove Mod1 = Alt_R'
   ```
+
 - Add a key to a mod:
 
   ```
@@ -149,7 +150,6 @@
 ## Add Proxy To Apt-Get
 
 1. Go to https://free-proxy-list.net/ and find an free proxy address
-
 2. Add below code to `/etc/apt/apt.conf`:
 
    ```
@@ -172,16 +172,19 @@
   ```
   nmcli connection
   ```
+
 - Change DNS:
 
   ```
   nmcli connection modify <connection name> ipv4.dns "<dns one:8.8.8.8> <dns two:8.8.4.4>"
   ```
+
 - Connection down (need to restart):
 
   ```
   nmcli connection down <connection name>
   ```
+
 - Connection up (need to restart):
 
   ```
@@ -359,21 +362,16 @@
 ## Nvidia Driver
 
 1. First we will install the proper driver:
-
    ```
    sudo apt install nvidia-detect
    nvidia-detect
    sudo apt install <suggested_package_from_previous_step>
    ```
-
 2. After restarting the system driver should work properly, if not we will install the below packages:
-
    ```
    sudo apt-get install bumblebee bumblebee-nvidia linux-headers-generic
    ```
-
 3. Now each time that we want to use the NVIDIA GPU should run the following command! (While the following command is runnuing we can run every program that we want to use NVIDIA GPU)
-
    ```
    sudo optirun nvidia-settings -c :8
    ```

@@ -12,6 +12,7 @@
    ```
    git reflog
    ```
+
 2. Undo an action:
 
    ```
@@ -124,19 +125,23 @@
    ```
    ssh-keygen -t rsa
    ```
+
 2. Add private key to system by:
 
    ```
    ssh-add
    ```
+
 3. Get public ssh key by this command:
 
    ```
    cat ~/.ssh/id_rsa.pub
    ```
+
 4. Add public ssh key to git profile setting:
 
    [https://github.com/settings/keys](https://github.com/settings/keys)
+
 5. Change project remote URL, to ssh type
 6. Connect to git:
 
@@ -193,11 +198,13 @@
   ```
   git config --global core.editor "<editor name: vim>"
   ```
+
 - Password cache:
 
   ```
   git config --global credential.helper 'cache --timeout=<time in seconds: 3600>'
   ```
+
 - SSL problem:
 
   ```

@@ -42,21 +42,25 @@
   ```
   docker container stop $(docker ps -a -q)
   ```
+
 - Remove all containers:
 
   ```
   docker container rm $(docker ps -a -q)
   ```
+
 - Keep container alive:
 
   ```
   CMD ["tail", "-f", "/dev/null"]
   ```
+
 - Create container from image:
 
   ```
   docker run -p 80:80 --name <container_name> -d <image_tag>
   ```
+
 - Run command in container:
 
   ```
