@@ -123,7 +123,6 @@
 
 1. Go to https://free-proxy-list.net/ and find an free proxy address
 2. Add below code to `/etc/apt/apt.conf`:
-
    ```
    # If your proxy has not password
    Acquire::http::Proxy "http://<yourproxyaddress>:<proxyport>";
@@ -232,13 +231,10 @@
 ## Disable Sudo Password
 
 1. Run:
-
    ```
    sudo EDITOR=vim visudo
    ```
-
 2. And add below line after  `%sudo` line:
-
    ```
    # For specific user
    <username>	ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
