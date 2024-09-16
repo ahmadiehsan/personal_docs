@@ -14,5 +14,6 @@ markdown_extensions:
   - mdx_truly_sane_lists:  # Add nested lists support
       truly_sane: false  # Allow for unlimited newlines between elements of a list
 extra_css:
-  - _static/styles/extra.css
   - _static/styles/iransans.css
+  - _static/styles/extra.css
+  - _static/styles/rtl.css
