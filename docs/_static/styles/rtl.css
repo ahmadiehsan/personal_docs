@@ -1,0 +1,7 @@
+[dir=rtl] *:not(code):not(code *) {
+    font-family: IranSans, serif;
+}
+
+[dir=rtl] code {
+    text-align: left !important;
+}
