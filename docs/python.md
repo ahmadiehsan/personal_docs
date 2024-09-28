@@ -73,6 +73,14 @@
   celery -A <worker name: karestoon> worker --loglevel=info
   ```
 
+## Pip
+
+- Install from source (Unix path):
+
+  ```shell
+  pip install <package-name> --no-index --find-links file:///path/to/package
+  ```
+
 ## Other
 
 - cProfile example:
