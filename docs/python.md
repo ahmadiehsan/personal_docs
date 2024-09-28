@@ -78,7 +78,7 @@
 - Install from source (Unix path):
 
   ```shell
-  pip install <package-name> --no-index --find-links file:///path/to/package
+  pip install file:///path/to/package
   ```
 
 ## Other
