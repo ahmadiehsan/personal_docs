@@ -16,8 +16,11 @@
 
 ## Projects
 
-- [Project (NLP): Bag of Words & TensorFlow](https://python.plainenglish.io/salary-prediction-using-machine-learning-with-python-64155c8a5042)
-- [Project (NLP): TF-IDF & EDA](https://github.com/Solvve/ml_job_classifier/blob/master/job_classification_example.ipynb)
-- [Dataset (NLP) (Benchmark): GLUE](https://huggingface.co/datasets/nyu-mll/glue)
-- [Dataset (Computer Vision) (Benchmark): MNIST](http://yann.lecun.com/exdb/mnist/)
-- [Dataset (Computer Vision) (Benchmark): ImageNet](http://image-net.org/)
+- [Bag of Words & TensorFlow (NLP)](https://python.plainenglish.io/salary-prediction-using-machine-learning-with-python-64155c8a5042)
+- [TF-IDF & EDA (NLP)](https://github.com/Solvve/ml_job_classifier/blob/master/job_classification_example.ipynb)
+- [GLUE (NLP) (Benchmark Dataset)](https://huggingface.co/datasets/nyu-mll/glue)
+- [MNIST (Computer Vision) (Benchmark Dataset)](http://yann.lecun.com/exdb/mnist/)
+- [ImageNet (Computer Vision) (Benchmark Dataset)](http://image-net.org/)
+- [Ollama (LLM Server)](https://ollama.com/)
+- [LM Studio (LLM Server)](https://lmstudio.ai/)
+- [AnythingLLM (Wrapper for Other LLM Servers)](https://anythingllm.com/)
