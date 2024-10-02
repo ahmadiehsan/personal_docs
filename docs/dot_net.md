@@ -12,6 +12,7 @@
 - [Asp.Net Core Api (Net-7)](https://github.com/bhrugen/MagicVilla_API)
 - [Ef Core (Net-5)](https://github.com/bhrugen/WizLib_EFCore)
 - [Dotnet-Architecture/Eshoponweb - Sample Asp.Net Core 8.0 Reference Application](https://github.com/dotnet-architecture/eShopOnWeb)
+- [Clean Hexagonal Architecture, Kafka, Saga, Outbox (With Java)](https://github.com/alicanli1995/clean-hexagonal-architecture-kafka-saga-outbox)
 
 ## Data Types
 
