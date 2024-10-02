@@ -24,4 +24,7 @@
 - [Ollama (LLM Server)](https://ollama.com/)
 - [LM Studio (LLM Server)](https://lmstudio.ai/)
 - [AnythingLLM (Wrapper for Other LLM Servers)](https://anythingllm.com/)
+- [Open WebUI (Wrapper for Other LLM Servers)](https://github.com/open-webui/open-webui)
 - [Llama-Parse (Prepare Complex Docs for RAG)](https://pypi.org/project/llama-parse/)
+- [LangChain (AI Agent Framework)](https://github.com/langchain-ai/langchain)
+- [Langflow (GUI for LangChain)](https://github.com/langflow-ai/langflow)
