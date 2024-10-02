@@ -27,5 +27,7 @@
 - [Open WebUI (Wrapper for Other LLM Servers)](https://github.com/open-webui/open-webui)
 - [Llama-Parse (Prepare Complex Docs for RAG)](https://pypi.org/project/llama-parse/)
 - [AutoGen (AI Agent Creator)](https://github.com/microsoft/autogen)
+- [LlamaIndex (AI Agent Creator)](https://github.com/run-llama/llama_index)
 - [LangChain (AI Agent Creator)](https://github.com/langchain-ai/langchain)
 - [Langflow (GUI for LangChain)](https://github.com/langflow-ai/langflow)
+- [Flowise (GUI for LangChain & LlamaIndex)](https://github.com/FlowiseAI/Flowise)
