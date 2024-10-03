@@ -86,7 +86,7 @@
 
 - Vertical show fields:
 
-  ```
+  ```text
   \x
   ```
 
@@ -94,7 +94,7 @@
 
 - Show all users:
 
-  ```
+  ```text
   \du
   ```
 
@@ -120,7 +120,7 @@
 
 - Show all database:
 
-  ```
+  ```text
   \l
   ```
 
@@ -144,7 +144,7 @@
 
 - Connect to database:
 
-  ```
+  ```text
   \c <db_name>
   ```
 
@@ -152,13 +152,13 @@
 
 - Show all of db tables:
 
-  ```
+  ```text
   \dt
   ```
 
 - Show table schema:
 
-  ```
+  ```text
   \d+ <table_name>
   ```
 
@@ -262,6 +262,6 @@
 
 - Connection URL:
 
-  ```
+  ```text
   postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]
   ```

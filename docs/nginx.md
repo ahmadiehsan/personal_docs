@@ -12,7 +12,7 @@
 
 - Simple:
 
-  ```
+  ```text
   server {
       listen 80;
       server_name video.darsup.org;
@@ -28,7 +28,7 @@
 
 - SSL:
 
-  ```
+  ```text
   server {
       server_name video.darsup.org;
       location / {
@@ -56,9 +56,9 @@
 
 - GZip:
 
-  ```
+  ```text
   server {
-  	gzip on;
+    gzip on;
       gzip_proxied any;
       gzip_types
           text/css
