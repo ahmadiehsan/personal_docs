@@ -8,7 +8,7 @@
 
 Tip: installation flow needs an active VPN
 
-```
+```shell
 sudo apt update
 sudo apt install gnupg
 cd /tmp

@@ -73,7 +73,7 @@
   celery -A <worker name: karestoon> worker --loglevel=info
   ```
 
-## Pip
+## PIP
 
 - Install from source (Unix path):
 

@@ -1,24 +1,30 @@
-default_stages: [ commit ]
+exclude: ^(.*index.md)
+default_stages: [commit]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
-        stages: [ commit ]
+        stages: [commit]
       - id: trailing-whitespace
-        stages: [ commit ]
+        stages: [commit]
       - id: check-merge-conflict
 
   - repo: https://github.com/scop/pre-commit-shfmt
     rev: v3.9.0-1
     hooks:
       - id: shfmt
-        args: [ --indent, '2', --write ]
-        stages: [ commit ]
+        args: [--indent, "2", --write]
+        stages: [commit]
 
   - repo: https://github.com/mrtazz/checkmake.git
     rev: 0.2.2
     hooks:
       - id: checkmake
-        args: [ --config, './.checkmake.ini' ]
+        args: [--config, "./.checkmake.ini"]
+
+  - repo: https://github.com/markdownlint/markdownlint
+    rev: v0.13.0
+    hooks:
+      - id: markdownlint

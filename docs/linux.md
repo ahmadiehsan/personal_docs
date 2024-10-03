@@ -149,16 +149,16 @@
 
 ## Add Proxy To Apt-Get
 
-1. Go to https://free-proxy-list.net/ and find an free proxy address
+1. Go to <https://free-proxy-list.net/> and find an free proxy address
 2. Add below code to `/etc/apt/apt.conf`:
 
-   ```
-   # If your proxy has not password
-   Acquire::http::Proxy "http://<yourproxyaddress>:<proxyport>";
+  ```text
+  # If your proxy has not password
+  Acquire::http::Proxy "http://<yourproxyaddress>:<proxyport>";
 
-   # If your proxy has password
-   Acquire::http::Proxy "http://<username>:<password>@<proxyaddress>:<proxyport>";
-   ```
+  # If your proxy has password
+  Acquire::http::Proxy "http://<username>:<password>@<proxyaddress>:<proxyport>";
+  ```
 
 ## Remove Launcher Entry
 
@@ -201,31 +201,31 @@
 
 - Split current terminal vertically:
 
-  ```
+  ```text
   ctrl+b %
   ```
 
 - Split current terminal horizontally:
 
-  ```
+  ```text
   ctrl+b "
   ```
 
 - New window (tab):
 
-  ```
+  ```text
   ctrl+b c
   ```
 
 - Maximize and minimize terminal:
 
-  ```
+  ```text
   ctrl+b z
   ```
 
 - Switch between terminals:
 
-  ```
+  ```text
   ctrl+b o
   ```
 
@@ -243,13 +243,13 @@
 
 - Disconnect from session:
 
-  ```
+  ```text
   ctrl+b + d
   ```
 
 - Destroy session:
 
-  ```
+  ```text
   ctrl+d
   ```
 
@@ -264,20 +264,20 @@
 
 - Grub Problem:
 
-  1. To install and fix grub, you need Live CD or Live USB of Ubuntu
+   1. To install and fix grub, you need Live CD or Live USB of Ubuntu
 
-  2. Once you load Live Ubuntu, Open Terminal and fire following commands to install boot-repair and let it fix the Grub
+   2. Once you load Live Ubuntu, Open Terminal and fire following commands to install boot-repair and let it fix the Grub
 
      ```
      sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt-get update
      sudo apt-get install -y boot-repair && boot-repair
      ```
 
-  3. After installation, boot-repair will get automatically launched
+   3. After installation, boot-repair will get automatically launched
 
-  4. Make sure to select “recommended repair” option to repair grub. Reboot
+   4. Make sure to select “recommended repair” option to repair grub. Reboot
 
-  5. You will now have a Grub menu on boot, where you can choose from Ubuntu, and Windows
+   5. You will now have a Grub menu on boot, where you can choose from Ubuntu, and Windows
 
 - Add Windows to boot loader:
 
@@ -290,19 +290,19 @@
 
 1. Run:
 
-   ```shell
-   sudo EDITOR=vim visudo
-   ```
+  ```shell
+  sudo EDITOR=vim visudo
+  ```
 
-2. And add below line after  `%sudo` line:
+2. And add below line after the `%sudo` line:
 
-   ```
-   # For specific user
-   <username>	ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
+  ```text
+  # For specific user
+  <username> ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
 
-   # For all users
-   ALL	ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
-   ```
+  # For all users
+  ALL ALL=(ALL) NOPASSWD: <command: /bin/systemctl>
+  ```
 
 ## Machine
 
@@ -363,23 +363,23 @@
 
 1. First we will install the proper driver:
 
-   ```shell
-   sudo apt install nvidia-detect
-   nvidia-detect
-   sudo apt install <suggested_package_from_previous_step>
-   ```
+  ```shell
+  sudo apt install nvidia-detect
+  nvidia-detect
+  sudo apt install <suggested_package_from_previous_step>
+  ```
 
 2. After restarting the system driver should work properly, if not we will install the below packages:
 
-   ```shell
-   sudo apt-get install bumblebee bumblebee-nvidia linux-headers-generic
-   ```
+  ```shell
+  sudo apt-get install bumblebee bumblebee-nvidia linux-headers-generic
+  ```
 
 3. Now each time that we want to use the NVIDIA GPU should run the following command! (While the following command is runnuing we can run every program that we want to use NVIDIA GPU)
 
-   ```
-   sudo optirun nvidia-settings -c :8
-   ```
+  ```shell
+  sudo optirun nvidia-settings -c :8
+  ```
 
 ## Gnome
 
@@ -397,7 +397,7 @@
   sudo lsblk
   ```
 
--  Create primary partition:
+- Create primary partition:
 
   ```shell
   sudo fdisk /dev/sda
@@ -441,19 +441,19 @@
   sudo fsck -N /dev/sda1
   ```
 
-## `Alt+Shift+<any_other_key>` doesn't work:
+## Alt+Shift+any_other_key Doesn't Work
 
 The problem is related to the change-layout shortcut, by default it is set to Alt+Shift, for this reason, the system intercepts it for itself and doesn't let it reach some programs like Pycharm or VSCode.
 
 To solve, update `/etc/default/keyboard` and replace
 
-```
+```text
 XKBOPTIONS="grp:alt_shift_toggle,grp_led:scroll"
 ```
 
 with
 
-```
+```text
 XKBOPTIONS="grp:super_space_toggle,grp_led:scroll"
 ```
 
@@ -467,12 +467,12 @@ XKBOPTIONS="grp:super_space_toggle,grp_led:scroll"
 
 - Vim replace all:
 
-  ```
+  ```text
   :%s/foo/bar/g
   ```
 
 - Open shell without login:
 
-  ```
+  ```text
   ctrl + alt + f5
   ```

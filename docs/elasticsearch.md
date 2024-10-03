@@ -141,22 +141,18 @@
 
   Provides a way to perform multiple `index`, `create`, `delete`, and `update` actions in a single request.
 
-  - The `index` and `create` actions expect a source on the next line.
-  - `update` expects that the partial `doc`, upsert, and script and its options are specified on the next line.
-  - `delete` does not expect a source on the next line
+   - The `index` and `create` actions expect a source on the next line.
+   - `update` expects that the partial `doc`, upsert, and script and its options are specified on the next line.
+   - `delete` does not expect a source on the next line
 
-  ```
+  ```shell
   # Tip: Because this format uses literal `\n`'s as delimiters, make sure that the JSON actions and sources are not pretty printed
-
   curl -X POST "http://localhost:9200/<index_name>/_bulk?pretty" -H 'Content-Type: application/json' -d '
   {"index": {"_id": "<document_id>"}}
   {"<field>": "<value>"}
-
   {"delete": {"_id": "<document_id>"}}
-
   {"create": {"_id": "<document_id>"}}
   {"<field>": "<value>"}
-
   {"update": {"_id": "<document_id>"}}
   {"doc": {"<field>": "<value>"}}
   '

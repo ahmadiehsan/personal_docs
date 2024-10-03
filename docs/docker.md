@@ -51,7 +51,7 @@
 
 - Keep container alive:
 
-  ```
+  ```docker
   CMD ["tail", "-f", "/dev/null"]
   ```
 
