@@ -1,0 +1,12 @@
+:root > * {
+  --md-typeset-a-color: #54b689;
+}
+
+.md-typeset {
+  font-size: .8rem;
+  line-height: 1.5;
+}
+
+.md-typeset pre {
+  font-size: .8rem;
+}
