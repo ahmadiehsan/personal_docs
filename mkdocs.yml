@@ -22,9 +22,7 @@ extra:
   generator: false  # Remove the `made with MkDocs` label
 plugins:
   - search
-  - toc-md:  # Automatically generates an `index.md` file and populates it with a table of contents
-      toc_page_title: Table of Contents
-      header_level: 2
+  - glightbox  # Add image lightbox feature
 markdown_extensions:
   - pymdownx.superfences  # Add code blocks support
   - mdx_truly_sane_lists:  # Add nested lists support
@@ -35,3 +33,5 @@ extra_css:
   - _static/styles/hello_algo_overrides.css
   - _static/styles/extra.css
   - _static/styles/rtl.css
+extra_javascript:
+  - _static/js/extra.js
