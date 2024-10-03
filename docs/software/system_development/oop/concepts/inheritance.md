@@ -1,0 +1,5 @@
+# Inheritance
+
+## Description
+
+404
