@@ -1,12 +1,28 @@
 site_name: Ehsan Ahmadi's Personal Docs
+site_author: Ehsan Ahmadi
 copyright: ©2020-2024 Ehsan Ahmadi
 theme:
   name: material
   features:
     - content.code.copy  # Adds a copy button to each code block
+  palette:
+    - scheme: default
+      primary: white
+      accent: teal
+      toggle:
+        icon: material/theme-light-dark
+        name: Dark mode
+    - scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/theme-light-dark
+        name: Light mode
+extra:
+  generator: false  # Remove the `made with MkDocs` label
 plugins:
   - search
-  - toc-md:  # Automatically generates an 'index.md' file and populates it with a table of contents
+  - toc-md:  # Automatically generates an `index.md` file and populates it with a table of contents
       toc_page_title: Table of Contents
       header_level: 2
 markdown_extensions:
@@ -15,5 +31,7 @@ markdown_extensions:
       truly_sane: false  # Allow for unlimited newlines between elements of a list
 extra_css:
   - _static/styles/iransans.css
+  - _static/styles/hello_algo.css
+  - _static/styles/hello_algo_overrides.css
   - _static/styles/extra.css
   - _static/styles/rtl.css
