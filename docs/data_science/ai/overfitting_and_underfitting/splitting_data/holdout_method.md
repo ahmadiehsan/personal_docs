@@ -1,4 +1,4 @@
-# Holdout Method (Train_Test Split)
+# Holdout Method (Train/Test Split)
 
 ## Description
 

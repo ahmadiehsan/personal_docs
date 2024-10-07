@@ -1,4 +1,4 @@
-# _Overview
+# Overview
 
 ## The Curse of Dimensionality
 

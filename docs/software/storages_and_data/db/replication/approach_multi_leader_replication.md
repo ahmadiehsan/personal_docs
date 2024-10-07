@@ -1,4 +1,4 @@
-# Approach_ Multi-Leader Replication
+# Approach: Multi-Leader Replication
 
 ## Description
 

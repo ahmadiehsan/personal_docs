@@ -1,4 +1,4 @@
-# Standard_Virtual View
+# Standard/Virtual View
 
 ## Description
 

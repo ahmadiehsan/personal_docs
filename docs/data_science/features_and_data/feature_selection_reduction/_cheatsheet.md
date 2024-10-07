@@ -1,4 +1,4 @@
-# _Cheatsheet
+# Cheatsheet
 
 ## Description
 

@@ -1,10 +1,14 @@
 site_name: Ehsan Ahmadi's Personal Docs
+site_url: https://docs.ahmadiehsan.ir
 site_author: Ehsan Ahmadi
 copyright: ©2020-2024 Ehsan Ahmadi
 theme:
   name: material
   features:
-    - content.code.copy  # Adds a copy button to each code block
+    - content.code.copy  # Add 'copy button' to each 'code block'
+    - navigation.instant  # Activate 'Single Page Application' feature
+    - navigation.instant.prefetch  # Start getting page content on 'hover'
+    - navigation.instant.progress  # Show 'loader'
   palette:
     - scheme: default
       primary: white
@@ -19,13 +23,23 @@ theme:
         icon: material/theme-light-dark
         name: Light mode
 extra:
-  generator: false  # Remove the `made with MkDocs` label
+  generator: false  # Remove the 'made with MkDocs' label
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://ahmadiehsan.ir
+    - icon: fontawesome/brands/github
+      link: https://github.com/ahmadiehsan
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/ahmadi-ehsan
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/ahmadi_ehsan
 plugins:
   - search
-  - glightbox  # Add image lightbox feature
+  - awesome-pages  # Add better control over 'nav' with '.pages' files
+  - glightbox  # Add 'image lightbox' feature
 markdown_extensions:
-  - pymdownx.superfences  # Add code blocks support
-  - mdx_truly_sane_lists:  # Add nested lists support
+  - pymdownx.superfences  # Add 'code blocks' support
+  - mdx_truly_sane_lists: # Add 'nested lists' support
       truly_sane: false  # Allow for unlimited newlines between elements of a list
 extra_css:
   - _static/styles/iransans.css
