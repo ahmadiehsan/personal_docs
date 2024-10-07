@@ -10,17 +10,13 @@ In general, we can have three categories of methods to handle imbalanced dataset
    - Oversampling techniques include:
 
       - Random oversampling
-
       - Synthetic Minority Oversampling Technique (SMOTE)
-
       - Adaptive Synthetic Sampling (ADASYN)
 
    - Undersampling techniques include:
 
       - Random undersampling
-
       - Tomek links
-
       - Cluster centroids
 
 - **Handling imbalanced datasets in machine learning models:** Such as modifying cost function, or modified batching in deep learning models.

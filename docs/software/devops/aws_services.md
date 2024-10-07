@@ -57,15 +57,10 @@
 - RDS is available on various database instances:
 
    - Amazon Aurora
-
    - PostgreSQL
-
    - MySQL
-
    - MariaDB
-
    - Oracle
-
    - SQL Server
 
 ### DynamoDB

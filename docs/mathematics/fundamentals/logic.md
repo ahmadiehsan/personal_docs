@@ -118,7 +118,7 @@ An argument form in propositional logic is a sequence of compound propositions i
 
 <span dir="rtl">حاشیه: منظور همان استدلال کردن است، مثلا اگر الف و ب پس پ</span>
 
-<span dir="rtl">حاشیه ۲: در حاشیه بالا الف و ب همان</span> <span dir="ltr">premises</span> <span dir="rtl">هستند و پ همان</span> <span dir="ltr">conclusion</span> <span dir="rtl"></span>
+<span dir="rtl">حاشیه ۲: در حاشیه بالا الف و ب همان premises هستند و پ همان conclusion </span>
 
 - **premises:** All but the ﬁnal proposition in the argument are called
 - **conclusion:** the ﬁnal proposition is called the conclusion.

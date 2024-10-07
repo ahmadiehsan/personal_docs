@@ -22,4 +22,4 @@ Generalized version (Restrict the range of values in the dataset between any arb
 
 <img src="image4.jpg" style="width:3.78615in" />
 
-<span dir="rtl">تو تصویر بالا با استفاده از این تکنیک فیچر ها تو رنج های مشابه هم در اومدن که تو تصویر با اسم</span> <span dir="ltr">Normalized</span> <span dir="rtl">مشخص شده، تو این حالت سیستم خیلی سریع تر آموزش میبینه.</span>
+<span dir="rtl">تو تصویر بالا با استفاده از این تکنیک فیچر ها تو رنج های مشابه هم در اومدن که تو تصویر با اسم Normalized مشخص شده، تو این حالت سیستم خیلی سریع تر آموزش میبینه.</span>

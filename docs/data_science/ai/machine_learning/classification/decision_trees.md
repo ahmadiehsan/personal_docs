@@ -6,4 +6,4 @@ Introduction Decision Trees are a type of Supervised Machine Learning (that is y
 
 <img src="image1.jpg" style="width:3.49193in" />
 
-<span dir="rtl">همیشه باید بشکنه به دو تا حالت (</span><span dir="ltr">Ture</span> <span dir="rtl">یا</span> <span dir="ltr">False</span><span dir="rtl">) اگر فیچری داشتیم که باعث میشد سه یا بیشتر حالت پیش بیاد با اون فیچر رو به حالت های ریز تر که</span> <span dir="ltr">Ture</span> <span dir="rtl">یا</span> <span dir="ltr">False</span> <span dir="rtl">ای هستن بشکنیم</span>
+<span dir="rtl">همیشه باید بشکنه به دو تا حالت (Ture یا False) اگر فیچری داشتیم که باعث میشد سه یا بیشتر حالت پیش بیاد با اون فیچر رو به حالت های ریز تر که Ture یا False ای هستن بشکنیم</span>

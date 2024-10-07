@@ -14,19 +14,15 @@ Types:
 - Independent Data Mart
 
    - Functions without relying on an existing data warehouse
-
    - Focuses on one specific business objective
-
    - Data is stored from either internal or external sources
 
 - Dependent Data Mart
 
    - lives on top of an existing data warehouse
-
    - data lives in a centralized location and when it's time to run analytics, only the relevant data is accessed
 
 - Hybrid Data Mart
 
    - integrates data from external operational sources with an existing data warehouse
-
    - higher speed, flexibility, and capacity to handle large storage structures

@@ -6,13 +6,13 @@ Recommendation engines are a subclass of machine learning which generally deal w
 
 <img src="image3.jpg" style="width:4.95313in" />
 
-- <span dir="rtl">این یه الگوریتم واقعی نیستش، فقط برای فهم بهتر الگوریتم</span> <span dir="ltr">Collaborative Filtering</span> <span dir="rtl">مطرح شده</span>
+- <span dir="rtl">این یه الگوریتم واقعی نیستش، فقط برای فهم بهتر الگوریتم Collaborative Filtering مطرح شده</span>
 
 ## Formula
 
 <img src="image2.jpg" style="width:4.89254in" />
 
-<span dir="rtl">دقیقا مشابه با</span> <span dir="ltr">Linear regression</span> <span dir="rtl">هستش با این تفاوت که برای هر کاربر سامانه یه فرمول جدا و مخصوص به خودش داریم، چون نمیشه یه شبکه عصبی درست کرد و برای همه استفاده کرد هرکس سلیقه خودشو داره.</span>
+<span dir="rtl">دقیقا مشابه با Linear regression هستش با این تفاوت که برای هر کاربر سامانه یه فرمول جدا و مخصوص به خودش داریم، چون نمیشه یه شبکه عصبی درست کرد و برای همه استفاده کرد هرکس سلیقه خودشو داره.</span>
 
 ## Specific Cost Function (Squared Error Loss)
 
@@ -20,4 +20,4 @@ Recommendation engines are a subclass of machine learning which generally deal w
 
 <img src="image1.jpg" style="width:4.62143in" />
 
-<span dir="rtl">چون چندین</span> <span dir="ltr">Linear regression</span> <span dir="rtl">داریم اینجا برای محاسبه</span> <span dir="ltr">Cost function</span> <span dir="rtl">مجموع تمامی (دوتا سیگما) رو در نظر میگیریم.</span>
+<span dir="rtl">چون چندین Linear regression داریم اینجا برای محاسبه Cost function مجموع تمامی (دوتا سیگما) رو در نظر میگیریم.</span>

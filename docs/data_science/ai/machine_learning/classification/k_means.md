@@ -4,18 +4,18 @@
 
 k-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster.
 
-<span dir="rtl">نحوه عملکرد کلیش این مدلیه که دو یا چند</span> <span dir="ltr">centroid</span> <span dir="rtl">اولیه (</span><span dir="ltr">k</span> <span dir="rtl">عدد) رو تو نمودار انتخاب میکنه، فاصله تمامی نقاط موجود رو با تک تک این</span> <span dir="ltr">centroid</span> <span dir="rtl">ها اندازه میگیره و به هر کدوم که نزدیک تر بود به اون اختصاصش میده، حالا میانگین همه اونایی که به یه</span> <span dir="ltr">centroid</span> <span dir="rtl">اختصاص پیدا کردن رو میگیره و اون</span> <span dir="ltr">centroid</span> <span dir="rtl">رو به اون نقطه میانگین جا به جا میکنه، این کارو برای همه</span> <span dir="ltr">centroid</span> <span dir="rtl">ها تکرار میکنه، بعدش با توجه به موقعیت جدید</span> <span dir="ltr">centroid</span> <span dir="rtl">ها، دوباره نقاط رو اختصاص میده و الی آخر، انقدر این کارو تکرار میکنه تا دیگه</span> <span dir="ltr">centroid</span> <span dir="rtl">ها جا به جا نشن.</span>
+<span dir="rtl">نحوه عملکرد کلیش این مدلیه که دو یا چند centroid اولیه (k عدد) رو تو نمودار انتخاب میکنه، فاصله تمامی نقاط موجود رو با تک تک این centroid ها اندازه میگیره و به هر کدوم که نزدیک تر بود به اون اختصاصش میده، حالا میانگین همه اونایی که به یه centroid اختصاص پیدا کردن رو میگیره و اون centroid رو به اون نقطه میانگین جا به جا میکنه، این کارو برای همه centroid ها تکرار میکنه، بعدش با توجه به موقعیت جدید centroid ها، دوباره نقاط رو اختصاص میده و الی آخر، انقدر این کارو تکرار میکنه تا دیگه centroid ها جا به جا نشن.</span>
 
 ## Formula
 
 ![](k_means/image2.jpg)
 
 - <span dir="rtl">تو تصویر بالا میتونیم الگو ریاضیاتیشو ببینیم</span>
-- <span dir="rtl">علامت</span> <span dir="ltr">m</span> <span dir="rtl">هم نشون میده چنتا نقطه داریم</span>
-- <span dir="rtl">علامت</span> <span dir="ltr">k</span> <span dir="rtl">نشون دهنده تعداد</span> <span dir="ltr">centroid</span> <span dir="rtl">ها و کلاستر هاست</span>
-- <span dir="rtl">علامت</span> <span dir="ltr">n</span> <span dir="rtl">نشون میده هر نقطه چه تعداد فیچر تو خودش داره، مثلا تو تصویر بالا چون نمودار دو بعدیه پس هر نقطه دوتا فیچر داره (</span><span dir="ltr">n</span><span dir="rtl">=2)</span>
-- <span dir="rtl">علامت</span> <span dir="ltr">µ</span> <span dir="rtl">مشخصات موقعیت</span> <span dir="ltr">centroid</span> <span dir="rtl">ها هستن</span>
-- <span dir="rtl">چون ممکنه این سیستم تو لوکال مینیموم هاش گیر کنه، یعنی یه حالت دسته بندی ای پیش بیاد که تعداد زیادی از نقاط به یه</span> <span dir="ltr">centroid</span> <span dir="rtl">وصلن اما یه تعداد کمی فقط به یه</span> <span dir="ltr">centroid</span> <span dir="rtl">دیگه رسیده، لازمه این الگوریتم رو بین 50 تا 1000 بار اجرا کنیم و آخر سر اونی که</span> <span dir="ltr">cost function</span> <span dir="rtl">با عدد کمتری داشت رو انتخاب کنیم</span>
+- <span dir="rtl">علامت m هم نشون میده چنتا نقطه داریم</span>
+- <span dir="rtl">علامت k نشون دهنده تعداد centroid ها و کلاستر هاست</span>
+- <span dir="rtl">علامت n نشون میده هر نقطه چه تعداد فیچر تو خودش داره، مثلا تو تصویر بالا چون نمودار دو بعدیه پس هر نقطه دوتا فیچر داره (n=2)</span>
+- <span dir="rtl">علامت µ مشخصات موقعیت centroid ها هستن</span>
+- <span dir="rtl">چون ممکنه این سیستم تو لوکال مینیموم هاش گیر کنه، یعنی یه حالت دسته بندی ای پیش بیاد که تعداد زیادی از نقاط به یه centroid وصلن اما یه تعداد کمی فقط به یه centroid دیگه رسیده، لازمه این الگوریتم رو بین 50 تا 1000 بار اجرا کنیم و آخر سر اونی که cost function با عدد کمتری داشت رو انتخاب کنیم</span>
 
 ## Best Number For The K
 

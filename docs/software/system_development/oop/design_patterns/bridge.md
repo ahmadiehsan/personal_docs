@@ -10,7 +10,7 @@ Decouple an abstraction from its implementation so that the two can vary indepen
 
 <span dir="rtl">حاشیه ها:</span>
 
-- <span dir="rtl">خیلی شبیه به دیزاین پترن استراتژی هستش، با این تفاوت که استراتژی جزو بیهیورال</span><span dir="ltr"></span> <span dir="rtl">پترن هاست اما بریدج</span><span dir="ltr"></span> <span dir="rtl">جزو استراکچرال پترن هاست، به بیان دیگه</span><span dir="ltr"></span> <span dir="rtl">از این پترن برای کم کردن تعداد کلاس های سیستم استفاده میشه.</span>
+- <span dir="rtl">خیلی شبیه به دیزاین پترن استراتژی هستش، با این تفاوت که استراتژی جزو بیهیورال پترن هاست اما بریدج جزو استراکچرال پترن هاست، به بیان دیگه از این پترن برای کم کردن تعداد کلاس های سیستم استفاده میشه.</span>
 - <span dir="rtl">مثلا اگر در یک پروژه، یو آی صفحات به صورت زیر هستند</span>
 
    - <span dir="rtl">آیتم طولانی کتاب و آیتم کوتاه کتاب</span>
