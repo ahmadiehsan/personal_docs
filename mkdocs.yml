@@ -6,9 +6,6 @@ theme:
   name: material
   features:
     - content.code.copy  # Add 'copy button' to each 'code block'
-    - navigation.instant  # Activate 'Single Page Application' feature
-    - navigation.instant.prefetch  # Start getting page content on 'hover'
-    - navigation.instant.progress  # Show 'loader'
   palette:
     - scheme: default
       primary: white
