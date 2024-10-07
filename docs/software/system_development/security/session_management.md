@@ -1,4 +1,4 @@
-# Session Management (Access_Refresh Token)
+# Session Management (Access/Refresh Token)
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# _Overview
+# Overview
 
 ## Creational Design Patterns
 

@@ -1,4 +1,4 @@
-# Approach_ Leaderless Replication
+# Approach: Leaderless Replication
 
 ## Description
 

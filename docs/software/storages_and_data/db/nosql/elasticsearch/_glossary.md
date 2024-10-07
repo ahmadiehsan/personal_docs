@@ -1,4 +1,4 @@
-# _Glossary
+# Glossary
 
 ## Document
 

@@ -1,4 +1,4 @@
-# Approach_ Single-Leader Replication
+# Approach: Single-Leader Replication
 
 ## Description
 
