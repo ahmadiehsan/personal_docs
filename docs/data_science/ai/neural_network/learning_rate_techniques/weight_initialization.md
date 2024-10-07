@@ -2,7 +2,7 @@
 
 ## Description
 
-<span dir="rtl">با استفاده از تکنیک های زیر میتونیم یه عدد اولیه خوب برای</span> <span dir="ltr">w</span> <span dir="rtl">انتخاب کنیم که از</span> <span dir="ltr">exploding/vanishing</span> <span dir="rtl">تو</span> <span dir="ltr">deep neural network</span> <span dir="rtl">جلوگیری کنه.</span>
+<span dir="rtl">با استفاده از تکنیک های زیر میتونیم یه عدد اولیه خوب برای w انتخاب کنیم که از exploding/vanishing تو deep neural network جلوگیری کنه.</span>
 
 For RELU activation function:
 

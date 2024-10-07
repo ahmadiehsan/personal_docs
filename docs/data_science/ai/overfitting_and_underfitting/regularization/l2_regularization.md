@@ -32,12 +32,12 @@ The first term in the loss function measures the mean squared error between the 
 
 <img src="image4.png" style="width:3.5293in" />
 
-<span dir="rtl">تو تصویر بالا نشون داده شده که با اعمال ضریب های (</span><span dir="ltr">w</span><span dir="rtl">) کوچک امتحان میکنیم که آیا حذف یک متغیر دارای توان به حل مشکل ما کمک میکند یا خیر، از آنجایی که مقادیر</span> <span dir="ltr">w</span> <span dir="rtl">و</span> <span dir="ltr">b</span> <span dir="rtl">را سیستم بطور اتوماتیک تعیین میکند و ما در آنها نقشی نداریم لذا با استفاده از روش زیر، سیستم را مجبور به انتخاب اعداد کوچک برای ضریب های (</span><span dir="ltr">w</span><span dir="rtl">) دلخواه خود میکنیم:</span>
+<span dir="rtl">تو تصویر بالا نشون داده شده که با اعمال ضریب های (w) کوچک امتحان میکنیم که آیا حذف یک متغیر دارای توان به حل مشکل ما کمک میکند یا خیر، از آنجایی که مقادیر w و b را سیستم بطور اتوماتیک تعیین میکند و ما در آنها نقشی نداریم لذا با استفاده از روش زیر، سیستم را مجبور به انتخاب اعداد کوچک برای ضریب های (w) دلخواه خود میکنیم:</span>
 
 <img src="image3.png" style="width:3.63959in" />
 
-<span dir="ltr"></span> <span dir="rtl">در تصویر بالا ما تنها تاثیر دو متغیر</span> <span dir="ltr">w</span> <span dir="rtl">سه و</span> <span dir="ltr">w</span> <span dir="rtl">چهار را کم کردیم، اما در سیستم های پیچیده تر بجای این کار از الگوی زیر استفاده می شود:</span>
+<span dir="rtl"> در تصویر بالا ما تنها تاثیر دو متغیر w سه و w چهار را کم کردیم، اما در سیستم های پیچیده تر بجای این کار از الگوی زیر استفاده می شود:</span>
 
 <img src="image2.png" style="width:3.42707in" />
 
-<span dir="rtl">در الگوی بالا</span> <span dir="ltr">n</span> <span dir="rtl">تعداد متغیر های (</span><span dir="ltr">w</span><span dir="rtl">) های حاضر در معادله هستش، با بالا بردن</span> <span dir="ltr">λ</span> <span dir="rtl">سیستم مجبور به انتخاب</span> <span dir="ltr">w</span> <span dir="rtl">های کوچکتر می شود که دقیقا هدف ما از انجام</span> <span dir="ltr">Regularization</span> <span dir="rtl">هستش</span>
+<span dir="rtl">در الگوی بالا n تعداد متغیر های (w) های حاضر در معادله هستش، با بالا بردن λ سیستم مجبور به انتخاب w های کوچکتر می شود که دقیقا هدف ما از انجام Regularization هستش</span>

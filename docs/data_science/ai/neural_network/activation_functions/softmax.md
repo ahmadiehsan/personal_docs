@@ -12,7 +12,7 @@ Is a mathematical function that converts a vector of numbers into a vector of pr
 
 <span dir="rtl">نکات:</span>
 
-- <span dir="rtl">به شکل کلی برای دسته بندی اطلاعات استفاده میشه (</span><span dir="ltr">Multiclass Classification</span><span dir="rtl">)</span>
+- <span dir="rtl">به شکل کلی برای دسته بندی اطلاعات استفاده میشه (Multiclass Classification)</span>
 
 ## Formula
 
@@ -20,8 +20,8 @@ Is a mathematical function that converts a vector of numbers into a vector of pr
 
 <img src="image4.jpg" style="width:2.07097in" />
 
-- <span dir="rtl">تو این فرمول</span> <span dir="ltr">N</span> <span dir="rtl">به معنی تعداد دسته ها و</span> <span dir="ltr">j</span> <span dir="rtl">به معنی خود دسته ها هستن</span>
-- <span dir="rtl">هر</span> <span dir="ltr">a</span> <span dir="rtl">به معنی احتمال بودن در اون دسته خاص هستش و مجموع تمامی</span> <span dir="ltr">a</span> <span dir="rtl">ها باید ۱ بشه</span>
+- <span dir="rtl">تو این فرمول N به معنی تعداد دسته ها و j به معنی خود دسته ها هستن</span>
+- <span dir="rtl">هر a به معنی احتمال بودن در اون دسته خاص هستش و مجموع تمامی a ها باید ۱ بشه</span>
 - <span dir="rtl">نمونه فرمول باز شده و ساده شده تو تصویر زیر اومده:</span>
 
 <img src="image2.png" style="width:2.48392in" />

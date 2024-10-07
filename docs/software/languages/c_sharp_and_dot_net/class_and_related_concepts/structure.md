@@ -29,7 +29,7 @@
 
 ![](structure/image10.jpg)
 
-<span dir="rtl">نکته: بدون استفاده از</span> <span dir="ltr">constructor</span> <span dir="rtl">اصلا نیازی به</span> <span dir="ltr">instantiate</span> <span dir="rtl">کردن و استفاده از کلیدواژه</span> <span dir="ltr">new</span> <span dir="rtl">نیست، مثل تصویر زیر:</span>
+<span dir="rtl">نکته: بدون استفاده از constructor اصلا نیازی به instantiate کردن و استفاده از کلیدواژه new نیست، مثل تصویر زیر:</span>
 
 <img src="image2.jpg" style="width:1.3875in" />
 

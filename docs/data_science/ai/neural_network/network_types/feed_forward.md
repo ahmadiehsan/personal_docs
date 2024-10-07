@@ -12,28 +12,26 @@ Multilayer perceptron (MLP) is a type of feedforward network that has at least o
 
 <span dir="rtl">تصویر بالا نمونه یک شبکه عصبی با سه لایه هستش که موارد زیر بهش صدق میکنه:</span>
 
-- <span dir="rtl">به</span> <span dir="ltr">layer</span> <span dir="rtl">1 و</span> <span dir="ltr">layer</span> <span dir="rtl">2 لایه های مخفی (</span><span dir="ltr">hidden layers</span><span dir="rtl">) می گن</span>
-- <span dir="rtl">بخش نارنجی رنگ رو</span> <span dir="ltr">layer</span> <span dir="rtl">0 میگن ولی جزو لایه های نمیشمارن</span>
-- <span dir="rtl">علاوه بر</span> <span dir="ltr">x</span> <span dir="rtl">به بخش نارنجی رنگ</span<img src="span> <span dir="rtl">هم می گن</span>
-- <span dir="rtl">به هر دایره یک</span> <span dir="ltr">neuron</span> <span dir="rtl">و یا</span> <span dir="ltr">unit</span> <span dir="rtl">می گن</span>
-- <span dir="rtl">به خروجی هر لایه</span> <span dir="ltr">activation</span> <span dir="rtl">میگن که با عملات</span> <span dir="ltr">a</span> <span dir="rtl">نشون داده میشه</span>
-
-<span dir="ltr"></span>
+- <span dir="rtl">به layer 1 و layer 2 لایه های مخفی (hidden layers) می گن</span>
+- <span dir="rtl">بخش نارنجی رنگ رو layer 0 میگن ولی جزو لایه های نمیشمارن</span>
+- <span dir="rtl">علاوه بر x به بخش نارنجی رنگ</span<img src="span> <span dir="rtl">هم می گن</span>
+- <span dir="rtl">به هر دایره یک neuron و یا unit می گن</span>
+- <span dir="rtl">به خروجی هر لایه activation میگن که با عملات a نشون داده میشه</span>
 
 <img src="image10.png" style="width:1.67964in" />
 
 <img src="image11.png" style="width:1.66462in" />
 
 - <span dir="rtl">تو دو تا تصویر بالا منظور از \[1\] یا \[2\] و … نشان دهنده تعلق فرمول به چندمین لایه شبکه هستش</span>
-- <span dir="rtl">تو دو تا تصویر بالا منظور از 1 یا 15 و … در زیر هر علامت نشان دهنده تعلق فرمول به چندمین</span> <span dir="ltr">unit</span> <span dir="rtl">یک لایه هستش. توجه بشه که اعداد ربطی به ایندکس آن متغیر در داخل فرمول نداره و بالاش علامت</span> <span dir="ltr">vector</span> <span dir="rtl">اومده که نشون میده این علامت نماینده چندین متغیر در داخل فرمول هستش</span>
+- <span dir="rtl">تو دو تا تصویر بالا منظور از 1 یا 15 و … در زیر هر علامت نشان دهنده تعلق فرمول به چندمین unit یک لایه هستش. توجه بشه که اعداد ربطی به ایندکس آن متغیر در داخل فرمول نداره و بالاش علامت vector اومده که نشون میده این علامت نماینده چندین متغیر در داخل فرمول هستش</span>
 
 ## Life Cycle
 
 <img src="image8.jpg" style="width:4.77437in" />
 
-- <span dir="rtl">تو تصویر بالا به خوبی نحوه عملکرد شبکه عصبی برای یک ورودی</span> <span dir="ltr">x</span> <span dir="rtl">شرح داده شده</span>
+- <span dir="rtl">تو تصویر بالا به خوبی نحوه عملکرد شبکه عصبی برای یک ورودی x شرح داده شده</span>
 - <span dir="rtl">سیستم به صورت ریکرسیو عمل میکنه</span>
-- <span dir="rtl">فلش های آبی نشون دهنده</span> <span dir="ltr">Forward propagation</span> <span dir="rtl">و فلش های قرمز نشون دهنده</span> <span dir="ltr">Backward propagation</span> <span dir="rtl">هستن</span>
+- <span dir="rtl">فلش های آبی نشون دهنده Forward propagation و فلش های قرمز نشون دهنده Backward propagation هستن</span>
 
 ## Vectorized Version
 
@@ -62,9 +60,9 @@ Multilayer perceptron (MLP) is a type of feedforward network that has at least o
 
 ## Batch Normalization
 
-<span dir="rtl">این تکنیک دقیقا تکنیک</span> <span dir="ltr">Z-score normalization</span> <span dir="rtl">هستش ولی فقط تو قالب شبکه عصبی پیاده میشه.</span>
+<span dir="rtl">این تکنیک دقیقا تکنیک Z-score normalization هستش ولی فقط تو قالب شبکه عصبی پیاده میشه.</span>
 
 <img src="image5.jpg" style="width:1.31909in" />
 
-- <span dir="rtl">علامت</span> <span dir="ltr">μ</span> <span dir="rtl">میانگین تمامی نتایج لایه هستش</span>
-- <span dir="rtl">فرمول خط چهارم در اصل نتیجه حاصل از</span> <span dir="ltr">Normalization</span> <span dir="rtl">هستش ولی چون ممکنه رنج این نتیجه مناسب لایه بعدی نباشه با استفاده از فرمول خط پنجم و دو متغیر</span> <span dir="ltr">ɣ</span> <span dir="rtl">و</span> <span dir="ltr">β</span> <span dir="rtl">یه سری تغییر توش میدیم که رنجش عوض بشه</span>
+- <span dir="rtl">علامت μ میانگین تمامی نتایج لایه هستش</span>
+- <span dir="rtl">فرمول خط چهارم در اصل نتیجه حاصل از Normalization هستش ولی چون ممکنه رنج این نتیجه مناسب لایه بعدی نباشه با استفاده از فرمول خط پنجم و دو متغیر ɣ و β یه سری تغییر توش میدیم که رنجش عوض بشه</span>

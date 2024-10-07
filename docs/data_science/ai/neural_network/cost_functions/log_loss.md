@@ -4,7 +4,7 @@
 
 <img src="image1.png" style="width:3.00642in" />
 
-<span dir="rtl">نمودار</span> <span dir="ltr">loss function</span><span dir="rtl">:</span>
+<span dir="rtl">نمودار loss function:</span>
 
 <img src="image5.png" style="width:4.66298in" />
 

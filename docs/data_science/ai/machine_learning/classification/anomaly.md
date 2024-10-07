@@ -18,7 +18,7 @@ Anomaly detection is any process that finds the outliers of a dataset; those ite
 
 <img src="image6.jpg" style="width:3.45601in" />
 
-<span dir="rtl">همونطور که تو تصاویر بالا پیداس، یک نمودار بر رویی دیتاها مپ میکنیم که تو این نمودار</span> <span dir="ltr">µ</span> <span dir="rtl">وسط دیتاها رو مشخص میکنه و</span> <span dir="ltr">σ</span> <span dir="rtl">عرض نمودار رو، در صورتی که دیتاهای ما بیشتر باشن هر کدوم</span> <span dir="ltr">µ</span> <span dir="rtl">و</span> <span dir="ltr">σ</span> <span dir="rtl">مخصوص به خودشون رو خواهند داشت، و در نهایت برای بدست آوردن جواب نهایی، جواب فرمول هر دیتا رو در هم ضرب میکنیم.</span>
+<span dir="rtl">همونطور که تو تصاویر بالا پیداس، یک نمودار بر رویی دیتاها مپ میکنیم که تو این نمودار µ وسط دیتاها رو مشخص میکنه و σ عرض نمودار رو، در صورتی که دیتاهای ما بیشتر باشن هر کدوم µ و σ مخصوص به خودشون رو خواهند داشت، و در نهایت برای بدست آوردن جواب نهایی، جواب فرمول هر دیتا رو در هم ضرب میکنیم.</span>
 
 <img src="image5.jpg" style="width:4.4477in" />
 
@@ -28,4 +28,4 @@ Anomaly detection is any process that finds the outliers of a dataset; those ite
 
 <img src="image4.jpg" style="width:4.14817in" />
 
-<span dir="rtl">بطور کلی تفاوت اصلی این دو با هم اینه که</span> <span dir="ltr">Supervised</span> <span dir="rtl">روی تکرار موارد مشکل دار تمرکز داره، ولی</span> <span dir="ltr">Anomaly</span> <span dir="rtl">روی حفظ شرایط فعلی تمرکز داره، در نتیجه هرچی تو حالت فعلی نگنجه بعنی مشکل داره، با این تکنیک میشه حتی مشکلات ناشناخته توی سیستم رو هم پیدا کرد که</span> <span dir="ltr">Supervised</span> <span dir="rtl">این اجازه رو به ما نمیده</span>
+<span dir="rtl">بطور کلی تفاوت اصلی این دو با هم اینه که Supervised روی تکرار موارد مشکل دار تمرکز داره، ولی Anomaly روی حفظ شرایط فعلی تمرکز داره، در نتیجه هرچی تو حالت فعلی نگنجه بعنی مشکل داره، با این تکنیک میشه حتی مشکلات ناشناخته توی سیستم رو هم پیدا کرد که Supervised این اجازه رو به ما نمیده</span>

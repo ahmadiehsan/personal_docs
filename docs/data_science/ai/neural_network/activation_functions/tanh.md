@@ -12,4 +12,4 @@ However, it has one major drawbacks:
 
 <span dir="rtl">نکات:</span>
 
-- <span dir="rtl">معمولا تو لایه های مخفی (</span><span dir="ltr">hidden layers</span><span dir="rtl">) از این فانکشن به عنوان پیش فرض استفاده میشه مگر این که کاربری دیگه ای رو بخوایم</span>
+- <span dir="rtl">معمولا تو لایه های مخفی (hidden layers) از این فانکشن به عنوان پیش فرض استفاده میشه مگر این که کاربری دیگه ای رو بخوایم</span>

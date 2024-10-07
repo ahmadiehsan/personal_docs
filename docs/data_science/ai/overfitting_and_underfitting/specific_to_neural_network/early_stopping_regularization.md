@@ -10,4 +10,4 @@ By visualizing the training and validation error of the model during training, w
 
 <img src="image1.jpg" style="width:3.2899in" />
 
-<span dir="rtl">بعضی وقت ها هر چقدر سیستم بیشتر با</span> <span dir="ltr">training set</span> <span dir="rtl">آموزش ببینه روی</span> <span dir="ltr">dev set</span> <span dir="rtl">بدتر جواب میده، بخاطر همین با این تکنیک یه جایی از آموزش که جواب معقولی روی</span> <span dir="ltr">dev set</span> <span dir="rtl">های میده آنوزش رو متوقف میکنیم و با این کار از</span> <span dir="ltr">overfit</span> <span dir="rtl">شدن جلوگیری میکنیم.</span>
+<span dir="rtl">بعضی وقت ها هر چقدر سیستم بیشتر با training set آموزش ببینه روی dev set بدتر جواب میده، بخاطر همین با این تکنیک یه جایی از آموزش که جواب معقولی روی dev set های میده آنوزش رو متوقف میکنیم و با این کار از overfit شدن جلوگیری میکنیم.</span>

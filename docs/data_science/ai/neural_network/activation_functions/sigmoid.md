@@ -13,4 +13,4 @@ However, it has two major drawbacks:
 
 <span dir="rtl">نکات:</span>
 
-- <span dir="rtl">این مدل در اصل یک حالت خاص (دو دسته ای) از مدل</span> <span dir="ltr">Softmax</span> <span dir="rtl">هستش</span>
+- <span dir="rtl">این مدل در اصل یک حالت خاص (دو دسته ای) از مدل Softmax هستش</span>

@@ -14,4 +14,4 @@ This technique transforms the feature values to have a mean of 0 and a standard 
 
 <img src="image1.png" style="width:4.96014in" />
 
-<span dir="rtl">مقدار</span> <span dir="ltr">σ</span> <span dir="rtl">برابر است با انحراف از معیار (</span><span dir="ltr">standard deviation</span><span dir="rtl">)</span>
+<span dir="rtl">مقدار σ برابر است با انحراف از معیار (standard deviation)</span>
