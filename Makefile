@@ -39,7 +39,7 @@ requirements.install:
 # App (Main Application)
 # =====
 app.serve:
-	mkdocs serve --open --dirty
+	mkdocs serve --open
 
 app.build:
 	mkdocs build --strict
