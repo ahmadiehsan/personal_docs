@@ -13,7 +13,7 @@
 - [HF Evaluate Library](https://huggingface.co/docs/evaluate/a_quick_tour#combining-several-evaluations)
 - [Transformer Explainer](https://poloclub.github.io/transformer-explainer/)
 - [GloVe (Similar to Word2Vec)](https://nlp.stanford.edu/projects/glove/)
-- [LLM's Leaderboard](https://lmarena.ai/?leaderboard)
+- [LLMs Leaderboard](https://lmarena.ai/?leaderboard)
 
 ## Projects
 
