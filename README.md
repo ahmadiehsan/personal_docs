@@ -1,5 +1,5 @@
 # Personal Docs
 
-helpful best practices
+Personal docs and notes
 
-[docs.ahmadiehsan.ir/](https://docs.ahmadiehsan.ir/)
+[docs.ahmadiehsan.ir](https://docs.ahmadiehsan.ir/)
