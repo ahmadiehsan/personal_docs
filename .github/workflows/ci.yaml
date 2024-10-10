@@ -46,7 +46,9 @@ jobs:
           source venv/bin/activate
           make requirements.install
       - name: Build with MkDocs
-        run: make app.build
+        run: |
+          source venv/bin/activate
+          make app.build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
