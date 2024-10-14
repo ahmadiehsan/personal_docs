@@ -11,7 +11,7 @@
 - Vector = Magnitude + Direction
 - Velocity = Magnitude + Direction
 - So indeed Velocity is a Vector
-- **Standard Position (Origin):** (0, 0) is the standard position so when one the tail of one Vector is in this position we will say that this Vector is in the standard position
+- Standard Position (Origin): $(0, 0)$ is the standard position so when one the tail of one Vector is in this position we will say that this Vector is in the standard position
 
 ## N Dimensional Real Coordinate Space
 
@@ -64,11 +64,11 @@
 
 <img src="image10.jpg" style="width:4.38487in" />
 
-Will give us the normal vector of the space (plane) of two other vectors (a&lt;vector&gt; and b&lt;vector&gt;).
+Will give us the normal vector of the space (plane) of two other vectors ($\vec{a}$ and $\vec{b}$).
 
 <img src="image25.jpg" style="width:2.31308in" />
 
-The cross-product is only applicable in R&lt;3&gt;.
+The cross-product is only applicable in $R_3$.
 
 ### Length (Magnitude)
 
@@ -100,7 +100,7 @@ The cross-product is only applicable in R&lt;3&gt;.
 
 <img src="image7.png" style="width:2.21852in" />
 
-The vectors x&lt;vector&gt; and y&lt;vector&gt; are perpendicular if, and only if, their dot product is equal to zero: x&lt;vector&gt;.y&lt;vector&gt; = 0
+The vectors $\vec{x}$ and $\vec{y}$ are perpendicular if, and only if, their dot product is equal to zero: $\vec{x} . \vec{y} = 0$
 
 ## Normal Vector
 

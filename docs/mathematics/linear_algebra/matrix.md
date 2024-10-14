@@ -16,7 +16,7 @@ We can show a matrix with multiple vectors:
 
 We will use this for transformation composition, like this:
 
-(f&lt;func&gt;◦g&lt;func&gt;)(x&lt;vector&gt;) = f(g(a)) = f(Ax) = B(Ax) = BA(x)
+$(f◦g)(\vec{x}) = f(g(a)) = f(Ax) = B(Ax) = BA(x)$
 
 ### Multiplication With Vector (Matrix-Vector Product)
 
@@ -45,18 +45,18 @@ Matrix-vector product is always a linear transformation.
 
 ## Null Space
 
-The null space of any matrix A consists of all the vectors B such that AB=0 and B is not zero.
+The null space of any matrix $A$ consists of all the vectors $B$ such that $AB=0$ and $B$ is not zero.
 
-We will show the null space of A&lt;matrix&gt; with N(A&lt;matrix&gt;).
+We will show the null space of $\mathbf{A}$ with $N(\mathbf{A})$.
 
 <img src="image8.jpg" style="width:2.73467in" />
 
-- It can also be thought of as the solution obtained from AB=0 where A is a known matrix of size m x n and B is a matrix to be found of size n x k.
-- N(A&lt;matrix&gt;) = N(RREF(A&lt;matrix&gt;))
+- It can also be thought of as the solution obtained from $AB=0$ where $A$ is a known matrix of size $m x n$ and $B$ is a matrix to be found of size $n x k$.
+- $N(\mathbf{A}) = N(RREF(\mathbf{A}))$
 
 ## Column Space
 
-We will show the nullspace of A&lt;matrix&gt; with C(A&lt;matrix&gt;).
+We will show the nullspace of $\mathbf{A}$ with $C(\mathbf{A})$.
 
 <img src="image9.jpg" style="width:3.15928in" />
 

@@ -8,29 +8,29 @@ Is a declarative sentence (that is, a sentence that declares a fact) that is eit
 
 ### Conjunction
 
-p ∧ q (and)
+$p ∧ q$ (and)
 
 ### Disjunction
 
-p ∨ q (or)
+$p ∨ q$ (or)
 
 ### Exclusive or
 
 <img src="image1.jpg" style="width:2.45455in" />
 
-The exclusive or of p and q, denoted by p ⊕ q (or p XOR q), is the proposition that is true when exactly one of p and q is true and is false otherwise.
+The exclusive or of $p$ and $q$, denoted by $p ⊕ q$ (or $p$ XOR $q$), is the proposition that is true when exactly one of $p$ and $q$ is true and is false otherwise.
 
 ### Conditional Statements
 
 <img src="image7.jpg" style="width:2.45455in" />
 
-Let p and q be propositions. The conditional statement p → q is the proposition “if p, then q.” The conditional statement p → q is false when p is true and q is false, and true otherwise. In the conditional statement p → q, p is called the hypothesis (or antecedent or premise) and q is called the conclusion (or consequence).
+Let $p$ and $q$ be propositions. The conditional statement $p → q$ is the proposition “if $p$, then $q$.” The conditional statement $p → q$ is false when $p$ is true and $q$ is false, and true otherwise. In the conditional statement $p → q$, $p$ is called the hypothesis (or antecedent or premise) and $q$ is called the conclusion (or consequence).
 
 ### Biconditional
 
 <img src="image11.jpg" style="width:2.50064in" />
 
-Let p and q be propositions. The biconditional statement p ↔ q is the proposition “p if and only if q.” The biconditional statement p ↔ q is true when p and q have the same truth values and is false otherwise. Biconditional statements are also called bi-implications.
+Let $p$ and $q$ be propositions. The biconditional statement $p ↔ q$ is the proposition “$p$ if and only if $q$.” The biconditional statement $p ↔ q$ is true when $p$ and $q$ have the same truth values and is false otherwise. Biconditional statements are also called bi-implications.
 
 ### Precedence of Operators
 
@@ -46,13 +46,15 @@ Let p and q be propositions. The biconditional statement p ↔ q is the proposit
 
 <img src="image4.jpg" style="width:2.91721in" />
 
-A compound proposition that is always true, no matter what the truth values of the propositional variables that occur in it, is called a tautology. A compound proposition that is always false is called a contradiction. A compound proposition that is neither a tautology nor a contradiction is called a contingency.
+- A compound proposition that is always true, no matter what the truth values of the propositional variables that occur in it, is called a tautology.
+- A compound proposition that is always false is called a contradiction.
+- A compound proposition that is neither a tautology nor a contradiction is called a contingency.
 
-### ≡ mark
+### $≡$ mark
 
-The compound propositions p and q are called logically equivalent if p ↔ q is a tautology.
+The compound propositions $p$ and $q$ are called logically equivalent if $p ↔ q$ is a tautology.
 
-The notation p ≡ q denotes that p and q are logically equivalent.
+The notation $p ≡ q$ denotes that $p$ and $q$ are logically equivalent.
 
 ### De Morgan’s Laws
 
@@ -60,11 +62,11 @@ The notation p ≡ q denotes that p and q are logically equivalent.
 
 ### Conditional disjunction equivalence
 
-that p → q and ¬p ∨ q are logically equivalent
+that $p → q$ and $¬p ∨ q$ are logically equivalent
 
 ### Distributive law of disjunction over conjunction
 
-that p ∨ (q ∧ r) and (p ∨ q) ∧ (p ∨ r) are logically equivalent
+that $p ∨ (q ∧ r)$ and $(p ∨ q) ∧ (p ∨ r)$ are logically equivalent
 
 ### Overall
 
@@ -80,15 +82,15 @@ that p ∨ (q ∧ r) and (p ∨ q) ∧ (p ∨ r) are logically equivalent
 
 Statements involving variables, such as
 
-“x &gt; 3”, “x = y + 3” , “x + y = z”
+“$x > 3$, $x = y + 3$, $x + y = z$”
 
 and
 
-“Computer X is under attack by an intruder”
+Computer $X$ is under attack by an intruder
 
 and
 
-“Computer X is functioning properly”
+“Computer $X$ is functioning properly”
 
 are often found in mathematical assertions, computer programs, and system speciﬁcations. These statements are neither true nor false when the values of the variables are not speciﬁed. In this section
 
@@ -96,13 +98,13 @@ are often found in mathematical assertions, computer programs, and system speci�
 
 Quantiﬁcation expresses the extent to which a predicate is true over a range of elements. In English, the words all, some, many, none, and few are used in quantiﬁcations. We will focus on two types of quantiﬁcationAssessment here: universal quantiﬁcation, which tells us that a predicate is true for every element under consideration, and existential quantiﬁcation, which tells us that there is one or more element under consideration for which the predicate is true
 
-- **Universal quantiﬁer:** The universal quantiﬁcation of P(x) is the statement “P(x) for all values of x in the domain.”
+- **Universal quantiﬁer:** The universal quantiﬁcation of $P(x)$ is the statement “$P(x)$ for all values of $x$ in the domain.”
 
-  The notation ∀xP(x) denotes the universal quantiﬁcation of P(x). Here ∀ is called the universal quantiﬁer. We read ∀xP(x) as “for all xP(x)” or “for every xP(x).” An element for which P(x) is false is called a counterexample to ∀xP(x).
+  The notation $∀xP(x)$ denotes the universal quantiﬁcation of $P(x)$. Here $∀$ is called the universal quantiﬁer. We read $∀xP(x)$ as “for all $xP(x)$” or “for every $xP(x)$.” An element for which $P(x)$ is false is called a counterexample to $∀xP(x)$.
 
-- **Existential quantiﬁer:** The existential quantiﬁcation of P(x) is the proposition “There exists an element x in the domain such that P(x).”
+- **Existential quantiﬁer:** The existential quantiﬁcation of $P(x)$ is the proposition “There exists an element x in the domain such that P(x).”
 
-  We use the notation ∃xP(x) for the existential quantiﬁcation of P(x). Here ∃ is called the existential quantiﬁer.
+  We use the notation $∃xP(x)$ for the existential quantiﬁcation of $P(x)$. Here ∃ is called the existential quantiﬁer.
 
 - **De Morgan’s Laws for Quantiﬁers:**
 
