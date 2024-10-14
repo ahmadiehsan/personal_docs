@@ -4,19 +4,19 @@
 
 Mapping one vector from one vector space into another vector space by a function.
 
-Function: f&lt;function&gt;: a&lt;vector&gt; -&gt; b&lt;vector&gt;
+Function: $f: \vec{a} \rightarrow \vec{b}$
 
-Domain: f&lt;function&gt;: R&lt;n&gt; -&gt; R&lt;m&gt;
+Domain: $f: R_n \rightarrow R_m$
 
 ## Transformations
 
 ### Linear Transformation (Linear Map)
 
-A linear map (also called a linear mapping, linear transformation, vector space homomorphism, or in some contexts linear function) is a mapping v&lt;vector&gt; to w&lt;vector&gt; between two vector spaces that preserves the operations of vector addition and scalar multiplication.
+A linear map (also called a linear mapping, linear transformation, vector space homomorphism, or in some contexts linear function) is a mapping $\vec{v}$ to $\vec{w}$ between two vector spaces that preserves the operations of vector addition and scalar multiplication.
 
 <img src="image6.jpg" style="width:3.12838in" />
 
-We can always show a linear transformation via a matrix-vector product, like this: T(x&lt;vector&gt;) = Ax&lt;vector&gt;
+We can always show a linear transformation via a matrix-vector product, like this: $T(\vec{x}) = A\vec{x}$
 
 ### Rotation Transformation
 
@@ -37,9 +37,9 @@ We can always show a linear transformation via a matrix-vector product, like thi
 ### Addition
 
 - <img src="image2.jpg" style="width:1.79429in" />
-- (T+S)(x&lt;vector&gt;) = T(x) + S(x) = Ax + Bx = (A+B)x
+- $(T+S)(\vec{x}) = T(x) + S(x) = Ax + Bx = (A+B)x$
 
 ### Multiplication
 
 - <img src="image7.jpg" style="width:1.50419in" />
-- (cT)(x&lt;vector&gt;) = c(T(x)) = c(Ax) = (cA)x
+- $(cT)(\vec{x}) = c(T(x)) = c(Ax) = (cA)x$

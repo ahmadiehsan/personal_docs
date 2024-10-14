@@ -1,4 +1,4 @@
-# ReLU [0 to ∞]
+# ReLU [$0$ to $+\infty$]
 
 ## Description
 

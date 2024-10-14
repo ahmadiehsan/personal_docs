@@ -56,11 +56,11 @@ This will be done by the C# annotations
 
 ### Primary Key
 
-- Convention: By default EF will use the Id field or &lt;ModelName&gt;Id field as primary key without need any annotation
+- Convention: By default EF will use the Id field or `<ModelName>Id` field as primary key without need any annotation
 
   <img src="image4.jpg" style="width:3.36667in" />
 
-- Data Annotation: For the fields other than Id or &lt;ModelName&gt;Id, we can explicitly define our primary key like the below
+- Data Annotation: For the fields other than Id or `<ModelName>Id`, we can explicitly define our primary key like the below
 
   <img src="image13.jpg" style="width:4.35in" />
 
@@ -104,7 +104,7 @@ This will be done by the C# annotations
 
   ![](model_and_fields/image16.jpg)
 
-  tip: can be List&lt;&gt; or ICollection&lt;&gt;
+  tip: can be List<> or ICollection<>
 
 - Data Annotation:
 
@@ -120,7 +120,7 @@ This will be done by the C# annotations
 
   ![](model_and_fields/image11.jpg)
 
-  tip: can be ICollection&lt;&gt; or List&lt;&gt;
+  tip: can be ICollection<> or List<>
 
 - Fluent API:
 
