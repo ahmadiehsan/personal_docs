@@ -2,7 +2,7 @@
 
 ## Variances
 
-<img src="image4.jpg" style="width:5.96667in" />
+![](string/image4.jpg)
 
 ## Loop
 

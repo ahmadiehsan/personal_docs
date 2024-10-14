@@ -8,7 +8,7 @@ The denominator normalizes the probabilities, so they all sum up to 1 across all
 
 Is a mathematical function that converts a vector of numbers into a vector of probabilities, where the probabilities of each value are proportional to the relative scale of each value in the vector.
 
-<img src="image1.jpg" style="width:3.55568in" />
+![](softmax/image1.jpg)
 
 <span dir="rtl">نکات:</span>
 
@@ -16,12 +16,24 @@ Is a mathematical function that converts a vector of numbers into a vector of pr
 
 ## Formula
 
-<img src="image3.png" style="width:1.72471in" />
+$z_j = \vec{w_j} \cdot \vec{x} + b_j \quad j = 1, \dots, N$
 
-<img src="image4.jpg" style="width:2.07097in" />
+$a_j = \frac{e^{z_j}}{\sum_{k=1}^{N} e^{z_k}} = P(y = j | \vec{x})$
+
+Note: $a_1 + a_2 + \dots + a_N = 1$
 
 - <span dir="rtl">تو این فرمول N به معنی تعداد دسته ها و j به معنی خود دسته ها هستن</span>
 - <span dir="rtl">هر a به معنی احتمال بودن در اون دسته خاص هستش و مجموع تمامی a ها باید ۱ بشه</span>
 - <span dir="rtl">نمونه فرمول باز شده و ساده شده تو تصویر زیر اومده:</span>
 
-<img src="image2.png" style="width:2.48392in" />
+$$
+a_1 = \frac{e^{z_1}}{e^{z_1} + e^{z_2} + \dots + e^{z_N}} = P(y = 1 | \vec{x})
+$$
+
+$$
+\vdots
+$$
+
+$$
+a_N = \frac{e^{z_N}}{e^{z_1} + e^{z_2} + \dots + e^{z_N}} = P(y = N | \vec{x})
+$$

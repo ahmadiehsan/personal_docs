@@ -12,7 +12,7 @@ This principle prevents us from creating designs that have a large number of cla
 
 but how do you keep from doing this? The principle provides some guidelines: take any object, and from any method in that object, invoke only methods that belong to:
 
-<img src="image1.jpg" style="width:5.99758in" />
+![](least_knowledge_principle/image1.jpg)
 
 The principle forces us to ask the object to request us; that way, we don’t have to know about its component objects (and we keep our circle of friends small). For example:
 
@@ -20,4 +20,4 @@ The principle forces us to ask the object to request us; that way, we don’t ha
 
 Here’s a Car class that demonstrates all the ways you can call methods and still adhere to the Principle of Least Knowledge:
 
-<img src="image4.jpg" style="width:5.91146in" />
+![](least_knowledge_principle/image4.jpg)

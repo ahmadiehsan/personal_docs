@@ -25,4 +25,6 @@ Here, x is the original feature value.
 
 ## Example
 
-![](log_transformation/image3.jpg)
+```python
+fcc_survey_df['Income_log'] = np.log((1 + fcc_survey_df['Income']))
+```

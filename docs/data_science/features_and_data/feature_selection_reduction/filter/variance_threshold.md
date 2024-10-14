@@ -6,4 +6,13 @@ Variance Threshold is a baseline approach to feature selection. As the name sugg
 
 ## Example
 
-<img src="image1.jpg" style="width:4.26645in" />
+```python
+X = [[0, 2, 0, 3], [0, 1, 4, 3], [0, 1, 1, 3]]
+selector = VarianceThreshold()
+selector.fit_transform(X)
+
+# Output:
+# array([[2, 0],
+#        [1, 4],
+#        [1, 1]])
+```

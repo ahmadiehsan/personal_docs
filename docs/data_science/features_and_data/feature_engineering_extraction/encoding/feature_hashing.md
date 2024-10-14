@@ -16,4 +16,11 @@ Thus even if we have over 1000 distinct categories in a feature and we set b=10 
 
 We will now use a feature hashing scheme by leveraging scikit-learn’s FeatureHasher class, which uses a signed 32-bit version of the Murmurhash3 hash function. We will pre-define the final feature vector size to be 6 in this case.
 
-<img src="image1.jpg" style="width:5.01071in" />
+```python
+from sklearn.feature_extraction import FeatureHasher
+
+fh = FeatureHasher(n_features=6, input_type='string')
+hashed_features = fh.fit_transform(vg_df['Genre'])
+hashed_features = hashed_features.toarray()
+pd.concat([vg_df[['Name', 'Genre']], pd.DataFrame(hashed_features)], axis=1).iloc[1:7]
+```

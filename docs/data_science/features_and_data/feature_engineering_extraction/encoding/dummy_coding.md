@@ -12,4 +12,8 @@ The dummy coding scheme is similar to the one-hot encoding scheme, except in the
 
 ## Example
 
-<img src="image2.jpg" style="width:5.28615in" />
+```python
+gen_dummy_features = pd.get_dummies(poke_df['Generation'], drop_first=True)
+
+pd.concat([poke_df[['Name', 'Generation']], gen_dummy_features], axis=1).iloc[4:10]
+```

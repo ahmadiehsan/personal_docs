@@ -10,4 +10,10 @@ The effect coding scheme is actually very similar to the dummy coding scheme, ex
 
 ## Example
 
-<img src="image1.jpg" style="width:5.14628in" />
+```python
+gen_onehot_features = pd.get_dummies(poke_df['Generation'])
+gen_effect_features = gen_onehot_features.iloc[:, :-1]
+gen_effect_features.loc[np.all(gen_effect_features == 0, axis=1)] = -1.
+
+pd.concat([poke_df[['Name', 'Generation']], gen_effect_features], axis=1).iloc[4:10]
+```

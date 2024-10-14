@@ -50,7 +50,7 @@ Methods:
 
 Authentication Service:
 
-<img src="image18.jpg" style="width:5.9436in" />
+![](identity/image18.jpg)
 
 - **AddAuthentication:** will tell ASP.NET to use which authentication service (MyCookieAuth) for authenticating the user
 - **AddCookie:** will tell ASP.NET to set the user data in where when we are authenticating the user with the MyCookieAuth authentication service

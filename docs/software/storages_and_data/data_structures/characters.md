@@ -18,7 +18,7 @@ UTF-8 is the most widely used encoding format for Unicode, utilizing a variable 
 
 UTF-8 encoding is backward compatible with ASCII. This implies that UTF-8 can be used to parse ancient ASCII text.
 
-<img src="image1.jpg" style="width:5.97083in" />
+![](characters/image1.jpg)
 
 - **UTF-16 encoding:** Uses 2 or 4 bytes to represent a character. All ASCII characters and commonly used non-English characters are represented with 2 bytes; a few characters require 4 bytes. For 2-byte characters, the UTF-16 encoding equals the Unicode code point.
 - **UTF-32 encoding:** Every character uses 4 bytes. This means UTF-32 occupies more space than UTF-8 and UTF-16, especially for texts with a high proportion of ASCII characters.

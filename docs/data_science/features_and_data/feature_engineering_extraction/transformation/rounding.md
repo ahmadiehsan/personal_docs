@@ -10,6 +10,20 @@ Often when dealing with continuous numeric attributes like proportions or percen
 
 ## Example
 
-![](rounding/image1.jpg)
+```python
+items_popularity = pd.read_csv('datasets/item_popularity.csv', encoding='utf-8')
+
+items_popularity['popularity_scale_10'] = np.array(
+    np.round((items_popularity['pop_percent'] * 10)),
+    dtype='int'
+)
+
+items_popularity['popularity_scale_100'] = np.array(
+    np.round((items_popularity['pop_percent'] * 100)),
+    dtype='int'
+)
+
+items_popularity
+```
 
 We tried two forms of rounding. The features depict the item popularities now both on a scale of 1–10 and on a scale of 1–100. You can use these values both as numerical or categorical features based on the scenario and problem.
