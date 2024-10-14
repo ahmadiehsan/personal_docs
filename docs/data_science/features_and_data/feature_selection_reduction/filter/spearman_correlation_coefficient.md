@@ -20,4 +20,4 @@ To compute it:
 
 3. Apply the formula
 
-<img src="image1.png" style="width:3.35593in" />
+<img src="image1.png" style="width:2.35593in" />

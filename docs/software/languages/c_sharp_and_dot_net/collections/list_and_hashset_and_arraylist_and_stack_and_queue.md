@@ -218,7 +218,7 @@ AddRange:
 
 <img src="image57.jpg" style="width:5.64583in" />
 
-<img src="image22.jpg" style="width:5.90417in" />
+![](list_and_hashset_and_arraylist_and_stack_and_queue/image22.jpg)
 
 Insert:
 
@@ -230,7 +230,7 @@ InsertRange:
 
 ![](list_and_hashset_and_arraylist_and_stack_and_queue/image85.jpg)
 
-<img src="image47.jpg" style="width:5.98333in" />
+![](list_and_hashset_and_arraylist_and_stack_and_queue/image47.jpg)
 
 Remove:
 

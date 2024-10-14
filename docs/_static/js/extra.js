@@ -1,6 +1,6 @@
 document.querySelectorAll("span[dir='rtl']").forEach(span => {
     const parent = span.parentElement;
-    if (parent && parent.tagName.toLowerCase() === "p") {
+    if (parent && ["p", "h1", "h2", "h3", "h4", "h5", "h6", "td"].includes(parent.tagName.toLowerCase())) {
         parent.setAttribute("dir", "rtl");
         span.removeAttribute("dir");
     }

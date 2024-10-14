@@ -6,7 +6,9 @@ The support vector machine is a model used for both classification and regressio
 
 SVM tries to finds the maximal margin (distance between the line and the support vectors) that separates the classes and this reduces the risk of error on the data
 
-<img src="image2.jpg" style="width:1.94554in" />
+- H₁ does not separate the classes.
+- H₂ does, but only with a small margin.
+- H₃ separates them with the maximal margin.
 
 ## Hyperplane
 

@@ -12,7 +12,7 @@
 
 <span dir="rtl">تو تصویر بالا X که ماتریکسی از تمامی دیتاهای (m) ما هست رو به ماتریس های کوچکتر 1000 تایی شکستیم و هر کدوم از این mini-batch های 1000 تایی رو با نماد {i} نشون میدیم.</span>
 
-<img src="image2.jpg" style="width:5.98803in" />
+![](batch_and_mini_batch/image2.jpg)
 
 <span dir="rtl">تو تصویر بالا:</span>
 

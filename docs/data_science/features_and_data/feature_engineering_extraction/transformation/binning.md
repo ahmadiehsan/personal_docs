@@ -18,9 +18,30 @@ Just like the name indicates, in fixed-width binning, we have specific fixed wid
 
 Example:
 
-<img src="image1.jpg" style="width:1.28621in" />
+| Age Range     | Bin |
+|---------------|-----|
+| 0  –  15      | 1   |
+| 16 –  30      | 2   |
+| 31 –  45      | 3   |
+| 46 –  60      | 4   |
+| 61 –  75      | 5   |
+| 75 – 100      | 6   |
 
-<img src="image4.jpg" style="width:5.70689in" />
+```python
+bin_ranges = [0, 15, 30, 45, 60, 75, 100]
+bin_names = [1, 2, 3, 4, 5, 6]
+
+fcc_survey_df['Age_bin_custom_range'] = pd.cut(
+    np.array(fcc_survey_df['Age']),
+    bins=bin_ranges
+)
+
+fcc_survey_df['Age_bin_custom_label'] = pd.cut(
+    np.array(fcc_survey_df['Age']),
+    bins=bin_ranges,
+    labels=bin_names
+)
+```
 
 ## Adaptive Binning
 
@@ -32,8 +53,27 @@ Quantile based binning is a good strategy to use for adaptive binning. Quantiles
 
 Example:
 
-<img src="image3.jpg" style="width:5.36283in" />
+```python
+fig, ax = plt.subplots()
+fcc_survey_df['Income'].hist(bins=30, color='#A9C5D3', edgecolor='black', grid=False)
+ax.set_title('Developer Income Histogram', fontsize=12)
+ax.set_xlabel('Developer Income', fontsize=12)
+ax.set_ylabel('Frequency', fontsize=12)
+```
 
 The above distribution depicts a right skew in the income with lesser developers earning more money and vice versa.
 
-<img src="image2.jpg" style="width:5.975in" />
+```python
+quantile_list = [0, .25, .5, .75, 1.]
+quantiles = fcc_survey_df['Income'].quantile(quantile_list)
+quantiles
+
+# Output
+# ------
+# 0.00     6000.0
+# 0.25    20000.0
+# 0.50    37000.0
+# 0.75    60000.0
+# 1.00   200000.0
+# Name: Income, dtype: float64
+```

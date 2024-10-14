@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image1.png" style="width:5.94792in" />
+![](clean_architecture/image1.png)
 
 Facts:
 

@@ -15,6 +15,26 @@ For example, if the test set was 100 messages and our model correctly predicted 
 
 ## Examples
 
-![](accuracy/image2.jpg)
+|              | Predicted: NO | Predicted: YES | Total |
+|--------------|---------------|----------------|-------|
+| Actual: NO   | TN = 50       | FP = 10        | 60    |
+| Actual: YES  | FN = 5        | TP = 100       | 105   |
+| Total        | 55            | 110            |       |
 
-![](accuracy/image3.jpg)
+Accuracy:
+
+- Overall, how often is it **correct**?
+- (TP + TN) / total = 150 / 165 = 0.91
+
+---
+
+| n = 165     | Predicted: NO  | Predicted: YES | Total |
+|-------------|----------------|----------------|-------|
+| Actual: NO  | TN = 50        | FP = 10        | 60    |
+| Actual: YES | FN = 5         | TP = 100       | 105   |
+| Total       | 55             | 110            |       |
+
+Misclassification Rate (Error Rate):
+
+- Overall, how often is it **wrong**?
+- (FP + FN) / total = 15/165 = 0.09

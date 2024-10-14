@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image1.jpg" style="width:5.95087in" />
+![](flyweight/image1.jpg)
 
 Use sharing to support large numbers of fine-grained objects efficiently.
 

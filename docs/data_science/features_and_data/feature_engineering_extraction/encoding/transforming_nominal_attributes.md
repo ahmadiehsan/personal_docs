@@ -8,4 +8,9 @@ Movie, music, and video game genres, country names, food, and cuisine types are 
 
 ## Example
 
-<img src="image1.jpg" style="width:4.13901in" />
+```python
+from sklearn.preprocessing import LabelEncoder
+
+gle = LabelEncoder()
+genre_labels = gle.fit_transform(vg_df['Genre'])
+```

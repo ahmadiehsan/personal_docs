@@ -10,7 +10,7 @@ We can use it in conjunction with TF-IDF to model topics across documents.
 
 Given a non-negative matrix A, find k-dimension approximation in terms of non-negative factors W and H
 
-<img src="image3.jpg" style="width:4.82396in" />
+![](nmf/image3.jpg)
 
 - Approximate each object (i.e.column of A) by a linear combination of k reduced dimensions or "basis vectors" in W
 - Each basis vector can be interpreted as a cluster. The memberships of objects in these clusters encoded by H
@@ -34,11 +34,11 @@ Given a non-negative matrix A, find k-dimension approximation in terms of non-ne
 
 Create a document term matrix with TF-IDF Vectorization:
 
-<img src="image5.jpg" style="width:3.07275in" />
+<img src="image5.jpg" style="width:4.07275in" />
 
 Resulting W and H:
 
-<img src="image4.jpg" style="width:4.6203in" />
+![](nmf/image4.jpg)
 
 Just like LDA, we will need to select the number of expected topics beforehand (the value of k)!
 

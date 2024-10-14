@@ -38,7 +38,7 @@ Let p and q be propositions. The biconditional statement p ↔ q is the proposit
 
 ### Logic Circuits
 
-<img src="image6.jpg" style="width:5.98423in" />
+![](logic/image6.jpg)
 
 ## Propositional Equivalences
 

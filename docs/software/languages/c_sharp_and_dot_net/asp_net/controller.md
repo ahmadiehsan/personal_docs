@@ -32,7 +32,7 @@ The Controller class inherited from ControllerBase and added some members that a
 
 ![](controller/image8.jpg)
 
-<img src="image21.jpg" style="width:5.9375in" />
+![](controller/image21.jpg)
 
 ## Methods
 

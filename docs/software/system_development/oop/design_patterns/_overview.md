@@ -28,7 +28,7 @@ That means the implementation and the client should be loosely coupled to avoid 
 
 ![](_overview/image2.png)
 
-<img src="image4.jpg" style="width:5.96361in" />
+![](_overview/image4.jpg)
 
 ## Design Pattern Relationships
 

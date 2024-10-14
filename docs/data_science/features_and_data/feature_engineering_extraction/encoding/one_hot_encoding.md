@@ -12,8 +12,26 @@ Considering we have the numeric representation of any categorical attribute with
 
 ## Example
 
-<img src="image3.jpg" style="width:4.79599in" />
+```python
+from sklearn.preprocessing import OneHotEncoder, LabelEncoder
 
-<img src="image1.jpg" style="width:5.12552in" />
+# transform and map pokemon generations
+gen_le = LabelEncoder()
+gen_labels = gen_le.fit_transform(poke_df['Generation'])
+poke_df['Gen_Label'] = gen_labels
 
-<img src="image2.jpg" style="width:5.17193in" />
+# encode generation labels using one-hot encoding scheme
+gen_ohe = OneHotEncoder()
+gen_feature_arr = gen_ohe.fit_transform(poke_df[['Gen_Label']]).toarray()
+
+gen_feature_labels = list(gen_le.classes_)
+gen_features = pd.DataFrame(gen_feature_arr, columns=gen_feature_labels)
+
+poke_df_ohe = pd.concat([poke_df_sub, gen_features, leg_features], axis=1)
+columns = sum([
+    ['Name', 'Generation', 'Gen_Label'],
+    gen_feature_labels,
+    ['Legendary', 'Lgnd_Label'],
+    leg_feature_labels
+], [])
+```

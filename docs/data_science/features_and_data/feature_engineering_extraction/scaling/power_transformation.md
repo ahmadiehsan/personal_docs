@@ -29,11 +29,30 @@ The resulting transformed output y is a function of input x and the transformati
 
 Let’s now apply the Box-Cox transform on our developer income feature. First we get the optimal lambda value from the data distribution by removing the non-null values as follows.
 
-<img src="image4.jpg" style="width:4.03312in" />
+```python
+income = np.array(fcc_survey_df['Income'])
+income_clean = income[~np.isnan(income)]
+l, opt_lambda = spstats.boxcox(income_clean)
+print('Optimal lambda value:', opt_lambda)
+
+# Output
+# ------
+# Optimal lambda value: 0.117991239456
+```
 
 Now that we have obtained the optimal λ value, let us use the Box-Cox transform for two values of λ such that λ = 0 and λ = λ(optimal) and transform the developer Income feature.
 
-<img src="image5.jpg" style="width:5.23312in" />
+```python
+fcc_survey_df['Income_boxcox_lambda_0'] = spstats.boxcox(
+    (1 + fcc_survey_df['Income']),
+    lmbda=0
+)
+
+fcc_survey_df['Income_boxcox_lambda_opt'] = spstats.boxcox(
+    fcc_survey_df['Income'],
+    lmbda=opt_lambda
+)
+```
 
 The transformed features are depicted in the above data frame. Just like we expected, Income\_log and Income\_boxcox\_lamba\_0 have the same values.
 

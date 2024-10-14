@@ -10,10 +10,21 @@ Often raw frequencies or counts may not be relevant for building a model based o
 
 ## Example
 
-With numpy
+With numpy:
 
-<img src="image1.jpg" style="width:4.8777in" />
+```python
+watched = np.array(popsong_df['listen_count'])
+watched[watched >= 1] = 1
+popsong_df['watched'] = watched
+```
 
-With scikit-learn
+With scikit-learn:
 
-<img src="image2.jpg" style="width:5.48228in" />
+```python
+from sklearn.preprocessing import Binarizer
+
+bn = Binarizer(threshold=0.9)
+pd_watched = bn.transform([popsong_df['listen_count']])[0]
+popsong_df['pd_watched'] = pd_watched
+popsong_df.head(11)
+```

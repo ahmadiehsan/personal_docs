@@ -5,7 +5,7 @@ copyright: ©2020-2024 Ehsan Ahmadi
 theme:
   name: material
   features:
-    - content.code.copy  # Add 'copy button' to each 'code block'
+    - content.code.copy  # Add "copy button" to each "code block"
   palette:
     - scheme: default
       primary: white
@@ -20,7 +20,7 @@ theme:
         icon: material/theme-light-dark
         name: Light mode
 extra:
-  generator: false  # Remove the 'made with MkDocs' label
+  generator: false  # Remove the "made with MkDocs" label
   social:
     - icon: fontawesome/solid/globe
       link: https://ahmadiehsan.ir
@@ -32,17 +32,22 @@ extra:
       link: https://t.me/ahmadi_ehsan
 plugins:
   - search
-  - awesome-pages  # Add better control over 'nav' with '.pages' files
-  - glightbox  # Add 'image lightbox' feature
+  - awesome-pages  # Add better control over "nav" with ".pages" files
+  - glightbox  # Add "image lightbox" feature
 markdown_extensions:
-  - pymdownx.superfences  # Add 'code blocks' support
-  - mdx_truly_sane_lists: # Add 'nested lists' support
+  - pymdownx.superfences  # Add "code blocks" support
+  - pymdownx.arithmatex:  # Add "inline math blocks" support
+      generic: true
+  - mdx_truly_sane_lists: # Add "nested lists" support
       truly_sane: false  # Allow for unlimited newlines between elements of a list
 extra_css:
   - _static/styles/iransans.css
   - _static/styles/hello_algo.css
   - _static/styles/hello_algo_overrides.css
+  - _static/styles/mathjax.css
   - _static/styles/extra.css
   - _static/styles/rtl.css
 extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - _static/js/mathjax.js
   - _static/js/extra.js
