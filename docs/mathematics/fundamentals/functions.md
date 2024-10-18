@@ -2,7 +2,7 @@
 
 ## Description
 
-Let $A$ and $B$ be nonempty sets. A function $f$ from $A$ to $B$ is an assignment of exactly one element of $B$ to each element of $A$. We write $f(a) = b$ if $b$ is the unique element of $B$ assigned by the function $f$ to the element a of $A$. If $f$ is a function from $A$ to $B$, we write $f: A → B$
+Let $A$ and $B$ be nonempty sets. A function $f$ from $A$ to $B$ is an assignment of exactly one element of $B$ to each element of $A$. We write $f(a) = b$ if $b$ is the unique element of $B$ assigned by the function $f$ to the element $a$ of $A$. If $f$ is a function from $A$ to $B$, we write $f: A → B$
 
 ## Result of Set Under a Function
 
@@ -10,9 +10,9 @@ Let $A$ and $B$ be nonempty sets. A function $f$ from $A$ to $B$ is an assignmen
 
 Let $f$ be a function from $A$ to $B$ and let $S$ be a subset of $A$. The image of $S$ under the function $f$ is the subset of $B$ that consists of the images of the elements of $S$. We denote the image of $S$ by $f(S)$, so
 
-$f(S) = {t ∣∃s∈S (t = f(s))}.$
+$f(S) = \{ t \mid \exists s \in S, \ t = f(s) \}$
 
-We also use the shorthand ${f(s) ∣ s ∈ S}$ to denote this set.
+We also use the shorthand $\{ f(s) \mid s \in S \}$ to denote this set.
 
 The image of a function is the set of all output values it may produce.
 
@@ -40,7 +40,7 @@ A function $f$ whose domain and codomain are subsets of the set of real numbers 
 
 ### Onto Function (Surjective)
 
-A function $f$ from $X$ to $Y$ is called onto, or a surjection, if and only if for every element $y ∈ Y$ there is at least an element $x ∈ X$ with $f(x) = y$.
+A function $f$ from $X$ to $Y$ is called onto, or a surjection, if and only if for every element $y \in Y$ there is at least an element $x \in X$ with $f(x) = y$.
 
 A function $f$ is called surjective if it is onto.
 
@@ -58,8 +58,8 @@ A function is invertible if and only if is a onto and one-to-one function.
 
 ## Composition
 
-Let g be a function from the set $A$ to the set $B$ and let $f$ be a function from the set $B$ to the set $C$. The composition of the functions $f$ and $g$, denoted for all $a ∈ A$ by $f◦g$, is the function from $A$ to $C$ deﬁned by
+Let $g$ be a function from the set $A$ to the set $B$ and let $f$ be a function from the set $B$ to the set $C$. The composition of the functions $f$ and $g$, denoted for all $a \in A$ by $f \circ g$, is the function from $A$ to $C$ deﬁned by
 
-$(f◦g)(a) = f(g(a))$
+$(f \circ g)(a) = f(g(a))$
 
 <img src="image4.jpg" style="width:5.83498in" />
