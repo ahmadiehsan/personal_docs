@@ -61,4 +61,4 @@ Well, this constraint is optional. Most of the time, you will be sending the sta
 
 Leonard Richardson analyzed a hundred different web service designs and divided these designs into four categories. These categories are based on how much the web services are REST compliant.
 
-<img src="image1.jpg" style="width:2.5in" />
+<img src="image1.jpg" style="width:4in" />

@@ -11,4 +11,4 @@
 
 ## Joins
 
-<img src="image2.jpg" style="width:5.45313in" />
+![](sql_commands/image2.jpg)

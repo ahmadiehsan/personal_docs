@@ -57,8 +57,8 @@ For our example, LDA might discover the following topics:
 
 With these topics, the document-topic distribution (θ) might look like this:
 
-- ​​θ​ 1 = \[0.9, 0.1\] (Document 1 is 90% about Topic 1 and 10% about Topic 2)
-- ​​θ​ 2 = \[0.8, 0.2\] (Document 2 is 80% about Topic 1 and 20% about Topic 2)
-- ​​θ​ 3 = \[0.1, 0.9\] (Document 3 is 10% about Topic 1 and 90% about Topic 2)
+- θ1 = \[0.9, 0.1\] (Document 1 is 90% about Topic 1 and 10% about Topic 2)
+- θ2 = \[0.8, 0.2\] (Document 2 is 80% about Topic 1 and 20% about Topic 2)
+- θ3 = \[0.1, 0.9\] (Document 3 is 10% about Topic 1 and 90% about Topic 2)
 
 In this example, topic 1 seems to be related to football and sports, while topic 2 seems to be related to technology and gadgets

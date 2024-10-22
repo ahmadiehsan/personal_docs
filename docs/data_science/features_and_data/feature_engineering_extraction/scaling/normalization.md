@@ -8,18 +8,24 @@ Also known as normalization, this technique scales the values of the feature to 
 
 Normal version:
 
-<img src="image2.jpg" style="width:3.1431in" />
+$$
+x' = \frac{x - \min(x)}{\max(x) - \min(x)}
+$$
+
+where $x$ is an original value, $x'$ is the normalized value.
 
 Generalized version (Restrict the range of values in the dataset between any arbitrary points a and b):
 
-<img src="image1.jpg" style="width:1.72507in" />
+$$
+X' = a + \frac{(X - X_{min})(b - a)}{X_{max} - X_{min}}
+$$
 
 ## Example
 
-<img src="image3.png" style="width:4.76997in" />
+<img src="image3.png" style="width:5in" />
 
 <span dir="rtl">برای اینپوت هایی (فیچر هایی) که خیلی دامنه متفاوتی با هم دارن از این تکنیک استفاده میکنیم.</span>
 
-<img src="image4.jpg" style="width:3.78615in" />
+<img src="image4.jpg" style="width:5in" />
 
 <span dir="rtl">تو تصویر بالا با استفاده از این تکنیک فیچر ها تو رنج های مشابه هم در اومدن که تو تصویر با اسم Normalized مشخص شده، تو این حالت سیستم خیلی سریع تر آموزش میبینه.</span>

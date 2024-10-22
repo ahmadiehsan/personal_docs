@@ -32,9 +32,9 @@ The LDA algorithm can be summarized in the following steps:
 
 6. Compute the eigenvectors and eigenvalues of the matrix using the following equation:
 
-  <img src="image3.jpg" style="width:0.6in" />
+  $S_w^{-1} * S_b$
 
-  Here, ​​S​  w​​​ is the within-class scatter matrix and ​​S​  b​​​ is the between-class scatter matrix.
+  Here, $S_w$ is the within-class scatter matrix and $S_b$ is the between-class scatter matrix.
 
 7. Select the top k eigenvectors with the highest eigenvalues as the new feature space.
 
@@ -44,7 +44,7 @@ The LDA algorithm can be summarized in the following steps:
 
 The new axis created according to two criteria (considered simultaneously)
 
-<img src="image6.jpg" style="width:4.02442in" />
+<img src="image6.jpg" style="width:5in" />
 
 ### Why Both Distance & Scatter Are Important
 

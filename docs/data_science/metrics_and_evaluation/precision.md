@@ -10,7 +10,9 @@ Precision proves valuable in scenarios where the expense associated with false p
 
 Precision is defined as the number of true positives divided by the number of true positives plus the number of false positives.
 
-<img src="image1.jpg" style="width:3.34242in" />
+$$
+\text{Precision} = \frac{\text{Relevant retrieved instances}}{\text{All retrieved instances}}
+$$
 
-- Relevant retrieved instances: Total correctly identified positive instances
-- All retrieved instances: Total instances predicted as positive
+- **Relevant retrieved instances:** Total correctly identified positive instances
+- **All retrieved instances:** Total instances predicted as positive

@@ -14,7 +14,7 @@ k-means clustering is a method of vector quantization, originally from signal pr
 - <span dir="rtl">علامت m هم نشون میده چنتا نقطه داریم</span>
 - <span dir="rtl">علامت k نشون دهنده تعداد centroid ها و کلاستر هاست</span>
 - <span dir="rtl">علامت n نشون میده هر نقطه چه تعداد فیچر تو خودش داره، مثلا تو تصویر بالا چون نمودار دو بعدیه پس هر نقطه دوتا فیچر داره (n=2)</span>
-- <span dir="rtl">علامت µ مشخصات موقعیت centroid ها هستن</span>
+- <span dir="rtl">علامت $\mu$ مشخصات موقعیت centroid ها هستن</span>
 - <span dir="rtl">چون ممکنه این سیستم تو لوکال مینیموم هاش گیر کنه، یعنی یه حالت دسته بندی ای پیش بیاد که تعداد زیادی از نقاط به یه centroid وصلن اما یه تعداد کمی فقط به یه centroid دیگه رسیده، لازمه این الگوریتم رو بین 50 تا 1000 بار اجرا کنیم و آخر سر اونی که cost function با عدد کمتری داشت رو انتخاب کنیم</span>
 
 ## Best Number For The K

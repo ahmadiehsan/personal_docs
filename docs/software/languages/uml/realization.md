@@ -9,6 +9,21 @@
 
 <img src="image2.png" style="width:3.53125in" />
 
-## Sample Code
+## Example
 
-![](realization/image1.jpg)
+```python
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def draw(self) -> None:
+        pass
+
+class Circle(Shape):
+    def draw(self) -> None:
+        print("Drawing a circle")
+
+class Square(Shape):
+    def draw(self) -> None:
+        print("Drawing a square")
+```

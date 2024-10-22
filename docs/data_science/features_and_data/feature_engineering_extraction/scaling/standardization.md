@@ -8,10 +8,17 @@ This technique transforms the feature values to have a mean of 0 and a standard 
 
 ## Formula
 
-<img src="image2.jpg" style="width:3.20001in" />
+$$
+Z = \frac{x - \mu}{\sigma}
+$$
+
+- $Z$ = standard score
+- $x$ = observed value
+- $\mu$ = mean of the sample
+- $\sigma$ = standard deviation of the sample
 
 ## Example
 
-<img src="image1.png" style="width:4.96014in" />
+![](standardization/image1.png)
 
-<span dir="rtl">مقدار σ برابر است با انحراف از معیار (standard deviation)</span>
+<span dir="rtl">مقدار $\sigma$ برابر است با انحراف از معیار (standard deviation)</span>

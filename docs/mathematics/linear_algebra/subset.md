@@ -16,8 +16,7 @@ The **linear span** (also called the linear hull or just span) of a set $S$ of v
 
 ## Linear Dependent & Linear Independent
 
-<img src="image1.jpg" style="width:4.94284in" />
+$S = \{v_1, v_2, \dots, v_n\}$ is **Linearly Dependent** $\iff$ $c_1v_1 + c_2v_2 + \dots + c_nv_n = \mathbf{0} = \begin{bmatrix} 0 \\ \vdots \\ 0 \end{bmatrix}$ for some $c_i$'s (not all) are zero (at least 1 is non-zero)
 
-A set of vectors is **linearly dependent** if there is a nontrivial linear combination of the vectors that equals 0.
-
-A set of vectors is **linearly independent** if the only linear combination of the vectors that equals 0 is the trivial linear combination (i.e., all coefficients = 0).
+- A set of vectors is **linearly dependent** if there is a nontrivial linear combination of the vectors that equals 0.
+- A set of vectors is **linearly independent** if the only linear combination of the vectors that equals 0 is the trivial linear combination (i.e., all coefficients = 0).

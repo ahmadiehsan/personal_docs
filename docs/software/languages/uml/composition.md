@@ -8,6 +8,14 @@
 
 <img src="image1.png" style="width:4.18048in" />
 
-## Sample Code
+## Example
 
-![](composition/image2.jpg)
+```python
+class Engine:
+    pass
+
+class Car:
+    def __init__(self) -> None:
+        # Composition with Engine
+        self.engine: Engine = Engine()
+```

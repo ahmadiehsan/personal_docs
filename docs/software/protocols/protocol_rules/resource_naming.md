@@ -19,7 +19,11 @@ In REST, you can view it as a single resource inside a resource collection. A do
 
 Use the "singular" name to denote the document resource archetype.
 
-<img src="image3.jpg" style="width:4.09583in" />
+```text
+http://api.example.com/device-management/managed-devices/{device-id}
+http://api.example.com/user-management/users/{id}
+http://api.example.com/user-management/users/admin
+```
 
 ## Collection
 
@@ -29,7 +33,11 @@ Clients may propose new resources to be added to a collection. However, it is up
 
 A collection resource chooses what it wants to contain and also decides the URIs of each contained resource.
 
-<img src="image2.jpg" style="width:4.09167in" />
+```text
+http://api.example.com/device-management/managed-devices
+http://api.example.com/user-management/users
+http://api.example.com/user-management/users/{id}/accounts
+```
 
 Use the "plural" name to denote the collection resource archetype.
 
@@ -41,7 +49,9 @@ A store never generates new URIs. Instead, each stored resource has a URI. The U
 
 Use "plural" name to denote store resource archetype.
 
-<img src="image1.jpg" style="width:4.08333in" />
+```text
+http://api.example.com/song-management/users/{id}/playlists
+```
 
 ## Controller
 
@@ -49,4 +59,7 @@ A controller resource models a procedural concept. Controller resources are like
 
 Use "verb" to denote the controller archetype.
 
-<img src="image4.jpg" style="width:4.1in" />
+```text
+http://api.example.com/cart-management/users/{id}/cart/checkout
+http://api.example.com/song-management/users/{id}/playlist/play
+```

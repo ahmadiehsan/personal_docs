@@ -11,19 +11,27 @@ This technique is similar to log transformation but allows for a broader range o
 
 ## Formula
 
-<img src="image3.jpg" style="width:1.52083in" />
+$$
+x_{transformed} = \frac{x^{\lambda} - 1}{\lambda}
+$$
 
-Here, x is the original feature value, and ​λ​ is the power parameter that is estimated using maximum likelihood.
+Here, $x$ is the original feature value, and $\lambda$ is the power parameter that is estimated using maximum likelihood.
 
 ## Box-Cox
 
 The Box-Cox transform is another popular function belonging to the power transform family of functions. **This function has a prerequisite that the numeric values to be transformed must be positive (similar to what log transform expects)**. In case they are negative, shifting using a constant value helps.
 
-<img src="image1.png" style="width:1.96282in" />
+$$
+y_i^{(\lambda)} =
+\begin{cases}
+\frac{y_i^{\lambda} - 1}{\lambda} & \text{if } \lambda \neq 0, \\
+\ln y_i & \text{if } \lambda = 0,
+\end{cases}
+$$
 
-The resulting transformed output y is a function of input x and the transformation parameter λ such that when λ = 0, the resultant transform is the natural log transform which we discussed earlier. The optimal value of λ is usually determined using a maximum likelihood or log-likelihood estimation.
+The resulting transformed output y is a function of input x and the transformation parameter $\lambda$ such that when $\lambda$ = 0, the resultant transform is the natural log transform which we discussed earlier. The optimal value of $\lambda$ is usually determined using a maximum likelihood or log-likelihood estimation.
 
-<img src="image2.png" style="width:4.04952in" />
+<img src="image2.png" style="width:5in" />
 
 ## Example
 
@@ -40,7 +48,7 @@ print('Optimal lambda value:', opt_lambda)
 # Optimal lambda value: 0.117991239456
 ```
 
-Now that we have obtained the optimal λ value, let us use the Box-Cox transform for two values of λ such that λ = 0 and λ = λ(optimal) and transform the developer Income feature.
+Now that we have obtained the optimal $\lambda$ value, let us use the Box-Cox transform for two values of $\lambda$ such that $\lambda = 0$ and $\lambda = \lambda_{optimal}$ and transform the developer Income feature.
 
 ```python
 fcc_survey_df['Income_boxcox_lambda_0'] = spstats.boxcox(

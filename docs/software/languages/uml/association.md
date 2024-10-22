@@ -13,6 +13,14 @@
 - The Food relation is a Dependency
 - The Address relation is the Association
 
-## Sample Code
+## Example
 
-![](association/image2.jpg)
+```python
+class ClassA:
+    pass
+
+class ClassB:
+    def __init__(self, objA: ClassA) -> None:
+        # Association with ClassA
+        self.objA = objA
+```

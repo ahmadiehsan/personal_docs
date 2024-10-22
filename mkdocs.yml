@@ -34,7 +34,26 @@ plugins:
   - search
   - awesome-pages  # Add better control over "nav" with ".pages" files
   - glightbox  # Add "image lightbox" feature
+  - minify:  # Minify HTML, CSS, and JS files
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+      css_files:
+        - _static/styles/iransans.css
+        - _static/styles/hello_algo.css
+        - _static/styles/hello_algo_overrides.css
+        - _static/styles/mathjax.css
+        - _static/styles/extra.css
+        - _static/styles/rtl.css
+      js_files:
+        - _static/js/mathjax.js
+        - _static/js/extra.js
 markdown_extensions:
+  - admonition  # Add "alert" support
+  - pymdownx.details  # Need for "alert" support
   - pymdownx.superfences:  # Add "code blocks" support
       custom_fences:
         - name: mermaid  # Add "diagram" support
