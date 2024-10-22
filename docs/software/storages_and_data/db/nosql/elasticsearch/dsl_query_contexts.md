@@ -8,7 +8,9 @@ Query context is in effect whenever a query clause is passed to a query paramete
 
 - The **query** parameter in the search API.
 
-![](dsl_query_contexts/image1.png)
+  !!! info
+
+      Use query clauses in query context for conditions which should affect the score of matching documents (i.e. how well does the document match), and use all other query clauses in filter context.
 
 ## Filter
 

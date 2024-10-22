@@ -1,6 +1,6 @@
 # Welcome
 
-![Welcome Image](index/welcome.jpg)
+![](index/welcome.jpg)
 
 Hello! 👋
 

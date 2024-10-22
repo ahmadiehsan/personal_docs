@@ -8,6 +8,18 @@
 
 <img src="image1.png" style="width:4.18092in" />
 
-## Sample Code
+## Example
 
-![](aggregation/image2.jpg)
+```python
+class Department:
+    def __init__(self, name: str) -> None:
+        self.name: str = name
+
+class University:
+    def __init__(self) -> None:
+        # Aggregation with Department
+        self.departments: List[Department] = []
+
+    def add_department(self, department: Department) -> None:
+        self.departments.append(department)
+```

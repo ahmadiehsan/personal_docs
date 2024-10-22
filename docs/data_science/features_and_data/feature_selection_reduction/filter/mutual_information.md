@@ -12,6 +12,9 @@ In practical applications, mutual information **is often employed alongside othe
 
 Mathematically, the mutual information between two discrete random variables, X and Y, can be defined as follows:
 
-<img src="image1.png" style="width:3.22525in" />
+$$
+I(X; Y) = \sum_{x \in X} \sum_{y \in Y} P(x, y) \log \left( \frac{P(x, y)}{P(x) P(y)} \right)
+$$
 
-In the given equation, p(x, y) represents the joint probability mass function of X and Y, while p(x) and p(y) denote the marginal probability mass functions of X and Y, respectively.
+- $P(x, y)$ represents the joint probability mass function of $X$ and $Y$.
+- $P(x)$ and $P(y)$ denote the marginal probability mass functions of $X$ and $Y$, respectively.

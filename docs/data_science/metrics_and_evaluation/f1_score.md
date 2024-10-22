@@ -27,12 +27,30 @@ F1 micro is useful when you want to evaluate the overall performance of a classi
 
 Normal:
 
-<img src="image2.jpg" style="width:2.10761in" />
+$$
+F_1 = 2 * \frac{precision * recall}{precision + recall}
+$$
 
 Macro:
 
-<img src="image1.jpg" style="width:1.5375in" />
+$$
+F1_{Macro} = \frac{1}{n} \sum_{i} F1_i
+$$
 
 Micro:
 
-<img src="image3.jpg" style="width:3.94167in" />
+The micro-averaged F1 score is based on the global precision and recall:
+
+$$
+F1_{Micro} = 2 * \frac{Global \, Precision * Global \, Recall}{Global \, Precision + Global \, Recall}
+$$
+
+Where:
+
+$$
+Global \, Precision = \frac{\sum True \, Positives}{\sum True \, Positives + \sum False \, Positives}
+$$
+
+$$
+Global \, Recall = \frac{\sum True \, Positives}{\sum True \, Positives + \sum False \, Negatives}
+$$

@@ -11,6 +11,15 @@
 - The Food relation is a Dependency
 - The Address relation is the Association
 
-## Sample Code
+## Example
 
-![](dependency/image2.jpg)
+```python
+class ClassA:
+    def do_something(self) -> None:
+        pass
+
+class ClassB:
+    def method(self, objA: ClassA) -> None:
+        # Dependency on ClassA
+        objA.do_something()
+```

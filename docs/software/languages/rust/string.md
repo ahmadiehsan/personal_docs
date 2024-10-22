@@ -2,18 +2,41 @@
 
 ## Variances
 
-![](string/image4.jpg)
+```rust
+let hello: String = String::from("नमस्ते");
+
+// Bytes
+// [224, 164, 168, 224, 164, 174, 224, 164, 184, 224, 165, 141, 224, 164, 164, 224, 165, 135]
+
+// Scalar values
+// ['न', 'म', 'स्', 'त', 'े']
+
+// Grapheme clusters
+// ["न", "म", "स्", "ते"]
+```
 
 ## Loop
 
 - Bytes
 
-  <img src="image1.jpg" style="width:3.87083in" />
+  ```rust
+  for b: u8 in "नमस्ते".bytes() {
+      println!("{}", b);
+  }
+  ```
 
 - Scalar
 
-  <img src="image2.jpg" style="width:3.275in" />
+  ```rust
+  for c: char in "नमस्ते".chars() {
+      println!("{}", c);
+  }
+  ```
 
 - Grapheme
 
-  <img src="image3.jpg" style="width:4.09583in" />
+  ```rust
+  for g: &str in "नमस्ते".graphemes(is_extended: true) {
+      println!("{}", g);
+  }
+  ```

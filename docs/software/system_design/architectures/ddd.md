@@ -59,7 +59,7 @@ Glossary:
 
 ![](ddd/image11.jpg)
 
-<img src="image5.jpg" style="width:5.19225in" />
+Where to fire the event? In Application service. Domain layer should not know about how to fire the event.
 
 - <span dir="rtl">سر یک واقعه خاص ریز می‌شود و هرکی خواست کشش می‌کنه و بسته به اون دیتای خودشو آپدیت می‌کنه</span>
 - <span dir="rtl">در دل domain ساخته میشوند اما در دل application service ریز میشوند، چون ارتباط با لایه دیتا به وسیله application service انجام میشه و در صورت بروز خطا تو این لایه نباید event ریز بشه</span>
@@ -86,9 +86,9 @@ Glossary:
 
 ### Application Service
 
-<img src="image9.jpg" style="width:5.85754in" />
+Can handle validations, data mappings, transaction management and security
 
-<img src="image8.jpg" style="width:4.24529in" />
+![](ddd/image9.jpg)
 
 ### Domain vs Application
 
@@ -98,4 +98,4 @@ Domain services hold domain logic whereas application services don’t
 
 ![](ddd/image6.jpg)
 
-<img src="image4.png" style="width:5.87115in" />
+![](ddd/image4.png)

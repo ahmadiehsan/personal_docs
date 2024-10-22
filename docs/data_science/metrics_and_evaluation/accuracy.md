@@ -11,7 +11,9 @@ For example, if the test set was 100 messages and our model correctly predicted 
 
 ## Formula
 
-<img src="image1.jpg" style="width:5.17959in" />
+$$
+\text{Accuracy} = \dfrac{(\text{True Positives} + \text{True Negatives})}{(\text{True Positives} + \text{True Negatives} + \text{False Positives} + \text{False Negatives})}
+$$
 
 ## Examples
 

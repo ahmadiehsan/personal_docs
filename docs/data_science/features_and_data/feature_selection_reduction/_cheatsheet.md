@@ -30,7 +30,10 @@ Techniques:
 
 - **Filter Method:** We can perform various statistical tests between features & responses to identify which features are more relevant than others.
 
-  <img src="image1.png" style="width:5.30054in" />
+  | Feature\Response | Continuous            | Categorical  |
+  |------------------|-----------------------|--------------|
+  | Continuous       | Pearson’s Correlation | LDA          |
+  | Categorical      | Anova                 | Chi-Square   |
 
   *Please note that above methods don't identify or deal with multicollinearity, we need to figure that out separately.*
 
@@ -40,11 +43,11 @@ Techniques:
    - backward elimination
    - recursive elimination
 
-  <img src="image6.png" style="width:3.92905in" />
+  <img src="image6.png" style="width:4.5in" />
 
 - **Embedded Methods (Regularisation):** This method makes use of the filter & wrapper method, it is implemented using algos which have their own built-in feature selection methods.
 
-  <img src="image2.png" style="width:3.12368in" />
+  <img src="image2.png" style="width:4.5in" />
 
 ## Noise In Record
 
@@ -54,8 +57,8 @@ Techniques:
 
 - **K-fold Validation:** In this method, we can look at the cross validation score of each fold and analyse the folds which have poor CV scores, what are the common attributes of records having poor scores, etc.
 
-  <img src="image3.png" style="width:4.22512in" />
+  <img src="image3.png" style="width:4.5in" />
 
 - **Manual Method:** Here we can evaluate the CV of each record (predicted vs. actual) and filter/analyse the records having a poor CV score. This will help us in analysing why this is happening in the first place.
 
-  <img src="image4.png" style="width:3.97082in" />
+  <img src="image4.png" style="width:4.5in" />

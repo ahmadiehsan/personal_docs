@@ -10,6 +10,10 @@ The prevalent correlation coefficient employed for feature selection is the Pear
 
 Its calculation involves dividing the covariance between the two variables by the product of their standard deviations, as depicted in the following equation:
 
-<img src="image1.png" style="width:1.63021in" />
+$$
+r = \frac{cov(X, Y)}{std(X) \cdot std(Y)}
+$$
 
-In the given equation, X and Y represent the two variables of interest, cov() denotes the covariance function, and std() represents the standard deviation function.
+- $X$ and $Y$ represent the two variables of interest.
+- $cov()$ denotes the covariance function.
+- $std()$ represents the standard deviation function.

@@ -6,4 +6,4 @@ A pattern used to manage transactions that span multiple microservices. It invol
 
 Manages transactions spanning multiple services by breaking them into steps and providing compensating actions if something goes wrong.
 
-<img src="image1.jpg" style="width:5.69787in" />
+![](saga/image1.jpg)

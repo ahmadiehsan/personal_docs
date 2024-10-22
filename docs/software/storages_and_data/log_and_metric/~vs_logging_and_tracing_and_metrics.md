@@ -2,4 +2,4 @@
 
 ## Description
 
-<img src="image1.gif" style="width:4.97079in" />
+![](~vs_logging_and_tracing_and_metrics/image1.gif)

@@ -8,7 +8,7 @@
 
 Considering we have the numeric representation of any categorical attribute with m labels (after transformation), the one-hot encoding scheme encodes or transforms the attribute into m binary features which can only contain a value of 1 or 0. Each observation in the categorical feature is thus converted into a vector of size m with only one of the values as 1 (indicating it as active).
 
-<img src="image4.jpg" style="width:2.66822in" />
+<img src="image4.jpg" style="width:3.5in" />
 
 ## Example
 

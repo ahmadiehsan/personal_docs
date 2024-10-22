@@ -18,7 +18,9 @@ In a declarative query language, like SQL or relational algebra, you just specif
 
 When SQL was defined, it followed the structure of the relational algebra fairly closely:
 
-![](glossary/image1.png)
+```sql
+SELECT * FROM animals WHERE family = 'Sharks';
+```
 
 ## Imperative Query Language
 
@@ -26,4 +28,14 @@ An imperative language tells the computer to perform certain operations in a cer
 
 Many commonly used programming languages are imperative. For example, if you have a list of animal species, you might write something like this to return only the sharks in the list:
 
-![](glossary/image2.png)
+```javascript
+function getSharks() {
+  var sharks = [];
+  for (var i = 0; i < animals.length; i++) {
+    if (animals[i].family === "Sharks") {
+      sharks.push(animals[i]);
+    }
+  }
+  return sharks;
+}
+```

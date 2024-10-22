@@ -371,7 +371,7 @@ Content-Type: application/json; charset=utf-8
 
 - استفاده از token introspection به این معناست که ، هر resource server ای برای تعیین این که access token ای که ارسال کرده است active هست یا نه میتواند به این endpoint اتکا کند. (مثلا گوگل کلی resource server متفاوت که برخی از آنها در عکس زیر آمده است دارد که برای همه آنها به از endpoint برای راستی آزمایی access token استفاده می کنند)
 
-  ![google-apis](oauth/google-apis.png)
+  ![](oauth/google-apis.png)
 
 - introspection endpoint صرفا فقط مسئولیت تصمیم گیری در مورد موفقیت درخواست های API را برعهدا دارد.
 - introspection endpoint باید تمام چک های لازم و مناسب را برای access token انجام دهد، اعم از token's state و token's exp و token's signature .

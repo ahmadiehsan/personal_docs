@@ -20,6 +20,6 @@ The LASSO method works by finding the solution for the following optimization pr
 
 <img src="image1.png" style="width:2.00388in" />
 
-In the given equation, vector y represents the target variable, X denotes the feature matrix, w signifies the vector of regression coefficients, λ is a hyperparameter dictating the intensity of the penalty term, and ||w|| 1 stands for the 𝓁 1 norm of the coefficients (that is, the sum of their absolute values).
+In the given equation, vector y represents the target variable, X denotes the feature matrix, w signifies the vector of regression coefficients, $\lambda$ is a hyperparameter dictating the intensity of the penalty term, and ||w|| 1 stands for the 𝓁 1 norm of the coefficients (that is, the sum of their absolute values).
 
-The inclusion of the 𝓁 1 penalty term in the objective function prompts the model to precisely zero out certain coefficients, essentially eliminating the associated features from the model. The degree of penalty strength is governed by the λ hyperparameter, which can be fine-tuned through the use of cross-validation.
+The inclusion of the 𝓁 1 penalty term in the objective function prompts the model to precisely zero out certain coefficients, essentially eliminating the associated features from the model. The degree of penalty strength is governed by the $\lambda$ hyperparameter, which can be fine-tuned through the use of cross-validation.

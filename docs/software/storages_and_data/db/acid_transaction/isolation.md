@@ -80,7 +80,13 @@ This isolation level can greatly increase concurrency at a lower cost than trans
 
 ## Which transaction isolation to choose
 
-<img src="image8.jpg" style="width:4.99656in" />
+| Isolation level      | Dirty read | Nonrepeatable read | Phantom |
+|----------------------|------------|--------------------|---------|
+| **Read uncommitted** | Yes        | Yes                | Yes     |
+| **Read committed**   | No         | Yes                | Yes     |
+| **Repeatable read**  | No         | No                 | Yes     |
+| **Snapshot**         | No         | No                 | No      |
+| **Serializable**     | No         | No                 | No      |
 
 The choice of transaction isolation level depends on the details of each specific case. These hints may be helpful, but please consider each situation individually.
 

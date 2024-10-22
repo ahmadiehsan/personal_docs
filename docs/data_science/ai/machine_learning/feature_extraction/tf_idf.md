@@ -15,7 +15,7 @@ The vectorization process is similar to One Hot Encoding. Alternatively, the val
 
 ## Example
 
-As an example, let’s find the TF-IDF values ​​for 3 documents consisting of 1 sentence.
+As an example, let’s find the TF-IDF values for 3 documents consisting of 1 sentence.
 
 - He is Walter
 - He is William
@@ -23,7 +23,7 @@ As an example, let’s find the TF-IDF values ​​for 3 documents consisting o
 
 In the above example, "He" is used in all 3 documents, "is" is in 2 documents, and "or" is in only one document. According to these, let’s find the TF and then the IDF values, respectively.
 
-TF: Values ​​are calculated according to the above example, it will be:
+TF: Values are calculated according to the above example, it will be:
 
 - 0.33, 0.33, 0.33
 - 0.33, 0.33, 0.33
@@ -35,9 +35,9 @@ IDF: In this example, the base value of the logarithm to be taken is determined 
 - "is": Log(3/2):0.1761
 - "or, Peter, ..": log(3/1) : 0.4771
 
-Thus, both TF and IDF values ​​were obtained. If vectorization is created with these values, firstly a vector consisting of elements equal to the number of unique words in all documents is created for each document (in this example, there are 8 terms). At this stage, there is a problem to be solved. As seen in the term "He", since the IDF value is 0, the TF-IDF value will also be zero. However, words that are not included in the document during the vectorization process (for example, the phrase "Peter" is not included in the 1st sentence) will be assigned a value of 0. In order to avoid confusion here, TF-IDF values ​​are smoothed for vectorization. The most common method is to add 1 to the obtained values.
+Thus, both TF and IDF values were obtained. If vectorization is created with these values, firstly a vector consisting of elements equal to the number of unique words in all documents is created for each document (in this example, there are 8 terms). At this stage, there is a problem to be solved. As seen in the term "He", since the IDF value is 0, the TF-IDF value will also be zero. However, words that are not included in the document during the vectorization process (for example, the phrase "Peter" is not included in the 1st sentence) will be assigned a value of 0. In order to avoid confusion here, TF-IDF values are smoothed for vectorization. The most common method is to add 1 to the obtained values.
 
-Depending on the purpose, normalization can be applied to these values ​​later. If the vectorization process is created according to the above-mentioned:
+Depending on the purpose, normalization can be applied to these values later. If the vectorization process is created according to the above-mentioned:
 
 - 1\. , 1.1761 , 1.4771 , 0. , 0. , 0. , 0. , 0.
 - 1\. , 1.1761 , 0. , 1.4771 , 0. , 0. , 0. , 0.

@@ -8,7 +8,7 @@ A **master database** generally only **supports write operations**. A **slave da
 
 All the data-modifying commands like insert, delete, or update must be sent to the master database. Most applications require a much higher ratio of reads to writes; thus, the number of slave databases in a system is usually larger than the number of master databases.
 
-<img src="image1.png" style="width:2.76332in" />
+<img src="image1.jpg" style="width:4in" />
 
 Possible replication approaches:
 

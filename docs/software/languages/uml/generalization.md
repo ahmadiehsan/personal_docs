@@ -9,6 +9,18 @@
 
 <img src="image1.png" style="width:4.69271in" />
 
-## Sample Code
+## Example
 
-![](generalization/image2.jpg)
+```python
+class Animal:
+    def make_sound(self) -> None:
+        pass
+
+class Dog(Animal):
+    def make_sound(self) -> None:
+        print("Woof!")
+
+class Cat(Animal):
+    def make_sound(self) -> None:
+        print("Meow!")
+```

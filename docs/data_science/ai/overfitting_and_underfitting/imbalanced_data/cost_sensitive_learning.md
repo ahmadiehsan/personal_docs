@@ -23,6 +23,6 @@ To incorporate the cost matrix into the training process, we can modify the stan
 
 <img src="image1.jpg" style="width:3.78212in" />
 
-Here, y is the true label (either 0 or 1),​​ ˆ y​​ is the predicted probability of the positive class, and ​​w​  pos ​and w​ neg​​​ are weights that are assigned to the positive and negative classes, respectively.
+Here, y is the true label (either 0 or 1),ˆy is the predicted probability of the positive class, and w pos and w neg are weights that are assigned to the positive and negative classes, respectively.
 
-The weights, ​​w​  pos ​and ​​w​  neg, can be determined by the costs assigned in the confusion matrix. For example, if we assign a higher cost to false negatives (that is, misclassifying a positive example as negative), we may set ​​w​  pos ​​to a higher value than ​​w​  neg.
+The weights, w pos and w neg, can be determined by the costs assigned in the confusion matrix. For example, if we assign a higher cost to false negatives (that is, misclassifying a positive example as negative), we may set w pos to a higher value than w neg.
