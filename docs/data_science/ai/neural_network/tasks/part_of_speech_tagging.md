@@ -14,7 +14,7 @@ POS tagging can be performed using different approaches such as:
 
 Involve defining a set of rules or patterns that can be used to automatically tag words in a text with their corresponding parts of speech, such as nouns, verbs, adjectives, and so on.
 
-The process involves defining a set of rules or patterns for identifying the different parts of speech in a sentence. For example, a rule may state that any word ending in “-ing” is a gerund (a verb acting as a noun), while another rule may state that any word preceded by an article such as “a” or “an” is likely a noun.
+The process involves defining a set of rules or patterns for identifying the different parts of speech in a sentence. For example, a rule may state that any word ending in "-ing" is a gerund (a verb acting as a noun), while another rule may state that any word preceded by an article such as "a" or "an" is likely a noun.
 
 These rules are typically based on linguistic knowledge, such as knowledge of grammar and syntax, and are often specific to a particular language. They can also be supplemented with lexicons or dictionaries that provide additional information about the meanings and usage of words.
 

@@ -4,7 +4,7 @@
 
 <img src="image3.jpg" style="width:4.23438in" />
 
-The Principle of Least Knowledge guides us to reduce the interactions between objects to just a few close “friends.”
+The Principle of Least Knowledge guides us to reduce the interactions between objects to just a few close "friends."
 
 It means when you are designing a system, for any object, be careful of the number of classes it interacts with and also how it comes to interact with those classes.
 

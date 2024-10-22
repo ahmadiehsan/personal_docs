@@ -2,7 +2,7 @@
 
 ## Description
 
-Let $A$ and $B$ be nonempty sets. A function $f$ from $A$ to $B$ is an assignment of exactly one element of $B$ to each element of $A$. We write $f(a) = b$ if $b$ is the unique element of $B$ assigned by the function $f$ to the element $a$ of $A$. If $f$ is a function from $A$ to $B$, we write $f: A → B$
+Let $A$ and $B$ be nonempty sets. A function $f$ from $A$ to $B$ is an assignment of exactly one element of $B$ to each element of $A$. We write $f(a) = b$ if $b$ is the unique element of $B$ assigned by the function $f$ to the element $a$ of $A$. If $f$ is a function from $A$ to $B$, we write $f: A \rightarrow B$
 
 ## Result of Set Under a Function
 
@@ -16,13 +16,15 @@ We also use the shorthand $\{ f(s) \mid s \in S \}$ to denote this set.
 
 The image of a function is the set of all output values it may produce.
 
-<img src="image1.jpg" style="width:1.90163in" />
+$f$ is a function from domain $X$ to codomain $Y$. The yellow oval inside $Y$ is the image of $f$.
+
+<img src="image5.jpg" style="width:2.5in" />
 
 ### Preimage
 
 For a given function, the set of all elements of the domain that are mapped into a given subset of the codomain.
 
-<img src="image6.png" style="width:0.63031in" />
+$f^{-1}(Y)$
 
 ## Function Types
 
@@ -32,7 +34,21 @@ A function $f$ is said to be one-to-one, or an injection, if and only if $f(x) =
 
 A function is said to be injective if it is one-to-one.
 
-<img src="image3.jpg" style="width:1.13368in" />
+```mermaid
+graph LR
+  subgraph X
+    1
+    2
+  end
+
+  subgraph Y
+    A
+    B
+  end
+
+  1 --> A
+  2 --> B
+```
 
 ### Increasing and Decreasing Function
 
@@ -44,7 +60,26 @@ A function $f$ from $X$ to $Y$ is called onto, or a surjection, if and only if f
 
 A function $f$ is called surjective if it is onto.
 
-<img src="image2.jpg" style="width:1.02559in" />
+```mermaid
+graph LR
+  subgraph X
+    1
+    2
+    3
+    4
+  end
+
+  subgraph Y
+    A
+    B
+    C
+  end
+
+  1 --> A
+  2 --> B
+  3 --> C
+  4 --> C
+```
 
 ### Identity Function
 

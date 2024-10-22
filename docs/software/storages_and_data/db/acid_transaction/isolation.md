@@ -10,7 +10,7 @@ Database isolation defines the degree to which a transaction must be isolated fr
 
 ### Dirty Reads
 
-A transaction reads data written by a concurrent uncommitted transaction. (uncommitted data is called “dirty.”)
+A transaction reads data written by a concurrent uncommitted transaction. (uncommitted data is called "dirty.")
 
 <img src="image10.png" style="width:3.10947in" />
 

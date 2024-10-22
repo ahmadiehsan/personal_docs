@@ -275,7 +275,7 @@
 
    3. After installation, boot-repair will get automatically launched
 
-   4. Make sure to select “recommended repair” option to repair grub. Reboot
+   4. Make sure to select "recommended repair" option to repair grub. Reboot
 
    5. You will now have a Grub menu on boot, where you can choose from Ubuntu, and Windows
 
