@@ -10,7 +10,9 @@ The expectation of a random variable is a number that attempts to capture the ce
 
 It is defined as the probability-weighted sum of all possible values in the random variable's support.
 
-<img src="image1.jpg" style="width:1.9125in" />
+$$
+E(X) = \mu = \sum xP(x)
+$$
 
 ## Example
 

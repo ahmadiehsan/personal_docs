@@ -48,4 +48,15 @@ Let $U$ be the universal set. The complement of the set $A$, denoted by $-A$, is
 
 ### Identities
 
-<img src="image3.jpg" style="width:4.55767in" />
+| Identity                                                                                               | Name                |
+|--------------------------------------------------------------------------------------------------------|---------------------|
+| $A \cap U = A$ <br> $A \cup \emptyset = A$                                                             | Identity laws       |
+| $A \cup U = U$ <br> $A \cap \emptyset = \emptyset$                                                     | Domination laws     |
+| $A \cup A = A$ <br> $A \cap A = A$                                                                     | Idempotent laws     |
+| $\overline{(\bar{A})} = A$                                                                             | Complementation law |
+| $A \cup B = B \cup A$ <br> $A \cap B = B \cap A$                                                       | Commutative laws    |
+| $A \cup (B \cup C) = (A \cup B) \cup C$ <br> $A \cap (B \cap C) = (A \cap B) \cap C$                   | Associative laws    |
+| $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$ <br> $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ | Distributive laws   |
+| $\overline{A \cap B} = \bar{A} \cup \bar{B}$ <br> $\overline{A \cup B} = \bar{A} \cap \bar{B}$         | De Morgan’s laws    |
+| $A \cup (A \cap B) = A$ <br> $A \cap (A \cup B) = A$                                                   | Absorption laws     |
+| $A \cup \bar{A} = U$ <br> $A \cap \bar{A} = \emptyset$                                                 | Complement laws     |

@@ -6,8 +6,15 @@ The standard deviation is the average amount of variability in your dataset. It 
 
 ## Formula
 
-<img src="image2.jpg" style="width:3.6163in" />
+$$
+\sigma = \sqrt{\frac{\sum{(x_i - \mu)^2}}{N}}
+$$
+
+- $\sigma$ = population standard deviation
+- $N$ = the size of the population
+- $x_i$ = each value from the population
+- $\mu$ = the population mean
 
 ## Example
 
-<img src="image1.jpg" style="width:5.03819in" />
+<img src="image1.jpg" style="width:5.5in" />

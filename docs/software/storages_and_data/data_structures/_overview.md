@@ -7,7 +7,7 @@ All data structures are implemented based on arrays, linked lists, or a combinat
 - **Array-based implementations:** Stacks, Queues, Hash Tables, Trees, Heaps, Graphs, Matrices, Tensors
 - **Linked-list-based implementations:** Stacks, Queues, Hash Tables, Trees, Heaps, Graphs, etc.
 
-Data structures implemented based on arrays are also called “**Static Data Structures**” meaning their **length cannot be changed** after initialization. Conversely, those based on linked lists are called “**Dynamic Data Structures**” which can still **adjust their size during program execution**.
+Data structures implemented based on arrays are also called "**Static Data Structures**" meaning their **length cannot be changed** after initialization. Conversely, those based on linked lists are called "**Dynamic Data Structures**" which can still **adjust their size during program execution**.
 
 ## Logical Structure
 

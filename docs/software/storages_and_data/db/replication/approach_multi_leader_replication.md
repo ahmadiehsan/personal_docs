@@ -12,6 +12,6 @@ As multi-leader replication is a somewhat retrofitted feature in many databases,
 
 ## Conflict Resolution
 
-Although multi-leader replication has advantages, it also has a big downside: the same data may be concurrently modified in two different data centers, and those write conflicts must be resolved (indicated as “conflict resolution” in the above picture)
+Although multi-leader replication has advantages, it also has a big downside: the same data may be concurrently modified in two different data centers, and those write conflicts must be resolved (indicated as "conflict resolution" in the above picture)
 
 ![](approach_leaderless_replication/image1.jpg)

@@ -482,7 +482,7 @@ yaXRlIn0.QiIrnmaC4VrbAYAsu0YPeuJ992p20fSxrXWPLw-gkFA
   ```json
   {
      "typ": "JWT",
-     "alg": "HS256”
+     "alg": "HS256"
   }
   ```
 

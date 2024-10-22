@@ -2,7 +2,7 @@
 
 ## Description
 
-Quoted from Wikipedia: “Database replication can be used in many database management systems, usually with a master/slave relationship between the original (master) and the copies (slaves)”
+Quoted from Wikipedia: "Database replication can be used in many database management systems, usually with a master/slave relationship between the original (master) and the copies (slaves)"
 
 A **master database** generally only **supports write operations**. A **slave database** gets copies of the data from the master database and only **supports read operations**.
 

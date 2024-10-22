@@ -2,4 +2,14 @@
 
 ## Description
 
-<img src="image1.jpg" style="width:3.07274in" />
+Variance:
+
+$$
+\sigma^2 = \frac{\sum_{i=1}^{N}(x_i - \mu)^2}{N}
+$$
+
+Standard deviation:
+
+$$
+\sigma = \sqrt{\frac{\sum_{i=1}^{N}(x_i - \mu)^2}{N}}
+$$

@@ -17,7 +17,7 @@ A document resource is a singular concept that is akin to an object instance or 
 
 In REST, you can view it as a single resource inside a resource collection. A document’s state representation typically includes both fields with values and links to other related resources.
 
-Use the “singular” name to denote the document resource archetype.
+Use the "singular" name to denote the document resource archetype.
 
 <img src="image3.jpg" style="width:4.09583in" />
 
@@ -31,7 +31,7 @@ A collection resource chooses what it wants to contain and also decides the URIs
 
 <img src="image2.jpg" style="width:4.09167in" />
 
-Use the “plural” name to denote the collection resource archetype.
+Use the "plural" name to denote the collection resource archetype.
 
 ## Store
 
@@ -39,7 +39,7 @@ A store is a **client-managed resource repository**. A store resource lets an AP
 
 A store never generates new URIs. Instead, each stored resource has a URI. The URI was chosen by a client when the resource was initially put into the store.
 
-Use “plural” name to denote store resource archetype.
+Use "plural" name to denote store resource archetype.
 
 <img src="image1.jpg" style="width:4.08333in" />
 
@@ -47,6 +47,6 @@ Use “plural” name to denote store resource archetype.
 
 A controller resource models a procedural concept. Controller resources are like executable functions, with parameters and return values, inputs, and outputs.
 
-Use “verb” to denote the controller archetype.
+Use "verb" to denote the controller archetype.
 
 <img src="image4.jpg" style="width:4.1in" />

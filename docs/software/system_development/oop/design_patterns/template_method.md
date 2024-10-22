@@ -17,4 +17,4 @@ This pattern is all about creating a template for an algorithm.
 
 ## Hooked on Template Method
 
-A hook is a method that is declared in the abstract class, but only given an empty or default implementation. This gives subclasses the ability to “hook into” the algorithm at various points if they wish; a subclass is also free to ignore the hook.
+A hook is a method that is declared in the abstract class, but only given an empty or default implementation. This gives subclasses the ability to "hook into" the algorithm at various points if they wish; a subclass is also free to ignore the hook.

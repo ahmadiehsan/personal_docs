@@ -5,6 +5,7 @@ repos:
     rev: v4.6.0
     hooks:
       - id: check-yaml
+        args: ["--unsafe"]
       - id: end-of-file-fixer
         stages: [commit]
       - id: trailing-whitespace

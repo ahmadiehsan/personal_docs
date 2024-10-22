@@ -42,9 +42,9 @@ Latent Dirichlet Allocation (LDA) is a generative statistical model used in NLP 
 
 Suppose we have a collection of three documents:
 
-- Document 1: “I love playing football with my friends.”
-- Document 2: “The football match was intense and exciting.”
-- Document 3: “My new laptop has an amazing battery life and performance.”
+- Document 1: "I love playing football with my friends."
+- Document 2: "The football match was intense and exciting."
+- Document 3: "My new laptop has an amazing battery life and performance."
 
 We want to discover two topics (K = 2) in this document collection.
 
@@ -52,8 +52,8 @@ After the algorithm converges or reaches the maximum number of iterations, we ca
 
 For our example, LDA might discover the following topics:
 
-- Topic 1: {“football”, “playing”, “friends”, “match”, “intense”, “exciting”}
-- Topic 2: {“laptop”, “battery”, “life”, “performance”}
+- Topic 1: {"football", "playing", "friends", "match", "intense", "exciting"}
+- Topic 2: {"laptop", "battery", "life", "performance"}
 
 With these topics, the document-topic distribution (θ) might look like this:
 
