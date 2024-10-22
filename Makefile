@@ -36,6 +36,12 @@ requirements.install:
 	pip-sync requirements/compiled/dev.txt
 
 # =========================
+# Scripts
+# =====
+scripts.detect_dangling_images:
+	python scripts/detect_dangling_images.py
+
+# =========================
 # App (Main Application)
 # =====
 app.serve:

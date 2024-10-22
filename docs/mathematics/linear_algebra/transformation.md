@@ -28,8 +28,8 @@ We can always show a linear transformation via a matrix-vector product, like thi
 
 ## Transformation Types
 
-- **Onto:** If <img src="image4.jpg" style="width:1.23513in" />
-- **One-to-One:** If <img src="image10.jpg" style="width:1.16609in" />
+- **Onto:** If <img src="image5.jpg" style="width:1in" /> then <img src="image4.jpg" style="width:1.23513in" />
+- **One-to-One:** If <img src="image5.jpg" style="width:1in" /> then <img src="image10.jpg" style="width:1.16609in" />
 - **Invertible:** There should be a onto and one-to-one transformation
 
 ## Operations

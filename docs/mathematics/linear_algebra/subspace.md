@@ -27,3 +27,5 @@ A basis for a subspace $S$ of $R_n$ is a set of vectors in $S$ that is linearly 
 The kernel of a linear map, also known as the null space, is the linear subspace of the domain of the map which is mapped to the zero vector.
 
 <img src="image1.jpg" style="width:2.5in" />
+
+<img src="image3.png" style="width:3in" />
