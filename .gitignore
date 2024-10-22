@@ -1,6 +1,3 @@
-# For this project
-.env
-
 # IntelliJ project files
 .idea
 *.iml
@@ -129,7 +126,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/

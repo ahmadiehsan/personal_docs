@@ -6,7 +6,7 @@ Leader-based replication has one major downside: there is only one leader, and a
 
 A natural extension of the leader-based replication (**Multi-Leader Replication**) model is to allow **more than one node to accept writes**. Replication still happens in the same way: each node that processes a write must forward that data change to all the other nodes.
 
-![](approach_leaderless_replication/image2.jpg)
+![](approach_multi_leader_replication/image2.png)
 
 As multi-leader replication is a somewhat retrofitted feature in many databases, there are often subtle configuration pitfalls and surprising interactions with other database features. For example, auto-incrementing keys, triggers, and integrity constraints can be problematic. **For this reason, multi-leader replication is often considered dangerous territory that should be avoided if possible.**
 
@@ -14,4 +14,4 @@ As multi-leader replication is a somewhat retrofitted feature in many databases,
 
 Although multi-leader replication has advantages, it also has a big downside: the same data may be concurrently modified in two different data centers, and those write conflicts must be resolved (indicated as "conflict resolution" in the above picture)
 
-![](approach_leaderless_replication/image1.jpg)
+![](approach_multi_leader_replication/image1.png)

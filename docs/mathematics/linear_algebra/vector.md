@@ -46,6 +46,8 @@
 
 **Will tell us how much our vectors are moving together.**
 
+<img src="image26.jpg" style="width:3in" />
+
 <img src="image20.jpg" style="width:1.6887in" />
 
 <img src="image22.jpg" style="width:4.58681in" />
@@ -111,6 +113,8 @@ A normal is an object such as a line, ray, or vector that is perpendicular to a 
 ## Eigenvectors & Eigenvalues
 
 Is a nonzero vector that changes at most by a scalar factor when that linear transformation is applied to it. The corresponding eigenvalue, often denoted by lambda, is the factor by which the eigenvector is scaled.
+
+<img src="image12.jpg" style="width:3in" />
 
 <img src="image2.jpg" style="width:2.2943in" />
 

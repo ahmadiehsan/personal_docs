@@ -6,7 +6,7 @@ When clients want to write to the database, they must send their requests to the
 
 The most common solution for this is called **leader-based** replication (also known as **active/passive** or **master-slave** replication) and is illustrated in the following picture:
 
-![](approach_leaderless_replication/image2.jpg)
+![](approach_single_leader_replication/image2.png)
 
 - Each node that stores a copy of the database is called a **replica**
 - Every write to the database needs to be processed by every replica
@@ -21,7 +21,7 @@ An important detail of a replicated system is whether the replication happens sy
 
 In the following picture we can see a leader-based replication with **one synchronous** and **one asynchronous** follower:
 
-![](approach_leaderless_replication/image1.jpg)
+![](approach_single_leader_replication/image1.png)
 
 ## Failover
 
