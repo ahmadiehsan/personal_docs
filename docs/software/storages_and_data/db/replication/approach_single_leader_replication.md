@@ -27,7 +27,7 @@ In the following picture we can see a leader-based replication with **one synchr
 
 Handling a failure of the leader is tricky, one of the followers needs to be promoted to be the new leader, clients need to be reconfigured to send their writes to the new leader, and the other followers need to start consuming data changes from the new leader.
 
-## Variations
+## Varieties
 
 ### Statement-Based Replication
 

@@ -176,9 +176,10 @@ An argument in propositional logic is a sequence of propositions. All but the �
 
 An argument form in propositional logic is a sequence of compound propositions involving propositional variables. An argument form is valid if no matter which particular propositions are substituted for the propositional variables in its premises, the conclusion is true if the premises are all true.
 
-<span dir="rtl">حاشیه: منظور همان استدلال کردن است، مثلا اگر الف و ب پس پ</span>
+!!! info
 
-<span dir="rtl">حاشیه ۲: در حاشیه بالا الف و ب همان premises هستند و پ همان conclusion </span>
+    - <span dir="rtl">منظور همان استدلال کردن است، مثلا اگر الف و ب پس پ</span>
+    - <span dir="rtl">الف و ب همان premises هستند و پ همان conclusion </span>
 
 - **premises:** All but the ﬁnal proposition in the argument are called
 - **conclusion:** the ﬁnal proposition is called the conclusion.

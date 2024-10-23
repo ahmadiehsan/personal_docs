@@ -34,21 +34,7 @@ A function $f$ is said to be one-to-one, or an injection, if and only if $f(x) =
 
 A function is said to be injective if it is one-to-one.
 
-```mermaid
-graph LR
-  subgraph X
-    1
-    2
-  end
-
-  subgraph Y
-    A
-    B
-  end
-
-  1 --> A
-  2 --> B
-```
+![](functions/image1.png)
 
 ### Increasing and Decreasing Function
 
@@ -60,26 +46,7 @@ A function $f$ from $X$ to $Y$ is called onto, or a surjection, if and only if f
 
 A function $f$ is called surjective if it is onto.
 
-```mermaid
-graph LR
-  subgraph X
-    1
-    2
-    3
-    4
-  end
-
-  subgraph Y
-    A
-    B
-    C
-  end
-
-  1 --> A
-  2 --> B
-  3 --> C
-  4 --> C
-```
+![](functions/image2.png)
 
 ### Identity Function
 

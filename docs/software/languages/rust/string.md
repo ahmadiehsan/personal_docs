@@ -1,6 +1,6 @@
 # String
 
-## Variances
+## Varieties
 
 ```rust
 let hello: String = String::from("नमस्ते");

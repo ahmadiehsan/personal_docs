@@ -4,6 +4,8 @@
 
 It is a smoothed version of ReLU, both ReLU and Softplus are similar, except near 0 where the softplus is smooth and differentiable.
 
+## Formula
+
 $$
 f(x) = \log(1 + e^x)
 $$
