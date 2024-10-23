@@ -4,7 +4,7 @@
 
 A set is an unordered collection of distinct objects, called elements or members of the set. A set is said to contain its elements. We write $a \in A$ to denote that a is an element of the set $A$. The notation $a \notin A$ denotes that a is not an element of the set $A$.
 
-## Popular sets
+Popular sets:
 
 - $\mathbb{N} = \{ 0, 1, 2, 3, \ldots \}$, the set of all natural numbers
 - $\mathbb{Z} = \{ \ldots, -2, -1, 0, 1, 2, \ldots \}$, the set of all integers

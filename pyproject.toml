@@ -30,8 +30,6 @@ ignore = [
     "S603",  # subprocess-without-shell-equals-true
     "S311",  # suspicious-non-cryptographic-random-usage
     "PLR2004",  # magic-value-comparison
-    "ANN201",  # missing-return-type-undocumented-public-function
-    "ANN001",  # missing-type-function-argument
     "COM812",  # missing-trailing-comma (Suggested by ruff to disable)
     "ISC001",  # single-line-implicit-string-concatenation (Suggested by ruff to disable)
 ]
@@ -42,6 +40,19 @@ combine-as-imports = true
 
 [tool.ruff.format]
 skip-magic-trailing-comma = true
+
+# =========================
+# MyPy
+# =====
+[tool.mypy]
+python_version = "3.11"
+disallow_untyped_defs = true
+warn_unused_ignores = true
+warn_unreachable = true
+warn_redundant_casts = true
+strict_equality = true
+strict_concatenate = true
+implicit_reexport = false
 
 # =========================
 # Pylint
