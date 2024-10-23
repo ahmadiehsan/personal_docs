@@ -6,7 +6,7 @@
 
 <img src="image6.jpg" style="width:1.82083in" />
 
-- Starting point doesn’t mean for Vectors
+- Starting point doesn't mean for Vectors
 - Vectors will show by lowercase letters and an arrow on top of it or just with a bold lowercase letter
 - Vector = Magnitude + Direction
 - Velocity = Magnitude + Direction
@@ -31,7 +31,7 @@
 
 - All of the purple arrows are the same
 - All of the green arrows are the same
-- The starting point doesn’t matter in Vectors
+- The starting point doesn't matter in Vectors
 - The blue arrow completely shows us how adding two Vectors to each other works in the background
 
 ### Multiplication
@@ -52,7 +52,7 @@ Will tell us how much our vectors are moving together.
 
 $\vec{w} \cdot \vec{x}$  = $w_1x_1 + w_2x_2 + w_3x_3 + \dots + w_nx_n$
 
-- The order doesn’t matter in a dot product: $\vec{v} \cdot \vec{w} = \vec{w} \cdot \vec{v}$
+- The order doesn't matter in a dot product: $\vec{v} \cdot \vec{w} = \vec{w} \cdot \vec{v}$
 - Distribution is applicable on the dot product:
 
   $(\vec{v} + \vec{w}) \cdot \vec{x} = (\vec{v} \cdot \vec{x} + \vec{w} \cdot \vec{x})$

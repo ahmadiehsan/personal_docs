@@ -262,7 +262,7 @@
 - Create or update:
 
   ```shell
-  # Tip: We can’t change the mapping or field type of an existing field. Changing an existing field could invalidate data that’s already indexed
+  # Tip: We can't change the mapping or field type of an existing field. Changing an existing field could invalidate data that's already indexed
 
   curl -X PUT "http://localhost:9200/<index_name>/_mapping?pretty" -H 'Content-Type: application/json' -d '{
     "dynamic": "<dynamic_type: strict>",

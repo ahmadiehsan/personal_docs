@@ -16,8 +16,8 @@
 ![](interface/image8.jpg)
 
 - Can have abstract methods
-- Can have setter and getters (properties), but can’t implement them
-- Can’t have constructors
+- Can have setter and getters (properties), but can't implement them
+- Can't have constructors
 
 ## Explicit Implementation
 

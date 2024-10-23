@@ -2,14 +2,37 @@
 
 ## Sample Generator
 
-<img src="image2.png" style="width:3.96066in" />
+```shell
+dotnet new worker -o ContosoWorker
+```
 
 ## Example
 
 Service:
 
-![](background_tasks/image3.png)
+```csharp
+public class Worker : BackgroundService
+{
+    private readonly ILogger<Worker> _logger;
+
+    public Worker(ILogger<Worker> logger)
+    {
+        _logger = logger;
+    }
+
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        while (!stoppingToken.IsCancellationRequested)
+        {
+            _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+            await Task.Delay(1000, stoppingToken);
+        }
+    }
+}
+```
 
 DI:
 
-<img src="image1.png" style="width:3.01563in" />
+```csharp
+services.AddHostedService<Worker>();
+```

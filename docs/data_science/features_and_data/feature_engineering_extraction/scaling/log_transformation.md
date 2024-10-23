@@ -15,7 +15,7 @@ Log transforms are useful when applied to skewed distributions as they tend to e
 
 <img src="image1.jpg" style="width:4.5in" />
 
-It’s important to note that the logarithmic transformation is not appropriate for all types of data. For example, **if the data includes zero or negative values**, the logarithmic transformation cannot be applied directly. In these cases, a modified logarithmic transformation, such as adding a constant before taking the logarithm, may be used.
+It's important to note that the logarithmic transformation is not appropriate for all types of data. For example, **if the data includes zero or negative values**, the logarithmic transformation cannot be applied directly. In these cases, a modified logarithmic transformation, such as adding a constant before taking the logarithm, may be used.
 
 ## Formula
 

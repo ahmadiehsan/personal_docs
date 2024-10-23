@@ -4,15 +4,13 @@
 
 First we should create a builder with the below code inside of the Program.cs file
 
-<img src="image5.jpg" style="width:5.18333in" />
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+```
 
 Then with one of the below approaches we can inject our class into the application
 
-## DB
-
-<img src="image4.jpg" style="width:5.675in" />
-
-## Custom DI
+## Injection Approaches
 
 ### AddSingleton
 
@@ -22,7 +20,9 @@ Will create once per process
 
 Will create once per request
 
-<img src="image3.jpg" style="width:5.00417in" />
+```csharp
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+```
 
 ### AddTransient
 
@@ -30,32 +30,59 @@ Will create once per reference
 
 ### AddHostedService
 
-A hosted service is more than just a singleton service. The runtime "knows" about it, can tell it to start by calling StartAsync or stop by calling StopAsync() whenever eg the application pool is recycled. The runtime can wait for the hosted service to finish before the web application itself terminates.
+A hosted service is more than just a singleton service.
+
+The runtime "knows" about it, can tell it to start by calling StartAsync or stop by calling StopAsync() whenever eg the application pool is recycled. The runtime can wait for the hosted service to finish before the web application itself terminates.
 
 - One huge difference is that AddSingleton() is lazy while AddHostedService() is eager.
 - A service added with AddSingleton() will be instantiated the first time it is injected into a class constructor. This is fine for most services, but if it really is a background service you want, you probably want it to start right away.
 - A service added with AddHostedService() will be instantiated immediately, even if no other class will ever want it injected into its constructor. This is typical for background services, that run all the time.
 - Also, it seems that you cannot inject a service added with AddHostedService() into another class.
 
-## Http Client
+### AddDbContext
 
-![](di/image7.png)
+```csharp
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    )
+);
+```
 
-## Configurations (Content of appsettings.json)
+### AddHttpClient
 
-### Options Pattern
+```csharp
+builder.Services.AddHttpClient<IAService, AService>()
+    .ConfigureHttpClient((provider, httpClient) =>
+    {
+        httpClient.BaseAddress = new Uri("https://example.com/");
+    })
+    .SetHandlerLifetime(TimeSpan.FromMinutes(60));
+```
 
-First we should create a class like the StripeSettngs in the below image, then with using the GetSection method simply we can receive any data from appsettings.json file
-![](di/image1.jpg)
+### Configurations (Content of `appsettings.json`)
 
-Now we can easily inject the class configuration by the below code:
+- **Options Pattern:** First we should create a class like the StripeSettngs in the below image, then with using the GetSection method simply we can receive any data from appsettings.json file
 
-<img src="image2.png" style="width:3.69158in" />
+  ```csharp
+  builder.Services.Configure<StripeSettings>(
+      builder.Configuration.GetSection("Stripe")
+  );
+  ```
 
-### Direct Way
+  Now we can easily inject the class configuration by the below code:
 
-Another way for reading from appsettings.json file without any middle class is like the bellow:
-<img src="image8.jpg" style="width:5.6875in" />
+  ```csharp
+  IOptionsMonitor<StripeSettings> stripeSettings;
+  ```
+
+- **Direct Way:** Another way for reading from appsettings.json file without any middle class is like the bellow:
+
+  ```csharp
+  var secretKey = builder.Configuration
+      .GetSection("Stripe:SecretKey")
+      .Get<string>();
+  ```
 
 ## Builtin Injectable Classes
 
@@ -64,11 +91,15 @@ Another way for reading from appsettings.json file without any middle class is l
 - The current session request object
 - Injection syntax:
 
-  <img src="image9.jpg" style="width:2.7414in" />
+  ```csharp
+  builder.Services.AddHttpContextAccessor();
+  ```
 
 ### IDataProtectionProvider
 
 - Will use for data encryption and decryption
 - Injection syntax:
 
-  <img src="image6.jpg" style="width:2.88493in" />
+  ```csharp
+  builder.Services.AddDataProtection();
+  ```

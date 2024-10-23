@@ -32,7 +32,7 @@ Techniques:
 
   | Feature\Response | Continuous            | Categorical  |
   |------------------|-----------------------|--------------|
-  | Continuous       | Pearson’s Correlation | LDA          |
+  | Continuous       | Pearson's Correlation | LDA          |
   | Categorical      | Anova                 | Chi-Square   |
 
   *Please note that above methods don't identify or deal with multicollinearity, we need to figure that out separately.*

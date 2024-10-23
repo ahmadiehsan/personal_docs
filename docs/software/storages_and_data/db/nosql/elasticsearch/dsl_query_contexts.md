@@ -2,7 +2,7 @@
 
 ## Query
 
-In the query context, a query clause answers the question “How well does this document match this query clause?” Besides deciding whether or not the document matches, the query clause also calculates a relevance score in the \_score metadata field.
+In the query context, a query clause answers the question “How well does this document match this query clause?” Besides deciding whether or not the document matches, the query clause also calculates a relevance score in the _score metadata field.
 
 Query context is in effect whenever a query clause is passed to a query parameter, such as:
 
@@ -23,15 +23,15 @@ Frequently used filters will be cached automatically by Elasticsearch, to speed 
 
 Filter context is in effect whenever a query clause is passed to a filter parameter, such as:
 
-- The **filter** or **must\_not** parameters in the **bool** query
-- The **filter** parameter in the **constant\_score** query
+- The **filter** or **must_not** parameters in the **bool** query
+- The **filter** parameter in the **constant_score** query
 - The **filter** in the **aggregation**.
 
 ## Aggregation
 
 An aggregation summarizes your data as metrics, statistics, or other analytics. Aggregations help you answer questions like:
 
-- What’s the average load time for my website?
+- What's the average load time for my website?
 - Who are my most valuable customers based on transaction volume?
 - What would be considered a large file on my network?
 - How many products are in each product category?

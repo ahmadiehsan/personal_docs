@@ -2,7 +2,7 @@
 
 ## Description
 
-For more clarity, let’s divide the resource archetypes into four categories
+For more clarity, let's divide the resource archetypes into four categories
 
 - document
 - collection
@@ -15,7 +15,7 @@ Then it would be best if you always targeted to put a resource into one archetyp
 
 A document resource is a singular concept that is akin to an object instance or database record.
 
-In REST, you can view it as a single resource inside a resource collection. A document’s state representation typically includes both fields with values and links to other related resources.
+In REST, you can view it as a single resource inside a resource collection. A document's state representation typically includes both fields with values and links to other related resources.
 
 Use the "singular" name to denote the document resource archetype.
 

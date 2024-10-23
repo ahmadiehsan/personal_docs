@@ -14,6 +14,6 @@ One important consideration when using polynomial expansion is that it can quick
 
 In a regression problem, you might have a dataset with a single feature, say x, and you want to fit a model that can capture the relationship between x and the target variable, y. However, the relationship between x and y may not be linear, and a simple linear model may not be sufficient. In this case, polynomial expansion can be used to create additional features that capture the non-linear relationship between x and y.
 
-To illustrate, let’s say you have a dataset with a single feature, x, and a target variable, y, and you want to fit a polynomial regression model. The goal is to find a function, f(x), that minimizes the difference between the predicted and actual values of y.
+To illustrate, let's say you have a dataset with a single feature, x, and a target variable, y, and you want to fit a polynomial regression model. The goal is to find a function, f(x), that minimizes the difference between the predicted and actual values of y.
 
 Polynomial expansion can be used to create additional features based on x, such as x2, x3, and so on. This can be done using libraries such as scikit-learn, which has a PolynomialFeatures function that can automatically generate polynomial features of a specified degree.

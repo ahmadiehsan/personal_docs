@@ -28,14 +28,12 @@ SMOTE is a widely used algorithm for handling imbalanced datasets in machine lea
 Here are the steps of the SMOTE algorithm:
 
 1. Select a minority class sample, x.
-
-2. Choose one of its k-nearest neighbors, x’.
-
-3. Generate a synthetic sample by interpolating between x and x’. To do this, choose a random number, r, between 0 and 1, and then calculate the synthetic sample, as follows:
+2. Choose one of its k-nearest neighbors, x'.
+3. Generate a synthetic sample by interpolating between x and x'. To do this, choose a random number, r, between 0 and 1, and then calculate the synthetic sample, as follows:
 
   <img src="image1.jpg" style="width:1.72914in" />
 
-  This creates a new sample that is somewhere between x and x’, but not the same as either one.
+  This creates a new sample that is somewhere between x and x', but not the same as either one.
 
 4. Repeat steps 1 to 3 until the desired number of synthetic samples has been generated.
 
@@ -55,9 +53,7 @@ The NearMiss algorithm is a technique for balancing class distribution by unders
 The working of nearest-neighbor methods is based on the following steps:
 
 1. Find the distances between all records from the major class and minor class. Our goal is to undersample the records from the major class.
-
 2. Choose n records from the major class that are closest to the minor class.
-
 3. If there are k records in the minor class, the nearest method will return k*n records from the major class.
 
 There are three variations of applying the NearMiss algorithm that we can use to find the n closest records in the major class:

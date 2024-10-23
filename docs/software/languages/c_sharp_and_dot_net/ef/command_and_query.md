@@ -98,5 +98,5 @@ The AddRange, AttachRange, UpdateRange, and RemoveRange methods work exactly the
 
 ### AsNoTracking
 
-- Will tell to the DbContext to don’t track returned entities
+- Will tell to the DbContext to don't track returned entities
 - Is useful for read-only queries

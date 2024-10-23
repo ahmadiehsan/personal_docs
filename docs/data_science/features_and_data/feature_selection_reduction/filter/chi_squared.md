@@ -2,7 +2,7 @@
 
 ## Description
 
-The chi-squared test is a widely employed statistical method in ML for feature selection that’s particularly effective for categorical variables. This test gauges the dependence between two random variables, providing a P-value that signifies the likelihood of obtaining a result as extreme as or more extreme than the actual observations.
+The chi-squared test is a widely employed statistical method in ML for feature selection that's particularly effective for categorical variables. This test gauges the dependence between two random variables, providing a P-value that signifies the likelihood of obtaining a result as extreme as or more extreme than the actual observations.
 
 In hypothesis testing, the chi-squared test assesses whether the collected data aligns with the expected data. A small chi-squared test statistic indicates a robust match, while a large statistic implies a weak match. A P-value less than or equal to 0.05 leads to the rejection of the null hypothesis, considering it highly improbable. Conversely, a P-value greater than 0.05 results in accepting or "failing to reject" the null hypothesis. When the P-value hovers around 0.05, further scrutiny of the hypothesis is warranted.
 

@@ -68,7 +68,7 @@ Tips:
 
 ![](class/image21.jpg)
 
-- Is like \_\_delete\_\_ in Python
+- Is like __delete__ in Python
 
 ### Dispose
 
@@ -122,7 +122,7 @@ Tips:
 
 ![](class/image36.jpg)
 
-- It’s very useful for returning multiple value from a method
+- It's very useful for returning multiple value from a method
 - Also we can use it for accepting multiple values in one method parameter
 
 ![](class/image2.jpg)

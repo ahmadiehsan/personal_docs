@@ -10,7 +10,7 @@ Description:
 
 ![](io/image16.jpg)
 
-- For doing one action is good but for doing multiple actions at onces it’s better to use FileInfo class
+- For doing one action is good but for doing multiple actions at onces it's better to use FileInfo class
 
 Methods:
 
@@ -24,7 +24,7 @@ Description:
 
 ![](io/image17.jpg)
 
-- For doing multiple actions at onces is good but for doing one action it’s better to use File class
+- For doing multiple actions at onces is good but for doing one action it's better to use File class
 
 Properties:
 

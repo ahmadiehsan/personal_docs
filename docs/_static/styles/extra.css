@@ -6,3 +6,7 @@
     background-color: rgba(0, 0, 0, .54);
     color: #ffffff;
 }
+
+.md-typeset table:not([class]) {
+    max-height: 1000px;
+}

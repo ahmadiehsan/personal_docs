@@ -3,8 +3,8 @@
 ## Description
 
 - Its complete name is "Rectified Linear Unit"
-- In other words, the activation is simply the input if the input is positive; otherwise, it’s zero.
-- It doesn’t activate all the neurons at the same time, meaning that the neurons will only be deactivated if the output of the linear transformation is less than 0. This makes the network sparse and efficient. However, ReLU units can be fragile during training and can "die" (they stop learning completely) if a large gradient flows through them.
+- In other words, the activation is simply the input if the input is positive; otherwise, it's zero.
+- It doesn't activate all the neurons at the same time, meaning that the neurons will only be deactivated if the output of the linear transformation is less than 0. This makes the network sparse and efficient. However, ReLU units can be fragile during training and can "die" (they stop learning completely) if a large gradient flows through them.
 - The ReLU function has become very popular in recent years.
 
 !!! info

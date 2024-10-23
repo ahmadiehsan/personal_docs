@@ -105,7 +105,7 @@
 
 ### Deep
 
-There isn’t any specific way for deep copy in .NET but we can write the deep clone behaviour with ICloneable like the below:
+There isn't any specific way for deep copy in .NET but we can write the deep clone behaviour with ICloneable like the below:
 
 ![](array/image3.jpg)
 

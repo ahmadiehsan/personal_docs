@@ -5,8 +5,8 @@
 - PCA reduces dimensions by focusing on the genes with the most variation.
 
    - This is useful for plotting data with a lot of dimensions (or a lot of genes) onto a simple X/Y plot.
-   - However, in this case we’re not super interested in the genes with the most variation.
-   - Instead, we’re interested in maximizing the separability between the two groups so we can make the best decisions.
+   - However, in this case we're not super interested in the genes with the most variation.
+   - Instead, we're interested in maximizing the separability between the two groups so we can make the best decisions.
 
 - Linear Discriminant Analysis (LDA) is like PCA, but it focuses on maximizing the separability among known categories.
 - Both rank the new axes in order of importance.

@@ -2,7 +2,7 @@
 
 ## Description
 
-Is a technique that’s used to add a penalty term to the loss function during training, which helps to reduce the complexity of the model and prevent overfitting.
+Is a technique that's used to add a penalty term to the loss function during training, which helps to reduce the complexity of the model and prevent overfitting.
 
 There are different types of regularization, including:
 

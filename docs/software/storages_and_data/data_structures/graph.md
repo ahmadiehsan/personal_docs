@@ -8,7 +8,7 @@
 - many-to-many relationships in DB.
 - Vertices: known as nodes or entities
 - Edges: known as relationships or arcs
-- Graphs are good for evolvability: as you add features to your application, a graph can easily be extended to accommodate changes in your application’s data structures.
+- Graphs are good for evolvability: as you add features to your application, a graph can easily be extended to accommodate changes in your application's data structures.
 
 Graphs are not limited to only homogeneous data: an equally powerful use of graphs is to provide a consistent way of storing completely different types of objects in a single datastore.
 
@@ -40,5 +40,4 @@ In a triple-store, all information is stored in the form of very simple three-pa
 The subject of a triple is equivalent to a vertex in a graph. The object is one of two things:
 
 1. A value in a primitive data type, such as a string or a number. In that case, the predicate and object of the triple are equivalent to the key and value of a property on the subject vertex. For example, (lucy, age, 33) is like a vertex lucy with properties {"age":33}.
-
 2. Another vertex in the graph. In that case, the predicate is an edge in the graph, the subject is the tail vertex, and the object is the head vertex. For example, in (lucy, marriedTo, alain) the subject and object lucy and alain are both vertices, and the predicate marriedTo is the label of the edge that connects them.

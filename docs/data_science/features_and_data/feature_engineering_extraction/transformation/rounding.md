@@ -6,7 +6,7 @@
 
 ## Description
 
-Often when dealing with continuous numeric attributes like proportions or percentages, we may not need the raw values to have a high amount of precision. Hence it often makes sense to round off these high-precision percentages into numeric integers. These integers can then be directly used as raw values or even as categorical (discrete-class-based) features. Let’s try applying this concept in a dummy dataset depicting store items and their popularity percentages.
+Often when dealing with continuous numeric attributes like proportions or percentages, we may not need the raw values to have a high amount of precision. Hence it often makes sense to round off these high-precision percentages into numeric integers. These integers can then be directly used as raw values or even as categorical (discrete-class-based) features. Let's try applying this concept in a dummy dataset depicting store items and their popularity percentages.
 
 ## Example
 

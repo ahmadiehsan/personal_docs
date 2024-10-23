@@ -36,7 +36,7 @@
 
 ## Metadata Field
 
-- Each document has metadata associated with it, such as the \_index and \_id
+- Each document has metadata associated with it, such as the _index and _id
 - List of metadata fields: [Link](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-fields.html)
 
 ## Data Type

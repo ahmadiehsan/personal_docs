@@ -14,10 +14,10 @@ but how do you keep from doing this? The principle provides some guidelines: tak
 
 ![](least_knowledge_principle/image1.jpg)
 
-The principle forces us to ask the object to request us; that way, we don’t have to know about its component objects (and we keep our circle of friends small). For example:
+The principle forces us to ask the object to request us; that way, we don't have to know about its component objects (and we keep our circle of friends small). For example:
 
 <img src="image2.jpg" style="width:5.87477in" />
 
-Here’s a Car class that demonstrates all the ways you can call methods and still adhere to the Principle of Least Knowledge:
+Here's a Car class that demonstrates all the ways you can call methods and still adhere to the Principle of Least Knowledge:
 
 ![](least_knowledge_principle/image4.jpg)

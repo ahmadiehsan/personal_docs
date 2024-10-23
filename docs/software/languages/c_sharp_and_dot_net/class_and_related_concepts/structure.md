@@ -11,7 +11,7 @@
 - Structures are value type but classes are reference type
 - Will store in stack
 - Is good for one or two fields
-- Can inherit from interfaces but can’t inherit from other classes or structures
+- Can inherit from interfaces but can't inherit from other classes or structures
 
 ![](structure/image3.jpg)
 

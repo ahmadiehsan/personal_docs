@@ -92,7 +92,7 @@ Can handle validations, data mappings, transaction management and security
 
 ### Domain vs Application
 
-Domain services hold domain logic whereas application services don’t
+Domain services hold domain logic whereas application services don't
 
 ## Sample Project Architecture
 

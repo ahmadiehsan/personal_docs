@@ -2,7 +2,7 @@
 
 ## Description
 
-1. **Business understanding:** Get a clear understanding of the problem you’re out to solve, how it impacts your organization, and your goals for addressing it. Tasks in this phase include:
+1. **Business understanding:** Get a clear understanding of the problem you're out to solve, how it impacts your organization, and your goals for addressing it. Tasks in this phase include:
 
    - Identifying your business goals
    - Assessing your situation

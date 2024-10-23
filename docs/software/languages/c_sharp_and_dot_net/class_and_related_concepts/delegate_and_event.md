@@ -78,7 +78,7 @@ Anonymous Functions:
 
 Anonymous Method:
 
-**Important note:** don’t use it, instead use "lambda expressions"
+**Important note:** don't use it, instead use "lambda expressions"
 
 ![](delegate_and_event/image12.jpg)
 

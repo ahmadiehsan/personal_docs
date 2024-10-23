@@ -16,9 +16,9 @@ This can happen if a user makes several reads from different replicas. For examp
 
 ![](replication_lag_problem/image1.png)
 
-**Monotonic reads** is a guarantee that this kind of anomaly does not happen. It’s a lesser guarantee than strong consistency, but a stronger guarantee than eventual consistency. When you read data, you may see an old value; monotonic reads only means that if one user makes several reads in sequence, they will not see time go backward— i.e., they will not read older data after having previously read newer data.
+**Monotonic reads** is a guarantee that this kind of anomaly does not happen. It's a lesser guarantee than strong consistency, but a stronger guarantee than eventual consistency. When you read data, you may see an old value; monotonic reads only means that if one user makes several reads in sequence, they will not see time go backward— i.e., they will not read older data after having previously read newer data.
 
-One way of achieving monotonic reads is to make sure that each user always makes their reads from the same replica (different users can read from different replicas). For example, the replica can be chosen based on a hash of the user ID, rather than randomly. However, if that replica fails, the user’s queries will need to be rerouted to another replica.
+One way of achieving monotonic reads is to make sure that each user always makes their reads from the same replica (different users can read from different replicas). For example, the replica can be chosen based on a hash of the user ID, rather than randomly. However, if that replica fails, the user's queries will need to be rerouted to another replica.
 
 ### Consistent Prefix Reads
 
@@ -27,7 +27,7 @@ Another example of replication lag anomalies concerns the violation of causality
 - Mr. Poons: How far into the future can you see, Mrs. Cake?
 - Mrs. Cake: About ten seconds usually, Mr. Poons.
 
-There is a causal dependency between those two sentences: Mrs. Cake heard Mr. Poons’s question and answered it.
+There is a causal dependency between those two sentences: Mrs. Cake heard Mr. Poons's question and answered it.
 
 Now, imagine a third person is listening to this conversation through followers. The things said by Mrs. Cake go through a follower with little lag, but the things said by Mr. Poons have a longer replication lag. This observer would hear the following:
 
