@@ -39,7 +39,16 @@ requirements.install:
 # Scripts
 # =====
 scripts.detect_dangling_images:
-	python scripts/detect_dangling_images.py
+	PYTHONPATH=. python scripts/detect_dangling_images.py $(ARGS)
+
+scripts.docx_to_md:
+	PYTHONPATH=. python scripts/docx_to_md.py $(ARGS)
+
+scripts.md_combiner:
+	PYTHONPATH=. python scripts/md_combiner.py $(ARGS)
+
+scripts.md_headlines_to_title:
+	PYTHONPATH=. python scripts/md_headlines_to_title.py $(ARGS)
 
 # =========================
 # App (Main Application)
