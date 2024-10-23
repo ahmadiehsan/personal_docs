@@ -16,13 +16,13 @@ There are several boosting algorithms, but one of the most popular ones is AdaBo
 
 5. Then, it increases the weights of the examples that were misclassified by the weak classifier.
 
-6. Once it’s done this, it normalizes the weights of the examples so that they sum up to one.
+6. Once it's done this, it normalizes the weights of the examples so that they sum up to one.
 
 7. It repeats steps 2 to 6 for a predetermined number of iterations or until the desired accuracy is achieved.
 
 8. Finally, it combines the weak classifiers into a strong classifier by assigning weights to them based on their importance.
 
-Let’s look at some of the advantages of boosting:
+Let's look at some of the advantages of boosting:
 
 - Boosting can improve the accuracy of weak classifiers and can lead to a significant improvement in performance
 - Boosting is relatively easy to implement and can be applied to a wide range of classification problems

@@ -15,13 +15,13 @@ The vectorization process is similar to One Hot Encoding. Alternatively, the val
 
 ## Example
 
-As an example, let’s find the TF-IDF values for 3 documents consisting of 1 sentence.
+As an example, let's find the TF-IDF values for 3 documents consisting of 1 sentence.
 
 - He is Walter
 - He is William
-- He isn’t Peter or September
+- He isn't Peter or September
 
-In the above example, "He" is used in all 3 documents, "is" is in 2 documents, and "or" is in only one document. According to these, let’s find the TF and then the IDF values, respectively.
+In the above example, "He" is used in all 3 documents, "is" is in 2 documents, and "or" is in only one document. According to these, let's find the TF and then the IDF values, respectively.
 
 TF: Values are calculated according to the above example, it will be:
 

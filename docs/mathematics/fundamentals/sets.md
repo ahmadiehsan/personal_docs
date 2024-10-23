@@ -57,6 +57,6 @@ Let $U$ be the universal set. The complement of the set $A$, denoted by $-A$, is
 | $A \cup B = B \cup A$ <br> $A \cap B = B \cap A$                                                       | Commutative laws    |
 | $A \cup (B \cup C) = (A \cup B) \cup C$ <br> $A \cap (B \cap C) = (A \cap B) \cap C$                   | Associative laws    |
 | $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$ <br> $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$ | Distributive laws   |
-| $\overline{A \cap B} = \bar{A} \cup \bar{B}$ <br> $\overline{A \cup B} = \bar{A} \cap \bar{B}$         | De Morgan’s laws    |
+| $\overline{A \cap B} = \bar{A} \cup \bar{B}$ <br> $\overline{A \cup B} = \bar{A} \cap \bar{B}$         | De Morgan's laws    |
 | $A \cup (A \cap B) = A$ <br> $A \cap (A \cup B) = A$                                                   | Absorption laws     |
 | $A \cup \bar{A} = U$ <br> $A \cap \bar{A} = \emptyset$                                                 | Complement laws     |

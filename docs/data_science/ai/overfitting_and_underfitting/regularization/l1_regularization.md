@@ -2,7 +2,7 @@
 
 ## Description
 
-**LASSO**, an acronym for **Least Absolute Shrinkage and Selection Operator**, serves as a linear regression technique that’s commonly employed for feature selection in machine learning. Its mechanism involves **introducing a penalty term to the standard regression loss function. This penalty encourages the model to reduce the coefficients of less important features to zero**, effectively eliminating them from the model.
+**LASSO**, an acronym for **Least Absolute Shrinkage and Selection Operator**, serves as a linear regression technique that's commonly employed for feature selection in machine learning. Its mechanism involves **introducing a penalty term to the standard regression loss function. This penalty encourages the model to reduce the coefficients of less important features to zero**, effectively eliminating them from the model.
 
 The LASSO method proves especially **valuable when grappling with high-dimensional data, where the number of features far exceeds the number of samples**. In such scenarios, discerning the most crucial features for predicting the target variable can be challenging. LASSO comes to the fore by automatically identifying the most relevant features while simultaneously shrinking the coefficients of others.
 
@@ -10,7 +10,7 @@ The LASSO method proves especially **valuable when grappling with high-dimension
 
 ## Example
 
-Consider the application of LASSO for feature selection in predicting house prices. Imagine a dataset encompassing details about houses – such as the number of bedrooms, lot size, construction year, and so on – alongside their respective sale prices. Employing LASSO, we can pinpoint the most crucial features to predict the sale price while concurrently fitting a linear regression model to the dataset. The outcome is a model that’s ready to forecast the sale price of a new house based on its features.
+Consider the application of LASSO for feature selection in predicting house prices. Imagine a dataset encompassing details about houses – such as the number of bedrooms, lot size, construction year, and so on – alongside their respective sale prices. Employing LASSO, we can pinpoint the most crucial features to predict the sale price while concurrently fitting a linear regression model to the dataset. The outcome is a model that's ready to forecast the sale price of a new house based on its features.
 
 ![](l1_regularization/image2.jpg)
 

@@ -4,9 +4,9 @@
 
 Ridge regression, a linear regression method applicable to feature selection, closely resembles ordinary least squares regression but introduces a penalty term to the cost function to counter overfitting.
 
-In ridge regression, the cost function undergoes modification with the inclusion of a penalty term directly proportional to the square of the coefficients’ magnitude. This penalty term is regulated by a hyperparameter, often denoted as $\lambda$ or α dictating the regularization strength. When α is set to zero, ridge regression reverts to ordinary least squares regression.
+In ridge regression, the cost function undergoes modification with the inclusion of a penalty term directly proportional to the square of the coefficients' magnitude. This penalty term is regulated by a hyperparameter, often denoted as $\lambda$ or α dictating the regularization strength. When α is set to zero, ridge regression reverts to ordinary least squares regression.
 
-The penalty term’s impact manifests in shrinking the coefficients’ magnitude toward zero. This proves beneficial in mitigating overfitting, discouraging the model from excessively relying on any single feature. In effect, the penalty term acts as a form of feature selection by reducing the importance of less relevant features.
+The penalty term's impact manifests in shrinking the coefficients' magnitude toward zero. This proves beneficial in mitigating overfitting, discouraging the model from excessively relying on any single feature. In effect, the penalty term acts as a form of feature selection by reducing the importance of less relevant features.
 
 Ridge regression can be used for feature selection by examining the magnitudes of the coefficients produced by the model. Features with coefficients that are close to zero or smaller are considered less important and can be dropped from the model. The value of α can be tuned using cross-validation to find the optimal balance between model complexity and accuracy.
 

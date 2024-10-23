@@ -2,7 +2,7 @@
 
 ## Description
 
-Eliminating duplicates is a prevalent preprocessing measure that’s employed to cleanse datasets by detecting and removing identical records. The occurrence of duplicate records may be attributed to factors such as data entry errors, system glitches, or data merging processes. The presence of duplicates can skew models and yield inaccurate insights. Hence, it is imperative to recognize and eliminate duplicate records to uphold the accuracy and dependability of the dataset.
+Eliminating duplicates is a prevalent preprocessing measure that's employed to cleanse datasets by detecting and removing identical records. The occurrence of duplicate records may be attributed to factors such as data entry errors, system glitches, or data merging processes. The presence of duplicates can skew models and yield inaccurate insights. Hence, it is imperative to recognize and eliminate duplicate records to uphold the accuracy and dependability of the dataset.
 
 There are different methods for removing duplicates in a dataset:
 

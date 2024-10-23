@@ -8,7 +8,7 @@ Gives us a way to prevent "dependency rot." Dependency rot happens when you have
 
 ![](hollywood_principle/image1.jpg)
 
-With the Hollywood Principle, we allow low-level components to hook themselves into a system, but the high-level components determine when they are needed, and how. In other words, the high-level components give the low-level components the "don’t call us, we’ll call you" treatment.
+With the Hollywood Principle, we allow low-level components to hook themselves into a system, but the high-level components determine when they are needed, and how. In other words, the high-level components give the low-level components the "don't call us, we'll call you" treatment.
 
 !!! info
 
@@ -16,4 +16,4 @@ With the Hollywood Principle, we allow low-level components to hook themselves i
 
 ## In Frameworks
 
-This pattern shows up so often because it’s a great design tool for creating frameworks, where the framework controls how something gets done, but leaves you (the person using the framework) to specify your details about what is happening at each step of the framework’s algorithm.
+This pattern shows up so often because it's a great design tool for creating frameworks, where the framework controls how something gets done, but leaves you (the person using the framework) to specify your details about what is happening at each step of the framework's algorithm.

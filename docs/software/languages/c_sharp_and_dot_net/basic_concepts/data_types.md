@@ -28,7 +28,7 @@
 
 <img src="image3.jpg" style="width:2.575in" />
 
-- When we aren’t sure about the incoming type, we will store it in a variable with object type and after that we will using unboxing for converting it to the proper type
+- When we aren't sure about the incoming type, we will store it in a variable with object type and after that we will using unboxing for converting it to the proper type
 
 ## Types
 
@@ -131,7 +131,7 @@ String to any numerical type
 ![](data_types/image15.jpg)
 
 - Is good when the type name is long
-- Is good when we don’t know the output type (For example the LINQ query result)
+- Is good when we don't know the output type (For example the LINQ query result)
 
 ![](data_types/image12.jpg)
 

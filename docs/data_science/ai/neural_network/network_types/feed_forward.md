@@ -3,7 +3,7 @@
 ## Description
 
 This is the most straightforward type of neural network. Information in this network moves in one direction only, from
-the input layer through any hidden layers to the output layer. The network has no cycles or loops; it’s a straight,
+the input layer through any hidden layers to the output layer. The network has no cycles or loops; it's a straight,
 "feedforward" path.
 
 <img src="image3.png" style="width:3.72396in" />

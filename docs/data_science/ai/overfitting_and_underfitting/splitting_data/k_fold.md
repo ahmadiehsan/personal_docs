@@ -10,4 +10,4 @@ In K Fold cross validation, the data is divided into k subsets. Now the **holdou
 
 As can be seen, every data point gets to be in a validation set exactly once, and gets to be in a training set k-1 times. This significantly reduces **bias** as we are using most of the data for fitting, and also significantly reduces **variance** as most of the data is also being used in validation sets. Interchanging the training and test sets also adds to the effectiveness of this method.
 
-As a general rule and empirical evidence, **K=5** or **10** is generally preferred, but nothing’s fixed and it can take any value.
+As a general rule and empirical evidence, **K=5** or **10** is generally preferred, but nothing's fixed and it can take any value.

@@ -22,7 +22,7 @@ Estimate media storage:
 
 - Average tweet size:
 
-   - tweet\_id 64 bytes
+   - tweet_id 64 bytes
    - text 140 bytes
    - media 1 MB
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-Ridge regression and LASSO are both regularization techniques that are used in linear regression to prevent overfitting of the model by penalizing the model’s coefficients. While both methods seek to prevent overfitting, they differ in their approach to how the coefficients are penalized.
+Ridge regression and LASSO are both regularization techniques that are used in linear regression to prevent overfitting of the model by penalizing the model's coefficients. While both methods seek to prevent overfitting, they differ in their approach to how the coefficients are penalized.
 
 Ridge regression adds a penalty term to the sum of squared errors (SSE) that is proportional to the square of the magnitude of the coefficients. The penalty term is controlled by a regularization parameter (α), which determines the amount of shrinkage applied to the coefficients. This penalty term shrinks the values of the coefficients toward zero but does not set them exactly to zero. **Therefore, ridge regression can be used to reduce the impact of irrelevant features in a model, but it will not eliminate them completely**.
 

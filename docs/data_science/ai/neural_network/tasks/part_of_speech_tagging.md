@@ -37,13 +37,13 @@ HMMs serve as a category of probabilistic models that are extensively applied in
 
 CRFs are another type of probabilistic model that is commonly used for sequence labeling tasks, including POS tagging. CRFs differ from HMMs in that they model the conditional probability of the output sequence (that is, the POS tags) given the input sequence (that is, the words), rather than the joint probability of the output and input sequences. This allows CRFs to capture more complex dependencies between the input and output sequences than HMMs. CRFs use an iterative algorithm, such as gradient descent or L-BFGS, to learn the optimal set of weights for the model.
 
-Let’s look at the advantages of statistical methods:
+Let's look at the advantages of statistical methods:
 
 - Statistical methods can capture the context of a word and the relationships between words in a sentence, leading to more accurate tagging results
 - These methods can handle unseen words and sentences that are not present in the training data
 - Statistical methods can be trained on large datasets, allowing them to capture more variations and patterns in the language
 
-Now, let’s look at the disadvantages:
+Now, let's look at the disadvantages:
 
 - These methods require a large amount of annotated data for training, which can be time consuming and expensive to create
 - Statistical methods can be sensitive to the quality of the training data and may perform poorly if the data is noisy or biased

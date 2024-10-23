@@ -12,4 +12,4 @@ For example in the above image, the big red circle at first was unclassified and
 
 - There is no physical or biological way to determine the best value for "K", so you may have to try out a few values before settling on one. Do this by pretending part of the training data is "unknown".
 - Low values for K (like K=1 or K=2) can be noisy and subject to the effects of outliers.
-- Large values for K smooth over things, but you don’t want K to be so large that a category with only a few samples in it will always be outvoted by other categories.
+- Large values for K smooth over things, but you don't want K to be so large that a category with only a few samples in it will always be outvoted by other categories.

@@ -4,7 +4,7 @@
 
 ![](template_method/image2.jpg)
 
-Defines the skeleton of an algorithm in a method, deferring some steps to subclasses. The template method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
+Defines the skeleton of an algorithm in a method, deferring some steps to subclasses. The template method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
 
 This pattern is all about creating a template for an algorithm.
 

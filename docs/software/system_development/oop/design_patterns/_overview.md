@@ -69,7 +69,7 @@ That means the implementation and the client should be loosely coupled to avoid 
 | **Behavioral** | Chain of Responsibility | object that can fulfill a request                                                          |
 | "              | Command                 | when and how a request is fulfilled                                                        |
 | "              | Interpreter             | grammar and interpretation of a language                                                   |
-| "              | Iterator                | how an aggregate’s elements are accessed, traversed                                        |
+| "              | Iterator                | how an aggregate's elements are accessed, traversed                                        |
 | "              | Mediator                | how and which objects interact with each other                                             |
 | "              | Memento                 | what private information is stored outside an object, and when                             |
 | "              | Observer                | number of objects that depend on another object; how the dependent objects stay up to date |

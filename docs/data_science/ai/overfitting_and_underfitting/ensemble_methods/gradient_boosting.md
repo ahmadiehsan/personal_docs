@@ -8,7 +8,7 @@ During each iteration, the algorithm computes the negative gradient of the loss 
 
 The overall prediction of the gradient boosting model is obtained by summing up the predictions of all the trees, which are weighted by their respective learning rates.
 
-Let’s look at some of the advantages of gradient boosting:
+Let's look at some of the advantages of gradient boosting:
 
 - High prediction accuracy
 - Handles both regression and classification problems
@@ -16,7 +16,7 @@ Let’s look at some of the advantages of gradient boosting:
 - Can be used with various loss functions
 - Can handle high-dimensional data
 
-Now, let’s look at some of the disadvantages:
+Now, let's look at some of the disadvantages:
 
 - Sensitive to overfitting, especially when the number of trees is large
 - Computationally expensive and time-consuming to train, especially for large datasets

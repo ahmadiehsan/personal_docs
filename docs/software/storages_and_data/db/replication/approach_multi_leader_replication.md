@@ -2,7 +2,7 @@
 
 ## Description
 
-Leader-based replication has one major downside: there is only one leader, and all writers must go through it. If you can’t connect to the leader for any reason, for example, due to a network interruption between you and the leader, you can’t write to the database.
+Leader-based replication has one major downside: there is only one leader, and all writers must go through it. If you can't connect to the leader for any reason, for example, due to a network interruption between you and the leader, you can't write to the database.
 
 A natural extension of the leader-based replication (**Multi-Leader Replication**) model is to allow **more than one node to accept writes**. Replication still happens in the same way: each node that processes a write must forward that data change to all the other nodes.
 

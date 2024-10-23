@@ -21,15 +21,10 @@ To perform LDA, the first step is to compute the mean and covariance matrix of e
 The LDA algorithm can be summarized in the following steps:
 
 1. Compute the mean vector of each class.
-
 2. Compute the covariance matrix of each class.
-
 3. Compute the overall mean vector and overall covariance matrix.
-
 4. Compute the between-class scatter matrix.
-
 5. Compute the within-class scatter matrix.
-
 6. Compute the eigenvectors and eigenvalues of the matrix using the following equation:
 
   $S_w^{-1} * S_b$

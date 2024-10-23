@@ -18,4 +18,4 @@ Semi-supervised learning is useful when labeled data is scarce or expensive to o
 
 Self-supervised learning is a form of unsupervised learning where the data provides the supervision. In other words, the model learns to predict certain parts of the input data from other parts of the same input data. It does not require explicit labels provided by humans, hence the term self-supervised.
 
-In the context of language models, self-supervision is typically implemented by predicting parts of a sentence when given other parts. For example, given the sentence "The cat is on the \_\_," the model would be trained to predict the missing word ("mat," in this case).
+In the context of language models, self-supervision is typically implemented by predicting parts of a sentence when given other parts. For example, given the sentence "The cat is on the __," the model would be trained to predict the missing word ("mat," in this case).

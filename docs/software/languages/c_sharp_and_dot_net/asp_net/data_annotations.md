@@ -10,6 +10,22 @@ When you use the Data Annotations Model Binder, you use validator attributes to 
 - StringLength – Enables you to specify a maximum length for a string property.
 - Validation – The base class for all validator attributes.
 
-## Examples
+## Example
 
-<img src="image1.jpg" style="width:5.7in" />
+```csharp
+public class Product
+{
+    public int Id { get; set; }
+
+    [Required]
+    [StringLength(10)]
+    public string Name { get; set; }
+
+    [Required]
+    public string Description { get; set; }
+
+    [DisplayName("Price")]
+    [RegularExpression(@"^\$?\d+(\.\d{2})?$")]
+    public decimal UnitPrice { get; set; }
+}
+```

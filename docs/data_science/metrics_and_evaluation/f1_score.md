@@ -9,13 +9,13 @@ It is an important metric in the context of **imbalanced** datasets as it consid
 - We use the harmonic mean instead of a simple average because it punishes extreme values
 - A classifier with a precision of 1.0 and a recall of 0.0 has a simple average of 0.5 but an F1-Score of 0
 
-We have F1 micro and F1 macro. F1 micro and F1 macro are two ways to compute the F1 score for multi-class or multi-label classification problems. They aggregate precision and recall differently, leading to different interpretations of the classifier’s performance.
+We have F1 micro and F1 macro. F1 micro and F1 macro are two ways to compute the F1 score for multi-class or multi-label classification problems. They aggregate precision and recall differently, leading to different interpretations of the classifier's performance.
 
 ## F1 Macro
 
 F1 macro computes the F1 score for each class independently and then takes the average of those values. This approach treats each class as equally important and does not consider the class imbalance.
 
-F1 macro is particularly useful when you want to evaluate the performance of a classifier across all classes without giving more weight to the majority class. However, it may not be suitable when the class distribution is highly imbalanced as it can provide an overly optimistic estimate of the model’s performance.
+F1 macro is particularly useful when you want to evaluate the performance of a classifier across all classes without giving more weight to the majority class. However, it may not be suitable when the class distribution is highly imbalanced as it can provide an overly optimistic estimate of the model's performance.
 
 ## F1 Micro
 

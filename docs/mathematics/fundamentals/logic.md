@@ -90,7 +90,7 @@ The compound propositions $p$ and $q$ are called logically equivalent if $p \lef
 
 The notation $p \equiv q$ denotes that $p$ and $q$ are logically equivalent.
 
-### De Morgan’s Laws
+### De Morgan's Laws
 
 - $\neg(p \land q) \equiv \neg p \lor \neg q$
 - $\neg(p \lor q) \equiv \neg p \land \neg q$
@@ -116,7 +116,7 @@ Logical equivalences:
 | $p \lor q \equiv q \lor p$ <br> $p \land q \equiv q \land p$                                                          | Commutative laws    |
 | $(p \lor q) \lor r \equiv p \lor (q \lor r)$ <br> $(p \land q) \land r \equiv p \land (q \land r)$                    | Associative laws    |
 | $p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)$ <br> $p \land (q \lor r) \equiv (p \land q) \lor (p \land r)$ | Distributive laws   |
-| $\neg(p \land q) \equiv \neg p \lor \neg q$ <br> $\neg(p \lor q) \equiv \neg p \land \neg q$                          | De Morgan’s laws    |
+| $\neg(p \land q) \equiv \neg p \lor \neg q$ <br> $\neg(p \lor q) \equiv \neg p \land \neg q$                          | De Morgan's laws    |
 | $p \lor (p \land q) \equiv p$ <br> $p \land (p \lor q) \equiv p$                                                      | Absorption laws     |
 | $p \lor \neg p \equiv \mathbf{T}$ <br> $p \land \neg p \equiv \mathbf{F}$                                             | Negation laws       |
 
@@ -161,7 +161,7 @@ Quantiﬁcation expresses the extent to which a predicate is true over a range o
 
   We use the notation $\exists x P(x)$ for the existential quantiﬁcation of $P(x)$. Here $\exists$ is called the existential quantiﬁer.
 
-- **De Morgan’s Laws for Quantiﬁers:**
+- **De Morgan's Laws for Quantiﬁers:**
 
    | Negation              | Equivalent Statement  | When Is Negation True?                     | When False?                               |
    |-----------------------|-----------------------|--------------------------------------------|-------------------------------------------|

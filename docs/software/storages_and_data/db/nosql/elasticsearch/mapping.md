@@ -10,7 +10,7 @@
 A normalizer in Elasticsearch ensures consistent indexing and searching for exact matching in fields. It preprocesses text, making it suitable for scenarios like case-insensitive sorting and aggregations.
 
 - It produces only **one output**
-- It **doesn’t change** the main value in the document
+- It **doesn't change** the main value in the document
 - For the **aggregations**, ES uses the result of it
 - Use normalizers with **keyword** fields for exact matching
 - Avoid normalizers for **text** fields, as normalizers are designed for keyword fields
@@ -22,7 +22,7 @@ Elasticsearch doesn't apply a default normalizer for **keyword** fields if none 
 An analyzer defines how text fields are processed during indexing and searching, allowing customization for language-specific stemming, synonym handling, and other transformations.
 
 - It produces **multiple outputs**
-- It **doesn’t change** the main value in the document
+- It **doesn't change** the main value in the document
 - For the **search**, ES uses the results of it
 - Apply analyzers to **text** fields for language-specific processing
 - Choose analyzers based on your language and search requirements

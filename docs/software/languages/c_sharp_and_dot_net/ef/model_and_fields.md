@@ -70,7 +70,7 @@ This will be done by the C# annotations
 
   ![](model_and_fields/image7.jpg)
 
-  Example 2: The below code will tell EF that this table doesn’t have primary key
+  Example 2: The below code will tell EF that this table doesn't have primary key
 
   <img src="image12.jpg" style="width:4.8625in" />
 

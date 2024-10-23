@@ -27,6 +27,6 @@ We need to install dotnet SDK for using its command line
 - **restore:** will install all of the current app or library nuget packages
 - **build:** will build the current app or library in the bin directory
 - **clean:** will remove the bin directory content of the current app or library
-- **run:** first will run the build command for the current app and after that will use the bin directory content and will run the app (not a library, because libraries aren’t executable)
+- **run:** first will run the build command for the current app and after that will use the bin directory content and will run the app (not a library, because libraries aren't executable)
 - **publish:** will create a production ready build for the current app and its dependencies
 - **watch:** will run the current app via a local server (is good for development)

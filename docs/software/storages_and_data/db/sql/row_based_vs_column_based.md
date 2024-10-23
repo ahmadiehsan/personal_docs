@@ -16,7 +16,7 @@ Databases come in two fundamental structures: row-based and column-based. This c
 
 ## Scalability
 
-- **Column-Based:** Column databases are often more scalable for analytical workloads since data is already stored by column. Expanding to store new large batches of records is easier with a column orientation. Column compression also saves considerable space for massive data volumes. This makes column stores suited for ‘big data’.
+- **Column-Based:** Column databases are often more scalable for analytical workloads since data is already stored by column. Expanding to store new large batches of records is easier with a column orientation. Column compression also saves considerable space for massive data volumes. This makes column stores suited for "big data".
 - **Row-Based:** However, updating data can be slower. So row stores may fit better for high-volume transactions that regularly add/update records. The structure aligns better with these use cases.
 
 ## Using Both

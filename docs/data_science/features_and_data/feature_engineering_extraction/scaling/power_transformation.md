@@ -35,7 +35,7 @@ The resulting transformed output y is a function of input x and the transformati
 
 ## Example
 
-Let’s now apply the Box-Cox transform on our developer income feature. First we get the optimal lambda value from the data distribution by removing the non-null values as follows.
+Let's now apply the Box-Cox transform on our developer income feature. First we get the optimal lambda value from the data distribution by removing the non-null values as follows.
 
 ```python
 income = np.array(fcc_survey_df['Income'])
@@ -62,6 +62,6 @@ fcc_survey_df['Income_boxcox_lambda_opt'] = spstats.boxcox(
 )
 ```
 
-The transformed features are depicted in the above data frame. Just like we expected, Income\_log and Income\_boxcox\_lamba\_0 have the same values.
+The transformed features are depicted in the above data frame. Just like we expected, Income_log and Income_boxcox_lamba_0 have the same values.
 
 The distribution looks more normal-like similar to what we obtained after the log transform.
