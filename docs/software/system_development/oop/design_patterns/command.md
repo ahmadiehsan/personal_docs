@@ -10,9 +10,9 @@ The Command Pattern allows you to decouple the requester of an action from the o
 
 ![](command/image3.jpg)
 
-<span dir="rtl">حاشیه ها:</span>
+!!! info
 
-- <span dir="rtl">خیلی مناسبه اینه که اکشن های سیستم رو حفظ و نگهداری کرد و ازشون برای کارهای مختلفی مثل آندو کردن یه اکشن یا بازیابی سیستم بعد از کرش کردن استفاده کرد</span>
+    <span dir="rtl">خیلی مناسبه اینه که اکشن های سیستم رو حفظ و نگهداری کرد و ازشون برای کارهای مختلفی مثل آندو کردن یه اکشن یا بازیابی سیستم بعد از کرش کردن استفاده کرد</span>
 
 ## MacroCommands
 

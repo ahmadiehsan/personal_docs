@@ -6,7 +6,9 @@ Creational design patterns are concerned with the way of creating objects. These
 
 This pattern can be further divided into class-creation patterns and object-creational patterns. While class-creation patterns use inheritance effectively in the instantiation process, object-creation patterns use delegation effectively to get the job done.
 
-<span dir="rtl">حاشیه: دیزاین پترن هایی که روی نحوه ساخت آبجکت ها تمرکز دارن کریشنال میگن.</span>
+!!! info
+
+    <span dir="rtl">دیزاین پترن هایی که روی نحوه ساخت آبجکت ها تمرکز دارن کریشنال میگن.</span>
 
 ## Structural Design Patterns
 
@@ -16,7 +18,9 @@ These patterns focus on how the classes inherit from each other and how they are
 
 Structural class-creation patterns use inheritance to compose interfaces. Structural object patterns define ways to compose objects to obtain new functionality.
 
-<span dir="rtl">حاشیه: دیزاین پترن هایی که روی نحوه ارتباط آبجکت ها با هم تمرکز دارن استراکچرال میگن.</span>
+!!! info
+
+    <span dir="rtl">دیزاین پترن هایی که روی نحوه ارتباط آبجکت ها با هم تمرکز دارن استراکچرال میگن.</span>
 
 ## Behavioral Design Patterns
 
@@ -74,4 +78,6 @@ That means the implementation and the client should be loosely coupled to avoid 
 | "              | Template Method         | steps of an algorithm                                                                      |
 | "              | Visitor                 | operations that can be applied to object(s) without changing their class(es)               |
 
-<span dir="rtl">حاشیه: در جدول بالا به راحتی میتونیم ببینیم هر پترن کمک به داینامیک شدن چه جنبه ای میکنه (هدف از دیزاین پترن ها ایزوله کردن بخش هایی از کد هست که در آینده ممکنه تغییر کنن)</span>
+!!! info
+
+    <span dir="rtl">در جدول بالا به راحتی میتونیم ببینیم هر پترن کمک به داینامیک شدن چه جنبه ای میکنه (هدف از دیزاین پترن ها ایزوله کردن بخش هایی از کد هست که در آینده ممکنه تغییر کنن)</span>

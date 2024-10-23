@@ -45,20 +45,18 @@ plugins:
         - _static/styles/iransans.css
         - _static/styles/hello_algo.css
         - _static/styles/hello_algo_overrides.css
-        - _static/styles/mathjax.css
+        - _static/styles/mathjax_overrides.css
         - _static/styles/extra.css
         - _static/styles/rtl.css
       js_files:
+        - _static/js/mathjax_init.js
         - _static/js/mathjax.js
+        - _static/js/mathjax_extra.js
         - _static/js/extra.js
 markdown_extensions:
   - admonition  # Add "alert" support
-  - pymdownx.details  # Need for "alert" support
-  - pymdownx.superfences:  # Add "code blocks" support
-      custom_fences:
-        - name: mermaid  # Add "diagram" support
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details  # Needed for "alert" support
+  - pymdownx.superfences  # Add "code blocks" support
   - pymdownx.arithmatex:  # Add "inline math blocks" support
       generic: true
   - mdx_truly_sane_lists:  # Add "nested lists" support
@@ -67,10 +65,11 @@ extra_css:
   - _static/styles/iransans.css
   - _static/styles/hello_algo.css
   - _static/styles/hello_algo_overrides.css
-  - _static/styles/mathjax.css
+  - _static/styles/mathjax_overrides.css
   - _static/styles/extra.css
   - _static/styles/rtl.css
 extra_javascript:
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - _static/js/mathjax_init.js
   - _static/js/mathjax.js
+  - _static/js/mathjax_extra.js
   - _static/js/extra.js

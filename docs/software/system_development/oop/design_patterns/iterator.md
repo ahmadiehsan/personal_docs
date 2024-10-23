@@ -14,4 +14,6 @@ The Iterator Pattern allows traversal (iterating) of the elements of an aggregat
 
 It also places the task of traversal on the iterator object, not on the aggregate, which simplifies the aggregate interface and implementation and places the responsibility where it should be.
 
-<span dir="rtl">حاشیه: بخش کال کردن متد کریت ایتریتور کاملا مطابق با دیزاین پترن فکتوری متد طراحی شده (یعنی واگذار کردن پیاده سازی بخشی از الگوریتم از سوپر کلاس به ساب کلاس)</span>
+!!! info
+
+    <span dir="rtl">بخش کال کردن متد کریت ایتریتور کاملا مطابق با دیزاین پترن فکتوری متد طراحی شده (یعنی واگذار کردن پیاده سازی بخشی از الگوریتم از سوپر کلاس به ساب کلاس)</span>

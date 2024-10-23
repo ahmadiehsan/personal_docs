@@ -25,7 +25,9 @@ Generation:
 
 ![](memory_management/image6.jpg)
 
-- <span dir="rtl">اول موقع ساخت object اون آبجکت داخل G0 ساخته میشه، بعد از یه مدتی منتقل میشه به G1 و بعدش هم به G2</span>
+!!! info
+
+    <span dir="rtl">اول موقع ساخت object اون آبجکت داخل G0 ساخته میشه، بعد از یه مدتی منتقل میشه به G1 و بعدش هم به G2</span>
 
 <img src="image1.jpg" style="width:4.175in" />
 

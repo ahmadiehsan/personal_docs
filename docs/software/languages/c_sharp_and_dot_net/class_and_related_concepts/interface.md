@@ -23,9 +23,11 @@
 
 ![](interface/image2.jpg)
 
-- <span dir="rtl">برای زمانی است که یک متد هم نام داخل دو interface وجود داره و ما لازم داریم که حتما implementation های مختلفی برای هر کدام پیاده کنیم</span>
-- <span dir="rtl">در صورتی که یک implementation برای هر دو interface کافی باشد، دیگر نیازی به پیاده سازی آنها به شکل بالا نیست</span>
-- <span dir="rtl">در صورت استفاده از explicit implementation این متد ها همگی به صورت اجباری باید private باشند، اما زبان به طور خودکار امکان صدا زدن public آنها به شکل ذکر شده در interface را به ما میدهد!</span>
+!!! info
+
+    - <span dir="rtl">برای زمانی است که یک متد هم نام داخل دو interface وجود داره و ما لازم داریم که حتما implementation های مختلفی برای هر کدام پیاده کنیم</span>
+    - <span dir="rtl">در صورتی که یک implementation برای هر دو interface کافی باشد، دیگر نیازی به پیاده سازی آنها به شکل بالا نیست</span>
+    - <span dir="rtl">در صورت استفاده از explicit implementation این متد ها همگی به صورت اجباری باید private باشند، اما زبان به طور خودکار امکان صدا زدن public آنها به شکل ذکر شده در interface را به ما میدهد!</span>
 
 ## Default Method
 

@@ -10,9 +10,9 @@ Is a mathematical function that converts a vector of numbers into a vector of pr
 
 ![](softmax/image1.jpg)
 
-<span dir="rtl">نکات:</span>
+!!! info
 
-- <span dir="rtl">به شکل کلی برای دسته بندی اطلاعات استفاده میشه (Multiclass Classification)</span>
+    <span dir="rtl">به شکل کلی برای دسته بندی اطلاعات استفاده میشه (Multiclass Classification)</span>
 
 ## Formula
 

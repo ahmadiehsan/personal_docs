@@ -29,9 +29,11 @@
 
 ![](structure/image10.jpg)
 
-<span dir="rtl">نکته: بدون استفاده از constructor اصلا نیازی به instantiate کردن و استفاده از کلیدواژه new نیست، مثل تصویر زیر:</span>
+!!! info
 
-<img src="image2.jpg" style="width:1.3875in" />
+    <span dir="rtl">بدون استفاده از constructor اصلا نیازی به instantiate کردن و استفاده از کلیدواژه new نیست، مثل زیر:</span>
+
+    <img src="image2.jpg" style="width:1.3875in" />
 
 ## Readonly Structure
 
