@@ -8,7 +8,9 @@
 
 ![](field/image5.jpg)
 
-Tip: default access modifier is private
+!!! info
+
+    Default access modifier is private
 
 ## Modifiers
 

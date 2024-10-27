@@ -6,7 +6,9 @@
 
 ## Install
 
-Tip: installation flow needs an active VPN
+!!! info
+
+    Installation flow needs an active VPN
 
 ```shell
 sudo apt update

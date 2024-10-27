@@ -104,7 +104,9 @@ This will be done by the C# annotations
 
   ![](model_and_fields/image16.jpg)
 
-  tip: can be List<> or ICollection<>
+  !!! info
+
+      Can be List<> or ICollection<>
 
 - Data Annotation:
 
@@ -120,7 +122,9 @@ This will be done by the C# annotations
 
   ![](model_and_fields/image11.jpg)
 
-  tip: can be ICollection<> or List<>
+  !!! info
+
+      Can be ICollection<> or List<>
 
 - Fluent API:
 

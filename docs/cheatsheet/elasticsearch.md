@@ -147,6 +147,7 @@
 
   ```shell
   # Tip: Because this format uses literal `\n`'s as delimiters, make sure that the JSON actions and sources are not pretty printed
+
   curl -X POST "http://localhost:9200/<index_name>/_bulk?pretty" -H 'Content-Type: application/json' -d '
   {"index": {"_id": "<document_id>"}}
   {"<field>": "<value>"}

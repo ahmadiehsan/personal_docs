@@ -105,7 +105,7 @@ Examples:
 
 !!! info
 
-    TIP: WPF is newer than Win Forms and contains more complex functionalities
+    WPF is newer than Win Forms and contains more complex functionalities
 
 ## Common Language Runtime (CLR)
 
