@@ -465,7 +465,6 @@ dynamic variableName = value;
   ```
 
 - The Dynamically Typed Variable can change its data type, any number of times, at run-time.
-
 - Methods and other members of `dynamically typed variables` will not be checked by the compiler at compilation time; it will be checked by the CLR at runtime.
 
    - If the method or other member is not available, it would not cause a compile-time error; it raises a run-time error when the execution flow encounters that particular statement.
