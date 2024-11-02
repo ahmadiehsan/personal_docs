@@ -2,64 +2,145 @@
 
 ## BinaryFormatter
 
-Description:
+Class that serializes (converts) an object-state into binary format and stores in binary file.
 
-![](serialization/image16.jpg)
+- Serialization is a process of converting an object from one format to another format.
+- It can also read existing object-state from the binary file.
+- Full path: `System.Runtime.Serialization.Formatters.Binary.BinaryFormatter`
 
-![](serialization/image11.jpg)
+```csharp
+BinaryFormatter referenceVariable = new BinaryFormatter();
+```
 
-![](serialization/image15.jpg)
+Example:
 
-![](serialization/image6.jpg)
+```csharp
+[Serializable]
+public class Country
+{
+    public short CountryID { get; set; }
+    public string CountryName { get; set; }
+    public long Population { get; set; }
+    public string Region { get; set; }
+}
+
+// create object
+Country country = new Country()
+{
+    CountryID = 1,
+    CountryName = "Russia",
+    Population = 145934000,
+    Region = "Eastern Europe"
+};
+
+// create FileStream
+string filePath = @"c:\practice\russia.txt";
+FileStream fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write);
+
+// create BinaryFormatter
+BinaryFormatter binaryFormatter = new BinaryFormatter();
+binaryFormatter.Serialize(fileStream, country);
+fileStream.Close();
+
+// Code for deserialization
+FileStream fileStream2 = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+Country country_from_file = (Country)binaryFormatter.Deserialize(fileStream2);
+```
 
 Methods:
 
-![](serialization/image10.jpg)
+| Method             | Description                                                                                              |
+|--------------------|----------------------------------------------------------------------------------------------------------|
+| `Serialize(...)`   | Converts the object-state into the binary file, using the specified FileStream (with Write access).      |
+| `Deserialize(...)` | Reads the existing object-state from the binary file, using the specified FileStream (with Read access). |
 
 ## JsonSerializer
-
-Description:
 
 A flexible static class for serializing objects and deserializing jsons
 
 Methods:
 
-serialize:
+`Serialize(...)`:
 
-<img src="image1.jpg" style="width:5.34583in" />
+```csharp
+string jsonString = JsonSerializer.Serialize(weatherForecast);
+```
 
-<img src="image2.jpg" style="width:5.77917in" />
+```csharp
+string fileName = "WeatherForecast.json";
+string jsonString = JsonSerializer.Serialize(weatherForecast);
+File.WriteAllText(fileName, jsonString);
+```
 
-![](serialization/image3.jpg)
+```csharp
+string fileName = "WeatherForecast.json";
+using FileStream createStream = File.Create(fileName);
+await JsonSerializer.SerializeAsync(createStream, weatherForecast);
+await createStream.DisposeAsync();
 
-![](serialization/image5.jpg)
+var options = new JsonSerializerOptions { WriteIndented = true };
+string jsonString = JsonSerializer.Serialize(weatherForecast, options);
+```
 
-deserialize:
+`Deserialize(...)`:
 
-<img src="image4.jpg" style="width:5.4875in" />
+```csharp
+WeatherForecast? weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(jsonString);
+```
 
-![](serialization/image7.jpg)
+```csharp
+string fileName = "WeatherForecast.json";
+using FileStream openStream = File.OpenRead(fileName);
+WeatherForecast? weatherForecast = await JsonSerializer.DeserializeAsync<WeatherForecast>(openStream);
+```
 
 ## JavaScriptSerializer (JSON for .NET Framework)
 
-Description:
+Class that serializes (converts) an object-state into JSON format.
 
-![](serialization/image12.jpg)
+- It can also convert JSON data into an object of any class.
+- Full path: `System.Web.Script.Serialization.JavaScriptSerializer`
 
-![](serialization/image17.jpg)
+Example:
 
-![](serialization/image8.jpg)
+```csharp
+// create object of JavaScriptSerializer
+JavaScriptSerializer javaScriptSerializer = new JavaScriptSerializer();
+string filePath = @"c:\practice\customer.txt";
+StreamWriter streamWriter = new StreamWriter(filePath);
+
+// Serialize
+string json = javaScriptSerializer.Serialize(customer);
+streamWriter.WriteLine(json);
+streamWriter.Close();
+Console.WriteLine("Serialized");
+
+// Deserialize
+StreamReader streamReader = new StreamReader(filePath);
+Customer customer_from_file = javaScriptSerializer.Deserialize(streamReader.ReadToEnd(), typeof(Customer)) as Customer;
+```
 
 Methods:
 
-![](serialization/image13.jpg)
+| Task               | Code Example                                                              |
+|--------------------|---------------------------------------------------------------------------|
+| `Serialize(...)`   | `javaScriptSerializer.Serialize( YourObject )`                            |
+| `Deserialize(...)` | `javaScriptSerializer.Deserialize( string jsonData, typeof(ClassName) )`  |
 
 ## XmlSerializer
 
-Description:
+Class that serializes (converts) an object-state into XML format and stores in XML file.
 
-![](serialization/image14.jpg)
+- It can also read existing object-state from the XML file.
+- Full path: `System.Xml.Serialization.XmlSerializer`
+
+```csharp
+XmlSerializer referenceVariable = new XmlSerializer( typeof(ClassName) );
+```
 
 Methods:
 
-![](serialization/image9.jpg)
+| Method             | Description                                                                                           |
+|--------------------|-------------------------------------------------------------------------------------------------------|
+| `Serialize(...)`   | Converts the object-state into the XML file, using the specified FileStream (with Write access).      |
+| `Deserialize(...)` | Reads the existing object-state from the XML file, using the specified FileStream (with Read access). |
