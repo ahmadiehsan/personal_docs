@@ -22,7 +22,7 @@ Latent Dirichlet Allocation (LDA) is a generative statistical model used in NLP 
 
 ## How It Works
 
-- **Initial Assignment:** Randomly assign each word in each document to a topic
+- **Initial Assignment**: Randomly assign each word in each document to a topic
 - This random assignment already gives you both topic representations of all the documents and word distributions of all the topics (note: these initial random topics won't make sense)
 - Iterative refinement:
 

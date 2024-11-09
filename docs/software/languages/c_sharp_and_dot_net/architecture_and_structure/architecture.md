@@ -22,7 +22,7 @@
 | Run Time Engine that is used to execute applications. | Object-Oriented Collection of Classes that are used to develop applications. |
 
 - CLR: Runner of IL code in the Linux, Windows, etc
-- FCL: All of the predefined codes inside of .Net
+- FCL: All the predefined codes inside of .Net
 
 ![](architecture/image9.jpg)
 
@@ -85,7 +85,7 @@ Examples:
 
 Predefined libraries just for the windows application development
 
-**Win Forms:** Contains a set of pre-defined classes that can be used in Windows GUI applications for development of GUI elements such as form, textbox, button, checkbox, radio button, dropdownlist etc.
+**Win Forms**: Contains a set of pre-defined classes that can be used in Windows GUI applications for development of GUI elements such as form, textbox, button, checkbox, radio button, dropdownlist etc.
 
 Examples:
 
@@ -94,7 +94,7 @@ Examples:
 - Button
 - TextBox
 
-**WPF:** Contains a set of pre-defined classes that can be used in Rich Windows GUI applications for development of GUI elements such as window, textbox, button, checkbox, radio button, dropdownlist etc.
+**WPF**: Contains a set of pre-defined classes that can be used in Rich Windows GUI applications for development of GUI elements such as window, textbox, button, checkbox, radio button, dropdownlist etc.
 
 Examples:
 

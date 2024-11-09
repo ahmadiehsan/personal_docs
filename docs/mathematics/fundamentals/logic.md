@@ -153,15 +153,15 @@ Statements involving variables, such as "$x > 3$, $x = y + 3$, $x + y = z$" and 
 
 Quantiﬁcation expresses the extent to which a predicate is true over a range of elements. In English, the words all, some, many, none, and few are used in quantiﬁcations. We will focus on two types of quantiﬁcationAssessment here: universal quantiﬁcation, which tells us that a predicate is true for every element under consideration, and existential quantiﬁcation, which tells us that there is one or more element under consideration for which the predicate is true
 
-- **Universal quantiﬁer:** The universal quantiﬁcation of $P(x)$ is the statement "$P(x)$ for all values of $x$ in the domain."
+- **Universal quantiﬁer**: The universal quantiﬁcation of $P(x)$ is the statement "$P(x)$ for all values of $x$ in the domain."
 
   The notation $\forall x P(x)$ denotes the universal quantiﬁcation of $P(x)$. Here $\forall$ is called the universal quantiﬁer. We read $\forall x P(x)$ as "for all $x P(x)$" or "for every $x P(x)$." An element for which $P(x)$ is false is called a counterexample to $\forall x P(x)$.
 
-- **Existential quantiﬁer:** The existential quantiﬁcation of $P(x)$ is the proposition "There exists an element x in the domain such that P(x)."
+- **Existential quantiﬁer**: The existential quantiﬁcation of $P(x)$ is the proposition "There exists an element x in the domain such that P(x)."
 
   We use the notation $\exists x P(x)$ for the existential quantiﬁcation of $P(x)$. Here $\exists$ is called the existential quantiﬁer.
 
-- **De Morgan's Laws for Quantiﬁers:**
+- **De Morgan's Laws for Quantiﬁers**:
 
    | Negation              | Equivalent Statement  | When Is Negation True?                     | When False?                               |
    |-----------------------|-----------------------|--------------------------------------------|-------------------------------------------|
@@ -181,9 +181,9 @@ An argument form in propositional logic is a sequence of compound propositions i
     - <span dir="rtl">منظور همان استدلال کردن است، مثلا اگر الف و ب پس پ</span>
     - <span dir="rtl">الف و ب همان premises هستند و پ همان conclusion </span>
 
-- **premises:** All but the ﬁnal proposition in the argument are called
-- **conclusion:** the ﬁnal proposition is called the conclusion.
-- **$\therefore$ symbol:** denotes "therefore"
+- **premises**: All but the ﬁnal proposition in the argument are called
+- **conclusion**: the ﬁnal proposition is called the conclusion.
+- **$\therefore$ symbol**: denotes "therefore"
 
 ### Rules of Inference
 

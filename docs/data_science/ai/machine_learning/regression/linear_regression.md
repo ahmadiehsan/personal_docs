@@ -2,7 +2,7 @@
 
 ## Specifications
 
-- **Cost Function:** Mean Squared Error, Mean Absolute Error
+- **Cost Function**: Mean Squared Error, Mean Absolute Error
 
 ## Description
 

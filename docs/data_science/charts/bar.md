@@ -6,9 +6,9 @@ A bar chart is a graphical representation used to display data with rectangular 
 
 Key features:
 
-- **Axes:** Usually, the x-axis represents categories, and the y-axis represents values (or vice versa for horizontal bar charts).
-- **Bars:** The length of each bar corresponds to the data value it represents.
-- **Spacing:** Bars are usually spaced evenly to ensure clarity.
+- **Axes**: Usually, the x-axis represents categories, and the y-axis represents values (or vice versa for horizontal bar charts).
+- **Bars**: The length of each bar corresponds to the data value it represents.
+- **Spacing**: Bars are usually spaced evenly to ensure clarity.
 
 Bar charts are ideal for comparing quantities across different categories, making them one of the most common types of charts used in data visualization.
 

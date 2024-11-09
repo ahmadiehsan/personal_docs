@@ -14,5 +14,5 @@ $$
 \text{Recall} = \frac{\text{Relevant retrieved instances}}{\text{All relevant instances}}
 $$
 
-- **Relevant retrieved instances:** Total correctly identified positive instances
-- **All relevant instances:** Total actual positive instances
+- **Relevant retrieved instances**: Total correctly identified positive instances
+- **All relevant instances**: Total actual positive instances

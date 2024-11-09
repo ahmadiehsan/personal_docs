@@ -29,6 +29,6 @@ SAML (Security Assertion Markup Language) is an XML-based protocol designed for 
 
 ## Use Cases
 
-- **Enterprise SSO:** Commonly used for Single Sign-On in enterprise environments.
-- **Federated Identity:** Enables identity federation across different organizations.
-- **Web-based Applications:** Widely used for securing access to web applications and services.
+- **Enterprise SSO**: Commonly used for Single Sign-On in enterprise environments.
+- **Federated Identity**: Enables identity federation across different organizations.
+- **Web-based Applications**: Widely used for securing access to web applications and services.

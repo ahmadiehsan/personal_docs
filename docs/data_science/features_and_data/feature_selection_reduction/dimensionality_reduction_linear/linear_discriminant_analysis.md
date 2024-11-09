@@ -43,9 +43,9 @@ The new axis created according to two criteria (considered simultaneously)
 
 ### Why Both Distance & Scatter Are Important
 
-**Distance:** Minimizing the distance between means of two categories
+**Distance**: Minimizing the distance between means of two categories
 
-**Scatter:** Minimizing the variation of each category
+**Scatter**: Minimizing the variation of each category
 
 <img src="image5.jpg" style="width:4.09907in" />
 

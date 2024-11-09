@@ -8,7 +8,7 @@ Enables complex reasoning capabilities through intermediate reasoning steps. (In
 
 ## Few-Shot & Zero-Shot CoT Prompting
 
-- **Few-Shot:** Combining the original prompt with few-shot prompting.
-- **Zero-Shot:** Involves adding "Let's think step by step" to the original prompt.
+- **Few-Shot**: Combining the original prompt with few-shot prompting.
+- **Zero-Shot**: Involves adding "Let's think step by step" to the original prompt.
 
 ![](chain_of_thought/image1.png)

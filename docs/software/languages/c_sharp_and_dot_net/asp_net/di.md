@@ -62,7 +62,7 @@ builder.Services.AddHttpClient<IAService, AService>()
 
 ### Configurations (Content of `appsettings.json`)
 
-- **Options Pattern:** First we should create a class like the StripeSettngs in the below image, then with using the GetSection method simply we can receive any data from appsettings.json file
+- **Options Pattern**: First we should create a class like the StripeSettngs in the below image, then with using the GetSection method simply we can receive any data from appsettings.json file
 
   ```csharp
   builder.Services.Configure<StripeSettings>(
@@ -76,7 +76,7 @@ builder.Services.AddHttpClient<IAService, AService>()
   IOptionsMonitor<StripeSettings> stripeSettings;
   ```
 
-- **Direct Way:** Another way for reading from appsettings.json file without any middle class is like the bellow:
+- **Direct Way**: Another way for reading from appsettings.json file without any middle class is like the bellow:
 
   ```csharp
   var secretKey = builder.Configuration

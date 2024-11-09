@@ -6,9 +6,9 @@ In feature construction, interaction terms refer to creating new features by com
 
 When creating interaction terms, it is important to consider which features to combine and how to combine them. Here are some common techniques:
 
-- **Domain knowledge:** Use domain knowledge or expert intuition to identify which features are likely to interact and how they might interact.
-- **Pairwise combinations:** Create interaction terms by pairwise combining all pairs of features in the dataset. This can be computationally expensive, but it can help identify potential interaction effects.
-- **PCA:** Use PCA to identify the most important combinations of features, and create interaction terms based on these combinations.
+- **Domain knowledge**: Use domain knowledge or expert intuition to identify which features are likely to interact and how they might interact.
+- **Pairwise combinations**: Create interaction terms by pairwise combining all pairs of features in the dataset. This can be computationally expensive, but it can help identify potential interaction effects.
+- **PCA**: Use PCA to identify the most important combinations of features, and create interaction terms based on these combinations.
 
 ## Examples
 

@@ -32,9 +32,9 @@ $Rv = \begin{bmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \e
 
 ## Transformation Types
 
-- **Onto:** If $T(\vec{x}) = A_{m \times n} \vec{x}$ then $Rank(A) = m$
-- **One-to-One:** If $T(\vec{x}) = A_{m \times n} \vec{x}$ then $Rank(A) = n$
-- **Invertible:** There should be a onto and one-to-one transformation
+- **Onto**: If $T(\vec{x}) = A_{m \times n} \vec{x}$ then $Rank(A) = m$
+- **One-to-One**: If $T(\vec{x}) = A_{m \times n} \vec{x}$ then $Rank(A) = n$
+- **Invertible**: There should be a onto and one-to-one transformation
 
 ## Operations
 

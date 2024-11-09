@@ -20,7 +20,7 @@ We can analyse the features & target and identify the noise in terms of outliers
 
 Techniques:
 
-- **Outlier detection & treatment:** Either remove the records or put an upper and lower ceiling.
+- **Outlier detection & treatment**: Either remove the records or put an upper and lower ceiling.
 
 ## Noise In Feature
 
@@ -28,7 +28,7 @@ This type of noise is introduced when there are features in the data which are n
 
 Techniques:
 
-- **Filter Method:** We can perform various statistical tests between features & responses to identify which features are more relevant than others.
+- **Filter Method**: We can perform various statistical tests between features & responses to identify which features are more relevant than others.
 
   | Feature\Response | Continuous            | Categorical  |
   |------------------|-----------------------|--------------|
@@ -37,7 +37,7 @@ Techniques:
 
   *Please note that above methods don't identify or deal with multicollinearity, we need to figure that out separately.*
 
-- **Wrapper Method:** Here we add/remove features to baseline model and compare the performance of the model:
+- **Wrapper Method**: Here we add/remove features to baseline model and compare the performance of the model:
 
    - forward selection
    - backward elimination
@@ -45,7 +45,7 @@ Techniques:
 
   <img src="image6.png" style="width:4.5in" />
 
-- **Embedded Methods (Regularisation):** This method makes use of the filter & wrapper method, it is implemented using algos which have their own built-in feature selection methods.
+- **Embedded Methods (Regularisation)**: This method makes use of the filter & wrapper method, it is implemented using algos which have their own built-in feature selection methods.
 
   <img src="image2.png" style="width:4.5in" />
 
@@ -55,10 +55,10 @@ In these methods, we can try to find the set of records which have noise.
 
 Techniques:
 
-- **K-fold Validation:** In this method, we can look at the cross validation score of each fold and analyse the folds which have poor CV scores, what are the common attributes of records having poor scores, etc.
+- **K-fold Validation**: In this method, we can look at the cross validation score of each fold and analyse the folds which have poor CV scores, what are the common attributes of records having poor scores, etc.
 
   <img src="image3.png" style="width:4.5in" />
 
-- **Manual Method:** Here we can evaluate the CV of each record (predicted vs. actual) and filter/analyse the records having a poor CV score. This will help us in analysing why this is happening in the first place.
+- **Manual Method**: Here we can evaluate the CV of each record (predicted vs. actual) and filter/analyse the records having a poor CV score. This will help us in analysing why this is happening in the first place.
 
   <img src="image4.png" style="width:4.5in" />

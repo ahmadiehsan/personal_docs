@@ -8,8 +8,8 @@ Let's assume we have a binary classification problem with two classes, positive 
 
 Cost-sensitive learning can also be used with other types of models, such as decision trees and SVMs. The concept of assigning costs to different types of errors can be applied in various ways to improve the performance of a model on imbalanced datasets. However, it's important to carefully select the appropriate cost matrix and loss function based on the specific characteristics of the dataset and the problem being solved:
 
-- **Ensemble techniques:** Combine multiple models to improve predictive performance. In imbalanced datasets, an ensemble of models can be trained on different subsets of the dataset, ensuring that each model is trained on both the minority and majority classes. Examples of ensemble techniques for imbalanced datasets include bagging and boosting.
-- **Anomaly detection:** Can be used to identify the minority class as an anomaly in the dataset. These techniques aim to identify rare events that are significantly different from the majority class. The identified samples can then be used to train the model on the minority class.
+- **Ensemble techniques**: Combine multiple models to improve predictive performance. In imbalanced datasets, an ensemble of models can be trained on different subsets of the dataset, ensuring that each model is trained on both the minority and majority classes. Examples of ensemble techniques for imbalanced datasets include bagging and boosting.
+- **Anomaly detection**: Can be used to identify the minority class as an anomaly in the dataset. These techniques aim to identify rare events that are significantly different from the majority class. The identified samples can then be used to train the model on the minority class.
 
 ## How It Works
 

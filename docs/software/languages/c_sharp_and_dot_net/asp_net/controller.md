@@ -204,8 +204,7 @@ If you need to get the user from within the controller, use the `User` property 
 - For example like the below code we can check does our form is valid or not
 
   ```csharp
-  if (ModelState.IsValid)
-  {
+  if (ModelState.IsValid) {
       // Your flow here
   }
   ```

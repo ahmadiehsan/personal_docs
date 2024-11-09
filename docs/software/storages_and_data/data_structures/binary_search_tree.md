@@ -25,8 +25,8 @@ When we are looking for num, we declare a node cur, start from the binary tree's
 
 It works like this:
 
-- **Finding insertion position:** Similar to the search operation, start from the root node, loop downwards according to the size relationship between the current node value and num, until the leaf node is passed (traversed to None), then exit the loop.
-- **Insert the node at this position:** Initialize the node num and place it where None was.
+- **Finding insertion position**: Similar to the search operation, start from the root node, loop downwards according to the size relationship between the current node value and num, until the leaf node is passed (traversed to None), then exit the loop.
+- **Insert the node at this position**: Initialize the node num and place it where None was.
 
 <img src="image2.jpg" style="width:5.02253in" />
 

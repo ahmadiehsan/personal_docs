@@ -6,16 +6,16 @@ The Outbox Pattern is a software design pattern often used in microservices arch
 
 ## Key Concepts
 
-- **Outbox Table:**
+- **Outbox Table**:
 
    - Within your service's database, you maintain an additional table called the "Outbox."
    - Whenever an event or operation occurs that needs to trigger a message (e.g., sending an email, or updating another service), you first record this event in the Outbox table as a transactional part of the operation.
 
-- **Transaction Management:**
+- **Transaction Management**:
 
    - The service's primary operation and the recording of the event in the Outbox table are done within the same database transaction. This ensures that either both succeed or both fail, maintaining consistency.
 
-- **Event Dispatcher:**
+- **Event Dispatcher**:
 
    - A separate process or component periodically scans the Outbox table for new entries.
    - This process then reads these entries and sends the corresponding messages or events to the appropriate external systems or services.
@@ -23,9 +23,9 @@ The Outbox Pattern is a software design pattern often used in microservices arch
 
 ## Benefits
 
-- **Reliability:** Ensures that messages are not lost due to failures or errors. If the dispatch fails, the entry remains in the Outbox and can be retried.
-- **Consistency:** Guarantees that messages are only sent if the associated operation is successfully committed to the database.
-- **Decoupling:** The actual sending of messages is decoupled from the main transaction, reducing the risk of errors and delays.
+- **Reliability**: Ensures that messages are not lost due to failures or errors. If the dispatch fails, the entry remains in the Outbox and can be retried.
+- **Consistency**: Guarantees that messages are only sent if the associated operation is successfully committed to the database.
+- **Decoupling**: The actual sending of messages is decoupled from the main transaction, reducing the risk of errors and delays.
 
 ## Use Cases
 

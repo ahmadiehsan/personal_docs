@@ -2,7 +2,7 @@
 
 ## Specifications
 
-- **Cost Function:** Squared Error Loss
+- **Cost Function**: Squared Error Loss
 
 ## Description
 

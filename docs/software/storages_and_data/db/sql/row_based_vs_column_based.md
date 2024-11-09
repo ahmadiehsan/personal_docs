@@ -6,18 +6,18 @@ Databases come in two fundamental structures: row-based and column-based. This c
 
 <img src="image1.jpg" style="width:5.47917in" />
 
-- **Row-Based:** Store data in rows. All the information related to one record is stored together, making it easy to retrieve the full row.
-- **Column-Based:** Store information by columns instead of rows. So a column will contain all values from the field across many rows and records.
+- **Row-Based**: Store data in rows. All the information related to one record is stored together, making it easy to retrieve the full row.
+- **Column-Based**: Store information by columns instead of rows. So a column will contain all values from the field across many rows and records.
 
 ## Query Performance
 
-- **Row-Based:** Allow efficient retrieving of whole rows. This makes them more suitable for transactional processing requiring access to full records.
-- **Column-Based:** Columnar stores excel at aggregate queries – like sums or averages - that look across many rows because one column contains all the relevant data to calculate stats. Analytics queries run much faster by reducing what data needs scanning.
+- **Row-Based**: Allow efficient retrieving of whole rows. This makes them more suitable for transactional processing requiring access to full records.
+- **Column-Based**: Columnar stores excel at aggregate queries – like sums or averages - that look across many rows because one column contains all the relevant data to calculate stats. Analytics queries run much faster by reducing what data needs scanning.
 
 ## Scalability
 
-- **Column-Based:** Column databases are often more scalable for analytical workloads since data is already stored by column. Expanding to store new large batches of records is easier with a column orientation. Column compression also saves considerable space for massive data volumes. This makes column stores suited for "big data".
-- **Row-Based:** However, updating data can be slower. So row stores may fit better for high-volume transactions that regularly add/update records. The structure aligns better with these use cases.
+- **Column-Based**: Column databases are often more scalable for analytical workloads since data is already stored by column. Expanding to store new large batches of records is easier with a column orientation. Column compression also saves considerable space for massive data volumes. This makes column stores suited for "big data".
+- **Row-Based**: However, updating data can be slower. So row stores may fit better for high-volume transactions that regularly add/update records. The structure aligns better with these use cases.
 
 ## Using Both
 

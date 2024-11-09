@@ -400,8 +400,7 @@ It allows you to declare a variable while checking the data type (class) of a re
 The classic way to check data type:
 
 ```csharp
-if (referenceVariable is Class1)
-{
+if (referenceVariable is Class1) {
     Class1 c1 = (Class1)referenceVariable;
     c1.Property....;
 }
@@ -410,8 +409,7 @@ if (referenceVariable is Class1)
 The Pattern-Matching way to check data type:
 
 ```csharp
-if (referenceVariable is Class1 c1)
-{
+if (referenceVariable is Class1 c1) {
     c1.Property....;
 }
 ```

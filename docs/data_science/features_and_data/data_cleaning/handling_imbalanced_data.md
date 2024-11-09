@@ -4,8 +4,8 @@
 
 In general, we can have three categories of methods to handle imbalanced datasets:
 
-- **Undersampling:** To use fewer training records from the majority class.
-- **Resampling:** Modifying the original dataset to create a balanced distribution. This can be achieved by either oversampling the minority class (creating more samples of the minority class) or undersampling the majority class (removing samples from the majority class).
+- **Undersampling**: To use fewer training records from the majority class.
+- **Resampling**: Modifying the original dataset to create a balanced distribution. This can be achieved by either oversampling the minority class (creating more samples of the minority class) or undersampling the majority class (removing samples from the majority class).
 
    - Oversampling techniques include:
 
@@ -19,7 +19,7 @@ In general, we can have three categories of methods to handle imbalanced dataset
       - Tomek links
       - Cluster centroids
 
-- **Handling imbalanced datasets in machine learning models:** Such as modifying cost function, or modified batching in deep learning models.
+- **Handling imbalanced datasets in machine learning models**: Such as modifying cost function, or modified batching in deep learning models.
 
 ## SMOTE (Oversampling)
 

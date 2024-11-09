@@ -2,8 +2,8 @@
 
 ## Specifications
 
-- **Data Type:** Continuous numeric data
-- **Good For:** Non-Gaussian to Gaussian
+- **Data Type**: Continuous numeric data
+- **Good For**: Non-Gaussian to Gaussian
 
 ## Description
 

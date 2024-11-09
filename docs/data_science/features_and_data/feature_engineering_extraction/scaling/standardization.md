@@ -2,7 +2,7 @@
 
 ## Description
 
-Z-score normalization refers to the process of normalizing every value in a dataset such that the mean of all of the values is 0 and the standard deviation is 1.
+Z-score normalization refers to the process of normalizing every value in a dataset such that the mean of All the values is 0 and the standard deviation is 1.
 
 This technique transforms the feature values to have a mean of 0 and a standard deviation of 1. Standardization **is less affected by outliers in the data than min-max scaling**.
 

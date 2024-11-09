@@ -2,7 +2,7 @@
 
 ## Specifications
 
-- **Cost Function:** Log Loss, Squared Error Loss
+- **Cost Function**: Log Loss, Squared Error Loss
 
 ## Description
 

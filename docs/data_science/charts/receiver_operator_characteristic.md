@@ -15,8 +15,8 @@ The ROC curve is created by plotting the true positive rate (TPR) against the fa
 <img src="image1.jpg" style="width:3.88105in" />
 
 - The table is calculated by the **confusion matrix** technique
-- **True Positives:** numbere of experiments that the algorithm classified them **correctly**
-- **False Positives:** numbere of experiments that the algorithm classified them **incorrectly**
+- **True Positives**: numbere of experiments that the algorithm classified them **correctly**
+- **False Positives**: numbere of experiments that the algorithm classified them **incorrectly**
 
 ## Area Under The Curve (AUC)
 
