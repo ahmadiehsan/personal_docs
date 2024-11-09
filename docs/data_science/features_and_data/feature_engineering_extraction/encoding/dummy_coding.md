@@ -2,7 +2,7 @@
 
 ## Specifications
 
-- **Good for:** Low number of values
+- **Good for**: Low number of values
 
 ## Description
 

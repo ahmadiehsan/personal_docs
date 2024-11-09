@@ -2,7 +2,7 @@
 
 ## Specifications
 
-- **Good for:** Large number of values
+- **Good for**: Large number of values
 
 ## Description
 

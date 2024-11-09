@@ -70,4 +70,4 @@ Tips:
 | **Unmanaged Resources**                                                                             | **Managed Resources**                                                                      |
 |-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
 | The objects that are not created by CLR and not managed by CLR are called as "Unmanaged Resources". | The objects that are created by CLR are called as "Managed Resources".                     |
-| **Ex:** File streams, database connections.                                                         | These will participate in "Garbage Collection" process, which is a part of .NET Framework. |
+| **Ex**: File streams, database connections.                                                         | These will participate in "Garbage Collection" process, which is a part of .NET Framework. |

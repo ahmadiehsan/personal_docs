@@ -200,8 +200,7 @@ do
 Foreach:
 
 ```csharp
-foreach (DataType iterationVariable in arrayVariable)
-{
+foreach (DataType iterationVariable in arrayVariable) {
     iterationVariable;
 }
 ```

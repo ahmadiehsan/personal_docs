@@ -14,5 +14,5 @@ $$
 \text{Precision} = \frac{\text{Relevant retrieved instances}}{\text{All retrieved instances}}
 $$
 
-- **Relevant retrieved instances:** Total correctly identified positive instances
-- **All retrieved instances:** Total instances predicted as positive
+- **Relevant retrieved instances**: Total correctly identified positive instances
+- **All retrieved instances**: Total instances predicted as positive

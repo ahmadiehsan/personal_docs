@@ -31,5 +31,5 @@ The URL pattern for routing is considered after the domain name.
 | www.domain.com/index   | /Pages/Index.cshtml                                    |
 | www.domain.com/account | /Pages/account.cshtml <br> /Pages/account/index.cshtml |
 
-- All of the pages and codes are combined in one directory named Pages
+- All the pages and codes are combined in one directory named Pages
 - For each page there are two files, `<PageName>.cshtml` and `<PageName>.cshtml.cs`

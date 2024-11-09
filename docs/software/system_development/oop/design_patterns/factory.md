@@ -6,9 +6,9 @@ The Factory design pattern is a creational pattern used to create objects withou
 
 There are three types of the Factory pattern:
 
-- **Simple Factory:** where a single factory class creates objects based on input.
-- **Factory Method:** where subclasses decide which object to instantiate.
-- **Abstract Factory:** which provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+- **Simple Factory**: where a single factory class creates objects based on input.
+- **Factory Method**: where subclasses decide which object to instantiate.
+- **Abstract Factory**: which provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 
 !!! info
 

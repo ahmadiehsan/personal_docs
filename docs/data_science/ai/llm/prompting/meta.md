@@ -8,8 +8,8 @@ This technique is effective for complex reasoning tasks, mathematical problems, 
 
 Key Characteristics:
 
-- **Structure-oriented:** Focuses on the format of problems and solutions.
-- **Syntax-focused:** Uses syntax as a guiding template.
-- **Abstract examples:** Utilizes abstract frameworks for problem-solving.
-- **Versatile:** Applicable across various domains.
-- **Categorical approach:** Emphasizes logical arrangement and categorization.
+- **Structure-oriented**: Focuses on the format of problems and solutions.
+- **Syntax-focused**: Uses syntax as a guiding template.
+- **Abstract examples**: Utilizes abstract frameworks for problem-solving.
+- **Versatile**: Applicable across various domains.
+- **Categorical approach**: Emphasizes logical arrangement and categorization.

@@ -2,7 +2,7 @@
 
 ## Specifications
 
-- **Data Type:** Continuous numeric data
+- **Data Type**: Continuous numeric data
 
 ## Description
 

@@ -19,9 +19,9 @@
 
 <img src="image8.jpg" style="width:2.73166in" />
 
-- **Tuple:** means a list of numbers.
-- **Cartesian coordinate system:** is the specific name for 2-tuples.
-- **3-tuples:** means 3 numbers in one matrix.
+- **Tuple**: means a list of numbers.
+- **Cartesian coordinate system**: is the specific name for 2-tuples.
+- **3-tuples**: means 3 numbers in one matrix.
 
 ## Operations
 
@@ -29,8 +29,8 @@
 
 <img src="image24.jpg" style="width:5.41567in" />
 
-- All of the purple arrows are the same
-- All of the green arrows are the same
+- All the purple arrows are the same
+- All the green arrows are the same
 - The starting point doesn't matter in Vectors
 - The blue arrow completely shows us how adding two Vectors to each other works in the background
 

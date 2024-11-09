@@ -20,15 +20,15 @@
 
 Tracked entities can be in one of four states. The state of an entity determines how it is processed when SaveChanges is called.
 
-- **Added:** The entity does not yet exist in the database. SaveChanges should **insert** it
-- **Unchanged:** The entity exists in the database and has not been modified on the client. SaveChanges should **ignore** it
-- **Modified:** The entity exists in the database and has been modified on the client. SaveChanges should send **updates** for it
-- **Deleted:** The entity exists in the database but should be deleted. SaveChanges should **delete** it
-- **Detached:** The Detached state is given to any entity that is not being tracked by the context
+- **Added**: The entity does not yet exist in the database. SaveChanges should **insert** it
+- **Unchanged**: The entity exists in the database and has not been modified on the client. SaveChanges should **ignore** it
+- **Modified**: The entity exists in the database and has been modified on the client. SaveChanges should send **updates** for it
+- **Deleted**: The entity exists in the database but should be deleted. SaveChanges should **delete** it
+- **Detached**: The Detached state is given to any entity that is not being tracked by the context
 
 ### Graph
 
-The main entity and all of the entities that has relation with it (should be included while query)
+The main entity and all the entities that has relation with it (should be included while query)
 
 ### Tracking & No-Tracking Query
 

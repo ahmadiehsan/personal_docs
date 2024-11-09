@@ -6,8 +6,8 @@ TF-IDF is a statistical measure used to determine the mathematical significance 
 
 The vectorization process is similar to One Hot Encoding. Alternatively, the value corresponding to the word is assigned a TF-IDF value instead of 1. The TF-IDF value is obtained by multiplying the TF and IDF values.
 
-- **TF (Term Frequency):** Is the ratio of the number of target terms in the document to the total number of terms in the document.
-- **IDF (Inverse Document Frequency):** Is the logarithm of the ratio of the total number of documents to the number of documents in which the target term occurs. At this stage, it does not matter how many times the term appears in the document. It is sufficient to determine whether it has passed or not.
+- **TF (Term Frequency)**: Is the ratio of the number of target terms in the document to the total number of terms in the document.
+- **IDF (Inverse Document Frequency)**: Is the logarithm of the ratio of the total number of documents to the number of documents in which the target term occurs. At this stage, it does not matter how many times the term appears in the document. It is sufficient to determine whether it has passed or not.
 
 ## Formula
 

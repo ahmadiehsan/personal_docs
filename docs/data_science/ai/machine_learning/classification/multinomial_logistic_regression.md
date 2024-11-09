@@ -2,7 +2,7 @@
 
 ## Specifications
 
-- **Cost Function:** Cross-Entropy Loss
+- **Cost Function**: Cross-Entropy Loss
 
 ## Description
 

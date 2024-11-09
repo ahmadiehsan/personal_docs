@@ -4,8 +4,8 @@
 
 In short, we can say:
 
-- **Decorator:** Adds responsibilities to an object dynamically
-- **Proxy:** Controls access to an object
+- **Decorator**: Adds responsibilities to an object dynamically
+- **Proxy**: Controls access to an object
 
 !!! info
 

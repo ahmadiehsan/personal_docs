@@ -435,7 +435,7 @@ Console.WriteLine(person.Item2); // 20
 - Supports unlimited values.
 - You will access elements with real field names; instead of Item1, Item2, etc.
 - Can be used as method parameters/return values; much like the Tuple class.
-- In this cases we will store all of the tuple elements in one variable.
+- In this cases we will store all the tuple elements in one variable.
 
 ```csharp
 // Step 1: Creating Value Tuple

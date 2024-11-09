@@ -14,13 +14,13 @@ Types of Domain:
 
 Glossary:
 
-- **Entities:** Domain objects with a unique identity. Embodies a set of critical business rules.
-- **Aggregates:** Group of Entity objects which always need to be in a consistent state.
-- **Aggregate Root (AR):** Entry point Entity for an aggregate. All business operations should go through the root. An Aggregate should be referenced from outside only through its root. AR should have pure, side-effect-free functions.
-- **Value Objects:** Immutable objects without identity. Only value matters. Brings context to the value.
-- **Domain Events:** Decouple different domains. Describe things that happen and change the state of a domain. It makes the system extendable. Domain event listeners run in a different transaction than the event publishers. In Domain-driven systems, domain events are an excellent way of achieving eventual consistency. Any system or module that needs to update itself when something happens in another module or system can subscribe to the domain events coming from that system.
-- **Domain Services:** Business logic that cannot fit in the aggregate. Used when multiple aggregates are required in business logic. Can interact with other domain services.
-- **Application Services:** Allows the isolated domain to communicate with the outside. Orchestrates transactions, and security, look up proper aggregates, and saves state changes of the domain to the database. Does not contain any business logic. Domain event listeners are a special kind of Application service that is triggered by domain events. Each domain event listener can have a separate domain service to handle business logic.
+- **Entities**: Domain objects with a unique identity. Embodies a set of critical business rules.
+- **Aggregates**: Group of Entity objects which always need to be in a consistent state.
+- **Aggregate Root (AR)**: Entry point Entity for an aggregate. All business operations should go through the root. An Aggregate should be referenced from outside only through its root. AR should have pure, side-effect-free functions.
+- **Value Objects**: Immutable objects without identity. Only value matters. Brings context to the value.
+- **Domain Events**: Decouple different domains. Describe things that happen and change the state of a domain. It makes the system extendable. Domain event listeners run in a different transaction than the event publishers. In Domain-driven systems, domain events are an excellent way of achieving eventual consistency. Any system or module that needs to update itself when something happens in another module or system can subscribe to the domain events coming from that system.
+- **Domain Services**: Business logic that cannot fit in the aggregate. Used when multiple aggregates are required in business logic. Can interact with other domain services.
+- **Application Services**: Allows the isolated domain to communicate with the outside. Orchestrates transactions, and security, look up proper aggregates, and saves state changes of the domain to the database. Does not contain any business logic. Domain event listeners are a special kind of Application service that is triggered by domain events. Each domain event listener can have a separate domain service to handle business logic.
 
 ## Core Domain Parts
 

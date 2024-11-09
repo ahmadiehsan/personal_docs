@@ -2,7 +2,7 @@
 
 ## Specifications
 
-- **Cost Function:** Distortion
+- **Cost Function**: Distortion
 
 ## Description
 

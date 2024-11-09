@@ -96,7 +96,7 @@ Methods:
 | Method                                                              | Description                                                                                                                        |
 |---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
 | `static DirectoryInfo CreateDirectory(string path)`                 | Create a directory at the specified path.                                                                                          |
-| `static void Delete(string path, bool recursive)`                   | **true:** Deletes the directory including subdirectories and all files. <br> **false:** Deletes the directory only if it is empty. |
+| `static void Delete(string path, bool recursive)`                   | **true**: Deletes the directory including subdirectories and all files. <br> **false**: Deletes the directory only if it is empty. |
 | `static bool Exists(string path)`                                   | Determines whether the directory exists in the disk or not.                                                                        |
 | `static string[] GetDirectories(string path)`                       | Returns string[] that contains paths of subdirectories in the specified directory.                                                 |
 | `static string[] GetDirectories(string path, string searchPattern)` | Returns string[] that contains paths of subdirectories that match the specified search pattern.                                    |

@@ -2,135 +2,216 @@
 
 ## Dictionary
 
-Syntax:
+Dictionary collection contains a group of elements of key/value pairs (Full Path: `System.Collections.Generic.Dictionary`).
 
-![](dictionary_and_sortedlist_and_hashtable/image9.jpg)
+```csharp
+Dictionary<TKey, TValue> referenceVariable = new Dictionary<TKey, TValue>();
+```
 
-<img src="image26.jpg" style="width:3.70417in" />
+- The "Dictionary" class is a generic class; so you need to specify the data type of the key and the data type of the value while creating the object.
+- You can set/get the value based on the key.
+- The key can't be null or duplicate.
+- It is dynamically sized. You can add, remove elements (key/value pairs) at any time.
+- The key can't be null or duplicate, but values can be null or duplicate.
+- It is not index-based. You need to access elements by using key.
+- It is not sorted by default. The elements are stored in the same order, exactly how they are initialized.
 
-<img src="image19.jpg" style="width:3.08333in" />
+Example:
 
-Description:
+```csharp
+Dictionary<int, string> employees = new Dictionary<int, string>()
+{
+    { 101, "Scott" },
+    { 102, "Smith" },
+    { 103, "Allen" }
+};
 
-<img src="image14.jpg" style="width:4.88333in" />
-
-![](dictionary_and_sortedlist_and_hashtable/image5.jpg)
+foreach (KeyValuePair<int, string> item in employees) {
+    Console.WriteLine(item.Key + ", " + item.Value);
+}
+```
 
 Features:
 
-Overview:
+| Property | Description                                    |
+|----------|------------------------------------------------|
+| `Count`  | Returns count of elements.                     |
+| `[TKey]` | Returns value based on specified key.          |
+| `Keys`   | Returns a collection of key (without values).  |
+| `Values` | Returns a collection of values (without keys). |
 
-![](dictionary_and_sortedlist_and_hashtable/image27.jpg)
+| Method                       | Description                                    |
+|------------------------------|------------------------------------------------|
+| `void Add(TKey, TValue)`     | Adds an element (key/value pair).              |
+| `bool Remove(TKey)`          | Removes an element based on specified key.     |
+| `bool ContainsKey(TKey)`     | Determines whether the specified key exists.   |
+| `bool ContainsValue(TValue)` | Determines whether the specified value exists. |
+| `void Clear()`               | Removes all elements.                          |
 
-- All of the shared features can be used for the Dictionary
+!!! info
+
+    All the shared features can be used for the Dictionary
 
 ## SortedList
 
-Syntax:
+SortedList collection contains a group of elements of key/value pairs (Full Path: `System.Collections.Generic.SortedList`).
 
-![](dictionary_and_sortedlist_and_hashtable/image8.jpg)
+```csharp
+SortedList<TKey, TValue> referenceVariable = new SortedList<TKey, TValue>();
+```
 
-Description:
-
-<img src="image13.jpg" style="width:4.88333in" />
-
-![](dictionary_and_sortedlist_and_hashtable/image17.jpg)
-
+- The "**SortedList**" class is a generic class; so you need to specify the data type of the key and the data type of the value while creating the object.
+- You can set/get the value based on the key.
+- The key can't be null or duplicate.
+- It is dynamically sized. You can add, remove elements (key/value pairs) at any time.
+- Key can't be null or duplicate, but value can be null or duplicate.
+- It is not index-based. You need to access elements by using the key.
+- It is sorted by default. The elements are stored in the sorted ascending order, according to the key.
+- Each operation of adding an element, removing an element, or any other operation might be slower than a Dictionary, because internally it resorts the data based on the key.
 - Will use BinarySearch in the background
 
 Features:
 
-Overview:
+| Property | Description                                    |
+|----------|------------------------------------------------|
+| `Count`  | Returns count of elements.                     |
+| `[TKey]` | Returns value based on specified key.          |
+| `Keys`   | Returns a collection of keys (without values). |
+| `Values` | Returns a collection of values (without keys). |
 
-![](dictionary_and_sortedlist_and_hashtable/image11.jpg)
+| Method                       | Description                                    |
+|------------------------------|------------------------------------------------|
+| `void Add(TKey, TValue)`     | Adds an element (key/value pair).              |
+| `bool Remove(TKey)`          | Removes an element based on specified key.     |
+| `bool ContainsKey(TKey)`     | Determines whether the specified key exists.   |
+| `bool ContainsValue(TValue)` | Determines whether the specified value exists. |
+| `int IndexOfKey(TKey)`       | Returns index of the specified key.            |
+| `int IndexOfValue(TValue)`   | Returns index of the specified value.          |
+| `void Clear()`               | Removes all elements.                          |
 
-- All of the shared features can be used for the SortedList
-- The below features are specific to the SortedList
+!!! info
 
-IndexOfKey:
-
-<img src="image2.jpg" style="width:2.4625in" />
-
-IndexOfValue:
-
-<img src="image4.jpg" style="width:2.55in" />
+    All the shared features can be used for the SortedList
 
 vs Dictionary:
 
-- Dictionary: fast insert, slow search
-- SortedList: slow insert, fast search
-- Dictionary will use linear search for finding key
-- SortedList will sort the keys after each new insert
+| Operation | Dictionary             | SortedList                        |
+|-----------|------------------------|-----------------------------------|
+| Insert    | Fast (No need to sort) | Slow (Needs to sort after insert) |
+| Search    | Slow (Linear search)   | Fast                              |
 
 ## Hashtable
 
-Syntax:
+<img src="image15.jpg" style="width:3.5in" />
 
-<img src="image23.jpg" style="width:4.67083in" />
+Hashtable collection contains a group of elements of key/value pairs stored at respective indexes (Full Path: `System.Collections.Hashtable`).
 
-<img src="image20.jpg" style="width:2.425in" />
+```csharp
+Hashtable referenceVariable = new Hashtable();
+```
 
-<img src="image22.jpg" style="width:2.95833in" />
+- Process of adding an element:
 
-Description:
-
-<img src="image18.jpg" style="width:3.17917in" />
-
-<img src="image15.jpg" style="width:3.90833in" />
+   1. Generate index based on the key (Ex: `index = hash_code % size_of_hashtable$).
+   2. Add the element (key and value) next to the linked list at the generated index.
 
 - GetHashCode method of the key value will be used in the index calculation process
-- when we want to using the objs of our custom class as the key inside a hashtable, we should implement the GetHashCode method of that class
+- When we want to use the objs of our custom class as the key inside a hashtable, we should implement the GetHashCode method of that class
 - Elements with the same calculated index will be stored in the same index with the linked list data structure
-- Each time, when the size of hashtable changes, all of the exists indexes will calculated automaticaly
+- Each time, when the size of hashtable changes, all the exists indexes will be calculated automatically
+- Hashtable will return System.Object instance, because we can store any type of data in Hashtables.
+- After retrieving data from hashtable (with `[TKey]` or foreach loop), we should convert the result.
+- Hashtable O(1) is faster than SortedList O(log n) in retrieving data
+- Both Hashtable and SortedList have cost in data insert
+
+Example:
+
+```csharp
+Hashtable employees = new Hashtable()
+{
+    { 102, "Smith" },
+    { 105, "James" },
+    { 103, "Allen" },
+    { 101, "Scott" },
+    { 104, "Jones" },
+    { "hello", 10.934 }
+};
+
+foreach (DictionaryEntry item in employees) {
+    Console.WriteLine(item.Key + ", " + item.Value);
+}
+```
 
 Features:
 
-Overview:
+| Property | Description                                    |
+|----------|------------------------------------------------|
+| `Count`  | Returns count of elements.                     |
+| `[TKey]` | Returns value based on specified key.          |
+| `Keys`   | Returns a collection of keys (without values). |
+| `Values` | Returns a collection of values (without keys). |
 
-![](dictionary_and_sortedlist_and_hashtable/image12.jpg)
-
-Type Conversion:
-
-- Hashtable will return System.Object instance, becuse we can store any type of data in hashtables
-- After retriving data from hashtable (with \[TKey\] or foreach loop), we should covert the result
-
-vs SortedList:
-
-- Hashtable O(1) is faster than SortedList O(log n) in retiriving data
-- Both of them have cost in data insert
-
-![](dictionary_and_sortedlist_and_hashtable/image1.jpg)
+| Method                               | Description                                    |
+|--------------------------------------|------------------------------------------------|
+| `void Add(object key, object value)` | Adds an element (key/value pair).              |
+| `void Remove(object key)`            | Removes an element based on specified key.     |
+| `bool ContainsKey(object key)`       | Determines whether the specified key exists.   |
+| `bool ContainsValue(object value)`   | Determines whether the specified value exists. |
+| `void Clear()`                       | Removes all elements.                          |
 
 ## Shared Features
 
-\[TKey\]:
+`[TKey]`:
 
-<img src="image10.jpg" style="width:2.375in" />
+```csharp
+string s = employees[101];
+Console.WriteLine("\nValue at 101: " + s);
+```
 
-Keys:
+`Keys`:
 
-<img src="image24.jpg" style="width:2.2125in" />
+```csharp
+foreach (int item in employees.Keys) {
+    Console.WriteLine(item);
+}
+```
 
-Values:
+`Values`:
 
-<img src="image6.jpg" style="width:2.4625in" />
+```csharp
+foreach (string item in employees.Values) {
+    Console.WriteLine(item);
+}
+```
 
-Add:
+`Add`:
 
-<img src="image7.jpg" style="width:1.75417in" />
+```csharp
+employees.Add(106, "Anna");
+```
 
-Remove:
+`Remove`:
 
-<img src="image25.jpg" style="width:1.4625in" />
+```csharp
+employees.Remove(102);
+```
 
-ContainsKey:
+`ContainsKey`:
 
-<img src="image16.jpg" style="width:2.2375in" />
+```csharp
+bool a = employees.ContainsKey(103);
+Console.WriteLine("ContainsKey: " + a);
+```
 
-ContainsValue:
+`ContainsValue`:
 
-<img src="image21.jpg" style="width:2.52083in" />
+```csharp
+bool b = employees.ContainsValue("Scott");
+Console.WriteLine("ContainsValue: " + b);
+```
 
-Clear:
+`Clear`:
 
-<img src="image3.jpg" style="width:1.18333in" />
+```csharp
+employees.Clear();
+```

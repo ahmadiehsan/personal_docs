@@ -87,8 +87,8 @@ builder.services
     .AddCookie("MyCookieAuth", options => {options.Cookie.Name = "MyCookieAuth"});
 ```
 
-- **AddAuthentication:** will tell ASP.NET to use which authentication service (MyCookieAuth) for authenticating the user
-- **AddCookie:** will tell ASP.NET to set the user data in where when we are authenticating the user with the MyCookieAuth authentication service
+- **AddAuthentication**: will tell ASP.NET to use which authentication service (MyCookieAuth) for authenticating the user
+- **AddCookie**: will tell ASP.NET to set the user data in where when we are authenticating the user with the MyCookieAuth authentication service
 - Another example
 
   ```csharp
@@ -141,16 +141,16 @@ builder.services.AddAuthorization(options => {
 });
 ```
 
-- **AddAuthorization:** will tell ASP.NET that we want to update the default authorization service
-- **AddPolicy:** will add a new access policy
-- **RequireClaim (static perm):** will tell ASP.NET that for passing the MustBelongToHRDepartment policy, the user should have a Department claim with the HR value in his/her identity
-- **RequireRole:** except from RequireClaim we can use the below code for checking does the user has specific role or not
+- **AddAuthorization**: will tell ASP.NET that we want to update the default authorization service
+- **AddPolicy**: will add a new access policy
+- **RequireClaim (static perm)**: will tell ASP.NET that for passing the MustBelongToHRDepartment policy, the user should have a Department claim with the HR value in his/her identity
+- **RequireRole**: except from RequireClaim we can use the below code for checking does the user has specific role or not
 
   ```csharp
   options.AddPolicy("AdminAccess", policy => policy.RequireRole("Admin"));
   ```
 
-- **Requirements.Add (dynamic perm):** will tell ASP.NET that for passing the HRManagerOnly policy, the user should pass the custom HRManagerProbationRequirement requirement
+- **Requirements.Add (dynamic perm)**: will tell ASP.NET that for passing the HRManagerOnly policy, the user should pass the custom HRManagerProbationRequirement requirement
 - 1st example
 
   ```csharp
@@ -229,8 +229,8 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddDefaultTokenProviders();
 ```
 
-- **AddIdentity:** will add the core functionality of identity framework
-- **AddDefaultTokenProviders:** will add bunch of authentication ways
+- **AddIdentity**: will add the core functionality of identity framework
+- **AddDefaultTokenProviders**: will add bunch of authentication ways
 
 ```csharp
 UserManager<IdentityUser> userMgr,
@@ -239,7 +239,7 @@ RoleManager<IdentityRole> roleManager
 ```
 
 - Three helper classes of identity framework that we can DI them in our controllers
-- **UserManager:**
+- **UserManager**:
 
    - get or update or save a user
    - add a claim to a user
@@ -247,5 +247,5 @@ RoleManager<IdentityRole> roleManager
    - add a role to a user
    - remove a role from a user
 
-- **SignInManager:** will help us to sign-in or sign-out a user
-- **RoleManager:** will help us to add or remove a role
+- **SignInManager**: will help us to sign-in or sign-out a user
+- **RoleManager**: will help us to add or remove a role

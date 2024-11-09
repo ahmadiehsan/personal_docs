@@ -2,8 +2,8 @@
 
 ## Dynamic/Explicit Field Mapping
 
-- **Dynamic:** Elasticsearch dynamically adds the field to the type mapping by default when it detects a new field in a document.
-- **Explicit:** Explicitly defining all possible fields in an index and their types
+- **Dynamic**: Elasticsearch dynamically adds the field to the type mapping by default when it detects a new field in a document.
+- **Explicit**: Explicitly defining all possible fields in an index and their types
 
 ## Normalizer
 

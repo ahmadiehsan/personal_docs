@@ -57,10 +57,10 @@ Convert.ToDateTime("2025-12-31 11:59:59.999 PM")
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | `string ToString()`                           | It returns the date & time value in the default date format, based on current Windows settings.                                                  |
 | `string ToString(string format)`              | It returns the date & time value in the specified format.                                                                                        |
-| `string ToShortDateString()`                  | It returns the date value in the default short date format, based on current Windows settings. **Eg:** MM/dd/yyyy (12/31/2030)                   |
-| `string ToLongDateString()`                   | It returns the date value in the default long date format, based on current Windows settings. **Eg:** dd MMMM yyyy (31 December 2030)            |
-| `string ToShortTimeString()`                  | It returns the date value in the default short time format, based on current Windows settings. **Eg:** hh:mm tt (11:59 PM)                       |
-| `string ToLongTimeString()`                   | It returns the date value in the default long time format, based on current Windows settings. **Eg:** hh:mm:ss tt (11:59:59 PM)                  |
+| `string ToShortDateString()`                  | It returns the date value in the default short date format, based on current Windows settings. **Eg**: MM/dd/yyyy (12/31/2030)                   |
+| `string ToLongDateString()`                   | It returns the date value in the default long date format, based on current Windows settings. **Eg**: dd MMMM yyyy (31 December 2030)            |
+| `string ToShortTimeString()`                  | It returns the date value in the default short time format, based on current Windows settings. **Eg**: hh:mm tt (11:59 PM)                       |
+| `string ToLongTimeString()`                   | It returns the date value in the default long time format, based on current Windows settings. **Eg**: hh:mm:ss tt (11:59:59 PM)                  |
 | `static int DaysInMonth(int year, int month)` | It returns the number of days in the specified month in the specified year.                                                                      |
 | `int CompareTo(DateTime value)`               | It compares this instance to another date. Returns `-1` if earlier, `0` if equal, and `1` if later.                                              |
 | `TimeSpan Subtract(DateTime value)`           | It returns an instance of `TimeSpan` structure representing the date difference between the current instance and the given date value.           |

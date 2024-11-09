@@ -8,11 +8,11 @@ Retrieval Augmented Generation (RAG) enhances language model capabilities by int
 
 How RAG Works:
 
-- **Input Processing:** RAG takes user input and retrieves relevant documents from a knowledge source (e.g., Wikipedia).
-- **Document Integration:** The retrieved documents are combined with the input prompt.
-- **Text Generation:** The augmented prompt is processed by the language model to generate a final output.
+- **Input Processing**: RAG takes user input and retrieves relevant documents from a knowledge source (e.g., Wikipedia).
+- **Document Integration**: The retrieved documents are combined with the input prompt.
+- **Text Generation**: The augmented prompt is processed by the language model to generate a final output.
 
 Benefits:
 
-- **Dynamic Knowledge Access:** RAG allows models to adapt to new information without needing complete retraining.
-- **Factual Consistency:** By leveraging external data, RAG reduces the chances of generating incorrect or "hallucinated" content.
+- **Dynamic Knowledge Access**: RAG allows models to adapt to new information without needing complete retraining.
+- **Factual Consistency**: By leveraging external data, RAG reduces the chances of generating incorrect or "hallucinated" content.
