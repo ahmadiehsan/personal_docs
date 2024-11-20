@@ -4,6 +4,7 @@
 
 - [Git assume a file unchanged](https://stackoverflow.com/a/10881296)
 - [Delete a Git branch locally and remotely](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely/2003515#2003515)
+- [GitFlow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/)
 
 ## Reflog
 
