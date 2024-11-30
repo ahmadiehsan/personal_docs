@@ -18,17 +18,34 @@ This will be done by the C# annotations
 
 ### Fluent API
 
-- This will be done inside of the DbContext class and within the below method
+This will be done inside of the DbContext class and within the below method
 
-  <img src="image28.jpg" style="width:5.63333in" />
+```csharp
+protected override void OnModelCreating(ModelBuilder modelBuilder) {
+  ...
+```
 
-- Or we can create separate config classes for each model
+Or we can create separate config classes for each model
 
-  ![](model_and_fields/image18.jpg)
+```csharp
+public class AdvertismentConfig : IEntityTypeConfiguration<Advertisment> {
+    public void Configure(EntityTypeBuilder<Advertisment> builder) {
+        builder.Property(c => c.Price).HasConversion(c => c.Value.Value, d => Price.FromLong(d));
+        builder.Property(c => c.OwnerId).HasConversion(c => c.Value.ToString(), d => UserId.FromString(d));
+        builder.Property(c => c.ApprovedBy).HasConversion(c => c.Value.ToString(), d => UserId.FromString(d));
+        builder.Property(c => c.Text).HasConversion(c => c.Value, d => AdvertismentText.FromString(d));
+        builder.Property(c => c.Title).HasConversion(c => c.Value, d => AdvertismentTitle.FromString(d));
+    }
+}
+```
 
-  We should add them inside of OnModelCreating method
+We should add them inside the `OnModelCreating` method
 
-  <img src="image6.jpg" style="width:5.34167in" />
+```csharp
+modelBuilder.ApplyConfiguration(new FluentBookConfig());
+modelBuilder.ApplyConfiguration(new FluentBookDetailsConfig());
+modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
+```
 
 ## Model
 
@@ -36,21 +53,34 @@ This will be done by the C# annotations
 
 - Convention: By default, EF will use the DbSet property name for the table name, for example in the below code EF will use Categories for table name
 
-  <img src="image5.jpg" style="width:5.35in" />
+  ```csharp
+  public DbSet<Category> Categories { get; set; }
+  ```
 
 - Data Annotation:
 
-  <img src="image26.jpg" style="width:4.35417in" />
+  ```csharp
+  [Table("tb_Category")]
+  public class Category
+  ```
 
 - Fluent API:
 
-  <img src="image2.jpg" style="width:5.43333in" />
+  ```csharp
+  protected override void OnModelCreating(ModelBuilder modelBuilder) {
+      modelBuilder.Entity<Category>().ToTable("tb_Category");
+  }
+  ```
 
 ### ToView
 
 - Fluent API:
 
-  ![](model_and_fields/image20.jpg)
+  ```csharp
+  protected override void OnModelCreating(ModelBuilder modelBuilder) {
+      modelBuilder.Entity<BookDetailsFromView>().HasNoKey().ToView("GetOnlyBookDetails");
+  }
+  ```
 
 ## Fields
 
@@ -58,51 +88,122 @@ This will be done by the C# annotations
 
 - Convention: By default EF will use the Id field or `<ModelName>Id` field as primary key without need any annotation
 
-  <img src="image4.jpg" style="width:3.36667in" />
+  ```csharp
+  public class Category {
+      public int Id { get; set; }
+  }
+  ```
 
 - Data Annotation: For the fields other than Id or `<ModelName>Id`, we can explicitly define our primary key like the below
 
-  <img src="image13.jpg" style="width:4.35in" />
+  ```csharp
+  [Key]
+  public int Category_Id { get; set; }
+  ```
 
 - Fluent API:
 
-  <img src="image23.jpg" style="width:5.2in" />Example 1: The below code will create a composite-key
+  ```csharp
+  protected override void OnModelCreating(ModelBuilder modelBuilder) {
+      modelBuilder.Entity<Category>().HasKey(c => c.Category_Id);
+  }
+  ```
 
-  ![](model_and_fields/image7.jpg)
+  Example 1: The below code will create a composite-key
+
+  ```csharp
+  modelBuilder.Entity<BookAuthor>().HasKey(ba => new { ba.Author_Id, ba.Book_Id });
+  ```
 
   Example 2: The below code will tell EF that this table doesn't have primary key
 
-  <img src="image12.jpg" style="width:4.8625in" />
+  ```csharp
+  modelBuilder.Entity<BookDetailsFromView>().HasNoKey();
+  ```
 
 ### Foreign Key
 
 - Convention: EF will create FK and CategoryId field in the below code
 
-  <img src="image8.jpg" style="width:4.3875in" />
+  ```csharp
+  public class Book {
+      public Category Category { get; set; }
+  }
+  ```
 
 - Data Annotation: If want to have a field name other than CategoryId, we can use the below code
 
-  <img src="image25.jpg" style="width:4.42083in" />
+  ```csharp
+  public class Book {
+      [ForeignKey("Category")]
+      public int Category_Id { get; set; }
+      public Category Category { get; set; }
+  }
+  ```
 
 ### One-to-One Relation
 
 - Convention:
 
-  ![](model_and_fields/image19.jpg)
+  ```csharp
+  public class Book {
+      public BookDetail BookDetail { get; set; }
+  }
+
+  public class BookDetail {
+      public Book Book { get; set; }
+  }
+  ```
 
 - Data Annotation:
 
-  ![](model_and_fields/image27.jpg)
+  ```csharp
+  public class Book {
+      [ForeignKey("BookDetail")]
+      public int BookDetail_Id { get; set; }
+      public BookDetail BookDetail { get; set; }
+  }
+
+  public class BookDetail {
+      public Book Book { get; set; }
+  }
+  ```
 
 - Fluent API:
 
-  ![](model_and_fields/image29.jpg)
+  ```csharp
+  public class Book {
+      public int Book_Id { get; set; }
+      public int BookDetail_Id { get; set; }
+      public BookDetail BookDetail { get; set; }
+  }
+
+  public class BookDetail {
+      public Book Book { get; set; }
+  }
+
+  protected override void OnModelCreating(ModelBuilder modelBuilder) {
+      modelBuilder.Entity<Books>().HasKey(b => b.Book_Id);
+      modelBuilder.Entity<Books>()
+          .HasOne(z => z.BookDetail)
+          .WithOne(z => z.Book)
+          .HasForeignKey<Books>("BookDetail_Id");
+  }
+  ```
 
 ### One-to-Many Relation
 
 - Convention:
 
-  ![](model_and_fields/image16.jpg)
+  ```csharp
+  public class Book {
+      public Publisher Publisher { get; set; }
+  }
+
+  public class Publisher {
+      public List<Books> Books { get; set; }
+  }
+  ```
 
   !!! info
 
@@ -110,11 +211,43 @@ This will be done by the C# annotations
 
 - Data Annotation:
 
-  ![](model_and_fields/image30.jpg)
+  ```csharp
+  public class Book {
+      [ForeignKey("Publisher")]
+      public int Publisher_Id { get; set; }
+      public Publisher Publisher { get; set; }
+  }
+
+  public class Publisher {
+      public List<Books> Books { get; set; }
+  }
+  ```
 
 - Fluent API:
 
-  ![](model_and_fields/image17.jpg)
+  ```csharp
+  public class Book
+  {
+      public int BookId { get; set; }
+
+      public int Publisher_Id { get; set; }
+      public Publisher Publisher { get; set; }
+  }
+
+  public class Publisher
+  {
+      public List<Books> Books { get; set; }
+  }
+
+  protected override void OnModelCreating(ModelBuilder modelBuilder)
+  {
+      modelBuilder.Entity<Books>().HasKey(b => b.BookId);
+      modelBuilder.Entity<Books>()
+          .HasOne(z => z.Publisher)
+          .WithMany(z => z.Books)
+          .HasForeignKey(z => z.Publisher_Id);
+  }
+  ```
 
 ### Many-to-Many Relation
 
