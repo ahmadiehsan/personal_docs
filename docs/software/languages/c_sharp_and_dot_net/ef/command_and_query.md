@@ -8,13 +8,26 @@
 
 ### Projection
 
-![](command_and_query/image5.jpg)
+Projection is a way of translating a full entity into a C# class with a subset of those properties.
+
+It is used to create a query that selects from a set of entities in your model but returns results that are of a different type.
+
+Example:
+
+```csharp
+var customer = context.Customers
+    .Select(cust => new
+    {
+        Id = cust.CustomerId,
+        FullName = cust.FirstName + cust.LastName,
+    }).ToList();
+```
+
+In this example, the customer data is projected to an anonymous type which contains `Id` and `FullName`.
 
 ### IQueryable vs IEnumerable
 
 ![](command_and_query/image8.jpg)
-
-- IQueryable does inherited from IEnumerable
 
 ### Entity States
 
@@ -32,11 +45,34 @@ The main entity and all the entities that has relation with it (should be includ
 
 ### Tracking & No-Tracking Query
 
-![](command_and_query/image7.jpg)
+EF Core tracks the entities that you retrieve.
 
-- There is an object named ChangeTracker inside each DbContext object that will store this data
+- If an entity is tracked, any changes detected in the entity will be persisted to the database during `SaveChanges()`.
+- There is an object named ChangeTracker inside each DbContext object that will store this data:
 
-  <img src="image3.jpg" style="width:2.05in" />
+  ```csharp
+  _db.ChangeTracker.Entries()
+  ```
+
+Tracking:
+
+- By default, queries that return entity types are tracking.
+- In the following example, the change to the book will be detected and persisted to the database during `SaveChanges()`.
+
+```csharp
+var book = _db.Books.SingleOrDefault(b => b.BookId == 1);
+book.Price = 555;
+_db.SaveChanges();
+```
+
+No-Tracking:
+
+- No-tracking queries are useful when the results are used in a read-only scenario.
+- They're quicker to execute because there's no need to set up the change tracking information.
+
+```csharp
+var blogs = _db.Books.AsNoTracking().ToList();
+```
 
 ## Command
 
@@ -77,19 +113,29 @@ The AddRange, AttachRange, UpdateRange, and RemoveRange methods work exactly the
 - Will run proper join command
 - Over FK or many-to-one or one-to-one relation
 
-  <img src="image9.jpg" style="width:3.84583in" />
+  ```csharp
+  _db.Books.Include(u => u.Publisher)
+  ```
 
 - Over one-to-many or many-to-many relation
 
-  <img src="image4.jpg" style="width:3.425in" />
+  ```csharp
+  _db.Books.Include(u => u.Publisher)
+           .Include(u => u.BookAuthors)
+  ```
 
 - Over one-to-many or many-to-many relation with inner query
 
-  <img src="image1.jpg" style="width:4.7375in" />
+  ```csharp
+  _db.Books.Include(e => e.BookAuthors.Where(p => p.Author_Id == 5))
+  ```
 
 - Over nested relation
 
-  <img src="image2.jpg" style="width:4.45833in" />
+  ```csharp
+  _db.Books.Include(u => u.Publisher)
+           .Include(u => u.BookAuthors).ThenInclude(u => u.Author)
+  ```
 
 ### Include vs Join
 
