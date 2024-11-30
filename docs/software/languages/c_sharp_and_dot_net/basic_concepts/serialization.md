@@ -16,8 +16,7 @@ Example:
 
 ```csharp
 [Serializable]
-public class Country
-{
+public class Country {
     public short CountryID { get; set; }
     public string CountryName { get; set; }
     public long Population { get; set; }

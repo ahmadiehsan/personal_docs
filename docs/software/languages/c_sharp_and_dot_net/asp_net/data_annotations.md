@@ -13,8 +13,7 @@ When you use the Data Annotations Model Binder, you use validator attributes to 
 ## Example
 
 ```csharp
-public class Product
-{
+public class Product {
     public int Id { get; set; }
 
     [Required]

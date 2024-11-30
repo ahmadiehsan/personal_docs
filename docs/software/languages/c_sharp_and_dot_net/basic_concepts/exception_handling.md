@@ -56,12 +56,10 @@ throw new CustomExceptionClassName(...);
 - "Catch-when" is also known as "Exception Filters".
 
 ```csharp
-try
-{
+try {
     // statements
 }
-catch (ExceptionType referenceVariable) when (condition)
-{
+catch (ExceptionType referenceVariable) when (condition) {
     // error handling
 }
 ```

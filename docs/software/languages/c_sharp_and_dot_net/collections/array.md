@@ -254,8 +254,7 @@ foreach (Employee emp in highlyPaidEmployees2) {
 There isn't any specific way for deep copy in .NET but we can write the deep clone behaviour with ICloneable like the below:
 
 ```csharp
-class Employee: ICloneable
-{
+class Employee: ICloneable {
     public string EmployeeName { get; set; }
     public string Role { get; set; }
 
@@ -286,8 +285,7 @@ var referenceVariable = new[]
     new { Property1 = value, Property2 = value, ... }  // It equals to RandomClassName
 };
 
-class RandomClassName
-{
+class RandomClassName {
     public type Property1 { get; set; }
     public type Property2 { get; set; }
 }

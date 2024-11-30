@@ -44,8 +44,7 @@ ref:
 
 ```csharp
 // Method Definition
-AccessModifier Modifier ReturnDataType MethodName(ref DataType Parameter1, ...)
-{
+AccessModifier Modifier ReturnDataType MethodName(ref DataType Parameter1, ...) {
     ...
     Parameter1 = value;
 }
@@ -61,8 +60,7 @@ out:
 
 ```csharp
 // Method Definition
-AccessModifier Modifier ReturnDataType MethodName(out DataType Parameter1, ...)
-{
+AccessModifier Modifier ReturnDataType MethodName(out DataType Parameter1, ...) {
     ...
     Parameter1 = value;
 }
@@ -79,8 +77,7 @@ in:
 
 ```csharp
 // Method Definition
-AccessModifier Modifier ReturnDataType MethodName(in DataType Parameter1, ...)
-{
+AccessModifier Modifier ReturnDataType MethodName(in DataType Parameter1, ...) {
     ...
     Parameter1 = value; //error, we can't change the value of parameter
 }
@@ -96,8 +93,7 @@ params:
 
 ```csharp
 // Method Definition
-AccessModifier Modifier ReturnDataType MethodName( params DataType[] Parameter1, ...)
-{
+AccessModifier Modifier ReturnDataType MethodName( params DataType[] Parameter1, ...) {
     ...
     Parameter1[index]   //To access value based on index
 }
@@ -128,16 +124,14 @@ Method hiding is done automatically; but it is recommended to use the "new" keyw
 
 ```csharp
 // Creating parent class
-class ParentClassName
-{
+class ParentClassName {
     public void MethodName(param1, ...)
     {
     }
 }
 
 // Creating child class
-class ChildClassName : ParentClassName
-{
+class ChildClassName : ParentClassName {
     public new void MethodName(param1, ...)
     {
     }
@@ -150,16 +144,14 @@ It is a concept, which is used to extend the parent class's method, by creating 
 
 ```csharp
 // Creating parent class
-class ParentClassName
-{
+class ParentClassName {
     public virtual void MethodName( param1, ... )
     {
     }
 }
 
 // Creating child class
-class ChildClassName : ParentClassName
-{
+class ChildClassName : ParentClassName {
     public override void MethodName( param1, ... )
     {
         base.MethodName();
@@ -175,24 +167,21 @@ Use sealed methods to prevent overriding those particular methods in the corresp
 
 ```csharp
 // Creating parent class
-class ParentClassName
-{
+class ParentClassName {
     public virtual void MethodName( param1, ... )
     {
     }
 }
 
 // Creating child class 1
-class ChildClass1 : ParentClassName
-{
+class ChildClass1 : ParentClassName {
     public sealed override void MethodName()
     {
     }
 }
 
 // Creating child class 2
-class ChildClass2 : ChildClass1
-{
+class ChildClass2 : ChildClass1 {
     public override void MethodName()   // Doesn't compile!
     {
     }
@@ -209,14 +198,12 @@ Abstract methods are declared in parent class, with **"abstract"** keyword.
 
 ```csharp
 // Parent Class [Abstract Class]
-abstract class AbstractClassName
-{
+abstract class AbstractClassName {
     AccessModifier abstract ReturnDataType MethodName(param1, ...);
 }
 
 // Child Class of Abstract Class
-class ChildClassName : AbstractClassName
-{
+class ChildClassName : AbstractClassName {
     AccessModifier override ReturnDataType MethodName(param1, ...)
     {
     }
@@ -235,14 +222,12 @@ Partial Methods are "declared in one partial class" (just like abstract methods)
 
 ```csharp
 // First Partial Class
-partial class ClassName
-{
+partial class ClassName {
     partial void MethodName(param1, ...)
 }
 
 // Second Partial Class
-partial class ClassName
-{
+partial class ClassName {
     partial void MethodName(param1, ...)
     {
         // method body here
@@ -250,8 +235,7 @@ partial class ClassName
 }
 
 // Third Partial Class
-partial class ClassName
-{
+partial class ClassName {
     public void OtherMethod()
     {
         this.MethodName(arg1, ...);  // calling the partial method
@@ -284,8 +268,7 @@ The reference of return variable will be assigned to receiving variable.
 
 ```csharp
 // Method definition
-AccessModifier Modifier ReturnDataType MethodName(...)
-{
+AccessModifier Modifier ReturnDataType MethodName(...) {
     return ref variable;
 }
 
@@ -300,8 +283,7 @@ ref variable = MethodName();
 You can restrict what type of data types (class names) are allowed to be passed while creating the object.
 
 ```csharp
-public void MethodName<T>
-{
+public void MethodName<T> {
   // Method body
 }
 

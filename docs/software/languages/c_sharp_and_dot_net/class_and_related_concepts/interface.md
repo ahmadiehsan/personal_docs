@@ -3,13 +3,11 @@
 ## Description
 
 ```csharp
-interface InterfaceName
-{
+interface InterfaceName {
     ReturnDataType MethodName(param1, ...);
 }
 
-class ChildClassName : InterfaceName
-{
+class ChildClassName : InterfaceName {
     public ReturnDataType MethodName(param1, ...)
     {
     }
@@ -56,18 +54,15 @@ class ChildClassName : InterfaceName
 "Explicit Interface Implementation" is used to implement an interface method privately; that means the interface method becomes a "private member" to the child class.
 
 ```csharp
-interface IVehicle
-{
+interface IVehicle {
     void Move();
 }
 
-interface IFlyingMachine
-{
+interface IFlyingMachine {
     void Move();
 }
 
-class FlyingVehicle : IVehicle, IFlyingMachine
-{
+class FlyingVehicle : IVehicle, IFlyingMachine {
     void IVehicle.Move()
     {
         // Implementation of IVehicle's Move method

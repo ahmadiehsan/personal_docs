@@ -24,8 +24,7 @@
 Normal:
 
 ```csharp
-switch (variable)
-{
+switch (variable) {
     case value1: statement1;     break;
     case value2: statement2;     break;
     case value3: statement3;     break;
@@ -37,16 +36,14 @@ switch (variable)
 With Type Casting:
 
 ```csharp
-switch (variable)
-{
+switch (variable) {
     case class_name another_variable:
         statements...; break;
 }
 ```
 
 ```csharp
-switch (variable)
-{
+switch (variable) {
     case class_name another_variable
         when another_variable.property == value:
             statements...; break;
@@ -58,8 +55,7 @@ switch (variable)
 Switch Expression is a short-form of "switch-case", which is used to check the value of the source variable; assign value into result value based on the value of source variable.
 
 ```csharp
-sourceVariable switch
-{
+sourceVariable switch {
     value1 => result1,
     value2 => result2,
     ...
@@ -74,8 +70,7 @@ int operation = 1; //1 to 4
 string result;
 
 //switch expression
-result = operation switch
-{
+result = operation switch {
     1 => "Customer",
     2 => "Employee",
     3 => "Supplier",
@@ -89,8 +84,7 @@ Console.WriteLine(result);
 With Type Casting & When Pattern:
 
 ```csharp
-variable switch
-{
+variable switch {
     class_name another_variable
     when another_variable.property == value
     => statements...
@@ -98,8 +92,7 @@ variable switch
 ```
 
 ```csharp
-string result = person switch
-{
+string result = person switch {
     Customer p when p.Age < 13 => $"{p.Name} is Child",
     Person p when p.Age < 20 && p.Age >= 13 => $"{p.Name} is a Teenager",
     Person p when p.Age >= 20 && p.Age < 60 => $"{p.Name} is Adult",
@@ -112,8 +105,7 @@ With Type Casting & Property Pattern:
 
 ```csharp
 //Check whether the variable is of specified 'class_name' type
-variable switch
-{
+variable switch {
     class_name another_variable when
     {
         { property: value }        //another_variable.property == expression
@@ -127,8 +119,7 @@ variable switch
 ```
 
 ```csharp
-return person switch
-{
+return person switch {
     Person { Gender: "Female", PersonMaritalStatus: MaritalStatus.Unmarried } => $"Miss. {person.Name}",
     Person { Gender: "Female", PersonMaritalStatus: MaritalStatus.Married } => $"Mrs. {person.Name}",
     Person { Gender: "Male", Age: < 18 } => $"Master. {person.Name}",
@@ -153,8 +144,7 @@ Extended property pattern:
 With Type Casting & Tuple Pattern:
 
 ```csharp
-(variable.property1, variable.property2) switch
-{
+(variable.property1, variable.property2) switch {
   (expression1, expression2)   // variable.property1 == expression1 && variable.property2 == expression2
     => result_expression...,
 
@@ -164,8 +154,7 @@ With Type Casting & Tuple Pattern:
 ```
 
 ```csharp
-return (person, person.Gender, person.Age, person.PersonMaritalStatus) switch
-{
+return (person, person.Gender, person.Age, person.PersonMaritalStatus) switch {
   (Person, "Female", _, MaritalStatus.Unmarried) => $"Miss. {person.Name}",
   (Person, "Female", _, MaritalStatus.Married) => $"Mrs. {person.Name}",
   (Person, "Male", < 18, _) => $"Master. {person.Name}",
@@ -180,8 +169,7 @@ return (person, person.Gender, person.Age, person.PersonMaritalStatus) switch
 For:
 
 ```csharp
-for (initialization; condition; incrementation)
-{
+for (initialization; condition; incrementation) {
     // for block
 }
 ```
@@ -190,8 +178,7 @@ Do-While:
 
 ```csharp
 initialization;
-do
-{
+do {
     // do-while block
     // incr / decr here
 } while (condition);
