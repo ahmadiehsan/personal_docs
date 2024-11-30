@@ -11,8 +11,7 @@ dotnet new worker -o ContosoWorker
 Service:
 
 ```csharp
-public class Worker : BackgroundService
-{
+public class Worker : BackgroundService {
     private readonly ILogger<Worker> _logger;
 
     public Worker(ILogger<Worker> logger)

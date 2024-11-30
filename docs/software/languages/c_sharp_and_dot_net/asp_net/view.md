@@ -42,8 +42,7 @@ At the top of each .html file, we should have a `@model` tag, this tag will poin
 For this tag we can easily pass the Entity model, or for the complex scenarios, we can create a custom ViewModel like the below:
 
 ```csharp
-public class ProductVM
-{
+public class ProductVM {
     public Product Product { get; set; }
     public IEnumerable<SelectListItem> CategoryList { get; set; }
     public IEnumerable<SelectListItem> CoverTypeList { get; set; }

@@ -15,8 +15,7 @@
 **Sealed class** is a class which is instantiable, but not inheritable. You can use a sealed class when you don't want to let other developers create child classes for the specific class.
 
 ```csharp
-sealed class Class1
-{
+sealed class Class1 {
 }
 
 class Class2 : Class1  // not possible
@@ -53,20 +52,17 @@ class Class2 : Class1  // not possible
 
 ```csharp
 // File1.cs
-partial class ClassName
-{
+partial class ClassName {
     member1
 }
 
 // File2.cs
-partial class ClassName
-{
+partial class ClassName {
     member2
 }
 
 // Compiled source code in assembly
-class ClassName
-{
+class ClassName {
     member1
     member2
 }
@@ -88,8 +84,7 @@ Static class is a class that can contain only "static members".
 - We can avoid accidental creation of object for the class, by making it a "static class".
 
 ```csharp
-static class ClassName
-{
+static class ClassName {
     static fields
     static methods
     static constructors
@@ -134,14 +129,12 @@ static class ClassName
 
 ```csharp
 // Public constructor
-public ClassName(Parameter1, Parameter2, ...)
-{
+public ClassName(Parameter1, Parameter2, ...) {
    ...
 }
 
 // Static constructor
-static ClassName()
-{
+static ClassName() {
    ...
 }
 ```
@@ -166,16 +159,14 @@ public ClassName( with or without parameters ) {
 ### Parent Class Constructor
 
 ```csharp
-class ParentClassName
-{
+class ParentClassName {
     public ParentClassName(param1, ...)
     {
         // constructor body
     }
 }
 
-class ChildClassName : ParentClassName
-{
+class ChildClassName : ParentClassName {
     public ChildClassName(....) : ParentClassName(arg1, arg2, ...)
     {
         // constructor body
@@ -207,8 +198,7 @@ new Class() ---> Constructor ---> Object Initializer
 Destructor is a special method of the class, which is used to close un-managed resources (such as database connections and file connections), that are opened during the class execution.
 
 ```csharp
-~ClassName()
-{
+~ClassName() {
     // body here...
 }
 ```
@@ -232,8 +222,7 @@ The `IDisposable` interface of the `System` namespace has a method called `Dispo
 
 ```csharp
 // Implementing System.IDisposable interface
-class ClassName : System.IDisposable
-{
+class ClassName : System.IDisposable {
     public void Dispose()
     {
         // Close un-managed resources here
@@ -241,8 +230,7 @@ class ClassName : System.IDisposable
 }
 
 // Creating object with IDisposable
-using (ClassName referenceVariable = new ClassName())
-{
+using (ClassName referenceVariable = new ClassName()) {
     // Your code here
 }
 ```
@@ -254,8 +242,7 @@ You can prefix the `using` keyword before the local variable declaration in orde
     New feature introduced in C# 8.0
 
 ```csharp
-public void Method()
-{
+public void Method() {
     using ClassName referenceVariable = new ClassName();
 
     // do work here
@@ -295,8 +282,7 @@ ClassName<int> referenceVariable = new ClassName<int>();
 - `where T : new()`
 
 ```csharp
-class ClassName<T> where T : class
-{
+class ClassName<T> where T : class {
     public T FieldName;
 }
 
@@ -325,8 +311,7 @@ Example:
 ```csharp
 // "out" indicates covariance in the interface
 
-namespace System.Collections.Generic
-{
+namespace System.Collections.Generic {
     public interface IEnumerable<out T> : IEnumerable
     {
         IEnumerator<T> GetEnumerator();
@@ -358,8 +343,7 @@ public interface IComparable<in T>
 When you create an object with a set of properties along with values; automatically, the C# compiler creates a class (with a random name) with specified properties. It is called as 'anonymous type' or 'anonymous classes'.
 
 ```csharp
-class RandomClassName
-{
+class RandomClassName {
     public type Property1 { get; set; }
     public type Property2 { get; set; }
 }

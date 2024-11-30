@@ -345,8 +345,7 @@ class System.Object
 Code definition:
 
 ```csharp
-namespace System
-{
+namespace System {
     class Object
     {
         virtual bool Equals( object value );

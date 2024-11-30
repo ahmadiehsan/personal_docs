@@ -240,8 +240,7 @@ Example:
 // StreamWriter streamWriter = new StreamWriter(filePath);
 // StreamWriter streamWriter = new StreamWriter(fileStream);
 // StreamWriter streamWriter = fileInfo.AppendText();
-using (StreamWriter streamWriter = fileInfo.CreateText())
-{
+using (StreamWriter streamWriter = fileInfo.CreateText()) {
     streamWriter.WriteLine("Russia has population about 145,934,000");
 
     // some code here
@@ -275,8 +274,7 @@ Example:
 // StreamReader streamReader = fileInfo.OpenText();
 
 FileStream fileStream2 = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-using (StreamReader streamReader = new StreamReader(fileStream2))
-{
+using (StreamReader streamReader = new StreamReader(fileStream2)) {
     string content_from_file = streamReader.ReadToEnd();
     Console.WriteLine("\nFile read. File content is:");
     Console.WriteLine(content_from_file);

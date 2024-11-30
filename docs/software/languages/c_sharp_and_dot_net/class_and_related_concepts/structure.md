@@ -22,8 +22,7 @@ Structure is a "type", similar to "class", which can contain fields, methods, pa
 - Can inherit from interfaces but can't inherit from other classes or structures
 
 ```csharp
-struct StructureName
-{
+struct StructureName {
     // Fields
     // Methods
     // Parameterized Constructors

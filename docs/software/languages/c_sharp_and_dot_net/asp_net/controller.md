@@ -7,8 +7,7 @@
 ```csharp
 [Route("api/VillaAPI")]
 [ApiController]
-public class VillaAPIController : ControllerBase
-{
+public class VillaAPIController : ControllerBase {
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public ActionResult<IEnumerable<VillaDTO>> GetVillas()
@@ -27,8 +26,7 @@ public class VillaAPIController : ControllerBase
 ### MVC
 
 ```csharp
-public class HomeController : Controller
-{
+public class HomeController : Controller {
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -51,8 +49,7 @@ public class HomeController : Controller
 
 ```csharp
 [BindProperties]
-public class CreateModel : PageModel
-{
+public class CreateModel : PageModel {
     private readonly ApplicationDbContext _db;
 
     public Category Category { get; set; }
@@ -82,8 +79,7 @@ public class CreateModel : PageModel
 The Controller class inherited from ControllerBase and added some members that are only needed to support Views.
 
 ```csharp
-public abstract class Controller : ControllerBase
-{
+public abstract class Controller : ControllerBase {
     public dynamic ViewBag { get; }
     public virtual ViewResult View(object model) { }
     // more View support stuff
@@ -139,8 +135,7 @@ By injecting `IConfiguration` into the class constructor, easily we can access t
 ```csharp
 public string SendGridSecret { get; set; }
 
-public EmailSender(IConfiguration _config)
-{
+public EmailSender(IConfiguration _config) {
     SendGridSecret = _config.GetValue<string>("SendGrid:SecretKey");
 }
 ```
@@ -164,8 +159,7 @@ Controllers and Razor pages work with data that comes from HTTP requests. For ex
 MVC Application:
 
 ```csharp
-public IActionResult Index()
-{
+public IActionResult Index() {
     return View();
 }
 ```
@@ -173,8 +167,7 @@ public IActionResult Index()
 Razor Page Application:
 
 ```csharp
-public IActionResult OnPost()
-{
+public IActionResult OnPost() {
     return Page();
 }
 ```
@@ -188,8 +181,7 @@ We can easily inject the logger into the controller inside of constructor
 ```csharp
 private readonly ILogger<VillaAPIController> _logger;
 
-public VillaAPIController(ILogger<VillaAPIController> logger)
-{
+public VillaAPIController(ILogger<VillaAPIController> logger) {
     _logger = logger;
 }
 ```
@@ -319,8 +311,7 @@ A view component consists of two parts:
 ### Syntax
 
 ```csharp
-public class ShoppingCartViewComponent : ViewComponent
-{
+public class ShoppingCartViewComponent : ViewComponent {
     private readonly IUnitOfWork _unitOfWork;
     public ShoppingCartViewComponent(IUnitOfWork unitOfWork)
     {

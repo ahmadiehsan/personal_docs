@@ -37,8 +37,7 @@ get
 Readonly property:
 
 ```csharp
-accessModifier type PropertyName
-{
+accessModifier type PropertyName {
     get
     {
         return field;
@@ -52,8 +51,7 @@ accessModifier type PropertyName
 Write-only property:
 
 ```csharp
-accessModifier type PropertyName
-{
+accessModifier type PropertyName {
     set
     {
         field = value;
@@ -74,8 +72,7 @@ Property with no definition for set-accessor and get-accessor.
 - Useful only when you don't want to write any validation or calculation logic.
 
 ```csharp
-accessModifier modifier type propertyName
-{
+accessModifier modifier type propertyName {
     accessModifier set;
     accessModifier get;
 }

@@ -21,8 +21,7 @@ Concise syntax to create a reference-type with immutable properties.
 record record_name(data_type Property1, data_type Property2, ...);
 
 // Compiled code of Record
-class record_name
-{
+class record_name {
     public data_type Property1 { get; init; }
     public data_type Property2 { get; init; }
 
@@ -39,8 +38,7 @@ class record_name
 ### Mutable Properties
 
 ```csharp
-record record_name(data_type Property_name, ...)
-{
+record record_name(data_type Property_name, ...) {
     data_type Property_name { get; set; }
 }
 ```

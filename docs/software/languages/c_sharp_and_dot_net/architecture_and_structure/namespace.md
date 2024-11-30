@@ -5,8 +5,7 @@
 Namespaces is a collection of classes and other types such as interfaces, structures, delegate types, enumerations.
 
 ```csharp
-namespace NamespaceName
-{
+namespace NamespaceName {
     Classes
     Interfaces
     Structures
@@ -21,12 +20,10 @@ namespace NamespaceName
 Example:
 
 ```csharp
-namespace FrontOffice
-{
+namespace FrontOffice {
 }
 
-namespace HR
-{
+namespace HR {
 }
 ```
 
@@ -40,8 +37,7 @@ The namespace which is declared inside another namespace is called as "Nested na
 Example:
 
 ```csharp
-namespace OuterNamespace
-{
+namespace OuterNamespace {
     Classes
     Interfaces
     Structures
@@ -66,8 +62,7 @@ C# 9:
 ```csharp
 using System;
 
-namespace Namespace
-{
+namespace Namespace {
     class Program
     {
         static void Main(string[] args)
@@ -83,8 +78,7 @@ C# 10:
 ```csharp
 namespace FileScopedNamespace;
 
-class Program
-{
+class Program {
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World!");
