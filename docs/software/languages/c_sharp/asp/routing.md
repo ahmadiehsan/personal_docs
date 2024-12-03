@@ -1,8 +1,6 @@
 # Routing
 
-## Description
-
-### MVC
+## MVC
 
 The URL pattern for routing is considered after the domain name.
 
@@ -19,7 +17,7 @@ The URL pattern for routing is considered after the domain name.
 - We should have a file followed the `<ControllerName>Controller.cs` naming convention inside the Controllers directory
 - Inside the Views directory, we should have a directory followed the `<ControllerName>` convention that contains one `<ActionName>.cshtml` file for each action method inside the controller
 
-### Razor Page
+## Razor Page
 
 - Routing in Asp.net Razor pages maps URL's to Physical file on disk.
 - Razor pages need a root folder.
