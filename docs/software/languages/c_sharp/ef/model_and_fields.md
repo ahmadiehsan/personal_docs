@@ -86,7 +86,7 @@ modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
 
 ### Primary Key
 
-- Convention: By default EF will use the Id field or `<ModelName>Id` field as primary key without need any annotation
+- Convention: By default EF will use the `Id` field or `<ModelName>Id` field as primary key without need any annotation
 
   ```csharp
   public class Category {
@@ -98,21 +98,21 @@ modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
 
   ```csharp
   [Key]
-  public int Category_Id { get; set; }
+  public int CategoryId { get; set; }
   ```
 
 - Fluent API:
 
   ```csharp
   protected override void OnModelCreating(ModelBuilder modelBuilder) {
-      modelBuilder.Entity<Category>().HasKey(c => c.Category_Id);
+      modelBuilder.Entity<Category>().HasKey(c => c.CategoryId);
   }
   ```
 
   Example 1: The below code will create a composite-key
 
   ```csharp
-  modelBuilder.Entity<BookAuthor>().HasKey(ba => new { ba.Author_Id, ba.Book_Id });
+  modelBuilder.Entity<BookAuthor>().HasKey(ba => new { ba.AuthorId, ba.BookId });
   ```
 
   Example 2: The below code will tell EF that this table doesn't have primary key
@@ -121,7 +121,7 @@ modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
   modelBuilder.Entity<BookDetailsFromView>().HasNoKey();
   ```
 
-### Foreign Key
+### ForeignKey
 
 - Convention: EF will create FK and CategoryId field in the below code
 
@@ -136,7 +136,7 @@ modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
   ```csharp
   public class Book {
       [ForeignKey("Category")]
-      public int Category_Id { get; set; }
+      public int CategoryId { get; set; }
       public Category Category { get; set; }
   }
   ```
@@ -160,7 +160,7 @@ modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
   ```csharp
   public class Book {
       [ForeignKey("BookDetail")]
-      public int BookDetail_Id { get; set; }
+      public int BookDetailId { get; set; }
       public BookDetail BookDetail { get; set; }
   }
 
@@ -173,8 +173,8 @@ modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
 
   ```csharp
   public class Book {
-      public int Book_Id { get; set; }
-      public int BookDetail_Id { get; set; }
+      public int BookId { get; set; }
+      public int BookDetailId { get; set; }
       public BookDetail BookDetail { get; set; }
   }
 
@@ -183,11 +183,11 @@ modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
   }
 
   protected override void OnModelCreating(ModelBuilder modelBuilder) {
-      modelBuilder.Entity<Books>().HasKey(b => b.Book_Id);
+      modelBuilder.Entity<Books>().HasKey(b => b.BookId);
       modelBuilder.Entity<Books>()
           .HasOne(z => z.BookDetail)
           .WithOne(z => z.Book)
-          .HasForeignKey<Books>("BookDetail_Id");
+          .HasForeignKey<Books>("BookDetailId");
   }
   ```
 
@@ -214,7 +214,7 @@ modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
   ```csharp
   public class Book {
       [ForeignKey("Publisher")]
-      public int Publisher_Id { get; set; }
+      public int PublisherId { get; set; }
       public Publisher Publisher { get; set; }
   }
 
@@ -230,7 +230,7 @@ modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
   {
       public int BookId { get; set; }
 
-      public int Publisher_Id { get; set; }
+      public int PublisherId { get; set; }
       public Publisher Publisher { get; set; }
   }
 
@@ -245,7 +245,7 @@ modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
       modelBuilder.Entity<Books>()
           .HasOne(z => z.Publisher)
           .WithMany(z => z.Books)
-          .HasForeignKey(z => z.Publisher_Id);
+          .HasForeignKey(z => z.PublisherId);
   }
   ```
 
@@ -253,7 +253,24 @@ modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
 
 - Convention:
 
-  ![](model_and_fields/image11.jpg)
+  ```csharp
+  public class Book {
+      public virtual ICollection<BookAuthor> Authors { get; set; }
+  }
+
+  public class Author {
+      public virtual ICollection<BookAuthor> Books { get; set; }
+  }
+
+  // Intermediate table
+  public class BookAuthor {
+      public int BookId { get; set; }
+      public Book Book { get; set; }
+
+      public int AuthorId { get; set; }
+      public Author Author { get; set; }
+  }
+  ```
 
   !!! info
 
@@ -261,54 +278,166 @@ modelBuilder.ApplyConfiguration(new FluentBookAuthorConfig());
 
 - Fluent API:
 
-  ![](model_and_fields/image15.jpg)
+  ```csharp
+  public class Book {
+      public virtual ICollection<BookAuthor> Authors { get; set; }
+  }
 
-### Column Name
+  public class Author {
+      public virtual ICollection<BookAuthor> Books { get; set; }
+  }
+
+  // Intermediate table
+  public class BookAuthor {
+      public int BookId { get; set; }
+      public Book Book { get; set; }
+
+      public int AuthorId { get; set; }
+      public Author Author { get; set; }
+  }
+
+  protected override void OnModelCreating(ModelBuilder modelBuilder) {
+      modelBuilder.Entity<BookAuthor>().HasKey(b => new { b.BookId, b.AuthorId });
+
+      modelBuilder.Entity<BookAuthor>()
+          .HasOne(z => z.Book)
+          .WithMany(z => z.Authors)
+          .HasForeignKey(z => z.BookId);
+
+      modelBuilder.Entity<BookAuthor>()
+          .HasOne(z => z.Author)
+          .WithMany(z => z.Books)
+          .HasForeignKey(z => z.AuthorId);
+  }
+  ```
+
+### Column
 
 - Data Annotation:
 
-  <img src="image21.jpg" style="width:4.34583in" />
+  ```csharp
+  [Column("BookISBN")]
+  public string ISBN { get; set; }
+  ```
 
 - Fluent API:
 
-  <img src="image3.jpg" style="width:5.42083in" />
+  ```csharp
+  protected override void OnModelCreating(ModelBuilder modelBuilder) {
+      modelBuilder.Entity<Category>()
+          .Property(c => c.ISBN)
+          .HasColumnName("bookISBN");
+  }
+  ```
 
 ### Required
 
 - Data Annotation:
 
-  <img src="image14.jpg" style="width:4.35in" />
+  ```csharp
+  [Required]
+  public string Title { get; set; }
+  ```
 
 - Fluent API:
 
-  <img src="image10.jpg" style="width:5.22917in" />
+  ```csharp
+  protected override void OnModelCreating(ModelBuilder modelBuilder) {
+      modelBuilder.Entity<Category>()
+          .Property(c => c.Title)
+          .IsRequired();
+  }
+  ```
 
-### Max Length
+### MaxLength
 
 - Data Annotation:
 
-  <img src="image24.jpg" style="width:4.36667in" />
+  ```csharp
+  [MaxLength(50)]
+  public string Title { get; set; }
+  ```
 
 - Fluent API:
 
-  <img src="image9.jpg" style="width:5.44167in" />
+  ```csharp
+  protected override void OnModelCreating(ModelBuilder modelBuilder) {
+      modelBuilder.Entity<Category>()
+          .Property(c => c.Title)
+          .HasMaxLength(50);
+  }
+  ```
 
-### Not Mapped
+### NotMapped
 
 - Data Annotation:
 
-  <img src="image1.jpg" style="width:4.34167in" />
+  ```csharp
+  [NotMapped]
+  public double DiscountedPrice { get; set; }
+  ```
 
 - Fluent API:
 
-  <img src="image22.jpg" style="width:5.46667in" />
+  ```csharp
+  protected override void OnModelCreating(ModelBuilder modelBuilder) {
+      modelBuilder.Entity<Category>()
+                  .Ignore(c => c.DiscountedPrice);
+  }
+  ```
 
-### Database Generated
+### DatabaseGenerated
 
-Data Annotation & Fluent API:
+**Identity**: The Identity option specifies that the value will only be generated by the database when a value is first added to the database. Entity Framework Core will not implement a value generation strategy. Database providers differ in the way that values are automatically generated. E.g. Identity, GUID.
 
-![](model_and_fields/image32.jpg)
+- Data Annotation:
 
-- Identity: Will set by the DB at row creation
-- None: Will prevent the DB to set
-- Computed: Will set by the DB at row creation or update
+  ```csharp
+  [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+  public ... { get; set; }
+  ```
+
+- Fluent API:
+
+  ```csharp
+  protected override void OnModelCreating(ModelBuilder modelBuilder) {
+      modelBuilder.Entity<...>()
+                  .ValueGeneratedOnAdd(...);
+  }
+  ```
+
+**None**: The None option prevents values from being generated by the database automatically in cases where they would otherwise be created.
+
+- Data Annotation:
+
+  ```csharp
+  [DatabaseGenerated(DatabaseGeneratedOption.None)]
+  public ... { get; set; }
+  ```
+
+- Fluent API:
+
+  ```csharp
+  protected override void OnModelCreating(ModelBuilder modelBuilder) {
+      modelBuilder.Entity<...>()
+                  .ValueGeneratedNever(...);
+  }
+  ```
+
+**Computed**: The Computed option specifies that the property's value will be generated **by the database** when the value is first saved, and subsequently regenerated every time the value is updated.
+
+- Data Annotation:
+
+  ```csharp
+  [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+  public ... { get; set; }
+  ```
+
+- Fluent API:
+
+  ```csharp
+  protected override void OnModelCreating(ModelBuilder modelBuilder) {
+      modelBuilder.Entity<...>()
+                  .ValueGeneratedOnAddOrUpdate(...);
+  }
+  ```
