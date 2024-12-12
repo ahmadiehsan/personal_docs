@@ -1,4 +1,14 @@
-# Log Loss
+# Log Loss [Binary Classification]
+
+## Description
+
+- **Use case**: Classification problems (Binary classification)
+- **When to use**: Is specifically used for binary classification problems where the output is a probability (e.g., logistic regression). It quantifies the difference between the predicted probability and the true label (0 or 1).
+- **Key property**: Encourages probabilistic models to predict values that are closer to the true label (e.g., probability of 0 or 1). Assigning a higher predicted probability to the wrong class results in higher penalties.
+- **Example applications**:
+
+   - Predicting whether an email is spam or not
+   - Determining if a customer will churn (leave)
 
 ## Formula (Training Shape)
 
