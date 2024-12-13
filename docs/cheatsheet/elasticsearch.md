@@ -161,10 +161,16 @@
 
 ## Index
 
-- Get all:
+- Get all with aliases:
 
   ```shell
   curl -X GET "http://localhost:9200/_aliases?pretty"
+  ```
+
+- Get all with disk sizes:
+
+  ```shell
+  curl -X GET "http://localhost:9200/_cat/indices?v&h=index,store.size"
   ```
 
 - Create simple:
