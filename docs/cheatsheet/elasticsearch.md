@@ -283,6 +283,14 @@
 
 - Delete: There is no way to delete a field from mapping. Even if you delete all documents that contain this field
 
+## Node
+
+- Get all with disk sizes:
+
+  ```shell
+  curl -X GET "http://localhost:9200/_cat/nodes?v&h=name,disk.total,disk.used,disk.avail"
+  ```
+
 ## Other
 
 - Clustering:
