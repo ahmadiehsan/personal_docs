@@ -6,7 +6,7 @@ Non-negative Matrix Factorization (NMF) is an unsupervised algorithm that simult
 
 We can use it in conjunction with TF-IDF to model topics across documents.
 
-## How It Works
+## Workflow
 
 Given a non-negative matrix A, find k-dimension approximation in terms of non-negative factors W and H
 

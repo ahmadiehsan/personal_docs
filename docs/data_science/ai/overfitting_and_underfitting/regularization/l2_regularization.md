@@ -28,7 +28,7 @@ Here, we have the following:
 
 The first term in the loss function measures the mean squared error between the predicted values and the true values. The second term is the 𝓁 2 penalty term that shrinks the coefficients toward zero. The ridge regression algorithm finds the values of the regression coefficients that minimize this loss function. By tuning the regularization parameter, α, we can control the bias-variance trade-off of the model, with higher alpha values leading to more regularization and lower overfitting.
 
-## How It Works
+## Workflow
 
 <img src="image4.png" style="width:3.5293in" />
 

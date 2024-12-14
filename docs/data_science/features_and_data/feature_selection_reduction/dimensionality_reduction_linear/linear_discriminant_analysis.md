@@ -33,7 +33,7 @@ The LDA algorithm can be summarized in the following steps:
 
 7. Select the top k eigenvectors with the highest eigenvalues as the new feature space.
 
-## How It Works
+## Workflow
 
 ### How LDA Creates New Axis
 

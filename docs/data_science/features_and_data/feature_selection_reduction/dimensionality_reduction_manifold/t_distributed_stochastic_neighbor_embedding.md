@@ -12,7 +12,7 @@ t-SNE can be used to help identify clusters of data points that share similar fe
 
 It's worth noting that **t-SNE is primarily a visualization tool and should not be used as the sole method for feature selection.** Instead, it can be used in conjunction with other techniques, such as LDA or PCA, to gain a more complete understanding of the underlying structure of your data.
 
-## How It Works
+## Workflow
 
 t-SNE starts by calculating the pairwise similarity between each pair of data points in the highdimensional space. The similarity is usually measured using a Gaussian kernel, which gives higher weights to nearby points and lower weights to distant points. The similarity matrix is then converted into a probability distribution using a softmax function. This distribution is used to create a low-dimensional space, typically 2D or 3D.
 

@@ -30,6 +30,73 @@ Since transformers do not have a sequential nature like RNNs, they need some way
 
 Each sub-layer (attention and feed-forward) is followed by a layer normalization and a residual connection to ensure stability during training.
 
+## Types
+
+### Generative Models (Decoder-Only)
+
+Decoder-only models are a class of transformer architectures designed primarily for generating sequential data. They are often referred to as **autoregressive models**, as they predict the next token in a sequence based on previous tokens. This makes them well-suited for tasks like text generation, language modeling, and code autocompletion.
+
+- One of the most popular examples of decoder-only models is **GPT (Generative Pre-trained Transformer)**, which has revolutionized the field of Natural Language Processing (NLP).
+- The **decoder-only architecture** is based on the transformer block but contains a few key differences compared to encoder-decoder or encoder-only models:
+- It **does not use an encoder**; instead, it processes input sequences directly in the decoder.
+- It utilizes **masked self-attention** to prevent the model from "seeing" future tokens during training. This ensures that predictions are made based solely on past information.
+- Decoder-only models predict one token at a time. For each step, they generate the next token in the sequence by conditioning on all previous tokens.
+- These models process information from left to right (in natural language). As a result, they are unable to consider future tokens during generation.
+
+Applications:
+
+- **Text Generation**: Produce coherent and contextually relevant text (e.g., ChatGPT).
+- **Dialogue Systems**: Power conversational agents like chatbots.
+- **Code Generation**: Support use cases like autocompletion for programming (e.g., OpenAI Codex).
+- **Creative Content**: Generate poems, stories, or other creative writing.
+- **Autoregressive Language Modeling**: Model language distributions effectively for downstream tasks.
+
+### Representation Models (Encoder-Only)
+
+Encoder-only models are transformer architectures tailored for learning rich representations of input sequences. These models focus on understanding and encoding the input into highly contextualized embeddings, making them ideal for tasks that require comprehension but not generation.
+
+- One of the most well-known examples of encoder-only models is **BERT (Bidirectional Encoder Representations from Transformers)**, which introduced the concept of bidirectional contextual understanding to NLP.
+- The **encoder-only architecture** processes the entire input sequence at once using bidirectional self-attention. This allows the model to capture dependencies between tokens in both directions (left-to-right and right-to-left).
+- Encoder-only models consider the entire input simultaneously, leveraging left and right context for richer representations.
+- These models do not predict one token at a time but instead encode the whole sequence into meaningful vectors in one step.
+
+Applications:
+
+- **Text Classification**: Sentiment analysis, topic categorization, etc.
+- **Named Entity Recognition (NER)**: Identify entities like names, locations, and dates in text.
+- **Question Answering (QA)**: Extract answers from passages of text.
+- **Semantic Search**: Encode sentences to enable semantic similarity matching.
+- **Coreference Resolution**: Resolve pronouns to their corresponding entities in a document.
+
+### Sequence-to-Sequence Models: (Encoder-Decoder)
+
+Encoder-Decoder models, also known as **sequence-to-sequence (seq2seq) architectures**, are a type of transformer designed for mapping one sequence to another. The architecture consists of two separate components: an **encoder** to process and understand the input sequence, and a **decoder** to generate the output sequence.
+
+- Examples of encoder-decoder-based transformers include **T5 (Text-to-Text Transfer Transformer)**, **BART (Bidirectional and Auto-Regressive Transformers)**, and **mT5 (multilingual T5)**.
+- The encoder-decoder architecture can be visualized as two connected transformers:
+
+   - **Encoder**: Reads and processes the input sequence, generating a latent representation of the input.
+   - **Decoder**: Consumes the encoder's latent representation while generating the output sequence autoregressively (one token at a time).
+
+- Uses bidirectional self-attention to produce contextualized representations of the input sequence.
+- Captures holistic meaning by attending to relations between tokens in the input.
+- Combines autoregressive decoding with encoder cross-attention to generate target tokens.
+- Uses both its own generated tokens (from self-attention) and the encoder’s processed information (via encoder-decoder cross-attention).
+- Both encoder and decoder embed input tokens and enrich them with positional information.
+- The decoder uses cross-attention mechanisms to attend to the encoder's output representations, ensuring that the generated output remains aligned with the input sequence.
+
+Applications:
+
+- **Machine Translation**: Translate from one language to another.
+- **Text Summarization**: Generate concise summaries of long documents or articles.
+- **Text Generation with Context**: Generate output conditioned on input (e.g., rewriting text, question generation).
+- **Question Answering (QA)**: Provide a textual answer to a question given relevant contexts.
+- **Closed-Ended Transformation Tasks**:
+
+   - Data-to-text generation (e.g., converting tables into sentences).
+   - Grammar correction (e.g., fixing spelling and grammatical errors).
+   - Format transformation (e.g., converting JSON to text).
+
 ## Vs LLMs
 
 Transformers are a type of neural network architecture that forms the basis for many modern NLP models. Large Language Models (LLMs) are a subset of models that use transformer architectures at a very large scale, resulting in powerful models capable of handling a wide range of tasks with high performance. Essentially, LLMs are built using transformer architectures, but they are distinguished by their size and the vast amount of data they are trained on.
