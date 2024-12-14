@@ -12,7 +12,7 @@ When faced with the issue of high-dimensional, unlabeled data (e.g., hundreds to
 
 PCA can be used for feature selection by selecting the top k principal components that explain the most variance in the data. This can be useful for reducing the dimensionality of high-dimensional datasets and improving the performance of machine learning models. However, it's important to note that PCA may not always lead to improved performance, especially if the data is already low-dimensional or if the features are not highly correlated. It's also important to consider the interpretability of the selected principal components as they may not always correspond to meaningful features in the data.
 
-## How It Works
+## Workflow
 
 Principal components are new variables that are constructed as linear combinations or mixtures of the initial variables. These combinations are done in such a way that the new variables (i.e., principal components) are uncorrelated and most of the information within the initial variables is squeezed or compressed into the first components. So, the idea is that 10-dimensional data gives you 10 principal components. Still, PCA tries to put the maximum possible information in the first component, then the maximum remaining information in the second, and so on.
 
