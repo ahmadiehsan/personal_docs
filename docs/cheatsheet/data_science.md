@@ -15,6 +15,11 @@
 - [GloVe (similar to Word2Vec)](https://nlp.stanford.edu/projects/glove/)
 - [LLMs leaderboard](https://lmarena.ai/?leaderboard)
 - [Required GPU VRAM to serve an LLM](https://www.kaggle.com/discussions/general/529079)
+- [Massive text embedding benchmark (MTEB)](https://huggingface.co/spaces/mteb/leaderboard)
+- [Open LLM leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard#/)
+- [Kaggle solutions](https://farid.one/kaggle-solutions/)
+- [Self-hosting Llama](https://abhinand05.medium.com/self-hosting-llama-3-1-70b-or-any-70b-llm-affordably-2bd323d72f8d)
+- [Which GPUs could run LLM](https://aifusion.company/gpu-llm/)
 
 ## Projects
 
