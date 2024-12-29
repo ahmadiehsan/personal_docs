@@ -1,4 +1,22 @@
 # =========================
+# Poetry
+# =====
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "~3.11"
+mdx_truly_sane_lists = "1.3"
+mkdocs = "1.6.1"
+mkdocs-awesome-pages-plugin = "2.9.3"
+mkdocs-glightbox = "0.4.0"
+mkdocs-material = "9.5.34"
+mkdocs-minify-plugin = "0.8.0"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^3.5.0"
+
+# =========================
 # Ruff
 # =====
 [tool.ruff]
@@ -86,3 +104,10 @@ disable = [
     "too-many-statements",  # Ruff will handle it
     "bare-except",  # Ruff will handle it
 ]
+
+# =========================
+# Build System
+# =====
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
