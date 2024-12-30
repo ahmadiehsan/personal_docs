@@ -75,7 +75,7 @@ implicit_reexport = false
 # =========================
 # Pylint
 # =====
-[tool.pylint]
+[tool.pylint.main]
 py-version = "3.11"
 
 [tool.pylint.format]
@@ -104,10 +104,3 @@ disable = [
     "too-many-statements",  # Ruff will handle it
     "bare-except",  # Ruff will handle it
 ]
-
-# =========================
-# Build System
-# =====
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"

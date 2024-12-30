@@ -1,6 +1,7 @@
 import argparse
 import fileinput
 import os
+from contextlib import closing
 from pathlib import Path
 
 from scripts.utils.argument_validators import to_path_object
@@ -26,14 +27,15 @@ class Command:
         is_inside_a_code_block = False
         file_path = file_dir_path / file_name
 
-        for line in fileinput.input(file_path, inplace=True):
-            if line.startswith("```"):
-                is_inside_a_code_block = not is_inside_a_code_block
+        with closing(fileinput.input(file_path, inplace=True)) as file_input:
+            for line in file_input:
+                if line.startswith("```"):
+                    is_inside_a_code_block = not is_inside_a_code_block
 
-            if line.startswith("#") and not is_inside_a_code_block:
-                line = line.title()  # noqa: PLW2901
+                if line.startswith("#") and not is_inside_a_code_block:
+                    line = line.title()  # noqa: PLW2901
 
-            print(line, end="")  # Will write the line into the file, not the console!
+                print(line, end="")  # Will write the line into the file, not the console!
 
 
 if __name__ == "__main__":
