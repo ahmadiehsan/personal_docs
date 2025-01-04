@@ -1,4 +1,4 @@
-# Anomaly [Unsup]
+# Anomaly
 
 ## Specifications
 

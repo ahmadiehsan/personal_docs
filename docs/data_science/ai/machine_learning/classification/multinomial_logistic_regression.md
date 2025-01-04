@@ -1,4 +1,4 @@
-# Multinomial Logistic Regression [Sup]
+# Multinomial Logistic Regression
 
 ## Specifications
 

@@ -1,4 +1,4 @@
-# Logistic Regression [Sup]
+# Logistic Regression
 
 ## Specifications
 

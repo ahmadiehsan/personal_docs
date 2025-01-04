@@ -1,5 +1,5 @@
 exclude: ^(.*index.md)
-default_stages: [ commit ]
+default_stages: [ pre-commit ]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
@@ -7,9 +7,9 @@ repos:
       - id: check-yaml
         args: [ "--unsafe" ]
       - id: end-of-file-fixer
-        stages: [ commit ]
+        stages: [ pre-commit ]
       - id: trailing-whitespace
-        stages: [ commit ]
+        stages: [ pre-commit ]
       - id: check-merge-conflict
 
   - repo: https://github.com/scop/pre-commit-shfmt
@@ -17,7 +17,7 @@ repos:
     hooks:
       - id: shfmt
         args: [ --indent, "2", --write ]
-        stages: [ commit ]
+        stages: [ pre-commit ]
 
   - repo: https://github.com/mrtazz/checkmake.git
     rev: 0.2.2
@@ -29,7 +29,6 @@ repos:
     rev: v0.7.3
     hooks:
       - id: ruff
-        args: [ --fix ]
       - id: ruff-format
 
   - repo: https://github.com/pre-commit/mirrors-mypy

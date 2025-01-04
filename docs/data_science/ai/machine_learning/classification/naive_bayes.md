@@ -1,4 +1,4 @@
-# Naive Bayes [Sup]
+# Naive Bayes
 
 ## Description
 

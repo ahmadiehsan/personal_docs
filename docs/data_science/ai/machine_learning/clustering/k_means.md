@@ -1,4 +1,4 @@
-# K-Means [Unsup]
+# K-Means
 
 ## Description
 
