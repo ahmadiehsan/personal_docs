@@ -1,4 +1,4 @@
-# LDA [NLP: Topic Modeling] [Unsup]
+# LDA
 
 ## Description
 

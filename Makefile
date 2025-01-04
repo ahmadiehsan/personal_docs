@@ -27,11 +27,11 @@ pre_commit.run_for_all:
 # Requirements
 # =====
 requirements.compile:
-	pip install -q poetry==1.8.4
+	pip install -q poetry==1.8.5
 	poetry update
 
 requirements.install:
-	pip install -q poetry==1.8.4
+	pip install -q poetry==1.8.5
 	poetry install
 
 # =========================
@@ -50,7 +50,7 @@ scripts.md_headlines_to_title:
 	PYTHONPATH=. python scripts/md_headlines_to_title.py $(ARGS)
 
 # =========================
-# App (Main Application)
+# App (Main application)
 # =====
 app.serve:
 	mkdocs serve --open --dirty

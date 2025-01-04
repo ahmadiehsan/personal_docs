@@ -1,4 +1,4 @@
-# VADER [NLP: Sentiment Analysis] [Unsup]
+# VADER [Sentiment Analysis]
 
 ## Description
 

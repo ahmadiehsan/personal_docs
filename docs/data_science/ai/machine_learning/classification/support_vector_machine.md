@@ -1,4 +1,4 @@
-# Support Vector Machine (SVM) [Sup]
+# Support Vector Machine (SVM)
 
 ## Description
 

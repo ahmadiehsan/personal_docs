@@ -18,6 +18,43 @@ It does so in one of two ways, either using context to predict a target word (a 
 
 <img src="image2.png" style="width:5.77114in" />
 
+## Example
+
+A Word2vec sample with a custom vocabulary:
+
+```python
+import pandas as pd
+import numpy as np
+from urllib import request
+from gensim.models import Word2Vec
+
+# Get the playlist dataset file
+data = request.urlopen('https://storage.googleapis.com/maps-premium/dataset/yes_complete/train.txt')
+
+# Parse the playlist dataset file. Skip the first two lines as they only contain metadata
+lines = data.read().decode("utf-8").split('\n')[2:]
+
+# Remove playlists with only one song
+playlists = [s.rstrip().split() for s in lines if len(s.split()) > 1]
+
+# Load song metadata
+songs_file = request.urlopen('https://storage.googleapis.com/maps-premium/dataset/yes_complete/song_hash.txt')
+songs_file = songs_file.read().decode("utf-8").split('\n')
+songs = [s.rstrip().split('\t') for s in songs_file]
+songs_df = pd.DataFrame(data=songs, columns=['id', 'title', 'artist'])
+songs_df = songs_df.set_index('id')
+
+# Train our Word2Vec model
+model = Word2Vec(playlists, vector_size=32, window=20, negative=50, min_count=1, workers=4)
+
+def print_recommendations(song_id):
+    similar_songs = np.array(model.wv.most_similar(positive=str(song_id), topn=5))[:, 0]
+    return songs_df.iloc[similar_songs]
+
+# Extract recommendations
+print_recommendations(2172)
+```
+
 ## Vs TF-IDF & One Hot Encoding
 
 In the Word2Vec method, unlike One Hot Encoding and TF-IDF methods, an unsupervised learning process is performed. Unlabeled data is trained via artificial neural networks to create the Word2Vec model that generates word vectors. Unlike other methods, the vector size is less than the number of unique words in the corpus. The vector size can be selected according to the corpus size and the type of project. This is particularly beneficial for huge data. For example, if we assume that there are 300,000 unique words in a large corpus when vector creation is performed with One Hot Encoding, a vector of 300,000 size is created for each word, with the value of only one element of 1, and the others 0. However, by choosing the vector size 300 (it can be more or less depending on the user's choice) on the Word2Vec side, unnecessary large-size vector operations are avoided.

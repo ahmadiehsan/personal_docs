@@ -1,4 +1,4 @@
-# NMF [NLP: Topic Modeling] [Unsup]
+# NMF
 
 ## Description
 

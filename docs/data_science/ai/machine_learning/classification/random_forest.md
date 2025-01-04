@@ -1,4 +1,4 @@
-# Random Forest [Tree] [Sup]
+# Random Forest [Tree]
 
 ## Description
 
