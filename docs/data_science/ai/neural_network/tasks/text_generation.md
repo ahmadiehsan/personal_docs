@@ -1,4 +1,4 @@
-# Text Generation [NLP]
+# Text Generation
 
 ## Description
 

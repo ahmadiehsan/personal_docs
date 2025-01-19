@@ -1,4 +1,4 @@
-# TF-IDF [NLP: Embedding] [Sup]
+# TF-IDF
 
 ## Description
 

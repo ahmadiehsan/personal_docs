@@ -1,4 +1,4 @@
-# Named Entity Recognition (NER) [NLP]
+# Named Entity Recognition (NER)
 
 ## Description
 

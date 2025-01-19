@@ -1,4 +1,4 @@
-# Part of Speech Tagging (POS) [NLP]
+# Part of Speech Tagging (POS)
 
 ## Description
 

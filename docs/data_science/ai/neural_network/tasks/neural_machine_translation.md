@@ -1,4 +1,4 @@
-# Neural Machine Translation [NLP]
+# Neural Machine Translation
 
 ## Description
 

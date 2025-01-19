@@ -1,5 +1,6 @@
 nav:
   - Overview: _overview
+  - 🔍 Features & Data: features_and_data
   - 🧠 AI: ai
   - 📈 Charts: charts
   - ⚖️ Metrics & Evaluation: metrics_and_evaluation

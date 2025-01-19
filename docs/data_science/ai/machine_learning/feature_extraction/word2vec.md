@@ -1,4 +1,4 @@
-# Word2Vec [NLP: Embedding] [Unsup]
+# Word2Vec
 
 ## Description
 

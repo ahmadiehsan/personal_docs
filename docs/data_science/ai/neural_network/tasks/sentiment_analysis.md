@@ -1,4 +1,4 @@
-# Sentiment Analysis [NLP]
+# Sentiment Analysis
 
 ## Description
 

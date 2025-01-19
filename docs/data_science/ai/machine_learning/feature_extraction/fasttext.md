@@ -1,4 +1,4 @@
-# FastText [NLP: Embedding] [Unsup]
+# FastText
 
 ## Description
 

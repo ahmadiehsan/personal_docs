@@ -1,4 +1,4 @@
-# Text Summarization [NLP]
+# Text Summarization
 
 ## Description
 
