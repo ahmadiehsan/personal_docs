@@ -1,4 +1,4 @@
-# Question Answering [NLP]
+# Question Answering
 
 ## Description
 

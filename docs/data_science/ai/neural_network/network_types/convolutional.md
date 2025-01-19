@@ -1,4 +1,4 @@
-# Convolutional (CNN) [Not Fully-Connected]
+# Convolutional (CNN)
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Zero-Shot Classification [NLP]
+# Zero-Shot Classification
 
 ## Description
 

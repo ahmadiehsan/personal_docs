@@ -1,4 +1,4 @@
-# Feed Forward (FFNN) [Fully-Connected]
+# Feed Forward (FFNN)
 
 ## Description
 
