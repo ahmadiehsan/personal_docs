@@ -20,6 +20,7 @@
 - [Kaggle solutions](https://farid.one/kaggle-solutions/)
 - [Self-hosting Llama](https://abhinand05.medium.com/self-hosting-llama-3-1-70b-or-any-70b-llm-affordably-2bd323d72f8d)
 - [Which GPUs could run LLM](https://aifusion.company/gpu-llm/)
+- [A curated list of AI courses, books, video lectures and papers](https://github.com/owainlewis/awesome-artificial-intelligence)
 
 ## Projects
 

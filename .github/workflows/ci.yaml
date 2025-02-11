@@ -1,7 +1,6 @@
 name: CI
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches:
       - master
@@ -27,7 +26,6 @@ defaults:
     shell: bash
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
@@ -47,13 +45,12 @@ jobs:
       - name: Build with MkDocs
         run: |
           source venv/bin/activate
-          make app.build
+          make manage.build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./site
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
