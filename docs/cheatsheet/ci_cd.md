@@ -58,5 +58,5 @@
       - git reset --hard origin/$CI_COMMIT_BRANCH
       - source $PROJECT_ENV_DIR/bin/activate
       - make requirements.install
-      - make app.build
+      - make manage.build
   ```
