@@ -1,4 +1,4 @@
-# Bar [Categorical]
+# Bar
 
 ## Description
 

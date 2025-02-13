@@ -18,19 +18,19 @@ The **Presence Penalty** can take values between -2 and +2:
 **High Presence Penalty (1.5)**:
 
 User: "What is the current state of space exploration?"
-Bot: "Humanity has made significant strides with Mars missions and the Artemis program, which aims to return astronauts to the Moon. There’s also a growing interest in asteroid mining and commercial space travel."
+Bot: "Humanity has made significant strides with Mars missions and the Artemis program, which aims to return astronauts to the Moon. There's also a growing interest in asteroid mining and commercial space travel."
 
 User: "What are the biggest challenges for the future of space exploration?"
 Bot: "Challenges include the cost of space missions, developing sustainable life support systems for long-duration space travel, and the need for innovative propulsion technologies."
 
 !!! info
 
-    In this example, the model shifts its focus and doesn’t revisit Mars or the Artemis program, instead addressing the challenges of space exploration from a different angle.
+    In this example, the model shifts its focus and doesn't revisit Mars or the Artemis program, instead addressing the challenges of space exploration from a different angle.
 
 **Low Presence Penalty (0)**:
 
 User: "What is the current state of space exploration?"
-Bot: "Humanity has made significant strides with Mars missions and the Artemis program, which aims to return astronauts to the Moon. There’s also a growing interest in asteroid mining and commercial space travel."
+Bot: "Humanity has made significant strides with Mars missions and the Artemis program, which aims to return astronauts to the Moon. There's also a growing interest in asteroid mining and commercial space travel."
 
 User: "What are the biggest challenges for the future of space exploration?"
 Bot: "The challenges for space exploration include the cost of Mars missions, the need for sustainable life support systems for long-term missions, and the challenges of deep space exploration."

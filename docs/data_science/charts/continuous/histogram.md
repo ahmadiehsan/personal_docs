@@ -1,4 +1,4 @@
-# Histogram [Continuous]
+# Histogram
 
 ## Description
 

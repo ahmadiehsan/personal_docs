@@ -1,4 +1,4 @@
-# Receiver Operator Characteristic (ROC) [Categorical]
+# Receiver Operator Characteristic (ROC)
 
 ## Description
 

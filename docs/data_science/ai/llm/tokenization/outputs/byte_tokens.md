@@ -6,7 +6,7 @@ This method breaks down tokens into the individual bytes that are used to repres
 
 !!! info
 
-    Some Subword tokenizers also include bytes as tokens in their vocabulary as the final building block to fall back to when they encounter characters they can’t otherwise represent. The GPT-2 and RoBERTa tokenizers do this, for example.
+    Some Subword tokenizers also include bytes as tokens in their vocabulary as the final building block to fall back to when they encounter characters they can't otherwise represent. The GPT-2 and RoBERTa tokenizers do this, for example.
 
 ## Example
 

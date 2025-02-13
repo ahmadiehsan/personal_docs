@@ -81,7 +81,7 @@ Encoder-Decoder models, also known as **sequence-to-sequence (seq2seq) architect
 - Uses bidirectional self-attention to produce contextualized representations of the input sequence.
 - Captures holistic meaning by attending to relations between tokens in the input.
 - Combines autoregressive decoding with encoder cross-attention to generate target tokens.
-- Uses both its own generated tokens (from self-attention) and the encoder’s processed information (via encoder-decoder cross-attention).
+- Uses both its own generated tokens (from self-attention) and the encoder's processed information (via encoder-decoder cross-attention).
 - Both encoder and decoder embed input tokens and enrich them with positional information.
 - The decoder uses cross-attention mechanisms to attend to the encoder's output representations, ensuring that the generated output remains aligned with the input sequence.
 

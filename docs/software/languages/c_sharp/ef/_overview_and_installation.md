@@ -9,7 +9,7 @@
 
 ORM stands for:
 
-- **Object**: It is class’s that we have in our programming language (c#, python etc.)
+- **Object**: It is class's that we have in our programming language (c#, python etc.)
 - **Relational**: This is Relational Database Manager System like MS-SQL, MySQL etc.
 - **Mapping**: This is the part which bridges between objects and tables.
 
