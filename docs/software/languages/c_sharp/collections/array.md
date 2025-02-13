@@ -238,7 +238,7 @@ foreach (Employee emp in highlyPaidEmployees) {
 ### Shallow (Clone)
 
 - `Clone()` creates a new destination array; you need not have an existing array.
-- `Clone()` doesn’t allow you to specify the `startIndex` at destination array.
+- `Clone()` doesn't allow you to specify the `startIndex` at destination array.
 - The result array will be returned as 'object' type; so it needs to be type-casted to array type.
 
 ```csharp

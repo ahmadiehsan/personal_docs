@@ -10,7 +10,7 @@ When creating interaction terms, it is important to consider which features to c
 - **Pairwise combinations**: Create interaction terms by pairwise combining all pairs of features in the dataset. This can be computationally expensive, but it can help identify potential interaction effects.
 - **PCA**: Use PCA to identify the most important combinations of features, and create interaction terms based on these combinations.
 
-## Examples
+## Example
 
 For example, in a dataset of real estate prices, you might have features such as the number of bedrooms, the number of bathrooms, and the square footage of the property. By themselves, these features provide some information about the price of the property, but they do not capture any interaction effects between the features. However, by creating an interaction term between the number of bedrooms and the square footage, you can capture the idea that larger properties with more bedrooms tend to be more expensive than smaller ones with the same number of bedrooms.
 

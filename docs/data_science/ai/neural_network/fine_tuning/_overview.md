@@ -11,6 +11,6 @@ Fine-tuning involves taking a pretrained model and customizing it for a specific
 
 ## Usage
 
-- When the pretrained model doesn’t perform well on a specific task out of the box.
+- When the pretrained model doesn't perform well on a specific task out of the box.
 - If you have access to a moderately sized or large labeled dataset for your target task.
 - For complex tasks that require significant task-specific adjustment of the original model weights.

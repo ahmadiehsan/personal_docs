@@ -12,7 +12,7 @@ We create this subset of parameters by approximating large matrices that accompa
 
 A major bottleneck of LLMs is their massive weight matrices. Only one of these may have 150 million parameters and each Transformer block would have its version of these.
 
-Instead of 150 million parameters, let’s reproduce the flow with a 10 times 10 matrix (100 parameters):
+Instead of 150 million parameters, let's reproduce the flow with a 10 times 10 matrix (100 parameters):
 
 <img src="full_rank.png" style="width:3.5in" />
 
