@@ -4,13 +4,13 @@
 
 The Map-Rerank chain is designed to address tasks that require identifying the best output from multiple documents by scoring or ranking the results. This method generates responses for each document in a collection (mapping phase) and then ranks them to select the most relevant or optimal output (rerank phase).
 
-## Benefits
+Advantages:
 
 - **Improved output quality**: By evaluating and ranking outputs, the Map-Rerank chain ensures the selection of the most accurate and contextually appropriate response.
 - **Focused information extraction**: Instead of synthesizing all document outputs, it filters for the best answer, reducing noise and irrelevant details.
 - **Scalability**: Handles large sets of documents by individually processing them and selecting the best result, making it efficient for tasks with high document volume.
 
-## Disadvantages
+Disadvantages:
 
 - **Ranking complexity**: The reranking phase requires a scoring mechanism that must be well-designed to evaluate and rank outputs accurately.
 - **Potential for bias**: The scoring system may favor certain outputs depending on the criteria used, which could introduce bias.

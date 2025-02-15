@@ -4,12 +4,12 @@
 
 The refine chain improves the accuracy and quality of results through iterative refinement. Each iteration feeds the output of the previous step into the next, enhancing the overall result.
 
-## Benefits
+Advantages:
 
 - **Continuous improvement**: Allows for progressive refinement of output, enhancing the information iteratively.
 - **Enhanced accuracy**: Improves accuracy and relevance through each iteration.
 
-## Disadvantages
+Disadvantages:
 
 - **Increased computational resources**: Requires more computational resources due to iterative nature.
 - **Longer processing time**: Each iteration adds to overall processing time, which might be a concern for real-time responses.
