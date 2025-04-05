@@ -6,6 +6,17 @@ ARGS := $(wordlist 2, $(words $(MAKECMDGOALS)), $(MAKECMDGOALS))
 $(eval $(ARGS):;@:)  # Change the target-level arguments into do-nothing targets
 
 # =========================
+# Requirements
+# =====
+requirements.compile:
+	pip install -q poetry==2.1.2
+	poetry update
+
+requirements.install:
+	pip install -q poetry==2.1.2
+	poetry install
+
+# =========================
 # PreCommit
 # =====
 pre_commit.init:
@@ -18,18 +29,7 @@ pre_commit.run_for_all:
 	pre-commit run --all-files
 
 # =========================
-# Requirements
-# =====
-requirements.compile:
-	pip install -q poetry==2.1.2
-	poetry update
-
-requirements.install:
-	pip install -q poetry==2.1.2
-	poetry install
-
-# =========================
-# Management Commands
+# Manage
 # =====
 manage.serve:
 	mkdocs serve --open --dirty
