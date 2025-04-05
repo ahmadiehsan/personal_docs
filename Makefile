@@ -21,11 +21,11 @@ pre_commit.run_for_all:
 # Requirements
 # =====
 requirements.compile:
-	pip install -q poetry==1.8.5
+	pip install -q poetry==2.1.2
 	poetry update
 
 requirements.install:
-	pip install -q poetry==1.8.5
+	pip install -q poetry==2.1.2
 	poetry install
 
 # =========================
@@ -40,6 +40,12 @@ manage.build:
 # =========================
 # Scripts
 # =====
+script.file_checker: _is_env_dev
+	PYTHONPATH=. python scripts/file_checker/file_checker.py
+
+script.dir_checker: _is_env_dev
+	PYTHONPATH=. python scripts/dir_checker/dir_checker.py
+
 script.detect_dangling_images:
 	PYTHONPATH=. python scripts/detect_dangling_images.py $(ARGS)
 
