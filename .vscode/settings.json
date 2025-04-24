@@ -1,11 +1,17 @@
 {
     "files.exclude": {
+        "**/.venv": true,
         "**/__pycache__": true,
         "**/.mypy_cache": true,
         "**/.idea": true,
         "**/.ruff_cache": true
     },
     "cSpell.words": [
-        "glightbox"
+        "Ahmadi",
+        "arithmatex",
+        "Ehsan",
+        "glightbox",
+        "mathjax",
+        "pymdownx"
     ]
 }
