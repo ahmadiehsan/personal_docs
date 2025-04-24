@@ -14,7 +14,7 @@ class Command:
         for md_file in docs_directory.rglob("*.md"):
             self._compare_images(md_file)
 
-        print("Done")
+        print("done")
 
     def _compare_images(self, md_file: Path) -> None:
         directory = md_file.with_suffix("")
@@ -31,22 +31,22 @@ class Command:
             print(f"\n===== File: {md_file}")
 
             if duplicate_images_in_md:
-                print("Duplicate images in .md:")
+                print("duplicate images in .md:")
                 for img in duplicate_images_in_md:
                     print(f"  - {img}")
 
             if missing_directories_in_md:
-                print("Wrong directories in .md:")
+                print("wrong directories in .md:")
                 for dir_ in missing_directories_in_md:
                     print(f"  - {dir_}")
 
             if missing_images_in_directory:
-                print("Missing images in .md:")
+                print("missing images in .md:")
                 for img in missing_images_in_directory:
                     print(f"  - {img}")
 
             if missing_images_in_md:
-                print("Missing images in directory:")
+                print("missing images in directory:")
                 for img in missing_images_in_md:
                     print(f"  - {img}")
 

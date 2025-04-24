@@ -2,65 +2,67 @@
 # Init
 # =====
 .DEFAULT_GOAL := help
+.SILENT:
 ARGS := $(wordlist 2, $(words $(MAKECMDGOALS)), $(MAKECMDGOALS))
 $(eval $(ARGS):;@:)  # Change the target-level arguments into do-nothing targets
 
 # =========================
-# Requirements
+# Dependencies
 # =====
-requirements.compile:
-	pip install -q poetry==2.1.2
-	poetry update
+dependencies.install:
+	uv sync
 
-requirements.install:
-	pip install -q poetry==2.1.2
-	poetry install
+dependencies.upgrade:
+	uv sync --upgrade
+
+dependencies.lock:
+	uv lock
 
 # =========================
-# PreCommit
+# Git
 # =====
-pre_commit.init:
-	pre-commit install
-	pre-commit install --hook-type pre-push
-	pre-commit install --hook-type commit-msg
+git.init_hooks:
+	uv run --only-dev pre-commit install
+	uv run --only-dev pre-commit install --hook-type pre-push
+	uv run --only-dev pre-commit install --hook-type commit-msg
 	oco hook set
 
-pre_commit.run_for_all:
-	pre-commit run --all-files
+git.run_hooks_for_all:
+	uv run --only-dev pre-commit run --all-files
 
 # =========================
 # Manage
 # =====
 manage.serve:
-	mkdocs serve --open --dirty
+	uv run --no-dev mkdocs serve --open --dirty
 
 manage.build:
-	mkdocs build --strict
+	uv run --no-dev mkdocs build --strict
 
 # =========================
 # Scripts
 # =====
-script.file_checker: _is_env_dev
-	PYTHONPATH=. python scripts/file_checker/file_checker.py
+script.dir_checker:
+	uv run --only-dev dir_checker
 
-script.dir_checker: _is_env_dev
-	PYTHONPATH=. python scripts/dir_checker/dir_checker.py
+script.python_checker:
+	uv run --only-dev python_checker
 
 script.detect_dangling_images:
-	PYTHONPATH=. python scripts/detect_dangling_images.py $(ARGS)
+	PYTHONPATH=. uv run --no-sync scripts/detect_dangling_images.py $(ARGS)
 
 script.docx_to_md:
-	PYTHONPATH=. python scripts/docx_to_md.py $(ARGS)
+	PYTHONPATH=. uv run --no-sync scripts/docx_to_md.py $(ARGS)
 
 script.md_combiner:
-	PYTHONPATH=. python scripts/md_combiner.py $(ARGS)
+	PYTHONPATH=. uv run --no-sync scripts/md_combiner.py $(ARGS)
 
 script.md_headlines_to_title:
-	PYTHONPATH=. python scripts/md_headlines_to_title.py $(ARGS)
+	PYTHONPATH=. uv run --no-sync scripts/md_headlines_to_title.py $(ARGS)
 
 # =========================
 # Help
 # =====
 help:
-	@echo "Available targets:"
-	@grep -E '^[a-zA-Z0-9][a-zA-Z0-9._-]*:' Makefile | sort | awk -F: '{print "  "$$1}'
+	echo "available targets:"
+	grep -E '^[a-zA-Z0-9][a-zA-Z0-9._-]*:' Makefile | sort | awk -F: '{print "  "$$1}'

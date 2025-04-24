@@ -41,7 +41,7 @@ class Command:
 
         output_assets_temp_dir_path.rename(output_assets_dir_path)
 
-        print("Done")
+        print("done")
 
     @staticmethod
     def _move_assets(md_content: str, input_dir_path: Path, output_dir_path: Path, output_dir_path_temp: Path) -> str:

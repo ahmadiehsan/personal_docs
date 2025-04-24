@@ -57,6 +57,6 @@
       - git fetch -p origin $CI_COMMIT_BRANCH
       - git reset --hard origin/$CI_COMMIT_BRANCH
       - source $PROJECT_ENV_DIR/bin/activate
-      - make requirements.install
+      - make dependencies.install
       - make manage.build
   ```

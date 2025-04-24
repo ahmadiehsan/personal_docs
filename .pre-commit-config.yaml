@@ -1,4 +1,4 @@
-exclude: ^(.*index.md)
+exclude: ^(.*index.md|\.venv)
 default_stages: [pre-commit]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -25,26 +25,22 @@ repos:
       - id: checkmake
         args: [--config, "./.checkmake.ini"]
 
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.6.14
+    hooks:
+      - id: uv-lock
+
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.4
+    rev: v0.11.5
     hooks:
       - id: ruff
       - id: ruff-format
 
-  - repo: local
+  - repo: https://github.com/ahmadiehsan/fixmate
+    rev: 1.1.0
     hooks:
-      - id: dir-checker
-        name: dir-checker
-        entry: env PYTHONPATH=. python scripts/dir_checker/dir_checker.py
-        language: python
-        pass_filenames: false
-
-  - repo: local
-    hooks:
-      - id: file-checker
-        name: file-checker
-        entry: env PYTHONPATH=. python scripts/file_checker/file_checker.py
-        language: python
+      - id: dir_checker
+      - id: python_checker
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.15.0

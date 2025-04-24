@@ -19,7 +19,7 @@ class Command:
                     file_name = file
                     self._convert_headlines_inplace(file_dir_path, file_name)
 
-        print("Done")
+        print("done")
 
     @staticmethod
     def _convert_headlines_inplace(file_dir_path: Path, file_name: str) -> None:

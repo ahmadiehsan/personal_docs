@@ -29,7 +29,7 @@ class Command:
 
                     self._convert_to_md(file_path, output_dir_root_path, output_dir_rel_path, file_name_raw)
 
-        print(f"Done, the output dir saved at the {output_dir_path}")
+        print(f"done, the output dir saved at the {output_dir_path}")
 
     def _convert_to_md(
         self,
@@ -59,9 +59,9 @@ class Command:
                     "none",
                 ]
             )
-            print(f"Converted: {docx_file_path}")
+            print(f"converted: {docx_file_path}")
         except subprocess.CalledProcessError as err:
-            print(f"Error converting {docx_file_path}: {err.stderr}")
+            print(f"error converting {docx_file_path}: {err.stderr}")
             sys.exit()
 
         self._remove_redundant_media_dir(media_dir_path)
