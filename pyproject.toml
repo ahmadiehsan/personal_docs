@@ -29,7 +29,7 @@ dev = [
 package = false
 
 [tool.uv.sources]
-fixmate = { git = "https://github.com/ahmadiehsan/fixmate.git", rev = "1.1.0" }
+fixmate = { git = "https://github.com/ahmadiehsan/fixmate.git", rev = "2.0.2" }
 
 # =========================
 # Ruff
