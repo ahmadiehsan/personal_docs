@@ -1,4 +1,4 @@
-# Adapter (Interface compatibility bridge) [Structural]
+# Adapter (Interface compatibility bridge) {Structural}
 
 ## Description
 

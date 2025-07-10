@@ -1,4 +1,4 @@
-# RESTful API [HTTP1]
+# RESTful API {HTTP1}
 
 ## Description
 

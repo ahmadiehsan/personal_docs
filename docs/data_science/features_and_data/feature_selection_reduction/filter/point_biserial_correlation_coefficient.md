@@ -1,4 +1,4 @@
-# Point-Biserial Correlation Coefficient (Rpb) [Normal] [Continuous vs Binary]
+# Point-Biserial Correlation Coefficient (Rpb) {Normal} {Continuous vs Binary}
 
 ## Description
 

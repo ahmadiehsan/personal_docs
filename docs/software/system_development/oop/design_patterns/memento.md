@@ -1,4 +1,4 @@
-# Memento (State preservation) [Behavioral]
+# Memento (State preservation) {Behavioral}
 
 ## Description
 

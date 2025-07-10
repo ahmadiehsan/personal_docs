@@ -1,4 +1,4 @@
-# WebRTC [UDP]
+# WebRTC {UDP}
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Strategy (Flexible algorithm selection) [Behavioral]
+# Strategy (Flexible algorithm selection) {Behavioral}
 
 ## Description
 

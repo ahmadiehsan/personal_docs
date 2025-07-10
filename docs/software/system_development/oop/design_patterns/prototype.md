@@ -1,4 +1,4 @@
-# Prototype (Object cloning) [Creational]
+# Prototype (Object cloning) {Creational}
 
 ## Description
 

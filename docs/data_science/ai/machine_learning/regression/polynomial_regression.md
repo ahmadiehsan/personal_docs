@@ -1,4 +1,4 @@
-# Polynomial Regression [Sup]
+# Polynomial Regression {Sup}
 
 ## Specifications
 

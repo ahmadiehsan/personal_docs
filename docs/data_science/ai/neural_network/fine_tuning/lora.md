@@ -1,8 +1,8 @@
-# LoRA [QLoRA]
+# LoRA [QLoRA] {PEFT}
 
 ## Description
 
-As an alternative to adapters, low-rank adaptation (LoRA) was introduced and is a widely used and effective technique for PEFT. LoRA is a technique that (like adapters) only requires updating a small set of parameters. It creates a small subset of the base model to fine-tune instead of adding layers to the model.
+As an alternative to adapters, low-rank adaptation (LoRA) was introduced and is a widely used and effective technique for PEFT (Parameter-Efficient Fine-Tuning). LoRA is a technique that (like adapters) only requires updating a small set of parameters. It creates a small subset of the base model to fine-tune instead of adding layers to the model.
 
 Like adapters, this subset allows for much quicker fine-tuning since we only need to update a small part of the base model.
 

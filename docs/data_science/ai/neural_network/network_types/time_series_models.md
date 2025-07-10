@@ -1,4 +1,4 @@
-# Time Series Models [Correlated Data]
+# Time Series Models {Correlated Data}
 
 ## Description
 

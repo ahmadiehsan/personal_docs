@@ -1,4 +1,4 @@
-# Content-Based Filtering [Unsup]
+# Content-Based Filtering {Unsup}
 
 ## Description
 

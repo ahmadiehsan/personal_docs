@@ -1,4 +1,4 @@
-# Collaborative Filtering [Unsup]
+# Collaborative Filtering {Unsup}
 
 ## Description
 

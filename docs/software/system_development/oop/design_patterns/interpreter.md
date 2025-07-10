@@ -1,4 +1,4 @@
-# Interpreter (Language parsing engine) [Behavioral]
+# Interpreter (Language parsing engine) {Behavioral}
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Label Propagation [Semi-Sup]
+# Label Propagation {Semi-Sup}
 
 ## Description
 

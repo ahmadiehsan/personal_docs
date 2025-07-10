@@ -1,4 +1,4 @@
-# Observer (Event notification system) [Behavioral]
+# Observer (Event notification system) {Behavioral}
 
 ## Description
 

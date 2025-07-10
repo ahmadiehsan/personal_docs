@@ -1,4 +1,4 @@
-# Co-Training [Semi-Sup]
+# Co-Training {Semi-Sup}
 
 ## Description
 

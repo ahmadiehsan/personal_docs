@@ -1,4 +1,4 @@
-# RWKV [NLP]
+# RWKV {NLP}
 
 ## Description
 

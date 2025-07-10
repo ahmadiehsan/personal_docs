@@ -1,4 +1,4 @@
-# T-Test [Normal] [Continuous vs Categorical]
+# T-Test {Normal} {Continuous vs Categorical}
 
 ## Description
 

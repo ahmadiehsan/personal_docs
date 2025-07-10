@@ -1,4 +1,4 @@
-# Template Method (Template with hooks) [Behavioral]
+# Template Method (Template with hooks) {Behavioral}
 
 ## Description
 

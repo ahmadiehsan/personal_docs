@@ -1,4 +1,4 @@
-# Generative Adversarial (GAN) [Data Augmentation]
+# Generative Adversarial (GAN) {Data Augmentation}
 
 ## Description
 

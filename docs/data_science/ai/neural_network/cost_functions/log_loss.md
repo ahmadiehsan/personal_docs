@@ -1,4 +1,4 @@
-# Log Loss [Binary Classification]
+# Log Loss {Binary Classification}
 
 ## Description
 

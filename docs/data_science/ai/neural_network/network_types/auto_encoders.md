@@ -1,4 +1,4 @@
-# Auto-Encoders (AE) [Dimensionality Reduction]
+# Auto-Encoders (AE) {Dimensionality Reduction}
 
 ## Description
 

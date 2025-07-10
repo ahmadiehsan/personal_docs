@@ -1,4 +1,4 @@
-# State (State-specific behavior) [Behavioral]
+# State (State-specific behavior) {Behavioral}
 
 ## Description
 

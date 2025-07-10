@@ -1,4 +1,4 @@
-# Command (Encapsulated request object) [Behavioral]
+# Command (Encapsulated request object) {Behavioral}
 
 ## Description
 
