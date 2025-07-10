@@ -1,4 +1,4 @@
-# Factory (Object creation delegation) [Creational]
+# Factory (Object creation delegation) {Creational}
 
 ## Description
 

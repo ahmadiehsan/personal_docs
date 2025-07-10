@@ -1,4 +1,4 @@
-# Linear Regression (Least Squares) [Sup]
+# Linear Regression (Least Squares) {Sup}
 
 ## Specifications
 

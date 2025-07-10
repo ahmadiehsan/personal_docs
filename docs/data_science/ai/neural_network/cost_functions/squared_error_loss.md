@@ -1,4 +1,4 @@
-# Squared Error Loss [Regression]
+# Squared Error Loss {Regression}
 
 ## Description
 

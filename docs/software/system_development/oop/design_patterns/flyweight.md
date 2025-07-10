@@ -1,4 +1,4 @@
-# Flyweight (Shared object reuse) [Structural]
+# Flyweight (Shared object reuse) {Structural}
 
 ## Description
 

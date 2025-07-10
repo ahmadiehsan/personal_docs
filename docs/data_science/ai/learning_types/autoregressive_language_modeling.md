@@ -1,4 +1,4 @@
-# Autoregressive Language Modeling [Self-Sup]
+# Autoregressive Language Modeling {Self-Sup}
 
 ## Description
 

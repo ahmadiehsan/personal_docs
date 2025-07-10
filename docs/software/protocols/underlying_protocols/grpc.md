@@ -1,4 +1,4 @@
-# gRPC [HTTP2]
+# gRPC {HTTP2}
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Masked Language Modeling (MLM) [Self-Sup]
+# Masked Language Modeling (MLM) {Self-Sup}
 
 ## Description
 

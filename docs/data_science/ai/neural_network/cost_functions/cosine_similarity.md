@@ -1,4 +1,4 @@
-# Cosine Similarity [Embedding]
+# Cosine Similarity {Embedding}
 
 ## Description
 

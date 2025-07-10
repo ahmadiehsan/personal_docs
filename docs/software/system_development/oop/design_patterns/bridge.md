@@ -1,4 +1,4 @@
-# Bridge (Decoupled abstraction) [Structural]
+# Bridge (Decoupled abstraction) {Structural}
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Share (Information Gain Technique) [Tree]
+# Share (Information Gain Technique) {Tree}
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Singleton (Single instance control) [Creational]
+# Singleton (Single instance control) {Creational}
 
 ## Description
 

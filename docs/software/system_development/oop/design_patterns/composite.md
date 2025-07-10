@@ -1,4 +1,4 @@
-# Composite (Tree-like structure) [Structural]
+# Composite (Tree-like structure) {Structural}
 
 ## Description
 
