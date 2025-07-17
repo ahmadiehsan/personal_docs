@@ -17,7 +17,7 @@ By adjusting the **cost function or loss function**, the model **learns with sen
 We can assign costs in the form of a confusion matrix:
 
 |                     | Predicted Positive | Predicted Negative |
-|---------------------|--------------------|--------------------|
+| ------------------- | ------------------ | ------------------ |
 | **Actual Positive** | TP_cost            | FN_cost            |
 | **Actual Negative** | FP_cost            | TN_cost            |
 
