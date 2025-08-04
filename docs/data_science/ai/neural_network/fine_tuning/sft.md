@@ -10,10 +10,10 @@ Supervised Fine-Tuning (SFT) is the standard approach for adapting large pretrai
 
 ## Workflow
 
-1. **Prepare Labeled Data:** Collect and preprocess a dataset with input-output pairs for the target task.
-2. **Initialize Model:** Start with a pretrained model (e.g., a language model or vision transformer).
-3. **Fine-Tune Parameters:** Train the model on the labeled data, updating all (or most) of its parameters.
-4. **Evaluate:** Assess the model's performance on a validation or test set.
+1. **Prepare Labeled Data**: Collect and preprocess a dataset with input-output pairs for the target task.
+2. **Initialize Model**: Start with a pretrained model (e.g., a language model or vision transformer).
+3. **Fine-Tune Parameters**: Train the model on the labeled data, updating all (or most) of its parameters.
+4. **Evaluate**: Assess the model's performance on a validation or test set.
 
 !!! warning
 

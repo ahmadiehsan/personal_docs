@@ -10,10 +10,10 @@ Direct Preference Optimization (DPO) is a fine-tuning method for aligning large 
 
 ## Workflow
 
-1. **Collect Preference Data:** Gather pairs of model outputs for the same prompt, labeled as "preferred" and "less preferred" by humans.
-2. **Initialize Model:** Start with a pretrained language model.
-3. **Fine-Tune with DPO Loss:** Train the model using a loss function that increases the likelihood of preferred responses over less-preferred ones.
-4. **Evaluate:** Assess alignment and performance on preference-based benchmarks.
+1. **Collect Preference Data**: Gather pairs of model outputs for the same prompt, labeled as "preferred" and "less preferred" by humans.
+2. **Initialize Model**: Start with a pretrained language model.
+3. **Fine-Tune with DPO Loss**: Train the model using a loss function that increases the likelihood of preferred responses over less-preferred ones.
+4. **Evaluate**: Assess alignment and performance on preference-based benchmarks.
 
 !!! warning
 

@@ -2,10 +2,10 @@
 
 ## Description
 
-- **SFT:** Trains on labeled input-output pairs, but does not directly optimize for human preferences.
-- **RLHF:** Uses a reward model and reinforcement learning to align with preferences, but is complex and unstable.
-- **DPO:** Directly optimizes for preference pairs, offering a simpler and more robust alternative to RLHF.
-- **Online RL:** Continuously updates the policy with new feedback during deployment, but is sample-inefficient and hard to control.
+- **SFT**: Trains on labeled input-output pairs, but does not directly optimize for human preferences.
+- **RLHF**: Uses a reward model and reinforcement learning to align with preferences, but is complex and unstable.
+- **DPO**: Directly optimizes for preference pairs, offering a simpler and more robust alternative to RLHF.
+- **Online RL**: Continuously updates the policy with new feedback during deployment, but is sample-inefficient and hard to control.
 
 !!! info
 

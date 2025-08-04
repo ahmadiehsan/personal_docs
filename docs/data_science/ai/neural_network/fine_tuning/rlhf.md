@@ -31,10 +31,10 @@
 
 ## Typical Workflow
 
-1. **Data Collection:** Gather human-labeled data (demonstrations and preferences).
-2. **SFT:** Fine-tune the base model on demonstration data.
-3. **Reward Model:** Train a model to score outputs based on human preferences.
-4. **RL Fine-Tuning:** Optimize the model using RL (commonly Proximal Policy Optimization, PPO).
+1. **Data Collection**: Gather human-labeled data (demonstrations and preferences).
+2. **SFT**: Fine-tune the base model on demonstration data.
+3. **Reward Model**: Train a model to score outputs based on human preferences.
+4. **RL Fine-Tuning**: Optimize the model using RL (commonly Proximal Policy Optimization, PPO).
 
 ## Use Cases
 

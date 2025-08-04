@@ -6,9 +6,9 @@ Cost-sensitive learning is a technique for handling **imbalanced datasets** wher
 
 To improve model performance, different strategies can be applied:
 
-- **Error Costs:** Assign higher costs to false negatives (FN) when the minority class is more important.
-- **Ensemble Methods (Bagging/Boosting):** Combine multiple models to ensure both minority and majority classes are well learned.
-- **Anomaly Detection:** Treat the minority class as an "anomaly" so that the model actively detects its rare occurrence.
+- **Error Costs**: Assign higher costs to false negatives (FN) when the minority class is more important.
+- **Ensemble Methods (Bagging/Boosting)**: Combine multiple models to ensure both minority and majority classes are well learned.
+- **Anomaly Detection**: Treat the minority class as an "anomaly" so that the model actively detects its rare occurrence.
 
 By adjusting the **cost function or loss function**, the model **learns with sensitivity toward minority class instances**, improving its predictive performance on imbalanced data.
 

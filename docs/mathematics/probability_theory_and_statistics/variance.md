@@ -2,11 +2,15 @@
 
 ## Description
 
-Whereas expectation provides a measure of centrality, the variance of a random variable quantifies the spread of that random variable's distribution. The variance is the average value of the squared difference between the random variable and its expectation.
+Variance is a statistical measure that quantifies the amount of variation or dispersion of a set of data points around its mean (average) value. It essentially indicates how spread out the data is.
 
-Variance is a measure of dispersion, meaning it is a measure of how far a set of numbers is spread out from their average value.
+A higher variance suggests that the data points are more scattered, while a lower variance indicates that the data points are clustered closer to the mean.
 
 <img src="image1.jpg" style="width:4.5in" />
+
+!!! info
+
+    High variance is better than low variance **because that feature carries more meaning**, as long as it’s meaningful and not just outliers.
 
 ## Formula
 

@@ -8,17 +8,17 @@ Online Reinforcement Learning is a method for continuously improving language mo
 
 ## Workflow
 
-1. **Deployment & Feedback Loop:** Deploy the model and collect interaction data from users, including implicit or explicit preference signals (e.g., thumbs up/down, rankings).
-2. **Reward Model Updates:** Continuously update or retrain the reward model using new preference data.
+1. **Deployment & Feedback Loop**: Deploy the model and collect interaction data from users, including implicit or explicit preference signals (e.g., thumbs up/down, rankings).
+2. **Reward Model Updates**: Continuously update or retrain the reward model using new preference data.
 3. **Policy Optimization:**
    - Use algorithms like **Proximal Policy Optimization (PPO)** to fine-tune the language model against the reward model.
    - Optionally use **Generalized Reward Policy Optimization (GRPO)** to better handle non-stationary rewards and long-horizon feedback.
-4. **Evaluation:** Periodically assess model behavior using alignment metrics, task performance, and user satisfaction.
+4. **Evaluation**: Periodically assess model behavior using alignment metrics, task performance, and user satisfaction.
 
 ## PPO vs GRPO
 
-- **PPO (Proximal Policy Optimization):** A stable, widely-used RL algorithm that prevents large policy updates, reducing training instability.
-- **GRPO (Generalized Reward Policy Optimization):** Extends PPO by incorporating reward generalization techniques, making it more robust to sparse, delayed, or shifting feedback.
+- **PPO (Proximal Policy Optimization)**: A stable, widely-used RL algorithm that prevents large policy updates, reducing training instability.
+- **GRPO (Generalized Reward Policy Optimization)**: Extends PPO by incorporating reward generalization techniques, making it more robust to sparse, delayed, or shifting feedback.
 
 ![](online_rl/ppo_and_grpo.png)
 
