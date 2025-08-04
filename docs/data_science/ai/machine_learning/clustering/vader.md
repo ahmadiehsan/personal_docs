@@ -1,4 +1,4 @@
-# VADER [Sentiment Analysis]
+# VADER {Sentiment Analysis}
 
 ## Description
 
