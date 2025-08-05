@@ -1,4 +1,4 @@
-# Softplus [$0$ to $+\infty$]
+# Softplus {$0$ to $+\infty$}
 
 ## Description
 
