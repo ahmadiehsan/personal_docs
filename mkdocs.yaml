@@ -5,7 +5,7 @@ copyright: ©2020-2025 Ehsan Ahmadi
 theme:
   name: material
   features:
-    - content.code.copy  # Add "copy button" to each "code block"
+    - content.code.copy # Add "copy button" to each "code block"
   palette:
     - scheme: default
       primary: white
@@ -20,7 +20,7 @@ theme:
         icon: material/theme-light-dark
         name: Light mode
 extra:
-  generator: false  # Remove the "made with MkDocs" label
+  generator: false # Remove the "made with MkDocs" label
   social:
     - icon: fontawesome/solid/globe
       link: https://ahmadiehsan.ir
@@ -32,9 +32,9 @@ extra:
       link: https://t.me/ahmadi_ehsan
 plugins:
   - search
-  - awesome-pages  # Add better control over "nav" with ".pages" files
-  - glightbox  # Add "image lightbox" feature
-  - minify:  # Minify HTML, CSS, and JS files
+  - awesome-pages # Add better control over "nav" with ".pages" files
+  - glightbox # Add "image lightbox" feature
+  - minify: # Minify HTML, CSS, and JS files
       minify_html: true
       minify_js: true
       minify_css: true
@@ -54,13 +54,13 @@ plugins:
         - _static/js/mathjax_extra.js
         - _static/js/extra.js
 markdown_extensions:
-  - admonition  # Add "alert" support
-  - pymdownx.details  # Needed for "alert" support
-  - pymdownx.superfences  # Add "code blocks" support
-  - pymdownx.arithmatex:  # Add "inline math blocks" support
+  - admonition # Add "alert" support
+  - pymdownx.details # Needed for "alert" support
+  - pymdownx.superfences # Add "code blocks" support
+  - pymdownx.arithmatex: # Add "inline math blocks" support
       generic: true
-  - mdx_truly_sane_lists:  # Add "nested lists" support
-      truly_sane: false  # Allow for unlimited newlines between elements of a list
+  - mdx_truly_sane_lists: # Add "nested lists" support
+      truly_sane: false # Allow for unlimited newlines between elements of a list
 extra_css:
   - _static/styles/iransans.css
   - _static/styles/hello_algo.css

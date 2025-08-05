@@ -1,4 +1,4 @@
-# Resource Naming
+# Resource Naming {Rule}
 
 ## Description
 

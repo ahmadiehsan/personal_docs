@@ -1,4 +1,4 @@
-# Quantile [Percentile, Decile, Quartile]
+# Quantile [Percentile] [Decile] [Quartile]
 
 ## Description
 

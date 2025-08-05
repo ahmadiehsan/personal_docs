@@ -1,4 +1,4 @@
-# Character Tokens
+# Character Tokens {Output}
 
 ## Description
 
