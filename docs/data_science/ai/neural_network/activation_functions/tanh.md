@@ -1,4 +1,4 @@
-# TanH [-1 to 1]
+# TanH {-1 to 1}
 
 ## Description
 

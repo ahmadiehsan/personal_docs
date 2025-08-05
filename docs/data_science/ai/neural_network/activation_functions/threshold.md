@@ -1,4 +1,4 @@
-# Threshold [0 or 1]
+# Threshold {0 or 1}
 
 ## Formula
 

@@ -6,6 +6,12 @@
         "**/.idea": true,
         "**/.ruff_cache": true
     },
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        ".gitignore": ".gitattributes",
+        "pyproject.toml": "uv.lock",
+        ".pre-commit-config.yaml": ".env, .checkmake.ini, .mdlrc.style.rb, .mdlrc",
+    },
     "cSpell.words": [
         "Ahmadi",
         "arithmatex",

@@ -1,4 +1,4 @@
-# Sigmoid [0 to 1]
+# Sigmoid {0 to 1}
 
 ## Description
 
