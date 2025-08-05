@@ -1,4 +1,4 @@
-# SentencePiece
+# SentencePiece {Strategy}
 
 ## Description
 

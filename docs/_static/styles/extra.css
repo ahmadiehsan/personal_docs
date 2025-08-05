@@ -56,7 +56,6 @@
 .nav-tag {
     font-size: 10px;
     padding: 0 1px;
-    text-transform: lowercase;
     transition: margin-left 0.2s ease-in-out;
 }
 

@@ -1,4 +1,4 @@
-# WordPiece
+# WordPiece {Strategy}
 
 ## Description
 
