@@ -1,6 +1,9 @@
 nav:
+  - Index: index.md
   - 📜 Languages: languages
-  - 👷 DevOps: devops
+  - 🧩 OOP: oop
   - 📢 Protocols: protocols
-  - 🗃️ Storages & Data: storages_and_data
+  - 🗃️ Storage {Cache} {DB}: storage
+  - 🥞 Data Structures: data_structures
+  - 👷 DevOps: devops
   - ...

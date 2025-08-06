@@ -5,7 +5,9 @@ copyright: ©2020-2025 Ehsan Ahmadi
 theme:
   name: material
   features:
-    - content.code.copy # Add "copy button" to each "code block"
+    - content.code.copy # Add "copy button" support to each "code block"
+    - navigation.tabs # Add "top menu" support
+    - navigation.indexes # Add "index pages" support for sections
   palette:
     - scheme: default
       primary: white
@@ -54,6 +56,7 @@ plugins:
         - _static/js/mathjax_extra.js
         - _static/js/extra.js
 markdown_extensions:
+  - md_in_html # Add "Markdown in HTML tags" support
   - admonition # Add "alert" support
   - pymdownx.details # Needed for "alert" support
   - pymdownx.superfences # Add "code blocks" support
