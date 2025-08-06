@@ -15,26 +15,18 @@ $$
 \text{Accuracy} = \dfrac{(\text{True Positives} + \text{True Negatives})}{(\text{True Positives} + \text{True Negatives} + \text{False Positives} + \text{False Negatives})}
 $$
 
-## Examples
+## Example
 
-|              | Predicted: NO | Predicted: YES | Total |
-|--------------|---------------|----------------|-------|
-| Actual: NO   | TN = 50       | FP = 10        | 60    |
-| Actual: YES  | FN = 5        | TP = 100       | 105   |
-| Total        | 55            | 110            |       |
+| n = 165     | Predicted: NO | Predicted: YES | Total |
+| ----------- | ------------- | -------------- | ----- |
+| Actual: NO  | TN = 50       | FP = 10        | 60    |
+| Actual: YES | FN = 5        | TP = 100       | 105   |
+| Total       | 55            | 110            |       |
 
 Accuracy:
 
 - Overall, how often is it **correct**?
 - (TP + TN) / total = 150 / 165 = 0.91
-
----
-
-| n = 165     | Predicted: NO  | Predicted: YES | Total |
-|-------------|----------------|----------------|-------|
-| Actual: NO  | TN = 50        | FP = 10        | 60    |
-| Actual: YES | FN = 5         | TP = 100       | 105   |
-| Total       | 55             | 110            |       |
 
 Misclassification Rate (Error Rate):
 

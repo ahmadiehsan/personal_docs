@@ -30,3 +30,28 @@ Then by creating the below diagram we can easily find the best point (the best n
 <img src="image3.jpg" style="width:3.33326in" />
 
 Importantly, every time we increase the number of K, the variation in each cluster decreases, but it does not mean that we should continue this approach, each time we should check whether the reduction of variation was reasonable or just decreased a little.
+
+## Example
+
+```python
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+
+# Scale features
+X_scaled = StandardScaler().fit_transform(X)
+
+# Use elbow method to find optimal k
+distortions = []
+K_range = range(1, 10)
+for k in K_range:
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    kmeans.fit(X_scaled)
+    print(f"Labels for k={k}: {kmeans.labels_}")
+    distortions.append(kmeans.inertia_)
+
+# Plot elbow curve
+plt.plot(K_range, distortions)
+plt.xlabel('k')
+plt.ylabel('Distortion')
+plt.title('Elbow Method For Optimal k')
+```

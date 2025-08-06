@@ -2,7 +2,9 @@
 
 ## Description
 
-MAE is a regression metric that measures the average of the absolute differences between the predicted values and the actual values. It gives an idea of how far off the predictions are from the true values, regardless of direction.
+MAE is a regression metric that measures the average of the absolute differences between the predicted values and the actual values.
+
+It gives an idea of how far off the predictions are from the true values, regardless of direction.
 
 - Is **intuitive** and **easy to interpret**
 - Sensitive to **large errors**, but doesn't penalize outliers as much as squared error (MSE)
