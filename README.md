@@ -8,7 +8,7 @@ Personal docs and notes
 git clone <this/repo/url>
 cd <cloned_dir>
 
-curl -LsSf https://astral.sh/uv/0.7.9/install.sh | sh
+curl -LsSf https://astral.sh/uv/0.8.5/install.sh | sh
 
 make manage.serve
 ```
