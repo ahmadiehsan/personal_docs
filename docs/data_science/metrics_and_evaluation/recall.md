@@ -14,5 +14,16 @@ $$
 \text{Recall} = \frac{\text{Relevant retrieved instances}}{\text{All relevant instances}}
 $$
 
-- **Relevant retrieved instances**: Total correctly identified positive instances
-- **All relevant instances**: Total actual positive instances
+- **Relevant retrieved instances**: Total correctly identified positive instances (True Positives)
+- **All relevant instances**: Total actual positive instances (True Positives + False Negative)
+
+## Example
+
+```python
+from sklearn.metrics import recall_score
+
+y_true = [1, 0, 1, 1, 0]
+y_pred = [1, 0, 1, 0, 0]  # TP=2, FP=0, TN=2, FN=1
+
+print(recall_score(y_true, y_pred))  # 0.6666666666666666
+```

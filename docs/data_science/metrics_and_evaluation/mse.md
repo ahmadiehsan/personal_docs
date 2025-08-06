@@ -2,7 +2,9 @@
 
 ## Description
 
-MSE is a regression metric that measures the average of the squared differences between the predicted values and the actual values. It gives a sense of how far off predictions are from the true values, with a heavier penalty for larger errors.
+MSE is a regression metric that measures the average of the squared differences between the predicted values and the actual values.
+
+It gives a sense of how far off predictions are from the true values, with a heavier penalty for larger errors.
 
 - **Penalizes large errors** more heavily than MAE, due to the squaring of differences
 - Sensitive to **outliers**, as large errors are disproportionately penalized

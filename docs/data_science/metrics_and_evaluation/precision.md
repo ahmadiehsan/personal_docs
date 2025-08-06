@@ -14,5 +14,16 @@ $$
 \text{Precision} = \frac{\text{Relevant retrieved instances}}{\text{All retrieved instances}}
 $$
 
-- **Relevant retrieved instances**: Total correctly identified positive instances
-- **All retrieved instances**: Total instances predicted as positive
+- **Relevant retrieved instances**: Total correctly identified positive instances (True Positives)
+- **All retrieved instances**: Total instances predicted as positive (True Positives + False Positives)
+
+## Example
+
+```python
+from sklearn.metrics import precision_score
+
+y_true = [1, 0, 1, 1, 0]
+y_pred = [1, 0, 1, 0, 0]  # TP=2, FP=0, TN=2, FN=1
+
+print(precision_score(y_true, y_pred))  # 1.0
+```
