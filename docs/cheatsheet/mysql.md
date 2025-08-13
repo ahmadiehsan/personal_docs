@@ -1,9 +1,5 @@
 # Mysql
 
-## Links
-
-- [MySQL Data Types](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
-
 ## Install
 
 !!! info
@@ -68,6 +64,8 @@ sudo mysql_secure_installation
   | Data Type     | Range  | Storage size |
   | ------------- | ------ | ------------ |
   | BOOL, BOOLEAN | 0 or 1 | 1 byte       |
+
+- [Full Data Types](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
 
 ## Export/Import
 
