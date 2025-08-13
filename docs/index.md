@@ -16,6 +16,23 @@ hide:
 .welcome-image p {
     margin: 0;
 }
+
+@media (max-width: 1023px) {
+    .welcome-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .welcome-container > .cell {
+        max-width: 600px;
+    }
+
+    .welcome-image {
+        margin-right: 0 !important;
+        order: 2;
+    }
+}
 </style>
 
 <div class="grid welcome-container" markdown>

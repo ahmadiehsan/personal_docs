@@ -1,18 +1,5 @@
 # Linux
 
-## Links
-
-- [Sudo password cache](https://apple.stackexchange.com/questions/10139/how-do-i-increase-sudo-password-remember-timeout#answer-51763)
-- [Debian mirror sites](https://www.debian.org/mirror/list)
-- [Vim readonly save problem](https://superuser.com/questions/694450/using-vim-to-force-edit-a-file-when-you-opened-without-permissions/785016#785016)
-- [Start Ubuntu in console mode](https://askubuntu.com/a/859640)
-- [Youcompleteme unavailable: requires Vim 8.1.2269+](https://github.com/ycm-core/YouCompleteMe/issues/3764#issuecomment-755816205)
-- [Ubuntu <=> Debian](https://askubuntu.com/questions/445487/what-debian-version-are-the-different-ubuntu-versions-based-on/445496#445496)
-- [Possible missing firmware](https://unix.stackexchange.com/questions/556946/possible-missing-firmware-lib-firmware-i915-for-module-i915/557015#557015)
-- [Vim configuration](https://jadi.net/2020/05/vim-prat-3/)
-- [Screen recorder](https://obsproject.com/wiki/unofficial-linux-builds#debian)
-- [Useful commands cheatsheet](https://xmind.app/m/WwtB/)
-
 ## SSH
 
 - Download to local:

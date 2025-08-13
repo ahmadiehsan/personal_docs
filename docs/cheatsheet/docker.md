@@ -1,10 +1,5 @@
 # Docker
 
-## Links
-
-- [Check For Docker Proper Installation On The Production Server](https://github.com/docker/docker-bench-security)
-- [Multiple Databases With The Official Postgresql Docker Image](https://github.com/mrts/docker-postgresql-multiple-databases)
-
 ## Image
 
 - Remove none images:
