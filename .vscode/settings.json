@@ -6,12 +6,15 @@
         "**/.idea": true,
         "**/.ruff_cache": true
     },
+    "search.exclude": {
+        "**/uv.lock": true
+    },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.expand": false,
     "explorer.fileNesting.patterns": {
         ".gitignore": ".gitattributes",
         "pyproject.toml": "uv.lock",
-        ".pre-commit-config.yaml": ".env, .checkmake.ini, .mdlrc.style.rb, .mdlrc",
+        ".pre-commit-config.yaml": ".env, .checkmake.ini, .mdlrc.style.rb, .mdlrc, .opencommitignore",
     },
     "cSpell.words": [
         "Ahmadi",
