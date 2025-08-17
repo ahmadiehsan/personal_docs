@@ -6,6 +6,54 @@ Transformers rely on a mechanism called self-attention, which allows the model t
 
 ![](transformers/image1.jpg)
 
+## Workflow
+
+Encoder Part:
+
+```text
+Token Encodings = (One Hot Encodings . Token Embeddings) + Position Encodings
+
+Query = Token Encodings . Query Weights
+Key   = Token Encodings . Key Weights
+Value = Token Encodings . Value Weights
+
+Token Similarities    = Query . Key
+Self Attention Scores = Tokens Similarities . Value
+
+Encoder Part Output = Self Attention Scores + Token Encodings
+```
+
+Decoder Part:
+
+```text
+Token Encodings = (One Hot Encodings . Token Embeddings) + Position Encodings
+
+Query = Token Encodings . Query Weights
+Key   = Token Encodings . Key Weights
+Value = Token Encodings . Value Weights
+
+Token Similarities    = (Query . Key) + Next Tokens Mask
+Self Attention Scores = Tokens Similarities . Value
+
+Decoder Part Output = Self Attention Scores + Token Encodings
+```
+
+Encoder-Decoder Part:
+
+```text
+Query = Decoder Part Output . Query Weights
+Key   = Encoder Part Output . Key Weights
+Value = Encoder Part Output . Value Weights
+
+Token Similarities               = Query . Key
+Encoder-Decoder Attention Scores = Tokens Similarities . Value
+
+Encoder-Decoder Part Output = Encoder-Decoder Attention Scores + Decoder Part Output
+
+Fully Connected Layer Output = (Encoder-Decoder Part Output . Fully Connected Layer Weights) + Fully Connected Layer Bias
+Next Token Probabilities     = SoftMax(Fully Connected Layer Output)
+```
+
 ## Components
 
 ### Self-Attention Mechanism
