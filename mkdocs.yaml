@@ -36,6 +36,9 @@ plugins:
   - search
   - awesome-pages # Add better control over "nav" with ".pages" files
   - glightbox # Add "image lightbox" feature
+  - toggle-sidebar: # Add "close sidebar button" feature
+      theme: material
+      toggle_button: navigation
   - minify: # Minify HTML, CSS, and JS files
       minify_html: true
       minify_js: true
