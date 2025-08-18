@@ -66,19 +66,21 @@ document.querySelectorAll(".nav-tag + .nav-tag").forEach(tag => {
 // =====
 const fullscreenPath = "M4 4h6v2H6v4H4V4zm16 0h-6v2h4v4h2V4zM4 20h6v-2H6v-4H4v6zm16 0h-6v-2h4v-4h2v6z";
 const exitFullscreenPath = "M4 10h6V4H8v4H4v2zm16 0h-6v-6h2v4h4v2zM4 14h6v6H8v-4H4v-2zm16 0h-6v6h2V16h4V14z";
+const sidebarSelector = ".md-sidebar"
+const sidebarButtonSelector = ".mkdocs-toggle-sidebar-button";
 
-let isSidebarVisible = false;
+let isSidebarVisible = document.querySelector(sidebarSelector).checkVisibility();
 
 function updateSidebarButtonIcon() {
-    const svgPath = document.querySelector(".mkdocs-toggle-sidebar-button svg path");
+    const svgPath = document.querySelector(`${sidebarButtonSelector} svg path`);
     svgPath.setAttribute("d", isSidebarVisible ? fullscreenPath : exitFullscreenPath);
     isSidebarVisible = !isSidebarVisible;
 }
 
 const sidebarButtonObserver = new MutationObserver(() => {
-    const btn = document.querySelector(".mkdocs-toggle-sidebar-button");
+    const btn = document.querySelector(sidebarButtonSelector);
     if (btn) {
-        const nav = document.querySelector(".md-sidebar");
+        const nav = document.querySelector(sidebarSelector);
         if (nav && !nav.hasAttribute("hidden")) {
             btn.addEventListener("click", updateSidebarButtonIcon);
             updateSidebarButtonIcon(); // Initial icon update
