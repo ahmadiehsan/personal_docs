@@ -60,6 +60,9 @@ script.md_combiner:
 script.md_headlines_to_title:
 	PYTHONPATH=. uv run --no-sync scripts/md_headlines_to_title.py $(ARGS)
 
+script.md_rewrap_long_lines:
+	PYTHONPATH=. uv run --no-sync scripts/md_rewrap_long_lines.py $(ARGS)
+
 # =========================
 # Help
 # =====

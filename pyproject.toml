@@ -119,6 +119,7 @@ disable = [
     "too-many-branches",            # Ruff will handle it
     "too-many-statements",          # Ruff will handle it
     "bare-except",                  # Ruff will handle it
+    "too-many-return-statements",   # Ruff will handle it
 ]
 
 # =========================
