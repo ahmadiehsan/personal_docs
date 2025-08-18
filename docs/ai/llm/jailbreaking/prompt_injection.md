@@ -2,9 +2,13 @@
 
 ## Description
 
-Prompt injection is a sneaky way to trick AI models, especially language models, into ignoring their safety features. Attackers create specific inputs to get the AI to spit out information it usually wouldn't share, like harmful content or sensitive info.
+Prompt injection is a sneaky way to trick AI models, especially language models, into ignoring their safety features.
+Attackers create specific inputs to get the AI to spit out information it usually wouldn't share, like harmful content or sensitive info.
 
-There are two main ways prompt injection works: direct and indirect. In direct prompt injection, someone crafts a phrase that seems harmless but actually pushes the AI to give unexpected answers. For example, a playful comment could make the AI act outside its normal rules. Indirect prompt injection is trickier—it's when harmful instructions are hidden in content the AI processes, like text on a webpage that looks innocent but is meant to influence the model.
+There are two main ways prompt injection works: direct and indirect.
+In direct prompt injection, someone crafts a phrase that seems harmless but actually pushes the AI to give unexpected answers.
+For example, a playful comment could make the AI act outside its normal rules.
+Indirect prompt injection is trickier—it's when harmful instructions are hidden in content the AI processes, like text on a webpage that looks innocent but is meant to influence the model.
 
 ## Example
 

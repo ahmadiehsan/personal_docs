@@ -2,7 +2,8 @@
 
 ## Description
 
-All data structures are implemented based on arrays, linked lists, or a combination of both. For example, stacks and queues can be implemented using either arrays or linked lists; while implementations of hash tables may involve both arrays and linked lists.
+All data structures are implemented based on arrays, linked lists, or a combination of both.
+For example, stacks and queues can be implemented using either arrays or linked lists; while implementations of hash tables may involve both arrays and linked lists.
 
 - **Array-based implementations**: Stacks, Queues, Hash Tables, Trees, Heaps, Graphs, Matrices, Tensors
 - **Linked-list-based implementations**: Stacks, Queues, Hash Tables, Trees, Heaps, Graphs, etc.

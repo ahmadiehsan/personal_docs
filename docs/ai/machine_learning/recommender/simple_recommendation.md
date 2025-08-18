@@ -2,7 +2,8 @@
 
 ## Description
 
-Recommendation engines are a subclass of machine learning which generally deal with ranking or rating products / users. Loosely defined, a recommender system is a system which predicts ratings a user might give to a specific item.
+Recommendation engines are a subclass of machine learning which generally deal with ranking or rating products / users.
+Loosely defined, a recommender system is a system which predicts ratings a user might give to a specific item.
 
 <img src="image3.jpg" style="width:4.95313in" />
 

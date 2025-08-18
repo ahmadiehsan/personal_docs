@@ -35,7 +35,7 @@ Techniques:
   | Continuous       | Pearson's Correlation | LDA          |
   | Categorical      | Anova                 | Chi-Square   |
 
-  *Please note that above methods don't identify or deal with multicollinearity, we need to figure that out separately.*
+*Please note that above methods don't identify or deal with multicollinearity, we need to figure that out separately.*
 
 - **Wrapper Method**: Here we add/remove features to baseline model and compare the performance of the model:
 

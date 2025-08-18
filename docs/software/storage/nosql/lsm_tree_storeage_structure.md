@@ -2,7 +2,9 @@
 
 ## Overview
 
-A Log-Structured merge tree (LSM tree) is a data structure used in computer science for efficiently storing and retrieving key-value pairs. It is particularly well-suited for write-intensive workloads and is commonly employed in storage systems such as databases and distributed file systems. The LSM tree is designed to optimize write operations by minimizing disk I/O and ensuring efficient compaction. (LSM tree uses SSTable internally)
+A Log-Structured merge tree (LSM tree) is a data structure used in computer science for efficiently storing and retrieving key-value pairs.
+It is particularly well-suited for write-intensive workloads and is commonly employed in storage systems such as databases and distributed file systems.
+The LSM tree is designed to optimize write operations by minimizing disk I/O and ensuring efficient compaction. (LSM tree uses SSTable internally)
 
 ![](lsm_tree_storeage_structure/image2.png)
 

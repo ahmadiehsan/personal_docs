@@ -44,7 +44,8 @@ foreach (string item in queue) {
 
 ### Enqueue
 
-Is used to add elements to the end of a `Queue<T>` collection. The `Enqueue` method ensures that elements are added at the end of the queue.
+Is used to add elements to the end of a `Queue<T>` collection.
+The `Enqueue` method ensures that elements are added at the end of the queue.
 
 Example:
 
@@ -57,7 +58,8 @@ queue.Enqueue("Task 2");
 
 ### Dequeue
 
-Is used to remove and return the object at the beginning of the queue. When the method is called, it removes the item at the front of the queue and shifts all subsequent items forward.
+Is used to remove and return the object at the beginning of the queue.
+When the method is called, it removes the item at the front of the queue and shifts all subsequent items forward.
 
 - Will remove the returned element.
 - If the queue is empty and you attempt to call `Dequeue`, an `InvalidOperationException` is thrown.

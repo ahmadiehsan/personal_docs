@@ -8,7 +8,8 @@ Gives us a way to prevent "dependency rot." Dependency rot happens when you have
 
 ![](hollywood_principle/image1.jpg)
 
-With the Hollywood Principle, we allow low-level components to hook themselves into a system, but the high-level components determine when they are needed, and how. In other words, the high-level components give the low-level components the "don't call us, we'll call you" treatment.
+With the Hollywood Principle, we allow low-level components to hook themselves into a system, but the high-level components determine when they are needed, and how.
+In other words, the high-level components give the low-level components the "don't call us, we'll call you" treatment.
 
 !!! info
 

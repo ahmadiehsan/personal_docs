@@ -2,7 +2,8 @@
 
 ## Description
 
-Well-known methods for dimensionality reduction are Principal Component Analysis (PCA) and Uniform Manifold Approximation and Projection (UMAP). UMAP handles nonlinear relationships and structures a bit better than PCA.
+Well-known methods for dimensionality reduction are Principal Component Analysis (PCA) and Uniform Manifold Approximation and Projection (UMAP).
+UMAP handles nonlinear relationships and structures a bit better than PCA.
 
 ## Example
 

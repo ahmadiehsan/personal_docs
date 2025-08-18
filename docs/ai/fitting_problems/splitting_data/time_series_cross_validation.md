@@ -2,7 +2,11 @@
 
 ## Description
 
-Time series data requires special attention when splitting. In this case, we typically use a method called time series cross-validation, which preserves the temporal order of the data. In this method, the data is split into multiple segments, with each segment representing a fixed time interval. The model is then trained on the past data and tested on the future data. This helps to evaluate the performance of the model in real-world scenarios.
+Time series data requires special attention when splitting.
+In this case, we typically use a method called time series cross-validation, which preserves the temporal order of the data.
+In this method, the data is split into multiple segments, with each segment representing a fixed time interval.
+The model is then trained on the past data and tested on the future data.
+This helps to evaluate the performance of the model in real-world scenarios.
 
 <img src="image1.jpg" style="width:4.11128in" />
 

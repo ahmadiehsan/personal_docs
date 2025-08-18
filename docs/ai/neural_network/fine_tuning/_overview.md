@@ -2,7 +2,8 @@
 
 ## Description
 
-Fine-tuning involves taking a pretrained model and customizing it for a specific downstream task by training it further on a task-specific dataset. It adjusts the existing weights of the model to optimize performance for new, task-specific objectives.
+Fine-tuning involves taking a pretrained model and customizing it for a specific downstream task by training it further on a task-specific dataset.
+It adjusts the existing weights of the model to optimize performance for new, task-specific objectives.
 
 - **Task-Specific**: Fine-tuning is explicitly tailored for a specific task (e.g., text classification, sentiment analysis, image segmentation).
 - **Requires Labeled Data**: The task dataset often requires labeled examples for supervised learning.

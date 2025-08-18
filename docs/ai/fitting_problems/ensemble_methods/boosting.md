@@ -2,7 +2,8 @@
 
 ## Description
 
-Boosting is an **ensemble learning** technique that **iteratively improves weak classifiers** by focusing on misclassified examples. Unlike bagging, it adjusts **training example weights** to enhance accuracy.
+Boosting is an **ensemble learning** technique that **iteratively improves weak classifiers** by focusing on misclassified examples.
+Unlike bagging, it adjusts **training example weights** to enhance accuracy.
 
 Advantages:
 
@@ -18,7 +19,8 @@ Disadvantages:
 
 ## Workflow
 
-There are several boosting algorithms, but one of the most popular ones is AdaBoost (short for adaptive boosting). The AdaBoost algorithm works as follows:
+There are several boosting algorithms, but one of the most popular ones is AdaBoost (short for adaptive boosting).
+The AdaBoost algorithm works as follows:
 
 1. **Initialize** equal weights for training examples.
 2. Train a **weak classifier**.

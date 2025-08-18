@@ -2,7 +2,8 @@
 
 ## Description
 
-A subset of $R_n$ is any set that contains only elements of $R_n$. For example, ${x_0}$ is a subset of $R_n$ if $x_0$ is an element of $R_n$.
+A subset of $R_n$ is any set that contains only elements of $R_n$.
+For example, ${x_0}$ is a subset of $R_n$ if $x_0$ is an element of $R_n$.
 
 ## Linear Combination
 

@@ -58,7 +58,8 @@ foreach (string message in messages) {
 
 ### RemoveWhere
 
-It allows remove all elements from the collection that satisfy a specified condition. The condition is expressed using a predicate (a function delegate that returns a boolean).
+It allows remove all elements from the collection that satisfy a specified condition.
+The condition is expressed using a predicate (a function delegate that returns a boolean).
 
 Example:
 
@@ -68,7 +69,8 @@ messages.RemoveWhere(m => m.EndsWith("You"));
 
 ### UnionWith
 
-Is used to modify the current set to be the union of the current set and a specified collection. It adds all unique elements from the provided collection to the `HashSet`, ensuring no duplicates.
+Is used to modify the current set to be the union of the current set and a specified collection.
+It adds all unique elements from the provided collection to the `HashSet`, ensuring no duplicates.
 
 Example:
 
@@ -83,7 +85,9 @@ employees2021.UnionWith(newEmployees2022);
 
 ### IntersectWith
 
-Is used to modify the current `HashSet<T>` by retaining only the elements that are also present in a specified collection. It performs a mathematical set intersection, which means that the resulting set contains only the common elements from both sets. This method is useful when narrowing down a collection to shared elements.
+Is used to modify the current `HashSet<T>` by retaining only the elements that are also present in a specified collection.
+It performs a mathematical set intersection, which means that the resulting set contains only the common elements from both sets.
+This method is useful when narrowing down a collection to shared elements.
 
 Example:
 

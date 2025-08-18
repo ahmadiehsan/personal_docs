@@ -2,7 +2,8 @@
 
 ## Description
 
-Multiple negative ranking (MNR) loss, often referred to as InfoNCE7 or NTXentLoss, is a loss that uses either positive pairs of sentences or triplets that contain a pair of positive sentences and an additional unrelated sentence. This unrelated sentence is called a negative and represents the dissimilarity between the positive sentences.
+Multiple negative ranking (MNR) loss, often referred to as InfoNCE7 or NTXentLoss, is a loss that uses either positive pairs of sentences or triplets that contain a pair of positive sentences and an additional unrelated sentence.
+This unrelated sentence is called a negative and represents the dissimilarity between the positive sentences.
 
 !!! info
 

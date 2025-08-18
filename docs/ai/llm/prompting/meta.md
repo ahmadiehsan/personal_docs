@@ -2,7 +2,8 @@
 
 ## Description
 
-Meta Prompting is a sophisticated technique in prompt engineering that emphasizes the structure and syntax of tasks rather than their content. This approach aims to interact with large language models (LLMs) more abstractly.
+Meta Prompting is a sophisticated technique in prompt engineering that emphasizes the structure and syntax of tasks rather than their content.
+This approach aims to interact with large language models (LLMs) more abstractly.
 
 This technique is effective for complex reasoning tasks, mathematical problems, coding challenges, and theoretical inquiries.
 

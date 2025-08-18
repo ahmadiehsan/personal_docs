@@ -2,7 +2,8 @@
 
 ## Description
 
-Training a CV involves testing all possible hyperparameters in each attempt. The process consists of the following steps:
+Training a CV involves testing all possible hyperparameters in each attempt.
+The process consists of the following steps:
 
 1. **Define the hyperparameters and their search space**: Identify the hyperparameters to optimize and specify their possible value ranges.
 2. **Choose a search strategy**: Select a method to explore the hyperparameter search space, such as:

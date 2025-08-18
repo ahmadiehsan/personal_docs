@@ -2,9 +2,11 @@
 
 ## Creational Design Patterns
 
-Creational design patterns are concerned with the way of creating objects. These design patterns are used when a decision must be made at the time of the instantiation of a class (i.e. creating an object of a class).
+Creational design patterns are concerned with the way of creating objects.
+These design patterns are used when a decision must be made at the time of the instantiation of a class (i.e. creating an object of a class).
 
-This pattern can be further divided into class-creation patterns and object-creational patterns. While class-creation patterns use inheritance effectively in the instantiation process, object-creation patterns use delegation effectively to get the job done.
+This pattern can be further divided into class-creation patterns and object-creational patterns.
+While class-creation patterns use inheritance effectively in the instantiation process, object-creation patterns use delegation effectively to get the job done.
 
 !!! info
 
@@ -12,11 +14,13 @@ This pattern can be further divided into class-creation patterns and object-crea
 
 ## Structural Design Patterns
 
-Structural design patterns are concerned with how classes and objects can be composed, to form larger structures. The structural design patterns simplify the structure by identifying relationships.
+Structural design patterns are concerned with how classes and objects can be composed, to form larger structures.
+The structural design patterns simplify the structure by identifying relationships.
 
 These patterns focus on how the classes inherit from each other and how they are composed of other classes.
 
-Structural class-creation patterns use inheritance to compose interfaces. Structural object patterns define ways to compose objects to obtain new functionality.
+Structural class-creation patterns use inheritance to compose interfaces.
+Structural object patterns define ways to compose objects to obtain new functionality.
 
 !!! info
 
@@ -24,7 +28,8 @@ Structural class-creation patterns use inheritance to compose interfaces. Struct
 
 ## Behavioral Design Patterns
 
-Behavioral design patterns are concerned with the interaction and responsibility of objects. In these design patterns, the interaction between the objects should be in such a way that they can easily talk to each other and still should be loosely coupled.
+Behavioral design patterns are concerned with the interaction and responsibility of objects.
+In these design patterns, the interaction between the objects should be in such a way that they can easily talk to each other and still should be loosely coupled.
 
 That means the implementation and the client should be loosely coupled to avoid hard coding and dependencies.
 

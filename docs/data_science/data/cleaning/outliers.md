@@ -2,7 +2,10 @@
 
 ## Description
 
-Outliers are data points that markedly deviate from the rest of the observations in a dataset. Their occurrence may stem from factors such as measurement errors, data corruption, or authentic extreme values. The presence of outliers can wield a substantial influence on the outcomes of ML models, introducing distortion to the data and disrupting the relationships between variables. Therefore, handling outliers is an important step in preprocessing data for ML.
+Outliers are data points that markedly deviate from the rest of the observations in a dataset.
+Their occurrence may stem from factors such as measurement errors, data corruption, or authentic extreme values.
+The presence of outliers can wield a substantial influence on the outcomes of ML models, introducing distortion to the data and disrupting the relationships between variables.
+Therefore, handling outliers is an important step in preprocessing data for ML.
 
 There are several methods for handling outliers:
 

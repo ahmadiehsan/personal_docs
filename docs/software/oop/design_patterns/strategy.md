@@ -4,7 +4,8 @@
 
 ![](strategy/image1.jpg)
 
-Defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+Defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+Strategy lets the algorithm vary independently from clients that use it.
 
 ![](strategy/image2.jpg)
 

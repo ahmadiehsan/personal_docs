@@ -14,7 +14,8 @@ Query context is in effect whenever a query clause is passed to a query paramete
 
 ## Filter
 
-In a filter context, a query clause answers the question “**Does this document match this query clause?**” The answer is a simple Yes or No — no scores are calculated. Filter context is mainly used for filtering structured data, e.g.
+In a filter context, a query clause answers the question “**Does this document match this query clause?**” The answer is a simple Yes or No — no scores are calculated.
+Filter context is mainly used for filtering structured data, e.g.
 
 - Does this timestamp fall into the range of 2015 to 2016?
 - Is the status field set to "published"?
@@ -29,7 +30,8 @@ Filter context is in effect whenever a query clause is passed to a filter parame
 
 ## Aggregation
 
-An aggregation summarizes your data as metrics, statistics, or other analytics. Aggregations help you answer questions like:
+An aggregation summarizes your data as metrics, statistics, or other analytics.
+Aggregations help you answer questions like:
 
 - What's the average load time for my website?
 - Who are my most valuable customers based on transaction volume?

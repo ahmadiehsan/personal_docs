@@ -4,7 +4,9 @@
 
 A receiver operating characteristic curve, or ROC curve, is a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied.
 
-The ROC curve is created by plotting the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings. The true-positive rate is also known as sensitivity, recall or probability of detection. The false-positive rate is also known as probability of false alarm and can be calculated as (1 − specificity).
+The ROC curve is created by plotting the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings.
+The true-positive rate is also known as sensitivity, recall or probability of detection.
+The false-positive rate is also known as probability of false alarm and can be calculated as (1 − specificity).
 
 <img src="image3.jpg" style="width:3.98915in" />
 

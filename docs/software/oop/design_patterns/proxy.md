@@ -24,10 +24,13 @@ Use the Proxy Pattern to create a representative object that controls access to 
 
 <img src="image3.jpg" style="width:4.69034in" />
 
-With the Remote Proxy, the proxy acts as a local representative for an object that lives in a different JVM. A method call on the proxy results in the call being transferred over the wire and invoked remotely, and the result being returned to the proxy and then to the Client.
+With the Remote Proxy, the proxy acts as a local representative for an object that lives in a different JVM.
+A method call on the proxy results in the call being transferred over the wire and invoked remotely, and the result being returned to the proxy and then to the Client.
 
 ## Virtual Proxy
 
 <img src="image1.jpg" style="width:4.54488in" />
 
-The Virtual Proxy acts as a representative for an object that may be expensive to create. The Virtual Proxy often defers the creation of the object until it is needed; the Virtual Proxy also acts as a surrogate for the object before and while it is being created. After that, the proxy delegates requests directly to the RealSubject.
+The Virtual Proxy acts as a representative for an object that may be expensive to create.
+The Virtual Proxy often defers the creation of the object until it is needed; the Virtual Proxy also acts as a surrogate for the object before and while it is being created.
+After that, the proxy delegates requests directly to the RealSubject.

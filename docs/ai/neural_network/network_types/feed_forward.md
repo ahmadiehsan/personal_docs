@@ -9,9 +9,11 @@ the input layer through any hidden layers to the output layer. The network has n
 <img src="image3.png" style="width:3.72396in" />
 
 Multilayer perceptron (MLP) is a type of feedforward network that has at least one hidden layer in addition to its input
-and output layers. The layers are fully connected, meaning each neuron in a layer connects with every neuron in the next
+and output layers.
+The layers are fully connected, meaning each neuron in a layer connects with every neuron in the next
 layer. MLPs can model complex patterns and are widely used for tasks such as image recognition, classification, speech
-recognition, and other types of machine learning tasks. The MLP is a feedforward network with layers of neurons arranged
+recognition, and other types of machine learning tasks.
+The MLP is a feedforward network with layers of neurons arranged
 sequentially. Information flows from the input layer through hidden layers to the output layer in one direction.
 
 <img src="image4.jpg" style="width:3.01563in" />

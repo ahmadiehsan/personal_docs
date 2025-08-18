@@ -2,7 +2,8 @@
 
 ## Description
 
-Allows large language models to perform tasks without providing examples in the prompt. For instance, you might instruct the model to classify text as "neutral," "negative," or "positive" without prior examples.
+Allows large language models to perform tasks without providing examples in the prompt.
+For instance, you might instruct the model to classify text as "neutral," "negative," or "positive" without prior examples.
 
 ![](zero_shot/image1.png)
 

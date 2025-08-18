@@ -2,7 +2,8 @@
 
 ## Description
 
-Step-back prompting is a technique designed to improve LLM performance by encouraging a broader, more general reasoning step before addressing a specific task. It works by asking a general question first, capturing the LLM's broader knowledge, and then using that response as context for the specific prompt.
+Step-back prompting is a technique designed to improve LLM performance by encouraging a broader, more general reasoning step before addressing a specific task.
+It works by asking a general question first, capturing the LLM's broader knowledge, and then using that response as context for the specific prompt.
 
 This activates background reasoning processes that often remain unused in direct prompting.
 

@@ -2,7 +2,8 @@
 
 ## Description
 
-Missing data is a common problem that occurs in many machine-learning projects. Dealing with missing data is important because ML models cannot handle missing data and will either produce errors or provide inaccurate results.
+Missing data is a common problem that occurs in many machine-learning projects.
+Dealing with missing data is important because ML models cannot handle missing data and will either produce errors or provide inaccurate results.
 
 !!! warning
 
@@ -12,7 +13,8 @@ Missing data is a common problem that occurs in many machine-learning projects. 
 
 ![](missing_values/types.png)
 
-Understanding why data is missing is crucial before choosing a handling strategy. Missing values typically fall into three categories:
+Understanding why data is missing is crucial before choosing a handling strategy.
+Missing values typically fall into three categories:
 
 - **Missing Completely At Random (MCAR)**: Missingness is unrelated to any data. Safe to drop if few.
 

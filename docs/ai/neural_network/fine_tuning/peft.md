@@ -2,7 +2,9 @@
 
 ## Description
 
-Updating all parameters of a model has a large potential of increasing its performance but comes with several disadvantages. It is costly to train, has slow training times, and requires significant storage. To resolve these issues, attention has been given to parameter-efficient fine-tuning (PEFT) alternatives that focus on fine-tuning pretrained models at higher computational efficiency.
+Updating all parameters of a model has a large potential of increasing its performance but comes with several disadvantages.
+It is costly to train, has slow training times, and requires significant storage.
+To resolve these issues, attention has been given to parameter-efficient fine-tuning (PEFT) alternatives that focus on fine-tuning pretrained models at higher computational efficiency.
 
 !!! info
 

@@ -2,7 +2,8 @@
 
 ## Description
 
-When you use the Data Annotations Model Binder, you use validator attributes to perform validation. The System.ComponentModel.DataAnnotations namespace includes the following validator attributes:
+When you use the Data Annotations Model Binder, you use validator attributes to perform validation.
+The System.ComponentModel.DataAnnotations namespace includes the following validator attributes:
 
 - Range – Enables you to validate whether the value of a property falls between a specified range of values.
 - RegularExpression – Enables you to validate whether the value of a property matches a specified regular expression pattern.

@@ -7,7 +7,8 @@
 
 ## Normalizer
 
-A normalizer in Elasticsearch ensures consistent indexing and searching for exact matching in fields. It preprocesses text, making it suitable for scenarios like case-insensitive sorting and aggregations.
+A normalizer in Elasticsearch ensures consistent indexing and searching for exact matching in fields.
+It preprocesses text, making it suitable for scenarios like case-insensitive sorting and aggregations.
 
 - It produces only **one output**
 - It **doesn't change** the main value in the document

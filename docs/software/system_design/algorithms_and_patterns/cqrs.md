@@ -2,7 +2,8 @@
 
 ## Description
 
-A pattern that involves separating the read and write models in a microservices architecture. The read model is optimized for querying data, while the write model is optimized for updating data.
+A pattern that involves separating the read and write models in a microservices architecture.
+The read model is optimized for querying data, while the write model is optimized for updating data.
 
 Separates the read and write operations for data, allowing independent optimization and scaling.
 

@@ -2,7 +2,8 @@
 
 ## Description
 
-The tanh function also takes a real-valued input and squashes it to range between -1 and 1. Unlike the sigmoid function, its output is zero-centered because its range is symmetric around the origin.
+The tanh function also takes a real-valued input and squashes it to range between -1 and 1.
+Unlike the sigmoid function, its output is zero-centered because its range is symmetric around the origin.
 
 However, it has one major drawbacks:
 

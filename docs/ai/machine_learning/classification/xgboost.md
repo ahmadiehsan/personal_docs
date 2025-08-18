@@ -2,7 +2,8 @@
 
 ## Description
 
-XGBoost (eXtreme Gradient Boosting) is a popular supervised-learning algorithm used for regression and classification on large datasets. It uses sequentially-built shallow decision trees to provide accurate results and a highly scalable training method that avoids overfitting.
+XGBoost (eXtreme Gradient Boosting) is a popular supervised-learning algorithm used for regression and classification on large datasets.
+It uses sequentially-built shallow decision trees to provide accurate results and a highly scalable training method that avoids overfitting.
 
 <img src="image1.png" style="width:2.72282in" />
 

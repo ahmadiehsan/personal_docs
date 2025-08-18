@@ -2,7 +2,10 @@
 
 ## Description
 
-A set is an unordered collection of distinct objects, called elements or members of the set. A set is said to contain its elements. We write $a \in A$ to denote that a is an element of the set $A$. The notation $a \notin A$ denotes that a is not an element of the set $A$.
+A set is an unordered collection of distinct objects, called elements or members of the set.
+A set is said to contain its elements.
+We write $a \in A$ to denote that a is an element of the set $A$.
+The notation $a \notin A$ denotes that a is not an element of the set $A$.
 
 Popular sets:
 
@@ -16,35 +19,45 @@ Popular sets:
 
 ## Subsets
 
-The set $A$ is a subset of $B$, and $B$ is a superset of $A$, if and only if every element of $A$ is also an element of $B$. We use the notation $A \subseteq B$ to indicate that $A$ is a subset of the set $B$. If, instead, we want to stress that $B$ is a superset of $A$, we use the equivalent notation $B \supseteq A$.(So, $A \subseteq B$ and $B \supseteq A$ are equivalent statements.)
+The set $A$ is a subset of $B$, and $B$ is a superset of $A$, if and only if every element of $A$ is also an element of $B$.
+We use the notation $A \subseteq B$ to indicate that $A$ is a subset of the set $B$.
+If, instead, we want to stress that $B$ is a superset of $A$, we use the equivalent notation $B \supseteq A$.(So, $A \subseteq B$ and $B \supseteq A$ are equivalent statements.)
 
 ## Operations
 
 ### Cartesian Products
 
-Let $A$ and $B$ be sets. The Cartesian product of $A$ and $B$, denoted by $A \times B$, is the set of all ordered pairs $(a, b)$, where $a \in A$ and $b \in B$. Hence,
+Let $A$ and $B$ be sets.
+The Cartesian product of $A$ and $B$, denoted by $A \times B$, is the set of all ordered pairs $(a, b)$, where $a \in A$ and $b \in B$.
+Hence,
 
 $A \times B = \{ (a, b) \mid a \in A \land b \in B \}$
 
 ### Union
 
-Let $A$ and $B$ be sets. The union of the sets $A$ and $B$, denoted by $A \cup B$, is the set that contains those elements that are either in $A$ or in $B$, or in both.
+Let $A$ and $B$ be sets.
+The union of the sets $A$ and $B$, denoted by $A \cup B$, is the set that contains those elements that are either in $A$ or in $B$, or in both.
 
 <img src="image2.jpg" style="width:2.92413in" />
 
 ### Intersection
 
-Let $A$ and $B$ be sets. The intersection of the sets $A$ and $B$, denoted by $A \cap B$, is the set containing those elements in both $A$ and $B$.
+Let $A$ and $B$ be sets.
+The intersection of the sets $A$ and $B$, denoted by $A \cap B$, is the set containing those elements in both $A$ and $B$.
 
 <img src="image1.jpg" style="width:2.73184in" />
 
 ### Diﬀerence
 
-Let $A$ and $B$ be sets. The diﬀerence of $A$ and $B$, denoted by $A - B$, is the set containing those elements that are in $A$ but not in $B$. The diﬀerence of $A$ and $B$ is also called the complement of B with respect to $A$.
+Let $A$ and $B$ be sets.
+The diﬀerence of $A$ and $B$, denoted by $A - B$, is the set containing those elements that are in $A$ but not in $B$.
+The diﬀerence of $A$ and $B$ is also called the complement of B with respect to $A$.
 
 ### Complement
 
-Let $U$ be the universal set. The complement of the set $A$, denoted by $-A$, is the complement of $A$ with respect to $U$. Therefore, the complement of the set $-A$ is $U - A$
+Let $U$ be the universal set.
+The complement of the set $A$, denoted by $-A$, is the complement of $A$ with respect to $U$.
+Therefore, the complement of the set $-A$ is $U - A$
 
 ### Identities
 

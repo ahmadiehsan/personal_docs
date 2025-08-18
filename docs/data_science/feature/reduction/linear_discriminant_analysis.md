@@ -4,7 +4,8 @@
 
 It is often used in classification tasks to reduce the number of features by transforming them into a lower-dimensional space while retaining as much class-discriminatory information as possible.
 
-In LDA, the goal is to find a linear combination of the original features that maximizes the separation between classes. **The input to LDA is a dataset of labeled examples**, where each example is a feature vector with a corresponding class label. The output of LDA is a set of linear combinations of the original features, which can be used as new features in a machine learning model.
+In LDA, the goal is to find a linear combination of the original features that maximizes the separation between classes. **The input to LDA is a dataset of labeled examples**, where each example is a feature vector with a corresponding class label.
+The output of LDA is a set of linear combinations of the original features, which can be used as new features in a machine learning model.
 
 - Projects data in a way that the class separability is maximised.
 - Examples from the same class are put closely together by the projection.
@@ -12,11 +13,17 @@ In LDA, the goal is to find a linear combination of the original features that m
 
 <img src="image8.jpg" style="width:3.05039in" />
 
-LDA is particularly useful when the number of features is large and the number of examples is small. It can be used in a variety of applications, including image recognition, speech recognition, and NLP. However, it assumes that the classes are normally distributed and that the class covariance matrices are equal, which may not always be the case in practice.
+LDA is particularly useful when the number of features is large and the number of examples is small.
+It can be used in a variety of applications, including image recognition, speech recognition, and NLP.
+However, it assumes that the classes are normally distributed and that the class covariance matrices are equal, which may not always be the case in practice.
 
 ## LDA Steps
 
-To perform LDA, the first step is to compute the mean and covariance matrix of each class. The overall mean and covariance matrix are then calculated from the class means and covariance matrices. The goal is to project the data onto a lower-dimensional space while still retaining the class information. This is achieved by finding the eigenvectors and eigenvalues of the covariance matrix, sorting them in descending order of the eigenvalues, and selecting the top k eigenvectors that correspond to the k largest eigenvalues. The selected eigenvectors form the basis for the new feature space.
+To perform LDA, the first step is to compute the mean and covariance matrix of each class.
+The overall mean and covariance matrix are then calculated from the class means and covariance matrices.
+The goal is to project the data onto a lower-dimensional space while still retaining the class information.
+This is achieved by finding the eigenvectors and eigenvalues of the covariance matrix, sorting them in descending order of the eigenvalues, and selecting the top k eigenvectors that correspond to the k largest eigenvalues.
+The selected eigenvectors form the basis for the new feature space.
 
 The LDA algorithm can be summarized in the following steps:
 

@@ -16,7 +16,8 @@ The Command Pattern allows you to decouple the requester of an action from the o
 
 ## MacroCommands
 
-MacroCommands are a simple extension of the Command Pattern that allows multiple commands to be invoked. Likewise, MacroCommands can easily support undo().
+MacroCommands are a simple extension of the Command Pattern that allows multiple commands to be invoked.
+Likewise, MacroCommands can easily support undo().
 
 ## Transactional systems
 

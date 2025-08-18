@@ -2,14 +2,18 @@
 
 ## Description
 
-In a leaderless configuration, failover does not exist. For example in the following picture, the client (user 1234) **sends the write to all replicas in parallel**, and the two available replicas accept the write but the unavailable replica misses it. Let's say that it's sufficient for two out of three replicas to acknowledge the writing:
+In a leaderless configuration, failover does not exist.
+For example in the following picture, the client (user 1234) **sends the write to all replicas in parallel**, and the two available replicas accept the write but the unavailable replica misses it.
+Let's say that it's sufficient for two out of three replicas to acknowledge the writing:
 
 - After user 1234 has received two ok responses, we consider the write to be successful.
 - The client simply ignores the fact that one of the replicas missed the write.
 
 ![](approach_leaderless_replication/image2.jpg)
 
-Now imagine that the unavailable node comes back online, and clients start reading from it. Any writes that happened while the node was down are missing from that node. Thus, if you read from that node, you may get stale (outdated) values as responses.
+Now imagine that the unavailable node comes back online, and clients start reading from it.
+Any writes that happened while the node was down are missing from that node.
+Thus, if you read from that node, you may get stale (outdated) values as responses.
 
 To solve that problem, when a client reads from the database, it doesn't just send its request to one replica: **read requests are also sent to several nodes in parallel**. The client may get different responses from different nodes; i.e., the up-to-date value from one node and a stale value from another. Version numbers are used to determine which value is newer.
 
@@ -33,7 +37,8 @@ For example when $n=5$, $w=3$, and $r=3$:
 
 ## Eventual Consistency
 
-The replication scheme should ensure that eventually all the data is copied to every replica. After an unavailable node comes back online, how does it catch up on the writes that it missed?
+The replication scheme should ensure that eventually all the data is copied to every replica.
+After an unavailable node comes back online, how does it catch up on the writes that it missed?
 
 Two mechanisms are often used in Dynamo-style datastores:
 

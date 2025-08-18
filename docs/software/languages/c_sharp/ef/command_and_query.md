@@ -31,7 +31,8 @@ In this example, the customer data is projected to an anonymous type which conta
 
 ### Entity States
 
-Tracked entities can be in one of four states. The state of an entity determines how it is processed when SaveChanges is called.
+Tracked entities can be in one of four states.
+The state of an entity determines how it is processed when SaveChanges is called.
 
 - **Added**: The entity does not yet exist in the database. SaveChanges should **insert** it
 - **Unchanged**: The entity exists in the database and has not been modified on the client. SaveChanges should **ignore** it
@@ -78,19 +79,23 @@ var blogs = _db.Books.AsNoTracking().ToList();
 
 ### Add
 
-Add puts all entities in the graph into the Added state. This means they will be inserted into the database on SaveChanges.
+Add puts all entities in the graph into the Added state.
+This means they will be inserted into the database on SaveChanges.
 
 ### Attach
 
-Attach puts all entities in the graph into the Unchanged state. However, entities will be put in the Added state if they have store-generated keys (e.g. Identity column) and no key value has been set.
+Attach puts all entities in the graph into the Unchanged state.
+However, entities will be put in the Added state if they have store-generated keys (e.g. Identity column) and no key value has been set.
 
-This means that when exclusively using store-generated keys, Attach can be used to start tracking a mix of new and existing entities where the existing entities have not changed. The new entities will be inserted while the existing entities will not be saved other than to update any necessary FK values.
+This means that when exclusively using store-generated keys, Attach can be used to start tracking a mix of new and existing entities where the existing entities have not changed.
+The new entities will be inserted while the existing entities will not be saved other than to update any necessary FK values.
 
 ### Update
 
 Update works the same as Attach except that entities are put in the Modified state instead of the Unchanged state.
 
-This means that when exclusively using store-generated keys, Update can be used to start tracking a mix of new and existing entities where the existing entities may have some modifications. The new entities will be inserted while the existing entities will be updated.
+This means that when exclusively using store-generated keys, Update can be used to start tracking a mix of new and existing entities where the existing entities may have some modifications.
+The new entities will be inserted while the existing entities will be updated.
 
 ### Remove
 
@@ -100,11 +105,13 @@ If the entity is in the Unchanged or Modified state, indicating that it exists i
 
 If the entity is in the Added state, indicating that it has not yet been inserted, then it is detached from the context and is no longer tracked.
 
-Remove is usually used with entities that are already being tracked. If the entity is not tracked, then it is first Attached and then placed in the Deleted state.
+Remove is usually used with entities that are already being tracked.
+If the entity is not tracked, then it is first Attached and then placed in the Deleted state.
 
 ### Range Methods
 
-The AddRange, AttachRange, UpdateRange, and RemoveRange methods work exactly the same as calling the non-Range methods multiple times. They are slightly more efficient than multiple calls to the non-Range methods, but the efficiency gain is very small because none of these methods now automatically call DetectChanges.
+The AddRange, AttachRange, UpdateRange, and RemoveRange methods work exactly the same as calling the non-Range methods multiple times.
+They are slightly more efficient than multiple calls to the non-Range methods, but the efficiency gain is very small because none of these methods now automatically call DetectChanges.
 
 ## Query
 

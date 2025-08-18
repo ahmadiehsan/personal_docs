@@ -22,7 +22,8 @@ Example: A website storing your banking information plainly (e.g., 1234 5678 901
 
 ### Injection 💉
 
-When an attacker can send their own code into your application and execute it. Such as SQL injection or shell injection attacks.
+When an attacker can send their own code into your application and execute it.
+Such as SQL injection or shell injection attacks.
 
 ### Insecure Design 🏗️
 
@@ -62,4 +63,6 @@ Example: An attacker breaks into a website and no one notices because the system
 
 When an attacker forces the server to send a request on their behalf.
 
-Example: A user is asked to enter an image URL, e.g., `https://example.com/image.jpg`. An attacker could enter an internal address instead: `http://localhost/admin`. Since the request comes from the server, it may access sensitive information like the admin panel.
+Example: A user is asked to enter an image URL, e.g., `https://example.com/image.jpg`.
+An attacker could enter an internal address instead: `http://localhost/admin`.
+Since the request comes from the server, it may access sensitive information like the admin panel.

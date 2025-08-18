@@ -6,15 +6,18 @@ The "Tree of Thoughts" (ToT) framework enhances complex problem-solving by maint
 
 ![](tree_of_thoughts/image2.png)
 
-It combines thought generation with search algorithms like breadth-first and depth-first search for systematic exploration. This approach helps identify potential solutions by categorizing thoughts as "sure," "maybe," or "impossible," promoting effective partial solutions while eliminating unfeasible ones.
+It combines thought generation with search algorithms like breadth-first and depth-first search for systematic exploration.
+This approach helps identify potential solutions by categorizing thoughts as "sure," "maybe," or "impossible," promoting effective partial solutions while eliminating unfeasible ones.
 
 ![](tree_of_thoughts/image1.png)
 
 ## Zero-Shot Tree-of-Thoughts
 
-A disadvantage of ToT method is that it requires many calls to the generative models, which slows the application significantly. Fortunately, there has been a successful attempt to convert the tree-of-thought framework into a simple prompting technique.
+A disadvantage of ToT method is that it requires many calls to the generative models, which slows the application significantly.
+Fortunately, there has been a successful attempt to convert the tree-of-thought framework into a simple prompting technique.
 
-Instead of calling the generative model multiple times, we ask the model to mimic that behavior by emulating a conversation between multiple experts. These experts will question each other until they reach a consensus.
+Instead of calling the generative model multiple times, we ask the model to mimic that behavior by emulating a conversation between multiple experts.
+These experts will question each other until they reach a consensus.
 
 ## Example
 

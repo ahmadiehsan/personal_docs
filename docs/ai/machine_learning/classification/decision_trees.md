@@ -2,7 +2,8 @@
 
 ## Description
 
-Introduction Decision Trees are a type of Supervised Machine Learning (that is you explain what the input is and what the corresponding output is in the training data) where the data is continuously split according to a specific parameter. The tree can be explained by two entities, namely decision nodes, and leaves.
+Introduction Decision Trees are a type of Supervised Machine Learning (that is you explain what the input is and what the corresponding output is in the training data) where the data is continuously split according to a specific parameter.
+The tree can be explained by two entities, namely decision nodes, and leaves.
 
 <img src="image1.jpg" style="width:3.49193in" />
 

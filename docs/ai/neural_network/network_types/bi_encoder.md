@@ -14,7 +14,11 @@ The following picture shows how dense retrieval takes a search query, consults i
 
 ## Architecture
 
-Uses a Siamese architecture. In this architecture, we have two identical BERT models that share the same weights and neural architecture. These models are fed the sentences from which embeddings are generated through the pooling of token embeddings. Then, models are optimized through the similarity of the sentence embeddings. Since the weights are identical for both BERT models, we can use a single model and feed it the sentences one after the other.
+Uses a Siamese architecture.
+In this architecture, we have two identical BERT models that share the same weights and neural architecture.
+These models are fed the sentences from which embeddings are generated through the pooling of token embeddings.
+Then, models are optimized through the similarity of the sentence embeddings.
+Since the weights are identical for both BERT models, we can use a single model and feed it the sentences one after the other.
 
 <img src="architecture.png" style="width:3.5in" />
 

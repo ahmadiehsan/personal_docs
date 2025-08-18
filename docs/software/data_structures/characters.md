@@ -8,13 +8,15 @@ However, this is still insufficient for languages with larger character sets lik
 
 ## Unicode
 
-Unicode was developed to address the limitations of various character encodings by creating a universal character set that includes over 149,000 characters across many languages. This system aims to standardize encoding to prevent incompatibility issues across different systems.
+Unicode was developed to address the limitations of various character encodings by creating a universal character set that includes over 149,000 characters across many languages.
+This system aims to standardize encoding to prevent incompatibility issues across different systems.
 
 Since it does not specify how these character code points should be stored in a computer system, the UTF encodings were invented.
 
 ## UTF
 
-UTF-8 is the most widely used encoding format for Unicode, utilizing a variable length of 1 to 4 bytes depending on the complexity of the character. It is efficient for encoding English text (1 byte per character) but can handle complex scripts as well.
+UTF-8 is the most widely used encoding format for Unicode, utilizing a variable length of 1 to 4 bytes depending on the complexity of the character.
+It is efficient for encoding English text (1 byte per character) but can handle complex scripts as well.
 
 UTF-8 encoding is backward compatible with ASCII. This implies that UTF-8 can be used to parse ancient ASCII text.
 

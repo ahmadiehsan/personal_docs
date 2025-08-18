@@ -80,7 +80,8 @@ $$
 \mathbf{A} = \begin{bmatrix} a & b \\ c & d \end{bmatrix}
 $$
 
-In this matrix, the first *column* tells us where $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$ lands, and the second *column* tells us where $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$ lands. Now we can describe where any vector $\mathbf{v} = \begin{bmatrix} x \\ y \end{bmatrix}$ lands very compactly as the matrix-vector product
+In this matrix, the first *column* tells us where $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$ lands, and the second *column* tells us where $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$ lands.
+Now we can describe where any vector $\mathbf{v} = \begin{bmatrix} x \\ y \end{bmatrix}$ lands very compactly as the matrix-vector product
 
 $$
 \mathbf{Av} = \begin{bmatrix} ax + by \\ cx + dy \end{bmatrix}.

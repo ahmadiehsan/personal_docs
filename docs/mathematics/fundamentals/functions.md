@@ -2,13 +2,18 @@
 
 ## Description
 
-Let $A$ and $B$ be nonempty sets. A function $f$ from $A$ to $B$ is an assignment of exactly one element of $B$ to each element of $A$. We write $f(a) = b$ if $b$ is the unique element of $B$ assigned by the function $f$ to the element $a$ of $A$. If $f$ is a function from $A$ to $B$, we write $f: A \rightarrow B$
+Let $A$ and $B$ be nonempty sets.
+A function $f$ from $A$ to $B$ is an assignment of exactly one element of $B$ to each element of $A$.
+We write $f(a) = b$ if $b$ is the unique element of $B$ assigned by the function $f$ to the element $a$ of $A$.
+If $f$ is a function from $A$ to $B$, we write $f: A \rightarrow B$
 
 ## Result of Set Under a Function
 
 ### Image
 
-Let $f$ be a function from $A$ to $B$ and let $S$ be a subset of $A$. The image of $S$ under the function $f$ is the subset of $B$ that consists of the images of the elements of $S$. We denote the image of $S$ by $f(S)$, so
+Let $f$ be a function from $A$ to $B$ and let $S$ be a subset of $A$.
+The image of $S$ under the function $f$ is the subset of $B$ that consists of the images of the elements of $S$.
+We denote the image of $S$ by $f(S)$, so
 
 $f(S) = \{ t \mid \exists s \in S, \ t = f(s) \}$
 
@@ -50,7 +55,8 @@ A function $f$ is called surjective if it is onto.
 
 ### Identity Function
 
-Is a function that always returns the value that was used as its argument, unchanged. That is, when f is the identity function, the equality $f(X) = X$ is true for all values of $X$ to which $f$ can be applied.
+Is a function that always returns the value that was used as its argument, unchanged.
+That is, when f is the identity function, the equality $f(X) = X$ is true for all values of $X$ to which $f$ can be applied.
 
 We will show this function by $I$ (capital $i$).
 
@@ -60,7 +66,8 @@ A function is invertible if and only if is a onto and one-to-one function.
 
 ## Composition
 
-Let $g$ be a function from the set $A$ to the set $B$ and let $f$ be a function from the set $B$ to the set $C$. The composition of the functions $f$ and $g$, denoted for all $a \in A$ by $f \circ g$, is the function from $A$ to $C$ deﬁned by
+Let $g$ be a function from the set $A$ to the set $B$ and let $f$ be a function from the set $B$ to the set $C$.
+The composition of the functions $f$ and $g$, denoted for all $a \in A$ by $f \circ g$, is the function from $A$ to $C$ deﬁned by
 
 $(f \circ g)(a) = f(g(a))$
 

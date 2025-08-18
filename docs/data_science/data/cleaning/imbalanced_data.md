@@ -23,7 +23,9 @@ In general, we can have three categories of methods to handle imbalanced dataset
 
 ## SMOTE {Oversampling}
 
-SMOTE is a widely used algorithm for handling imbalanced datasets in machine learning. It is a synthetic data generation technique that creates new, synthetic samples in the minority class by interpolating between existing samples. SMOTE works by identifying the k-nearest neighbors of a minority class sample and then generating new samples along the line segments that connect these neighbors.
+SMOTE is a widely used algorithm for handling imbalanced datasets in machine learning.
+It is a synthetic data generation technique that creates new, synthetic samples in the minority class by interpolating between existing samples.
+SMOTE works by identifying the k-nearest neighbors of a minority class sample and then generating new samples along the line segments that connect these neighbors.
 
 Here are the steps of the SMOTE algorithm:
 
@@ -48,7 +50,9 @@ Here are the advantages and disadvantages of SMOTE:
 
 ## NearMiss {Undersampling}
 
-The NearMiss algorithm is a technique for balancing class distribution by undersampling (removing) the records from the major class. When two classes have records that are very close to each other, eliminating some of the records from the majority class increases the distance between the two classes, which helps the classification process. To avoid information loss problems in the majority of undersampling methods, near-miss methods are widely used.
+The NearMiss algorithm is a technique for balancing class distribution by undersampling (removing) the records from the major class.
+When two classes have records that are very close to each other, eliminating some of the records from the majority class increases the distance between the two classes, which helps the classification process.
+To avoid information loss problems in the majority of undersampling methods, near-miss methods are widely used.
 
 The working of nearest-neighbor methods is based on the following steps:
 

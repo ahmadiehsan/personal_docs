@@ -2,7 +2,8 @@
 
 ## Overview
 
-**RLHF** is a fine-tuning technique for large language models (LLMs) that leverages human feedback to align model outputs with human preferences. It is widely used to improve safety, helpfulness, and alignment of generative models.
+**RLHF** is a fine-tuning technique for large language models (LLMs) that leverages human feedback to align model outputs with human preferences.
+It is widely used to improve safety, helpfulness, and alignment of generative models.
 
 **Pros:**
 

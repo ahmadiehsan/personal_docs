@@ -2,7 +2,9 @@
 
 ## Description
 
-Databases come in two fundamental structures: row-based and column-based. This crucial decision determines how your data is stored – in rows or columns. The performance and scaling implications are significant.
+Databases come in two fundamental structures: row-based and column-based.
+This crucial decision determines how your data is stored – in rows or columns.
+The performance and scaling implications are significant.
 
 ![](row_based_vs_column_based/image1.jpg)
 
@@ -21,4 +23,6 @@ Databases come in two fundamental structures: row-based and column-based. This c
 
 ## Using Both
 
-Many modern data-intensive applications leverage both row-oriented and column-oriented databases. Transactional applications for handling critical business operations often rely on row-based systems like MySQL and Postgres for stability and ACID compliance. Analytical workloads aimed at business intelligence tend to tap column-based data warehouses like ClickHouse for performance at scale.
+Many modern data-intensive applications leverage both row-oriented and column-oriented databases.
+Transactional applications for handling critical business operations often rely on row-based systems like MySQL and Postgres for stability and ACID compliance.
+Analytical workloads aimed at business intelligence tend to tap column-based data warehouses like ClickHouse for performance at scale.

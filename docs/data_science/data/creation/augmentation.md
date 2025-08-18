@@ -2,7 +2,8 @@
 
 ## Description
 
-Is a method that we can use to artificially expand the training data size by applying transformations, such as rotation, scaling, and flipping, to the existing dataset, which helps us to extend our training data. This strategy aids in mitigating overfitting by offering the model a more diverse set of examples to learn from.
+Is a method that we can use to artificially expand the training data size by applying transformations, such as rotation, scaling, and flipping, to the existing dataset, which helps us to extend our training data.
+This strategy aids in mitigating overfitting by offering the model a more diverse set of examples to learn from.
 
 <img src="image3.png" style="width:4.64746in" />
 

@@ -2,7 +2,8 @@
 
 ## Description
 
-Transformers rely on a mechanism called self-attention, which allows the model to weigh the importance of different parts of the input data dynamically. This enables efficient parallelization and handling of long-range dependencies more effectively than previous models, such as RNNs and LSTMs.
+Transformers rely on a mechanism called self-attention, which allows the model to weigh the importance of different parts of the input data dynamically.
+This enables efficient parallelization and handling of long-range dependencies more effectively than previous models, such as RNNs and LSTMs.
 
 ![](transformers/image1.jpg)
 
@@ -58,13 +59,17 @@ Next Token Probabilities     = SoftMax(Fully Connected Layer Output)
 
 ### Self-Attention Mechanism
 
-Self-Attention: The core mechanism that allows transformers to weigh the importance of different words in a sentence relative to each other. Each word attends to all other words in the sentence to gather context.
+Self-Attention: The core mechanism that allows transformers to weigh the importance of different words in a sentence relative to each other.
+Each word attends to all other words in the sentence to gather context.
 
-Scaled Dot-Product Attention: This involves three matrices - Query (Q), Key (K), and Value (V). The attention scores are calculated as the dot product of the query and key vectors, scaled, and passed through a softmax function to get weights. These weights are then used to combine the value vectors.
+Scaled Dot-Product Attention: This involves three matrices - Query (Q), Key (K), and Value (V).
+The attention scores are calculated as the dot product of the query and key vectors, scaled, and passed through a softmax function to get weights.
+These weights are then used to combine the value vectors.
 
 ### Multi-Head Attention
 
-Instead of performing a single attention function, the model runs multiple attention mechanisms (heads) in parallel. Each head focuses on different parts of the sentence, capturing various aspects of the relationships between words.
+Instead of performing a single attention function, the model runs multiple attention mechanisms (heads) in parallel.
+Each head focuses on different parts of the sentence, capturing various aspects of the relationships between words.
 
 ### Feed-Forward Neural Network
 
@@ -72,7 +77,8 @@ After the attention mechanism, the output is passed through a position-wise full
 
 ### Positional Encoding
 
-Since transformers do not have a sequential nature like RNNs, they need some way to capture the order of words. Positional encodings are added to the input embeddings to give the model information about the position of each word in the sequence.
+Since transformers do not have a sequential nature like RNNs, they need some way to capture the order of words.
+Positional encodings are added to the input embeddings to give the model information about the position of each word in the sequence.
 
 ### Layer Normalization and Residual Connections
 
@@ -82,7 +88,9 @@ Each sub-layer (attention and feed-forward) is followed by a layer normalization
 
 ### Generative Models (Decoder-Only)
 
-Decoder-only models are a class of transformer architectures designed primarily for generating sequential data. They are often referred to as **autoregressive models**, as they predict the next token in a sequence based on previous tokens. This makes them well-suited for tasks like text generation, language modeling, and code autocompletion.
+Decoder-only models are a class of transformer architectures designed primarily for generating sequential data.
+They are often referred to as **autoregressive models**, as they predict the next token in a sequence based on previous tokens.
+This makes them well-suited for tasks like text generation, language modeling, and code autocompletion.
 
 - One of the most popular examples of decoder-only models is **GPT (Generative Pre-trained Transformer)**, which has revolutionized the field of Natural Language Processing (NLP).
 - The **decoder-only architecture** is based on the transformer block but contains a few key differences compared to encoder-decoder or encoder-only models:
@@ -101,7 +109,8 @@ Applications:
 
 ### Representation Models (Encoder-Only)
 
-Encoder-only models are transformer architectures tailored for learning rich representations of input sequences. These models focus on understanding and encoding the input into highly contextualized embeddings, making them ideal for tasks that require comprehension but not generation.
+Encoder-only models are transformer architectures tailored for learning rich representations of input sequences.
+These models focus on understanding and encoding the input into highly contextualized embeddings, making them ideal for tasks that require comprehension but not generation.
 
 - One of the most well-known examples of encoder-only models is **BERT (Bidirectional Encoder Representations from Transformers)**, which introduced the concept of bidirectional contextual understanding to NLP.
 - The **encoder-only architecture** processes the entire input sequence at once using bidirectional self-attention. This allows the model to capture dependencies between tokens in both directions (left-to-right and right-to-left).
@@ -118,7 +127,8 @@ Applications:
 
 ### Sequence-to-Sequence Models: (Encoder-Decoder)
 
-Encoder-Decoder models, also known as **sequence-to-sequence (seq2seq) architectures**, are a type of transformer designed for mapping one sequence to another. The architecture consists of two separate components: an **encoder** to process and understand the input sequence, and a **decoder** to generate the output sequence.
+Encoder-Decoder models, also known as **sequence-to-sequence (seq2seq) architectures**, are a type of transformer designed for mapping one sequence to another.
+The architecture consists of two separate components: an **encoder** to process and understand the input sequence, and a **decoder** to generate the output sequence.
 
 - Examples of encoder-decoder-based transformers include **T5 (Text-to-Text Transfer Transformer)**, **BART (Bidirectional and Auto-Regressive Transformers)**, and **mT5 (multilingual T5)**.
 - The encoder-decoder architecture can be visualized as two connected transformers:
@@ -147,4 +157,6 @@ Applications:
 
 ## Vs LLMs
 
-Transformers are a type of neural network architecture that forms the basis for many modern NLP models. Large Language Models (LLMs) are a subset of models that use transformer architectures at a very large scale, resulting in powerful models capable of handling a wide range of tasks with high performance. Essentially, LLMs are built using transformer architectures, but they are distinguished by their size and the vast amount of data they are trained on.
+Transformers are a type of neural network architecture that forms the basis for many modern NLP models.
+Large Language Models (LLMs) are a subset of models that use transformer architectures at a very large scale, resulting in powerful models capable of handling a wide range of tasks with high performance.
+Essentially, LLMs are built using transformer architectures, but they are distinguished by their size and the vast amount of data they are trained on.

@@ -2,7 +2,8 @@
 
 ## Description
 
-A bar chart is a graphical representation used to display data with rectangular bars. Each bar's height (or length, if horizontal) represents the value of the data being measured. The bars can be displayed vertically or horizontally and are typically used to compare different categories or groups.
+A bar chart is a graphical representation used to display data with rectangular bars.
+Each bar's height (or length, if horizontal) represents the value of the data being measured. The bars can be displayed vertically or horizontally and are typically used to compare different categories or groups.
 
 Key features:
 

@@ -38,7 +38,8 @@ The truth table for the Conditional Statement $p \rightarrow q$:
 | F   | T   | T                 |
 | F   | F   | T                 |
 
-Let $p$ and $q$ be propositions. The conditional statement $p \rightarrow q$ is the proposition "if $p$, then $q$." The conditional statement $p \rightarrow q$ is false when $p$ is true and $q$ is false, and true otherwise. In the conditional statement $p \rightarrow q$, $p$ is called the hypothesis (or antecedent or premise) and $q$ is called the conclusion (or consequence).
+Let $p$ and $q$ be propositions.
+The conditional statement $p \rightarrow q$ is the proposition "if $p$, then $q$." The conditional statement $p \rightarrow q$ is false when $p$ is true and $q$ is false, and true otherwise. In the conditional statement $p \rightarrow q$, $p$ is called the hypothesis (or antecedent or premise) and $q$ is called the conclusion (or consequence).
 
 ### Biconditional
 
@@ -51,7 +52,8 @@ The truth table for the Biconditional $p \leftrightarrow q$:
 | F   | T   | F                      |
 | F   | F   | T                      |
 
-Let $p$ and $q$ be propositions. The biconditional statement $p \leftrightarrow q$ is the proposition "$p$ if and only if $q$." The biconditional statement $p \leftrightarrow q$ is true when $p$ and $q$ have the same truth values and is false otherwise. Biconditional statements are also called bi-implications.
+Let $p$ and $q$ be propositions.
+The biconditional statement $p \leftrightarrow q$ is the proposition "$p$ if and only if $q$." The biconditional statement $p \leftrightarrow q$ is true when $p$ and $q$ have the same truth values and is false otherwise. Biconditional statements are also called bi-implications.
 
 ### Precedence of Operators
 
@@ -151,15 +153,20 @@ Statements involving variables, such as "$x > 3$, $x = y + 3$, $x + y = z$" and 
 
 ### Quantifiers
 
-Quantiﬁcation expresses the extent to which a predicate is true over a range of elements. In English, the words all, some, many, none, and few are used in quantiﬁcations. We will focus on two types of quantiﬁcationAssessment here: universal quantiﬁcation, which tells us that a predicate is true for every element under consideration, and existential quantiﬁcation, which tells us that there is one or more element under consideration for which the predicate is true
+Quantiﬁcation expresses the extent to which a predicate is true over a range of elements.
+In English, the words all, some, many, none, and few are used in quantiﬁcations.
+We will focus on two types of quantiﬁcationAssessment here: universal quantiﬁcation, which tells us that a predicate is true for every element under consideration, and existential quantiﬁcation, which tells us that there is one or more element under consideration for which the predicate is true
 
 - **Universal quantiﬁer**: The universal quantiﬁcation of $P(x)$ is the statement "$P(x)$ for all values of $x$ in the domain."
 
-  The notation $\forall x P(x)$ denotes the universal quantiﬁcation of $P(x)$. Here $\forall$ is called the universal quantiﬁer. We read $\forall x P(x)$ as "for all $x P(x)$" or "for every $x P(x)$." An element for which $P(x)$ is false is called a counterexample to $\forall x P(x)$.
+The notation $\forall x P(x)$ denotes the universal quantiﬁcation of $P(x)$.
+Here $\forall$ is called the universal quantiﬁer.
+We read $\forall x P(x)$ as "for all $x P(x)$" or "for every $x P(x)$." An element for which $P(x)$ is false is called a counterexample to $\forall x P(x)$.
 
 - **Existential quantiﬁer**: The existential quantiﬁcation of $P(x)$ is the proposition "There exists an element x in the domain such that P(x)."
 
-  We use the notation $\exists x P(x)$ for the existential quantiﬁcation of $P(x)$. Here $\exists$ is called the existential quantiﬁer.
+We use the notation $\exists x P(x)$ for the existential quantiﬁcation of $P(x)$.
+Here $\exists$ is called the existential quantiﬁer.
 
 - **De Morgan's Laws for Quantiﬁers**:
 
@@ -172,9 +179,12 @@ Quantiﬁcation expresses the extent to which a predicate is true over a range o
 
 ### Arguments
 
-An argument in propositional logic is a sequence of propositions. All but the ﬁnal proposition in the argument are called premises and the ﬁnal proposition is called the conclusion. An argument is valid if the truth of all its premises implies that the conclusion is true.
+An argument in propositional logic is a sequence of propositions.
+All but the ﬁnal proposition in the argument are called premises and the ﬁnal proposition is called the conclusion.
+An argument is valid if the truth of all its premises implies that the conclusion is true.
 
-An argument form in propositional logic is a sequence of compound propositions involving propositional variables. An argument form is valid if no matter which particular propositions are substituted for the propositional variables in its premises, the conclusion is true if the premises are all true.
+An argument form in propositional logic is a sequence of compound propositions involving propositional variables.
+An argument form is valid if no matter which particular propositions are substituted for the propositional variables in its premises, the conclusion is true if the premises are all true.
 
 !!! info
 
