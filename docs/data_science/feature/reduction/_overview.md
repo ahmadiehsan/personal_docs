@@ -8,7 +8,8 @@ The curse of dimensionality refers to problems that arise when working with high
 
 As the number of features increases, more samples are required to adequately represent the data.
 
-Dimensionality reduction transforms high-dimensional data into a lower-dimensional format while preserving important properties. This reduces model complexity, improves computational efficiency, and helps prevent overfitting due to irrelevant features.
+Dimensionality reduction transforms high-dimensional data into a lower-dimensional format while preserving important properties.
+This reduces model complexity, improves computational efficiency, and helps prevent overfitting due to irrelevant features.
 
 Dimensionality reduction techniques:
 

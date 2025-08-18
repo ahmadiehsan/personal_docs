@@ -142,7 +142,11 @@ public EmailSender(IConfiguration _config) {
 
 ### Model Binding
 
-Controllers and Razor pages work with data that comes from HTTP requests. For example, route data may provide a record key, and posted form fields may provide values for the properties of the model. Writing code to retrieve each of these values and convert them from strings to .NET types would be tedious and error-prone. Model binding automates this process. The model binding system:
+Controllers and Razor pages work with data that comes from HTTP requests.
+For example, route data may provide a record key, and posted form fields may provide values for the properties of the model.
+Writing code to retrieve each of these values and convert them from strings to .NET types would be tedious and error-prone.
+Model binding automates this process.
+The model binding system:
 
 - Retrieves data from various sources such as route data, form fields, and query strings.
 - Provides the data to controllers and Razor pages in method parameters and public properties.

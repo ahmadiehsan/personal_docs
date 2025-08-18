@@ -4,7 +4,8 @@
 
 ![](decorator/image3.jpg)
 
-Attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+Attaches additional responsibilities to an object dynamically.
+Decorators provide a flexible alternative to subclassing for extending functionality.
 
 While that describes the role of the Decorator Pattern, it doesn't give us a lot of insight into how we'd apply the pattern to our implementation.
 

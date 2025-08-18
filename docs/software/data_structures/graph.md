@@ -35,7 +35,8 @@ Each edge consists of:
 
 The triple-store model is mostly equivalent to the property graph model, using different words to describe the same ideas.
 
-In a triple-store, all information is stored in the form of very simple three-part statements: (subject, predicate, object). For example, in the triple (Jim, likes, bananas), Jim is the subject, likes is the predicate (verb), and bananas is the object.
+In a triple-store, all information is stored in the form of very simple three-part statements: (subject, predicate, object).
+For example, in the triple (Jim, likes, bananas), Jim is the subject, likes is the predicate (verb), and bananas is the object.
 
 The subject of a triple is equivalent to a vertex in a graph. The object is one of two things:
 

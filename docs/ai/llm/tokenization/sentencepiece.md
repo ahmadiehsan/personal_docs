@@ -2,7 +2,9 @@
 
 ## Description
 
-SentencePiece is an unsupervised text tokenization tool that treats the input text as a raw stream of characters without requiring pre-tokenization. Developed by Google, it is particularly well-suited for languages with no explicit word boundaries, such as Chinese, Japanese, and Thai. SentencePiece is commonly used in Transformer-based models like T5 and XLM-R.
+SentencePiece is an unsupervised text tokenization tool that treats the input text as a raw stream of characters without requiring pre-tokenization.
+Developed by Google, it is particularly well-suited for languages with no explicit word boundaries, such as Chinese, Japanese, and Thai.
+SentencePiece is commonly used in Transformer-based models like T5 and XLM-R.
 
 - Does not assume spaces signify word boundaries, allowing it to work across multiple languages seamlessly.
 - Can train tokenization models using character-based approaches like BPE or unigram language models.

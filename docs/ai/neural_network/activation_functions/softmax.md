@@ -4,7 +4,8 @@
 
 The softmax function is often used in the output layer of a classifier where we're trying to assign the input to one of several classes. It gives the probability that any given input belongs to each of the possible classes
 
-The denominator normalizes the probabilities, so they all sum up to 1 across all classes. The softmax function is also used in multinomial logistical regression.
+The denominator normalizes the probabilities, so they all sum up to 1 across all classes.
+The softmax function is also used in multinomial logistical regression.
 
 Is a mathematical function that converts a vector of numbers into a vector of probabilities, where the probabilities of each value are proportional to the relative scale of each value in the vector.
 

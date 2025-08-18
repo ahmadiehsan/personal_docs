@@ -2,7 +2,8 @@
 
 ## Description
 
-The Factory design pattern is a creational pattern used to create objects without specifying the exact class of the object that will be created. It provides a way to encapsulate object creation, making the code more flexible and easier to maintain.
+The Factory design pattern is a creational pattern used to create objects without specifying the exact class of the object that will be created.
+It provides a way to encapsulate object creation, making the code more flexible and easier to maintain.
 
 There are three types of the Factory pattern:
 
@@ -28,7 +29,8 @@ There are three types of the Factory pattern:
 
 ![](factory/image7.jpg)
 
-Defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+Defines an interface for creating an object, but lets subclasses decide which class to instantiate.
+Factory Method lets a class defer instantiation to subclasses.
 
 ![](factory/image1.jpg)
 

@@ -78,7 +78,7 @@ sudo mysql_secure_installation
 - Export data from database:
 
   ```shell
-  mysqldump [-h <host>] -u <username: root> -p [--no-data] [--set-gtid-purged=OFF] <db_name> > <file_path/file_name.sql>
+mysqldump [-h <host>] -u <username: root> -p [--no-data] [--set-gtid-purged=OFF] <db_name> > <file_path/file_name.sql>
   ```
 
 ## Shell
@@ -186,7 +186,7 @@ sudo mysql_secure_installation
 - Get size of databases:
 
   ```sql
-  SELECT table_schema "<db_name>", ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" FROM information_schema.tables GROUP BY table_schema
+SELECT table_schema "<db_name>", ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" FROM information_schema.tables GROUP BY table_schema
   ```
 
 ## Tables

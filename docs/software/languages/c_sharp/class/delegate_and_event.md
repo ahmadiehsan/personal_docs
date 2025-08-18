@@ -153,7 +153,8 @@ bool result = myDelegate.Invoke(s);
 
 ## Events
 
-**Event** is a multi-cast delegate that stores one or more methods; and invokes them every time when the event is raised (called). The event can be raised only in the same class in which it is created.
+**Event** is a multi-cast delegate that stores one or more methods; and invokes them every time when the event is raised (called).
+The event can be raised only in the same class in which it is created.
 
 - Events enable a class to send notifications to other classes when something occurs.
 - Publisher class sends events; Subscriber class receives events.

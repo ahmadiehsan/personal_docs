@@ -8,13 +8,21 @@ The basic idea of PCA is to transform a set of correlated variables into a set o
 
 It's good for **unsupervised continuous data**.
 
-When faced with the issue of high-dimensional, unlabeled data (e.g., hundreds to thousands of columns), you can employ unsupervised **dimensionality reduction** techniques. One of the most common unsupervised learning methods of dimensionality reduction is principal component analysis (PCA). PCA represents a data set with a large number of columns and a smaller data set with fewer columns, called principal components. These can then analyze trends, clusters, and outliers and help frame a supervised learning problem.
+When faced with the issue of high-dimensional, unlabeled data (e.g., hundreds to thousands of columns), you can employ unsupervised **dimensionality reduction** techniques.
+One of the most common unsupervised learning methods of dimensionality reduction is principal component analysis (PCA).
+PCA represents a data set with a large number of columns and a smaller data set with fewer columns, called principal components.
+These can then analyze trends, clusters, and outliers and help frame a supervised learning problem.
 
-PCA can be used for feature selection by selecting the top k principal components that explain the most variance in the data. This can be useful for reducing the dimensionality of high-dimensional datasets and improving the performance of machine learning models. However, it's important to note that PCA may not always lead to improved performance, especially if the data is already low-dimensional or if the features are not highly correlated. It's also important to consider the interpretability of the selected principal components as they may not always correspond to meaningful features in the data.
+PCA can be used for feature selection by selecting the top k principal components that explain the most variance in the data.
+This can be useful for reducing the dimensionality of high-dimensional datasets and improving the performance of machine learning models.
+However, it's important to note that PCA may not always lead to improved performance, especially if the data is already low-dimensional or if the features are not highly correlated. It's also important to consider the interpretability of the selected principal components as they may not always correspond to meaningful features in the data.
 
 ## Workflow
 
-Principal components are new variables that are constructed as linear combinations or mixtures of the initial variables. These combinations are done in such a way that the new variables (i.e., principal components) are uncorrelated and most of the information within the initial variables is squeezed or compressed into the first components. So, the idea is that 10-dimensional data gives you 10 principal components. Still, PCA tries to put the maximum possible information in the first component, then the maximum remaining information in the second, and so on.
+Principal components are new variables that are constructed as linear combinations or mixtures of the initial variables.
+These combinations are done in such a way that the new variables (i.e., principal components) are uncorrelated and most of the information within the initial variables is squeezed or compressed into the first components.
+So, the idea is that 10-dimensional data gives you 10 principal components.
+Still, PCA tries to put the maximum possible information in the first component, then the maximum remaining information in the second, and so on.
 
 An important thing to realize here is that the principal components are less interpretable and don't have any real meaning since they are constructed as linear combinations of the initial variables.
 
@@ -28,7 +36,8 @@ The second principal component is calculated in the same way, with the condition
 
 This continues until a total of principal components have been calculated, equal to the original number of variables.
 
-It is eigenvectors and eigenvalues that are behind all the magic explained above, because the eigenvectors of the Covariance matrix are actually the directions of the axes where there is the most variance(most information) and that we call Principal Components. And eigenvalues are simply the coefficients attached to eigenvectors, which give the amount of variance carried in each Principal Component.
+It is eigenvectors and eigenvalues that are behind all the magic explained above, because the eigenvectors of the Covariance matrix are actually the directions of the axes where there is the most variance(most information) and that we call Principal Components.
+And eigenvalues are simply the coefficients attached to eigenvectors, which give the amount of variance carried in each Principal Component.
 
 ## PCA Steps
 

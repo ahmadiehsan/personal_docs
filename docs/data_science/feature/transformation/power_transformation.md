@@ -7,7 +7,8 @@
 
 ## Description
 
-This technique is similar to log transformation but allows for a broader range of transformations. The most common power transformation is the Box-Cox transformation, which raises the feature values to a power that is determined using maximum likelihood estimation.
+This technique is similar to log transformation but allows for a broader range of transformations.
+The most common power transformation is the Box-Cox transformation, which raises the feature values to a power that is determined using maximum likelihood estimation.
 
 ## Formula
 
@@ -19,7 +20,8 @@ Here, $x$ is the original feature value, and $\lambda$ is the power parameter th
 
 ## Box-Cox
 
-The Box-Cox transform is another popular function belonging to the power transform family of functions. **This function has a prerequisite that the numeric values to be transformed must be positive (similar to what log transform expects)**. In case they are negative, shifting using a constant value helps.
+The Box-Cox transform is another popular function belonging to the power transform family of functions. **This function has a prerequisite that the numeric values to be transformed must be positive (similar to what log transform expects)**.
+In case they are negative, shifting using a constant value helps.
 
 $$
 y_i^{(\lambda)} =
@@ -29,7 +31,8 @@ y_i^{(\lambda)} =
 \end{cases}
 $$
 
-The resulting transformed output y is a function of input x and the transformation parameter $\lambda$ such that when $\lambda$ = 0, the resultant transform is the natural log transform which we discussed earlier. The optimal value of $\lambda$ is usually determined using a maximum likelihood or log-likelihood estimation.
+The resulting transformed output y is a function of input x and the transformation parameter $\lambda$ such that when $\lambda$ = 0, the resultant transform is the natural log transform which we discussed earlier.
+The optimal value of $\lambda$ is usually determined using a maximum likelihood or log-likelihood estimation.
 
 <img src="image2.png" style="width:5in" />
 
@@ -62,6 +65,7 @@ fcc_survey_df['Income_boxcox_lambda_opt'] = spstats.boxcox(
 )
 ```
 
-The transformed features are depicted in the above data frame. Just like we expected, Income_log and Income_boxcox_lamba_0 have the same values.
+The transformed features are depicted in the above data frame.
+Just like we expected, Income_log and Income_boxcox_lamba_0 have the same values.
 
 The distribution looks more normal-like similar to what we obtained after the log transform.

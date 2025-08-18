@@ -2,9 +2,11 @@
 
 ## Description
 
-Ridge regression modifies ordinary least squares by adding a penalty term proportional to the square of the coefficients, controlled by $\lambda$ (or α). This reduces overfitting by shrinking coefficients toward zero, acting as implicit feature selection.
+Ridge regression modifies ordinary least squares by adding a penalty term proportional to the square of the coefficients, controlled by $\lambda$ (or α).
+This reduces overfitting by shrinking coefficients toward zero, acting as implicit feature selection.
 
-Tuning α via cross-validation balances complexity and accuracy. Ridge handles multicollinearity well, stabilizing coefficient estimates where OLS struggles.
+Tuning α via cross-validation balances complexity and accuracy.
+Ridge handles multicollinearity well, stabilizing coefficient estimates where OLS struggles.
 
 ## Formula
 
@@ -33,7 +35,8 @@ $$
 
 ## Example
 
-Ridge helps prevent overfitting in house price prediction. Given a dataset (e.g., bedrooms, lot size, year built, prices), Ridge applies L2 regularization, ensuring stable coefficients while fitting a linear model for price forecasting.
+Ridge helps prevent overfitting in house price prediction.
+Given a dataset (e.g., bedrooms, lot size, year built, prices), Ridge applies L2 regularization, ensuring stable coefficients while fitting a linear model for price forecasting.
 
 ```python
 from sklearn.linear_model import Ridge

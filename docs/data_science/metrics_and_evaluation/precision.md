@@ -2,7 +2,8 @@
 
 ## Description
 
-Precision gauges the ratio of correctly identified positive instances to the total instances predicted as positive by the model. It is also referred to as **positive predictive value (PPV)**.
+Precision gauges the ratio of correctly identified positive instances to the total instances predicted as positive by the model.
+It is also referred to as **positive predictive value (PPV)**.
 
 Precision proves valuable in scenarios where the expense associated with false positives is significant.
 

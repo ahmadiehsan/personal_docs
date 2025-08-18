@@ -2,7 +2,8 @@
 
 ## Description
 
-**LASSO (Least Absolute Shrinkage and Selection Operator)** is a **linear regression technique** used for **feature selection**. It adds a **penalty term** to shrink less important coefficients to zero, effectively removing them.
+**LASSO (Least Absolute Shrinkage and Selection Operator)** is a **linear regression technique** used for **feature selection**.
+It adds a **penalty term** to shrink less important coefficients to zero, effectively removing them.
 
 LASSO is **especially useful for high-dimensional data**, where features outnumber samples, helping identify key predictors.
 
@@ -22,7 +23,8 @@ $$
 
 ## Example
 
-LASSO aids feature selection for house price prediction. Given a dataset (e.g., bedrooms, lot size, year built, prices), LASSO identifies key features while fitting a linear model, enabling price forecasting for new houses.
+LASSO aids feature selection for house price prediction.
+Given a dataset (e.g., bedrooms, lot size, year built, prices), LASSO identifies key features while fitting a linear model, enabling price forecasting for new houses.
 
 ```python
 from sklearn.linear_model import LogisticRegression

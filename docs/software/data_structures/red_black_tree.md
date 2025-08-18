@@ -2,7 +2,8 @@
 
 ## Description
 
-Red-black trees are a type of balanced binary search tree that ensures the tree remains approximately balanced during insertions and deletions. They maintain balance through a set of properties that dictate the color (red or black) of each node, ensuring that no path from the root to a leaf is more than twice as long as any other such path.
+Red-black trees are a type of balanced binary search tree that ensures the tree remains approximately balanced during insertions and deletions.
+They maintain balance through a set of properties that dictate the color (red or black) of each node, ensuring that no path from the root to a leaf is more than twice as long as any other such path.
 
 Properties of Red-Black Trees:
 

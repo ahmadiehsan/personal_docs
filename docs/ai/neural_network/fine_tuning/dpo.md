@@ -2,7 +2,8 @@
 
 ## Description
 
-Direct Preference Optimization (DPO) is a fine-tuning method for aligning large language models (LLMs) with human preferences, without the need for reinforcement learning or reward modeling. DPO directly optimizes the model to prefer outputs that are rated higher by humans, using pairs of preferred and less-preferred responses.
+Direct Preference Optimization (DPO) is a fine-tuning method for aligning large language models (LLMs) with human preferences, without the need for reinforcement learning or reward modeling.
+DPO directly optimizes the model to prefer outputs that are rated higher by humans, using pairs of preferred and less-preferred responses.
 
 !!! info
 

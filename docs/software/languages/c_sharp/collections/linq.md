@@ -69,7 +69,8 @@ var result = Customers.OrderBy(temp => temp.Location)
 
 ### First
 
-`First()` method returns the first element in the collection that matches the condition. It throws an exception if no element matches the condition.
+`First()` method returns the first element in the collection that matches the condition.
+It throws an exception if no element matches the condition.
 
 ```csharp
 First(Func<TSource, bool> predicate)
@@ -82,7 +83,8 @@ var result = Customers.First(temp => temp.Location == "Dallas");
 
 ### FirstOrDefault
 
-`FirstOrDefault()` method returns the first element that matches with the condition. It returns `null` if no element matches with the condition.
+`FirstOrDefault()` method returns the first element that matches with the condition.
+It returns `null` if no element matches with the condition.
 
 ```csharp
 FirstOrDefault(Func<TSource, bool> predicate)
@@ -95,7 +97,8 @@ var result = Customers.FirstOrDefault(temp => temp.Location == "London");
 
 ### Last
 
-`Last()` method returns the last element in the collection that matches the given condition. Throws an exception if no element matches the condition.
+`Last()` method returns the last element in the collection that matches the given condition.
+Throws an exception if no element matches the condition.
 
 ```csharp
 Last(Func<TSource, bool> predicate)
@@ -108,7 +111,8 @@ var result = Customers.Last(temp => temp.Location == "Dallas");
 
 ### LastOrDefault
 
-`LastOrDefault()` method returns the last element that matches the condition. It returns `null` if no element matches the condition.
+`LastOrDefault()` method returns the last element that matches the condition.
+It returns `null` if no element matches the condition.
 
 ```csharp
 LastOrDefault(Func<TSource, bool> predicate)
@@ -122,7 +126,8 @@ var result = Customers.LastOrDefault(temp => temp.Location == "London");
 
 ### ElementAt
 
-`ElementAt()` method returns an element in the collection at the specified index. It throws an exception if no element exists at the specified index; to get `null` instead, use `ElementAtOrDefault()`.
+`ElementAt()` method returns an element in the collection at the specified index.
+It throws an exception if no element exists at the specified index; to get `null` instead, use `ElementAtOrDefault()`.
 
 ```csharp
 ElementAt(int index)
@@ -134,7 +139,8 @@ var result = Customers.ElementAt(1);  // Returns the customer at index 1
 
 ### Single
 
-It returns the first element (only one element) that matches with the collection. It throws an exception if no element or multiple elements match with the condition.
+It returns the first element (only one element) that matches with the collection.
+It throws an exception if no element or multiple elements match with the condition.
 
 ```csharp
 Single(Func<TSource, bool> predicate)
@@ -149,7 +155,8 @@ var result = Customers.Single(temp => temp.Location == "Dallas");
 
 ### SingleOrDefault
 
-It returns the first element (only one element) that matches with the collection. It returns null if no element matches with the condition; but it throws an exception if multiple elements match with the condition.
+It returns the first element (only one element) that matches with the collection.
+It returns null if no element matches with the condition; but it throws an exception if multiple elements match with the condition.
 
 ```csharp
 SingleOrDefault(Func<TSource, bool> predicate)

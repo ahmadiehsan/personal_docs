@@ -2,9 +2,12 @@
 
 ## Description
 
-Mutual information acts as a metric to gauge the interdependence of two random variables. In the context of feature selection, it quantifies the information a feature provides about the target variable. The core methodology entails calculating the mutual information between each feature and the target variable, ultimately selecting features with the highest mutual information scores.
+Mutual information acts as a metric to gauge the interdependence of two random variables.
+In the context of feature selection, it quantifies the information a feature provides about the target variable.
+The core methodology entails calculating the mutual information between each feature and the target variable, ultimately selecting features with the highest mutual information scores.
 
-In the context of feature selection, mutual information calculation involves treating the feature as X and the target variable as Y. By computing the mutual information score for each feature, we can then select features with the highest scores.
+In the context of feature selection, mutual information calculation involves treating the feature as X and the target variable as Y.
+By computing the mutual information score for each feature, we can then select features with the highest scores.
 
 In practical applications, mutual information **is often employed alongside other feature selection methods**, such as chi-squared or correlation-based methods, to enhance the overall performance of the feature selection process.
 

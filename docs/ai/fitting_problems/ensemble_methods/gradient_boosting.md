@@ -2,7 +2,8 @@
 
 ## Description
 
-Gradient boosting is an ensemble model for **classification** and **regression**. It starts with a **weak classifier** (e.g., a simple tree) and improves it iteratively by **focusing on errors** from previous steps.
+Gradient boosting is an ensemble model for **classification** and **regression**.
+It starts with a **weak classifier** (e.g., a simple tree) and improves it iteratively by **focusing on errors** from previous steps.
 
 Advantages:
 

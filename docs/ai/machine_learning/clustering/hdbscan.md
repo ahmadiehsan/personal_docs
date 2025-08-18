@@ -2,7 +2,10 @@
 
 ## Description
 
-A common density-based model is Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCAN). HDBSCAN is a hierarchical variation of a clustering algorithm called DBSCAN that allows for dense (micro)-clusters to be found without having to explicitly specify the number of clusters. As a density-based method, HDBSCAN can also detect outliers in the data, which are data points that do not belong to any cluster. These outliers will not be assigned or forced to belong to any cluster.
+A common density-based model is Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCAN).
+HDBSCAN is a hierarchical variation of a clustering algorithm called DBSCAN that allows for dense (micro)-clusters to be found without having to explicitly specify the number of clusters.
+As a density-based method, HDBSCAN can also detect outliers in the data, which are data points that do not belong to any cluster.
+These outliers will not be assigned or forced to belong to any cluster.
 
 ## Example
 

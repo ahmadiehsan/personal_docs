@@ -2,7 +2,9 @@
 
 ## Description
 
-These techniques employ statistical methods to rank features according to their correlation with the target variable. Common methods encompass chi-squared, mutual information, and correlation coefficients. Features are subsequently chosen based on a predefined threshold.
+These techniques employ statistical methods to rank features according to their correlation with the target variable.
+Common methods encompass chi-squared, mutual information, and correlation coefficients.
+Features are subsequently chosen based on a predefined threshold.
 
 Filter methods describe a type of data that consists of observations on only a single characteristic or attribute.
 

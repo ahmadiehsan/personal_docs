@@ -2,7 +2,9 @@
 
 ## Description
 
-The Spearman Correlation Coefficient, denoted as Rs ($\rho$), is a non-parametric measure of statistical dependence between two variables. It assesses how well the relationship between the variables can be described by a monotonic function. Unlike Pearson's correlation, which measures linear relationships, Spearman's correlation evaluates the rank-order relationship.
+The Spearman Correlation Coefficient, denoted as Rs ($\rho$), is a non-parametric measure of statistical dependence between two variables.
+It assesses how well the relationship between the variables can be described by a monotonic function.
+Unlike Pearson's correlation, which measures linear relationships, Spearman's correlation evaluates the rank-order relationship.
 
 Spearman's correlation coefficient ranges from -1 to 1:
 

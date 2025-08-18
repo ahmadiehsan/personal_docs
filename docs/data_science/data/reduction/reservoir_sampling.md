@@ -14,4 +14,5 @@ The algorithm contains 3 steps:
 2. When the nth sample is generated, randomly select a number m within the range of 1 to n. If the selected number m is within the range of 1 to k, replace the mth sample in the reservoir with the nth generated sample, otherwise do nothing.
 3. Repeat 2 until the stop of the algorithm.
 
-**We can easily prove that for each newly generated sample, the probability of being selected to the reservoir is k/n. We can also prove that for each sample that is already in the reservoir, the probability of not being replaced is also k/n.** Thus when the algorithm stops, all the samples in the reservoir are selected with correct probability.
+**We can easily prove that for each newly generated sample, the probability of being selected to the reservoir is k/n.
+We can also prove that for each sample that is already in the reservoir, the probability of not being replaced is also k/n.** Thus when the algorithm stops, all the samples in the reservoir are selected with correct probability.

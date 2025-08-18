@@ -10,7 +10,10 @@ A structured prompt consists of a **Modifier** + **Topic** + **Multiple Modifier
 
 ## Example
 
-Write a **blog post** about **healthy eating**. Address it to **working professionals** and use keywords that are relevant for SEO. Write the text in a **simple, understandable style** so that it is easy to read and comprehend. The length should be **800 words**, and the text should be well-structured.
+Write a **blog post** about **healthy eating**.
+Address it to **working professionals** and use keywords that are relevant for SEO.
+Write the text in a **simple, understandable style** so that it is easy to read and comprehend.
+The length should be **800 words**, and the text should be well-structured.
 
 Analysis of the Example:
 

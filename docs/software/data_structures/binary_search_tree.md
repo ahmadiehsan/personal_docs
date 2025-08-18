@@ -32,7 +32,8 @@ It works like this:
 
 ### Removing a Node
 
-First, find the target node in the binary tree, then remove it. Similar to inserting a node, we need to ensure that after the removal operation is completed, the property of the binary search tree "left subtree < root node < right subtree" is still satisfied.
+First, find the target node in the binary tree, then remove it.
+Similar to inserting a node, we need to ensure that after the removal operation is completed, the property of the binary search tree "left subtree < root node < right subtree" is still satisfied.
 
 <img src="image5.jpg" style="width:5.09843in" />
 

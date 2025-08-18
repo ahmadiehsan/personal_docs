@@ -4,7 +4,8 @@
 
 Efficient Fine-Tuning with a Few Training Examples.
 
-It is built on top of the architecture of sentence-transformers to generate high-quality textual representations that are updated during training. Only a few labeled examples are needed for this framework to be competitive with fine-tuning a BERT-like model on a large labeled dataset.
+It is built on top of the architecture of sentence-transformers to generate high-quality textual representations that are updated during training.
+Only a few labeled examples are needed for this framework to be competitive with fine-tuning a BERT-like model on a large labeled dataset.
 
 !!! info
 

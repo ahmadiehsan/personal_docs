@@ -162,7 +162,8 @@ Ahead-of-time (AOT) compilation refers to an umbrella of technologies which gene
 
 Native AOT is similar to .NET's existing AOT technologies, but it produces only native artifacts. In fact, the Native AOT runtime does not know how to read the .NET assembly file formats – everything is platform-native. The executable file format parsing is fully handled by the underlying operating system.
 
-Native compiled apps startup is faster since they execute already compiled code in a single file! AOT enables some scenarios like:
+Native compiled apps startup is faster since they execute already compiled code in a single file!
+AOT enables some scenarios like:
 
 - Copying a single file executable from one machine and run on another (of the same kind) without installing a .NET runtime.
 - Creating and running a docker image that contains a single file executable (e.g. just one file in addition to Ubuntu).
@@ -171,7 +172,9 @@ Native compiled apps startup is faster since they execute already compiled code 
 
 ### Native AOT vs ReadyToRun
 
-**ReadyToRun** assemblies have **native code with native data structures + IL code**. Such an approach - when you have both native, and IL code allows to execute Tiered Compilation and perform optimizations in runtime. **Native AOT** in opposite produces **only native artifacts**. It does not have IL code and can't be recompiled in any way with Tiered Compilation.
+**ReadyToRun** assemblies have **native code with native data structures + IL code**.
+Such an approach - when you have both native, and IL code allows to execute Tiered Compilation and perform optimizations in runtime. **Native AOT** in opposite produces **only native artifacts**.
+It does not have IL code and can't be recompiled in any way with Tiered Compilation.
 
 ### Native AOT vs JIT
 

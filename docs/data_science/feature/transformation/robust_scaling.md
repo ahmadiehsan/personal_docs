@@ -2,7 +2,8 @@
 
 ## Description
 
-This technique is similar to standardization but uses the median and interquartile range (IQR) instead of the mean and standard deviation. Robust scaling is useful when the data contains outliers that would significantly affect the mean and standard deviation.
+This technique is similar to standardization but uses the median and interquartile range (IQR) instead of the mean and standard deviation.
+Robust scaling is useful when the data contains outliers that would significantly affect the mean and standard deviation.
 
 ## Formula
 

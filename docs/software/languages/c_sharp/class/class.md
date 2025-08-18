@@ -12,7 +12,8 @@
 
 ### Sealed
 
-**Sealed class** is a class which is instantiable, but not inheritable. You can use a sealed class when you don't want to let other developers create child classes for the specific class.
+**Sealed class** is a class which is instantiable, but not inheritable.
+You can use a sealed class when you don't want to let other developers create child classes for the specific class.
 
 ```csharp
 sealed class Class1 {
@@ -340,7 +341,8 @@ public interface IComparable<in T>
 
 ## Anonymous Type (Anonymous Object)
 
-When you create an object with a set of properties along with values; automatically, the C# compiler creates a class (with a random name) with specified properties. It is called as 'anonymous type' or 'anonymous classes'.
+When you create an object with a set of properties along with values; automatically, the C# compiler creates a class (with a random name) with specified properties.
+It is called as 'anonymous type' or 'anonymous classes'.
 
 ```csharp
 class RandomClassName {

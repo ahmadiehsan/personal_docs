@@ -2,7 +2,9 @@
 
 ## Description
 
-The support vector machine is a model used for both classification and regression problems though it is mostly used to solve classification problems. The algorithm creates a hyperplane or line (decision boundary) which separates data into classes. It uses the kernel trick to find the best line separator (decision boundary that has the same distance from the boundary point of both classes).
+The support vector machine is a model used for both classification and regression problems though it is mostly used to solve classification problems.
+The algorithm creates a hyperplane or line (decision boundary) which separates data into classes.
+It uses the kernel trick to find the best line separator (decision boundary that has the same distance from the boundary point of both classes).
 
 SVM tries to finds the maximal margin (distance between the line and the support vectors) that separates the classes and this reduces the risk of error on the data
 
@@ -14,11 +16,14 @@ SVM tries to finds the maximal margin (distance between the line and the support
 
 ## Hyperplane
 
-A hyperplane is a decision boundary that differentiates the two classes in SVM. A data point falling on either side of the hyperplane can be attributed to different classes. The dimension of the hyperplane depends on the number of input features in the dataset.
+A hyperplane is a decision boundary that differentiates the two classes in SVM.
+A data point falling on either side of the hyperplane can be attributed to different classes.
+The dimension of the hyperplane depends on the number of input features in the dataset.
 
 <img src="image9.png" style="width:2.53833in" />
 
-In geometry, a hyperplane is a subspace whose dimension is one less than that of its ambient space. For example, if a space is 3-dimensional then its hyperplanes are the 2-dimensional planes, while if the space is 2-dimensional, its hyperplanes are the 1-dimensional lines.
+In geometry, a hyperplane is a subspace whose dimension is one less than that of its ambient space.
+For example, if a space is 3-dimensional then its hyperplanes are the 2-dimensional planes, while if the space is 2-dimensional, its hyperplanes are the 1-dimensional lines.
 
 ## Soft Margin
 

@@ -2,7 +2,8 @@
 
 ## Description
 
-Latent Dirichlet Allocation (LDA) is a generative statistical model used in NLP and machine learning to uncover the underlying topics in a collection of documents. It helps if we have **unlabeled data**, we can attempt to "discover" labels.
+Latent Dirichlet Allocation (LDA) is a generative statistical model used in NLP and machine learning to uncover the underlying topics in a collection of documents.
+It helps if we have **unlabeled data**, we can attempt to "discover" labels.
 
 ## Assumptions of LDA
 

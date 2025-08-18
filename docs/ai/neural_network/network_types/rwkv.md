@@ -2,7 +2,9 @@
 
 ## Description
 
-The **Receptance Weighted Key Value (RWKV)** architecture is a novel model designed to bridge the gap between Transformers and Recurrent Neural Networks (RNNs) by combining the strengths of both frameworks. While Transformers excel in performance across various natural language processing (NLP) tasks, they struggle with computational and memory inefficiencies due to their quadratic scaling with context size. On the other hand, RNNs are computationally efficient with linear scaling, but their performance is often limited due to challenges in parallelization and scalability.
+The **Receptance Weighted Key Value (RWKV)** architecture is a novel model designed to bridge the gap between Transformers and Recurrent Neural Networks (RNNs) by combining the strengths of both frameworks.
+While Transformers excel in performance across various natural language processing (NLP) tasks, they struggle with computational and memory inefficiencies due to their quadratic scaling with context size.
+On the other hand, RNNs are computationally efficient with linear scaling, but their performance is often limited due to challenges in parallelization and scalability.
 
 RWKV offers a solution by integrating elements of both approaches:
 

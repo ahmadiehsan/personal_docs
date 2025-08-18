@@ -2,7 +2,9 @@
 
 ## Description
 
-A binary tree is a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child. The topmost node is called the root. The structure is recursive, as each child of a node can be the root of its own subtree.
+A binary tree is a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child.
+The topmost node is called the root.
+The structure is recursive, as each child of a node can be the root of its own subtree.
 
 <img src="overview.jpg" style="width:5.5in" />
 
@@ -17,7 +19,9 @@ A binary tree is a hierarchical data structure in which each node has at most tw
 
 ## Traversal
 
-From a physical structure perspective, a tree is a data structure based on linked lists. Hence, its traversal method involves accessing nodes one by one through pointers. However, a tree is a non-linear data structure, which makes traversing a tree more complex than traversing a linked list, requiring the assistance of search algorithms.
+From a physical structure perspective, a tree is a data structure based on linked lists.
+Hence, its traversal method involves accessing nodes one by one through pointers.
+However, a tree is a non-linear data structure, which makes traversing a tree more complex than traversing a linked list, requiring the assistance of search algorithms.
 
 The common traversal methods for binary trees include:
 

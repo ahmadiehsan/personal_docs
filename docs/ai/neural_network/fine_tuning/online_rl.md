@@ -4,7 +4,9 @@
 
 ![](online_rl/overview.png)
 
-Online Reinforcement Learning is a method for continuously improving language models by gathering **real-time** feedback and updating the model in a loop. Unlike static datasets, Online RL allows a model to learn from **its own deployed outputs**, incorporating fresh human (or synthetic) feedback into the training process. This enables adaptive alignment with evolving user preferences and tasks.
+Online Reinforcement Learning is a method for continuously improving language models by gathering **real-time** feedback and updating the model in a loop.
+Unlike static datasets, Online RL allows a model to learn from **its own deployed outputs**, incorporating fresh human (or synthetic) feedback into the training process.
+This enables adaptive alignment with evolving user preferences and tasks.
 
 ## Workflow
 

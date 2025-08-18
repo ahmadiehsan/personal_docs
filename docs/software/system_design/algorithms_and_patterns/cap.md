@@ -2,7 +2,8 @@
 
 ## Description
 
-When designing distributed systems, engineers must often make trade-offs between three core properties: **Consistency**, **Availability**, and **Partition Tolerance**. This balance is formalized in the **CAP Theorem**, which helps guide architectural decisions in real-world scenarios.
+When designing distributed systems, engineers must often make trade-offs between three core properties: **Consistency**, **Availability**, and **Partition Tolerance**.
+This balance is formalized in the **CAP Theorem**, which helps guide architectural decisions in real-world scenarios.
 
 The CAP Theorem, introduced by Eric Brewer, states that a distributed system can satisfy only **two** out of the following **three guarantees**:
 
@@ -12,7 +13,8 @@ The CAP Theorem, introduced by Eric Brewer, states that a distributed system can
 
 ## Why Can't We Have All Three
 
-In a distributed environment, network partitions are a fact of life—hardware fails, packets drop, links go down. Once a partition occurs, you must choose between:
+In a distributed environment, network partitions are a fact of life—hardware fails, packets drop, links go down.
+Once a partition occurs, you must choose between:
 
 - **Consistency**: Reject requests that can't guarantee the latest state.
 - **Availability**: Serve stale or partial data to keep the system responsive.

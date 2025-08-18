@@ -2,7 +2,8 @@
 
 ## Leaf
 
-look for a particular value in a particular field, such as the **match**, **term**, or **range** queries. These queries can be used by themselves.
+look for a particular value in a particular field, such as the **match**, **term**, or **range** queries.
+These queries can be used by themselves.
 
 Popular ones:
 
@@ -15,7 +16,8 @@ Popular ones:
 
 ## Compound
 
-Compound query clauses wrap other leaf or compound queries. They are used to combine multiple queries logically (such as the **bool** or **dis_max** query) or to alter their behavior (such as the **constant_score** query).
+Compound query clauses wrap other leaf or compound queries.
+They are used to combine multiple queries logically (such as the **bool** or **dis_max** query) or to alter their behavior (such as the **constant_score** query).
 
 Popular ones:
 

@@ -9,9 +9,12 @@ A convolutional neural network (CNN) is a regularized type of feed-forward neura
 - <span dir="rtl">به شبکه عصبی ای که لایه هاش با تمام دیتای مرحله قبلی کاری نداشته باشن و فقط با یک بخشی ازش کار کنن گفته میشه</span>
 - <span dir="rtl">تو این الگو لایه ها اصطلاحا fully-connected نیستن، یعنی هر unite به تمامی unite های لایه بعدی متصل نیست</span>
 
-A CNN is particularly well-suited to tasks involving spatial data, such as images. Its architecture includes three main types of layers: convolutional layers, pooling layers, and fully connected layers. The convolutional layers apply a series of filters to the input, which allows the network to automatically and adaptively learn spatial hierarchies of features.
+A CNN is particularly well-suited to tasks involving spatial data, such as images.
+Its architecture includes three main types of layers: convolutional layers, pooling layers, and fully connected layers.
+The convolutional layers apply a series of filters to the input, which allows the network to automatically and adaptively learn spatial hierarchies of features.
 
-Pooling layers decrease the spatial size of the representation, thereby reducing parameters and computation in the network to control overfitting and decrease the computation cost in the following layers. Fully connected layers get the output of the pooling layer and conduct high-level reasoning on the output.
+Pooling layers decrease the spatial size of the representation, thereby reducing parameters and computation in the network to control overfitting and decrease the computation cost in the following layers.
+Fully connected layers get the output of the pooling layer and conduct high-level reasoning on the output.
 
 <img src="image3.png" style="width:5.30072in" />
 
