@@ -1,4 +1,4 @@
-# Prompt Iinjection
+# Prompt Injection
 
 ## Description
 
