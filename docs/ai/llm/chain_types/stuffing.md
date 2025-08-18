@@ -2,7 +2,8 @@
 
 ## Description
 
-The stuffing chain addresses scenarios where the context length of the language model (LLM) is insufficient to process extensive documents or large amounts of data. By dividing large documents into smaller segments and retrieving relevant ones using semantic search, this chain allows these segments to be “stuffed” into the LLM's context for response generation.
+The stuffing chain addresses scenarios where the context length of the language model (LLM) is insufficient to process extensive documents or large amounts of data.
+By dividing large documents into smaller segments and retrieving relevant ones using semantic search, this chain allows these segments to be “stuffed” into the LLM's context for response generation.
 
 Advantages:
 

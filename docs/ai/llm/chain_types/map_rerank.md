@@ -2,7 +2,8 @@
 
 ## Description
 
-The Map-Rerank chain is designed to address tasks that require identifying the best output from multiple documents by scoring or ranking the results. This method generates responses for each document in a collection (mapping phase) and then ranks them to select the most relevant or optimal output (rerank phase).
+The Map-Rerank chain is designed to address tasks that require identifying the best output from multiple documents by scoring or ranking the results.
+This method generates responses for each document in a collection (mapping phase) and then ranks them to select the most relevant or optimal output (rerank phase).
 
 Advantages:
 

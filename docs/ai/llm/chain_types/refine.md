@@ -2,7 +2,8 @@
 
 ## Description
 
-The refine chain improves the accuracy and quality of results through iterative refinement. Each iteration feeds the output of the previous step into the next, enhancing the overall result.
+The refine chain improves the accuracy and quality of results through iterative refinement.
+Each iteration feeds the output of the previous step into the next, enhancing the overall result.
 
 Advantages:
 

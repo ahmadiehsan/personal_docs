@@ -2,7 +2,8 @@
 
 ## Description
 
-The map-reduce chain iterates over a list of documents, generating individual outputs for each and then combining them into a final result. This approach is particularly useful for tasks requiring parallel document processing followed by aggregation.
+The map-reduce chain iterates over a list of documents, generating individual outputs for each and then combining them into a final result.
+This approach is particularly useful for tasks requiring parallel document processing followed by aggregation.
 
 Advantages:
 
