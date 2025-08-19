@@ -8,7 +8,8 @@ In the realm of feature selection, these coefficients prove useful in identifyin
 **Multicollinearity** occurs when two or more independent variables in a regression model are highly correlated, making it difficult to determine each variable’s true effect on the target.
 By examining the correlation matrix, we can identify pairs of variables with high correlation and consider removing or combining them to reduce multicollinearity and improve model reliability.
 
-The prevalent correlation coefficient employed for feature selection is the Pearson correlation coefficient, also referred to as Pearson's r. Pearson's r measures the linear relationship between two continuous variables, ranging from -1 (indicating a perfect negative correlation) to 1 (indicating a perfect positive correlation), with 0 denoting no correlation.
+The prevalent correlation coefficient employed for feature selection is the Pearson correlation coefficient, also referred to as Pearson's r.
+Pearson's r measures the linear relationship between two continuous variables, ranging from -1 (indicating a perfect negative correlation) to 1 (indicating a perfect positive correlation), with 0 denoting no correlation.
 
 ## Formula
 

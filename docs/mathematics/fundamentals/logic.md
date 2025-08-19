@@ -39,7 +39,8 @@ The truth table for the Conditional Statement $p \rightarrow q$:
 | F   | F   | T                 |
 
 Let $p$ and $q$ be propositions.
-The conditional statement $p \rightarrow q$ is the proposition "if $p$, then $q$." The conditional statement $p \rightarrow q$ is false when $p$ is true and $q$ is false, and true otherwise. In the conditional statement $p \rightarrow q$, $p$ is called the hypothesis (or antecedent or premise) and $q$ is called the conclusion (or consequence).
+The conditional statement $p \rightarrow q$ is the proposition "if $p$, then $q$." The conditional statement $p \rightarrow q$ is false when $p$ is true and $q$ is false, and true otherwise.
+In the conditional statement $p \rightarrow q$, $p$ is called the hypothesis (or antecedent or premise) and $q$ is called the conclusion (or consequence).
 
 ### Biconditional
 
@@ -53,7 +54,8 @@ The truth table for the Biconditional $p \leftrightarrow q$:
 | F   | F   | T                      |
 
 Let $p$ and $q$ be propositions.
-The biconditional statement $p \leftrightarrow q$ is the proposition "$p$ if and only if $q$." The biconditional statement $p \leftrightarrow q$ is true when $p$ and $q$ have the same truth values and is false otherwise. Biconditional statements are also called bi-implications.
+The biconditional statement $p \leftrightarrow q$ is the proposition "$p$ if and only if $q$." The biconditional statement $p \leftrightarrow q$ is true when $p$ and $q$ have the same truth values and is false otherwise.
+Biconditional statements are also called bi-implications.
 
 ### Precedence of Operators
 
@@ -149,7 +151,8 @@ Logical equivalences involving biconditional statements:
 
 ### Predicate Logic
 
-Statements involving variables, such as "$x > 3$, $x = y + 3$, $x + y = z$" and "Computer $X$ is under attack by an intruder" and "Computer $X$ is functioning properly" are often found in mathematical assertions, computer programs, and system speciﬁcations. These statements are neither true nor false when the values of the variables are not speciﬁed.
+Statements involving variables, such as "$x > 3$, $x = y + 3$, $x + y = z$" and "Computer $X$ is under attack by an intruder" and "Computer $X$ is functioning properly" are often found in mathematical assertions, computer programs, and system speciﬁcations.
+These statements are neither true nor false when the values of the variables are not speciﬁed.
 
 ### Quantifiers
 

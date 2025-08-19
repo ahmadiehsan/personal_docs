@@ -29,7 +29,8 @@ For this to work, we need to issue the SELECT and read the current version befor
 
 ## Application-Level Solution
 
-Relational database systems emerged in the late 70's early 80's when a client would, typically, connect to a mainframe via a terminal. That's why we still see database systems define terms such as SESSION setting.
+Relational database systems emerged in the late 70's early 80's when a client would, typically, connect to a mainframe via a terminal.
+That's why we still see database systems define terms such as SESSION setting.
 
 Nowadays, over the Internet, we no longer execute reads and writes in the context of the same database transaction, and ACID is no longer sufficient.
 

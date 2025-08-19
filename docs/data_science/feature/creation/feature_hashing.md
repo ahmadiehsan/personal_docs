@@ -18,7 +18,8 @@ Thus even if we have over 1000 distinct categories in a feature and we set b=10 
 
 ## Example
 
-We will now use a feature hashing scheme by leveraging scikit-learn's FeatureHasher class, which uses a signed 32-bit version of the Murmurhash3 hash function. We will pre-define the final feature vector size to be 6 in this case.
+We will now use a feature hashing scheme by leveraging scikit-learn's FeatureHasher class, which uses a signed 32-bit version of the Murmurhash3 hash function.
+We will pre-define the final feature vector size to be 6 in this case.
 
 ```python
 from sklearn.feature_extraction import FeatureHasher

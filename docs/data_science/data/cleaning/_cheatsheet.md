@@ -2,7 +2,8 @@
 
 ## Description
 
-Noise (in the data science space) is unwanted data items, features or records which don't help in explaining the feature itself, or the relationship between feature & target. Noise often causes the algorithms to miss out patterns in the data.
+Noise (in the data science space) is unwanted data items, features or records which don't help in explaining the feature itself, or the relationship between feature & target.
+Noise often causes the algorithms to miss out patterns in the data.
 
 Noise in tabular data can be of three types:
 

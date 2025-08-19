@@ -16,7 +16,8 @@ The LSM tree is designed to optimize write operations by minimizing disk I/O and
 
 ## Sorted String Tables (SSTables)
 
-SSTable, which stands for "Sorted String Table" is a data structure used in various database systems, particularly in distributed and NoSQL databases. SSTables are designed for efficient read-and-write operations in scenarios where data needs to be stored on disk and accessed quickly.
+SSTable, which stands for "Sorted String Table" is a data structure used in various database systems, particularly in distributed and NoSQL databases.
+SSTables are designed for efficient read-and-write operations in scenarios where data needs to be stored on disk and accessed quickly.
 
 - Each log-structured storage segment is a **sequence of key-value pairs**. The sequence of key-value pairs is sorted by key. (We call this format **Sorted String Table**, or **SSTable** for short.)
 - **Sorted Structure**: SSTables are typically sorted based on the keys, allowing for efficient range queries. This sorting enables faster lookups and range scans.

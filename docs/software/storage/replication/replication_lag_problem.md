@@ -18,7 +18,8 @@ For example, the following picture shows user 2345 making the same query twice, 
 ![](replication_lag_problem/image1.png)
 
 **Monotonic reads** is a guarantee that this kind of anomaly does not happen.
-It's a lesser guarantee than strong consistency, but a stronger guarantee than eventual consistency. When you read data, you may see an old value; monotonic reads only means that if one user makes several reads in sequence, they will not see time go backward— i.e., they will not read older data after having previously read newer data.
+It's a lesser guarantee than strong consistency, but a stronger guarantee than eventual consistency.
+When you read data, you may see an old value; monotonic reads only means that if one user makes several reads in sequence, they will not see time go backward— i.e., they will not read older data after having previously read newer data.
 
 One way of achieving monotonic reads is to make sure that each user always makes their reads from the same replica (different users can read from different replicas).
 For example, the replica can be chosen based on a hash of the user ID, rather than randomly.

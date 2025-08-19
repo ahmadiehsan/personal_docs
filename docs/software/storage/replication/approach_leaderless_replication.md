@@ -15,11 +15,14 @@ Now imagine that the unavailable node comes back online, and clients start readi
 Any writes that happened while the node was down are missing from that node.
 Thus, if you read from that node, you may get stale (outdated) values as responses.
 
-To solve that problem, when a client reads from the database, it doesn't just send its request to one replica: **read requests are also sent to several nodes in parallel**. The client may get different responses from different nodes; i.e., the up-to-date value from one node and a stale value from another. Version numbers are used to determine which value is newer.
+To solve that problem, when a client reads from the database, it doesn't just send its request to one replica: **read requests are also sent to several nodes in parallel**.
+The client may get different responses from different nodes; i.e., the up-to-date value from one node and a stale value from another.
+Version numbers are used to determine which value is newer.
 
 ## Quorums For Reading and Writing
 
-If there are $n$ replicas, every write must be confirmed by $w$ nodes to be considered successful, and we must query at least $r$ nodes for each read. (In our example, $n=3$, $w=2$, $r=2$.) As long as $w + r > n$, we expect to get an up-to-date value when reading, because at least one of the $r$ nodes we're reading from must be up to date. Reads and writes that obey these $r$ and $w$ values are **called quorum reads and writes**.
+If there are $n$ replicas, every write must be confirmed by $w$ nodes to be considered successful, and we must query at least $r$ nodes for each read. (In our example, $n=3$, $w=2$, $r=2$.) As long as $w + r > n$, we expect to get an up-to-date value when reading, because at least one of the $r$ nodes we're reading from must be up to date.
+Reads and writes that obey these $r$ and $w$ values are **called quorum reads and writes**.
 
 You can think of r and w as the minimum number of votes required for the read or write to be valid.
 

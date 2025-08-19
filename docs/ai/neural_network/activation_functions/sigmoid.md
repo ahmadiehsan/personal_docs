@@ -2,7 +2,9 @@
 
 ## Description
 
-This is where we're essentially classifying the input as either 0 or 1. The sigmoid function takes a real-valued input and squashes it to range between 0 and 1. It's often used in the output layer of a binary classification network.
+This is where we're essentially classifying the input as either 0 or 1.
+The sigmoid function takes a real-valued input and squashes it to range between 0 and 1.
+It's often used in the output layer of a binary classification network.
 
 However, it has two major drawbacks:
 

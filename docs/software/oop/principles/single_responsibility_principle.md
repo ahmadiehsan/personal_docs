@@ -9,7 +9,9 @@ Having two ways to change increases the probability the class will change in the
 
 The solution? The principle guides us to assign each responsibility to one class, and only one class.
 
-That's right, it's as easy as that, and then again it's not: separating responsibility in design is one of the most difficult things to do. Our brains are just too good at seeing a set of behaviors and grouping them even when there are two or more responsibilities. The only way to succeed is to be diligent in examining your designs and to watch out for signals that a class is changing in more than one way as your system grows.
+That's right, it's as easy as that, and then again it's not: separating responsibility in design is one of the most difficult things to do.
+Our brains are just too good at seeing a set of behaviors and grouping them even when there are two or more responsibilities.
+The only way to succeed is to be diligent in examining your designs and to watch out for signals that a class is changing in more than one way as your system grows.
 
 ## Cohesion
 

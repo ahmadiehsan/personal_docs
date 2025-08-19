@@ -3,7 +3,8 @@
 ## Description
 
 This strategy, used in the training of BERT, randomly masks some percentage of the input tokens and tasks the model with predicting the masked words based on the context provided by the unmasked words.
-For instance, in the sentence "The cat is on the mat," we could mask "cat," and the model's job would be to predict this word. Please note that more than one word can also be masked.
+For instance, in the sentence "The cat is on the mat," we could mask "cat," and the model's job would be to predict this word.
+Please note that more than one word can also be masked.
 
 ## Formula
 

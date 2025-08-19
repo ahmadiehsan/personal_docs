@@ -19,7 +19,8 @@
 
 ### Leaky Relu
 
-Leaky ReLU is a variant of ReLU that addresses the "dying ReLU" problem. Instead of defining the function as 0 for negative x.
+Leaky ReLU is a variant of ReLU that addresses the "dying ReLU" problem.
+Instead of defining the function as 0 for negative x.
 
 <img src="image1.png" style="width:2.43955in" />
 

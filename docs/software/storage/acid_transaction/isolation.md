@@ -15,7 +15,8 @@ A transaction reads data written by a concurrent uncommitted transaction. (uncom
 
 <img src="image10.png" style="width:3.10947in" />
 
-For example, Let's say transaction 1 updates a row and leaves it uncommitted, meanwhile, Transaction 2 reads the updated row. If transaction 1 rolls back the change, transaction 2 will have read data that is considered never to have existed.
+For example, Let's say transaction 1 updates a row and leaves it uncommitted, meanwhile, Transaction 2 reads the updated row.
+If transaction 1 rolls back the change, transaction 2 will have read data that is considered never to have existed.
 
 ### Non-Repeatable Reads, and Read Skew
 
@@ -47,7 +48,9 @@ Two concurrent transactions each determine what they are writing based on readin
 
 <img src="image9.png" style="width:3.1745in" />
 
-For example, suppose 2 transactions read that x and y have the value of 100, so individually it's fine for each transaction to negate one of the values, the total would still be non-negative. However negating both values results in x+y=-200, violating the constraint. For emotional gravity, this is usually framed in terms of bank accounts where account balances are allowed to go negative as long as the sum of commonly held balances remains non-negative.
+For example, suppose 2 transactions read that x and y have the value of 100, so individually it's fine for each transaction to negate one of the values, the total would still be non-negative.
+However negating both values results in x+y=-200, violating the constraint.
+For emotional gravity, this is usually framed in terms of bank accounts where account balances are allowed to go negative as long as the sum of commonly held balances remains non-negative.
 
 ## Based on these phenomena, These isolation levels have been defined
 

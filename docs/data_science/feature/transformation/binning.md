@@ -9,7 +9,9 @@
 The problem of working with raw, continuous numeric features is that often the distribution of values in these features will be skewed.
 This signifies that some values will occur quite frequently while some will be quite rare.
 Besides this, there is also another problem of the varying range of values in any of these features.
-For instance view counts of specific music videos could be abnormally large (Despacito we're looking at you!) and some could be really small. Directly using these features can cause a lot of issues and adversely affect the model. Hence there are strategies to deal with this, which include binning and transformations.
+For instance view counts of specific music videos could be abnormally large (Despacito we're looking at you!) and some could be really small.
+Directly using these features can cause a lot of issues and adversely affect the model.
+Hence there are strategies to deal with this, which include binning and transformations.
 
 Binning, also known as quantization, is used for transforming continuous numeric features into discrete ones (categories).
 These discrete values or numbers can be thought of as categories or bins into which the raw, continuous numeric values are binned or grouped into.

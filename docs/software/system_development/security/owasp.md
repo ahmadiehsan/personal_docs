@@ -12,7 +12,8 @@ OWASP has a set of security standards that we need to follow to have a secure ap
 
 When someone shouldn't have access to something, but they can snoop around.
 
-Example: In an online store, you shouldn't be able to see other people's orders. But if you have the link to someone's order and it opens without a password, that's an access control issue.
+Example: In an online store, you shouldn't be able to see other people's orders.
+But if you have the link to someone's order and it opens without a password, that's an access control issue.
 
 ### Cryptographic Failures 🔐
 

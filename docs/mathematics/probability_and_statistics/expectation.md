@@ -4,7 +4,8 @@
 
 The expected value of a discrete random variable $X$, symbolized as $E(X)$, is often referred to as the long-term average or mean (symbolized as $\mu$).
 
-The expectation of a random variable is a number that attempts to capture the center of that random variable's distribution. It can be interpreted as the long-run average of many independent samples from the given distribution.
+The expectation of a random variable is a number that attempts to capture the center of that random variable's distribution.
+It can be interpreted as the long-run average of many independent samples from the given distribution.
 
 ## Formula
 

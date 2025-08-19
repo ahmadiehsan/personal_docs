@@ -29,7 +29,8 @@
 - <span dir="rtl">برای انتخاب تعداد دیتا های داخل هر mini-batch حتما باید به منابع کامپیوتر توجه کنیم.</span>
 
 The batch size can significantly impact the learning process.
-Larger batch sizes result in faster progress in training but don't always converge as fast. Smaller batch sizes update the model frequently but the progress in training is slower.
+Larger batch sizes result in faster progress in training but don't always converge as fast.
+Smaller batch sizes update the model frequently but the progress in training is slower.
 
 Moreover, smaller batch sizes have a regularizing effect and can help the model generalize better, leading to better performance on unseen data.
 However, using a batch size that is too small can lead to unstable training, less accurate estimates of the gradient, and, ultimately, a model with worse performance.
