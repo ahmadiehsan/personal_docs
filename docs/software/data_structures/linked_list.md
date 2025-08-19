@@ -2,7 +2,8 @@
 
 ## Description
 
-A linked list is a linear data structure in which each element is a node object, and the nodes are interconnected through "references". These references hold the memory addresses of subsequent nodes, enabling navigation from one node to the next.
+A linked list is a linear data structure in which each element is a node object, and the nodes are interconnected through "references".
+These references hold the memory addresses of subsequent nodes, enabling navigation from one node to the next.
 
 The design of linked lists allows for their nodes to be distributed across memory locations **without requiring contiguous memory addresses**.
 

@@ -16,7 +16,8 @@ It preprocesses text, making it suitable for scenarios like case-insensitive sor
 - Use normalizers with **keyword** fields for exact matching
 - Avoid normalizers for **text** fields, as normalizers are designed for keyword fields
 
-Elasticsearch doesn't apply a default normalizer for **keyword** fields if none is specified. If you don't explicitly define a normalizer for a **keyword** field, it essentially means that no normalization will be applied, and the exact values will be indexed as they are.
+Elasticsearch doesn't apply a default normalizer for **keyword** fields if none is specified.
+If you don't explicitly define a normalizer for a **keyword** field, it essentially means that no normalization will be applied, and the exact values will be indexed as they are.
 
 ## Analyzer
 
@@ -28,4 +29,5 @@ An analyzer defines how text fields are processed during indexing and searching,
 - Apply analyzers to **text** fields for language-specific processing
 - Choose analyzers based on your language and search requirements
 
-If you don't specify an analyzer for a **text** field in Elasticsearch, the default analyzer applied is typically the "**standard**" analyzer. The "standard" analyzer is a good general-purpose choice and includes tokenization, lowercasing, and removal of stop words.
+If you don't specify an analyzer for a **text** field in Elasticsearch, the default analyzer applied is typically the "**standard**" analyzer.
+The "standard" analyzer is a good general-purpose choice and includes tokenization, lowercasing, and removal of stop words.

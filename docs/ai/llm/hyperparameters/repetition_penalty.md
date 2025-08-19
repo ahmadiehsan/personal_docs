@@ -23,9 +23,11 @@ The model divides the probability of generating a previously produced token by t
 **Without Repetition Penalty**:
 
 Prompt: "The sky is blue and the sea is ....
+
 Answer: The sky is blue and the sea is blue. The sky is blue and the sea is blue.
 
 **With Repetition Penalty (1.2 - 1.5)**:
 
 Prompt: "The sky is blue and the sea is
+
 Answer: The sky is blue and the sea is calm and vast under the bright sun.

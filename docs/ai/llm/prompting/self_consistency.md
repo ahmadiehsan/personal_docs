@@ -20,4 +20,6 @@ This method significantly improves performance, particularly in tasks requiring 
 
 ## Example
 
-Consider a problem where a person is asked about their sister's age based on a past age relationship. Using self-consistency, various outputs are generated, and the most frequent answer is selected as the final response. This approach minimizes errors and increases accuracy.
+Consider a problem where a person is asked about their sister's age based on a past age relationship.
+Using self-consistency, various outputs are generated, and the most frequent answer is selected as the final response.
+This approach minimizes errors and increases accuracy.

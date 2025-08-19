@@ -16,7 +16,8 @@ The principle provides some guidelines: take any object, and from any method in 
 
 ![](least_knowledge_principle/image1.jpg)
 
-The principle forces us to ask the object to request us; that way, we don't have to know about its component objects (and we keep our circle of friends small). For example:
+The principle forces us to ask the object to request us; that way, we don't have to know about its component objects (and we keep our circle of friends small).
+For example:
 
 <img src="image2.jpg" style="width:5.87477in" />
 

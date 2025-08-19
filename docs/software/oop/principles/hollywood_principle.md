@@ -4,7 +4,8 @@
 
 <img src="image2.jpg" style="width:4.19184in" />
 
-Gives us a way to prevent "dependency rot." Dependency rot happens when you have high-level components depending on low-level components depending on high-level components depending on sideways components depending on low-level components, and so on. When rot sets in, no one can easily understand the way a system is designed.
+Gives us a way to prevent "dependency rot." Dependency rot happens when you have high-level components depending on low-level components depending on high-level components depending on sideways components depending on low-level components, and so on.
+When rot sets in, no one can easily understand the way a system is designed.
 
 ![](hollywood_principle/image1.jpg)
 

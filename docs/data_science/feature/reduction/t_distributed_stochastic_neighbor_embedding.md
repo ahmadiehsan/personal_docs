@@ -22,7 +22,8 @@ The similarity is usually measured using a Gaussian kernel, which gives higher w
 The similarity matrix is then converted into a probability distribution using a softmax function.
 This distribution is used to create a low-dimensional space, typically 2D or 3D.
 
-In the low-dimensional space, t-SNE again calculates the pairwise similarities between each pair of data points, but this time using a student's t-distribution instead of a Gaussian distribution. The t-distribution has heavier tails than the Gaussian distribution, which helps to better preserve the local structure of the data. t-SNE then adjusts the position of the points in the low-dimensional space to minimize the difference between the pairwise similarities in the high-dimensional space and the pairwise similarities in the low-dimensional space.
+In the low-dimensional space, t-SNE again calculates the pairwise similarities between each pair of data points, but this time using a student's t-distribution instead of a Gaussian distribution.
+The t-distribution has heavier tails than the Gaussian distribution, which helps to better preserve the local structure of the data. t-SNE then adjusts the position of the points in the low-dimensional space to minimize the difference between the pairwise similarities in the high-dimensional space and the pairwise similarities in the low-dimensional space.
 
 ## Example
 

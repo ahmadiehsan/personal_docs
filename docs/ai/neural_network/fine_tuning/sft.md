@@ -3,7 +3,8 @@
 ## Description
 
 Supervised Fine-Tuning (SFT) is the standard approach for adapting large pretrained models to specific downstream tasks.
-In SFT, all or most of the model's parameters are updated using labeled data, typically via standard supervised learning objectives (e.g., cross-entropy loss for classification or language modeling). This method is straightforward and often yields strong performance, but it can be computationally expensive and requires significant resources, especially for large models.
+In SFT, all or most of the model's parameters are updated using labeled data, typically via standard supervised learning objectives (e.g., cross-entropy loss for classification or language modeling).
+This method is straightforward and often yields strong performance, but it can be computationally expensive and requires significant resources, especially for large models.
 
 !!! info
 

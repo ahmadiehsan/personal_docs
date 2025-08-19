@@ -2,7 +2,9 @@
 
 ## Description
 
-A data lake is a repository for all of an organization's data, both structured and unstructured. It is a more flexible and scalable solution than a data warehouse, as it can store any type of data, regardless of its structure. Data lakes are typically used for big data analytics, as they can store and process large amounts of data quickly and efficiently.
+A data lake is a repository for all of an organization's data, both structured and unstructured.
+It is a more flexible and scalable solution than a data warehouse, as it can store any type of data, regardless of its structure.
+Data lakes are typically used for big data analytics, as they can store and process large amounts of data quickly and efficiently.
 
 Specifications:
 

@@ -13,7 +13,8 @@ The final label probabilities are used to classify the unlabeled data points.
 
 ## Example
 
-To apply semi-supervised learning in a specific domain, let's consider a medical domain where we want to classify scientific articles into different categories such as cardiology, neurology, and oncology. Suppose we have a small set of labeled articles and a large set of unlabeled articles.
+To apply semi-supervised learning in a specific domain, let's consider a medical domain where we want to classify scientific articles into different categories such as cardiology, neurology, and oncology.
+Suppose we have a small set of labeled articles and a large set of unlabeled articles.
 
 A possible approach could be to use label propagation by creating a graph of articles where the nodes represent the articles and the edges represent the similarity between the articles.
 The similarity could be based on various factors, such as the words used, the topics covered, or the citation networks between the articles.

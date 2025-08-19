@@ -6,7 +6,8 @@
 
 ## Description
 
-Anomaly detection is any process that finds the outliers of a dataset; those items that don't belong. These anomalies might point to unusual network traffic, uncover a sensor on the fritz, or simply identify data for cleaning, before analysis.
+Anomaly detection is any process that finds the outliers of a dataset; those items that don't belong.
+These anomalies might point to unusual network traffic, uncover a sensor on the fritz, or simply identify data for cleaning, before analysis.
 
 <img src="image2.jpg" style="width:3.58719in" />
 

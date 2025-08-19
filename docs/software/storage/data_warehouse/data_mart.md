@@ -3,7 +3,8 @@
 ## Description
 
 A data mart is a subset of a data warehouse.
-It's designed to cater to the needs of a specific business unit or team. Think of it as a department store within the larger shopping mall (the data warehouse).
+It's designed to cater to the needs of a specific business unit or team.
+Think of it as a department store within the larger shopping mall (the data warehouse).
 
 Specifications:
 

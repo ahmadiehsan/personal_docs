@@ -6,7 +6,8 @@ Many data warehouses are used in a fairly formulaic style, known as a star schem
 
 The following example shows a data warehouse that might be found at a grocery retailer.
 At the center of the schema is a so-called **fact table** (in this example, it is called fact_sales).
-Each row of the fact table represents an event that occurred at a particular time (here, each row represents a customer's purchase of a product). If we were analyzing website traffic rather than retail sales, each row might represent a page view or a click by a user.
+Each row of the fact table represents an event that occurred at a particular time (here, each row represents a customer's purchase of a product).
+If we were analyzing website traffic rather than retail sales, each row might represent a page view or a click by a user.
 
 <img src="image1.png" style="width:4.20139in" />
 

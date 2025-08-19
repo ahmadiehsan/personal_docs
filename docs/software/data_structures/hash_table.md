@@ -24,6 +24,7 @@ Separate chaining converts a single element into a linked list, treating key-val
 
 ![](hash_table/image4.jpg)
 
-**Open Addressing**: Open addressing does not introduce additional data structures but instead handles hash collisions through "multiple probing". Calculate the bucket index using the hash function, If the bucket already contains an element, linearly traverse forward from the conflict position (usually with a step size of 1) until an empty bucket is found, then insert the element.
+**Open Addressing**: Open addressing does not introduce additional data structures but instead handles hash collisions through "multiple probing".
+Calculate the bucket index using the hash function, If the bucket already contains an element, linearly traverse forward from the conflict position (usually with a step size of 1) until an empty bucket is found, then insert the element.
 
 <img src="image2.jpg" style="width:4.34583in" />

@@ -15,7 +15,8 @@ These can then analyze trends, clusters, and outliers and help frame a supervise
 
 PCA can be used for feature selection by selecting the top k principal components that explain the most variance in the data.
 This can be useful for reducing the dimensionality of high-dimensional datasets and improving the performance of machine learning models.
-However, it's important to note that PCA may not always lead to improved performance, especially if the data is already low-dimensional or if the features are not highly correlated. It's also important to consider the interpretability of the selected principal components as they may not always correspond to meaningful features in the data.
+However, it's important to note that PCA may not always lead to improved performance, especially if the data is already low-dimensional or if the features are not highly correlated.
+It's also important to consider the interpretability of the selected principal components as they may not always correspond to meaningful features in the data.
 
 ## Workflow
 

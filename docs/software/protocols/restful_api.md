@@ -33,7 +33,9 @@ Once a developer becomes familiar with one of your APIs, he should be able to fo
 ### Client–Server
 
 This constraint essentially means that client applications and server applications MUST be able to evolve separately without any dependency on each other.
-A client should know only resource URIs, and that's all. Today, this is standard practice in web development, so nothing fancy is required from your side. Keep it simple.
+A client should know only resource URIs, and that's all.
+Today, this is standard practice in web development, so nothing fancy is required from your side.
+Keep it simple.
 
 Servers and clients may also be replaced and developed independently, as long as the interface between them is not altered.
 
@@ -52,7 +54,9 @@ The client is responsible for managing the state of the application.
 
 ### Cacheable
 
-In today's world, the caching of data and responses is of utmost importance wherever they are applicable/possible. The webpage you are reading here is also a cached version of the HTML page. Caching brings performance improvement for the client side and better scope for scalability for a server because the load has been reduced.
+In today's world, the caching of data and responses is of utmost importance wherever they are applicable/possible.
+The webpage you are reading here is also a cached version of the HTML page.
+Caching brings performance improvement for the client side and better scope for scalability for a server because the load has been reduced.
 
 In REST, caching shall be applied to resources when applicable, and then these resources MUST declare themselves cacheable.
 Caching can be implemented on the server or client side.
