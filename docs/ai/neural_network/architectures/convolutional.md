@@ -1,4 +1,4 @@
-# Convolutional (CNN)
+# Convolutional (CNN) {Image}
 
 ## Description
 
