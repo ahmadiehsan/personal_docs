@@ -15,6 +15,10 @@ It starts from one end of the data structure and accesses each element one by on
 
     The advantage is its simplicity and versatility, **no need for data preprocessing or the help of additional data structures**.
 
+!!! info
+
+    Replacing linear search with hash search is a common strategy to optimize runtime performance, reducing the time complexity from $O(n)$ to $O(1)$.
+
 ## Use Cases
 
 - Good versatility, no need for any data preprocessing operations.
