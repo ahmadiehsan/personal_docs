@@ -1,4 +1,4 @@
-# Bubble Sort {Stable} {$O(n^2)$}
+# Bubble Sort {In-Place} {Stable} {$O(n^2)$}
 
 ## Description
 
