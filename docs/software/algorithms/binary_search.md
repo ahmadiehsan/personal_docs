@@ -8,6 +8,12 @@ It takes advantage of the **sorted order** of elements in an array by reducing t
 - **Time complexity**: $\mathcal{O}(\log n)$ : In the binary loop, the interval decreases by half each round, hence the number of iterations is $\log_2 n$.
 - **Space complexity**: $\mathcal{O}(1)$ : Pointers $i$ and $j$ occupies constant size of space.
 
+!!! info
+
+    Using this algorithm often requires data preprocessing.
+    For example, requires sorting the array in advance.
+    Maintaining these structures also requires more overhead in terms of time and space.
+
 ## Advantages & Limitations
 
 Binary search performs well in both time and space aspects.
