@@ -1,4 +1,4 @@
-# Quick Sort {Non-Stable} {$O(n \log n)$}
+# Quick Sort {In-Place} {Non-Stable} {$O(n \log n)$}
 
 ## Description
 

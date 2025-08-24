@@ -66,3 +66,13 @@ repos:
     rev: v0.13.0
     hooks:
       - id: markdownlint
+
+  - repo: local
+    hooks:
+      - id: md_rewrap_long_lines
+        name: Rewrap Long Markdown Lines
+        language: system
+        entry: make script.md_rewrap_long_lines
+        args: ["docs"]
+        files: .*\.md$
+        pass_filenames: false
