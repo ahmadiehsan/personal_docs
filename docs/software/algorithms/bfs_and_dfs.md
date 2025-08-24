@@ -1,4 +1,4 @@
-# BFS & DFS {Brute-Force}
+# BFS & DFS {Brute-Force} {$O(n)$}
 
 ## Description
 
