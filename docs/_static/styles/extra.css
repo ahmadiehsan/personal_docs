@@ -51,6 +51,7 @@
     border-radius: 3px;
     border: 1px solid;
     white-space: nowrap;
+    z-index: 1;
 }
 
 .nav-tag {

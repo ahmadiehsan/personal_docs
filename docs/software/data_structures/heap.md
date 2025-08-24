@@ -23,13 +23,13 @@ As a special case of a complete binary tree, a heap has the following characteri
 
 ## Operations
 
-| Method name | Description                                                  | Time complexity |
-| ----------- | ------------------------------------------------------------ | --------------- |
-| `push()`    | Add an element to the heap                                   | $O(\log n)$     |
-| `pop()`     | Remove the top element from the heap                         | $O(\log n)$     |
-| `peek()`    | Access the top element (for max/min heap, the max/min value) | $O(1)$          |
-| `size()`    | Get the number of elements in the heap                       | $O(1)$          |
-| `isEmpty()` | Check if the heap is empty                                   | $O(1)$          |
+| Operation                                                    | Complexity  |
+| ------------------------------------------------------------ | ----------- |
+| Add an element                                               | $O(\log n)$ |
+| Remove the top element                                       | $O(\log n)$ |
+| Access the top element (for max/min heap, the max/min value) | $O(1)$      |
+| Get the number of elements                                   | $O(1)$      |
+| Check if the heap is empty                                   | $O(1)$      |
 
 ## Use Cases
 

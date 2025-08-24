@@ -21,7 +21,7 @@ Hashtable referenceVariable = new Hashtable();
 - Each time, when the size of hashtable changes, all the exists indexes will be calculated automatically
 - Hashtable will return System.Object instance, because we can store any type of data in Hashtables.
 - After retrieving data from hashtable (with `[TKey]` or foreach loop), we should convert the result.
-- Hashtable O(1) is faster than SortedList O(log n) in retrieving data
+- Hashtable $O(1)$ is faster than SortedList $O(\log n)$ in retrieving data
 - Both Hashtable and SortedList have cost in data insert
 
 Example:
@@ -47,7 +47,7 @@ foreach (DictionaryEntry item in employees) {
 ### Overview
 
 | Feature                              | Description                                    |
-|--------------------------------------|------------------------------------------------|
+| ------------------------------------ | ---------------------------------------------- |
 | `Count`                              | Returns count of elements.                     |
 | `[TKey]`                             | Returns value based on specified key.          |
 | `Keys`                               | Returns a collection of keys (without values). |
