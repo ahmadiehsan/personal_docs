@@ -3,7 +3,7 @@
 ## Description
 
 Binary search is an efficient search algorithm that uses a divide-and-conquer strategy.
-It takes advantage of the sorted order of elements in an array by reducing the search interval by half in each iteration, continuing until either the target element is found or the search interval becomes empty.
+It takes advantage of the **sorted order** of elements in an array by reducing the search interval by half in each iteration, continuing until either the target element is found or the search interval becomes empty.
 
 - **Time complexity**: $\mathcal{O}(\log n)$ : In the binary loop, the interval decreases by half each round, hence the number of iterations is $\log_2 n$.
 - **Space complexity**: $\mathcal{O}(1)$ : Pointers $i$ and $j$ occupies constant size of space.
