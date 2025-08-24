@@ -17,7 +17,41 @@ The structure is recursive, as each child of a node can be the root of its own s
 - **The depth of a node**: The number of edges passed from the root node to the node.
 - **The height of a node**: The number of edges from the farthest leaf node to the node.
 
+## Representation
+
+Complete binary trees are highly suitable for array representation.
+
+When using an array to represent a binary tree, elements represent node values, and indexes represent node positions in the binary tree.
+**Node pointers are implemented through an index mapping formula.**
+
+Given an index $i$, the index of its left child is $2i + 1$, the index of its right child is $2i + 2$, and the index of its parent is $\lfloor (i - 1) / 2 \rfloor$ (floor division). When the index is out of bounds, it signifies a null node or the node does not exist.
+
+## Varieties
+
+### Perfect Binary Tree
+
+<img src="perfect_binary_tree.jpg" style="width:2.5in" />
+
+As shown, in a perfect binary tree, all levels are completely filled with nodes.
+
+In a perfect binary tree, leaf nodes have a degree of 0, while all other nodes have a degree of 2.
+The total number of nodes can be calculated as $2^{h+1} - 1$ where $h$ is the height of the tree.
+
+This exhibits a standard exponential relationship, reflecting the common phenomenon of cell division in nature.
+
+### Complete Binary Tree
+
+<img src="complete_binary_tree.jpg" style="width:2.5in" />
+
+As shown, a complete binary tree is a binary tree where only the bottom level is possibly not completely filled, and nodes at the bottom level must be filled continuously from left to right.
+
+!!! info
+
+    Note that a perfect binary tree is also a complete binary tree.
+
 ## Traversal
+
+### Definition
 
 From a physical structure perspective, a tree is a data structure based on linked lists.
 Hence, its traversal method involves accessing nodes one by one through pointers.
@@ -30,7 +64,7 @@ The common traversal methods for binary trees include:
 - In-order traversal
 - Post-order traversal
 
-## Level-Order Traversal
+### Level-Order Traversal
 
 Traverses the binary tree from top to bottom, layer by layer. Within each level, it visits nodes from left to right.
 
@@ -38,7 +72,7 @@ Level-order traversal is essentially a type of breadth-first traversal, also kno
 
 <img src="breadth_first_traversal.png" style="width:5.5in" />
 
-## Preorder, In-order, and Post-order Traversal
+### Preorder, In-order, and Post-order Traversal
 
 Correspondingly, pre-order, in-order, and post-order traversal all belong to depth-first traversal, also known as depth-first search (DFS), which embodies a "proceed to the end first, then backtrack and continue" traversal method.
 
