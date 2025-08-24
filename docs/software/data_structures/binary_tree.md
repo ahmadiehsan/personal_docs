@@ -21,10 +21,10 @@ The structure is recursive, as each child of a node can be the root of its own s
 
 Complete binary trees are highly suitable for array representation.
 
-When using an array to represent a binary tree, elements represent node values, and indexes represent node positions in the binary tree.
-**Node pointers are implemented through an index mapping formula.**
+When using an array to represent a binary tree, elements represent node values, and indexes represent node positions in the binary tree. **Node pointers are implemented through an index mapping formula.**
 
-Given an index $i$, the index of its left child is $2i + 1$, the index of its right child is $2i + 2$, and the index of its parent is $\lfloor (i - 1) / 2 \rfloor$ (floor division). When the index is out of bounds, it signifies a null node or the node does not exist.
+Given an index $i$, the index of its left child is $2i + 1$, the index of its right child is $2i + 2$, and the index of its parent is $\lfloor (i - 1) / 2 \rfloor$ (floor division).
+When the index is out of bounds, it signifies a null node or the node does not exist.
 
 ## Varieties
 

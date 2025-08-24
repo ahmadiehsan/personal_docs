@@ -22,7 +22,8 @@ Let the number of vertices in the graph be $n$, the adjacency matrix uses an $n 
 
 ![](graph/adjacency_matrix.jpg)
 
-When representing graphs with adjacency matrices, it is possible to directly access matrix elements to obtain edges, resulting in efficient operations of addition, deletion, lookup, and modification, all with a time complexity of $O(1)$. However, the space complexity of the matrix is $O(n^2)$, which consumes more memory.
+When representing graphs with adjacency matrices, it is possible to directly access matrix elements to obtain edges, resulting in efficient operations of addition, deletion, lookup, and modification, all with a time complexity of $O(1)$.
+However, the space complexity of the matrix is $O(n^2)$, which consumes more memory.
 
 ### Adjacency List
 

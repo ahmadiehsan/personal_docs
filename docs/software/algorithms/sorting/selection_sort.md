@@ -1,4 +1,4 @@
-# Selection Sort {$O(n^2)$}
+# Selection Sort {Non-Stable} {$O(n^2)$}
 
 ## Description
 
@@ -6,7 +6,7 @@ Selection sort works on a very simple principle: it uses a loop where each itera
 
 ## Workflow
 
-Suppose the length of the array is $n$, the steps of selection sort is:
+Suppose the length of the array is $n$, the steps of selection sort are:
 
 1. Initially, all elements are unsorted, i.e., the unsorted (index) interval is $[0, n - 1]$.
 2. Select the smallest element in the interval $[0, n - 1]$ and swap it with the element at index 0. After this, the first element of the array is sorted.
