@@ -1,4 +1,4 @@
-# Hash Search
+# Hash Search {Adaptive}
 
 ## Description
 
