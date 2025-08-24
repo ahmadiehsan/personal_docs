@@ -17,7 +17,7 @@ The structure is recursive, as each child of a node can be the root of its own s
 - **The depth of a node**: The number of edges passed from the root node to the node.
 - **The height of a node**: The number of edges from the farthest leaf node to the node.
 
-## Representation
+## Representation (Implementation)
 
 Complete binary trees are highly suitable for array representation.
 
