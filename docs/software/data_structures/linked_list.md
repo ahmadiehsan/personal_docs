@@ -13,7 +13,7 @@ The design of linked lists allows for their nodes to be distributed across memor
 - The tail node points to "null".
 - In languages that support pointers, this "reference" is typically implemented as a "pointer".
 
-Varieties:
+## Varieties
 
 - **Singly linked list**: This is the standard linked list described earlier.
 - **Circular linked list**: This is formed when the tail node of a singly linked list points back to the head node, creating a loop. In a circular linked list, any node can function as the head node.
