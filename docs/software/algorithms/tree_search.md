@@ -1,4 +1,4 @@
-# Tree Search
+# Tree Search {Adaptive}
 
 ## Description
 
