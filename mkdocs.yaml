@@ -34,7 +34,7 @@ extra:
       link: https://t.me/ahmadi_ehsan
 plugins:
   - search
-  - awesome-pages # Add better control over "nav" with ".pages" files
+  - awesome-nav # Add better control over "nav" with ".nav.yml" files
   - glightbox # Add "image lightbox" feature
   - toggle-sidebar: # Add "close sidebar button" feature
       theme: material
