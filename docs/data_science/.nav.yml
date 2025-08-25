@@ -5,4 +5,4 @@ nav:
   - 🔍 Feature: feature
   - 📈 Charts: charts
   - ⚖️ Metrics & Evaluation: metrics_and_evaluation
-  - ...
+  - "*"
