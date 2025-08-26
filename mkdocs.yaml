@@ -47,16 +47,15 @@ plugins:
         remove_comments: true
       cache_safe: true
       css_files:
-        - _static/styles/iransans.css
-        - _static/styles/hello_algo.css
-        - _static/styles/hello_algo_overrides.css
-        - _static/styles/mathjax_overrides.css
-        - _static/styles/extra.css
-        - _static/styles/rtl.css
+        - _static/css_vendor/iransans.css
+        - _static/css_vendor/hello_algo.css
+        - _static/css/hello_algo_overrides.css
+        - _static/css/mathjax_overrides.css
+        - _static/css/extra.css
+        - _static/css/rtl.css
       js_files:
         - _static/js/mathjax_init.js
-        - _static/js/mathjax.js
-        - _static/js/mathjax_extra.js
+        - _static/js_vendor/mathjax.js
         - _static/js/extra.js
 markdown_extensions:
   - md_in_html # Add "Markdown in HTML tags" support
@@ -68,14 +67,13 @@ markdown_extensions:
   - mdx_truly_sane_lists: # Add "nested lists" support
       truly_sane: false # Allow for unlimited newlines between elements of a list
 extra_css:
-  - _static/styles/iransans.css
-  - _static/styles/hello_algo.css
-  - _static/styles/hello_algo_overrides.css
-  - _static/styles/mathjax_overrides.css
-  - _static/styles/extra.css
-  - _static/styles/rtl.css
+  - _static/css_vendor/iransans.css
+  - _static/css_vendor/hello_algo.css
+  - _static/css/hello_algo_overrides.css
+  - _static/css/mathjax_overrides.css
+  - _static/css/extra.css
+  - _static/css/rtl.css
 extra_javascript:
   - _static/js/mathjax_init.js
-  - _static/js/mathjax.js
-  - _static/js/mathjax_extra.js
+  - _static/js_vendor/mathjax.js
   - _static/js/extra.js

@@ -1,1 +1,4 @@
 uv.lock
+**/css_vendor/**
+**/js_vendor/**
+**/fonts/**
