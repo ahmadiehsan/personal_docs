@@ -1,4 +1,4 @@
-# Softmax {0 to 1}
+# Softmax [0 to 1]
 
 ## Description
 

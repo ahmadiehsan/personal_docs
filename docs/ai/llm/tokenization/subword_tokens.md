@@ -1,4 +1,4 @@
-# Subword Tokens {Output}
+# Subword Tokens [Output]
 
 ## Description
 

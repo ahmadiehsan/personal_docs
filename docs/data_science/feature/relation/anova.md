@@ -1,4 +1,4 @@
-# ANOVA {Normal} {Continuous vs Categorical}
+# ANOVA [Continuous vs Categorical] [Normal]
 
 ## Description
 

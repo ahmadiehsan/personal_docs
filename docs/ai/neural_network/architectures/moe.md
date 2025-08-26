@@ -1,4 +1,4 @@
-# Mixture of Experts (MoE) {NLP}
+# Mixture of Experts (MoE) [NLP]
 
 ## Description
 

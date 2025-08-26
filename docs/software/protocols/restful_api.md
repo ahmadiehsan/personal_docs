@@ -1,4 +1,4 @@
-# RESTful API {HTTP1} {Rule}
+# RESTful API [Rule] [HTTP1]
 
 ## Description
 

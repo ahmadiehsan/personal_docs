@@ -1,4 +1,4 @@
-# Mean Absolute Error (MAE) {Continuous}
+# Mean Absolute Error (MAE) [Continuous]
 
 ## Description
 

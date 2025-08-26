@@ -1,4 +1,4 @@
-# Bin-Counting {Encoding}
+# Bin-Counting [Encoding]
 
 ## Specifications
 

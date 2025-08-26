@@ -1,4 +1,4 @@
-# Variance Threshold {Not Normal} {1 Continuous}
+# Variance Threshold [1 Continuous] [Not Normal]
 
 ## Description
 

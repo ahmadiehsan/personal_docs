@@ -1,4 +1,4 @@
-# Dummy Coding {Encoding}
+# Dummy Coding [Encoding]
 
 ## Specifications
 

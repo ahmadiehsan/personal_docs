@@ -1,4 +1,4 @@
-# Proxy (Controlled access) {Structural}
+# Proxy (Controlled access) [Structural]
 
 ## Description
 

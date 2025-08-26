@@ -1,4 +1,4 @@
-# Recurrent (RNN) {Sequential Data}
+# Recurrent (RNN) [Sequential Data]
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Transforming Ordinal Attributes {Encoding}
+# Transforming Ordinal Attributes [Encoding]
 
 ## Description
 

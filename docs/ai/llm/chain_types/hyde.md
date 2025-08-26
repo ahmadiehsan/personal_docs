@@ -1,4 +1,4 @@
-# HyDE {RAG}
+# HyDE [RAG]
 
 ## Description
 

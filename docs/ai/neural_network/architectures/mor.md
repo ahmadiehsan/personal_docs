@@ -1,4 +1,4 @@
-# Mixture of Recursion (MoR) {NLP}
+# Mixture of Recursion (MoR) [NLP]
 
 ## Description
 

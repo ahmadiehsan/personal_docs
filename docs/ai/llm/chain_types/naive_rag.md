@@ -1,4 +1,4 @@
-# Naive RAG {RAG}
+# Naive RAG [RAG]
 
 ## Description
 

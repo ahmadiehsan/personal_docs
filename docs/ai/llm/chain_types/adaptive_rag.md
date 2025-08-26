@@ -1,4 +1,4 @@
-# Adaptive RAG {RAG}
+# Adaptive RAG [RAG]
 
 ## Description
 

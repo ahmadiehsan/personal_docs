@@ -1,4 +1,4 @@
-# Locally Linear Embedding (LLE) {Manifold}
+# Locally Linear Embedding (LLE) [Manifold]
 
 ## Description
 

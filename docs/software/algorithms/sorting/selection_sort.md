@@ -1,4 +1,4 @@
-# Selection Sort {In-Place} {Non-Stable} {$O(n^2)$}
+# Selection Sort [$O(n^2)$] [Non-Stable] [In-Place]
 
 ## Description
 

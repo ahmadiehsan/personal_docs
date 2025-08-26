@@ -1,4 +1,4 @@
-# SAML {Authentication}
+# SAML [Authentication]
 
 ## Overview
 

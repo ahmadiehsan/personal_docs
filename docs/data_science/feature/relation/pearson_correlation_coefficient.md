@@ -1,4 +1,4 @@
-# Pearson Correlation Coefficient (R) {Normal} {2 Continuous}
+# Pearson Correlation Coefficient (R) [2 Continuous] [Normal]
 
 ## Description
 

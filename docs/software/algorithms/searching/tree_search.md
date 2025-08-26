@@ -1,4 +1,4 @@
-# Tree Search {Adaptive} {$O(\log n)$}
+# Tree Search [$O(\log n)$] [Adaptive]
 
 ## Description
 

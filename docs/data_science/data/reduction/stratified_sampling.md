@@ -1,4 +1,4 @@
-# Stratified Sampling {Sampling}
+# Stratified Sampling [Sampling]
 
 ## Description
 

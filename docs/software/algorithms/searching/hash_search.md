@@ -1,4 +1,4 @@
-# Hash Search {Adaptive} {$O(1)$}
+# Hash Search [$O(1)$] [Adaptive]
 
 ## Description
 

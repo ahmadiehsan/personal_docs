@@ -1,4 +1,4 @@
-# One-Hot Encoding {Encoding}
+# One-Hot Encoding [Encoding]
 
 ## Specifications
 

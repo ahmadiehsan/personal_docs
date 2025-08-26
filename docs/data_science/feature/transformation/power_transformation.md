@@ -1,4 +1,4 @@
-# Power Transformation [Box-Cox] {Scaling}
+# Power Transformation [Scaling] {Box-Cox}
 
 ## Specifications
 

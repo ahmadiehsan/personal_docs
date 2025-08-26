@@ -1,4 +1,4 @@
-# Root Mean Squared Error (RMSE) {Continuous}
+# Root Mean Squared Error (RMSE) [Continuous]
 
 ## Description
 

@@ -1,4 +1,4 @@
-# T-Distributed Stochastic Neighbor Embedding (T-SNE) {Manifold}
+# T-Distributed Stochastic Neighbor Embedding (T-SNE) [Manifold]
 
 ## Description
 

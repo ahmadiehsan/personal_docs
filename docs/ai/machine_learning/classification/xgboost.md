@@ -1,4 +1,4 @@
-# XGBoost (eXtreme Gradient Boosting) {Tree}
+# XGBoost (eXtreme Gradient Boosting) [Tree]
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Effect Coding {Encoding}
+# Effect Coding [Encoding]
 
 ## Specifications
 

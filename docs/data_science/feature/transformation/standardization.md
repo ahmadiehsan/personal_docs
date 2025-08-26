@@ -1,4 +1,4 @@
-# Standardization (Z-score) {Scaling}
+# Standardization (Z-score) [Scaling]
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Linear {$-\infty$ to $+\infty$}
+# Linear [$-\infty$ to $+\infty$]
 
 ## Description
 

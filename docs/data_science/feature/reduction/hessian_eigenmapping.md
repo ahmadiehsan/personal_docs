@@ -1,4 +1,4 @@
-# Hessian Eigenmapping (HLLE) {Manifold}
+# Hessian Eigenmapping (HLLE) [Manifold]
 
 ## Description
 

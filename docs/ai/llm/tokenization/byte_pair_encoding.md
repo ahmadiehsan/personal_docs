@@ -1,4 +1,4 @@
-# Byte Pair Encoding (BPE) {Strategy}
+# Byte Pair Encoding (BPE) [Strategy]
 
 ## Description
 

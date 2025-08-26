@@ -1,4 +1,4 @@
-# Multi-dimensional Scaling (MDS) {Manifold}
+# Multi-dimensional Scaling (MDS) [Manifold]
 
 ## Description
 

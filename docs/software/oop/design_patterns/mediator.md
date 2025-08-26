@@ -1,4 +1,4 @@
-# Mediator (Centralized communication) {Behavioral}
+# Mediator (Centralized communication) [Behavioral]
 
 ## Description
 

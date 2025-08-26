@@ -1,4 +1,4 @@
-# Linear Search {Brute-Force} {$O(n)$}
+# Linear Search [$O(n)$] [Brute-Force]
 
 ## Description
 

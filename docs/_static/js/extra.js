@@ -22,9 +22,9 @@ document.querySelectorAll(".md-content span[dir='rtl']").forEach(span => {
 document.querySelectorAll(".md-content h1, .md-header__title .md-header__topic+.md-header__topic .md-ellipsis").forEach(el => {
     el.innerHTML = el.innerHTML
         // {tag} is a category
-        .replace(/\{([^}]+)\}/g, '<span class="arithmatex title-tag title-tag__category">$1</span>')
+        .replace(/\[([^\]]+)\]/g, '<span class="arithmatex title-tag title-tag__category">$1</span>')
         // [tag] is a special topic
-        .replace(/\[([^\]]+)\]/g, '<span class="arithmatex title-tag title-tag__special_topic">$1</span>');
+        .replace(/\{([^}]+)\}/g, '<span class="arithmatex title-tag title-tag__special_topic">$1</span>');
 });
 
 // Menu tags
@@ -36,14 +36,20 @@ document.querySelectorAll(".md-sidebar .md-nav__link").forEach(link => {
 
         const newHTML = originalText
             // {tag} is a category
-            .replace(/\{([^}]+)\}/g, '<span class="arithmatex nav-tag nav-tag__category">$1</span>')
+            .replace(/\[([^\]]+)\]/g, '<span class="arithmatex nav-tag nav-tag__category">$1</span>')
             // [tag] is a special topic
-            .replace(/\[([^\]]+)\]/g, '<span class="arithmatex nav-tag nav-tag__special_topic">$1</span>')
+            .replace(/\{([^}]+)\}/g, '<span class="arithmatex nav-tag nav-tag__special_topic">$1</span>')
             // The rest of the text
             .replace(/^([^<]+)/, match => `<span class="arithmatex nav-text" title="${match.trim()}">${match.trim()}</span>`);
 
         // Replace the container's old content with the new structured HTML
         textContainer.innerHTML = newHTML;
+
+        // Reverse the order of tags to maintain visual order
+        const tags = Array.from(textContainer.querySelectorAll(".nav-tag"));
+        if (tags.length > 1) {
+            tags.reverse().forEach(tag => textContainer.appendChild(tag));
+        }
     }
 });
 
@@ -53,7 +59,7 @@ document.querySelectorAll(".nav-tag + .nav-tag").forEach(tag => {
 
     if (previousTag) {
         // Calculate the negative margin needed to overlap X% of the previous tag.
-        const overlap = previousTag.offsetWidth * 0.95;
+        const overlap = previousTag.offsetWidth * 0.93;
 
         // Set this calculated value as a CSS variable on the current tag
         tag.style.setProperty("--overlap-margin", `-${overlap}px`);

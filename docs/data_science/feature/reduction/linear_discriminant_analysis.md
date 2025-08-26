@@ -1,4 +1,4 @@
-# Linear Discriminant Analysis (LDA) {Linear}
+# Linear Discriminant Analysis (LDA) [Linear]
 
 ## Description
 

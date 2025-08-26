@@ -1,4 +1,4 @@
-# Iterator (Sequential access) {Behavioral}
+# Iterator (Sequential access) [Behavioral]
 
 ## Description
 

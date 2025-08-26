@@ -1,4 +1,4 @@
-# Binary Search {Adaptive} {$O(\log n)$}
+# Binary Search [$O(\log n)$] [Adaptive]
 
 ## Description
 

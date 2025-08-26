@@ -1,4 +1,4 @@
-# Confusion Matrix (Error Matrix) {Categorical}
+# Confusion Matrix (Error Matrix) [Categorical]
 
 ## Description
 

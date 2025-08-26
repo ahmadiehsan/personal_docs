@@ -1,4 +1,4 @@
-# Log Transformation {Scaling}
+# Log Transformation [Scaling]
 
 ## Specifications
 

@@ -1,4 +1,4 @@
-# Normal {Gaussian} {Bell Curve}
+# Normal [Bell Curve] [Gaussian]
 
 ## Description
 

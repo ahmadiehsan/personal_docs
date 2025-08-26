@@ -1,4 +1,4 @@
-# Reservoir Sampling {Sampling}
+# Reservoir Sampling [Sampling]
 
 ## Description
 
