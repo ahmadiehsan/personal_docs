@@ -1,4 +1,4 @@
-exclude: ^(.*index.md|\.venv)
+exclude: ^(.*index.md|\.venv|.*css_vendor|.*js_vendor)
 default_stages: [pre-commit]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks

@@ -7,7 +7,9 @@
         "**/.ruff_cache": true
     },
     "search.exclude": {
-        "**/uv.lock": true
+        "**/uv.lock": true,
+        "**/js_vendor/**": true,
+        "**/css_vendor/**": true,
     },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.expand": false,
