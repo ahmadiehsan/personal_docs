@@ -1,4 +1,4 @@
-# Visitor (Element-specific operations) {Behavioral}
+# Visitor (Element-specific operations) [Behavioral]
 
 ## Description
 

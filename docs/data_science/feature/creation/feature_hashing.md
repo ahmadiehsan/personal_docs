@@ -1,4 +1,4 @@
-# Feature Hashing {Encoding}
+# Feature Hashing [Encoding]
 
 ## Specifications
 

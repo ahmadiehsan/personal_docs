@@ -1,4 +1,4 @@
-# Hybrid RAG {RAG}
+# Hybrid RAG [RAG]
 
 ## Description
 

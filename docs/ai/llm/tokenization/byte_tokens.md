@@ -1,4 +1,4 @@
-# Byte Tokens {Output}
+# Byte Tokens [Output]
 
 ## Description
 

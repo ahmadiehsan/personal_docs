@@ -1,4 +1,4 @@
-# Parameter-Efficient Ensembling {Tabular}
+# Parameter-Efficient Ensembling [Tabular]
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Agentic RAG {RAG}
+# Agentic RAG [RAG]
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Uniform Manifold Approximation and Projection (UMAP) {Manifold}
+# Uniform Manifold Approximation and Projection (UMAP) [Manifold]
 
 ## Description
 

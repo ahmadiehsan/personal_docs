@@ -1,4 +1,4 @@
-# Heap Sort {In-Place} {Non-Stable} {$O(n \log n)$}
+# Heap Sort [$O(n \log n)$] [Non-Stable] [In-Place]
 
 ## Description
 

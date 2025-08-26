@@ -1,4 +1,4 @@
-# Reinforcement Learning {Unsup}
+# Reinforcement Learning [Unsup]
 
 ## Description
 

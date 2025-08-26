@@ -1,4 +1,4 @@
-# Normalization (Min-Max) {Scaling}
+# Normalization (Min-Max) [Scaling]
 
 ## Description
 

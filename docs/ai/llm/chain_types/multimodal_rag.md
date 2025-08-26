@@ -1,4 +1,4 @@
-# Multimodal RAG {RAG}
+# Multimodal RAG [RAG]
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Weighted Sampling {Sampling}
+# Weighted Sampling [Sampling]
 
 ## Description
 

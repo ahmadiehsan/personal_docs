@@ -1,4 +1,4 @@
-# Cross-Entropy Loss {Multi-Class Classification}
+# Cross-Entropy Loss [Multi-Class Classification]
 
 ## Description
 

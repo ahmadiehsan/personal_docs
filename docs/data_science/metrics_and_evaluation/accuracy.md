@@ -1,4 +1,4 @@
-# Accuracy {Balance} {Categorical}
+# Accuracy [Categorical] [Balance]
 
 ## Description
 

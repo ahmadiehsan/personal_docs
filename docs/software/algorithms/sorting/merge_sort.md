@@ -1,4 +1,4 @@
-# Merge Sort {Non-In-Place} {Stable} {$O(n \log n)$}
+# Merge Sort [$O(n \log n)$] [Stable] [Non-In-Place]
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Principal Component Analysis (PCA) {Linear}
+# Principal Component Analysis (PCA) [Linear]
 
 ## Description
 

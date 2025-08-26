@@ -1,4 +1,4 @@
-# Simple Random Sampling {Sampling}
+# Simple Random Sampling [Sampling]
 
 ## Description
 

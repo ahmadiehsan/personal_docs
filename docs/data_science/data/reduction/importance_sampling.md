@@ -1,4 +1,4 @@
-# Importance Sampling {Sampling}
+# Importance Sampling [Sampling]
 
 ## Description
 

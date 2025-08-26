@@ -1,4 +1,4 @@
-# Scatter {Continuous}
+# Scatter [Continuous]
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Simple Recommendation {Unsup}
+# Simple Recommendation [Unsup]
 
 ## Description
 

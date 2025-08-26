@@ -1,4 +1,4 @@
-# Mamba {NLP}
+# Mamba [NLP]
 
 ## Description
 

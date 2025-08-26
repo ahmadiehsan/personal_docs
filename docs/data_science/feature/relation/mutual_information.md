@@ -1,4 +1,4 @@
-# Mutual Information (Information Gain) {Not Normal} {Continuous or Categorical}
+# Mutual Information (Information Gain) [Continuous or Categorical] [Not Normal]
 
 ## Description
 

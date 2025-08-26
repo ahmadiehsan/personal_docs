@@ -1,4 +1,4 @@
-# Graph RAG {RAG}
+# Graph RAG [RAG]
 
 ## Description
 

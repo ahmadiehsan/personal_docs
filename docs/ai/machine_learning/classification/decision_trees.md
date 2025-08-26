@@ -1,4 +1,4 @@
-# Decision Trees {Tree}
+# Decision Trees [Tree]
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Chain of Responsibility (Request delegation chain) {Behavioral}
+# Chain of Responsibility (Request delegation chain) [Behavioral]
 
 ## Description
 

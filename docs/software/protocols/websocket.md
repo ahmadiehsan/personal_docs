@@ -1,4 +1,4 @@
-# WebSocket {TCP}
+# WebSocket [TCP]
 
 ## Description
 

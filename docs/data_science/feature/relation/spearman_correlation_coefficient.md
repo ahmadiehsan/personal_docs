@@ -1,4 +1,4 @@
-# Spearman Correlation Coefficient ($Rs$ or $\rho$) {Not Normal} {2 Continuous}
+# Spearman Correlation Coefficient ($Rs$ or $\rho$) [2 Continuous] [Not Normal]
 
 ## Description
 

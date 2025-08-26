@@ -1,4 +1,4 @@
-# Decorator (Dynamic object enhancement) {Structural}
+# Decorator (Dynamic object enhancement) [Structural]
 
 ## Description
 

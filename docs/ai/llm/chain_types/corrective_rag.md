@@ -1,4 +1,4 @@
-# Corrective RAG {RAG}
+# Corrective RAG [RAG]
 
 ## Description
 

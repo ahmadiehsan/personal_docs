@@ -1,4 +1,4 @@
-# Oauth {Authentication}
+# Oauth [Authentication]
 
 <script>
 document.querySelector('.md-content').setAttribute('dir', 'rtl');

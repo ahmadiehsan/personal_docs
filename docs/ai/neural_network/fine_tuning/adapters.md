@@ -1,4 +1,4 @@
-# Adapters {PEFT}
+# Adapters [PEFT]
 
 ## Description
 

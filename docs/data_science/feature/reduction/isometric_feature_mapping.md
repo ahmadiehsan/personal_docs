@@ -1,4 +1,4 @@
-# Isometric Feature Mapping (Isomap) {Manifold}
+# Isometric Feature Mapping (Isomap) [Manifold]
 
 ## Description
 

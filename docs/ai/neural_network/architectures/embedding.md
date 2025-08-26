@@ -1,4 +1,4 @@
-# Embedding [Dense] [Sparse] {NLP}
+# Embedding [NLP] {Sparse} {Dense}
 
 ## Description
 

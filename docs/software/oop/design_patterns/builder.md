@@ -1,4 +1,4 @@
-# Builder (Step-by-step construction) {Creational}
+# Builder (Step-by-step construction) [Creational]
 
 ## Description
 

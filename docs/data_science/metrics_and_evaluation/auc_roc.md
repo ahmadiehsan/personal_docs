@@ -1,4 +1,4 @@
-# AUC-ROC {Categorical}
+# AUC-ROC [Categorical]
 
 ## Description
 

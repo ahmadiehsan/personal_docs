@@ -1,4 +1,4 @@
-# Mean Squared Error (MSE) {Continuous}
+# Mean Squared Error (MSE) [Continuous]
 
 ## Description
 

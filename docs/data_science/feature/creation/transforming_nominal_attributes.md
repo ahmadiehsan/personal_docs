@@ -1,4 +1,4 @@
-# Transforming Nominal Attributes {Encoding}
+# Transforming Nominal Attributes [Encoding]
 
 ## Description
 

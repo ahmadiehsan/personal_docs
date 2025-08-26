@@ -1,4 +1,4 @@
-# Multiple Negative Ranking (MNR) (InfoNCE7) (NTXentLoss) {Embedding}
+# Multiple Negative Ranking (MNR) (InfoNCE7) (NTXentLoss) [Embedding]
 
 ## Description
 

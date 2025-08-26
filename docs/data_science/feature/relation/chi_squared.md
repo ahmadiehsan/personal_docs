@@ -1,4 +1,4 @@
-# Chi-Squared {Not Normal} {2 Categorical}
+# Chi-Squared [2 Categorical] [Not Normal]
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Recursive Feature Elimination (RFE) {Wrapper}
+# Recursive Feature Elimination (RFE) [Wrapper]
 
 ## Description
 

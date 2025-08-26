@@ -1,4 +1,4 @@
-# Facade (Simplified interface) {Structural}
+# Facade (Simplified interface) [Structural]
 
 ## Description
 

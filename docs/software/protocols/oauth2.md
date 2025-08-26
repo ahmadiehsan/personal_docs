@@ -1,4 +1,4 @@
-# OAuth2 [OIDC] {Authentication}
+# OAuth2 [Authentication] {OIDC}
 
 ## Description
 
