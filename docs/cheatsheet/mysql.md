@@ -78,8 +78,23 @@ sudo mysql_secure_installation
 - Export data from database:
 
   ```shell
-mysqldump [-h <host>] -u <username: root> -p [--no-data] [--set-gtid-purged=OFF] <db_name> > <file_path/file_name.sql>
+  mysqldump [-h <host>] -u <username: root> -p <db_name> > <file_path/file_name.sql>
   ```
+
+  More options:
+
+   - `--no-data`: Dump only the table structure (schema); no row data is exported.
+   - `--single-transaction`: Makes a snapshot without locking tables (InnoDB only).
+   - `--quick`: Streams rows to the output file instead of buffering (good for large DBs).
+   - `--routines`: Exports stored procedures and functions
+   - `--triggers`: Exports triggers (included by default, but good to be explicit).
+   - `--events`: Exports scheduled events.
+   - `--add-drop-table`: Add `DROP TABLE IF EXISTS` before CREATE.
+   - `--compress`: Use compression for client/server communication (saves bandwidth).
+   - `--result-file=path`: Write directly to file (avoids shell redirection).
+   - `--databases db1 db2`: Dump listed databases.
+   - `--all-databases`: Dump all databases.
+   - `--set-gtid-purged=OFF|ON|AUTO`: Include or omit GTID info.
 
 ## Shell
 
