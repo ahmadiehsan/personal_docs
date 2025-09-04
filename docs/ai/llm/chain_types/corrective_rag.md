@@ -12,3 +12,11 @@ This approach enhances the reliability and precision of generated content, makin
 !!! info
 
     <span dir="rtl">مناسب جهت اصلاح و بهبود نتایج</span>
+
+## Workflow
+
+- **Step 1 - Initial Retrieval and Generation**: The process begins like Standard RAG, where the retriever fetches relevant information and the generative model creates a response.
+- **Step 2 - Validation Process**: The generated response is then validated against a trusted dataset or source. This could involve comparing the generated content with data from authoritative sources (like medical databases, academic papers, or trusted news outlets).
+- **Step 3 - Correction Mechanism**: If discrepancies or errors are detected during validation, the model uses the feedback to correct the response. This might involve generating a new response or refining the existing one.
+- **Step 4 - Iteration and Feedback Loop**: The system iterates this process, continuously refining the response until it aligns with the correct information or falls within an acceptable error margin.
+- **Step 5 - Final Output**: The validated and corrected response is provided to the user.
