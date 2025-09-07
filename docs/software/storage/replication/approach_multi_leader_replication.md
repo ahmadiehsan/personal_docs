@@ -11,7 +11,8 @@ Replication still happens in the same way: each node that processes a write must
 ![](approach_multi_leader_replication/image2.png)
 
 As multi-leader replication is a somewhat retrofitted feature in many databases, there are often subtle configuration pitfalls and surprising interactions with other database features.
-For example, auto-incrementing keys, triggers, and integrity constraints can be problematic. **For this reason, multi-leader replication is often considered dangerous territory that should be avoided if possible.**
+For example, auto-incrementing keys, triggers, and integrity constraints can be problematic.
+**For this reason, multi-leader replication is often considered dangerous territory that should be avoided if possible.**
 
 ## Conflict Resolution
 

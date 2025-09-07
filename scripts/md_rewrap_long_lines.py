@@ -9,6 +9,7 @@ from scripts.utils.argument_validators import to_path_object
 class Command:
     _split_by = ".?!"
     _split_on_length = 121
+    _split_specials = ("**", "__", "~~")
     _md_blocks = ("```", "$$", "<script>", "</script>", "<style>", "</style>")
     _sentence_blocks = (('"', '"'), ("<", ">"), ("(", ")"), ("[", "]"), ("{", "}"))
 
@@ -149,13 +150,15 @@ class Command:
                 inside[char] += 1
 
             # Check for split point (not inside any pair)
-            if (
-                char in self._split_by
-                and i + 2 < len(text)
-                and text[i + 1] == " "
-                and text[i + 2].isupper()
-                and all(v == 0 for v in inside.values())
-            ):
+            is_split_char = char in self._split_by
+            is_outside_any_block = not any(inside.values())
+            starts_new_sentence = False
+            if i + 4 < len(text) and text[i + 1] == " ":
+                regular_start = text[i + 2].isupper()
+                special_start = text[i + 4].isupper() and any(text[i + 2 :].startswith(s) for s in self._split_specials)
+                starts_new_sentence = regular_start or special_start
+
+            if is_split_char and is_outside_any_block and starts_new_sentence:
                 split_points.append(i + 1)  # split after the punctuation
 
             i += 1

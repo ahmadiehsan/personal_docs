@@ -1,8 +1,8 @@
-# WordPiece [Strategy]
+# WordPiece [Strategy] {Subword}
 
 ## Description
 
-WordPiece is a Subword tokenization algorithm developed by Google and heavily used in models like BERT.
+WordPiece is a **Subword tokenization** algorithm **developed by Google** and heavily **used in models like BERT**.
 It improves upon Byte Pair Encoding (BPE) by using a probabilistic approach to determine subword units, optimizing for better handling of morphologically rich or low-resource languages.
 
 - Probabilistic merging accounts for more context than simple frequency-based approaches like BPE.

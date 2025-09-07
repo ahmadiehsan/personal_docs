@@ -12,7 +12,8 @@ This can easily increase the size of the feature set causing problems like stora
 Besides this, we also have to deal with what is popularly known as the "curse of dimensionality" where basically with an enormous number of features and not enough representative samples, model performance starts getting affected often leading to overfitting.
 
 Hence we need to look towards other categorical data feature engineering schemes for features having a large number of possible categories (like IP addresses).
-The bin-counting scheme is a useful scheme for dealing with categorical variables having many categories. **In this scheme, instead of using the actual label values for encoding, we use probability-based statistical information about the value and the actual target or response value which we aim to predict in our modeling efforts.**
+The bin-counting scheme is a useful scheme for dealing with categorical variables having many categories.
+**In this scheme, instead of using the actual label values for encoding, we use probability-based statistical information about the value and the actual target or response value which we aim to predict in our modeling efforts.**
 
 ## Example
 

@@ -2,7 +2,8 @@
 
 ## Delegate
 
-**Delegate type** is a "type" that represents methods that have specific parameters and return type. **Delegate** (a.k.a. delegate object) is an object that stores reference (address) of a specific method of a specific class, with compatible parameters and return type, which is already defined in the delegate type.
+**Delegate type** is a "type" that represents methods that have specific parameters and return type.
+**Delegate** (a.k.a. delegate object) is an object that stores reference (address) of a specific method of a specific class, with compatible parameters and return type, which is already defined in the delegate type.
 
 - You can invoke the methods using 'delegate objects' or 'delegates'.
 - Delegates are used to pass methods as arguments to other methods.
