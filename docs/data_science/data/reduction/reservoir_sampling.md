@@ -4,7 +4,8 @@
 
 Reservoir sampling is an interesting and elegant algorithm to deal with streaming data in online learning models, which is quite popular in products.
 
-Suppose the data is generated in a sequential streaming manner, for example, a time series, and you can't fit all the data to the memory, nor do you know how much data will be generated in the future. **You need to sample a subset with k samples to train a model, but you don't know which sample to select because many samples haven't been generated yet.**
+Suppose the data is generated in a sequential streaming manner, for example, a time series, and you can't fit all the data to the memory, nor do you know how much data will be generated in the future.
+**You need to sample a subset with k samples to train a model, but you don't know which sample to select because many samples haven't been generated yet.**
 
 Reservoir sampling can deal with this problem that **1) all the samples are selected with equal probability and 2) if you stop the algorithm at any time, the samples are always selected with correct probability.**
 

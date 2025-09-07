@@ -2,7 +2,8 @@
 
 ## Description
 
-Cost-sensitive learning is a technique for handling **imbalanced datasets** where one class (usually the minority class) has far fewer examples than the other. **Standard machine learning models** often favor the majority class, leading to poor performance on the minority class.
+Cost-sensitive learning is a technique for handling **imbalanced datasets** where one class (usually the minority class) has far fewer examples than the other.
+**Standard machine learning models** often favor the majority class, leading to poor performance on the minority class.
 Cost-sensitive learning addresses this by **assigning different misclassification costs** to each class, ensuring the model gives appropriate attention to the minority class.
 
 To improve model performance, different strategies can be applied:

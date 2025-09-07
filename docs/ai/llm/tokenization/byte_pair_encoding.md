@@ -1,8 +1,8 @@
-# Byte Pair Encoding (BPE) [Strategy]
+# Byte Pair Encoding (BPE) [Strategy] {Subword}
 
 ## Description
 
-Byte Pair Encoding (BPE) is a Subword tokenization algorithm commonly used in natural language processing (NLP).
+Byte Pair Encoding (BPE) is a **Subword tokenization** algorithm commonly used in natural language processing (NLP).
 It was originally designed for data compression but has since been adapted to tokenize text for tasks such as machine translation, language modeling, and more.
 BPE addresses the problem of word representation by splitting words into subword units, which can handle rare words and out-of-vocabulary (OOV) terms efficiently.
 

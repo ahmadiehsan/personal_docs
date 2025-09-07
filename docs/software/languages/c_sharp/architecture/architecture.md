@@ -175,7 +175,8 @@ AOT enables some scenarios like:
 ### Native AOT vs ReadyToRun
 
 **ReadyToRun** assemblies have **native code with native data structures + IL code**.
-Such an approach - when you have both native, and IL code allows to execute Tiered Compilation and perform optimizations in runtime. **Native AOT** in opposite produces **only native artifacts**.
+Such an approach - when you have both native, and IL code allows to execute Tiered Compilation and perform optimizations in runtime.
+**Native AOT** in opposite produces **only native artifacts**.
 It does not have IL code and can't be recompiled in any way with Tiered Compilation.
 
 ### Native AOT vs JIT
