@@ -5,8 +5,8 @@
 ### Make It Obvious
 
 - Fill out the Habits Scorecard. Write down your current habits to become aware of them.
-- Use implementation intentions: “I will [BEHAVIOR] at [TIME] in [LOCATION].”
-- Use habit stacking: “After I [CURRENT HABIT], I will [NEW HABIT].”
+- Use implementation intentions: "I will [BEHAVIOR] at [TIME] in [LOCATION]."
+- Use habit stacking: "After I [CURRENT HABIT], I will [NEW HABIT]."
 - Design your environment. Make the cues of good habits obvious and visible.
 
 ### Make It Attractive
@@ -26,8 +26,8 @@
 ### Make It Satisfying
 
 - Use reinforcement. Give yourself an immediate reward when you complete your habit.
-- Make “doing nothing” enjoyable. When avoiding a bad habit, design a way to see the benefits.
-- Use a habit tracker. Keep track of your habit streak and “don’t break the chain.”
+- Make "doing nothing" enjoyable. When avoiding a bad habit, design a way to see the benefits.
+- Use a habit tracker. Keep track of your habit streak and "don't break the chain."
 - Never miss twice. When you forget to do a habit, make sure you get back on track immediately.
 
 ## Breaking A Bad Habit

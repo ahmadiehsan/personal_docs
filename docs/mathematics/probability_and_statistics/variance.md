@@ -11,7 +11,7 @@ A higher variance suggests that the data points are more scattered, while a lowe
 
 !!! info
 
-    High variance is better than low variance **because that feature carries more meaning**, as long as it’s meaningful and not just outliers.
+    High variance is better than low variance **because that feature carries more meaning**, as long as it's meaningful and not just outliers.
 
 ## Formula
 

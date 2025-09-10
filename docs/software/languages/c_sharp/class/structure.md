@@ -49,7 +49,7 @@ struct Student
 ## Key Points
 
 | Property                          | Normal Class | Abstract Class | Interface | Sealed Class | Static Class | Structure |
-|-----------------------------------|--------------|----------------|-----------|--------------|--------------|-----------|
+| --------------------------------- | ------------ | -------------- | --------- | ------------ | ------------ | --------- |
 | Can Inherit from Other Classes    | Yes          | Yes            | No        | Yes          | No           | No        |
 | Can Inherit from Other Interfaces | Yes          | Yes            | Yes       | Yes          | No           | Yes       |
 | Can be Inherited                  | Yes          | Yes            | Yes       | No           | No           | No        |
@@ -74,7 +74,7 @@ struct Student
 ## Structures vs Classes
 
 | Structures                                                                                                      | Classes                                                                                         |
-|-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | Structures are "value-types".                                                                                   | Classes are "reference-types".                                                                  |
 | Structure instances (includes fields) are stored in stack. Structures doesn't require Heap.                     | Class instances (objects) are stored in Heap; Class reference variables are stored in stack.    |
 | Suitable to store small data (only one or two values).                                                          | Suitable to store large data (any no. of values).                                               |
@@ -95,7 +95,7 @@ C# provides a parameter-less constructor for every structure by default, which i
 
 - You can also create one or more user-defined parameterized constructors in structure.
 - Each parameterized constructor must initialize all fields; otherwise, it will be compile-time error.
-- The “new” keyword used with structure doesn't create any object / allocate any memory in heap; It is just a syntax to call constructor of structure.
+- The "new" keyword used with structure doesn't create any object / allocate any memory in heap; It is just a syntax to call constructor of structure.
 
 ```csharp
 public StructureName( datatype parameter )

@@ -9,7 +9,7 @@ Only a few labeled examples are needed for this framework to be competitive with
 
 !!! info
 
-    Not only can SetFit perform few-shot classification tasks, but it also has support for when you have no labels at all, also called zero-shot classification. SetFit generates synthetic examples from the label names to resemble the classification task and then trains a SetFit model on them. For example, if the target labels are “happy” and “sad,” then synthetic data could be “The example is happy” and “This example is sad.”
+    Not only can SetFit perform few-shot classification tasks, but it also has support for when you have no labels at all, also called zero-shot classification. SetFit generates synthetic examples from the label names to resemble the classification task and then trains a SetFit model on them. For example, if the target labels are "happy" and "sad," then synthetic data could be "The example is happy" and "This example is sad."
 
 ## Workflow
 
