@@ -1,4 +1,4 @@
-# Precision (PPV) [Categorical] [Imbalance]
+# Precision (PPV) [Classification] [Imbalance]
 
 ## Description
 
