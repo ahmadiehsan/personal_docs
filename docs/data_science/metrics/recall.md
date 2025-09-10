@@ -1,4 +1,4 @@
-# Recall (TPR) [Categorical] [Imbalance]
+# Recall (TPR) [Classification] [Imbalance]
 
 ## Description
 
