@@ -4,7 +4,7 @@
 
 Speculative RAG is an approach that involves generating multiple possible responses or outputs for a given input query, using a retrieval model to provide relevant information.
 The generated responses are then evaluated using a feedback mechanism to select the most plausible or relevant one.
-The goal is to enhance the model’s ability to produce accurate and contextually appropriate answers, especially when there is ambiguity or multiple potential interpretations of a query.
+The goal is to enhance the model's ability to produce accurate and contextually appropriate answers, especially when there is ambiguity or multiple potential interpretations of a query.
 
 ## Workflow
 

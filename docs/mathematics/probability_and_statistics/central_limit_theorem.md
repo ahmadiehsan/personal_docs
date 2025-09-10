@@ -9,4 +9,4 @@ This only holds if the samples are random, independent, and large enough, usuall
 
 !!! info
 
-    **Why does this matter?** Because once those averages form a normal shape, you can use all the tools from the normal distribution. You can calculate standard errors, build confidence intervals, run hypothesis tests, make estimates, and use z-scores, even if the original data wasn’t normal to begin with.
+    **Why does this matter?** Because once those averages form a normal shape, you can use all the tools from the normal distribution. You can calculate standard errors, build confidence intervals, run hypothesis tests, make estimates, and use z-scores, even if the original data wasn't normal to begin with.

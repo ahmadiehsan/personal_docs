@@ -20,7 +20,7 @@ Disadvantages:
 ## Use Cases
 
 - **Complex Question Answering**: Solves questions that require multiple reasoning steps and external lookups, such as answering open-domain questions using both knowledge and real-time data.
-- **Tool-Augmented Reasoning**: Integrates calculators, search engines, or databases to enhance the model’s capabilities beyond its training data.
+- **Tool-Augmented Reasoning**: Integrates calculators, search engines, or databases to enhance the model's capabilities beyond its training data.
 - **Interactive Agents**: Powers chatbots and virtual assistants that need to reason, plan, and act in real time to fulfill user requests.
 
 ## Workflow

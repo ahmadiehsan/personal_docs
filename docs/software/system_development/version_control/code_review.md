@@ -17,7 +17,7 @@
 
 ### Say No When Needed
 
-- Decline changes that don’t meet quality standards, even if it’s uncomfortable.
+- Decline changes that don't meet quality standards, even if it's uncomfortable.
 - Be objective and explain your reasoning clearly.
 - Suggest alternatives and focus on improvement, not personal criticism.
 - Avoid setting precedents that lead to technical debt.
@@ -48,7 +48,7 @@
 
 ### Ask Questions
 
-- Ask for clarification if you don’t understand something.
+- Ask for clarification if you don't understand something.
 - Your questions may reveal missing documentation or unclear logic.
 - Encourage open discussion and learning for everyone involved.
 
@@ -68,7 +68,7 @@
 
 ### Be Upfront
 
-- Communicate proactively if you can’t review code promptly.
+- Communicate proactively if you can't review code promptly.
 - Set clear expectations to avoid frustration and bottlenecks.
 
 ## Continuous Improvement

@@ -2,7 +2,7 @@
 
 ## Query
 
-In the query context, a query clause answers the question “How well does this document match this query clause?” Besides deciding whether or not the document matches, the query clause also calculates a relevance score in the _score metadata field.
+In the query context, a query clause answers the question "How well does this document match this query clause?" Besides deciding whether or not the document matches, the query clause also calculates a relevance score in the _score metadata field.
 
 Query context is in effect whenever a query clause is passed to a query parameter, such as:
 
@@ -14,7 +14,7 @@ Query context is in effect whenever a query clause is passed to a query paramete
 
 ## Filter
 
-In a filter context, a query clause answers the question “**Does this document match this query clause?**” The answer is a simple Yes or No — no scores are calculated.
+In a filter context, a query clause answers the question "**Does this document match this query clause?**" The answer is a simple Yes or No — no scores are calculated.
 Filter context is mainly used for filtering structured data, e.g.
 
 - Does this timestamp fall into the range of 2015 to 2016?

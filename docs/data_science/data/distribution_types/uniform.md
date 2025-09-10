@@ -4,7 +4,7 @@
 
 The simplest distribution where all outcomes in a given range are equally likely.
 
-It’s like rolling a fair die or picking a random number between 0 and 1, with no preference for any particular value in the range.
+It's like rolling a fair die or picking a random number between 0 and 1, with no preference for any particular value in the range.
 
 ## Examples
 

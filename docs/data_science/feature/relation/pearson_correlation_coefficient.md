@@ -5,7 +5,7 @@
 Correlation coefficients serve as indicators of the strength and direction of the linear relationship between two variables.
 In the realm of feature selection, these coefficients prove useful in identifying features highly correlated with the target variable, thus serving as potentially valuable predictors.
 
-**Multicollinearity** occurs when two or more independent variables in a regression model are highly correlated, making it difficult to determine each variable’s true effect on the target.
+**Multicollinearity** occurs when two or more independent variables in a regression model are highly correlated, making it difficult to determine each variable's true effect on the target.
 By examining the correlation matrix, we can identify pairs of variables with high correlation and consider removing or combining them to reduce multicollinearity and improve model reliability.
 
 The prevalent correlation coefficient employed for feature selection is the Pearson correlation coefficient, also referred to as Pearson's r.

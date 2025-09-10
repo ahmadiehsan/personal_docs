@@ -28,7 +28,7 @@ They also help with autoscaling.
 
 ## Measuring end-to-end latency
 
-Don’t forget to monitor async message latency.
+Don't forget to monitor async message latency.
 Dequeue latency (time a message waits before being processed) can significantly impact your total system latency.
 
 ## Design for failure
