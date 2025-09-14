@@ -12,40 +12,35 @@ This cycle repeats, optimizing annotation efforts and improving model performanc
 
 ```python
 from sklearn.datasets import make_classification
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
+from sklearn.ensemble import RandomForestClassifier
+from modAL.models import ActiveLearner
 import numpy as np
 
-# Step 1: Create a toy dataset
-X, y = make_classification(n_samples=100, n_features=2, n_classes=2, random_state=42)
+# Step 1: Create toy dataset
+X, y = make_classification(n_samples=100, n_features=5, n_classes=2, random_state=42)
 
-# Split into unlabeled pool and a small labeled set
-X_labeled, y_labeled = X[:5], y[:5]      # start with 5 labeled
-X_pool, y_pool = X[5:], y[5:]            # the rest unlabeled
+# Step 2: Initial small labeled set + unlabeled pool
+X_labeled, y_labeled = X[:5], y[:5]
+X_pool, y_pool = X[5:], y[5:]
 
-model = LogisticRegression()
+# Step 3: Define ActiveLearner with RandomForest
+learner = ActiveLearner(
+    estimator=RandomForestClassifier(),
+    X_training=X_labeled,
+    y_training=y_labeled,
+)
 
-for i in range(5):  # do 5 rounds of "active learning"
-    # Train on current labeled data
-    model.fit(X_labeled, y_labeled)
+# Step 4: Active learning loop
+for i in range(5):  # 5 queries
+    query_idx, query_inst = learner.query(X_pool)
+    print(f"Round {i+1}: Model asked for label of sample {query_idx[0]}")
 
-    # Pick the most uncertain sample (closest to 0.5 probability)
-    probs = model.predict_proba(X_pool)[:,1]
-    uncertainty = np.abs(probs - 0.5)
-    query_idx = np.argmin(uncertainty)
+    # "Oracle/Human" gives true label
+    learner.teach(X_pool[query_idx], y_pool[query_idx])
 
-    # Simulate oracle: reveal true label
-    X_new, y_new = X_pool[query_idx].reshape(1, -1), [y_pool[query_idx]]
-    print(f"Round {i+1}: Model asked for label of one sample -> got {y_new[0]}")
-
-    # Add this new data to labeled set
-    X_labeled = np.vstack([X_labeled, X_new])
-    y_labeled = np.append(y_labeled, y_new)
-
-    # Remove it from the pool
+    # Remove from pool
     X_pool = np.delete(X_pool, query_idx, axis=0)
     y_pool = np.delete(y_pool, query_idx, axis=0)
 
-y_pred = model.predict(X)  # Final accuracy on all data
-print("Final accuracy:", accuracy_score(y, y_pred))
+print("Final training complete!")
 ```
