@@ -1,12 +1,12 @@
-# Ridge (L2)
+# Ridge (L2) (Weight Decay)
 
 ## Description
 
-Ridge regression modifies ordinary least squares by adding a penalty term proportional to the square of the coefficients, controlled by $\lambda$ (or α).
-This reduces overfitting by shrinking coefficients toward zero, acting as implicit feature selection.
+L2 regularization, also known as ridge regression or weight decay, is a technique used to prevent overfitting in machine learning models.
+It works by adding a penalty term to the loss function, which is proportional to the square of the model's weights.
 
-Tuning α via cross-validation balances complexity and accuracy.
-Ridge handles multicollinearity well, stabilizing coefficient estimates where OLS struggles.
+The penalty term discourages the model from assigning large weights to individual features, leading to a simpler and more generalized model.
+By minimizing the combined loss function, which includes both the original loss and the penalty term, the model finds a balance between fitting the training data well and keeping the weights small, ultimately improving its ability to generalize to new, unseen data.
 
 ## Formula
 
@@ -21,15 +21,15 @@ $$
 
 ## Workflow
 
-<img src="image4.png" style="width:3.5293in" />
+<img src="image4.png" style="width:4in" />
 
 <span dir="rtl">تو تصویر بالا نشون داده شده که با اعمال ضریب های (w) کوچک امتحان میکنیم که آیا حذف یک متغیر دارای توان به حل مشکل ما کمک میکند یا خیر، از آنجایی که مقادیر w و b را سیستم بطور اتوماتیک تعیین میکند و ما در آنها نقشی نداریم لذا با استفاده از روش زیر، سیستم را مجبور به انتخاب اعداد کوچک برای ضریب های (w) دلخواه خود میکنیم:</span>
 
-<img src="image3.png" style="width:3.63959in" />
+<img src="image3.png" style="width:4in" />
 
 <span dir="rtl"> در تصویر بالا ما تنها تاثیر دو متغیر w سه و w چهار را کم کردیم، اما در سیستم های پیچیده تر بجای این کار از الگوی زیر استفاده می شود:</span>
 
-<img src="image2.png" style="width:3.42707in" />
+<img src="image2.png" style="width:4in" />
 
 <span dir="rtl">در الگوی بالا n تعداد متغیر های (w) های حاضر در معادله هستش، با بالا بردن $\lambda$ سیستم مجبور به انتخاب w های کوچکتر می شود که دقیقا هدف ما از انجام Regularization هستش</span>
 
