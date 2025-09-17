@@ -29,6 +29,7 @@
         "mathjax",
         "pymdownx",
         "Rerank",
-        "rerankers"
+        "rerankers",
+        "sklearn"
     ]
 }

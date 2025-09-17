@@ -1,4 +1,4 @@
-# K-Nearest Neighbors (KNN)
+# K-Nearest Neighbors (KNN) [Sup]
 
 ## Description
 

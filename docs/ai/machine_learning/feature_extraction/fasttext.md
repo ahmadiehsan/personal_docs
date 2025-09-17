@@ -1,4 +1,4 @@
-# FastText
+# FastText [Self-Sup]
 
 ## Description
 

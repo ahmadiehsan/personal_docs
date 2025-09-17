@@ -1,4 +1,4 @@
-# LoRA [PEFT] {QLoRA}
+# LoRA [Sup] [PEFT] {QLoRA}
 
 ## Description
 

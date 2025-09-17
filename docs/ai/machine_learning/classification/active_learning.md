@@ -1,4 +1,4 @@
-# Active learning
+# Active learning [Sup]
 
 ## Description
 

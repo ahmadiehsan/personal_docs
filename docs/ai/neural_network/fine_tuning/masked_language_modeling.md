@@ -1,4 +1,4 @@
-# Masked Language Modeling (MLM)
+# Masked Language Modeling (MLM) [Self-Sup]
 
 ## Description
 
@@ -14,3 +14,15 @@ This also helps the model to adapt to a certain domain or even the lingo of a sp
 !!! info
 
     Notice how the masks were filled with abstract concepts in 1 while they were filled with movie-specific concepts in 2.
+
+## Formula
+
+Mathematically, the objective of an MLM is to maximize the following likelihood:
+
+$$
+L = \sum_i \log \big( P(w_i \mid w_{i-1}; \theta) \big)
+$$
+
+- $w_i$ is a masked word
+- $w_{-i}$ are the non-masked words
+- $θ$ represents the model parameters

@@ -1,4 +1,4 @@
-# Online RL {GRPO} {PPO}
+# Online RL [RL] {GRPO} {PPO}
 
 ## Description
 

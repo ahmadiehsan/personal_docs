@@ -1,4 +1,4 @@
-# HDBSCAN
+# HDBSCAN [Unsup]
 
 ## Description
 

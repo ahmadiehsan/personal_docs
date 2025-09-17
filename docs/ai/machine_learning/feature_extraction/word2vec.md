@@ -1,4 +1,4 @@
-# Word2Vec
+# Word2Vec [Self-Sup]
 
 ## Description
 
