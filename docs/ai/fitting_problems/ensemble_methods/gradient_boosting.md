@@ -1,4 +1,4 @@
-# Gradient Boosting
+# Gradient Boosting [Boosting]
 
 ## Description
 

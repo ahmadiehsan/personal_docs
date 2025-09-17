@@ -1,4 +1,4 @@
-# Autoregressive Language Modeling [Self-Su]
+# Autoregressive Language Modeling [Self-Sup]
 
 ## Description
 
@@ -9,6 +9,10 @@ It's trained to maximize the likelihood of a word given its previous words in th
 
 The objective of an autoregressive language model is to maximize:
 
-<img src="image1.png" style="width:2.96354in" />
+$$
+L = \sum_i \log \big( P(w_i \mid w_1, \ldots, w_{i-1}; \theta) \big)
+$$
 
-where w_i is the current word, w1,...., and wi−1 are the previous words, and θ represents the model parameters.
+- $w_i$ is the current word, w1,....
+- $wi−1$ are the previous words
+- $θ$ represents the model parameters

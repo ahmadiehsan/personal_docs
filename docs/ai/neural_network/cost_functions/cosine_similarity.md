@@ -15,4 +15,6 @@ The model will learn to recognize the degree of similarity between sentences.
 
 ## Formula
 
-$similarity(S_1, S_2) = \dfrac{||S_1|| \, ||S_2|| \, \times \cos(\theta)}{||S_1|| \, ||S_2||}$
+$$
+similarity(S_1, S_2) = \dfrac{||S_1|| \, ||S_2|| \, \times \cos(\theta)}{||S_1|| \, ||S_2||}
+$$

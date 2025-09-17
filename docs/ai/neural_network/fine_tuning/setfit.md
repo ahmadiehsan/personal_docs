@@ -1,4 +1,4 @@
-# SetFit
+# SetFit [Self-Sup]
 
 ## Description
 

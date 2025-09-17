@@ -1,4 +1,4 @@
-# DPO (Direct Preference Optimization)
+# DPO (Direct Preference Optimization) [Sup]
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Contrastive Learning
+# Contrastive Learning [Self-Sup]
 
 ## Overview
 

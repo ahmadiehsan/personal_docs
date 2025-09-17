@@ -14,3 +14,18 @@ The process consists of the following steps:
 
 3. **Perform the search**: Train a model using each combination of hyperparameter values and evaluate its performance.
 4. **Select the best hyperparameters**: Choose the combination that achieves the best performance based on the evaluation metric.
+
+## Example
+
+```python
+from sklearn.datasets import load_iris
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import GridSearchCV
+
+X, y = load_iris(return_X_y=True)
+param_grid = {"C": [0.1, 1, 10]}
+clf = LogisticRegression(max_iter=200)
+grid = GridSearchCV(clf, param_grid)
+grid.fit(X, y)
+print("Best C:", grid.best_params_["C"])
+```
