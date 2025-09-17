@@ -23,7 +23,7 @@ The loss goes up and down a lot instead of steadily trending downward.
 
 ### Plateauing
 
-The loss stops improving (gets “stuck”) at some value.
+The loss stops improving (gets "stuck") at some value.
 
 - **Why it happens**: Model has reached a local minimum, learning rate is too low, or the capacity of the model is too small for the task.
-- **What it looks like**: Loss curve flattens out and doesn’t drop further.
+- **What it looks like**: Loss curve flattens out and doesn't drop further.
