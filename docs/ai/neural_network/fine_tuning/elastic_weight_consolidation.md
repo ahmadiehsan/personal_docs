@@ -56,7 +56,7 @@ def continual_fine_tune(model, tokenizer, old_dataset, new_dataset):
         train_dataset=new_dataset["train"],
         eval_dataset=new_dataset["validation"],
         compute_loss=compute_loss,
-        # Additional params here
+        ...
     )
     trainer.train()
 ```

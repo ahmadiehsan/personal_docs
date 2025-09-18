@@ -11,3 +11,13 @@ However, if we lower the number of bits we also lower the memory requirements of
 !!! info
 
     Notice the lowered accuracy when we halve the number of bits.
+
+## Example
+
+```python
+import torch
+import torch.quantization as quant
+
+model = ...  # Pre-trained model
+quantized_model = quant.quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)
+```
