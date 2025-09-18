@@ -1,4 +1,4 @@
-# Dropout Regularization
+# Dropout
 
 ## Description
 

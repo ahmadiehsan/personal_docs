@@ -1,4 +1,4 @@
-# Early Stopping Regularization
+# Early Stopping
 
 ## Description
 
@@ -16,4 +16,4 @@ By visualizing the training and validation error of the model during training, w
 
 !!! info
 
-    <span dir="rtl">بعضی وقت ها هر چقدر سیستم بیشتر با training set آموزش ببینه روی test set بدتر جواب میده، بخاطر همین با این تکنیک یه جایی از آموزش که جواب معقولی روی dev set های میده آنوزش رو متوقف میکنیم و با این کار از overfit شدن جلوگیری میکنیم.</span>
+    <span dir="rtl">بعضی وقت ها هر چقدر سیستم بیشتر با training set آموزش ببینه روی test set بدتر جواب میده، بخاطر همین با این تکنیک یه جایی از آموزش که جواب معقولی روی dev set های میده آموزش رو متوقف میکنیم و با این کار از overfit شدن جلوگیری میکنیم.</span>

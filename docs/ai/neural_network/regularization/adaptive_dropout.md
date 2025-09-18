@@ -1,4 +1,4 @@
-# Adaptive Dropout Regularization [Dropout]
+# Adaptive Dropout [Dropout]
 
 ## Description
 

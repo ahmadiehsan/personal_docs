@@ -1,4 +1,4 @@
-# Layer-Wise Adaptive Regularization
+# Layer-Wise Adaptive
 
 ## Description
 
