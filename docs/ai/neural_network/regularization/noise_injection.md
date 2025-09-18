@@ -1,4 +1,4 @@
-# Noise Injection Regularization
+# Noise Injection [Noise]
 
 ## Description
 

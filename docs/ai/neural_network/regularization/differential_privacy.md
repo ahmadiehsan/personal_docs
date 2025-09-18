@@ -1,4 +1,4 @@
-# Differential Privacy (DP)
+# Differential Privacy (DP) [Noise]
 
 ## Description
 
