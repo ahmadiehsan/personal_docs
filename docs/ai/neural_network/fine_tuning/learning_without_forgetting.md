@@ -18,18 +18,20 @@ LwF uses a combined loss function that includes a distillation loss to align the
 import torch
 import torch.nn.functional as F
 
+def distillation_loss(student_outputs, teacher_outputs, temperature=2.0):
+    return F.kl_div(
+        F.log_softmax(student_outputs / temperature, dim=1),
+        F.softmax(teacher_outputs / temperature, dim=1),
+        reduction="batchmean"
+    ) * (temperature ** 2)
+
 def lwf_loss(student_model, teacher_model, data, labels, temperature=2.0, alpha=0.5):
     with torch.no_grad():  # Teacher's predictions act as "soft labels". No gradients needed
         teacher_outputs = teacher_model(data)
 
     student_outputs = student_model(data)
     loss = F.cross_entropy(student_outputs, labels)
+    dist_loss = distillation_loss(student_outputs, teacher_outputs, temperature)
 
-    distillation_loss = F.kl_div(
-        F.log_softmax(student_outputs / temperature, dim=1),
-        F.softmax(teacher_outputs / temperature, dim=1),
-        reduction="batchmean"
-    ) * (temperature ** 2)
-
-    return (alpha * loss) + ((1 - alpha) * distillation_loss)
+    return (alpha * loss) + ((1 - alpha) * dist_loss)
 ```

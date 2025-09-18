@@ -28,6 +28,7 @@
         "glightbox",
         "isinstance",
         "mathjax",
+        "optim",
         "pymdownx",
         "Rerank",
         "rerankers",
