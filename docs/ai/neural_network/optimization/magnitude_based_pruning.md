@@ -18,14 +18,14 @@ import torch.nn.utils.prune as prune
 
 model = ...  # Assume model is an instance of a pre-trained NN
 
-# Step 1) Prune 30% of weights in all Linear layers (Masking step)
+# Step 1) Prune 30% of weights in all Linear layers (Masking weights)
 for name, module in model.named_modules():
     if isinstance(module, torch.nn.Linear):
         prune.l1_unstructured(module, name="weight", amount=0.3)
 
 # Optional) Fine-tune the model here
 
-# Step 2) Remove the pruning reparameterization (Permanently removing step)
+# Step 2) Remove the pruning reparameterization (Permanently replacing masked weights with 0)
 for name, module in model.named_modules():
     if isinstance(module, torch.nn.Linear):
         prune.remove(module, "weight")
