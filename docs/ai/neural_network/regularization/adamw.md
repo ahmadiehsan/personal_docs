@@ -1,4 +1,4 @@
-# AdamW Algorithm [Adam]
+# AdamW [Adam]
 
 ## Description
 

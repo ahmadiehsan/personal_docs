@@ -1,4 +1,4 @@
-# ADOPT Algorithm [Adam]
+# ADOPT [Adam]
 
 ## Description
 
