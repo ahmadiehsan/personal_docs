@@ -1,4 +1,4 @@
-# Magnitude-Based Pruning [Pruning]
+# Magnitude-Based Pruning [Pruning] [Unstructured]
 
 ## Description
 
@@ -16,21 +16,17 @@ By pruning such weights, the model becomes more compact and faster, with minimal
 import torch
 import torch.nn.utils.prune as prune
 
-model = ... # Assume model is an instance of a pre-trained NN
+model = ...  # Assume model is an instance of a pre-trained NN
 
-# Step 1) Prune 30% of the lowest magnitude weights in all Linear layers
+# Step 1) Prune 30% of weights in all Linear layers (Masking step)
 for name, module in model.named_modules():
     if isinstance(module, torch.nn.Linear):
-        prune.l1_unstructured(module, name='weight', amount=0.3)
+        prune.l1_unstructured(module, name="weight", amount=0.3)
 
-# Step 2) Remove the pruning reparameterization
+# Optional) Fine-tune the model here
+
+# Step 2) Remove the pruning reparameterization (Permanently removing step)
 for name, module in model.named_modules():
     if isinstance(module, torch.nn.Linear):
-        prune.remove(module, 'weight')
+        prune.remove(module, "weight")
 ```
-
-!!! info
-
-    The first step applies a temporary mask (Optionally, after this step we can fine-tune the model to help the remaining weights adjust and recover accuracy).
-
-    The second step permanently sets the weak connections to zero and throws away the temporary mask, making the model's new, smaller structure final.
