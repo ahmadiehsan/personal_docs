@@ -9,7 +9,7 @@ This allows the model to adapt to the new task while still maintaining some regu
 
 !!! info
 
-    This approach prevents overfitting more efficiently than standard dropout, as it maintains the network’s capacity to learn complex patterns through important neurons while aggressively regularizing redundant or noise-sensitive parts, resulting in models that generalize better with less performance sacrifice on critical features.
+    This approach prevents overfitting more efficiently than standard dropout, as it maintains the network's capacity to learn complex patterns through important neurons while aggressively regularizing redundant or noise-sensitive parts, resulting in models that generalize better with less performance sacrifice on critical features.
 
 ## Example
 

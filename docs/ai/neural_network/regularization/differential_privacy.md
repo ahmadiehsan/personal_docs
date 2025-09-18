@@ -4,8 +4,8 @@
 
 Differential privacy (DP) is a technique that adds carefully calibrated noise to data or computations to protect individual privacy while still allowing useful insights, ensuring that the inclusion or exclusion of any single data point does not significantly affect model performance.
 
-Is a technique used to enhance model privacy by adding noise to the model’s training process, which protects individual data points from being exposed in model outputs or learned representations.
-By introducing controlled randomness, DP-based regularization limits the model’s reliance on any specific data sample, thereby reducing the risk of overfitting and making the model less sensitive to variations in individual data points.
+Is a technique used to enhance model privacy by adding noise to the model's training process, which protects individual data points from being exposed in model outputs or learned representations.
+By introducing controlled randomness, DP-based regularization limits the model's reliance on any specific data sample, thereby reducing the risk of overfitting and making the model less sensitive to variations in individual data points.
 
 !!! info
 
