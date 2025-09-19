@@ -25,8 +25,8 @@ We will pre-define the final feature vector size to be 6 in this case.
 ```python
 from sklearn.feature_extraction import FeatureHasher
 
-fh = FeatureHasher(n_features=6, input_type='string')
-hashed_features = fh.fit_transform(vg_df['Genre'])
+fh = FeatureHasher(n_features=6, input_type="string")
+hashed_features = fh.fit_transform(vg_df["Genre"])
 hashed_features = hashed_features.toarray()
-pd.concat([vg_df[['Name', 'Genre']], pd.DataFrame(hashed_features)], axis=1).iloc[1:7]
+pd.concat([vg_df[["Name", "Genre"]], pd.DataFrame(hashed_features)], axis=1).iloc[1:7]
 ```

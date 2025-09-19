@@ -14,18 +14,18 @@
   ```python
   # Input data is sorted by name
   # (name, age)
-  ('A', 19)
-  ('B', 18)
-  ('C', 21)
-  ('D', 19)
-  ('E', 23)
+  ("A", 19)
+  ("B", 18)
+  ("C", 21)
+  ("D", 19)
+  ("E", 23)
 
   # Assuming an unstable sorting algorithm is used to sort the list by age,
-  # the result changes the relative position of ('D', 19) and ('A', 19),
+  # the result changes the relative position of ("D", 19) and ("A", 19),
   # and the property of the input data being sorted by name is lost
-  ('B', 18)
-  ('D', 19)
-  ('A', 19)
-  ('C', 21)
-  ('E', 23)
+  ("B", 18)
+  ("D", 19)
+  ("A", 19)
+  ("C", 21)
+  ("E", 23)
   ```

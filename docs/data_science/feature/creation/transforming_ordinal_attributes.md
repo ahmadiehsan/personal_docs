@@ -13,8 +13,8 @@ In general, there is no generic module or function to map and transform these fe
 Hence we can use a custom encoding/mapping scheme.
 
 ```python
-gen_ord_map = {'Gen 1': 1, 'Gen 2': 2, 'Gen 3': 3,
-               'Gen 4': 4, 'Gen 5': 5, 'Gen 6': 6}
+gen_ord_map = {"Gen 1": 1, "Gen 2": 2, "Gen 3": 3,
+               "Gen 4": 4, "Gen 5": 5, "Gen 6": 6}
 
-poke_df['GenerationLabel'] = poke_df['Generation'].map(gen_ord_map)
+poke_df["GenerationLabel"] = poke_df["Generation"].map(gen_ord_map)
 ```

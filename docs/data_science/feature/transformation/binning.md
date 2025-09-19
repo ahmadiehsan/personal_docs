@@ -28,26 +28,26 @@ Binning based on rounding is one of the ways, where you can use the rounding ope
 
 Example:
 
-| Age Range     | Bin |
-|---------------|-----|
-| 0  –  15      | 1   |
-| 16 –  30      | 2   |
-| 31 –  45      | 3   |
-| 46 –  60      | 4   |
-| 61 –  75      | 5   |
-| 75 – 100      | 6   |
+| Age Range | Bin |
+| --------- | --- |
+| 0  –  15  | 1   |
+| 16 –  30  | 2   |
+| 31 –  45  | 3   |
+| 46 –  60  | 4   |
+| 61 –  75  | 5   |
+| 75 – 100  | 6   |
 
 ```python
 bin_ranges = [0, 15, 30, 45, 60, 75, 100]
 bin_names = [1, 2, 3, 4, 5, 6]
 
-fcc_survey_df['Age_bin_custom_range'] = pd.cut(
-    np.array(fcc_survey_df['Age']),
+fcc_survey_df["Age_bin_custom_range"] = pd.cut(
+    np.array(fcc_survey_df["Age"]),
     bins=bin_ranges
 )
 
-fcc_survey_df['Age_bin_custom_label'] = pd.cut(
-    np.array(fcc_survey_df['Age']),
+fcc_survey_df["Age_bin_custom_label"] = pd.cut(
+    np.array(fcc_survey_df["Age"]),
     bins=bin_ranges,
     labels=bin_names
 )
@@ -71,17 +71,17 @@ Example:
 
 ```python
 fig, ax = plt.subplots()
-fcc_survey_df['Income'].hist(bins=30, color='#A9C5D3', edgecolor='black', grid=False)
-ax.set_title('Developer Income Histogram', fontsize=12)
-ax.set_xlabel('Developer Income', fontsize=12)
-ax.set_ylabel('Frequency', fontsize=12)
+fcc_survey_df["Income"].hist(bins=30, color="#A9C5D3", edgecolor="black", grid=False)
+ax.set_title("Developer Income Histogram", fontsize=12)
+ax.set_xlabel("Developer Income", fontsize=12)
+ax.set_ylabel("Frequency", fontsize=12)
 ```
 
 The above distribution depicts a right skew in the income with lesser developers earning more money and vice versa.
 
 ```python
 quantile_list = [0, .25, .5, .75, 1.]
-quantiles = fcc_survey_df['Income'].quantile(quantile_list)
+quantiles = fcc_survey_df["Income"].quantile(quantile_list)
 quantiles
 
 # Output
