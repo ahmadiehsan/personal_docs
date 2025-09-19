@@ -51,7 +51,7 @@ for k in K_range:
 
 # Plot elbow curve
 plt.plot(K_range, distortions)
-plt.xlabel('k')
-plt.ylabel('Distortion')
-plt.title('Elbow Method For Optimal k')
+plt.xlabel("k")
+plt.ylabel("Distortion")
+plt.title("Elbow Method For Optimal k")
 ```

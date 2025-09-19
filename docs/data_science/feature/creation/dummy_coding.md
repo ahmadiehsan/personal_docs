@@ -15,7 +15,7 @@ The extra feature is completely disregarded and thus if the category values rang
 ## Example
 
 ```python
-gen_dummy_features = pd.get_dummies(poke_df['Generation'], drop_first=True)
+gen_dummy_features = pd.get_dummies(poke_df["Generation"], drop_first=True)
 
-pd.concat([poke_df[['Name', 'Generation']], gen_dummy_features], axis=1).iloc[4:10]
+pd.concat([poke_df[["Name", "Generation"]], gen_dummy_features], axis=1).iloc[4:10]
 ```

@@ -30,5 +30,5 @@ Here, $x$ is the original feature value.
 ## Example
 
 ```python
-fcc_survey_df['Income_log'] = np.log((1 + fcc_survey_df['Income']))
+fcc_survey_df["Income_log"] = np.log((1 + fcc_survey_df["Income"]))
 ```

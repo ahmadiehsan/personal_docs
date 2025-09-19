@@ -14,5 +14,5 @@ Movie, music, and video game genres, country names, food, and cuisine types are 
 from sklearn.preprocessing import LabelEncoder
 
 gle = LabelEncoder()
-genre_labels = gle.fit_transform(vg_df['Genre'])
+genre_labels = gle.fit_transform(vg_df["Genre"])
 ```

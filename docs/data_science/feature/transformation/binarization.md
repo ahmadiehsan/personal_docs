@@ -16,9 +16,9 @@ In this case, a binary feature is preferred as opposed to a count based feature.
 With numpy:
 
 ```python
-watched = np.array(popsong_df['listen_count'])
+watched = np.array(popsong_df["listen_count"])
 watched[watched >= 1] = 1
-popsong_df['watched'] = watched
+popsong_df["watched"] = watched
 ```
 
 With scikit-learn:
@@ -27,7 +27,7 @@ With scikit-learn:
 from sklearn.preprocessing import Binarizer
 
 bn = Binarizer(threshold=0.9)
-pd_watched = bn.transform([popsong_df['listen_count']])[0]
-popsong_df['pd_watched'] = pd_watched
+pd_watched = bn.transform([popsong_df["listen_count"]])[0]
+popsong_df["pd_watched"] = pd_watched
 popsong_df.head(11)
 ```

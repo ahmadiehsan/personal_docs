@@ -27,7 +27,7 @@ pf = PolynomialFeatures(degree=2, interaction_only=False, include_bias=False)
 res = pf.fit_transform(atk_def)
 intr_features = pd.DataFrame(
     res,
-    columns=['Attack', 'Defense', 'Attack^2', 'Attack x Defense', 'Defense^2']
+    columns=["Attack", "Defense", "Attack^2", "Attack x Defense", "Defense^2"]
 )
 intr_features.head(5)
 ```

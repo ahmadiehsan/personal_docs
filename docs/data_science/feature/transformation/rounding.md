@@ -14,16 +14,16 @@ Let's try applying this concept in a dummy dataset depicting store items and the
 ## Example
 
 ```python
-items_popularity = pd.read_csv('datasets/item_popularity.csv', encoding='utf-8')
+items_popularity = pd.read_csv("datasets/item_popularity.csv", encoding="utf-8")
 
-items_popularity['popularity_scale_10'] = np.array(
-    np.round((items_popularity['pop_percent'] * 10)),
-    dtype='int'
+items_popularity["popularity_scale_10"] = np.array(
+    np.round((items_popularity["pop_percent"] * 10)),
+    dtype="int"
 )
 
-items_popularity['popularity_scale_100'] = np.array(
-    np.round((items_popularity['pop_percent'] * 100)),
-    dtype='int'
+items_popularity["popularity_scale_100"] = np.array(
+    np.round((items_popularity["pop_percent"] * 100)),
+    dtype="int"
 )
 
 items_popularity

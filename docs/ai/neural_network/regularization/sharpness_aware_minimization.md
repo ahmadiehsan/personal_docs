@@ -27,7 +27,7 @@ class SAM(torch.optim.Optimizer):
 
         # Perturb weights
         for group in self.param_groups:
-            for p in group['params']:
+            for p in group["params"]:
                 e_w = p.grad * scale
                 p.add_(e_w)
 
