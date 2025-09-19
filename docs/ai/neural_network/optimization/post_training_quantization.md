@@ -16,6 +16,7 @@ PTQ is ideal for models where retraining is expensive or impractical, and it wor
 ## Example
 
 ```python
+import torch
 import torch.quantization as quant
 
 model = ...  # Load pre-trained model
@@ -26,6 +27,12 @@ model.qconfig = quant.default_qconfig
 
 # Prepare for static quantization
 model_prepared = quant.prepare(model)
+
+# Calibration step: run representative data through the model
+# (This example uses random data; replace with real samples)
+for _ in range(100):
+    sample_input = torch.randn(1, 784)
+    model_prepared(sample_input)
 
 # Apply quantization
 model_quantized = quant.convert(model_prepared)

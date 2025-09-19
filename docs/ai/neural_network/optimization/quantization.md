@@ -14,17 +14,9 @@ However, if we lower the number of bits we also lower the memory requirements of
 
 ## Varieties
 
-There are two main quantization approaches based on when quantization is applied:
-
-- **Post-training quantization (PTQ)**: Applies quantization after the model has been fully trained, with minimal or no additional training. Can be implemented as either static (with calibration) or dynamic.
-- **Quantization-aware training (QAT)**: Simulates quantization effects during training by adding fake quantization operations in the forward pass while keeping gradients in full precision. Typically results in static quantization for deployment.
-
-## Example
-
-```python
-import torch
-import torch.quantization as quant
-
-model = ...  # Pre-trained model
-quantized_model = quant.quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)
-```
+| Strategy        | Accuracy                                         | Complexity                         | Performance                             | Resources                      |
+| --------------- | ------------------------------------------------ | ---------------------------------- | --------------------------------------- | ------------------------------ |
+| PTQ             | Good for simple models; declines with complexity | Low; minimal setup                 | 75% storage reduction; 2-4x speedup     | Low; minimal compute needed    |
+| QAT             | Highest; best for sub-8-bit                      | High; requires extended training   | High compression with the best accuracy | High; intensive training needs |
+| Dynamic         | Good for RNNs; weak for CNNs                     | Medium; runtime overhead           | Good memory savings; slower compute     | Medium; runtime processing     |
+| Mixed-Precision | High; flexible precision options                 | Medium-high; layer-specific tuning | Hardware-dependent speedup              | Medium-high during setup       |
