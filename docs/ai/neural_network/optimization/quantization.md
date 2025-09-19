@@ -12,6 +12,13 @@ However, if we lower the number of bits we also lower the memory requirements of
 
     Notice the lowered accuracy when we halve the number of bits.
 
+## Varieties
+
+There are two main quantization approaches based on when quantization is applied:
+
+- **Post-training quantization (PTQ)**: Applies quantization after the model has been fully trained, with minimal or no additional training. Can be implemented as either static (with calibration) or dynamic.
+- **Quantization-aware training (QAT)**: Simulates quantization effects during training by adding fake quantization operations in the forward pass while keeping gradients in full precision. Typically results in static quantization for deployment.
+
 ## Example
 
 ```python

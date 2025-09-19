@@ -1,4 +1,4 @@
-# Learning without Forgetting (LwF) [Sup] [Catastrophic Forgetting]
+# Learning Without Forgetting (LwF) [Sup] [Catastrophic Forgetting]
 
 ## Description
 
