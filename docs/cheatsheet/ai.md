@@ -5,6 +5,14 @@
 - Memory: **3.6 bytes** per parameter
 - Double Descent: At first, the model tries to just memorize the data, so it gradually improves. But once its memory fills up, it has to slowly start discarding what it memorized and actually learn the underlying logic of the subject. As a result, the model keeps getting better over time, then suddenly its quality drops, and after that, it begins improving again.
 
+## Transformer Layers
+
+Different layers in a transformer specialize in different linguistic properties:
+
+- **Lower layers**: Capture syntax and token identity.
+- **Middle layers**: Handle grammar and sentence structure.
+- **Deeper layers**: Focus on semantics, reasoning, and factual recall.
+
 ## H100 Varieties
 
 | Feature               | H100 PCIe                                                                          | H100 SXM                                                                          | H100 NVL                                                        |
