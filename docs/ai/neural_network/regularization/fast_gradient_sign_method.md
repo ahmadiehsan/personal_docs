@@ -9,7 +9,7 @@ The input data is slightly changed by a small amount, controlled by a factor cal
 
 !!! info
 
-    FGSM is commonly used to test model robustness and for adversarial training, where models are trained on adversarial examples to enhance security. However, FGSM’s one-step nature makes it fast but less effective against strong defenses, unlike iterative methods that achieve higher attack success.
+    FGSM is commonly used to test model robustness and for adversarial training, where models are trained on adversarial examples to enhance security. However, FGSM's one-step nature makes it fast but less effective against strong defenses, unlike iterative methods that achieve higher attack success.
 
 ## Example
 
