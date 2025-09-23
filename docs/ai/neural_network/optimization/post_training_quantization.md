@@ -3,7 +3,7 @@
 ## Description
 
 PTQ is the **most straightforward** form of quantization and is **applied after a model has been fully trained**.
-It doesn’t require model retraining and works by converting the high-precision weights and activations into lower-precision formats, typically INT8.
+It doesn't require model retraining and works by converting the high-precision weights and activations into lower-precision formats, typically INT8.
 
 PTQ is ideal for models where retraining is expensive or impractical, and it works best for tasks that are not overly sensitive to precision loss.
 

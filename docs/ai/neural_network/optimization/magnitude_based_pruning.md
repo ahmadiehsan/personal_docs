@@ -3,7 +3,7 @@
 ## Description
 
 Magnitude-based pruning is **one of the simplest and most widely used** pruning techniques.
-The idea behind this method is to remove weights in the neural network that contribute least to the model’s overall function, typically, these are weights with the smallest magnitude (absolute value).
+The idea behind this method is to remove weights in the neural network that contribute least to the model's overall function, typically, these are weights with the smallest magnitude (absolute value).
 By pruning such weights, the model becomes more compact and faster, with minimal impact on accuracy.
 
 !!! info
