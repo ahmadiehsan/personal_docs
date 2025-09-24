@@ -16,9 +16,28 @@ The input data is slightly changed by a small amount, controlled by a factor cal
 ```python
 import torch
 
-def fgsm_attack(image, epsilon, data_grad):
-    sign_data_grad = data_grad.sign()
-    perturbed_image = image + epsilon * sign_data_grad
-    perturbed_image = torch.clamp(perturbed_image, 0, 1)
-    return perturbed_image
+def adversarial_train_step(model, inputs, labels, epsilon=0.1):
+    embeds = model.get_input_embeddings()(inputs["input_ids"])
+    embeds.requires_grad = True
+    outputs = model(inputs, inputs_embeds=embeds)
+    loss = torch.nn.functional.cross_entropy(outputs.logits, labels)
+    loss.backward()
+
+    perturb = epsilon * embeds.grad.detach().sign()
+    adv_embeds = embeds + perturb
+    adv_outputs = model(inputs_embeds=adv_embeds)
+    adv_loss = torch.nn.functional.cross_entropy(adv_outputs.logits, labels)
+
+    return 0.5 * (loss + adv_loss)
+
+def adversarial_train(model, train_dataloader, optimizer, num_epochs=3):
+    for epoch in range(num_epochs):
+        for batch in train_dataloader:
+            inputs, labels = batch
+            loss = adversarial_train_step(model, inputs, labels)
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+
+    return model
 ```
