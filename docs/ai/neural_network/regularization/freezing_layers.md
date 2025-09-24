@@ -1,4 +1,4 @@
-# Freezing Layers [Sup]
+# Freezing Layers
 
 ## Description
 
@@ -6,7 +6,7 @@ Researchers have shown that training only the first five encoder blocks is enoug
 
 Effect of frozen training blocks on training performance:
 
-![.png](freezing_layers/effect.png)
+<img src="effect.png" style="width:5in" />
 
 ## Example
 

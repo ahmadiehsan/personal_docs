@@ -1,4 +1,4 @@
-# RLHF (Reinforcement Learning from Human Feedback) [RL]
+# RLHF (Reinforcement Learning from Human Feedback)
 
 ## Overview
 

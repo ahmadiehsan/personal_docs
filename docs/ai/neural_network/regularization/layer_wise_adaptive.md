@@ -1,4 +1,4 @@
-# Layer-Wise Adaptive
+# Layer-Wise Adaptive [Dropout]
 
 ## Description
 

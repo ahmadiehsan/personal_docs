@@ -6,12 +6,24 @@
 
 For RELU activation function:
 
-<img src="image2.jpg" style="width:3.29699in" />
+$$\sqrt{\frac{2}{size^{[l-1]}}}$$
+
+```python
+W = np.random.randn(size_l, size_l-1) * np.sqrt(2/size_l-1)
+```
 
 For tanh activation function :
 
-<img src="image3.jpg" style="width:3.25989in" />
+$$\sqrt{\frac{1}{size^{[l-1]}}}$$
+
+```python
+W = np.random.randn(size_l, size_l-1) * np.sqrt(1/size_l-1)
+```
 
 Another commonly used heuristic is:
 
-<img src="image1.jpg" style="width:3.2413in" />
+$$\sqrt{\frac{2}{size^{[l-1]} + size^{[l]}}}$$
+
+```python
+W = np.random.randn(size_l, size_l-1) * np.sqrt(2 / (size_l-1 + size_l))
+```
