@@ -17,26 +17,26 @@ let hello: String = String::from("नमस्ते");
 
 ## Loop
 
-- Bytes
+=== "Bytes"
 
-  ```rust
-  for b: u8 in "नमस्ते".bytes() {
-      println!("{}", b);
-  }
-  ```
+    ```rust
+    for b: u8 in "नमस्ते".bytes() {
+        println!("{}", b);
+    }
+    ```
 
-- Scalar
+=== "Scalar"
 
-  ```rust
-  for c: char in "नमस्ते".chars() {
-      println!("{}", c);
-  }
-  ```
+    ```rust
+    for c: char in "नमस्ते".chars() {
+        println!("{}", c);
+    }
+    ```
 
-- Grapheme
+=== "Grapheme"
 
-  ```rust
-  for g: &str in "नमस्ते".graphemes(is_extended: true) {
-      println!("{}", g);
-  }
-  ```
+    ```rust
+    for g: &str in "नमस्ते".graphemes(is_extended: true) {
+        println!("{}", g);
+    }
+    ```
