@@ -2,57 +2,42 @@
 
 ## Description
 
-=== "RLHF"
+RLHF (Reinforcement Learning from Human Feedback) is a fine-tuning technique for large language models (LLMs) that leverages human feedback to align model outputs with human preferences.
+It is widely used to improve safety, helpfulness, and alignment of generative models.
 
-    **RLHF (Reinforcement Learning from Human Feedback)** is a fine-tuning technique for large language models (LLMs) that leverages human feedback to align model outputs with human preferences.
-    It is widely used to improve safety, helpfulness, and alignment of generative models.
+Pros:
 
-    **Pros:**
+- Aligns models with human values and preferences.
+- Reduces harmful or undesirable outputs.
 
-    - Aligns models with human values and preferences.
-    - Reduces harmful or undesirable outputs.
+Cons:
 
-    **Cons:**
+- Requires significant human annotation effort.
+- Computationally expensive (especially RL phase).
+- Reward hacking and misalignment risks.
 
-    - Requires significant human annotation effort.
-    - Computationally expensive (especially RL phase).
-    - Reward hacking and misalignment risks.
+## Varieties
 
 === "DPO"
 
-    **Direct Preference Optimization (DPO)** is a fine-tuning method for aligning large language models (LLMs) with human preferences, **without the need for reinforcement learning or reward modeling**.
+    Direct Preference Optimization (DPO) is a fine-tuning method for aligning large language models (LLMs) with human preferences, **without the need for reinforcement learning or reward modeling**.
     DPO directly optimizes the model to prefer outputs that are rated higher by humans, using pairs of preferred and less-preferred responses.
 
     !!! info
 
-        DPO is designed to be more efficient and easier to implement than RLHF, as it avoids the complexity of training a separate reward model and reinforcement learning loop.
+        DPO is designed to be more efficient and easier, as it avoids the complexity of training a separate reward model and reinforcement learning loop.
+
+        DPO is gaining popularity for instruction and alignment fine-tuning, especially when preference data is available.
 
 === "Online RL"
 
-    **Online Reinforcement Learning** is a method for continuously improving language models by gathering **real-time** feedback and updating the model in a loop.
+    Online Reinforcement Learning is a method for continuously improving language models by gathering **real-time** feedback and updating the model in a loop.
     Unlike static datasets, Online RL allows a model to learn from **its own deployed outputs**, incorporating fresh human (or synthetic) feedback into the training process.
     This enables adaptive alignment with evolving user preferences and tasks.
 
-    <img src="overview.png" style="width:4.5in" />
+    <img src="online_rl_overview.png" style="width:4.5in" />
 
 ## Workflow
-
-=== "RLHF"
-
-    1. **Supervised Fine-Tuning (SFT):**
-
-       - Start with a pre-trained model.
-       - Fine-tune on a dataset of human demonstrations (input-output pairs).
-
-    2. **Reward Model Training:**
-
-       - Collect human preferences by asking annotators to rank or compare model outputs.
-       - Train a reward model to predict human preference scores.
-
-    3. **Reinforcement Learning (RL):**
-
-       - Use the reward model as a proxy for human feedback.
-       - Fine-tune the language model using RL algorithms (e.g., PPO) to maximize the reward.
 
 === "DPO"
 
@@ -76,16 +61,7 @@
 
     4. **Evaluation**: Periodically assess model behavior using alignment metrics, task performance, and user satisfaction.
 
-## Optimization Policies
-
-- **PPO (Proximal Policy Optimization)**: A stable, widely-used RL algorithm that prevents large policy updates, reducing training instability.
-- **GRPO (Generalized Reward Policy Optimization)**: Extends PPO by incorporating reward generalization techniques, making it more robust to sparse, delayed, or shifting feedback.
-
-<img src="ppo_and_grpo.png" style="width:6in" />
-
 ## Example
-
-=== "RLHF"
 
 === "DPO"
 
@@ -146,3 +122,17 @@
 
         return base_model
     ```
+
+## Optimization Policies
+
+- **PPO (Proximal Policy Optimization)**: A stable, widely-used RL algorithm that prevents large policy updates, reducing training instability.
+- **GRPO (Generalized Reward Policy Optimization)**: Extends PPO by incorporating reward generalization techniques, making it more robust to sparse, delayed, or shifting feedback.
+
+<img src="ppo_and_grpo.png" style="width:6in" />
+
+## Online RL Vs SFT
+
+![](rlhf/online_rl_vs_sft.png)
+
+SFT learns from **static, external examples** curated by humans, while online RL generates its own training data from the model's interactions.
+This makes online RL **self-driven, adaptive, and less likely to ruin other aspects of the model** since its examples come from the model itself.
