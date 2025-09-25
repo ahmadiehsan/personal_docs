@@ -62,6 +62,8 @@ markdown_extensions:
   - admonition # Add "alert" support
   - pymdownx.details # Needed for "alert" support
   - pymdownx.superfences # Add "code blocks" support
+  - pymdownx.tabbed: # Add "tabbed content" support
+      alternate_style: true
   - pymdownx.arithmatex: # Add "inline math blocks" support
       generic: true
   - mdx_truly_sane_lists: # Add "nested lists" support
