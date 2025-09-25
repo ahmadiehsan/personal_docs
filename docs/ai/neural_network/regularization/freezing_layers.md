@@ -1,20 +1,16 @@
-# Freezing Layers {Adaptive}
+# Freezing Layers
 
 ## Description
 
-=== "Freezing Layers"
+Researchers have shown that training only the first five encoder blocks is enough to almost reach the performance of training all encoder blocks.
 
-    Researchers have shown that training only the first five encoder blocks is enough to almost reach the performance of training all encoder blocks.
+Effect of frozen training blocks on training performance:
 
-    Effect of frozen training blocks on training performance:
-
-    <img src="effect.png" style="width:5in" />
-
-=== "Adaptive"
+<img src="effect.png" style="width:5in" />
 
 ## Example
 
-=== "Freezing Layers"
+=== "Standard"
 
     ```python
     def freeze_layers(model_to_freeze, *, num_layers_to_freeze):
