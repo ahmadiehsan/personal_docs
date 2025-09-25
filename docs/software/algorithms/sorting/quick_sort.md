@@ -8,27 +8,27 @@ The core operation of quick sort is "pivot partitioning," which aims to select a
 
 ## Workflow
 
-### Pivot Partitioning
+=== "Pivot Partitioning"
 
-1. Select the leftmost element of the array as the pivot, and initialize two pointers `i` and `j` to point to the two ends of the array respectively.
-2. Set up a loop where each round uses `i` (`j`) to search for the first element larger (smaller) than the pivot, then swap these two elements.
-3. Repeat step `2.` until `i` and `j` meet, finally swap the pivot to the boundary between the two sub-arrays.
+    1. Select the leftmost element of the array as the pivot, and initialize two pointers `i` and `j` to point to the two ends of the array respectively.
+    2. Set up a loop where each round uses `i` (`j`) to search for the first element larger (smaller) than the pivot, then swap these two elements.
+    3. Repeat step `2.` until `i` and `j` meet, finally swap the pivot to the boundary between the two sub-arrays.
 
-After the pivot partitioning, the original array is divided into three parts: left sub-array, pivot, and right sub-array:
+    After the pivot partitioning, the original array is divided into three parts: left sub-array, pivot, and right sub-array:
 
-<img src="pivot_partitioning.jpg" style="width:2.5in" />
+    <img src="pivot_partitioning.jpg" style="width:2.5in" />
 
-!!! info
+    !!! info
 
-    The essence of pivot partitioning is to simplify the sorting problem of a longer array into two shorter arrays.
+        The essence of pivot partitioning is to simplify the sorting problem of a longer array into two shorter arrays.
 
-### Algorithm Process
+=== "Algorithm Process"
 
-1. First, perform a "pivot partitioning" on the original array to obtain the unsorted left and right sub-arrays.
-2. Then, recursively perform "pivot partitioning" on the left and right sub-arrays separately.
-3. Continue recursively until the length of sub-array is 1, thus completing the sorting of the entire array.
+    1. First, perform a "pivot partitioning" on the original array to obtain the unsorted left and right sub-arrays.
+    2. Then, recursively perform "pivot partitioning" on the left and right sub-arrays separately.
+    3. Continue recursively until the length of sub-array is 1, thus completing the sorting of the entire array.
 
-![](quick_sort/workflow.jpg)
+    ![](quick_sort/workflow.jpg)
 
 ## Specifications
 
