@@ -16,21 +16,21 @@ Graphs are not limited to only homogeneous data: an equally powerful use of grap
 
 ## Representation (Implementation)
 
-### Adjacency Matrix
+=== "Adjacency Matrix"
 
-Let the number of vertices in the graph be $n$, the adjacency matrix uses an $n \times n$ matrix to represent the graph, where each row (column) represents a vertex, and the matrix elements represent edges, with 1 or 0 indicating whether there is an edge between two vertices.
+    Let the number of vertices in the graph be $n$, the adjacency matrix uses an $n \times n$ matrix to represent the graph, where each row (column) represents a vertex, and the matrix elements represent edges, with 1 or 0 indicating whether there is an edge between two vertices.
 
-![](graph/adjacency_matrix.jpg)
+    ![](graph/adjacency_matrix.jpg)
 
-When representing graphs with adjacency matrices, it is possible to directly access matrix elements to obtain edges, resulting in efficient operations of addition, deletion, lookup, and modification, all with a time complexity of $O(1)$.
-However, the space complexity of the matrix is $O(n^2)$, which consumes more memory.
+    When representing graphs with adjacency matrices, it is possible to directly access matrix elements to obtain edges, resulting in efficient operations of addition, deletion, lookup, and modification, all with a time complexity of $O(1)$.
+    However, the space complexity of the matrix is $O(n^2)$, which consumes more memory.
 
-### Adjacency List
+=== "Adjacency List"
 
-The adjacency list uses $n$ linked lists to represent the graph, with each linked list node representing a vertex.
-The $i$-th linked list corresponds to vertex $i$ and contains all adjacent vertices (vertices connected to that vertex).
+    The adjacency list uses $n$ linked lists to represent the graph, with each linked list node representing a vertex.
+    The $i$-th linked list corresponds to vertex $i$ and contains all adjacent vertices (vertices connected to that vertex).
 
-![](graph/adjacency_list.jpg)
+    ![](graph/adjacency_list.jpg)
 
 ## Operations
 
@@ -51,34 +51,34 @@ The $i$-th linked list corresponds to vertex $i$ and contains all adjacent verti
 
 ## Varieties
 
-### Property Graphs
+=== "Property Graphs"
 
-In the property graph model, each vertex consists of:
+    In the property graph model, each vertex consists of:
 
-- A unique identifier
-- A set of outgoing edges
-- A set of incoming edges
-- A collection of properties (key-value pairs)
+    - A unique identifier
+    - A set of outgoing edges
+    - A set of incoming edges
+    - A collection of properties (key-value pairs)
 
-Each edge consists of:
+    Each edge consists of:
 
-- A unique identifier
-- The vertex at which the edge starts (the tail vertex)
-- The vertex at which the edge ends (the head vertex)
-- A label to describe the kind of relationship between the two vertices
-- A collection of properties (key-value pairs)
+    - A unique identifier
+    - The vertex at which the edge starts (the tail vertex)
+    - The vertex at which the edge ends (the head vertex)
+    - A label to describe the kind of relationship between the two vertices
+    - A collection of properties (key-value pairs)
 
-### Triple-Stores Graphs
+=== "Triple-Stores Graphs"
 
-The triple-store model is mostly equivalent to the property graph model, using different words to describe the same ideas.
+    The triple-store model is mostly equivalent to the property graph model, using different words to describe the same ideas.
 
-In a triple-store, all information is stored in the form of very simple three-part statements: (subject, predicate, object).
-For example, in the triple (Jim, likes, bananas), Jim is the subject, likes is the predicate (verb), and bananas is the object.
+    In a triple-store, all information is stored in the form of very simple three-part statements: (subject, predicate, object).
+    For example, in the triple (Jim, likes, bananas), Jim is the subject, likes is the predicate (verb), and bananas is the object.
 
-The subject of a triple is equivalent to a vertex in a graph. The object is one of two things:
+    The subject of a triple is equivalent to a vertex in a graph. The object is one of two things:
 
-1. A value in a primitive data type, such as a string or a number. In that case, the predicate and object of the triple are equivalent to the key and value of a property on the subject vertex. For example, (lucy, age, 33) is like a vertex lucy with properties {"age":33}.
-2. Another vertex in the graph. In that case, the predicate is an edge in the graph, the subject is the tail vertex, and the object is the head vertex. For example, in (lucy, marriedTo, alain) the subject and object lucy and alain are both vertices, and the predicate marriedTo is the label of the edge that connects them.
+    1. A value in a primitive data type, such as a string or a number. In that case, the predicate and object of the triple are equivalent to the key and value of a property on the subject vertex. For example, (lucy, age, 33) is like a vertex lucy with properties {"age":33}.
+    2. Another vertex in the graph. In that case, the predicate is an edge in the graph, the subject is the tail vertex, and the object is the head vertex. For example, in (lucy, marriedTo, alain) the subject and object lucy and alain are both vertices, and the predicate marriedTo is the label of the edge that connects them.
 
 ## Use Cases
 
@@ -90,14 +90,14 @@ The subject of a triple is equivalent to a vertex in a graph. The object is one 
 
 ## Traversal
 
-### Breadth-first search (BFS)
+=== "Breadth-first search (BFS)"
 
-Breadth-first search is a near-to-far traversal method, starting from a certain node, always prioritizing the visit to the nearest vertices and expanding outwards layer by layer.
+    Breadth-first search is a near-to-far traversal method, starting from a certain node, always prioritizing the visit to the nearest vertices and expanding outwards layer by layer.
 
-![](graph/bfs_traversal.jpg)
+    ![](graph/bfs_traversal.jpg)
 
-### Depth-first search (DFS)
+=== "Depth-first search (DFS)"
 
-Depth-first search is a traversal method that prioritizes going as far as possible and then backtracks when no further path is available.
+    Depth-first search is a traversal method that prioritizes going as far as possible and then backtracks when no further path is available.
 
-![](graph/dfs_traversal.jpg)
+    ![](graph/dfs_traversal.jpg)

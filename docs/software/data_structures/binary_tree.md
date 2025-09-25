@@ -29,30 +29,28 @@ When the index is out of bounds, it signifies a null node or the node does not e
 
 ## Varieties
 
-### Perfect Binary Tree
+=== "Perfect Binary Tree"
 
-<img src="perfect_binary_tree.jpg" style="width:2.5in" />
+    <img src="perfect_binary_tree.jpg" style="width:2.5in" />
 
-As shown, in a perfect binary tree, all levels are completely filled with nodes.
+    As shown, in a perfect binary tree, all levels are completely filled with nodes.
 
-In a perfect binary tree, leaf nodes have a degree of 0, while all other nodes have a degree of 2.
-The total number of nodes can be calculated as $2^{h+1} - 1$ where $h$ is the height of the tree.
+    In a perfect binary tree, leaf nodes have a degree of 0, while all other nodes have a degree of 2.
+    The total number of nodes can be calculated as $2^{h+1} - 1$ where $h$ is the height of the tree.
 
-This exhibits a standard exponential relationship, reflecting the common phenomenon of cell division in nature.
+    This exhibits a standard exponential relationship, reflecting the common phenomenon of cell division in nature.
 
-### Complete Binary Tree
+=== "Complete Binary Tree"
 
-<img src="complete_binary_tree.jpg" style="width:2.5in" />
+    <img src="complete_binary_tree.jpg" style="width:2.5in" />
 
-As shown, a complete binary tree is a binary tree where only the bottom level is possibly not completely filled, and nodes at the bottom level must be filled continuously from left to right.
+    As shown, a complete binary tree is a binary tree where only the bottom level is possibly not completely filled, and nodes at the bottom level must be filled continuously from left to right.
 
-!!! info
+    !!! info
 
-    Note that a perfect binary tree is also a complete binary tree.
+        Note that a perfect binary tree is also a complete binary tree.
 
 ## Traversal
-
-### Definition
 
 From a physical structure perspective, a tree is a data structure based on linked lists.
 Hence, its traversal method involves accessing nodes one by one through pointers.
@@ -65,18 +63,18 @@ The common traversal methods for binary trees include:
 - In-order traversal
 - Post-order traversal
 
-### Level-Order Traversal
+=== "Level-Order Traversal"
 
-Traverses the binary tree from top to bottom, layer by layer. Within each level, it visits nodes from left to right.
+    Traverses the binary tree from top to bottom, layer by layer. Within each level, it visits nodes from left to right.
 
-Level-order traversal is essentially a type of breadth-first traversal, also known as breadth-first search (BFS), which embodies a "circumferentially outward expanding" layer-by-layer traversal method.
+    Level-order traversal is essentially a type of breadth-first traversal, also known as breadth-first search (BFS), which embodies a "circumferentially outward expanding" layer-by-layer traversal method.
 
-<img src="breadth_first_traversal.png" style="width:5.5in" />
+    <img src="breadth_first_traversal.png" style="width:5.5in" />
 
-### Preorder, In-order, and Post-order Traversal
+=== "Preorder, In-order, and Post-order Traversal"
 
-Correspondingly, pre-order, in-order, and post-order traversal all belong to depth-first traversal, also known as depth-first search (DFS), which embodies a "proceed to the end first, then backtrack and continue" traversal method.
+    Correspondingly, pre-order, in-order, and post-order traversal all belong to depth-first traversal, also known as depth-first search (DFS), which embodies a "proceed to the end first, then backtrack and continue" traversal method.
 
-Depth-first traversal is like "walking" around the entire binary tree, encountering three positions at each node, corresponding to pre-order, in-order, and post-order traversal.
+    Depth-first traversal is like "walking" around the entire binary tree, encountering three positions at each node, corresponding to pre-order, in-order, and post-order traversal.
 
-![](binary_tree/depth_first_traversal.png)
+    ![](binary_tree/depth_first_traversal.png)
