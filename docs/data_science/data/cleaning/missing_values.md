@@ -30,32 +30,30 @@ Missing values typically fall into three categories:
 
 ## Methods
 
-There are several methods for dealing with missing data in ML projects:
+=== "Deletion"
 
-### Deletion
+    - **Dropping rows (Listwise deletion)**: Remove rows with missing values. Use when missingness is random and affects a small portion of the data.
+    - **Pairwise deletion**: Use available values for calculations (e.g., correlations) without dropping entire rows.
+    - **Dropping columns**: Remove columns with many missing values, especially if they are not important for analysis. Perform correlation analysis before dropping important columns.
 
-- **Dropping rows (Listwise deletion)**: Remove rows with missing values. Use when missingness is random and affects a small portion of the data.
-- **Pairwise deletion**: Use available values for calculations (e.g., correlations) without dropping entire rows.
-- **Dropping columns**: Remove columns with many missing values, especially if they are not important for analysis. Perform correlation analysis before dropping important columns.
+=== "Imputation"
 
-### Simple Imputation
+    - **Mean/median/mode imputation**: Substitute missing values with the mean, median, or mode of the column. Suitable for numeric or categorical columns, depending on distribution. Easy to implement, but may introduce bias.
+    - **Arbitrary value imputation**: Fill missing values with a constant (e.g., 0 or "Unknown") if contextually appropriate.
+    - **Forward/backward fill**: For time series data, fill missing values using previous or next values to maintain temporal consistency.
 
-- **Mean/median/mode imputation**: Substitute missing values with the mean, median, or mode of the column. Suitable for numeric or categorical columns, depending on distribution. Easy to implement, but may introduce bias.
-- **Arbitrary value imputation**: Fill missing values with a constant (e.g., 0 or "Unknown") if contextually appropriate.
-- **Forward/backward fill**: For time series data, fill missing values using previous or next values to maintain temporal consistency.
+=== "Advanced Imputation"
 
-### Advanced Imputation
+    - **Regression imputation**: Predict missing values using regression models based on other variables.
+    - **Multiple imputation**: Generate multiple imputed datasets using statistical models and combine results for robust analysis.
+    - **K-nearest neighbor (KNN) imputation**: Impute missing values using the mean or median of the k-nearest data points.
+    - **Iterative imputer**: Build a model with other columns to estimate missing values iteratively.
+    - **Interpolation**: For numeric sequences, estimate missing values based on trends in the data.
 
-- **Regression imputation**: Predict missing values using regression models based on other variables.
-- **Multiple imputation**: Generate multiple imputed datasets using statistical models and combine results for robust analysis.
-- **K-nearest neighbor (KNN) imputation**: Impute missing values using the mean or median of the k-nearest data points.
-- **Iterative imputer**: Build a model with other columns to estimate missing values iteratively.
-- **Interpolation**: For numeric sequences, estimate missing values based on trends in the data.
+=== "Using Missingness as a Feature"
 
-### Using Missingness as a Feature
+    - **Missingness indicator**: Add a binary column (e.g., `was_missing = 1`) to flag missing values if the fact that a value is missing may carry information.
 
-- **Missingness indicator**: Add a binary column (e.g., `was_missing = 1`) to flag missing values if the fact that a value is missing may carry information.
+=== "Oversampling/Undersampling"
 
-### Oversampling or Undersampling
-
-- **Resampling**: If missing data causes class imbalance, use oversampling or undersampling to maintain a fair target distribution.
+    - **Resampling**: If missing data causes class imbalance, use oversampling or undersampling to maintain a fair target distribution.

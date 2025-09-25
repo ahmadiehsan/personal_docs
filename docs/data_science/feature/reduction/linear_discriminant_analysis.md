@@ -43,32 +43,32 @@ The LDA algorithm can be summarized in the following steps:
 
 ## Workflow
 
-### How LDA Creates New Axis
+=== "Creates New Axis"
 
-The new axis created according to two criteria (considered simultaneously)
+    The new axis created according to two criteria (considered simultaneously)
 
-<img src="image6.jpg" style="width:5in" />
+    <img src="image6.jpg" style="width:5in" />
 
-### Why Both Distance & Scatter Are Important
+=== "Distance & Scatter Are Important"
 
-**Distance**: Minimizing the distance between means of two categories
+    **Distance**: Minimizing the distance between means of two categories
 
-**Scatter**: Minimizing the variation of each category
+    **Scatter**: Minimizing the variation of each category
 
-<img src="image5.jpg" style="width:4.09907in" />
+    <img src="image5.jpg" style="width:4.09907in" />
 
-### LDA With 3 Features
+=== "With 3 Features"
 
-LDA will reduce the number of features to: **Number of categories - 1**
+    LDA will reduce the number of features to: **Number of categories - 1**
 
-<img src="image4.jpg" style="width:3.39152in" />
+    <img src="image4.jpg" style="width:3.39152in" />
 
-<img src="image7.jpg" style="width:3.40602in" />
+    <img src="image7.jpg" style="width:3.40602in" />
 
-### LDA With 3 Categories
+=== "With 3 Categories"
 
-LDA will reduce the dimensionality to: **Number of categories - 1**
+    LDA will reduce the dimensionality to: **Number of categories - 1**
 
-<img src="image2.jpg" style="width:3.24826in" />
+    <img src="image2.jpg" style="width:3.24826in" />
 
-<img src="image1.jpg" style="width:3.77141in" />
+    <img src="image1.jpg" style="width:3.77141in" />

@@ -11,42 +11,42 @@ The sorted version of a Binary Tree is called Binary Search Tree, which means:
 
 ## Operations
 
-### Overview
+=== "Overview"
 
-| Operation             | Complexity (Average) | Complexity (Worst) |
-| --------------------- | -------------------- | ------------------ |
-| Search                | $O(\log n)$          | $O(n)$             |
-| Insert                | $O(\log n)$          | $O(n)$             |
-| Delete                | $O(\log n)$          | $O(n)$             |
-| Find min/max          | $O(\log n)$          | $O(n)$             |
-| Successor/Predecessor | $O(\log n)$          | $O(n)$             |
-| Memory space usage    | $O(n)$               | $O(n)$             |
+    | Operation             | Complexity (Average) | Complexity (Worst) |
+    | --------------------- | -------------------- | ------------------ |
+    | Search                | $O(\log n)$          | $O(n)$             |
+    | Insert                | $O(\log n)$          | $O(n)$             |
+    | Delete                | $O(\log n)$          | $O(n)$             |
+    | Find min/max          | $O(\log n)$          | $O(n)$             |
+    | Successor/Predecessor | $O(\log n)$          | $O(n)$             |
+    | Memory space usage    | $O(n)$               | $O(n)$             |
 
-### Searching a Node
+=== "Searching a Node"
 
-When we are looking for num, we declare a node cur, start from the binary tree's root node root, and loop to compare the size between the node value cur.val and num.
+    When we are looking for num, we declare a node cur, start from the binary tree's root node root, and loop to compare the size between the node value cur.val and num.
 
-- If `cur.val < num`, it means the target node is in cur's right subtreep.
-- If `cur.val > num`, it means the target node is in cur's left subtree.
-- If `cur.val = num`, it means the target node is found, exit the loop, and return the node.
+    - If `cur.val < num`, it means the target node is in cur's right subtreep.
+    - If `cur.val > num`, it means the target node is in cur's left subtree.
+    - If `cur.val = num`, it means the target node is found, exit the loop, and return the node.
 
-<img src="image1.jpg" style="width:3in" />
+    <img src="image1.jpg" style="width:3in" />
 
-### Inserting a Node
+=== "Inserting a Node"
 
-It works like this:
+    It works like this:
 
-- **Finding insertion position**: Similar to the search operation, start from the root node, loop downwards according to the size relationship between the current node value and num, until the leaf node is passed (traversed to None), then exit the loop.
-- **Insert the node at this position**: Initialize the node num and place it where None was.
+    - **Finding insertion position**: Similar to the search operation, start from the root node, loop downwards according to the size relationship between the current node value and num, until the leaf node is passed (traversed to None), then exit the loop.
+    - **Insert the node at this position**: Initialize the node num and place it where None was.
 
-<img src="image2.jpg" style="width:7in" />
+    <img src="image2.jpg" style="width:7in" />
 
-### Removing a Node
+=== "Removing a Node"
 
-First, find the target node in the binary tree, then remove it.
-Similar to inserting a node, we need to ensure that after the removal operation is completed, the property of the binary search tree "left subtree < root node < right subtree" is still satisfied.
+    First, find the target node in the binary tree, then remove it.
+    Similar to inserting a node, we need to ensure that after the removal operation is completed, the property of the binary search tree "left subtree < root node < right subtree" is still satisfied.
 
-<img src="image5.jpg" style="width:7in" />
+    <img src="image5.jpg" style="width:7in" />
 
 ## Vs Binary Tree
 

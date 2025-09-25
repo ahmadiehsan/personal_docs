@@ -19,7 +19,7 @@ $p \lor q$ (or)
 The truth table for the Exclusive Or of two propositions:
 
 | $p$ | $q$ | $p \oplus q$ |
-|-----|-----|--------------|
+| --- | --- | ------------ |
 | T   | T   | F            |
 | T   | F   | T            |
 | F   | T   | T            |
@@ -32,7 +32,7 @@ The exclusive or of $p$ and $q$, denoted by $p \oplus q$ (or $p$ XOR $q$), is th
 The truth table for the Conditional Statement $p \rightarrow q$:
 
 | $p$ | $q$ | $p \rightarrow q$ |
-|-----|-----|-------------------|
+| --- | --- | ----------------- |
 | T   | T   | T                 |
 | T   | F   | F                 |
 | F   | T   | T                 |
@@ -46,12 +46,12 @@ In the conditional statement $p \rightarrow q$, $p$ is called the hypothesis (or
 
 The truth table for the Biconditional $p \leftrightarrow q$:
 
-| $p$ | $q$ | $p \leftrightarrow q$  |
-|-----|-----|------------------------|
-| T   | T   | T                      |
-| T   | F   | F                      |
-| F   | T   | F                      |
-| F   | F   | T                      |
+| $p$ | $q$ | $p \leftrightarrow q$ |
+| --- | --- | --------------------- |
+| T   | T   | T                     |
+| T   | F   | F                     |
+| F   | T   | F                     |
+| F   | F   | T                     |
 
 Let $p$ and $q$ be propositions.
 The biconditional statement $p \leftrightarrow q$ is the proposition "$p$ if and only if $q$." The biconditional statement $p \leftrightarrow q$ is true when $p$ and $q$ have the same truth values and is false otherwise.
@@ -62,7 +62,7 @@ Biconditional statements are also called bi-implications.
 Precedence of logical operators:
 
 | Operator          | Precedence |
-|-------------------|------------|
+| ----------------- | ---------- |
 | $\neg$            | 1          |
 | $\land$           | 2          |
 | $\lor$            | 3          |
@@ -79,10 +79,10 @@ Precedence of logical operators:
 
 Examples of a tautology and a contradiction:
 
-| p | $\neg p$ | $p \lor \neg p$ | $p \land \neg p$ |
-|---|----------|-----------------|------------------|
-| T | F        | T               | F                |
-| F | T        | T               | F                |
+| p   | $\neg p$ | $p \lor \neg p$ | $p \land \neg p$ |
+| --- | -------- | --------------- | ---------------- |
+| T   | F        | T               | F                |
+| F   | T        | T               | F                |
 
 - A compound proposition that is always true, no matter what the truth values of the propositional variables that occur in it, is called a tautology.
 - A compound proposition that is always false is called a contradiction.
@@ -112,7 +112,7 @@ That $p \lor (q \land r)$ and $(p \lor q) \land (p \lor r)$ are logically equiva
 Logical equivalences:
 
 | Equivalence                                                                                                           | Name                |
-|-----------------------------------------------------------------------------------------------------------------------|---------------------|
+| --------------------------------------------------------------------------------------------------------------------- | ------------------- |
 | $p \land \mathbf{T} \equiv p$ <br> $p \lor \mathbf{F} \equiv p$                                                       | Identity laws       |
 | $p \lor \mathbf{T} \equiv \mathbf{T}$ <br> $p \land \mathbf{F} \equiv \mathbf{F}$                                     | Domination laws     |
 | $p \lor p \equiv p$ <br> $p \land p \equiv p$                                                                         | Idempotent laws     |
@@ -127,7 +127,7 @@ Logical equivalences:
 Logical equivalences involving conditional statements:
 
 | Equivalence                                          |
-|------------------------------------------------------|
+| ---------------------------------------------------- |
 | $p \to q \equiv \neg p \lor q$                       |
 | $p \to q \equiv \neg q \to \neg p$                   |
 | $p \lor q \equiv \neg p \to q$                       |
@@ -141,7 +141,7 @@ Logical equivalences involving conditional statements:
 Logical equivalences involving biconditional statements:
 
 | Equivalence                                                         |
-|---------------------------------------------------------------------|
+| ------------------------------------------------------------------- |
 | $p \leftrightarrow q \equiv (p \to q) \land (q \to p)$              |
 | $p \leftrightarrow q \equiv \neg p \leftrightarrow \neg q$          |
 | $p \leftrightarrow q \equiv (p \land q) \lor (\neg p \land \neg q)$ |
@@ -174,7 +174,7 @@ Here $\exists$ is called the existential quantiﬁer.
 - **De Morgan's Laws for Quantiﬁers**:
 
    | Negation              | Equivalent Statement  | When Is Negation True?                     | When False?                               |
-   |-----------------------|-----------------------|--------------------------------------------|-------------------------------------------|
+   | --------------------- | --------------------- | ------------------------------------------ | ----------------------------------------- |
    | $\neg \exists x P(x)$ | $\forall x \neg P(x)$ | For every $x$, $P(x)$ is false.            | There is an $x$ for which $P(x)$ is true. |
    | $\neg \forall x P(x)$ | $\exists x \neg P(x)$ | There is an $x$ for which $P(x)$ is false. | $P(x)$ is true for every $x$.             |
 
@@ -202,8 +202,8 @@ An argument form is valid if no matter which particular propositions are substit
 
 Rules of inference:
 
-| Rule of Inference                                                                         | Tautology                                           | Name                   |
-|-------------------------------------------------------------------------------------------|-----------------------------------------------------|------------------------|
+| Rule of Inference                                                                   | Tautology                                           | Name                   |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------- | ---------------------- |
 | $p$ <br> $p \to q$ <br> $\rule{2cm}{0.4pt}$ <br> $\therefore q$                     | $(p \land (p \to q)) \to q$                         | Modus ponens           |
 | $\neg q$ <br> $p \to q$ <br> $\rule{2cm}{0.4pt}$ <br> $\therefore \neg p$           | $(\neg q \land (p \to q)) \to \neg p$               | Modus tollens          |
 | $p \to q$ <br> $q \to r$ <br> $\rule{2cm}{0.4pt}$ <br> $\therefore p \to r$         | $((p \to q) \land (q \to r)) \to (p \to r)$         | Hypothetical syllogism |
@@ -215,8 +215,8 @@ Rules of inference:
 
 Rules of inference for quantified statements:
 
-| Rule of Inference                                                                           | Name                       |
-|---------------------------------------------------------------------------------------------|----------------------------|
+| Rule of Inference                                                                     | Name                       |
+| ------------------------------------------------------------------------------------- | -------------------------- |
 | $\forall x P(x)$ <br> $\rule{2cm}{0.4pt}$ <br> $\therefore P(c)$                      | Universal instantiation    |
 | $P(c)$ for an arbitrary $c$ <br> $\rule{2cm}{0.4pt}$ <br> $\therefore \forall x P(x)$ | Universal generalization   |
 | $\exists x P(x)$ <br> $\rule{2cm}{0.4pt}$ <br> $\therefore P(c)$ for some element $c$ | Existential instantiation  |
