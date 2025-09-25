@@ -2,18 +2,22 @@
 
 ## Description
 
-=== "Noise Injection"
+Noise injection is a regularization technique commonly used to improve the generalization of machine learning models.
+By adding a small amount of noise to the input data, weights, or activation functions.
 
-    **Noise injection** is a regularization technique commonly used to improve the generalization of machine learning models.
-    By adding a small amount of noise to the input data, weights, or activation functions.
+Noise injection helps prevent overfitting, the technique forces the model to be less reliant on specific patterns in the training data, encouraging it to learn more robust, general features that apply across different datasets.
 
-    Noise injection helps prevent overfitting, the technique forces the model to be less reliant on specific patterns in the training data, encouraging it to learn more robust, general features that apply across different datasets.
+This approach is particularly useful in neural networks, where noise such as the following can be injected at various stages:
 
-    This approach is particularly useful in neural networks, where noise such as the following can be injected at various stages:
+- **Input noise**: Adds noise directly to the input data, helping the model become more robust to variations in the input
+- **Weight noise**: Perturbs the weights during training, encouraging the model to generalize better
+- **Activation noise**: Adds noise to the activation functions, leading to smoother decision boundaries and reducing overfitting
 
-    - **Input noise**: Adds noise directly to the input data, helping the model become more robust to variations in the input
-    - **Weight noise**: Perturbs the weights during training, encouraging the model to generalize better
-    - **Activation noise**: Adds noise to the activation functions, leading to smoother decision boundaries and reducing overfitting
+## Varieties
+
+=== "Standard"
+
+    Standard noise injection involves adding random noise directly to the input data during training. This helps the model become less sensitive to small changes and improves its ability to generalize to unseen data.
 
 === "FGSM"
 
@@ -39,7 +43,7 @@
 
 ## Example
 
-=== "Noise Injection"
+=== "Standard"
 
     ```python
     import torch

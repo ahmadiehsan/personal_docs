@@ -1,22 +1,24 @@
-# Dropout {Adaptive} {Layer-Wise}
+# Dropout
 
 ## Description
 
-=== "Dropout"
+Dropout is a powerful regularization technique that randomly "drops out" a portion of neurons during training.
 
-    **Dropout** is a powerful regularization technique that randomly "drops out" a portion of neurons during training.
+<img src="image1.png" style="width:2in" />
 
-    <img src="image1.png" style="width:2in" />
+It helps combat overfitting by randomly deactivating a fraction of neurons during each training iteration, **forcing the network to develop redundant pathways for information flow**.
+This technique **prevents neurons from becoming overly dependent** on each other by creating a form of ensemble learning within a single network, where different subnetworks handle similar tasks.
+The result is a more robust model that relies on distributed representations rather than memorizing specific patterns, ultimately improving generalization to unseen data when all neurons are active during inference.
 
-    It helps combat overfitting by randomly deactivating a fraction of neurons during each training iteration, **forcing the network to develop redundant pathways for information flow**.
-    This technique **prevents neurons from becoming overly dependent** on each other by creating a form of ensemble learning within a single network, where different subnetworks handle similar tasks.
-    The result is a more robust model that relies on distributed representations rather than memorizing specific patterns, ultimately improving generalization to unseen data when all neurons are active during inference.
+## Varieties
+
+=== "Standard"
+
+    Standard **dropout** randomly disables a fraction of neurons during each training step, reducing co-adaptation and helping the model generalize better to unseen data.
 
 === "Adaptive"
 
-    When fine-tuning pre-trained NNs, it's important to carefully adjust regularization to avoid blocking task-specific adaptation while still preventing overfitting.
-
-    **Adaptive dropout** starts with a higher dropout rate and gradually decreases it over the course of fine-tuning.
+    **Adaptive dropout** starts with a higher dropout rate and **gradually decreases it** over the course of fine-tuning.
     This allows the model to adapt to the new task while still maintaining some regularization to prevent overfitting.
 
     !!! info
@@ -31,7 +33,7 @@
 
 ## Example
 
-=== "Dropout"
+=== "Standard"
 
     ```python
     import torch
