@@ -39,63 +39,63 @@ foreach (string message in messages) {
 
 ## Features
 
-### Overview
+=== "Overview"
 
-| **Feature**                          | **Description**                                      |
-|--------------------------------------|------------------------------------------------------|
-| `Count`                              | Returns count of elements.                           |
-| `void Add(T value)`                  | Adds an element (key/value pair).                    |
-| `void Remove(T value)`               | Removes an element based on specified key.           |
-| `void RemoveWhere(Predicate)`        | Removes elements that match a condition.             |
-| `bool Contains(T value)`             | Determines whether the specified value exists.       |
-| `void Clear()`                       | Removes all elements.                                |
-| `void UnionWith(IEnumerable<T>)`     | Unions the hashset and the specified collection.     |
-| `void IntersectWith(IEnumerable<T>)` | Intersects the hashset and the specified collection. |
+    | **Feature**                          | **Description**                                      |
+    | ------------------------------------ | ---------------------------------------------------- |
+    | `Count`                              | Returns count of elements.                           |
+    | `void Add(T value)`                  | Adds an element (key/value pair).                    |
+    | `void Remove(T value)`               | Removes an element based on specified key.           |
+    | `void RemoveWhere(Predicate)`        | Removes elements that match a condition.             |
+    | `bool Contains(T value)`             | Determines whether the specified value exists.       |
+    | `void Clear()`                       | Removes all elements.                                |
+    | `void UnionWith(IEnumerable<T>)`     | Unions the hashset and the specified collection.     |
+    | `void IntersectWith(IEnumerable<T>)` | Intersects the hashset and the specified collection. |
 
-!!! info
+    !!! info
 
-    All the shared features can be used for HashSet
+        All the shared features can be used for HashSet
 
-### RemoveWhere
+=== "RemoveWhere"
 
-It allows remove all elements from the collection that satisfy a specified condition.
-The condition is expressed using a predicate (a function delegate that returns a boolean).
+    It allows remove all elements from the collection that satisfy a specified condition.
+    The condition is expressed using a predicate (a function delegate that returns a boolean).
 
-Example:
+    Example:
 
-```csharp
-messages.RemoveWhere(m => m.EndsWith("You"));
-```
+    ```csharp
+    messages.RemoveWhere(m => m.EndsWith("You"));
+    ```
 
-### UnionWith
+=== "UnionWith"
 
-Is used to modify the current set to be the union of the current set and a specified collection.
-It adds all unique elements from the provided collection to the `HashSet`, ensuring no duplicates.
+    Is used to modify the current set to be the union of the current set and a specified collection.
+    It adds all unique elements from the provided collection to the `HashSet`, ensuring no duplicates.
 
-Example:
+    Example:
 
-```csharp
-// Create two HashSets
-HashSet<string> employees2021 = new HashSet<string>() { "Amar", "Akhil", "Samareen" };
-HashSet<string> newEmployees2022 = new HashSet<string>() { "John", "Scott", "Smith", "David" };
+    ```csharp
+    // Create two HashSets
+    HashSet<string> employees2021 = new HashSet<string>() { "Amar", "Akhil", "Samareen" };
+    HashSet<string> newEmployees2022 = new HashSet<string>() { "John", "Scott", "Smith", "David" };
 
-// Union
-employees2021.UnionWith(newEmployees2022);
-```
+    // Union
+    employees2021.UnionWith(newEmployees2022);
+    ```
 
-### IntersectWith
+=== "IntersectWith"
 
-Is used to modify the current `HashSet<T>` by retaining only the elements that are also present in a specified collection.
-It performs a mathematical set intersection, which means that the resulting set contains only the common elements from both sets.
-This method is useful when narrowing down a collection to shared elements.
+    Is used to modify the current `HashSet<T>` by retaining only the elements that are also present in a specified collection.
+    It performs a mathematical set intersection, which means that the resulting set contains only the common elements from both sets.
+    This method is useful when narrowing down a collection to shared elements.
 
-Example:
+    Example:
 
-```csharp
-// Create two HashSets
-HashSet<string> employees2021 = new HashSet<string>() { "Amar", "Akhil", "Samareen" };
-HashSet<string> employees2022 = new HashSet<string>() { "John", "Scott", "Amar", "Akhil", "Smith", "David" };
+    ```csharp
+    // Create two HashSets
+    HashSet<string> employees2021 = new HashSet<string>() { "Amar", "Akhil", "Samareen" };
+    HashSet<string> employees2022 = new HashSet<string>() { "John", "Scott", "Amar", "Akhil", "Smith", "David" };
 
-// Use IntersectWith
-employees2021.IntersectWith(employees2022);
-```
+    // Use IntersectWith
+    employees2021.IntersectWith(employees2022);
+    ```

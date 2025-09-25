@@ -21,29 +21,29 @@ SortedList<TKey, TValue> referenceVariable = new SortedList<TKey, TValue>();
 
 ## Features
 
-### Overview
+=== "Overview"
 
-| Feature                      | Description                                    |
-|------------------------------|------------------------------------------------|
-| `Count`                      | Returns count of elements.                     |
-| `[TKey]`                     | Returns value based on specified key.          |
-| `Keys`                       | Returns a collection of keys (without values). |
-| `Values`                     | Returns a collection of values (without keys). |
-| `void Add(TKey, TValue)`     | Adds an element (key/value pair).              |
-| `bool Remove(TKey)`          | Removes an element based on specified key.     |
-| `bool ContainsKey(TKey)`     | Determines whether the specified key exists.   |
-| `bool ContainsValue(TValue)` | Determines whether the specified value exists. |
-| `int IndexOfKey(TKey)`       | Returns index of the specified key.            |
-| `int IndexOfValue(TValue)`   | Returns index of the specified value.          |
-| `void Clear()`               | Removes all elements.                          |
+    | Feature                      | Description                                    |
+    | ---------------------------- | ---------------------------------------------- |
+    | `Count`                      | Returns count of elements.                     |
+    | `[TKey]`                     | Returns value based on specified key.          |
+    | `Keys`                       | Returns a collection of keys (without values). |
+    | `Values`                     | Returns a collection of values (without keys). |
+    | `void Add(TKey, TValue)`     | Adds an element (key/value pair).              |
+    | `bool Remove(TKey)`          | Removes an element based on specified key.     |
+    | `bool ContainsKey(TKey)`     | Determines whether the specified key exists.   |
+    | `bool ContainsValue(TValue)` | Determines whether the specified value exists. |
+    | `int IndexOfKey(TKey)`       | Returns index of the specified key.            |
+    | `int IndexOfValue(TValue)`   | Returns index of the specified value.          |
+    | `void Clear()`               | Removes all elements.                          |
 
-!!! info
+    !!! info
 
-    All the shared features can be used for SortedList
+        All the shared features can be used for SortedList
 
 ## VS Dictionary
 
 | Operation | Dictionary             | SortedList                        |
-|-----------|------------------------|-----------------------------------|
+| --------- | ---------------------- | --------------------------------- |
 | Insert    | Fast (No need to sort) | Slow (Needs to sort after insert) |
 | Search    | Slow (Linear search)   | Fast                              |
