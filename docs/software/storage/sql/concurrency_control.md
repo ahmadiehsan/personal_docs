@@ -2,30 +2,30 @@
 
 ## DB-Level Solution
 
-### Pessimistic Locking
+=== "Pessimistic Locking"
 
-Pessimistic locking achieves this goal by taking a shared or read lock on the account so Bob is prevented from changing the account.
+    Pessimistic locking achieves this goal by taking a shared or read lock on the account so Bob is prevented from changing the account.
 
-![](concurrency_control/image2.png)
+    ![](concurrency_control/image2.png)
 
-In the diagram above, both Alice and Bob will acquire a read lock on the account table row that both users have read.
-The database acquires these locks on SQL Server when using Repeatable Read or Serializable.
+    In the diagram above, both Alice and Bob will acquire a read lock on the account table row that both users have read.
+    The database acquires these locks on SQL Server when using Repeatable Read or Serializable.
 
-Because both Alice and Bob have read the account with the PK value of 1, neither of them can change it until one user releases the read lock.
-This is because a write operation requires a write/exclusive lock acquisition, and shared/read locks prevent write/exclusive locks.
+    Because both Alice and Bob have read the account with the PK value of 1, neither of them can change it until one user releases the read lock.
+    This is because a write operation requires a write/exclusive lock acquisition, and shared/read locks prevent write/exclusive locks.
 
-Only after Alice has committed her transaction and the read lock was released on the account row, Bob UPDATE will resume and apply the change.
-Until Alice releases the read lock, Bob's UPDATE blocks.
+    Only after Alice has committed her transaction and the read lock was released on the account row, Bob UPDATE will resume and apply the change.
+    Until Alice releases the read lock, Bob's UPDATE blocks.
 
-### Optimistic Locking
+=== "Optimistic Locking"
 
-Optimistic Locking allows the conflict to occur but detects it upon applying Alice's UPDATE as the version has changed.
+    Optimistic Locking allows the conflict to occur but detects it upon applying Alice's UPDATE as the version has changed.
 
-![](concurrency_control/image1.png)
+    ![](concurrency_control/image1.png)
 
-This time, we have an additional version column.
-The version column is incremented every time an UPDATE or DELETE is executed, and it is also used in the WHERE clause of the UPDATE and DELETE statements.
-For this to work, we need to issue the SELECT and read the current version before executing the UPDATE or DELETE, as otherwise, we would not know what version value to pass to the WHERE clause or increment.
+    This time, we have an additional version column.
+    The version column is incremented every time an UPDATE or DELETE is executed, and it is also used in the WHERE clause of the UPDATE and DELETE statements.
+    For this to work, we need to issue the SELECT and read the current version before executing the UPDATE or DELETE, as otherwise, we would not know what version value to pass to the WHERE clause or increment.
 
 ## Application-Level Solution
 
