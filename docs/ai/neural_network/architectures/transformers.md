@@ -1,4 +1,4 @@
-# Transformers [NLP]
+# Transformers [NLP] {MoE} {MoR}
 
 ## Description
 
@@ -54,6 +54,29 @@ Encoder-Decoder Part Output = Encoder-Decoder Attention Scores + Decoder Part Ou
 Fully Connected Layer Output = (Encoder-Decoder Part Output . Fully Connected Layer Weights) + Fully Connected Layer Bias
 Next Token Probabilities     = SoftMax(Fully Connected Layer Output)
 ```
+
+## Varieties
+
+=== "MoE"
+
+    Mixture of Experts (MoE) is an advanced neural network architecture that increases model capacity and efficiency by routing inputs through a subset of specialized "expert" sub-networks.
+    Unlike traditional dense models, MoE dynamically selects which experts to activate for each input, allowing for sparse computation and scalable training.
+
+    - **Scalable and Efficient**: Enables training of extremely large models by activating only a fraction of the network per input, reducing computational cost while maintaining high capacity.
+    - **Dynamic Routing**: Utilizes a gating mechanism to select the most relevant experts for each input, promoting specialization and diversity among experts.
+    - **State-of-the-Art Performance**: Achieves strong results in language modeling and other tasks, especially in large-scale settings. MoE models have powered some of the largest and most capable language models to date.
+    - **Flexible Design**: Can be integrated into various architectures, including Transformers, to enhance performance on tasks involving diverse or complex data distributions.
+
+=== "MoR"
+
+    Mixture of Recursion (MoR) is an emerging neural network architecture designed to enhance sequence modeling by leveraging recursive computation and dynamic routing.
+    MoR architectures combine the strengths of recursive neural networks with the scalability of mixture models, enabling efficient handling of hierarchical and structured data.
+
+    - **Recursive Computation**: Utilizes recursive structures to process sequences or trees, allowing the model to capture hierarchical relationships and compositional patterns in data.
+    - **Dynamic Expert Selection**: Similar to Mixture of Experts, MoR employs a gating mechanism to dynamically select among multiple recursive modules (experts) for each input, promoting specialization and efficient computation.
+    - **Efficient Hierarchical Modeling**: Excels at tasks requiring deep compositional reasoning, such as parsing, code analysis, and language understanding, by recursively combining information at multiple levels of abstraction.
+    - **Scalable and Flexible**: Supports sparse activation and modular design, making it suitable for large-scale models and adaptable to various data modalities, including language, graphs, and structured documents.
+    - **State-of-the-Art Potential**: MoR is a promising direction for advancing neural architectures in domains where recursive and hierarchical structures are fundamental.
 
 ## Components
 
