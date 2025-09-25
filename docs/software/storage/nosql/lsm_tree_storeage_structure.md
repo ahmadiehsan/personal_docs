@@ -28,12 +28,12 @@ SSTables are designed for efficient read-and-write operations in scenarios where
 
 ## Storage Structure
 
-### Primary Structure
+=== "Primary Structure"
 
-We only keep part of the keys in memory.
+    We only keep part of the keys in memory.
 
-![](lsm_tree_storeage_structure/image1.png)
+    ![](lsm_tree_storeage_structure/image1.png)
 
-### Compaction Scenario
+=== "Compaction Scenario"
 
-![](lsm_tree_storeage_structure/image3.png)
+    ![](lsm_tree_storeage_structure/image3.png)
