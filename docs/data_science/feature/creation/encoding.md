@@ -1,4 +1,4 @@
-# Encoding
+# Encoding {One-Hot} {TF-IDF}
 
 ## Description
 
