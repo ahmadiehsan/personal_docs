@@ -1,31 +1,37 @@
-# Freezing Layers
+# Freezing Layers {Adaptive}
 
 ## Description
 
-Researchers have shown that training only the first five encoder blocks is enough to almost reach the performance of training all encoder blocks.
+=== "Freezing Layers"
 
-Effect of frozen training blocks on training performance:
+    Researchers have shown that training only the first five encoder blocks is enough to almost reach the performance of training all encoder blocks.
 
-<img src="effect.png" style="width:5in" />
+    Effect of frozen training blocks on training performance:
+
+    <img src="effect.png" style="width:5in" />
+
+=== "Adaptive"
 
 ## Example
 
-```python
-def freeze_layers(model_to_freeze, *, num_layers_to_freeze):
-    for param in model_to_freeze.base_model.parameters():
-        param.requires_grad = False  # First freeze all layers
+=== "Freezing Layers"
 
-    for i, layer in enumerate(model_to_freeze.base_model.transformer.h):
-        if i >= len(model_to_freeze.base_model.transformer.h) - num_layers_to_freeze:
-            for param in layer.parameters():
-                param.requires_grad = True  # Then unfreeze some of them
+    ```python
+    def freeze_layers(model_to_freeze, *, num_layers_to_freeze):
+        for param in model_to_freeze.base_model.parameters():
+            param.requires_grad = False  # First freeze all layers
 
-model_id = "bert-base-cased"
-model = AutoModelForSequenceClassification.from_pretrained(model_id, num_labels=2)
-freeze_layers(model, num_layers_to_freeze=4)
-```
+        for i, layer in enumerate(model_to_freeze.base_model.transformer.h):
+            if i >= len(model_to_freeze.base_model.transformer.h) - num_layers_to_freeze:
+                for param in layer.parameters():
+                    param.requires_grad = True  # Then unfreeze some of them
 
-!!! info
+    model_id = "bert-base-cased"
+    model = AutoModelForSequenceClassification.from_pretrained(model_id, num_labels=2)
+    freeze_layers(model, num_layers_to_freeze=4)
+    ```
+
+=== "Adaptive"
 
     With a function like this, we can start training and gradually unfreeze some layers:
 

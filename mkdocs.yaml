@@ -8,6 +8,7 @@ theme:
     - content.code.copy # Add "copy button" support to each "code block"
     - navigation.tabs # Add "top menu" support
     - navigation.indexes # Add "index pages" support for sections
+    - content.tabs.link # Add "linkable tabs" support
   palette:
     - scheme: default
       primary: white
