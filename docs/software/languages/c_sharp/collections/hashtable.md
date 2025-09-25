@@ -44,20 +44,20 @@ foreach (DictionaryEntry item in employees) {
 
 ## Features
 
-### Overview
+=== "Overview"
 
-| Feature                              | Description                                    |
-| ------------------------------------ | ---------------------------------------------- |
-| `Count`                              | Returns count of elements.                     |
-| `[TKey]`                             | Returns value based on specified key.          |
-| `Keys`                               | Returns a collection of keys (without values). |
-| `Values`                             | Returns a collection of values (without keys). |
-| `void Add(object key, object value)` | Adds an element (key/value pair).              |
-| `void Remove(object key)`            | Removes an element based on specified key.     |
-| `bool ContainsKey(object key)`       | Determines whether the specified key exists.   |
-| `bool ContainsValue(object value)`   | Determines whether the specified value exists. |
-| `void Clear()`                       | Removes all elements.                          |
+    | Feature                              | Description                                    |
+    | ------------------------------------ | ---------------------------------------------- |
+    | `Count`                              | Returns count of elements.                     |
+    | `[TKey]`                             | Returns value based on specified key.          |
+    | `Keys`                               | Returns a collection of keys (without values). |
+    | `Values`                             | Returns a collection of values (without keys). |
+    | `void Add(object key, object value)` | Adds an element (key/value pair).              |
+    | `void Remove(object key)`            | Removes an element based on specified key.     |
+    | `bool ContainsKey(object key)`       | Determines whether the specified key exists.   |
+    | `bool ContainsValue(object value)`   | Determines whether the specified value exists. |
+    | `void Clear()`                       | Removes all elements.                          |
 
-!!! info
+    !!! info
 
-    All the shared features can be used for Hashtable
+        All the shared features can be used for Hashtable

@@ -26,45 +26,45 @@ foreach (Student item in marks) {
 
 ## Features
 
-### Overview
+=== "Overview"
 
-| Feature       | Description                                                      |
-|---------------|------------------------------------------------------------------|
-| `Count`       | Returns the count of elements in the stack.                      |
-| `Push(T)`     | Adds an element at the top of the stack.                         |
-| `Pop()`       | Removes and returns the element at the top of the stack.         |
-| `Peek()`      | Returns the element at the top of the stack without removing it. |
-| `Contains(T)` | Determines whether the specified element exists in the stack.    |
-| `ToArray()`   | Converts the stack into an array.                                |
-| `Clear()`     | Removes all elements from the stack.                             |
+    | Feature       | Description                                                      |
+    | ------------- | ---------------------------------------------------------------- |
+    | `Count`       | Returns the count of elements in the stack.                      |
+    | `Push(T)`     | Adds an element at the top of the stack.                         |
+    | `Pop()`       | Removes and returns the element at the top of the stack.         |
+    | `Peek()`      | Returns the element at the top of the stack without removing it. |
+    | `Contains(T)` | Determines whether the specified element exists in the stack.    |
+    | `ToArray()`   | Converts the stack into an array.                                |
+    | `Clear()`     | Removes all elements from the stack.                             |
 
-!!! info
+    !!! info
 
-    All the shared features can be used for Stack
+        All the shared features can be used for Stack
 
-### Push
+=== "Push"
 
-Is used to add an object to the top of the stack.
+    Is used to add an object to the top of the stack.
 
-Example:
+    Example:
 
-```csharp
-marks.Push(new Student() { Marks = 45 });
-marks.Push(new Student() { Marks = 61 });
-marks.Push(new Student() { Marks = 80 });
-```
+    ```csharp
+    marks.Push(new Student() { Marks = 45 });
+    marks.Push(new Student() { Marks = 61 });
+    marks.Push(new Student() { Marks = 80 });
+    ```
 
-### Pop
+=== "Pop"
 
-Is used to remove and return the object at the top of the stack.
-It modifies the stack by removing the top-most element.
+    Is used to remove and return the object at the top of the stack.
+    It modifies the stack by removing the top-most element.
 
-- Will remove the returned element.
-- If the stack is empty, it throws an `InvalidOperationException`.
+    - Will remove the returned element.
+    - If the stack is empty, it throws an `InvalidOperationException`.
 
-Example:
+    Example:
 
-```csharp
-Student stu = marks.Pop();
-Console.WriteLine("Pop: " + stu.Marks);
-```
+    ```csharp
+    Student stu = marks.Pop();
+    Console.WriteLine("Pop: " + stu.Marks);
+    ```

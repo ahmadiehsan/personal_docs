@@ -35,56 +35,56 @@ class record_name {
 
 ## Features
 
-### Mutable Properties
+=== "Mutable Properties"
 
-```csharp
-record record_name(data_type Property_name, ...) {
-    data_type Property_name { get; set; }
-}
-```
+    ```csharp
+    record record_name(data_type Property_name, ...) {
+        data_type Property_name { get; set; }
+    }
+    ```
 
-### Equality
+=== "Equality"
 
-Records provide a compiler-generated `Equals()` method and overloads `==` and `!=` operators that compare two instances of records that compare the **values** of fields (but doesn't compare references).
+    Records provide a compiler-generated `Equals()` method and overloads `==` and `!=` operators that compare two instances of records that compare the **values** of fields (but doesn't compare references).
 
-```csharp
-record_name variable1 = new record_name(value1, value2);
-record_name variable2 = new record_name(value1, value2);
+    ```csharp
+    record_name variable1 = new record_name(value1, value2);
+    record_name variable2 = new record_name(value1, value2);
 
-variable1 == variable2;       // true
-variable1.Equals(variable2);  // true
-```
+    variable1 == variable2;       // true
+    variable1.Equals(variable2);  // true
+    ```
 
-### Inheritance
+=== "Inheritance"
 
-```csharp
-public record Parent_record_name(Properties_list);
+    ```csharp
+    public record Parent_record_name(Properties_list);
 
-public record Child_record_name(Properties_list) : Parent_record_name;
-```
+    public record Child_record_name(Properties_list) : Parent_record_name;
+    ```
 
-Example:
+    Example:
 
-```csharp
-public record Employee(string? Name, DateTime? DateOfBirth, int? Age, double? Salary): Person(Name, DateOfBirth, Age);
-```
+    ```csharp
+    public record Employee(string? Name, DateTime? DateOfBirth, int? Age, double? Salary): Person(Name, DateOfBirth, Age);
+    ```
 
-### Nested Record
+=== "Nested Record"
 
-```csharp
-public record Person(string Name, int Age, Address PersonAddress);
+    ```csharp
+    public record Person(string Name, int Age, Address PersonAddress);
 
-public record Address(string City);
-```
+    public record Address(string City);
+    ```
 
-### Deconstruction
+=== "Deconstruction"
 
-Records by default supports deconstruction
+    Records by default supports deconstruction
 
-```csharp
-Person person1 = new Person("John", 20, new Address("London", "UK"));
-var (name, _, (city, country)) = person1;
-```
+    ```csharp
+    Person person1 = new Person("John", 20, new Address("London", "UK"));
+    var (name, _, (city, country)) = person1;
+    ```
 
 ## Record Struct
 

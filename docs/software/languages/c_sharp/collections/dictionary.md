@@ -34,20 +34,20 @@ foreach (KeyValuePair<int, string> item in employees) {
 
 ## Features
 
-### Overview
+=== "Overview"
 
-| Feature                      | Description                                    |
-|------------------------------|------------------------------------------------|
-| `Count`                      | Returns count of elements.                     |
-| `[TKey]`                     | Returns value based on specified key.          |
-| `Keys`                       | Returns a collection of key (without values).  |
-| `Values`                     | Returns a collection of values (without keys). |
-| `void Add(TKey, TValue)`     | Adds an element (key/value pair).              |
-| `bool Remove(TKey)`          | Removes an element based on specified key.     |
-| `bool ContainsKey(TKey)`     | Determines whether the specified key exists.   |
-| `bool ContainsValue(TValue)` | Determines whether the specified value exists. |
-| `void Clear()`               | Removes all elements.                          |
+    | Feature                      | Description                                    |
+    | ---------------------------- | ---------------------------------------------- |
+    | `Count`                      | Returns count of elements.                     |
+    | `[TKey]`                     | Returns value based on specified key.          |
+    | `Keys`                       | Returns a collection of key (without values).  |
+    | `Values`                     | Returns a collection of values (without keys). |
+    | `void Add(TKey, TValue)`     | Adds an element (key/value pair).              |
+    | `bool Remove(TKey)`          | Removes an element based on specified key.     |
+    | `bool ContainsKey(TKey)`     | Determines whether the specified key exists.   |
+    | `bool ContainsValue(TValue)` | Determines whether the specified value exists. |
+    | `void Clear()`               | Removes all elements.                          |
 
-!!! info
+    !!! info
 
-    All the shared features can be used for Dictionary
+        All the shared features can be used for Dictionary

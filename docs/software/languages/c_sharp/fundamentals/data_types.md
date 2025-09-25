@@ -3,7 +3,7 @@
 ## Primitive vs Non-Primitive
 
 | **Primitive Types**                                                                      | **Non-Primitive Types**                                 |
-|------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------- |
 | (sbyte, byte, short, ushort, int, uint, long, ulong, float, double, decimal, char, bool) | (string, Classes, Interfaces, Structures, Enumerations) |
 | Strictly stores single value                                                             | Stores one or more values                               |
 | Primitive Types are basic building blocks of non-primitive types                         | Usually contains multiple members                       |
@@ -14,7 +14,7 @@
 - Data type are specific to C# but their structure/class are specific to .NET
 
 | Data Type | Structure/Class | Name of Structure/Class | Full Path (with Namespace) |
-|-----------|-----------------|-------------------------|----------------------------|
+| --------- | --------------- | ----------------------- | -------------------------- |
 | sbyte     | Structure       | SByte                   | System.SByte               |
 | byte      | Structure       | Byte                    | System.Byte                |
 | short     | Structure       | Int16                   | System.Int16               |
@@ -32,182 +32,180 @@
 
 ## Reference and Value
 
-### VS
+=== "VS"
 
-| **Value Types**                                                                                       | **Reference Types**                                                                                        |
-|-------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| (Structures, Enumerations)                                                                            | (string, Classes, Interfaces, Delegates)                                                                   |
-| Mainly meant for storing simple values.                                                               | Mainly meant for storing complex / large amount of values.                                                 |
-| Instances (examples) are called as "structure instances" or "enumeration instances".                  | Instances (examples) are called as "Objects" (Class Instances / Interface Instances / Delegate Instances). |
-| Instances are stored in **"Stack"**. Every time when a method is called, a new stack will be created. | Instances (objects) are stored in **"heap"**. Heap is only one for entire application.                     |
+    | **Value Types**                                                                                       | **Reference Types**                                                                                        |
+    | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+    | (Structures, Enumerations)                                                                            | (string, Classes, Interfaces, Delegates)                                                                   |
+    | Mainly meant for storing simple values.                                                               | Mainly meant for storing complex / large amount of values.                                                 |
+    | Instances (examples) are called as "structure instances" or "enumeration instances".                  | Instances (examples) are called as "Objects" (Class Instances / Interface Instances / Delegate Instances). |
+    | Instances are stored in **"Stack"**. Every time when a method is called, a new stack will be created. | Instances (objects) are stored in **"heap"**. Heap is only one for entire application.                     |
 
-### Boxing
+=== "Boxing"
 
-It is a process of converting a value from "Value-Type Data Type" to "Reference-Type Data Type", if they are compatible data types.
+    It is a process of converting a value from "Value-Type Data Type" to "Reference-Type Data Type", if they are compatible data types.
 
-This can be done automatically (no need for any syntax).
+    This can be done automatically (no need for any syntax).
 
-```csharp
-// primitive variable
-int x = 10;
+    ```csharp
+    // primitive variable
+    int x = 10;
 
-// boxing (value-type to reference-type)
-object obj = x;
+    // boxing (value-type to reference-type)
+    object obj = x;
 
-System.Console.WriteLine(x);   // Output: 10
-System.Console.WriteLine(obj); // Output: 10
-```
+    System.Console.WriteLine(x);   // Output: 10
+    System.Console.WriteLine(obj); // Output: 10
+    ```
 
-### Unboxing
+=== "Unboxing"
 
-It is a process of converting a value from "Reference-Type Data Type" to "Value-Type Data Type", if they are compatible data types.
+    It is a process of converting a value from "Reference-Type Data Type" to "Value-Type Data Type", if they are compatible data types.
 
-This should be done explicitly (by using explicit casting).
+    This should be done explicitly (by using explicit casting).
 
-```csharp
-// reference type variable
-object obj = 10;
+    ```csharp
+    // reference type variable
+    object obj = 10;
 
-// unboxing (reference-type to value-type)
-int x = (int)obj;
+    // unboxing (reference-type to value-type)
+    int x = (int)obj;
 
-System.Console.WriteLine(x);   // Output: 10
-System.Console.WriteLine(obj); // Output: 10
-```
+    System.Console.WriteLine(x);   // Output: 10
+    System.Console.WriteLine(obj); // Output: 10
+    ```
 
-When we aren't sure about the incoming type, we will store it in a variable with object type and after that we will using unboxing for converting it to the proper type
+    When we aren't sure about the incoming type, we will store it in a variable with object type and after that we will using unboxing for converting it to the proper type
 
 ## Types
 
-### Byte
+=== "Byte"
 
-| **Type**             | **sbyte**            | **byte**               |
-|----------------------|----------------------|------------------------|
-| **Size**             | 1 byte               | 1 byte                 |
-| **Range**            | -128 to 127          | 0 to 255               |
-| **Type**             | 8-bit signed integer | 8-bit unsigned integer |
-| **Default Value**    | 0                    | 0                      |
-| **MinValue Command** | sbyte.MinValue       | byte.MinValue          |
-| **MaxValue Command** | sbyte.MaxValue       | byte.MaxValue          |
+    | **Type**             | **sbyte**            | **byte**               |
+    | -------------------- | -------------------- | ---------------------- |
+    | **Size**             | 1 byte               | 1 byte                 |
+    | **Range**            | -128 to 127          | 0 to 255               |
+    | **Type**             | 8-bit signed integer | 8-bit unsigned integer |
+    | **Default Value**    | 0                    | 0                      |
+    | **MinValue Command** | sbyte.MinValue       | byte.MinValue          |
+    | **MaxValue Command** | sbyte.MaxValue       | byte.MaxValue          |
 
-### Short
+=== "Short"
 
-| **Type**             | **short**             | **ushort**              |
-|----------------------|-----------------------|-------------------------|
-| **Size**             | 2 bytes               | 2 bytes                 |
-| **Range**            | -32,768 to 32,767     | 0 to 65,535             |
-| **Type**             | 16-bit signed integer | 16-bit unsigned integer |
-| **Default Value**    | 0                     | 0                       |
-| **MinValue Command** | short.MinValue        | ushort.MinValue         |
-| **MaxValue Command** | short.MaxValue        | ushort.MaxValue         |
+    | **Type**             | **short**             | **ushort**              |
+    | -------------------- | --------------------- | ----------------------- |
+    | **Size**             | 2 bytes               | 2 bytes                 |
+    | **Range**            | -32,768 to 32,767     | 0 to 65,535             |
+    | **Type**             | 16-bit signed integer | 16-bit unsigned integer |
+    | **Default Value**    | 0                     | 0                       |
+    | **MinValue Command** | short.MinValue        | ushort.MinValue         |
+    | **MaxValue Command** | short.MaxValue        | ushort.MaxValue         |
 
-### Int
+=== "Int"
 
-| **Type**             | **int**                                                                                          | **uint**                                                                                         |
-|----------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| **Size**             | 4 bytes                                                                                          | 4 bytes                                                                                          |
-| **Range**            | -2,147,483,648 to 2,147,483,647                                                                  | 0 to 4,294,967,295                                                                               |
-| **Type**             | 32-bit signed integer                                                                            | 32-bit unsigned integer                                                                          |
-| **Default Value**    | 0                                                                                                | 0                                                                                                |
-| **MinValue Command** | int.MinValue                                                                                     | uint.MinValue                                                                                    |
-| **MaxValue Command** | int.MaxValue                                                                                     | uint.MaxValue                                                                                    |
-| **Notes**            | By default, integer literals between -2,147,483,648 and 2,147,483,647 are treated as `int` type. | By default, integer literals between 2,147,483,648 and 4,294,967,295 are treated as `uint` type. |
+    | **Type**             | **int**                                                                                          | **uint**                                                                                         |
+    | -------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+    | **Size**             | 4 bytes                                                                                          | 4 bytes                                                                                          |
+    | **Range**            | -2,147,483,648 to 2,147,483,647                                                                  | 0 to 4,294,967,295                                                                               |
+    | **Type**             | 32-bit signed integer                                                                            | 32-bit unsigned integer                                                                          |
+    | **Default Value**    | 0                                                                                                | 0                                                                                                |
+    | **MinValue Command** | int.MinValue                                                                                     | uint.MinValue                                                                                    |
+    | **MaxValue Command** | int.MaxValue                                                                                     | uint.MaxValue                                                                                    |
+    | **Notes**            | By default, integer literals between -2,147,483,648 and 2,147,483,647 are treated as `int` type. | By default, integer literals between 2,147,483,648 and 4,294,967,295 are treated as `uint` type. |
 
-### Long
+=== "Long"
 
-| **Type**             | **long**                                                                                                                  | **ulong**                                                                                                                  |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| **Size**             | 8 bytes                                                                                                                   | 8 bytes                                                                                                                    |
-| **Range**            | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807                                                                   | 0 to 18,446,744,073,709,551,615                                                                                            |
-| **Type**             | 64-bit signed integer                                                                                                     | 64-bit unsigned integer                                                                                                    |
-| **Default Value**    | 0                                                                                                                         | 0                                                                                                                          |
-| **MinValue Command** | long.MinValue                                                                                                             | ulong.MinValue                                                                                                             |
-| **MaxValue Command** | long.MaxValue                                                                                                             | ulong.MaxValue                                                                                                             |
-| **Notes**            | By default, integer literals between -9,223,372,036,854,775,808 and 9,223,372,036,854,775,807 are treated as `long` type. | By default, integer literals between 9,223,372,036,854,775,808 and 18,446,744,073,709,551,615 are treated as `ulong` type. |
+    | **Type**             | **long**                                                                                                                  | **ulong**                                                                                                                  |
+    | -------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+    | **Size**             | 8 bytes                                                                                                                   | 8 bytes                                                                                                                    |
+    | **Range**            | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807                                                                   | 0 to 18,446,744,073,709,551,615                                                                                            |
+    | **Type**             | 64-bit signed integer                                                                                                     | 64-bit unsigned integer                                                                                                    |
+    | **Default Value**    | 0                                                                                                                         | 0                                                                                                                          |
+    | **MinValue Command** | long.MinValue                                                                                                             | ulong.MinValue                                                                                                             |
+    | **MaxValue Command** | long.MaxValue                                                                                                             | ulong.MaxValue                                                                                                             |
+    | **Notes**            | By default, integer literals between -9,223,372,036,854,775,808 and 9,223,372,036,854,775,807 are treated as `long` type. | By default, integer literals between 9,223,372,036,854,775,808 and 18,446,744,073,709,551,615 are treated as `ulong` type. |
 
-### Float
+=== "Float"
 
-| **Type**             | **float**                                                                                                                                      |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Size**             | 4 bytes                                                                                                                                        |
-| **Range**            | -3.402823E+38 to 3.402823E+38                                                                                                                  |
-| **Range (expanded)** | Minus three hundred forty-two hundred eighty-two three hundred nonillion to three hundred forty-two hundred eighty-two three hundred nonillion |
-| **Type**             | 32-bit signed floating-point number                                                                                                            |
-| **Precision**        | 7 digits                                                                                                                                       |
-| **Default Value**    | 0F                                                                                                                                             |
-| **MinValue Command** | float.MinValue                                                                                                                                 |
-| **MaxValue Command** | float.MaxValue                                                                                                                                 |
+    | **Type**             | **float**                                                                                                                                      |
+    | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **Size**             | 4 bytes                                                                                                                                        |
+    | **Range**            | -3.402823E+38 to 3.402823E+38                                                                                                                  |
+    | **Range (expanded)** | Minus three hundred forty-two hundred eighty-two three hundred nonillion to three hundred forty-two hundred eighty-two three hundred nonillion |
+    | **Type**             | 32-bit signed floating-point number                                                                                                            |
+    | **Precision**        | 7 digits                                                                                                                                       |
+    | **Default Value**    | 0F                                                                                                                                             |
+    | **MinValue Command** | float.MinValue                                                                                                                                 |
+    | **MaxValue Command** | float.MaxValue                                                                                                                                 |
 
-### Double
+=== "Double"
 
-| **Type**                       | **double**                                                                                                                                                                                                                                                                                                                                                                                     |
-|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Size**                       | 8 bytes                                                                                                                                                                                                                                                                                                                                                                                        |
-| **Range**                      | -$1.79769313486232 \times 10^{308}$ to $1.79769313486232 \times 10^{308}$                                                                                                                                                                                                                                                                                                                      |
-| **Range (Expanded)**           | MINUS one hundred seventy-nine trillion seven hundred sixty-nine billion three hundred thirteen million four hundred eighty-six thousand two hundred thirty-two UNTRIGINTILLION DUOTRIGINTILLION to one hundred seventy-nine trillion seven hundred sixty-nine billion three hundred thirteen million four hundred eighty-six thousand two hundred thirty-two UNTRIGINTILLION DUOTRIGINTILLION |
-| **Precision**                  | 15 digits                                                                                                                                                                                                                                                                                                                                                                                      |
-| **Default Value**              | 0D                                                                                                                                                                                                                                                                                                                                                                                             |
-| **Min and Max Value Commands** | `double.MinValue`, `double.MaxValue`                                                                                                                                                                                                                                                                                                                                                           |
-| **Notes**                      | By default, floating-point literals in the specified range are treated as "double" type.                                                                                                                                                                                                                                                                                                       |
+    | **Type**                       | **double**                                                                                                                                                                                                                                                                                                                                                                                     |
+    | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **Size**                       | 8 bytes                                                                                                                                                                                                                                                                                                                                                                                        |
+    | **Range**                      | -$1.79769313486232 \times 10^{308}$ to $1.79769313486232 \times 10^{308}$                                                                                                                                                                                                                                                                                                                      |
+    | **Range (Expanded)**           | MINUS one hundred seventy-nine trillion seven hundred sixty-nine billion three hundred thirteen million four hundred eighty-six thousand two hundred thirty-two UNTRIGINTILLION DUOTRIGINTILLION to one hundred seventy-nine trillion seven hundred sixty-nine billion three hundred thirteen million four hundred eighty-six thousand two hundred thirty-two UNTRIGINTILLION DUOTRIGINTILLION |
+    | **Precision**                  | 15 digits                                                                                                                                                                                                                                                                                                                                                                                      |
+    | **Default Value**              | 0D                                                                                                                                                                                                                                                                                                                                                                                             |
+    | **Min and Max Value Commands** | `double.MinValue`, `double.MaxValue`                                                                                                                                                                                                                                                                                                                                                           |
+    | **Notes**                      | By default, floating-point literals in the specified range are treated as "double" type.                                                                                                                                                                                                                                                                                                       |
 
-### Decimal
+=== "Decimal"
 
-| **Type**                       | **decimal**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Size**                       | 16 bytes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **Range**                      | -79228162514264337593543950335 to 79228162514264337593543950335                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| **Range (Expanded)**           | MINUS seventy-nine octillion two hundred twenty-eight septillion one hundred sixty-two sextillion five hundred fourteen quintillion two hundred sixty-four quadrillion three hundred thirty-seven trillion five hundred ninety-three billion five hundred forty-three million nine hundred fifty thousand three hundred thirty-five to seventy-nine octillion two hundred twenty-eight septillion one hundred sixty-two sextillion five hundred fourteen quintillion two hundred sixty-four quadrillion three hundred thirty-seven trillion five hundred ninety-three billion five hundred forty-three million nine hundred fifty thousand three hundred thirty-five |
-| **Precision**                  | 28 digits                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Default Value**              | 0M                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| **Min and Max Value Commands** | `double.MinValue`, `double.MaxValue`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+    | **Type**                       | **decimal**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+    | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **Size**                       | 16 bytes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+    | **Range**                      | -79228162514264337593543950335 to 79228162514264337593543950335                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+    | **Range (Expanded)**           | MINUS seventy-nine octillion two hundred twenty-eight septillion one hundred sixty-two sextillion five hundred fourteen quintillion two hundred sixty-four quadrillion three hundred thirty-seven trillion five hundred ninety-three billion five hundred forty-three million nine hundred fifty thousand three hundred thirty-five to seventy-nine octillion two hundred twenty-eight septillion one hundred sixty-two sextillion five hundred fourteen quintillion two hundred sixty-four quadrillion three hundred thirty-seven trillion five hundred ninety-three billion five hundred forty-three million nine hundred fifty thousand three hundred thirty-five |
+    | **Precision**                  | 28 digits                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+    | **Default Value**              | 0M                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+    | **Min and Max Value Commands** | `double.MinValue`, `double.MaxValue`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
-### Char
+=== "Char"
 
-| **Type**           | **char**                                                                        |
-|--------------------|---------------------------------------------------------------------------------|
-| **Size**           | 2 bytes                                                                         |
-| **Range**          | 0 to 137,994 (Unicode codes that represent characters)                          |
-| **Type**           | 16-bit Single Unicode character                                                 |
-| **ASCII Standard** | ASCII is 0 to 255 (English language characters only)                            |
-| **Unicode**        | Unicode is the superset of ASCII and includes other natural language characters |
-| **Default Value**  | \0                                                                              |
-| **Notes**          | Character literals should be written in single quotes only. Ex: 'A'             |
+    | **Type**           | **char**                                                                        |
+    | ------------------ | ------------------------------------------------------------------------------- |
+    | **Size**           | 2 bytes                                                                         |
+    | **Range**          | 0 to 137,994 (Unicode codes that represent characters)                          |
+    | **Type**           | 16-bit Single Unicode character                                                 |
+    | **ASCII Standard** | ASCII is 0 to 255 (English language characters only)                            |
+    | **Unicode**        | Unicode is the superset of ASCII and includes other natural language characters |
+    | **Default Value**  | \0                                                                              |
+    | **Notes**          | Character literals should be written in single quotes only. Ex: 'A'             |
 
-!!! info
+    !!! info
 
-    \\0 means null
+        \\0 means null
 
-Important ASCII/Unicode Numbers for Characters:
+    Important ASCII/Unicode Numbers for Characters:
 
-- 65 to 90: A-Z
-- 97 to 122: a-z
-- 48 to 57: 0-9
-- 32: Space
-- 8: Backspace
-- 13: Enter
+    - 65 to 90: A-Z
+    - 97 to 122: a-z
+    - 48 to 57: 0-9
+    - 32: Space
+    - 8: Backspace
+    - 13: Enter
 
-### String
+=== "String"
 
-| **Type**          | **string**                                                            |
-|-------------------|-----------------------------------------------------------------------|
-| **Size**          | Length $\times$ 2 bytes                                               |
-| **Range**         | 0 to 2 billion characters                                             |
-| **Type**          | Collection of Unicode characters                                      |
-| **Default Value** | null                                                                  |
-| **Notes**         | String literals should be written in double quotes only. Ex: "Abc123" |
+    | **Type**          | **string**                                                            |
+    | ----------------- | --------------------------------------------------------------------- |
+    | **Size**          | Length $\times$ 2 bytes                                               |
+    | **Range**         | 0 to 2 billion characters                                             |
+    | **Type**          | Collection of Unicode characters                                      |
+    | **Default Value** | null                                                                  |
+    | **Notes**         | String literals should be written in double quotes only. Ex: "Abc123" |
 
-### Boolean
+=== "Boolean"
 
-| **Type**            | **bool**                           |
-|---------------------|------------------------------------|
-| **Size**            | 1 bit                              |
-| **Possible Values** | true, false                        |
-| **Default Value**   | false                              |
-| **Notes**           | Stores logical values (true/false) |
+    | **Type**            | **bool**                           |
+    | ------------------- | ---------------------------------- |
+    | **Size**            | 1 bit                              |
+    | **Possible Values** | true, false                        |
+    | **Default Value**   | false                              |
+    | **Notes**           | Stores logical values (true/false) |
 
 ## Type Conversion
-
-### Classification
 
 Type Conversion is a process of converting a value from one type (source type) to another type (destination type).
 
@@ -216,114 +214,114 @@ Type Conversion is a process of converting a value from one type (source type) t
 - Parsing / TryParse: from string to numerical-type
 - Conversion Methods: from any-primitive-type to any-primitive-type
 
-### Implicit Casting
+=== "Implicit Casting"
 
-| Conversion From | Conversion To                                                 |
-|-----------------|---------------------------------------------------------------|
-| sbyte           | short, int, long, float, double, decimal                      |
-| byte            | short, ushort, int, uint, long, ulong, float, double, decimal |
-| short           | int, long, float, double, decimal                             |
-| ushort          | int, uint, long, ulong, float, double, decimal                |
-| int             | long, float, double, decimal                                  |
-| uint            | long, ulong, float, double, decimal                           |
-| long            | float, double, decimal                                        |
-| ulong           | float, double, decimal                                        |
-| float           | double                                                        |
-| double          | [none]                                                        |
-| decimal         | [none]                                                        |
-| char            | ushort, int, uint, long, ulong, float, double, decimal        |
-| bool            | [none]                                                        |
-| string          | [none]                                                        |
+    | Conversion From | Conversion To                                                 |
+    | --------------- | ------------------------------------------------------------- |
+    | sbyte           | short, int, long, float, double, decimal                      |
+    | byte            | short, ushort, int, uint, long, ulong, float, double, decimal |
+    | short           | int, long, float, double, decimal                             |
+    | ushort          | int, uint, long, ulong, float, double, decimal                |
+    | int             | long, float, double, decimal                                  |
+    | uint            | long, ulong, float, double, decimal                           |
+    | long            | float, double, decimal                                        |
+    | ulong           | float, double, decimal                                        |
+    | float           | double                                                        |
+    | double          | [none]                                                        |
+    | decimal         | [none]                                                        |
+    | char            | ushort, int, uint, long, ulong, float, double, decimal        |
+    | bool            | [none]                                                        |
+    | string          | [none]                                                        |
 
-!!! info
+    !!! info
 
-    No need to any syntax, compiler will do it for us
+        No need to any syntax, compiler will do it for us
 
-### Explicit Casting
+=== "Explicit Casting"
 
-| Conversion From | Conversion To                                                              |
-|-----------------|----------------------------------------------------------------------------|
-| sbyte           | byte, ushort, uint, ulong                                                  |
-| byte            | sbyte                                                                      |
-| short           | sbyte, byte, ushort, uint, ulong                                           |
-| ushort          | sbyte, byte, short                                                         |
-| int             | sbyte, byte, short, ushort, uint, ulong                                    |
-| uint            | sbyte, byte, short, ushort, int                                            |
-| long            | sbyte, byte, short, ushort, int, uint, ulong                               |
-| ulong           | sbyte, byte, short, ushort, int, uint, long                                |
-| float           | sbyte, byte, short, ushort, int, uint, long, ulong, decimal                |
-| double          | sbyte, byte, short, ushort, int, uint, long, ulong, float, decimal         |
-| decimal         | sbyte, byte, short, ushort, int, uint, long, ulong, float, double          |
-| char            | sbyte, byte, short, ushort, int, uint, long, ulong, float, double, decimal |
-| bool            | [none]                                                                     |
-| string          | [none]                                                                     |
+    | Conversion From | Conversion To                                                              |
+    | --------------- | -------------------------------------------------------------------------- |
+    | sbyte           | byte, ushort, uint, ulong                                                  |
+    | byte            | sbyte                                                                      |
+    | short           | sbyte, byte, ushort, uint, ulong                                           |
+    | ushort          | sbyte, byte, short                                                         |
+    | int             | sbyte, byte, short, ushort, uint, ulong                                    |
+    | uint            | sbyte, byte, short, ushort, int                                            |
+    | long            | sbyte, byte, short, ushort, int, uint, ulong                               |
+    | ulong           | sbyte, byte, short, ushort, int, uint, long                                |
+    | float           | sbyte, byte, short, ushort, int, uint, long, ulong, decimal                |
+    | double          | sbyte, byte, short, ushort, int, uint, long, ulong, float, decimal         |
+    | decimal         | sbyte, byte, short, ushort, int, uint, long, ulong, float, double          |
+    | char            | sbyte, byte, short, ushort, int, uint, long, ulong, float, double, decimal |
+    | bool            | [none]                                                                     |
+    | string          | [none]                                                                     |
 
-!!! warning
+    !!! warning
 
-    If the destination type is not sufficient enough to store the converted value, the value may lose.
+        If the destination type is not sufficient enough to store the converted value, the value may lose.
 
-```csharp
-MyType a = (MyType)myObj;  // throws an exception if type is wrong
-MyType a = myObj as MyType;  // return null if type is wrong
-```
+    ```csharp
+    MyType a = (MyType)myObj;  // throws an exception if type is wrong
+    MyType a = myObj as MyType;  // return null if type is wrong
+    ```
 
-### Parsing
+=== "Parsing"
 
-String to any numerical type
+    String to any numerical type
 
-Syntax:
+    Syntax:
 
-```csharp
-DestinationDataType.Parse(SourceValue)
-```
+    ```csharp
+    DestinationDataType.Parse(SourceValue)
+    ```
 
-### Try Parsing
+=== "Try Parsing"
 
-The string value can be converted into any numerical data type, by using the "TryParse" technique (same as "parse"); but it checks the source value before attempting to parse.
+    The string value can be converted into any numerical data type, by using the "TryParse" technique (same as "parse"); but it checks the source value before attempting to parse.
 
-- If the source value is invalid, it returns `false`; It doesn't raise any exception in this case.
-- If the source value is valid, it returns `true` (indicates conversion is successful).
-- It avoids `FormatException`.
+    - If the source value is invalid, it returns `false`; It doesn't raise any exception in this case.
+    - If the source value is valid, it returns `true` (indicates conversion is successful).
+    - It avoids `FormatException`.
 
-Syntax:
+    Syntax:
 
-```csharp
-bool variable = DestinationType.TryParse(SourceValue, out DestinationVariable)
-```
+    ```csharp
+    bool variable = DestinationType.TryParse(SourceValue, out DestinationVariable)
+    ```
 
-### Conversion Methods
+=== "Conversion Methods"
 
-Conversion method is a pre-defined method, which converts any primitive type (and also "string") to any other primitive type (and also "string").
+    Conversion method is a pre-defined method, which converts any primitive type (and also "string") to any other primitive type (and also "string").
 
-- The `System.Convert` is a class that contains a set of pre-defined methods.
-- It raises `FormatException` if the source value is invalid.
-- For each data type, we have a conversion method.
-- All conversion methods are static methods.
+    - The `System.Convert` is a class that contains a set of pre-defined methods.
+    - It raises `FormatException` if the source value is invalid.
+    - For each data type, we have a conversion method.
+    - All conversion methods are static methods.
 
-Syntax:
+    Syntax:
 
-```csharp
-type destinationVariable = Convert.ConversionMethod(SourceValue)
-```
+    ```csharp
+    type destinationVariable = Convert.ConversionMethod(SourceValue)
+    ```
 
-Conversion table:
+    Conversion table:
 
-| **Conversion To** | **Conversion Method**               |
-|-------------------|-------------------------------------|
-| `sbyte`           | `System.Convert.ToSByte( value )`   |
-| `byte`            | `System.Convert.ToByte( value )`    |
-| `short`           | `System.Convert.ToInt16( value )`   |
-| `ushort`          | `System.Convert.ToUInt16( value )`  |
-| `int`             | `System.Convert.ToInt32( value )`   |
-| `uint`            | `System.Convert.ToUInt32( value )`  |
-| `long`            | `System.Convert.ToInt64( value )`   |
-| `ulong`           | `System.Convert.ToUInt64( value )`  |
-| `float`           | `System.Convert.ToSingle( value )`  |
-| `double`          | `System.Convert.ToDouble( value )`  |
-| `decimal`         | `System.Convert.ToDecimal( value )` |
-| `char`            | `System.Convert.ToChar( value )`    |
-| `string`          | `System.Convert.ToString( value )`  |
-| `bool`            | `System.Convert.ToBoolean( value )` |
+    | **Conversion To** | **Conversion Method**               |
+    | ----------------- | ----------------------------------- |
+    | `sbyte`           | `System.Convert.ToSByte( value )`   |
+    | `byte`            | `System.Convert.ToByte( value )`    |
+    | `short`           | `System.Convert.ToInt16( value )`   |
+    | `ushort`          | `System.Convert.ToUInt16( value )`  |
+    | `int`             | `System.Convert.ToInt32( value )`   |
+    | `uint`            | `System.Convert.ToUInt32( value )`  |
+    | `long`            | `System.Convert.ToInt64( value )`   |
+    | `ulong`           | `System.Convert.ToUInt64( value )`  |
+    | `float`           | `System.Convert.ToSingle( value )`  |
+    | `double`          | `System.Convert.ToDouble( value )`  |
+    | `decimal`         | `System.Convert.ToDecimal( value )` |
+    | `char`            | `System.Convert.ToChar( value )`    |
+    | `string`          | `System.Convert.ToString( value )`  |
+    | `bool`            | `System.Convert.ToBoolean( value )` |
 
 ## System.Object
 
@@ -378,7 +376,7 @@ Class methods:
 ## Nullable Type
 
 | **Value Types**                                                                 | **Reference Types**                                             |
-|---------------------------------------------------------------------------------|-----------------------------------------------------------------|
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | *(structures, enumerations)*                                                    | *(classes, interfaces)*                                         |
 | Value Types are by default non-nullable types.                                  | Reference Types are by default nullable types.                  |
 | Non-nullable types don't support `null` values to be assigned to its variables. | Nullable types support `null` values assigned to its variables. |
