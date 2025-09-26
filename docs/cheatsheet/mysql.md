@@ -19,282 +19,263 @@ sudo mysql_secure_installation
 
 ## Data Types
 
-- String:
+=== "String"
 
-  | Data Type     | Range                              | Storage size              |
-  | ------------- | ---------------------------------- | ------------------------- |
-  | CHAR(size)    | Fixed length, 0 to 255 chars       | 1 to 255 bytes            |
-  | VARCHAR(size) | Variable length, 0 to 65,535 chars | 1 to 65,535 bytes         |
-  | TEXT          | Up to 65,535 chars                 | Up to 65,535 bytes        |
-  | MEDIUMTEXT    | Up to 16,777,215 chars             | Up to 16,777,215 bytes    |
-  | LONGTEXT      | Up to 4,294,967,295 chars          | Up to 4,294,967,295 bytes |
-  | TINYBLOB      | Up to 255 bytes                    | Up to 255 bytes           |
-  | BLOB          | Up to 65,535 bytes                 | Up to 65,535 bytes        |
-  | MEDIUMBLOB    | Up to 16,777,215 bytes             | Up to 16,777,215 bytes    |
-  | LONGBLOB      | Up to 4,294,967,295 bytes          | Up to 4,294,967,295 bytes |
-  | ENUM          | Enumerated list of values          | Depends on values         |
-  | SET           | Set of values                      | Depends on values         |
+    | Data Type     | Range                              | Storage size              |
+    | ------------- | ---------------------------------- | ------------------------- |
+    | CHAR(size)    | Fixed length, 0 to 255 chars       | 1 to 255 bytes            |
+    | VARCHAR(size) | Variable length, 0 to 65,535 chars | 1 to 65,535 bytes         |
+    | TEXT          | Up to 65,535 chars                 | Up to 65,535 bytes        |
+    | MEDIUMTEXT    | Up to 16,777,215 chars             | Up to 16,777,215 bytes    |
+    | LONGTEXT      | Up to 4,294,967,295 chars          | Up to 4,294,967,295 bytes |
+    | TINYBLOB      | Up to 255 bytes                    | Up to 255 bytes           |
+    | BLOB          | Up to 65,535 bytes                 | Up to 65,535 bytes        |
+    | MEDIUMBLOB    | Up to 16,777,215 bytes             | Up to 16,777,215 bytes    |
+    | LONGBLOB      | Up to 4,294,967,295 bytes          | Up to 4,294,967,295 bytes |
+    | ENUM          | Enumerated list of values          | Depends on values         |
+    | SET           | Set of values                      | Depends on values         |
 
-- Numeric:
+=== "Numeric"
 
-  | Data Type                      | Range (signed) (Default)                                | Range (unsigned)                   | Storage size |
-  | ------------------------------ | ------------------------------------------------------- | ---------------------------------- | ------------ |
-  | TINYINT(size)                  | -128 to 127                                             | 0 to 255                           | 1 byte       |
-  | SMALLINT(size)                 | -32,768 to 32,767                                       | 0 to 65,535                        | 2 bytes      |
-  | MEDIUMINT(size)                | -8,388,608 to 8,388,607                                 | 0 to 16,777,215                    | 3 bytes      |
-  | INT(size), INTEGER(size)       | -2,147,483,648 to 2,147,483,647                         | 0 to 4,294,967,295                 | 4 bytes      |
-  | BIGINT(size)                   | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 0 to 18,446,744,073,709,551,615    | 8 bytes      |
-  | FLOAT(size, d)                 | -3.402823466E+38 to 3.402823466E+38                     | Not applicable                     | 4 bytes      |
-  | DOUBLE(size, d)                | -1.7976931348623157E+308 to 1.7976931348623157E+308     | Not applicable                     | 8 bytes      |
-  | DECIMAL(size, d), DEC(size, d) | Depends on the precision and scale                      | Depends on the precision and scale | Varies       |
-  | BIT(size)                      | Not applicable                                          | 1 to 64                            | Varies       |
+    | Data Type                      | Range (signed) (Default)                                | Range (unsigned)                   | Storage size |
+    | ------------------------------ | ------------------------------------------------------- | ---------------------------------- | ------------ |
+    | TINYINT(size)                  | -128 to 127                                             | 0 to 255                           | 1 byte       |
+    | SMALLINT(size)                 | -32,768 to 32,767                                       | 0 to 65,535                        | 2 bytes      |
+    | MEDIUMINT(size)                | -8,388,608 to 8,388,607                                 | 0 to 16,777,215                    | 3 bytes      |
+    | INT(size), INTEGER(size)       | -2,147,483,648 to 2,147,483,647                         | 0 to 4,294,967,295                 | 4 bytes      |
+    | BIGINT(size)                   | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | 0 to 18,446,744,073,709,551,615    | 8 bytes      |
+    | FLOAT(size, d)                 | -3.402823466E+38 to 3.402823466E+38                     | Not applicable                     | 4 bytes      |
+    | DOUBLE(size, d)                | -1.7976931348623157E+308 to 1.7976931348623157E+308     | Not applicable                     | 8 bytes      |
+    | DECIMAL(size, d), DEC(size, d) | Depends on the precision and scale                      | Depends on the precision and scale | Varies       |
+    | BIT(size)                      | Not applicable                                          | 1 to 64                            | Varies       |
 
-- Date and time:
+=== "Date and time"
 
-  | Data Type      | Range                                              | Storage size |
-  | -------------- | -------------------------------------------------- | ------------ |
-  | DATE           | 1000-01-01 to 9999-12-31                           | 3 bytes      |
-  | DATETIME(fsp)  | 1000-01-01 00:00:00 to 9999-12-31 23:59:59         | 8 bytes      |
-  | TIMESTAMP(fsp) | 1970-01-01 00:00:01 UTC to 2038-01-19 03:14:07 UTC | 4 bytes      |
-  | TIME(fsp)      | -838:59:59 to 838:59:59                            | 3 bytes      |
-  | YEAR           | 1901 to 2155                                       | 1 byte       |
+    | Data Type      | Range                                              | Storage size |
+    | -------------- | -------------------------------------------------- | ------------ |
+    | DATE           | 1000-01-01 to 9999-12-31                           | 3 bytes      |
+    | DATETIME(fsp)  | 1000-01-01 00:00:00 to 9999-12-31 23:59:59         | 8 bytes      |
+    | TIMESTAMP(fsp) | 1970-01-01 00:00:01 UTC to 2038-01-19 03:14:07 UTC | 4 bytes      |
+    | TIME(fsp)      | -838:59:59 to 838:59:59                            | 3 bytes      |
+    | YEAR           | 1901 to 2155                                       | 1 byte       |
 
-- Boolean:
+=== "Boolean"
 
-  | Data Type     | Range  | Storage size |
-  | ------------- | ------ | ------------ |
-  | BOOL, BOOLEAN | 0 or 1 | 1 byte       |
+    | Data Type     | Range  | Storage size |
+    | ------------- | ------ | ------------ |
+    | BOOL, BOOLEAN | 0 or 1 | 1 byte       |
 
-- [Full Data Types](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
+=== "Full list"
+
+    [Full Data Types](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
 
 ## Export/Import
 
-- Import data to database:
+=== "Import"
 
-  ```shell
-  mysql [-h <host>] -u <username: root> -p <db_name> < <file_path/file_name.sql>
-  ```
+    ```shell
+    mysql [-h <host>] -u <username: root> -p <db_name> < <file_path/file_name.sql>
+    ```
 
-- Export data from database:
+=== "Export"
 
-  ```shell
-  mysqldump [-h <host>] -u <username: root> -p <db_name> > <file_path/file_name.sql>
-  ```
+    ```shell
+    mysqldump [-h <host>] -u <username: root> -p <db_name> > <file_path/file_name.sql>
+    ```
 
-  More options:
+    More options:
 
-   - `--no-data`: Dump only the table structure (schema); no row data is exported.
-   - `--single-transaction`: Makes a snapshot without locking tables (InnoDB only).
-   - `--quick`: Streams rows to the output file instead of buffering (good for large DBs).
-   - `--routines`: Exports stored procedures and functions
-   - `--triggers`: Exports triggers (included by default, but good to be explicit).
-   - `--events`: Exports scheduled events.
-   - `--add-drop-table`: Add `DROP TABLE IF EXISTS` before CREATE.
-   - `--compress`: Use compression for client/server communication (saves bandwidth).
-   - `--result-file=path`: Write directly to file (avoids shell redirection).
-   - `--databases db1 db2`: Dump listed databases.
-   - `--all-databases`: Dump all databases.
-   - `--set-gtid-purged=OFF|ON|AUTO`: Include or omit GTID info.
+    - `--no-data`: Dump only the table structure (schema); no row data is exported.
+    - `--single-transaction`: Makes a snapshot without locking tables (InnoDB only).
+    - `--quick`: Streams rows to the output file instead of buffering (good for large DBs).
+    - `--routines`: Exports stored procedures and functions
+    - `--triggers`: Exports triggers (included by default, but good to be explicit).
+    - `--events`: Exports scheduled events.
+    - `--add-drop-table`: Add `DROP TABLE IF EXISTS` before CREATE.
+    - `--compress`: Use compression for client/server communication (saves bandwidth).
+    - `--result-file=path`: Write directly to file (avoids shell redirection).
+    - `--databases db1 db2`: Dump listed databases.
+    - `--all-databases`: Dump all databases.
+    - `--set-gtid-purged=OFF|ON|AUTO`: Include or omit GTID info.
 
 ## Shell
 
-- Connect:
+=== "Connect"
 
-  ```shell
-  mysql -u root -p
-  ```
+    ```shell
+    mysql -u root -p
+    ```
 
-- Run command without connection:
+=== "Run command without connection"
 
-  ```shell
-  mysql -u root -p <<< 'SHOW DATABASES;'
-  ```
+    ```shell
+    mysql -u root -p <<< 'SHOW DATABASES;'
+    ```
 
-- Vertical show fields:
+=== "Vertical show fields"
 
-  ```sql
-  SELECT * FROM <table_name>\G
-  ```
+    ```sql
+    SELECT * FROM <table_name>\G
+    ```
 
 ## User
 
-- Show all users:
+=== "Show all"
 
-  ```sql
-  SELECT user, host FROM mysql.user
-  ```
+    ```sql
+    SELECT user, host FROM mysql.user
+    ```
 
-- Accepting all IPs:
+=== "Accepting all IPs"
 
-  ```sql
-  UPDATE mysql.user SET host='<host: %>' WHERE user='<user: root>'
-  ```
+    ```sql
+    UPDATE mysql.user SET host='<host: %>' WHERE user='<user: root>'
+    ```
 
-- Create user:
+=== "Create"
 
-  ```sql
-  CREATE USER '<username>'@'localhost' IDENTIFIED BY '<password>'
-  ```
+    ```sql
+    CREATE USER '<username>'@'localhost' IDENTIFIED BY '<password>'
+    ```
 
-- Drop user:
+=== "Drop"
 
-  ```sql
+    ```sql
 
-  ```
+    ```
 
-- Change pass for any user:
+=== "Change pass"
 
-  ```sql
+    ```sql
+    # root user
+    ALTER USER 'root'@'%' IDENTIFIED BY '<new_password>'
+    ```
 
-  ```
+=== "Add all privileges to user for one database"
 
-- Change pass of root user:
-
-  ```sql
-  ALTER USER 'root'@'%' IDENTIFIED BY '<new_password>'
-  ```
-
-- Add all privileges to user for one database:
-
-  ```sql
-  GRANT ALL PRIVILEGES ON <db_name>.* TO '<user>'@'localhost'
-  ```
+    ```sql
+    GRANT ALL PRIVILEGES ON <db_name>.* TO '<user>'@'localhost'
+    ```
 
 ## Database
 
-- Show all database:
+=== "Show all"
 
-  ```sql
-  SHOW DATABASES
-  ```
+    ```sql
+    SHOW DATABASES
+    ```
 
-- Create db:
+=== "Create"
 
-  ```sql
-  CREATE DATABASE <db_name>
-  ```
+    ```sql
+    CREATE DATABASE <db_name>
+    ```
 
-- Drop database:
+=== "Drop"
 
-  ```sql
-  DROP DATABASE <db_name>
-  ```
+    ```sql
+    DROP DATABASE <db_name>
+    ```
 
-- Show database owner:
+=== "Show owner"
 
-  ```sql
-  SHOW processlist
-  ```
+    ```sql
+    SHOW processlist
+    ```
 
-- Change db owner:
+=== "Change owner"
 
-  ```sql
+    ```sql
 
-  ```
+    ```
 
-- Connect to database:
+=== "Connect"
 
-  ```sql
-  USE <db_name>
-  ```
+    ```sql
+    USE <db_name>
+    ```
 
-- Get size of databases:
+=== "Get size"
 
-  ```sql
-SELECT table_schema "<db_name>", ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" FROM information_schema.tables GROUP BY table_schema
-  ```
+    ```sql
+    SELECT table_schema "<db_name>", ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" FROM information_schema.tables GROUP BY table_schema
+    ```
 
 ## Tables
 
-- Show all of db tables:
+=== "Show all"
 
-  ```sql
-  SHOW TABLES
-  ```
+    ```sql
+    SHOW TABLES
+    ```
 
-- Show table schema:
+=== "Show schema"
 
-  ```sql
-  DESCRIBE <table_name>
-  ```
+    ```sql
+    # Simple
+    DESCRIBE <table_name>
 
-- Show table full schema:
+    # Full
+    SHOW FULL COLUMNS FROM <table_name>
+    ```
 
-  ```sql
-  SHOW FULL COLUMNS FROM <table_name>
-  ```
+=== "Create"
 
-- Create table simple:
+    ```sql
+    # Simple
+    CREATE TABLE <table_name> (id INT NOT NULL AUTO_INCREMENT, <column2> <datatype>, PRIMARY KEY(id))
 
-  ```sql
-  CREATE TABLE <table_name> (id INT NOT NULL AUTO_INCREMENT, <column2> <datatype>, PRIMARY KEY(id))
-  ```
+    # Comples
+    CREATE TABLE <table_name> (
+        id BINARY(16) PRIMARY KEY,  # UUID
+        created DATETIME(6) NOT NULL,
+        <column3> INT NOT NULL DEFAULT 0,
+        <column4> BINARY(16) UNIQUE NOT NULL,  # FK (1:1)
 
-- Create table complex:
+        INDEX (<column3>),  # custom index
+        FOREIGN KEY (<column4>) REFERENCES <other_table>(id)  # automatically will create an index
+    );
+    ```
 
-  ```sql
-  CREATE TABLE <table_name> (
-      id BINARY(16) PRIMARY KEY,  # UUID
-      created DATETIME(6) NOT NULL,
-      <column3> INT NOT NULL DEFAULT 0,
-      <column4> BINARY(16) UNIQUE NOT NULL,  # FK (1:1)
+=== "Delete"
 
-      INDEX (<column3>),  # custom index
-      FOREIGN KEY (<column4>) REFERENCES <other_table>(id)  # automatically will create an index
-  );
-  ```
+    ```sql
+    DROP TABLE <table_name>
+    ```
 
-- Create table based on other table:
+=== "Show indexes"
 
-  ```sql
-
-  ```
-
-- Delete table:
-
-  ```sql
-  DROP TABLE <table_name>
-  ```
-
-- Show indexes:
-
-  ```sql
-  SHOW INDEXES IN <table_name>
-  ```
+    ```sql
+    SHOW INDEXES IN <table_name>
+    ```
 
 ## Row
 
-- Updating row:
+=== "Update"
 
-  ```sql
-  UPDATE <table_name> SET <column1>=<value>
-  ```
+    ```sql
+    UPDATE <table_name> SET <column1>=<value>
+    ```
 
-- Create row in table:
+=== "Create"
 
-  ```sql
-  INSERT INTO <table_name> (column1, column2) VALUES (value1, value2)
-  ```
+    ```sql
+    INSERT INTO <table_name> (column1, column2) VALUES (value1, value2)
+    ```
 
-- Create row in table base on other table rows:
+=== "Delete"
 
-  ```sql
-
-  ```
-
-- Delete row in table:
-
-  ```sql
-  DELETE FROM <table_name> WHERE <column1>=<value>
-  ```
+    ```sql
+    DELETE FROM <table_name> WHERE <column1>=<value>
+    ```
 
 ## Index
 
-- Partial index:
+=== "Partial index"
 
-  ```sql
-  CREATE [UNIQUE] INDEX <index_name> ON <table> (<column1, column2>) WHERE <conditions>
-  ```
+    ```sql
+    CREATE [UNIQUE] INDEX <index_name> ON <table> (<column1, column2>) WHERE <conditions>
+    ```
 
 ## Other
 

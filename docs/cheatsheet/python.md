@@ -2,71 +2,69 @@
 
 ## File
 
-- Open modes:
+=== "Open modes"
 
-  ![](python/file_open_modes.png)
+    ![](python/file_open_modes.png)
 
-- Open modes decision tree:
+=== "Open modes decision tree"
 
-  ![](python/file_open_modes_decision_tree.png)
+    ![](python/file_open_modes_decision_tree.png)
 
 ## Class & Function
 
-- Get full path:
+=== "Get full path"
 
-  ```python
-  import os
-  import inspect
+    ```python
+    import os
+    import inspect
 
-  def foo():
-    pass
+    def foo():
+      pass
 
-  print(os.path.abspath(inspect.getfile(foo)))
+    print(os.path.abspath(inspect.getfile(foo)))
 
-  class Bar:
-    pass
+    class Bar:
+      pass
 
-  print(os.path.abspath(inspect.getfile(Bar.__class__)))
-  ```
+    print(os.path.abspath(inspect.getfile(Bar.__class__)))
+    ```
 
 ## Modules & Packages
 
-- Get all import able modules & packages:
+=== "Get all import able modules & packages"
 
-  ```python
-  import pkgutil
-  search_path = ["."] # set to None to see all modules importable from sys.path
-  all_modules = [x[1] for x in pkgutil.iter_modules(path=search_path)]
-  print(all_modules)
-  ```
+    ```python
+    import pkgutil
+    search_path = ["."] # set to None to see all modules importable from sys.path
+    all_modules = [x[1] for x in pkgutil.iter_modules(path=search_path)]
+    print(all_modules)
+    ```
 
 ## Celery
 
-- Kill celery process:
+=== "Kill process"
 
-  ```shell
-  kill -9 $(ps aux | grep celery | grep -v grep | awk '{print $2}' | tr '\n' ' ') > /dev/null 2>&1
-  ```
+    ```shell
+    kill -9 $(ps aux | grep celery | grep -v grep | awk '{print $2}' | tr '\n' ' ') > /dev/null 2>&1
+    ```
 
-- View worker logs:
+=== "Worker logs"
 
-  ```shell
-  celery -A <worker name: karestoon> worker --loglevel=info
-  ```
+    ```shell
+    celery -A <worker name: karestoon> worker --loglevel=info
+    ```
 
 ## PIP
 
-- Install from source (Unix path):
+=== "Install from source (Unix path)"
 
-  ```shell
-  pip install file:///path/to/package
-  ```
+    ```shell
+    pip install file:///path/to/package
+    ```
 
 ## Operators
 
-- Overview
-
-  ![](python/operators.jpg)
+![](python/operators.jpg)
 
 - The "i" symbol means "in place"
 - The "a" symbol means "asynchronous"

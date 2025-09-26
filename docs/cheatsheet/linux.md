@@ -2,82 +2,82 @@
 
 ## SSH
 
-- Download to local:
+=== "Download to local"
 
-  ```shell
-  scp -[r]P <port> <user>@<ip>:<path/to/folder> <path/to/local>
-  ```
+    ```shell
+    scp -[r]P <port> <user>@<ip>:<path/to/folder> <path/to/local>
+    ```
 
-- Upload to server:
+=== "Upload to server"
 
-  ```shell
-  scp -[r]P <port> <source file> <username>@<destination server>:<destination directory>
-  ```
+    ```shell
+    scp -[r]P <port> <source file> <username>@<destination server>:<destination directory>
+    ```
 
-- Generate ssh key:
+=== "Generate ssh key"
 
-  ```shell
-  ssh-keygen -t rsa
-  ssh-add
-  ```
+    ```shell
+    ssh-keygen -t rsa
+    ssh-add
+    ```
 
-- List of private keys:
+=== "List of private keys"
 
-  ```shell
-  ssh-add -l
-  ```
+    ```shell
+    ssh-add -l
+    ```
 
-- Access to public ssh key:
+=== "Access to public ssh key"
 
-  ```shell
-  cat ~/.ssh/id_rsa.pub
-  ```
+    ```shell
+    cat ~/.ssh/id_rsa.pub
+    ```
 
-- Prevent SSH from disconnecting:
+=== "Prevent SSH from disconnecting"
 
-  ```shell
-  # /etc/ssh/ssh_config or ~/.ssh/config
-  ServerAliveInterval 60
-  ```
+    ```shell
+    # /etc/ssh/ssh_config or ~/.ssh/config
+    ServerAliveInterval 60
+    ```
 
 ## Compress & Extract
 
-- .tgz:
+=== ".tgz"
 
-  ```shell
-  # Compress
-  tar -czvf <file_name.tgz> </path/to/directory>
-  tar -czvf <file_name.tgz> </path/to/directory>/.  # include hidden files
-  tar -czvf <file_name.tgz> </path/to/file>
+    ```shell
+    # Compress
+    tar -czvf <file_name.tgz> </path/to/directory>
+    tar -czvf <file_name.tgz> </path/to/directory>/.  # include hidden files
+    tar -czvf <file_name.tgz> </path/to/file>
 
-  # Extract
-  tar -xzvf <file_name.tgz>
-  tar -xzvf <file_name.tgz> -C </path/to/directory>
+    # Extract
+    tar -xzvf <file_name.tgz>
+    tar -xzvf <file_name.tgz> -C </path/to/directory>
 
-  # Split into multiple files
-  split --bytes=<split_size: 10m> --suffix-length=4 --numeric-suffix <source_file.tgz> <destination_file.tgz.>
+    # Split into multiple files
+    split --bytes=<split_size: 10m> --suffix-length=4 --numeric-suffix <source_file.tgz> <destination_file.tgz.>
 
-  # Extract from splitted files (tgz)
-  cat <destination_file.tgz.*> | tar -xzvf -
-  ```
+    # Extract from splitted files (tgz)
+    cat <destination_file.tgz.*> | tar -xzvf -
+    ```
 
-- .zip:
+=== ".zip"
 
-  ```shell
-  # Compress
-  zip <filename.zip> <file>
+    ```shell
+    # Compress
+    zip <filename.zip> <file>
 
-  # Extract (`sudo apt install unzip`)
-  unzip <file_name.zip>
-  unzip '*.zip'
-  ```
+    # Extract (`sudo apt install unzip`)
+    unzip <file_name.zip>
+    unzip '*.zip'
+    ```
 
-- .rar:
+=== ".rar"
 
-  ```shell
-  # Extract (sudo apt-get install unrar)
-  unrar x -r </path/to/file.rar>
-  ```
+    ```shell
+    # Extract (sudo apt-get install unrar)
+    unrar x -r </path/to/file.rar>
+    ```
 
 ## Cron
 
@@ -88,51 +88,53 @@
 
 ## Xmodmap
 
-- Remove a key from a mod:
+=== "Remove a key from a mod"
 
-  ```shell
-  xmodmap -e 'remove Mod1 = Alt_R'
-  ```
+    ```shell
+    xmodmap -e 'remove Mod1 = Alt_R'
+    ```
 
-- Add a key to a mod:
+=== "Add a key to a mod"
 
-  ```shell
-  xmodmap -e 'add Mod3 = Alt_R'
-  ```
+    ```shell
+    xmodmap -e 'add Mod3 = Alt_R'
+    ```
 
 ## Firewall
 
-- Enable and disable firewall:
+=== "Enable/disable"
 
-  ```shell
-  sudo ufw enable/disable
-  ```
+    ```shell
+    sudo ufw enable/disable
+    ```
 
-- Get status of firewall and all available ports:
+=== "Status"
 
-  ```shell
-  sudo ufw status verbose
-  ```
+    ```shell
+    # Show status of firewall and all available ports
+    sudo ufw status verbose
+    ```
 
-- Get list of apps that wanna firewall access:
+=== "List of apps"
 
-  ```shell
-  sudo ufw app list
-  ```
+    ```shell
+    # Show list of apps that need firewall access
+    sudo ufw app list
+    ```
 
-- Set or get firewall access for port:
+=== "Set/unset port access"
 
-  ```shell
-  sudo ufw allow <port>
-  sudo ufw delete allow <port>
-  ```
+    ```shell
+    sudo ufw allow <port>
+    sudo ufw delete allow <port>
+    ```
 
-- Set or get firewall access for app:
+=== "Set/unset app access"
 
-  ```shell
-  sudo ufw allow in "<app name>"
-  sudo ufw delete allow in "<app name>"
-  ```
+    ```shell
+    sudo ufw allow in "<app name>"
+    sudo ufw delete allow in "<app name>"
+    ```
 
 ## Add Proxy To Apt-Get
 
@@ -154,124 +156,110 @@
 
 ## Networkmanager
 
-- List of connections:
+=== "List of connections"
 
-  ```shell
-  nmcli connection
-  ```
+    ```shell
+    nmcli connection
+    ```
 
-- Change DNS:
+=== "Change DNS"
 
-  ```shell
-  nmcli connection modify <connection name> ipv4.dns "<dns one:8.8.8.8> <dns two:8.8.4.4>"
-  ```
+    ```shell
+    nmcli connection modify <connection name> ipv4.dns "<dns one:8.8.8.8> <dns two:8.8.4.4>"
+    ```
 
-- Connection down (need to restart):
+=== "Connection down"
 
-  ```shell
-  nmcli connection down <connection name>
-  ```
+    ```shell
+    # Needs to restart
+    nmcli connection down <connection name>
+    ```
 
-- Connection up (need to restart):
+=== "Connection up"
 
-  ```shell
-  nmcli connection up <connection name>
-  ```
+    ```shell
+    # Needs to restart
+    nmcli connection up <connection name>
+    ```
 
 ## Tmux
 
-- Create new terminal:
+=== "New"
 
-  ```shell
-  tmux
-  ```
+    ```shell
+    # Create simple session
+    tmux
 
-- Split current terminal vertically:
+    # Create named session
+    tmux new -s <session_name>
 
-  ```text
-  ctrl+b %
-  ```
+    # Create window (tab)
+    ctrl+b c
+    ```
 
-- Split current terminal horizontally:
+=== "Connect"
 
-  ```text
-  ctrl+b "
-  ```
+    ```shell
+    # Connect to simple session
+    tmux attach-session
+    tmux a
 
-- New window (tab):
+    # Connect to named session
+    tmux attach-session -t <session_name>
+    ```
 
-  ```text
-  ctrl+b c
-  ```
+=== "Close"
 
-- Maximize and minimize terminal:
+    ```shell
+    # Disconnect from session
+    ctrl+b + d
 
-  ```text
-  ctrl+b z
-  ```
+    # Destroy session
+    ctrl+d
+    ```
 
-- Switch between terminals:
+=== "Split"
 
-  ```text
-  ctrl+b o
-  ```
+    ```shell
+    # Vertically
+    ctrl+b %
 
-- Create new session:
-
-  ```shell
-  tmux new -s <session_name>
-  ```
-
-- Connect to session:
-
-  ```shell
-  tmux attach-session -t <session_name>
-  ```
-
-- Disconnect from session:
-
-  ```text
-  ctrl+b + d
-  ```
-
-- Destroy session:
-
-  ```text
-  ctrl+d
-  ```
+    # Horizontally
+    ctrl+b "
+    ```
 
 ## Grub
 
-- Edit configs:
+=== "Edit configs"
 
-  ```shell
-  sudo vim /etc/default/grub
-  sudo update-grub
-  ```
+    ```shell
+    sudo vim /etc/default/grub
+    sudo update-grub
+    ```
 
-- Grub Problem:
+=== "Grub Problem"
 
-   1. To install and fix grub, you need Live CD or Live USB of Ubuntu
+    1. To install and fix grub, you need Live CD or Live USB of Ubuntu
 
-   2. Once you load Live Ubuntu, Open Terminal and fire following commands to install boot-repair and let it fix the Grub
+    2. Once you load Live Ubuntu, Open Terminal and fire following commands to install boot-repair and let it fix the Grub
 
      ```
      sudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt-get update
      sudo apt-get install -y boot-repair && boot-repair
      ```
 
-   3. After installation, boot-repair will get automatically launched
+    3. After installation, boot-repair will get automatically launched
 
-   4. Make sure to select "recommended repair" option to repair grub. Reboot
+    4. Make sure to select "recommended repair" option to repair grub. Reboot
 
-   5. You will now have a Grub menu on boot, where you can choose from Ubuntu, and Windows
+    5. You will now have a Grub menu on boot, where you can choose from Ubuntu, and Windows
 
-- Add Windows to boot loader:
+=== "Add Windows to boot loader"
 
-  ```shell
-  sudo os-prober
-  sudo update-grub
-  ```
+    ```shell
+    sudo os-prober
+    sudo update-grub
+    ```
 
 ## Disable Sudo Password
 
@@ -293,58 +281,58 @@
 
 ## Machine
 
-- Version:
+=== "Version"
 
-  ```shell
-  cat /etc/*-release
-  ```
+    ```shell
+    cat /etc/*-release
+    ```
 
-- CPU:
+=== "CPU"
 
-  ```shell
-  lscpu
-  ```
+    ```shell
+    lscpu
+    ```
 
-- Memory:
+=== "Memory"
 
-  ```shell
-  free -h
-  ```
+    ```shell
+    free -h
+    ```
 
-- Disk space:
+=== "Disk space"
 
-  ```shell
-  # Simple
-  df -h
+    ```shell
+    # Simple
+    df -h
 
-  # Advanced
-  ncdu
-  ```
+    # Advanced
+    ncdu
+    ```
 
-- Install package:
+=== "Install package"
 
-  ```shell
-  # .dev
-  sudo dpkg -i path/to/file.deb
-  sudo apt-get install -f
+    ```shell
+    # .dev
+    sudo dpkg -i path/to/file.deb
+    sudo apt-get install -f
 
-  # .rpm
-  sudo alien -i path/to/file.rpm
-  ```
+    # .rpm
+    sudo alien -i path/to/file.rpm
+    ```
 
-- Boot type:
+=== "Boot type"
 
-  ```shell
-  cat /etc/fstab
+    ```shell
+    cat /etc/fstab
 
-  # If there is a line like `UUID=xxx /boot/efi ntfs defaults 0 1`, it means the system boot mode is UEFI, otherwise, it is Legacy BIOS
-  ```
+    # If there is a line like `UUID=xxx /boot/efi ntfs defaults 0 1`, it means the system boot mode is UEFI, otherwise, it is Legacy BIOS
+    ```
 
-- Kernel logs:
+=== "Kernel logs"
 
-  ```shell
-  dmesg -l err
-  ```
+    ```shell
+    dmesg -l err
+    ```
 
 ## Nvidia Driver
 
@@ -370,63 +358,63 @@
 
 ## Gnome
 
-- Reset an extension configs:
+=== "Reset an extension configs"
 
-  ```shell
-  dconf reset -f /org/gnome/shell/extensions/<extension_name>
-  ```
+    ```shell
+    dconf reset -f /org/gnome/shell/extensions/<extension_name>
+    ```
 
 ## Mount & Partition
 
-- See disk usage:
+=== "Disk usage"
 
-  ```shell
-  sudo lsblk
-  ```
+    ```shell
+    sudo lsblk
+    ```
 
-- Create primary partition:
+=== "Create primary partition"
 
-  ```shell
-  sudo fdisk /dev/sda
+    ```shell
+    sudo fdisk /dev/sda
 
-  ... Command (m for help): n
-  ... Select (default p): p
-  ... Partition number (1-4, default 1):
-  ... First sector (46483456-62914559, default 46483456):
-  ... Last sector, +/- sectors or +/-size{K,M,G,T,P} (46483456-62914559, default 62914559):
+    ... Command (m for help): n
+    ... Select (default p): p
+    ... Partition number (1-4, default 1):
+    ... First sector (46483456-62914559, default 46483456):
+    ... Last sector, +/- sectors or +/-size{K,M,G,T,P} (46483456-62914559, default 62914559):
 
-  ... Command (m for help): w
-  ```
+    ... Command (m for help): w
+    ```
 
-- Create file system:
+=== "Create file system"
 
-  ```shell
-  sudo mkfs.ext4 /dev/sda1
-  ```
+    ```shell
+    sudo mkfs.ext4 /dev/sda1
+    ```
 
-- Mount partition:
+=== "Mount partition"
 
-  ```shell
-  sudo mkdir /sample_dir
+    ```shell
+    sudo mkdir /sample_dir
 
-  sudo mount /dev/sda1 /sample_dir  # for mount
-  sudo umount /sample_dir  # for unmount
-  ```
+    sudo mount /dev/sda1 /sample_dir  # for mount
+    sudo umount /sample_dir  # for unmount
+    ```
 
-- Mount directory:
+=== "Mount directory"
 
-  ```shell
-  sudo mkdir /source_dir
-  sudo mkdir /destination_dir
+    ```shell
+    sudo mkdir /source_dir
+    sudo mkdir /destination_dir
 
-  sudo mount --bind /source_dir /destination_dir
-  ```
+    sudo mount --bind /source_dir /destination_dir
+    ```
 
-- Determine the file system type:
+=== "Determine the file system type"
 
-  ```shell
-  sudo fsck -N /dev/sda1
-  ```
+    ```shell
+    sudo fsck -N /dev/sda1
+    ```
 
 ## Alt+Shift+any_other_key Doesn't Work
 

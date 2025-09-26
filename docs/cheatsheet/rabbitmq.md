@@ -2,8 +2,8 @@
 
 ## Other
 
-- Auth test:
+=== "Auth test"
 
-  ```shell
-  sudo rabbitmqctl authenticate_user <user> <password>
-  ```
+    ```shell
+    sudo rabbitmqctl authenticate_user <user> <password>
+    ```

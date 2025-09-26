@@ -2,251 +2,232 @@
 
 ## Data Types
 
-- String:
+=== "String"
 
-  | Data Type     | Range                              | Storage Size              |
-  | ------------- | ---------------------------------- | ------------------------- |
-  | CHAR(size)    | Fixed length, 1 to 1,024 chars     | 1 to 1,024 bytes          |
-  | VARCHAR(size) | Variable length, 1 to 65,535 chars | 1 to 65,535 bytes         |
-  | TEXT          | Up to 1 GB of text                 | Up to 1 GB                |
-  | BYTEA         | Up to 1 GB of binary data          | Up to 1 GB                |
-  | ENUM          | Enumerated list of values          | Depends on values         |
-  | ARRAY         | Array of any data type             | Depends on the array size |
+    | Data Type     | Range                              | Storage Size              |
+    | ------------- | ---------------------------------- | ------------------------- |
+    | CHAR(size)    | Fixed length, 1 to 1,024 chars     | 1 to 1,024 bytes          |
+    | VARCHAR(size) | Variable length, 1 to 65,535 chars | 1 to 65,535 bytes         |
+    | TEXT          | Up to 1 GB of text                 | Up to 1 GB                |
+    | BYTEA         | Up to 1 GB of binary data          | Up to 1 GB                |
+    | ENUM          | Enumerated list of values          | Depends on values         |
+    | ARRAY         | Array of any data type             | Depends on the array size |
 
-- Numeric:
+=== "Numeric"
 
-  | Data Type        | Range                                                    | Storage Size |
-  | ---------------- | -------------------------------------------------------- | ------------ |
-  | SMALLINT         | -32,768 to 32,767                                        | 2 bytes      |
-  | INT, INTEGER     | -2,147,483,648 to 2,147,483,647                          | 4 bytes      |
-  | BIGINT           | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807  | 8 bytes      |
-  | NUMERIC(p, s)    | Depends on precision (p) and scale (s)                   | Varies       |
-  | DECIMAL(p, s)    | Depends on precision (p) and scale (s)                   | Varies       |
-  | REAL             | -3.4028235E+38 to 3.4028235E+38                          | 4 bytes      |
-  | DOUBLE PRECISION | -1.7976931348623157E+308 to 1.7976931348623157E+308      | 8 bytes      |
-  | SERIAL           | Auto-incrementing integer (equivalent to INTEGER)        | 4 bytes      |
-  | BIGSERIAL        | Auto-incrementing large integer (equivalent to BIGINT)   | 8 bytes      |
-  | SMALLSERIAL      | Auto-incrementing small integer (equivalent to SMALLINT) | 2 bytes      |
+    | Data Type        | Range                                                    | Storage Size |
+    | ---------------- | -------------------------------------------------------- | ------------ |
+    | SMALLINT         | -32,768 to 32,767                                        | 2 bytes      |
+    | INT, INTEGER     | -2,147,483,648 to 2,147,483,647                          | 4 bytes      |
+    | BIGINT           | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807  | 8 bytes      |
+    | NUMERIC(p, s)    | Depends on precision (p) and scale (s)                   | Varies       |
+    | DECIMAL(p, s)    | Depends on precision (p) and scale (s)                   | Varies       |
+    | REAL             | -3.4028235E+38 to 3.4028235E+38                          | 4 bytes      |
+    | DOUBLE PRECISION | -1.7976931348623157E+308 to 1.7976931348623157E+308      | 8 bytes      |
+    | SERIAL           | Auto-incrementing integer (equivalent to INTEGER)        | 4 bytes      |
+    | BIGSERIAL        | Auto-incrementing large integer (equivalent to BIGINT)   | 8 bytes      |
+    | SMALLSERIAL      | Auto-incrementing small integer (equivalent to SMALLINT) | 2 bytes      |
 
-- Date and time:
+=== "Date and time"
 
-  | Data Type   | Range                                                  | Storage Size |
-  | ----------- | ------------------------------------------------------ | ------------ |
-  | DATE        | 4713-01-01 (BC) to 5874897-12-31 (AD)                  | 4 bytes      |
-  | TIMESTAMP   | 4713-01-01 00:00:00 (BC) to 294276-12-31 23:59:59 (AD) | 8 bytes      |
-  | TIMESTAMPTZ | 4713-01-01 00:00:00 (BC) to 294276-12-31 23:59:59 (AD) | 8 bytes      |
-  | TIME        | 00:00:00 to 24:00:00                                   | 8 bytes      |
-  | INTERVAL    | Varies, up to 178000 years                             | 16 bytes     |
+    | Data Type   | Range                                                  | Storage Size |
+    | ----------- | ------------------------------------------------------ | ------------ |
+    | DATE        | 4713-01-01 (BC) to 5874897-12-31 (AD)                  | 4 bytes      |
+    | TIMESTAMP   | 4713-01-01 00:00:00 (BC) to 294276-12-31 23:59:59 (AD) | 8 bytes      |
+    | TIMESTAMPTZ | 4713-01-01 00:00:00 (BC) to 294276-12-31 23:59:59 (AD) | 8 bytes      |
+    | TIME        | 00:00:00 to 24:00:00                                   | 8 bytes      |
+    | INTERVAL    | Varies, up to 178000 years                             | 16 bytes     |
 
-- Boolean:
+=== "Boolean"
 
-  | Data Type | Range         | Storage Size |
-  | --------- | ------------- | ------------ |
-  | BOOLEAN   | TRUE or FALSE | 1 byte       |
+    | Data Type | Range         | Storage Size |
+    | --------- | ------------- | ------------ |
+    | BOOLEAN   | TRUE or FALSE | 1 byte       |
 
-- [Full Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
+=== "Full list"
+
+    [Full Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
 
 ## Export/Import
 
-- Import data to database from sql file:
+=== "Import"
 
-  ```shell
-  psql -d <db_name> -f <file_name.sql>
-  ```
+    ```shell
+    psql -d <db_name> -f <file_name.sql>
+    ```
 
-- Export data from database to sql file:
+=== "Export"
 
-  ```shell
-  pg_dump -U <db_user> <db_name> > <file_name>.sql
-  ```
-
-- Insert to table from other table:
-
-  ```sql
-  INSERT INTO <table1> select * from <table2>
-  ```
+    ```shell
+    pg_dump -U <db_user> <db_name> > <file_name>.sql
+    ```
 
 ## Shell
 
-- Connect:
+=== "Connect"
 
-  ```shell
-  psql
-  ```
+    ```shell
+    psql
+    ```
 
-- Run command by sudo:
+=== "Run command by sudo"
 
-  ```shell
-  sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"
-  ```
+    ```shell
+    sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"
+    ```
 
-- Vertical show fields:
+=== "Vertical show fields"
 
-  ```text
-  \x
-  ```
+    ```text
+    \x
+    ```
 
 ## User
 
-- Show all users:
+=== "Show all"
 
-  ```text
-  \du
-  ```
+    ```text
+    \du
+    ```
 
-- Create user:
+=== "Create"
 
-  ```sql
-  CREATE USER <username>
-  ```
+    ```sql
+    CREATE USER <username>
+    ```
 
-- Drop user:
+=== "Drop"
 
-  ```sql
-  DROP USER <username>
-  ```
+    ```sql
+    DROP USER <username>
+    ```
 
-- Change pass for any user:
+=== "Change pass"
 
-  ```sql
-  ALTER USER <username> WITH PASSWORD '<new_password>'
-  ```
+    ```sql
+    ALTER USER <username> WITH PASSWORD '<new_password>'
+    ```
 
 ## Database
 
-- Show all database:
+=== "Show all"
 
-  ```text
-  \l
-  ```
+    ```text
+    \l
+    ```
 
-- Create db:
+=== "Create"
 
-  ```sql
-  CREATE DATABASE <db_name>
-  ```
+    ```sql
+    CREATE DATABASE <db_name>
+    ```
 
-- Drop database:
+=== "Drop"
 
-  ```sql
-  DROP DATABASE <db_name>
-  ```
+    ```sql
+    DROP DATABASE <db_name>
+    ```
 
-- Change db owner:
+=== "Change owner"
 
-  ```sql
-  ALTER DATABASE <db_name> OWNER TO <username>
-  ```
+    ```sql
+    ALTER DATABASE <db_name> OWNER TO <username>
+    ```
 
-- Connect to database:
+=== "Connect"
 
-  ```text
-  \c <db_name>
-  ```
+    ```text
+    \c <db_name>
+    ```
 
 ## Tables
 
-- Show all of db tables:
+=== "Show all"
 
-  ```text
-  \dt
-  ```
+    ```text
+    \dt
+    ```
 
-- Show table schema:
+=== "Show schema"
 
-  ```text
-  \d+ <table_name>
-  ```
+    ```text
+    \d+ <table_name>
+    ```
 
-- Create table:
+=== "Create"
 
-  ```sql
-  CREATE TABLE <table_name>
-  ```
+    ```sql
+    # Simple
+    CREATE TABLE <table_name>
 
-- Create table based on other talbe:
+    # Based on other table
+    CREATE TABLE <table_name> (LIKE <other_table_name> INCLUDING ALL);
+    ```
 
-  ```sql
-  CREATE TABLE <table_name> (LIKE <other_table_name> INCLUDING ALL);
-  ```
+=== "Delete"
 
-- Delete table:
-
-  ```sql
-  DROP TABLE <table_name>
-  ```
-
-- Temporarily disable all connections to table:
-
-  ```sql
-  SLECT oid FROM pg_class WHERE relname='<table_name>'
-  ```
+    ```sql
+    DROP TABLE <table_name>
+    ```
 
 ## Row
 
-- Updating row:
+=== "Update"
 
-  ```sql
-  UPDATE <table_name> SET <column1>=<value>
-  ```
+    ```sql
+    UPDATE <table_name> SET <column1>=<value>
+    ```
 
-- Create row in table:
+=== "Create"
 
-  ```sql
-  INSERT INTO <table_name> (column1, column2) VALUES (value1, value2)
-  ```
+    ```sql
+    # Simple
+    INSERT INTO <table_name> (column1, column2) VALUES (value1, value2)
 
-- Create row in table base on other table rows:
+    # Based on other table row
+    INSERT INTO <table_name> SELECT * FROM <other_table_name>
+    ```
 
-  ```sql
-  INSERT INTO <table_name> SELECT * FROM <other_table_name>
-  ```
+=== "Delete"
 
-- Delete row in table:
-
-  ```sql
-  DELETE FROM <table_name> WHERE <column1>=<value>
-  ```
+    ```sql
+    DELETE FROM <table_name> WHERE <column1>=<value>
+    ```
 
 ## Column
 
-- Create column in table: For creating new column need to temporarily disable all connections to table
+=== "Create"
 
-  ```sql
-  ALTER TABLE <table_name> ADD COLUMN <column_name> <data_type> [NOT NULL] [DEFAULT <value>]
-  ```
+    ```sql
+    # For creating new column need to temporarily disable all connections to table
+    ALTER TABLE <table_name> ADD COLUMN <column_name> <data_type> [NOT NULL] [DEFAULT <value>]
+    ```
 
-- Show table column:
+=== "Show table column"
 
-  ```sql
-  SELECT column_name, data_type FROM information_schema.columns WHERE table_name='<table_name>'
-  ```
+    ```sql
+    SELECT column_name, data_type FROM information_schema.columns WHERE table_name='<table_name>'
+    ```
 
-- Make column nullable:
+=== "To nullable"
 
-  ```sql
-  ALTER TABLE <table_name> ALTER COLUMN <column_name> DROP NOT NULL
-  ```
+    ```sql
+    ALTER TABLE <table_name> ALTER COLUMN <column_name> DROP NOT NULL
+    ```
 
-- Make column not nullable:
+=== "To not nullable"
 
-  ```sql
-  ALTER TABLE <table_name> ALTER COLUMN <column_name> SET NOT NULL
-  ```
-
-- Update column value base other column:
-
-  ```sql
-  Update <table> SET <column1>=<column2>
-  ```
+    ```sql
+    ALTER TABLE <table_name> ALTER COLUMN <column_name> SET NOT NULL
+    ```
 
 ## Index
 
-- Partial index:
+=== "Partial index"
 
-  ```sql
-  CREATE [UNIQUE] INDEX <index_name> ON <table> (<column1, column2>) WHERE <conditions>
-  ```
+    ```sql
+    CREATE [UNIQUE] INDEX <index_name> ON <table> (<column1, column2>) WHERE <conditions>
+    ```
 
 ## Other
 
