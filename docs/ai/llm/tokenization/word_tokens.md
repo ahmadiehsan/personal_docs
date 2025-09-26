@@ -1,4 +1,4 @@
-# Word Tokens [Output]
+# Word Tokens
 
 ## Description
 

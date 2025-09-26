@@ -14,11 +14,11 @@ The result is a more robust model that relies on distributed representations rat
 
 === "Standard"
 
-    Standard **dropout** randomly disables a fraction of neurons during each training step, reducing co-adaptation and helping the model generalize better to unseen data.
+    Standard dropout randomly disables a fraction of neurons during each training step, reducing co-adaptation and helping the model generalize better to unseen data.
 
 === "Adaptive"
 
-    **Adaptive dropout** starts with a higher dropout rate and **gradually decreases it** over the course of fine-tuning.
+    Adaptive dropout starts with a higher dropout rate and **gradually decreases it** over the course of fine-tuning.
     This allows the model to adapt to the new task while still maintaining some regularization to prevent overfitting.
 
     !!! info
@@ -27,7 +27,7 @@ The result is a more robust model that relies on distributed representations rat
 
 === "Layer-Wise"
 
-    **Layer-wise adaptive** regularization involves **applying different regularization strengths to different layers** of the model.
+    Layer-wise adaptive regularization involves **applying different regularization strengths to different layers** of the model.
 
     This can be particularly effective for LLMs, where lower layers may benefit from less regularization to capture fundamental patterns, while higher layers might need stronger regularization to prevent overfitting.
 

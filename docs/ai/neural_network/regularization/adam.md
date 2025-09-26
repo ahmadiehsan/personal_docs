@@ -30,18 +30,18 @@ $W := W - \alpha \frac{V_{dw}^{\text{corrected}}}{\sqrt{S_{dw}^{\text{corrected}
 
 === "Standard"
 
-    Standard **Adam (Adaptive Moment Estimation)** is a popular and powerful optimization algorithm used in machine learning (ML) and deep learning (DL). It is designed to efficiently find the optimal values for a model's parameters (its weights and biases) by iteratively updating them based on the training data.
+    Standard Adam (Adaptive Moment Estimation) is a popular and powerful optimization algorithm used in machine learning (ML) and deep learning (DL). It is designed to efficiently find the optimal values for a model's parameters (its weights and biases) by iteratively updating them based on the training data.
 
 === "AdamW"
 
-    **AdamW** is an optimization algorithm that **builds upon the Adam** technique by **decoupling weight decay from the gradient update**.
+    AdamW is an optimization algorithm that **builds upon the Adam** technique by **decoupling weight decay from the gradient update**.
 
     While Adam combines momentum and adaptive learning rates to efficiently move towards the minimum, AdamW improves generalization by applying weight decay directly to the parameters, rather than through the gradients.
     This adjustment helps prevent overfitting and leads to better performance in training deep neural networks.
 
 === "ADOPT"
 
-    **ADOPT** offers a better alternative for optimizing Deep Learning models and LLMs.
+    ADOPT offers a better alternative for optimizing Deep Learning models and LLMs.
     The key issue with Adam was the lack of convergence guarantee during weight updates, which is addressed by ADOPT.
     This isn't just theoretical—ADOPT has been shown to outperform Adam in most tasks, including GPT-2 pretraining.
 

@@ -17,11 +17,11 @@ This approach is particularly useful in neural networks, where noise such as the
 
 === "Standard"
 
-    Standard noise injection involves adding random noise directly to the input data during training. This helps the model become less sensitive to small changes and improves its ability to generalize to unseen data.
+    Standard Noise Injection involves adding random noise directly to the input data during training. This helps the model become less sensitive to small changes and improves its ability to generalize to unseen data.
 
 === "FGSM"
 
-    **Fast Gradient Sign Method (FGSM)** is a technique for creating adversarial examples by adding a small, targeted perturbation to input data, pushing the model to misclassify.
+    Fast Gradient Sign Method (FGSM) is a technique for creating adversarial examples by adding a small, targeted perturbation to input data, pushing the model to misclassify.
 
     It works by calculating the gradient of the loss function with respect to the input and applying a slight adjustment in the direction that maximizes the model's error.
     The input data is slightly changed by a small amount, controlled by a factor called $\epsilon$, to create an "adversarial example" that can fool a machine learning model.
@@ -32,7 +32,7 @@ This approach is particularly useful in neural networks, where noise such as the
 
 === "DP"
 
-    **Differential privacy (DP)** is a technique that adds carefully calibrated noise to data or computations to protect individual privacy while still allowing useful insights, ensuring that the inclusion or exclusion of any single data point does not significantly affect model performance.
+    Differential privacy (DP) is a technique that adds carefully calibrated noise to data or computations to protect individual privacy while still allowing useful insights, ensuring that the inclusion or exclusion of any single data point does not significantly affect model performance.
 
     Is a technique used to enhance model privacy by adding noise to the model's training process, which protects individual data points from being exposed in model outputs or learned representations.
     By introducing controlled randomness, DP-based regularization limits the model's reliance on any specific data sample, thereby reducing the risk of overfitting and making the model less sensitive to variations in individual data points.
