@@ -1,4 +1,4 @@
-# Sampling
+# Sampling {Stratified}
 
 ## Description
 

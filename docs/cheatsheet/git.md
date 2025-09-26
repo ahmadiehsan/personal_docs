@@ -2,116 +2,116 @@
 
 ## Reflog
 
-1. See logs:
+=== "See logs"
 
-  ```shell
-  git reflog
-  ```
+    ```shell
+    git reflog
+    ```
 
-2. Undo an action:
+=== "Undo an action"
 
-  ```shell
-  git reset --hard <reflog_id: HEAD@{2}>
-  ```
+    ```shell
+    git reset --hard <reflog_id: HEAD@{2}>
+    ```
 
 ## Stash
 
-- Apply:
+=== "Apply"
 
-  ```shell
-  git stash apply stash@{<index>}
-  ```
+    ```shell
+    git stash apply stash@{<index>}
+    ```
 
-- List of stashes:
+=== "List"
 
-  ```shell
-  git stash list
-  ```
+    ```shell
+    git stash list
+    ```
 
-- Drop:
+=== "Drop"
 
-  ```shell
-  git stash drop stash@{<index>}
-  ```
+    ```shell
+    git stash drop stash@{<index>}
+    ```
 
-- Clear (drop all stashes):
+=== "Clear (drop all stashes)"
 
-  ```shell
-  git stash clear
-  ```
+    ```shell
+    git stash clear
+    ```
 
-- Pop (apply and drop):
+=== "Pop (apply and drop)"
 
-  ```shell
-  git stash pop stash@{<index>}
-  ```
+    ```shell
+    git stash pop stash@{<index>}
+    ```
 
-- Show (files that changed in this stash):
+=== "Show (files that changed in this stash)"
 
-  ```shell
-  git stash show stash@{<index>}
-  ```
+    ```shell
+    git stash show stash@{<index>}
+    ```
 
 ## Tag
 
-- Create:
+=== "Create"
 
-  ```shell
-  # Without message
-  git tag <tag_name>
+    ```shell
+    # Without message
+    git tag <tag_name>
 
-  # with message
-  git tag <tag_name> -m "<message>"
+    # with message
+    git tag <tag_name> -m "<message>"
 
-  # Add tag to specific commit
-  git tag <tag_name> <commit_id>
-  ```
+    # Add tag to specific commit
+    git tag <tag_name> <commit_id>
+    ```
 
-- Update:
+=== "Update"
 
-  ```shell
-  # Without message
-  git tag -f <tag_name> <commit_id>
+    ```shell
+    # Without message
+    git tag -f <tag_name> <commit_id>
 
-  # with message
-  git tag -f <tag_name> -m "<message>"
-  ```
+    # with message
+    git tag -f <tag_name> -m "<message>"
+    ```
 
-- List of tags:
+=== "List"
 
-  ```shell
-  # Simple
-  git tag
+    ```shell
+    # Simple
+    git tag
 
-  # More verbose
-  git tag --list
-  ```
+    # More verbose
+    git tag --list
+    ```
 
-- Delete:
+=== "Delete"
 
-  ```shell
-  # For local repo
-  git tag --delete <tag_name>
+    ```shell
+    # For local repo
+    git tag --delete <tag_name>
 
-  # For remote repo
-  git push origin --delete <tag_name>
-  ```
+    # For remote repo
+    git push origin --delete <tag_name>
+    ```
 
-- Tag data:
+=== "Show data"
 
-  ```shell
-  git show <tag_name>
-  ```
+    ```shell
+    git show <tag_name>
+    ```
 
-- Push tags:
+=== "Push"
 
-  ```shell
-  # Single tag
-  git push origin <tag_name>
+    ```shell
+    # Single tag
+    git push origin <tag_name>
 
-  # All tags
-  git push origin master --tags
-  ```
+    # All tags
+    git push origin master --tags
+    ```
 
 ## Auth (SSH)
 
@@ -143,69 +143,69 @@
 
 ## Auth (Token & In-URL Auth)
 
-- Personal access token:
+=== "Personal access token"
 
-  ```shell
-  # With OAuth2
-  git clone https://oauth2:<access_token>@gitlab.com/myrepo.git
+    ```shell
+    # With OAuth2
+    git clone https://oauth2:<access_token>@gitlab.com/myrepo.git
 
-  # With username
-  git clone https://<username>:<access_token>@gitlab.com/myrepo.git
-  ```
+    # With username
+    git clone https://<username>:<access_token>@gitlab.com/myrepo.git
+    ```
 
-- Simple auth:
+=== "Simple auth"
 
-  ```shell
-  git clone https://<username>:<password>@gitlab.com/myrepo.git
-  ```
+    ```shell
+    git clone https://<username>:<password>@gitlab.com/myrepo.git
+    ```
 
-- PIP:
+=== "PIP"
 
-  ```text
-  git+https://<username>:<access_token>@gitlab.com/myrepo.git@<tag>
-  ```
+    ```text
+    git+https://<username>:<access_token>@gitlab.com/myrepo.git@<tag>
+    ```
 
-- NPM:
+=== "NPM"
 
-  ```text
-  git+https://<username>:<access_token>@gitlab.com/myrepo.git
-  ```
+    ```text
+    git+https://<username>:<access_token>@gitlab.com/myrepo.git
+    ```
 
 ## Alias
 
-- Add:
+=== "Add"
 
-  ```shell
-  git config --global alias.<command_name> "<command>"
+    ```shell
+    git config --global alias.<command_name> "<command>"
 
-  # Example
-  git config --global alias.hist "log --all --oneline --graph --decorate"
-  ```
+    # Example
+    git config --global alias.hist "log --all --oneline --graph --decorate"
+    ```
 
 ## Config
 
-- Default editor:
+=== "Default editor"
 
-  ```shell
-  git config --global core.editor "<editor name: vim>"
-  ```
+    ```shell
+    git config --global core.editor "<editor name: vim>"
+    ```
 
-- Password cache:
+=== "Password cache"
 
-  ```shell
-  git config --global credential.helper 'cache --timeout=<time in seconds: 3600>'
-  ```
+    ```shell
+    git config --global credential.helper 'cache --timeout=<time in seconds: 3600>'
+    ```
 
-- SSL problem:
+=== "SSL problem"
 
-  ```shell
-  git config --global http.sslverify false
-  ```
+    ```shell
+    git config --global http.sslverify false
+    ```
 
 ## Pull/Push
 
-- Last pull time:
+=== "Last pull time"
 
-  ```shell
-  stat -c %y .git/FETCH_HEAD
-  ```
+    ```shell
+    stat -c %y .git/FETCH_HEAD
+    ```

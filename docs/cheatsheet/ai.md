@@ -32,10 +32,10 @@ Different layers in a transformer specialize in different linguistic properties:
 
 ## Godfathers
 
-- AI
+=== "AI"
 
-  <img src="godfather_1.jpg" style="width:3.02139in" />
+    <img src="godfather_1.jpg" style="width:3.02139in" />
 
-- Convolutional NN
+=== "Convolutional NN"
 
-  <img src="godfather_2.jpg" style="width:2.99608in" />
+    <img src="godfather_2.jpg" style="width:2.99608in" />

@@ -13,53 +13,55 @@ Noise in tabular data can be of three types:
 
 ![](_cheatsheet/image7.png)
 
-## Noise In Item
+## Varieties
 
-We can analyse the features & target and identify the noise in terms of outliers.
+=== "Noise In Item"
 
-<img src="image5.png" style="width:2.37473in" />
+    We can analyse the features & target and identify the noise in terms of outliers.
 
-Techniques:
+    <img src="image5.png" style="width:2.37473in" />
 
-- **Outlier detection & treatment**: Either remove the records or put an upper and lower ceiling.
+    Techniques:
 
-## Noise In Feature
+    - **Outlier detection & treatment**: Either remove the records or put an upper and lower ceiling.
 
-This type of noise is introduced when there are features in the data which are not related to the target or don't help explaining the target.
+=== "Noise In Feature"
 
-Techniques:
+    This type of noise is introduced when there are features in the data which are not related to the target or don't help explaining the target.
 
-- **Filter Method**: We can perform various statistical tests between features & responses to identify which features are more relevant than others.
+    Techniques:
 
-  | Feature\Response | Continuous            | Categorical  |
-  |------------------|-----------------------|--------------|
-  | Continuous       | Pearson's Correlation | LDA          |
-  | Categorical      | Anova                 | Chi-Square   |
+    - **Filter Method**: We can perform various statistical tests between features & responses to identify which features are more relevant than others.
 
-*Please note that above methods don't identify or deal with multicollinearity, we need to figure that out separately.*
+        | Feature\Response | Continuous            | Categorical |
+        | ---------------- | --------------------- | ----------- |
+        | Continuous       | Pearson's Correlation | LDA         |
+        | Categorical      | Anova                 | Chi-Square  |
 
-- **Wrapper Method**: Here we add/remove features to baseline model and compare the performance of the model:
+    *Please note that above methods don't identify or deal with multicollinearity, we need to figure that out separately.*
 
-   - forward selection
-   - backward elimination
-   - recursive elimination
+    - **Wrapper Method**: Here we add/remove features to baseline model and compare the performance of the model:
 
-  <img src="image6.png" style="width:4.5in" />
+        - forward selection
+        - backward elimination
+        - recursive elimination
 
-- **Embedded Methods (Regularisation)**: This method makes use of the filter & wrapper method, it is implemented using algos which have their own built-in feature selection methods.
+        <img src="image6.png" style="width:4.5in" />
 
-  <img src="image2.png" style="width:4.5in" />
+    - **Embedded Methods (Regularisation)**: This method makes use of the filter & wrapper method, it is implemented using algos which have their own built-in feature selection methods.
 
-## Noise In Record
+        <img src="image2.png" style="width:4.5in" />
 
-In these methods, we can try to find the set of records which have noise.
+=== "Noise In Record"
 
-Techniques:
+    In these methods, we can try to find the set of records which have noise.
 
-- **K-fold Validation**: In this method, we can look at the cross validation score of each fold and analyse the folds which have poor CV scores, what are the common attributes of records having poor scores, etc.
+    Techniques:
 
-  <img src="image3.png" style="width:4.5in" />
+    - **K-fold Validation**: In this method, we can look at the cross validation score of each fold and analyse the folds which have poor CV scores, what are the common attributes of records having poor scores, etc.
 
-- **Manual Method**: Here we can evaluate the CV of each record (predicted vs. actual) and filter/analyse the records having a poor CV score. This will help us in analysing why this is happening in the first place.
+        <img src="image3.png" style="width:4.5in" />
 
-  <img src="image4.png" style="width:4.5in" />
+    - **Manual Method**: Here we can evaluate the CV of each record (predicted vs. actual) and filter/analyse the records having a poor CV score. This will help us in analysing why this is happening in the first place.
+
+        <img src="image4.png" style="width:4.5in" />
