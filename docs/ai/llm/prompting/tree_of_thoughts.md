@@ -11,13 +11,15 @@ This approach helps identify potential solutions by categorizing thoughts as "su
 
 ![](tree_of_thoughts/image1.png)
 
-## Zero-Shot Tree-of-Thoughts
+## Varieties
 
-A disadvantage of ToT method is that it requires many calls to the generative models, which slows the application significantly.
-Fortunately, there has been a successful attempt to convert the tree-of-thought framework into a simple prompting technique.
+=== "Zero-Shot"
 
-Instead of calling the generative model multiple times, we ask the model to mimic that behavior by emulating a conversation between multiple experts.
-These experts will question each other until they reach a consensus.
+    A disadvantage of ToT method is that it requires many calls to the generative models, which slows the application significantly.
+    Fortunately, there has been a successful attempt to convert the tree-of-thought framework into a simple prompting technique.
+
+    Instead of calling the generative model multiple times, we ask the model to mimic that behavior by emulating a conversation between multiple experts.
+    These experts will question each other until they reach a consensus.
 
 ## Example
 
