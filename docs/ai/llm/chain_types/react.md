@@ -19,7 +19,7 @@ Disadvantages:
 
 ## Varieties
 
-=== "ReAct"
+=== "Standard"
 
     ReAct operates through a cyclical "think-act-observe" pattern, where an AI engages in reasoning, performs an action, examines the resulting feedback, and then adjusts its subsequent actions accordingly, facilitating a dynamic and responsive problem-solving strategy.
 
@@ -41,7 +41,7 @@ Disadvantages:
 
 ## Use Cases
 
-=== "ReAct"
+=== "Standard"
 
     - **Complex Question Answering**: Solves questions that require multiple reasoning steps and external lookups, such as answering open-domain questions using both knowledge and real-time data.
     - **Tool-Augmented Reasoning**: Integrates calculators, search engines, or databases to enhance the model's capabilities beyond its training data.
@@ -58,7 +58,7 @@ Disadvantages:
 
 ## Workflow
 
-=== "ReAct"
+=== "Standard"
 
     The chain operates in a sequence of steps where the model evaluates a query, determines the necessary actions, and executes these actions while continuing to reason about the information being processed.
 
@@ -80,7 +80,7 @@ Disadvantages:
 
 ## Example
 
-=== "ReAct"
+=== "Standard"
 
     ```python
     from langchain.agents import AgentExecutor
