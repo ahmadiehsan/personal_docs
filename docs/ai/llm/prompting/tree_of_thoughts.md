@@ -6,7 +6,7 @@ The "Tree of Thoughts" (ToT) framework enhances complex problem-solving by maint
 
 ![](tree_of_thoughts/image2.png)
 
-It combines thought generation with search algorithms like breadth-first and depth-first search for systematic exploration.
+It combines thought generation with search algorithms like breadth-first and Depth-First Search for systematic exploration.
 This approach helps identify potential solutions by categorizing thoughts as "sure," "maybe," or "impossible," promoting effective partial solutions while eliminating unfeasible ones.
 
 ![](tree_of_thoughts/image1.png)
@@ -73,7 +73,7 @@ This approach helps identify potential solutions by categorizing thoughts as "su
     print(prompt)
     ```
 
-=== "Depth-first search"
+=== "Depth-First Search"
 
     ```python
     from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -135,7 +135,7 @@ This approach helps identify potential solutions by categorizing thoughts as "su
     print(solution)
     ```
 
-=== "Multi-step problem"
+=== "Multi-Step Problem"
 
     ```python
     def multi_step_tot(model, tokenizer, problem_steps):
