@@ -34,3 +34,80 @@ Key components of the ReAct chain include:
 - **Feedback Loops**: The model can refine its actions based on the outcomes of previous actions, allowing for dynamic adjustment of strategies.
 
 This chain is particularly powerful in scenarios where information is constantly changing or where the model's built-in knowledge is insufficient to answer a query comprehensively.
+
+## Example
+
+```python
+from langchain.agents import AgentExecutor
+from langchain.agents.format_scratchpad import format_log_to_str
+from langchain.agents.output_parsers import ReActSingleInputOutputParser
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.runnables import chain
+from langchain.tools import DuckDuckGoSearchRun
+from langchain_openai import ChatOpenAI
+
+# 1. Define Tools: In this simple example, we are using a search tool.
+tools = [DuckDuckGoSearchRun()]
+
+# 2. Construct the Prompt:
+template = """Answer the following questions as best you can. You have
+access to the following tools:
+
+{tool_descriptions}
+
+Use the following format:
+
+Question: the input question you must answer
+Thought: you should always think about what to do
+Action: the action to take, should be one of [{tool_names}]
+Action Input: the input to the action
+Observation: the result of the action
+... (this Thought/Action/Action Input/Observation can repeat N times)
+Thought: I now know the final answer
+Final Answer: the final answer to the original input question
+
+Begin!
+
+Question: {input}
+{agent_scratchpad}"""
+
+prompt = ChatPromptTemplate.from_template(template)
+prompt = prompt.partial(
+    tool_names=", ".join([t.name for t in tools]),
+    tool_descriptions="\n".join([f"{t.name}: {t.description}" for t in tools]),
+)
+
+# 3. Instantiate the LLM:
+llm = ChatOpenAI(temperature=0)
+llm_with_stop = llm.bind(stop=["\nObservation:"])  # Configure it to stop when it sees '\nObservation:'
+
+# 4. Construct the Agent Pipeline:
+agent = (
+    {
+        "input": lambda x: x["input"],
+        "agent_scratchpad": lambda x: format_log_to_str(x["intermediate_steps"]),
+    }
+    | prompt
+    | llm_with_stop
+    | ReActSingleInputOutputParser()
+)
+agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
+
+sample_question = "Who is the current CEO of Microsoft and what is their age squared?"
+response = agent_executor.invoke({"input": sample_question})
+print(response)
+```
+
+!!! info
+
+    Agent Execution Process:
+
+    1. We create an `AgentExecutor` instance
+    2. The `agent_executor.invoke` method starts the process.
+    3. Then, `AgentExecutor` manages the ReAct loop:
+
+       1. It feeds the input to the agent pipeline.
+       2. The agent (LLM and parser) decides on an action (for example, using a search tool to find the CEO's name).
+       3. The `AgentExecutor` executes the action (calls the search tool).
+       4. It passes the result back to the agent as an "Observation."
+       5. This process repeats until the agent decides it has enough information to produce a final answer.
