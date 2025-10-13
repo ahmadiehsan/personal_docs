@@ -1,4 +1,4 @@
-# Indexing Techniques {HNSW} {IVF}
+# Indexing Techniques [RAG] {HNSW} {IVF}
 
 ## Description
 
@@ -76,7 +76,7 @@ They determine how data is stored and how queries are processed to find the most
 
 === "LSH (Hash)"
 
-    Uses hash functions to map similar embeddings to the same “bucket” with high probability
+    Uses hash functions to map similar embeddings to the same "bucket" with high probability
 
 ## Vs
 
