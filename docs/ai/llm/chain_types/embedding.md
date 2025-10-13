@@ -1,4 +1,4 @@
-# Embedding {Sparse} {Dense}
+# Embedding [RAG] {Sparse} {Dense}
 
 ## Description
 
