@@ -27,6 +27,24 @@ This combination enables models to access external knowledge sources, improving 
 
         <span dir="rtl">مناسب برای جستجوی ساده و پاسخ‌های سریع</span>
 
+=== "Corrective"
+
+    ![](rag/corrective_rag.png)
+
+    Is designed to refine and improve the outputs of language models by incorporating corrective feedback loops.
+    Unlike standard RAG systems that generate responses based solely on initial retrievals, Corrective RAG iteratively evaluates and adjusts its answers, leveraging additional retrievals or user feedback to address inaccuracies or incomplete information.
+
+    This approach enhances the reliability and precision of generated content, making it particularly suitable for scenarios where high accuracy and iterative improvement are essential.
+
+=== "Adaptive"
+
+    ![](rag/adaptive_rag.png)
+
+    Is an advanced framework that enhances language models by integrating dynamic retrieval and reasoning processes.
+    Unlike traditional RAG systems that use a fixed number of retrieval steps, Adaptive RAG intelligently determines how many retrieval and generation cycles are needed based on the complexity of the task.
+
+    This approach enables the model to efficiently handle multi-stage reasoning, adapt to diverse information needs, and provide more accurate and context-aware responses, making it especially effective for complex, multi-step workflows.
+
 === "Query Expansion"
 
     Query expansion (QE) is a technique in information retrieval (IR) that improves search engine performance by adding relevant terms to a user's initial query.
@@ -67,32 +85,6 @@ This combination enables models to access external knowledge sources, improving 
     Is an advanced retrieval-augmented generation framework that empowers language models with agent-like capabilities.
     Unlike standard RAG systems, Agentic RAG enables the model to autonomously plan, decide, and execute multiple retrieval and reasoning steps, adapting its strategy based on the evolving context and task requirements.
     This approach allows for more flexible, interactive, and goal-driven workflows, making it highly effective for complex problem-solving and dynamic information gathering.
-
-=== "Corrective"
-
-    ![](rag/corrective_rag.png)
-
-    Is designed to refine and improve the outputs of language models by incorporating corrective feedback loops.
-    Unlike standard RAG systems that generate responses based solely on initial retrievals, Corrective RAG iteratively evaluates and adjusts its answers, leveraging additional retrievals or user feedback to address inaccuracies or incomplete information.
-
-    This approach enhances the reliability and precision of generated content, making it particularly suitable for scenarios where high accuracy and iterative improvement are essential.
-
-    !!! info
-
-        <span dir="rtl">مناسب جهت اصلاح و بهبود نتایج</span>
-
-=== "Adaptive"
-
-    ![](rag/adaptive_rag.png)
-
-    Is an advanced framework that enhances language models by integrating dynamic retrieval and reasoning processes.
-    Unlike traditional RAG systems that use a fixed number of retrieval steps, Adaptive RAG intelligently determines how many retrieval and generation cycles are needed based on the complexity of the task.
-
-    This approach enables the model to efficiently handle multi-stage reasoning, adapt to diverse information needs, and provide more accurate and context-aware responses, making it especially effective for complex, multi-step workflows.
-
-    !!! info
-
-        <span dir="rtl">مناسب برای زنجیره‌های چندمرحله‌ای</span>
 
 === "Speculative"
 
@@ -224,6 +216,96 @@ Query formulation strategies in LLM-based RAG systems aim to enhance retrieval b
     response = rag_system.generate_response(query)
     print("Generated response:", response)
     ```
+
+=== "Corrective"
+
+    ```python
+    import torch
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    class CorrectiveRAG:
+        def __init__(self, retriever, max_steps=3):
+            self.retriever = retriever
+            self.generator = AutoModelForCausalLM.from_pretrained("gpt2-medium")
+            self.tokenizer = AutoTokenizer.from_pretrained("gpt2-medium")
+            self.max_steps = max_steps
+
+        def retrieve_and_generate(self, query: str) -> str:
+            context = ""
+            for step in range(self.max_steps):
+                retrieved_docs = self.retriever.retrieve(query + " " + context, k=3)
+                context += " ".join(retrieved_docs) + " "
+
+                prompt = f"Context: {context}\nQuery: {query}\nResponse:"
+                inputs = self.tokenizer(prompt, return_tensors="pt")
+                outputs = self.generator.generate(inputs, max_length=200)
+                response = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+                if self._is_response_complete(response):
+                    break
+                query = self._generate_follow_up_query(query, response)
+
+            return response
+
+        def _is_response_complete(self, response: str) -> bool:
+            # Implement logic to determine if the response is complete
+            return "I don't have enough information" not in response
+
+        def _generate_follow_up_query(self, original_query: str, current_response: str) -> str:
+            prompt = f"Original question: {original_query}\nCurrent answer: {current_response}\nGenerate a follow-up question to gather more information:"
+            inputs = self.tokenizer(prompt, return_tensors="pt")
+            outputs = self.generator.generate(inputs, max_length=50)
+            return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+    multi_step_rag = CorrectiveRAG(...)
+    response = multi_step_rag.retrieve_and_generate("What are the effects of climate change on biodiversity?")
+    print(response)
+    ```
+
+=== "Adaptive"
+
+    ```python
+    from enum import Enum
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+
+    class TaskType(Enum):
+        FACTUAL_QA = 1
+        SUMMARIZATION = 2
+        ANALYSIS = 3
+
+    class AdaptiveRAG:
+        def __init__(self, retriever):
+            self.retriever = retriever
+            self.generator = AutoModelForCausalLM.from_pretrained("gpt2-medium")
+            self.tokenizer = AutoTokenizer.from_pretrained("gpt2-medium")
+
+        def retrieve_and_generate(self, query: str, task_type: TaskType) -> str:
+            if task_type == TaskType.FACTUAL_QA:
+                k = 3
+                prompt_template = "Context: {context}\nQuestion: {query}\nAnswer:"
+            elif task_type == TaskType.SUMMARIZATION:
+                k = 10
+                prompt_template = "Summarize the following information:\n{context}\nSummary:"
+            elif task_type == TaskType.ANALYSIS:
+                k = 5
+                prompt_template = "Analyze the following information:\n{context}\nQuery: {query}\nAnalysis:"
+
+            retrieved_docs = self.retriever.retrieve(query, k=k)
+            context = " ".join(retrieved_docs)
+            prompt = prompt_template.format(context=context, query=query)
+            inputs = self.tokenizer(prompt, return_tensors="pt")
+            outputs = self.generator.generate(inputs, max_length=300)
+            response = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+            return response
+
+    adaptive_rag = AdaptiveRAG(...)
+    factual_response = adaptive_rag.retrieve_and_generate("What is the capital of France?", TaskType.FACTUAL_QA)
+    summary_response = adaptive_rag.retrieve_and_generate("Summarize the causes of World War I", TaskType.SUMMARIZATION)
+    analysis_response = adaptive_rag.retrieve_and_generate("Analyze the impact of social media on mental health", TaskType.ANALYSIS)
+    ```
+
+    !!! warning
+
+        This is a simple implementation of Adaptive RAG; a more robust solution should be able to detect the task type automatically.
 
 === "Query Expansion"
 
