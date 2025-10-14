@@ -36,8 +36,8 @@ Heap contains three segments (called generations):
 - The **"Generation 0"** is the youngest generation and contains newly created short-lived objects and collected at first priority. The objects survive longer, are promoted to **"Generation 1"**.
 - The **"Generation 1"** is buffer between **"Generation 0"** and **"Generation 2"**.
 
-   - The **"Generation 1"** mainly contains frequently-used and longer-lived objects.
-   - **Ex**: The objects created in the previously-executed methods, but still accessible.
+    - The **"Generation 1"** mainly contains frequently-used and longer-lived objects.
+    - **Ex**: The objects created in the previously-executed methods, but still accessible.
 
 - The **"Generation 2"** contains the longest-lived objects that were created long-back and still is being used, by different statements in the program.
 
@@ -56,8 +56,8 @@ When GC gets triggered?
 - There are **NO** specific timings for GC to get triggered.
 - GC automatically gets triggered in the following conditions:
 
-   - When the "heap" is full or free space is too low.
-   - When we call `GC.Collect()` explicitly.
+    - When the "heap" is full or free space is too low.
+    - When we call `GC.Collect()` explicitly.
 
 Tips:
 
@@ -68,6 +68,6 @@ Tips:
 ## Managed vs Unmanaged Resources
 
 | **Unmanaged Resources**                                                                             | **Managed Resources**                                                                      |
-|-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | The objects that are not created by CLR and not managed by CLR are called as "Unmanaged Resources". | The objects that are created by CLR are called as "Managed Resources".                     |
 | **Ex**: File streams, database connections.                                                         | These will participate in "Garbage Collection" process, which is a part of .NET Framework. |

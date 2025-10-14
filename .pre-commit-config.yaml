@@ -70,4 +70,3 @@ repos:
         language: script
         entry: ./scripts/md_lint.sh
         files: .*\.md$
-        pass_filenames: false

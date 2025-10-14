@@ -7,13 +7,13 @@
 - **Key property**: It quantifies how similar or different the output signal is from the original, typically in tasks where preservation of signal integrity is important.
 - **Common measures for distortion**:
 
-   - Mean Squared Error (MSE)
-   - Peak Signal-to-Noise Ratio (PSNR)
+    - Mean Squared Error (MSE)
+    - Peak Signal-to-Noise Ratio (PSNR)
 
 - **Example applications**:
 
-   - Assessing audio or video compression quality
-   - Measuring fidelity in reconstructed images
+    - Assessing audio or video compression quality
+    - Measuring fidelity in reconstructed images
 
 ## Formula
 

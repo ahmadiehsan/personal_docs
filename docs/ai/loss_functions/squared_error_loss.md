@@ -10,9 +10,9 @@ The loss is the mean overseen data of the squared differences between true and p
 - **Key Property**: Sensitive to outliers. Large errors are penalized more due to squaring.
 - **Example applications**:
 
-   - Predicting house prices
-   - Estimating sales revenue
-   - Forecasting temperature
+    - Predicting house prices
+    - Estimating sales revenue
+    - Forecasting temperature
 
 ## Formula
 

@@ -161,10 +161,10 @@ The event can be raised only in the same class in which it is created.
 - Publisher class sends events; Subscriber class receives events.
 - Process flow of Events:
 
-   - The Publisher class creates an event.
-   - The Subscriber class subscribes to the event, this means an "event handler" method is created in the subscriber class. The "event handler" method is nothing but the method dedicated to execution when the event is raised.
-   - The publisher class can send (raise) events.
-   - Every time the event is raised by the publisher, the corresponding "event handler" method executes automatically.
+    - The Publisher class creates an event.
+    - The Subscriber class subscribes to the event, this means an "event handler" method is created in the subscriber class. The "event handler" method is nothing but the method dedicated to execution when the event is raised.
+    - The publisher class can send (raise) events.
+    - Every time the event is raised by the publisher, the corresponding "event handler" method executes automatically.
 
 - The event should be created based on the delegate. That means, the event accepts the methods that are having specific parameters and return type, defined in the delegate.
 - An event can have multiple subscribers.

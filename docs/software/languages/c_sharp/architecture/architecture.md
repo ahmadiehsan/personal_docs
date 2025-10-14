@@ -17,7 +17,7 @@
 ### CLR & FCL
 
 | CLR                                                   | FCL                                                                          |
-|-------------------------------------------------------|------------------------------------------------------------------------------|
+| ----------------------------------------------------- | ---------------------------------------------------------------------------- |
 | **Common Language Runtime**                           | **Framework Class Library**                                                  |
 | Run Time Engine that is used to execute applications. | Object-Oriented Collection of Classes that are used to develop applications. |
 
@@ -118,39 +118,39 @@ Components:
 
 1. **Class Loader**:
 
-   - Loading classes from compiled source code to memory.
-   - Loads a class, when it is needed (before creating object).
+    - Loading classes from compiled source code to memory.
+    - Loads a class, when it is needed (before creating object).
 
 2. **Memory Manager**:
 
-   - Allocating necessary memory for objects.
-   - When an object is created in the code, certain amount of memory will be allocated for the object in application's "heap".
+    - Allocating necessary memory for objects.
+    - When an object is created in the code, certain amount of memory will be allocated for the object in application's "heap".
 
 3. **Garbage Collector**:
 
-   - Freeing (deleting) memory of objects.
-   - Identifies all unreferenced objects and delete them in memory (RAM).
+    - Freeing (deleting) memory of objects.
+    - Identifies all unreferenced objects and delete them in memory (RAM).
 
 4. **JIT (Just-In-Time) Compiler**:
 
-   - Convert the MSIL code into Native Machine Language.
-   - Compiles the code of a class, when it is needed (before executing that particular class).
+    - Convert the MSIL code into Native Machine Language.
+    - Compiles the code of a class, when it is needed (before executing that particular class).
 
 5. **Exception Manager**:
 
-   - Raise notifications while run-time errors.
-   - Creates exception logs.
+    - Raise notifications while run-time errors.
+    - Creates exception logs.
 
 6. **Thread Manager**:
 
-   - Create threads (background process) to execute the code.
-   - The entire program is treated as "Main thread".
-   - Developer can create sub-threads (child threads) to do background processes.
+    - Create threads (background process) to execute the code.
+    - The entire program is treated as "Main thread".
+    - Developer can create sub-threads (child threads) to do background processes.
 
 7. **Security Manager**:
 
-   - Verifies whether the application has permission to access system resources or not.
-   - Before executing the application, it verifies whether the application has not been attacked by malicious programs & has necessary permissions to access files/folders and hardware resources.
+    - Verifies whether the application has permission to access system resources or not.
+    - Before executing the application, it verifies whether the application has not been attacked by malicious programs & has necessary permissions to access files/folders and hardware resources.
 
 ## AOT (ahead-of-time)
 

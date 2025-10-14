@@ -156,8 +156,8 @@ Next Token Probabilities     = SoftMax(Fully Connected Layer Output)
     - Examples of encoder-decoder-based transformers include **T5 (Text-to-Text Transfer Transformer)**, **BART (Bidirectional and Auto-Regressive Transformers)**, and **mT5 (multilingual T5)**.
     - The encoder-decoder architecture can be visualized as two connected transformers:
 
-       - **Encoder**: Reads and processes the input sequence, generating a latent representation of the input.
-       - **Decoder**: Consumes the encoder's latent representation while generating the output sequence autoregressively (one token at a time).
+        - **Encoder**: Reads and processes the input sequence, generating a latent representation of the input.
+        - **Decoder**: Consumes the encoder's latent representation while generating the output sequence autoregressively (one token at a time).
 
     - Uses bidirectional self-attention to produce contextualized representations of the input sequence.
     - Captures holistic meaning by attending to relations between tokens in the input.
@@ -174,6 +174,6 @@ Next Token Probabilities     = SoftMax(Fully Connected Layer Output)
     - **Question Answering (QA)**: Provide a textual answer to a question given relevant contexts.
     - **Closed-Ended Transformation Tasks**:
 
-       - Data-to-text generation (e.g., converting tables into sentences).
-       - Grammar correction (e.g., fixing spelling and grammatical errors).
-       - Format transformation (e.g., converting JSON to text).
+        - Data-to-text generation (e.g., converting tables into sentences).
+        - Grammar correction (e.g., fixing spelling and grammatical errors).
+        - Format transformation (e.g., converting JSON to text).

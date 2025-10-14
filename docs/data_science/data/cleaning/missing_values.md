@@ -18,15 +18,15 @@ Missing values typically fall into three categories:
 
 - **Missing Completely At Random (MCAR)**: Missingness is unrelated to any data. Safe to drop if few.
 
-   - *Example*: Random technical glitch causes missing values.
+    - *Example*: Random technical glitch causes missing values.
 
 - **Missing At Random (MAR)**: Missingness depends on other observed variables, not the missing value itself.
 
-   - *Example*: Students are more likely to have missing income data. Imputation based on related features is appropriate.
+    - *Example*: Students are more likely to have missing income data. Imputation based on related features is appropriate.
 
 - **Missing Not At Random (MNAR)**: Missingness depends on the value itself.
 
-   - *Example*: High incomes are more likely to be missing. Imputation is risky; consider using a missingness indicator or advanced models.
+    - *Example*: High incomes are more likely to be missing. Imputation is risky; consider using a missingness indicator or advanced models.
 
 ## Methods
 

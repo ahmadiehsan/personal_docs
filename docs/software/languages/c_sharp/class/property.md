@@ -85,13 +85,13 @@ accessModifier modifier type propertyName {
 - Access modifier is applicable for the property, set accessor, and get accessor individually.
 - Access modifiers of accessors must be more restrictive than the access modifier of the property.
 
-   ```csharp
-   internal modifier dataType PropertyName
-   {
-       private set { property = value; }
-       protected get { return property; }
-   }
-   ```
+    ```csharp
+    internal modifier dataType PropertyName
+    {
+        private set { property = value; }
+        protected get { return property; }
+    }
+    ```
 
 - It is recommended to use Properties always in real-time projects (You can also use 'Auto-implemented properties' to simplify the code).
 - Properties don't occupy any memory (will not be stored).

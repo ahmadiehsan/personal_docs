@@ -7,8 +7,8 @@
 - **Key property**: Encourages probabilistic models to predict values that are closer to the true label (e.g., probability of 0 or 1). Assigning a higher predicted probability to the wrong class results in higher penalties.
 - **Example applications**:
 
-   - Predicting whether an email is spam or not
-   - Determining if a customer will churn (leave)
+    - Predicting whether an email is spam or not
+    - Determining if a customer will churn (leave)
 
 ## Formula (Training Shape)
 

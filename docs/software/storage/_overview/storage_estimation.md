@@ -22,9 +22,9 @@ Estimate media storage:
 
 - Average tweet size:
 
-   - tweet_id 64 bytes
-   - text 140 bytes
-   - media 1 MB
+    - tweet_id 64 bytes
+    - text 140 bytes
+    - media 1 MB
 
 - Media storage: `150 million * 2 * 10% * 1 MB = 30 TB` per day
 - 5-year media storage: `30 TB * 365 * 5 = ~55 PB`

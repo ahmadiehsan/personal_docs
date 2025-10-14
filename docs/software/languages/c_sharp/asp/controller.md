@@ -333,7 +333,7 @@ public class ShoppingCartViewComponent : ViewComponent {
 - It can have DI
 - A view component defines its logic in an:
 
-   - `InvokeAsync` method that returns `Task<IViewComponentResult>`.
-   - `Invoke` synchronous method that returns an `IViewComponentResult`.
+    - `InvokeAsync` method that returns `Task<IViewComponentResult>`.
+    - `Invoke` synchronous method that returns an `IViewComponentResult`.
 
 - And finally should return the View method result (The corresponding .cshtml file to the view component)

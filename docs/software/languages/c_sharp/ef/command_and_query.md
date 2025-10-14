@@ -51,9 +51,9 @@ EF Core tracks the entities that you retrieve.
 - If an entity is tracked, any changes detected in the entity will be persisted to the database during `SaveChanges()`.
 - There is an object named ChangeTracker inside each DbContext object that will store this data:
 
-  ```csharp
-  _db.ChangeTracker.Entries()
-  ```
+    ```csharp
+    _db.ChangeTracker.Entries()
+    ```
 
 Tracking:
 

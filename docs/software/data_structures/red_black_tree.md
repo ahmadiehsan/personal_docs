@@ -21,5 +21,5 @@ Benefits of Red-Black Trees:
 - **Balanced Structure**: The balancing properties allow red-black trees to maintain a time complexity of $O(\og n)$ for search, insert, and delete operations, even after a series of modifications.
 - **Versatility**: Red-black trees are used in various applications, including:
 
-   - Implementation of associative arrays and dictionaries in programming libraries.
-   - Managing data in systems where frequent insertions and deletions occur, such as in memory management.
+    - Implementation of associative arrays and dictionaries in programming libraries.
+    - Managing data in systems where frequent insertions and deletions occur, such as in memory management.

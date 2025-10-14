@@ -281,6 +281,6 @@ sudo mysql_secure_installation
 
 - Version:
 
-  ```sql
-  SHOW VARIABLES LIKE "%version%";
-  ```
+    ```sql
+    SHOW VARIABLES LIKE "%version%";
+    ```

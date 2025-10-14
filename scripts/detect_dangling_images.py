@@ -14,8 +14,6 @@ class Command:
         for md_file in docs_directory.rglob("*.md"):
             self._compare_images(md_file)
 
-        print("done")
-
     def _compare_images(self, md_file: Path) -> None:
         directory = md_file.with_suffix("")
         directories_in_md = self._find_directories_in_md(md_file)

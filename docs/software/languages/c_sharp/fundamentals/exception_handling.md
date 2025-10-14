@@ -29,12 +29,12 @@ finally {
 - `finally` block and multiple `catch` blocks are optional.
 - `try` block contains all the actual code, where exceptions may occur.
 
-   - Multiple `try` blocks for one `catch` block is not allowed.
-   - Nested `try` blocks are allowed.
+    - Multiple `try` blocks for one `catch` block is not allowed.
+    - Nested `try` blocks are allowed.
 
 - `catch` block contains error handling code; it executes only when a particular type of exception is raised during the execution of the `try` block.
 
-   - Multiple `catch` blocks are allowed.
+    - Multiple `catch` blocks are allowed.
 
 - `finally` block executes after the successful completion of the `try` block or after any `catch` block. It is optional.
 - `throw` keyword is used to throw built-in or custom exceptions in case of invalid values found.
@@ -69,7 +69,7 @@ catch (ExceptionType referenceVariable) when (condition) {
 ![](exception_handling/image12.png)
 
 | Exception Class             | Description                                                                                         | Points                                                                                                                                                                                                    |
-|-----------------------------|-----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | FormatException             | Represents an error when a string cannot be converted to a number due to invalid characters.        | - Occurs in methods like `Convert` or `Parse` with incorrect string values. <br> - It's a bad practice to throw FormatException implicitly or explicitly.                                                 |
 | IndexOutOfRangeException    | Represents an error when an index was provided outside the valid range for an array.                | - Occurs when accessing an array with a wrong index value, less than 0 or greater than or equal to the array size. <br> - It's a bad practice to throw IndexOutOfRangeException implicitly or explicitly. |
 | NullReferenceException      | Represents an error when you try to access a property, indexer, or method through a null reference. | - It's a bad practice to throw this exception implicitly or explicitly.                                                                                                                                   |

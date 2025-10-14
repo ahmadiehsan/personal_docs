@@ -2,19 +2,23 @@
 
 set -e
 
+# Ensure at least one filename was passed
+if [ "$#" -eq 0 ]; then
+  echo "No paths passed. Exiting."
+  exit 0
+fi
+
+# Re-enable Markdown tabs
 function restore_tabs {
-  echo "----- Re-enable Markdown tabs"
-  make script.md_toggle_tabs ./docs enable > /dev/null
+  make --no-print-directory script.md_toggle_tabs "$@" -- --mode enable
 }
-trap restore_tabs EXIT
+trap 'restore_tabs "$@"' EXIT
 
-echo "----- Temporarily disabling Markdown tabs"
-make script.md_toggle_tabs ./docs enable > /dev/null
+# Temporarily disable Markdown tabs
+make --no-print-directory script.md_toggle_tabs "$@" -- --mode disable
 
-echo "----- Run markdownlint (mdl)"
-docker run --rm -v "$(pwd)":/data markdownlint/markdownlint ./docs
+# Run markdownlint (mdl)
+docker run --rm -v "$(pwd)":/data markdownlint/markdownlint "$@"
 
-echo "----- Rewrapping long lines..."
-make script.md_rewrap_long_lines ./docs
-
-exit 1
+# Rewrap long lines
+make --no-print-directory script.md_rewrap_long_lines "$@"

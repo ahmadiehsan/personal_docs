@@ -95,8 +95,8 @@ This can be done by using techniques such as:
 
     1. **Split the training data** into two parts:
 
-       - The first part is used to train the base models.
-       - The second part is used to generate a new dataset of predictions from the base models.
+        - The first part is used to train the base models.
+        - The second part is used to generate a new dataset of predictions from the base models.
 
     2. **Train multiple base models** on the first part of the training data.
     3. **Generate predictions** using the trained base models on the second part of the training data, creating a new dataset of predictions.

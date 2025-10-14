@@ -9,23 +9,23 @@
 - **Non-Comparison**: Non-Comparison sorting does not use comparison operators and can achieve a time complexity of $O(n)$, but its versatility is relatively poor.
 - **Stability**: Stable sorting ensures that the relative order of equal elements in the array does not change after sorting.
 
-  Stable sorting is a necessary condition for multi-key sorting scenarios. Suppose we have a table storing student information, with the first and second columns being name and age, respectively. In this case, unstable sorting might lead to a loss of order in the input data:
+    Stable sorting is a necessary condition for multi-key sorting scenarios. Suppose we have a table storing student information, with the first and second columns being name and age, respectively. In this case, unstable sorting might lead to a loss of order in the input data:
 
-  ```python
-  # Input data is sorted by name
-  # (name, age)
-  ("A", 19)
-  ("B", 18)
-  ("C", 21)
-  ("D", 19)
-  ("E", 23)
+    ```python
+    # Input data is sorted by name
+    # (name, age)
+    ("A", 19)
+    ("B", 18)
+    ("C", 21)
+    ("D", 19)
+    ("E", 23)
 
-  # Assuming an unstable sorting algorithm is used to sort the list by age,
-  # the result changes the relative position of ("D", 19) and ("A", 19),
-  # and the property of the input data being sorted by name is lost
-  ("B", 18)
-  ("D", 19)
-  ("A", 19)
-  ("C", 21)
-  ("E", 23)
-  ```
+    # Assuming an unstable sorting algorithm is used to sort the list by age,
+    # the result changes the relative position of ("D", 19) and ("A", 19),
+    # and the property of the input data being sorted by name is lost
+    ("B", 18)
+    ("D", 19)
+    ("A", 19)
+    ("C", 21)
+    ("E", 23)
+    ```

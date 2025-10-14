@@ -56,12 +56,12 @@
 - It makes database configuration, management, and scaling easy.
 - RDS is available on various database instances:
 
-   - Amazon Aurora
-   - PostgreSQL
-   - MySQL
-   - MariaDB
-   - Oracle
-   - SQL Server
+    - Amazon Aurora
+    - PostgreSQL
+    - MySQL
+    - MariaDB
+    - Oracle
+    - SQL Server
 
 ### DynamoDB
 

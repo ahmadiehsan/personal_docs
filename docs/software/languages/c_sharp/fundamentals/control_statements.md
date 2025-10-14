@@ -4,20 +4,20 @@
 
 - **Conditional Control Statements**
 
-   - if (simple-if, if-else, else-if, nested-if)
-   - switch-case
+    - if (simple-if, if-else, else-if, nested-if)
+    - switch-case
 
 - **Looping Control Statements**
 
-   - while
-   - do-while
-   - for
+    - while
+    - do-while
+    - for
 
 - **Jumping Control Statements**
 
-   - goto
-   - break
-   - continue
+    - goto
+    - break
+    - continue
 
 ## Switch-Case
 
@@ -193,7 +193,7 @@ foreach (DataType iterationVariable in arrayVariable) {
 ```
 
 | Pros                                    | Cons                                                                             |
-|-----------------------------------------|----------------------------------------------------------------------------------|
+| --------------------------------------- | -------------------------------------------------------------------------------- |
 | Simplified Syntax                       | Slower performance, due to it treating everything as a collection                |
 | Easy to use with arrays and collections | It can't be used to execute repeatedly without arrays or collections             |
 | It internally uses "Iterators"          | It can't read part of an array/collection, or read arrays/collections in reverse |
