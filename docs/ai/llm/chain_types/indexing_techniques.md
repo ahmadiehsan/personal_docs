@@ -9,7 +9,8 @@ They determine how data is stored and how queries are processed to find the most
 
 === "Brute Force (Flat)"
 
-    Brute Force is one of the Flat indexing techniques that stores all embeddings in a list, array, or vector store. During a search, it calculates the distance (e.g., cosine similarity) between the query embedding and every embedding in the index.
+    Brute Force is one of the Flat indexing techniques that stores all embeddings in a list, array, or vector store.
+    During a search, it calculates the distance (e.g., cosine similarity) between the query embedding and every embedding in the index.
 
     - **Pros**: Simple to implement and perfect accuracy (finds the true nearest neighbors).
     - **Cons**: Slow and computationally expensive for large datasets, as it requires an exhaustive search.

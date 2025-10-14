@@ -9,7 +9,7 @@ class Command:
     _tab_indent = "    "
     _tab_indent_count = len(_tab_indent)
     _tab_start_marker = "=== "
-    _tab_end_marker = "<<<end_of_tab>>>"
+    _tab_end_marker = "[[[end_of_tab]]]"
 
     def __init__(self, arguments: argparse.Namespace) -> None:
         self.arguments = arguments
@@ -66,22 +66,26 @@ class Command:
         return output_lines
 
     def _process_disable_mode(self, line: str, line_index: int, lines: list[str], output_lines: list[str]) -> bool:
-        stripped_line = line.strip()
-
-        if not stripped_line:
-            next_line = lines[line_index + 1] if line_index + 1 < len(lines) else ""
-            if next_line and not next_line.startswith(self._tab_indent):
-                output_lines.append("\n")
-                output_lines.append(f"{self._tab_end_marker}\n")
-                output_lines.append("\n")
-                return False
-            output_lines.append("\n")
-            return True
-
         if line.startswith(self._tab_indent):
             output_lines.append(line[self._tab_indent_count :])
         else:
             output_lines.append(line)
+
+        try:
+            next_line = lines[line_index + 1]
+        except IndexError:
+            next_line = None
+
+        if next_line is None:
+            output_lines.append("\n")
+            output_lines.append(f"{self._tab_end_marker}\n")
+            return False
+
+        if next_line.strip() and not next_line.startswith(self._tab_indent):
+            output_lines.append(f"{self._tab_end_marker}\n")
+            output_lines.append("\n")
+            return False
+
         return True
 
     def _process_enable_mode(self, line: str, output_lines: list[str]) -> bool:

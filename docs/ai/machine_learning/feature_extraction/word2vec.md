@@ -25,7 +25,8 @@ It does so in one of two ways, either using context to predict a target word (a 
 
 === "Standard"
 
-    Standard Word2Vec model learns word representations based only on whole words, without considering subword information. It is effective for capturing semantic relationships between words that appear in similar contexts.
+    Standard Word2Vec model learns word representations based only on whole words, without considering subword information.
+    It is effective for capturing semantic relationships between words that appear in similar contexts.
 
 === "FastText"
 

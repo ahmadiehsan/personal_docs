@@ -147,27 +147,33 @@ Query formulation strategies in LLM-based RAG systems aim to enhance retrieval b
 
 === "Prompt-Based Query Rewriting"
 
-    With LLMs, prompts can be crafted to explicitly instruct the model to generate reformulated queries. This is particularly useful in multilingual or multi-domain RAG systems, where queries need to be adapted to match the style and vocabulary of the target corpus.
+    With LLMs, prompts can be crafted to explicitly instruct the model to generate reformulated queries.
+    This is particularly useful in multilingual or multi-domain RAG systems, where queries need to be adapted to match the style and vocabulary of the target corpus.
 
 === "Synonym/Paraphrase Expansion"
 
-    This involves generating semantically equivalent alternatives using LLMs or lexical resources. For example, expanding "climate change impact" to include "effects of global warming" or "environmental consequences of climate change" can help match a broader range of documents.
+    This involves generating semantically equivalent alternatives using LLMs or lexical resources.
+    For example, expanding "climate change impact" to include "effects of global warming" or "environmental consequences of climate change" can help match a broader range of documents.
 
 === "Contextual Reformulation"
 
-    LLMs can reinterpret queries by inferring their intent based on conversational or document context. This helps in tailoring the query to better align with how the information might be expressed in the knowledge base.
+    LLMs can reinterpret queries by inferring their intent based on conversational or document context.
+    This helps in tailoring the query to better align with how the information might be expressed in the knowledge base.
 
 === "Pseudo-Relevance Feedback"
 
-    Also known as blind relevance feedback, this strategy involves running an initial query, analyzing the top-ranked documents for salient terms, and using these terms to expand the query. While effective, it requires safeguards against topic drift.
+    Also known as blind relevance feedback, this strategy involves running an initial query, analyzing the top-ranked documents for salient terms, and using these terms to expand the query.
+    While effective, it requires safeguards against topic drift.
 
 === "Template-Based Augmentation"
 
-    Useful in structured domains, this method uses domain- specific templates or patterns to systematically generate variants. For example, a medical query about "treatment for hypertension" might also include "hypertension therapy" or "managing high blood pressure."
+    Useful in structured domains, this method uses domain- specific templates or patterns to systematically generate variants.
+    For example, a medical query about "treatment for hypertension" might also include "hypertension therapy" or "managing high blood pressure."
 
 === "Entity/Concept Linking"
 
-    Named entities and domain concepts in the query are identified and replaced or augmented with their aliases, definitions, or hierarchical relations. This is often guided by ontologies or knowledge graphs.
+    Named entities and domain concepts in the query are identified and replaced or augmented with their aliases, definitions, or hierarchical relations.
+    This is often guided by ontologies or knowledge graphs.
 
 ## Example
 

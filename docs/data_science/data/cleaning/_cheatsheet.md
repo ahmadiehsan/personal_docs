@@ -42,9 +42,9 @@ Noise in tabular data can be of three types:
 
     - **Wrapper Method**: Here we add/remove features to baseline model and compare the performance of the model:
 
-        - forward selection
-        - backward elimination
-        - recursive elimination
+       - forward selection
+       - backward elimination
+       - recursive elimination
 
         <img src="image6.png" style="width:4.5in" />
 

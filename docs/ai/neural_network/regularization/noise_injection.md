@@ -17,7 +17,8 @@ This approach is particularly useful in neural networks, where noise such as the
 
 === "Standard"
 
-    Standard Noise Injection involves adding random noise directly to the input data during training. This helps the model become less sensitive to small changes and improves its ability to generalize to unseen data.
+    Standard Noise Injection involves adding random noise directly to the input data during training.
+    This helps the model become less sensitive to small changes and improves its ability to generalize to unseen data.
 
 === "FGSM"
 
