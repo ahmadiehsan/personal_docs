@@ -65,35 +65,9 @@ repos:
 
   - repo: local
     hooks:
-      - id: md_disable_tabs
-        name: Disable Markdown Tabs
-        language: system
-        entry: make script.md_toggle_tabs
-        args: ["docs", "disable"]
-        files: .*\.md$
-        pass_filenames: false
-
-  - repo: https://github.com/markdownlint/markdownlint
-    rev: v0.13.0
-    hooks:
-      - id: markdownlint
-
-  - repo: local
-    hooks:
-      - id: md_rewrap_long_lines
-        name: Rewrap Long Markdown Lines
-        language: system
-        entry: make script.md_rewrap_long_lines
-        args: ["docs"]
-        files: .*\.md$
-        pass_filenames: false
-
-  - repo: local
-    hooks:
-      - id: md_enable_tabs
-        name: Enable Markdown Tabs
-        language: system
-        entry: make script.md_toggle_tabs
-        args: ["docs", "enable"]
+      - id: md_lint
+        name: Markdown Linter/Formatter
+        language: script
+        entry: ./scripts/md_lint.sh
         files: .*\.md$
         pass_filenames: false
