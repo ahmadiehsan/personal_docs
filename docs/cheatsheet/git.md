@@ -117,29 +117,29 @@
 
 1. Generate ssh key:
 
-  ```shell
-  ssh-keygen -t rsa
-  ```
+    ```shell
+    ssh-keygen -t rsa
+    ```
 
 2. Add private key to system by:
 
-  ```shell
-  ssh-add
-  ```
+    ```shell
+    ssh-add
+    ```
 
 3. Get public ssh key by this command:
 
-  ```shell
-  cat ~/.ssh/id_rsa.pub
-  ```
+    ```shell
+    cat ~/.ssh/id_rsa.pub
+    ```
 
 4. Add public ssh key to git profile setting: [https://github.com/settings/keys](https://github.com/settings/keys)
 5. Change project remote URL, to ssh type
 6. Connect to git:
 
-  ```shell
-  ssh -T git@github.com
-  ```
+    ```shell
+    ssh -T git@github.com
+    ```
 
 ## Auth (Token & In-URL Auth)
 

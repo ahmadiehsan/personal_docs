@@ -358,20 +358,20 @@ Class methods:
 
 - `bool Equals( object value )`
 
-   - Compares the current object with the given argument object; returns true if both are the same objects; returns false if both are different objects.
+    - Compares the current object with the given argument object; returns true if both are the same objects; returns false if both are different objects.
 
 - `int GetHashCode( object value )`
 
-   - Returns a number that represents the object. It is not guaranteed that the hash code is unique, by default.
+    - Returns a number that represents the object. It is not guaranteed that the hash code is unique, by default.
 
 - `Type GetType( )`
 
-   - Returns the name of the class (including namespace path), based on which the object is created.
+    - Returns the name of the class (including namespace path), based on which the object is created.
 
 - `string ToString( )`
 
-   - By default, it returns the name of the class (including namespace path), based on which the object is created.
-   - It is a virtual method, which can be overridden in the child class.
+    - By default, it returns the name of the class (including namespace path), based on which the object is created.
+    - It is a virtual method, which can be overridden in the child class.
 
 ## Nullable Type
 
@@ -427,17 +427,17 @@ var variableName = value;
 - Is good when we don't know the output type (For example the LINQ query result)
 - It is not possible to declare multiple implicitly typed variables in the same statement.
 
-  ```csharp
-  // Example:
-  var x = 10, y = 20;  // error
-  ```
+    ```csharp
+    // Example:
+    var x = 10, y = 20;  // error
+    ```
 
 - It is not possible to assign `"null"` to implicitly typed variables during declaration.
 
-  ```csharp
-  // Example:
-  var x = null;  // error
-  ```
+    ```csharp
+    // Example:
+    var x = null;  // error
+    ```
 
 ## Dynamically Typed Variables
 
@@ -455,17 +455,17 @@ dynamic variableName = value;
 - C# compiler skips "type-checking" at compilation time; instead, it resolves the data types of its values at run-time.
 - The `dynamic` type variables are converted as `object` type in most cases:
 
-  ```csharp
-  dynamic dynamicVariable = 100;  // Equivalent to: object dynamicVariable = 100;
-  ```
+    ```csharp
+    dynamic dynamicVariable = 100;  // Equivalent to: object dynamicVariable = 100;
+    ```
 
 - The Dynamically Typed Variable can change its data type, any number of times, at run-time.
 - Methods and other members of `dynamically typed variables` will not be checked by the compiler at compilation time; it will be checked by the CLR at runtime.
 
-   - If the method or other member is not available, it would not cause a compile-time error; it raises a run-time error when the execution flow encounters that particular statement.
+    - If the method or other member is not available, it would not cause a compile-time error; it raises a run-time error when the execution flow encounters that particular statement.
 
-   ```csharp
-   dynamicVariable.NonExistingMethod();  // run-time error (exception)
-   ```
+    ```csharp
+    dynamicVariable.NonExistingMethod();  // run-time error (exception)
+    ```
 
 - The Dynamically Typed Variables need not be initialized while declaring.

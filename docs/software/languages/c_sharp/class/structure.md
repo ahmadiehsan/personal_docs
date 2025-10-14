@@ -6,8 +6,8 @@ Structure is a "type", similar to "class", which can contain fields, methods, pa
 
 - The instance of structure is called as **"structure instance"** or **"structure variable"**; but not called as *'object'*.
 
-   - We can't create object for structure.
-   - Objects can be created only based on *'class'*.
+    - We can't create object for structure.
+    - Objects can be created only based on *'class'*.
 
 - Structure instances are stored in *'stack'*.
 - Structure doesn't support *'user-defined parameter-less constructor'* and also destructor.

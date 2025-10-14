@@ -67,12 +67,12 @@
 
 - Run Nginx on startup:
 
-  ```shell
-  sudo update-rc.d nginx enable
-  ```
+    ```shell
+    sudo update-rc.d nginx enable
+    ```
 
 - Test:
 
-  ```shell
-  sudo nginx -t
-  ```
+    ```shell
+    sudo nginx -t
+    ```

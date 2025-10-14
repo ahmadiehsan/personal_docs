@@ -7,8 +7,8 @@
 - **Key property**: Pushes the model to assign high probability to the correct class while minimizing the probability of other classes.
 - **Example applications**:
 
-   - Image classification tasks (e.g., identifying objects like cars, cats, or trees in an image)
-   - Natural Language Processing (e.g., sentiment analysis, text classification)
+    - Image classification tasks (e.g., identifying objects like cars, cats, or trees in an image)
+    - Natural Language Processing (e.g., sentiment analysis, text classification)
 
 ## Formula
 

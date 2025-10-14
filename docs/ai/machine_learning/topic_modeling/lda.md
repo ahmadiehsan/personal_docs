@@ -11,13 +11,13 @@ It helps if we have **unlabeled data**, we can attempt to "discover" labels.
 - Latent topics can then be found by searching for groups of words that frequently occur together in documents across the corpus
 - Documents are probability distributions over latent topics
 
-  <img src="image2.jpg" style="width:2.75006in" />
+    <img src="image2.jpg" style="width:2.75006in" />
 
-  <img src="image1.jpg" style="width:2.74655in" />
+    <img src="image1.jpg" style="width:2.74655in" />
 
 - Topics themselves are probability distributions over words
 
-  <img src="image3.jpg" style="width:3.49953in" />
+    <img src="image3.jpg" style="width:3.49953in" />
 
 - LDA represents documents as mixtures of topics that spit out words with certain probabilities
 
@@ -27,11 +27,11 @@ It helps if we have **unlabeled data**, we can attempt to "discover" labels.
 - This random assignment already gives you both topic representations of all the documents and word distributions of all the topics (note: these initial random topics won't make sense)
 - Iterative refinement:
 
-   - For each word in each document, compute the probability of each topic given the current state of topic assignments
-   - Reassign the word to a new topic based on these probabilities, considering:
+    - For each word in each document, compute the probability of each topic given the current state of topic assignments
+    - Reassign the word to a new topic based on these probabilities, considering:
 
-      - How prevalent the word is in each topic across the entire corpus.
-      - How prevalent the topic is in the current document
+        - How prevalent the word is in each topic across the entire corpus.
+        - How prevalent the topic is in the current document
 
 - This process leverages the dependencies and co-occurrences in the data, gradually improving the topic assignments and leading to a coherent topic structure
 - At the end we have each document assigned to a topic

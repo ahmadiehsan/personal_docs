@@ -17,16 +17,16 @@ enum EnumerationName {
 - Accessing Members: `EnumerationName.ConstantName`
 - By default, each constant will be assigned to a number, starting from zero. However, you can change the number (integer only).
 
-   ```csharp
-   enum EnumerationName {
-       Constant1 = value, Constant2 = value, ...
-   }
-   ```
+    ```csharp
+    enum EnumerationName {
+        Constant1 = value, Constant2 = value, ...
+    }
+    ```
 
 - The default data type of the enum member is `"int"`. However, you can change its data type as follows:
 
-   ```csharp
-   enum EnumerationName : datatype {
-       Constant1 = value, Constant2 = value, ...
-   }
-   ```
+    ```csharp
+    enum EnumerationName : datatype {
+        Constant1 = value, Constant2 = value, ...
+    }
+    ```

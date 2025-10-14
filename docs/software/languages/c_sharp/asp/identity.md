@@ -241,11 +241,11 @@
     - Three helper classes of identity framework that we can DI them in our controllers
     - **UserManager**:
 
-       - get or update or save a user
-       - add a claim to a user
-       - remove a claim from a user
-       - add a role to a user
-       - remove a role from a user
+        - get or update or save a user
+        - add a claim to a user
+        - remove a claim from a user
+        - add a role to a user
+        - remove a role from a user
 
     - **SignInManager**: will help us to sign-in or sign-out a user
     - **RoleManager**: will help us to add or remove a role

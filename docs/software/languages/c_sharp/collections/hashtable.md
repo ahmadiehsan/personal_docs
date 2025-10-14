@@ -12,8 +12,8 @@ Hashtable referenceVariable = new Hashtable();
 
 - Process of adding an element:
 
-   1. Generate index based on the key (Ex: `index = hash_code % size_of_hashtable$).
-   2. Add the element (key and value) next to the linked list at the generated index.
+    1- Generate index based on the key (Ex: `index = hash_code % size_of_hashtable$).
+    2- Add the element (key and value) next to the linked list at the generated index.
 
 - GetHashCode method of the key value will be used in the index calculation process
 - When we want to use the objs of our custom class as the key inside a hashtable, we should implement the GetHashCode method of that class

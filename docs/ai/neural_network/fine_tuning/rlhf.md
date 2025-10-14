@@ -56,8 +56,8 @@ Cons:
     2. **Reward Model Updates**: Continuously update or retrain the reward model using new preference data.
     3. **Policy Optimization:**
 
-       - Use algorithms like **Proximal Policy Optimization (PPO)** to fine-tune the language model against the reward model.
-       - Optionally use **Generalized Reward Policy Optimization (GRPO)** to better handle non-stationary rewards and long-horizon feedback.
+        - Use algorithms like **Proximal Policy Optimization (PPO)** to fine-tune the language model against the reward model.
+        - Optionally use **Generalized Reward Policy Optimization (GRPO)** to better handle non-stationary rewards and long-horizon feedback.
 
     4. **Evaluation**: Periodically assess model behavior using alignment metrics, task performance, and user satisfaction.
 

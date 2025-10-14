@@ -6,13 +6,13 @@
 - An instance of DbContext represents a session with the database which can be used to query and save instances of your entities to a database.
 - DbContext in EF Core allows us to perform the following tasks:
 
-   - Manage database connection
-   - Configure model & relationship
-   - Querying database
-   - Saving data to the database
-   - Configure change tracking
-   - Caching
-   - Transaction management
+    - Manage database connection
+    - Configure model & relationship
+    - Querying database
+    - Saving data to the database
+    - Configure change tracking
+    - Caching
+    - Transaction management
 
 ## Syntax
 
@@ -38,11 +38,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(option => {
 
 - The GetConnectionString method will read the below part of the `appsettings.json` file
 
-  ```json
-  "ConnectionStrings": {
-      "DefaultSQLConnection": "Server=.;Database=Magic_VillaAPI;TrustServerCertificate=True;"
-  },
-  ```
+    ```json
+    "ConnectionStrings": {
+        "DefaultSQLConnection": "Server=.;Database=Magic_VillaAPI;TrustServerCertificate=True;"
+    },
+    ```
 
 ## DB Set
 

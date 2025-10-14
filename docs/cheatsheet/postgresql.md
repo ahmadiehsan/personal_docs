@@ -233,12 +233,12 @@
 
 - Version:
 
-  ```sql
-  SHOW server_version
-  ```
+    ```sql
+    SHOW server_version
+    ```
 
 - Connection URL:
 
-  ```text
-  postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]
-  ```
+    ```text
+    postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]
+    ```

@@ -17,14 +17,22 @@ class Command:
         self.arguments = arguments
 
     def run(self) -> None:
-        for root, _, files in os.walk(self.arguments.input_dir_path):
+        for input_path in self.arguments.input_paths:
+            if input_path.is_dir():
+                self._process_dir(input_path)
+            elif input_path.is_file():
+                self._process_file(input_path)
+
+    def _process_dir(self, dir_path: Path) -> None:
+        for root, _, files in os.walk(dir_path):
             for file in files:
                 if file.endswith(".md"):
                     file_dir_path = Path(root)
                     file_path = file_dir_path / file
-                    self._rewrap_long_lines_inplace(file_path)
+                    self._process_file(file_path)
 
-        print("done")
+    def _process_file(self, file_path: Path) -> None:
+        self._rewrap_long_lines_inplace(file_path)
 
     def _rewrap_long_lines_inplace(self, file_path: Path) -> None:
         """Simpler: combine paragraph lines, then split long lines, skipping code blocks and lists."""
@@ -180,9 +188,10 @@ class Command:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "input_dir_path",
-        help="An absolute path to a directory that contains .md files",
-        type=lambda val: to_path_object(parser, val),
+        "input_paths",
+        nargs="+",
+        help="One or more paths to files or directories that contain .md files",
+        type=lambda val: to_path_object(parser, val, formats=[".md", ""]),
     )
     args = parser.parse_args()
 
