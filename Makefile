@@ -68,6 +68,9 @@ script.md_headlines_to_title:
 script.md_rewrap_long_lines:
 	PYTHONPATH=. uv run --no-sync scripts/md_rewrap_long_lines.py $(ARGS)
 
+script.md_toggle_tabs:
+	PYTHONPATH=. uv run --no-sync scripts/md_toggle_tabs.py $(ARGS)
+
 # =========================
 # Help
 # =====
