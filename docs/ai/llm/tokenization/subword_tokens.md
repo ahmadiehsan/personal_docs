@@ -72,14 +72,14 @@ Output: `Have`, `the`, `🎵`, `bard`, `s`, `who`, `preced`, `ed`
 
     1. **Initialization**:
 
-    - Start with a vocabulary containing all the unique characters of the dataset.
-    - Treat each word as a sequence of characters.
+       - Start with a vocabulary containing all the unique characters of the dataset.
+       - Treat each word as a sequence of characters.
 
     2. **Frequency calculation**: Identify the most frequent pair of adjacent characters (or subwords) in the text.
     3. **Merge**:
 
-    - Merge the most frequent character pair into a new subword token.
-    - Add the new subword token to the vocabulary.
+       - Merge the most frequent character pair into a new subword token.
+       - Add the new subword token to the vocabulary.
 
     4. **Repeat**: Continue the process of finding and merging the most frequent character pairs until the vocabulary reaches the desired size.
     5. **Encoding**: Words are encoded as sequences of subwords from the final vocabulary.
@@ -88,14 +88,14 @@ Output: `Have`, `the`, `🎵`, `bard`, `s`, `who`, `preced`, `ed`
 
     1. **Training**:
 
-        - Train a model on raw text input, either using BPE or unigram language models.
-        - Identify subwords and optimization rules directly from data.
+       - Train a model on raw text input, either using BPE or unigram language models.
+       - Identify subwords and optimization rules directly from data.
 
     2. **Corpus Preparation**: Does not require language-specific preprocessing like punctuation removal or token splitting.
     3. **Tokenization**:
 
-        - Encode a sentence as subword sequences based on the trained model.
-        - Generate special tokens (e.g., `<unk>`, `<pad>`, etc.) as needed.
+       - Encode a sentence as subword sequences based on the trained model.
+       - Generate special tokens (e.g., `<unk>`, `<pad>`, etc.) as needed.
 
     4. **Inference**: Apply the trained tokenization model to new text.
 
@@ -108,13 +108,13 @@ Output: `Have`, `the`, `🎵`, `bard`, `s`, `who`, `preced`, `ed`
     1. Start with the characters: `p, l, a, y, i, n, g`.
     2. Merge frequently occurring character pairs:
 
-        - Merge `pl` to `pla`
-        - Merge `pla + y = play`
-        - Merge `play + ing = playing`
+       - Merge `pl` to `pla`
+       - Merge `pla + y = play`
+       - Merge `play + ing = playing`
 
     3. If `playing` is not in the vocabulary:
 
-        - Encode as `play` + `##ing`. (Here, `##` denotes a continuation subword that cannot start a word.)
+       - Encode as `play` + `##ing`. (Here, `##` denotes a continuation subword that cannot start a word.)
 
 === "BPE"
 
@@ -124,10 +124,10 @@ Output: `Have`, `the`, `🎵`, `bard`, `s`, `who`, `preced`, `ed`
     2. Compute frequencies of adjacent pairs (e.g., `l + o`, `o + w`, etc.).
     3. Iteratively merge the most frequent pairs:
 
-    - Merge `l + o = lo`
-    - Merge `lo + w = low`
-    - Merge `e + r = er`
-    - Continue until reaching the desired vocabulary size.
+       - Merge `l + o = lo`
+       - Merge `lo + w = low`
+       - Merge `e + r = er`
+       - Continue until reaching the desired vocabulary size.
 
 === "SentencePiece"
 

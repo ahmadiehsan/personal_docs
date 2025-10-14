@@ -30,7 +30,8 @@ $W := W - \alpha \frac{V_{dw}^{\text{corrected}}}{\sqrt{S_{dw}^{\text{corrected}
 
 === "Standard"
 
-    Standard Adam (Adaptive Moment Estimation) is a popular and powerful optimization algorithm used in machine learning (ML) and deep learning (DL). It is designed to efficiently find the optimal values for a model's parameters (its weights and biases) by iteratively updating them based on the training data.
+    Standard Adam (Adaptive Moment Estimation) is a popular and powerful optimization algorithm used in machine learning (ML) and deep learning (DL).
+    It is designed to efficiently find the optimal values for a model's parameters (its weights and biases) by iteratively updating them based on the training data.
 
 === "AdamW"
 
