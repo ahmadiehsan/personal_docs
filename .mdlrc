@@ -1,8 +1,9 @@
-rules "~MD013", "~MD055", "~MD057", "~MD014", "~MD046"
+rules "~MD013", "~MD055", "~MD057", "~MD014", "~MD046", "~MD033"
 # MD013: Line length
 # MD055: Table row doesn't begin/end with pipes
 # MD057: Table has missing or invalid header separation
 # MD014: Dollar signs used before commands without showing output
 # MD046: Code block style
+# MD033: Inline HTML
 
 style ".mdlrc.style.rb"
