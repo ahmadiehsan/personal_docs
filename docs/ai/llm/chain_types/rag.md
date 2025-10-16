@@ -23,10 +23,6 @@ This combination enables models to access external knowledge sources, improving 
 
     Use cases include FAQ bots, basic document search, and situations where quick retrieval and generation are sufficient.
 
-    !!! info
-
-        <span dir="rtl">مناسب برای جستجوی ساده و پاسخ‌های سریع</span>
-
 === "Corrective"
 
     ![](rag/corrective_rag.png)
@@ -74,10 +70,6 @@ This combination enables models to access external knowledge sources, improving 
     Multimodal RAG is a retrieval-augmented generation framework that integrates multiple data modalities—such as text, images, audio, and video—into the retrieval and generation process.
     Unlike traditional RAG systems that focus solely on textual information, Multimodal RAG leverages embeddings and retrieval techniques across diverse formats, enabling richer and more contextually relevant responses.
 
-    !!! info
-
-        <span dir="rtl">مناسب برای ترکیب اطلاعات متنی و تصویری یا چندرسانه‌ای</span>
-
 === "Agentic"
 
     ![](rag/agentic_rag.png)
@@ -110,10 +102,6 @@ This combination enables models to access external knowledge sources, improving 
     This hypothetical answer is then used as a query to retrieve documents that are semantically aligned with the generated response.
     By leveraging the model's generative capabilities to guide retrieval, HyDE can surface more contextually relevant information, especially in cases where the original query is ambiguous or under-specified.
     This approach is particularly effective for tasks requiring creative reasoning or when direct evidence is sparse, making it suitable for generating informed and context-aware responses.
-
-    !!! info
-
-        <span dir="rtl">مناسب برای تولید پاسخ‌های فرضی</span>
 
 ## Workflow
 
