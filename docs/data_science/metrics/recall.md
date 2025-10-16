@@ -8,10 +8,8 @@ Recall is useful when the cost of false negatives is high.
 
 ## Formula
 
-The precise definition of recall is the number of true positives divided by the number of true positives plus the number of false negatives.
-
 $$
-\text{Recall} = \frac{\text{Relevant retrieved instances}}{\text{All relevant instances}}
+\text{Recall} = \frac{\text{Number of relevant retrieved instances}}{\text{All relevant instances}}
 $$
 
 - **Relevant retrieved instances**: Total correctly identified positive instances (True Positives)
@@ -19,11 +17,17 @@ $$
 
 ## Example
 
-```python
-from sklearn.metrics import recall_score
+=== "Text"
 
-y_true = [1, 0, 1, 1, 0]
-y_pred = [1, 0, 1, 0, 0]  # TP=2, FP=0, TN=2, FN=1
+    If 5 documents in the entire corpus contain information needed to answer a specific query, and the RAG system retrieves 3 of them within the top 10 results, then Recall for that query would be $3/5 = 0.6$
 
-print(recall_score(y_true, y_pred))  # 0.6666666666666666
-```
+=== "Code"
+
+    ```python
+    from sklearn.metrics import recall_score
+
+    y_true = [1, 0, 1, 1, 0]
+    y_pred = [1, 0, 1, 0, 0]  # TP=2, FP=0, TN=2, FN=1
+
+    print(recall_score(y_true, y_pred))  # 0.6666666666666666
+    ```

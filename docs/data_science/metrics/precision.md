@@ -9,10 +9,8 @@ Precision proves valuable in scenarios where the expense associated with false p
 
 ## Formula
 
-Precision is defined as the number of true positives divided by the number of true positives plus the number of false positives.
-
 $$
-\text{Precision} = \frac{\text{Relevant retrieved instances}}{\text{All retrieved instances}}
+\text{Precision} = \frac{\text{Number of relevant retrieved instances}}{\text{All retrieved instances}}
 $$
 
 - **Relevant retrieved instances**: Total correctly identified positive instances (True Positives)
@@ -20,11 +18,17 @@ $$
 
 ## Example
 
-```python
-from sklearn.metrics import precision_score
+=== "Text"
 
-y_true = [1, 0, 1, 1, 0]
-y_pred = [1, 0, 1, 0, 0]  # TP=2, FP=0, TN=2, FN=1
+    If a RAG system retrieves 10 documents for a query, and 4 of them are relevant, then Precision would be $4/10 = 0.4$
 
-print(precision_score(y_true, y_pred))  # 1.0
-```
+=== "Code"
+
+    ```python
+    from sklearn.metrics import precision_score
+
+    y_true = [1, 0, 1, 1, 0]
+    y_pred = [1, 0, 1, 0, 0]  # TP=2, FP=0, TN=2, FN=1
+
+    print(precision_score(y_true, y_pred))  # 1.0
+    ```
