@@ -22,3 +22,6 @@ docker run --rm -v "$(pwd)":/data markdownlint/markdownlint "$@"
 
 # Rewrap long lines
 make --no-print-directory script.md_rewrap_long_lines "$@"
+
+# Detect dangling images
+make --no-print-directory script.md_dangling_images "$@"
