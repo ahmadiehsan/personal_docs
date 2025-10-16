@@ -118,7 +118,8 @@ They determine how data is stored and how queries are processed to find the most
 
     # 1. Create vector store
     dimension = embeddings.shape[1]  # Get the dimensionality of the embeddings
-    index = faiss.IndexHNSWFlat(dimension)
+    n_neighbors = 32  # Number of neighbors per node (controls speed/accuracy tradeoff)
+    index = faiss.IndexHNSWFlat(dimension, n_neighbors)
     index.add(embeddings)
 
     # 2. Search for the k nearest neighbors
@@ -137,7 +138,10 @@ They determine how data is stored and how queries are processed to find the most
 
     # 1. Create vector store
     dimension = embeddings.shape[1]  # Get the dimensionality of the embeddings
-    index = faiss.IndexIVFFlat(dimension)
+    n_clusters = 100  # Number of clusters (centroids)
+    quantizer = faiss.IndexFlatL2(dimension)  # Base quantizer (is used to assign vectors to clusters during training)
+    index = faiss.IndexIVFFlat(quantizer, dimension, n_clusters)
+    index.train(embeddings)  # IVF indexes must be trained before adding vectors
     index.add(embeddings)
 
     # 2. Search for the k nearest neighbors

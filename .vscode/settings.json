@@ -30,6 +30,7 @@
         "mathjax",
         "optim",
         "pymdownx",
+        "quantizer",
         "Rerank",
         "rerankers",
         "sklearn"
