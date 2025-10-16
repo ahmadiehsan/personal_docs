@@ -82,13 +82,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "input_file_path",
-        help="An absolute path to a .md file",
+        help="Path to markdown files to combine (two or more)",
         nargs="+",
         type=lambda val: to_path_object(parser, val, formats=[".md"]),
     )
     parser.add_argument(
         "output_file_path",
-        help="An absolute path to a .md file",
+        help="Path for the combined output markdown file",
         type=lambda val: to_path_object(parser, val, formats=[".md"], condition="must_not_exists"),
     )
     args = parser.parse_args()
