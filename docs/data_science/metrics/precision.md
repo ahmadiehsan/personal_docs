@@ -7,6 +7,10 @@ It is also referred to as **positive predictive value (PPV)**.
 
 Precision proves valuable in scenarios where the expense associated with false positives is significant.
 
+!!! info
+
+    A higher Precision indicates that a larger proportion of the retrieved documents are relevant.
+
 ## Formula
 
 $$

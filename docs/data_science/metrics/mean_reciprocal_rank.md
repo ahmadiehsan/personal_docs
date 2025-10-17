@@ -5,6 +5,10 @@
 MRR considers the rank of the first relevant document retrieved.
 It emphasizes the importance of retrieving relevant documents early in the ranking.
 
+!!! info
+
+    A higher MRR indicates that relevant documents are retrieved at higher ranks (closer to the top).
+
 ## Formula
 
 $$
@@ -13,10 +17,6 @@ $$
 
 - $\lvert Q\rvert$ is the number of queries
 - $\mathrm{rank}_i$ is the rank of the first relevant document for query $i$
-
-!!! info
-
-    A higher MRR indicates that relevant documents are retrieved at higher ranks (closer to the top)
 
 ## Example
 

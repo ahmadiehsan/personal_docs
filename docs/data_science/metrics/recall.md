@@ -6,6 +6,10 @@ Recall, also recognized as sensitivity or the **true positive rate (TPR)**, asse
 
 Recall is useful when the cost of false negatives is high.
 
+!!! info
+
+    A higher Recall indicates that the retrieval component can find a larger proportion of the relevant documents.
+
 ## Formula
 
 $$
