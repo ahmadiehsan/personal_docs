@@ -1,4 +1,4 @@
-# Semantic Similarity [NLP] [Augmentation]
+# Semantic Similarity [Augmentation]
 
 ## Description
 

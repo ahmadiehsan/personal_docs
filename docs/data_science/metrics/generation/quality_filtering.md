@@ -1,4 +1,4 @@
-# Quality Filtering [NLP] [Augmentation]
+# Quality Filtering [Augmentation]
 
 ## Description
 

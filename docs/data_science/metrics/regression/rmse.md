@@ -1,4 +1,4 @@
-# Root Mean Squared Error (RMSE) [Regression]
+# Root Mean Squared Error (RMSE)
 
 ## Description
 
