@@ -1,4 +1,4 @@
-# Mean Squared Error (MSE) [Regression]
+# Mean Squared Error (MSE)
 
 ## Description
 

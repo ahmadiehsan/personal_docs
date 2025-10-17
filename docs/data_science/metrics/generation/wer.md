@@ -1,4 +1,4 @@
-# Word Error Rate (WER) [STT] [NLP]
+# Word Error Rate (WER) [STT]
 
 ## Description
 

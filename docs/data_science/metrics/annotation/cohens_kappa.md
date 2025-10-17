@@ -1,4 +1,4 @@
-# Cohen's Kappa [Annotation]
+# Cohen's Kappa
 
 ## Description
 

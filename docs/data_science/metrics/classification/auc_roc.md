@@ -1,4 +1,4 @@
-# AUC-ROC [Classification]
+# AUC-ROC
 
 ## Description
 

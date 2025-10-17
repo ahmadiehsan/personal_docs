@@ -1,4 +1,4 @@
-# NDCG [Ranking]
+# NDCG
 
 ## Description
 

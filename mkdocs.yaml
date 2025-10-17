@@ -68,6 +68,7 @@ markdown_extensions:
       generic: true
   - mdx_truly_sane_lists: # Add "nested lists" support
       truly_sane: false # Allow for unlimited newlines between elements of a list
+      nested_indent: 4 # Set the indentation level for nested lists to 4 spaces
 extra_css:
   - _static/css_vendor/iransans.css
   - _static/css_vendor/hello_algo.css

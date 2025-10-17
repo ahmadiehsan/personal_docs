@@ -1,4 +1,4 @@
-# Mean Reciprocal Rank (MRR) [Ranking]
+# Mean Reciprocal Rank (MRR)
 
 ## Description
 

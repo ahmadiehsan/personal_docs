@@ -1,4 +1,4 @@
-# Mean Absolute Error (MAE) [Regression]
+# Mean Absolute Error (MAE)
 
 ## Description
 

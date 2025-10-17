@@ -1,4 +1,4 @@
-# Perplexity [NLP] [LLM]
+# Perplexity [NLP]
 
 ## Description
 
