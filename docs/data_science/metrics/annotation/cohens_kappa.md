@@ -1,4 +1,4 @@
-# Cohen's Kappa
+# Cohen's Kappa [2 Annotators]
 
 ## Description
 

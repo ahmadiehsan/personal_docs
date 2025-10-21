@@ -49,7 +49,7 @@ Disadvantages:
 
 === "ReWOO"
 
-    ReWOO’s ability to plan and reason without direct observation makes it suitable for complex planning and decision-making tasks:
+    ReWOO's ability to plan and reason without direct observation makes it suitable for complex planning and decision-making tasks:
 
     - **Strategic Planning**: As mentioned, ReWOO can generate strategic plans based on hypothetical situations, goals, and constraints
     - **Scenario Analysis**: ReWOO can explore multiple potential outcomes of a given scenario, considering various factors and uncertainties
