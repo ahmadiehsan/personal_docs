@@ -34,13 +34,13 @@ git.run_hooks_for_all:
 # Manage
 # =====
 manage.serve:
-	uv run --no-dev mkdocs serve --livereload --dirty
+	uv run --no-dev mkdocs serve --livereload --dirty --open
 
 manage.serve_dir:
 	TARGET_DIRS="$(ARGS)"; \
 	REGEX=$$(echo $$TARGET_DIRS | sed 's/ /|/g'); \
 	TEMP_CONFIG_FILE=$$(PYTHONPATH=. uv run --no-sync scripts/build_mkdocs_config.py ./mkdocs.yaml '.plugins += {"exclude": {"regex": ["^(?!.*('"$$REGEX"'\/|_static|assets|index|.nav.yml)).*$$"]}}'); \
-	uv run --no-dev mkdocs serve --livereload --dirty --config-file $$TEMP_CONFIG_FILE
+	uv run --no-dev mkdocs serve --livereload --dirty --open --config-file $$TEMP_CONFIG_FILE
 
 manage.build:
 	uv run --no-dev mkdocs build --strict
