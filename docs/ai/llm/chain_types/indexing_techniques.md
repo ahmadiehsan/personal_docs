@@ -73,7 +73,7 @@ They determine how data is stored and how queries are processed to find the most
     1. **Subvectors**: Divides each embedding into multiple subvectors.
     2. **Codebooks**: Creates separate codebooks for each subvector using clustering. Each codebook contains a set of representative subvectors (centroids).
     3. **Encoding**: Encodes each embedding by replacing its subvectors with the closest centroids from the corresponding codebooks. This creates a compressed representation of the embedding.
-    4. **Search**: Calculates the approximate distance between the query and the encoded embeddings using pre-computed distances between the query’s subvectors and the codebook centroids.
+    4. **Search**: Calculates the approximate distance between the query and the encoded embeddings using pre-computed distances between the query's subvectors and the codebook centroids.
 
 === "LSH (Hash)"
 
