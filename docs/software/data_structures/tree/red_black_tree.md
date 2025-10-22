@@ -1,4 +1,4 @@
-# Red-Black Tree (Balanced Binary Search Tree)
+# Red-Black Tree (Balanced Binary Search Tree) [Binary Search Tree]
 
 ## Description
 
@@ -18,7 +18,7 @@ These properties ensure that the **longest path from the root to the leaf is no 
 Benefits of Red-Black Trees:
 
 - **Efficient Insertions and Deletions**: Compared to AVL trees, red-black trees perform fewer rotations during insertions and deletions, leading to better average-case efficiency.
-- **Balanced Structure**: The balancing properties allow red-black trees to maintain a time complexity of $O(\og n)$ for search, insert, and delete operations, even after a series of modifications.
+- **Balanced Structure**: The balancing properties allow red-black trees to maintain a time complexity of $O(\log n)$ for search, insert, and delete operations, even after a series of modifications.
 - **Versatility**: Red-black trees are used in various applications, including:
 
     - Implementation of associative arrays and dictionaries in programming libraries.

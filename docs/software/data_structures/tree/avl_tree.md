@@ -1,4 +1,4 @@
-# AVL Tree (Balanced Binary Search Tree)
+# AVL Tree (Balanced Binary Search Tree) [Binary Search Tree]
 
 ## Description
 

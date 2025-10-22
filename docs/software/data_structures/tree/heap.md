@@ -1,4 +1,4 @@
-# Heap
+# Heap [Binary Tree]
 
 ## Description
 
