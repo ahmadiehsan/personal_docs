@@ -1,4 +1,4 @@
-# Backtracking [Top-to-Bottom] [Recursive]
+# Backtracking [Top-Down] [Recursion]
 
 ## Description
 
@@ -6,9 +6,11 @@ Backtracking algorithm is a method to solve problems by exhaustive search.
 Its core concept is to start from an initial state and brutally search for all possible solutions.
 The algorithm records the correct ones until a solution is found or all possible solutions have been tried but no solution can be found.
 
+Backtracking typically employs "depth-first search" to traverse the solution space.
+
 !!! info
 
-    Backtracking typically employs "depth-first search" to traverse the solution space.
+    Backtracking is an top-down approach that starts from the main problem and explores potential solution paths by recursively breaking it down into smaller subproblems. It systematically searches through possible options, backtracking whenever a path leads to a dead end or an invalid state.
 
 ## Workflow
 
@@ -162,3 +164,22 @@ Backtracking algorithms can be used to solve many search problems, constraint sa
     ```
 
     ![](backtracking/example_permutation.png)
+
+=== "Fibonacci"
+
+    ```python
+    def fibonacci(n, memo={}):
+        # If result already computed, return it
+        if n in memo:
+            return memo[n]
+
+        # Base cases
+        if n <= 1:
+            return n
+
+        # Recursively compute and store result
+        memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)
+        return memo[n]
+
+    print(fibonacci(10))  # Output: 55
+    ```
