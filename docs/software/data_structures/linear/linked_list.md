@@ -15,6 +15,16 @@ The design of linked lists allows for their nodes to be distributed across memor
 
 ## Varieties
 
-- **Singly linked list**: This is the standard linked list described earlier.
-- **Circular linked list**: This is formed when the tail node of a singly linked list points back to the head node, creating a loop. In a circular linked list, any node can function as the head node.
-- **Doubly linked list**: In contrast to a singly linked list, a doubly linked list maintains references in two directions. Each node contains references (pointer) to both its successor (the next node) and predecessor (the previous node).
+=== "Singly"
+
+    Singly linked list is the standard linked list described earlier.
+
+=== "Circular"
+
+    Circular linked list is formed when the tail node of a singly linked list points back to the head node, creating a loop.
+    In a circular linked list, any node can function as the head node.
+
+=== "Doubly"
+
+    In contrast to a singly linked list, a doubly linked list maintains references in two directions.
+    Each node contains references (pointer) to both its successor (the next node) and predecessor (the previous node).
