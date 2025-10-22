@@ -77,6 +77,10 @@
     margin-left: auto;
 }
 
+.nav-tag mjx-break {
+    display: none !important;
+}
+
 .nav-tag__category,
 .title-tag__category {
     border-color: #dddddd;
