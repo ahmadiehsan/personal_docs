@@ -1,3 +1,8 @@
 mjx-container[jax="CHTML"][display="true"] {
     text-align: left !important;
 }
+
+.nav-tag mjx-break,
+table mjx-break {
+    display: none !important;
+}
