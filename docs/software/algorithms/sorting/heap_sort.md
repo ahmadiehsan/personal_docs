@@ -3,7 +3,7 @@
 ## Description
 
 Heap sort is an efficient sorting algorithm based on the heap data structure.
-We can implement heap sort using the "heap creation" and "element extraction" operations we have already learned.
+We can implement heap sort using the "heap creation" and "element extraction" operations.
 
 1. Input the array and construct a min-heap, where the smallest element is at the top of the heap.
 2. Continuously perform the extraction operation, record the extracted elements sequentially to obtain a sorted list from smallest to largest.

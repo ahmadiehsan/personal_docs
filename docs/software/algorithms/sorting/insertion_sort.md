@@ -1,4 +1,4 @@
-# Insertion Sort [$O(n^2)$] [Stable] [In-Place]
+# Insertion Sort * [$O(n^2)$] [Stable] [In-Place]
 
 ## Description
 
