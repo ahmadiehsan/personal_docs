@@ -10,7 +10,33 @@ Dynamic programming is an important algorithmic paradigm that decomposes a probl
 
 ## Workflow
 
+The dynamic programming problem-solving process varies with the nature and difficulty of the problem but generally follows these steps:
+
+1. Describe decisions.
+2. Define states.
+3. Establish a $dp$ table.
+4. Derive state transition equations.
+5. Determine boundary conditions, etc.
+
+## Use Cases
+
 Dynamic programming is commonly used to solve optimization problems, which not only include overlapping subproblems but also have two other major characteristics: optimal substructure and statelessness.
+
+=== "When to Use"
+
+    If the problem contains explicit **decision concepts**, and the solution is produced through a series of decisions, then it fits the decision tree model and can usually be solved using Backtracking or Dynamic Programming.
+
+    On this basis, there are some "bonus points" for determining dynamic programming problems.
+
+    - The problem contains descriptions of maximization (minimization) or finding the most (least) optimal solution.
+    - The problem's states can be represented using a list, multi-dimensional matrix, or tree, and a state has a recursive relationship with its surrounding states.
+
+    Correspondingly, there are also some "penalty points".
+
+    - The goal of the problem is to find all possible solutions, not just the optimal solution.
+    - The problem description has obvious characteristics of permutations and combinations, requiring the return of specific multiple solutions.
+
+    If a problem fits the decision tree model and has relatively obvious "bonus points", we can assume it is a dynamic programming problem and verify it during the solution process.
 
 === "Optimal Substructure"
 
@@ -62,6 +88,36 @@ Dynamic programming is commonly used to solve optimization problems, which not o
     ```
 
     ![](dynamic_programming/example_stairs.png)
+
+=== "Minimum Path Sum"
+
+    !!! question
+
+        Given an $n \times m$ two-dimensional grid `grid`, each cell in the grid contains a non-negative integer representing the cost of that cell. The robot starts from the top-left cell and can only move down or right at each step until it reaches the bottom-right cell. Return the minimum path sum from the top-left to the bottom-right.
+
+    ```python
+    def min_path_sum_dp(grid: list[list[int]]) -> int:
+        n, m = len(grid), len(grid[0])
+
+        # Initialize dp table
+        dp = [[0] * m for _ in range(n)]
+        dp[0][0] = grid[0][0]
+
+        # State transition: first row
+        for j in range(1, m):
+            dp[0][j] = dp[0][j - 1] + grid[0][j]
+
+        # State transition: first column
+        for i in range(1, n):
+            dp[i][0] = dp[i - 1][0] + grid[i][0]
+
+        # State transition: the rest of the rows and columns
+        for i in range(1, n):
+            for j in range(1, m):
+                dp[i][j] = min(dp[i][j - 1], dp[i - 1][j]) + grid[i][j]
+
+        return dp[n - 1][m - 1]
+    ```
 
 === "Fibonacci"
 
