@@ -38,7 +38,11 @@ There are two common efficiency optimization methods.
 
 ## Use Cases
 
-Backtracking algorithms can be used to solve many search problems, constraint satisfaction problems, and combinatorial optimization problems.
+=== "When to Use"
+
+    Problems suitable for backtracking usually fit the **"decision tree model"**, which can be described using a tree structure, where each node represents a decision, and each path represents a sequence of decisions.
+
+    Backtracking algorithms can be used to solve many search problems, constraint satisfaction problems, and combinatorial optimization problems.
 
 === "Search"
 
