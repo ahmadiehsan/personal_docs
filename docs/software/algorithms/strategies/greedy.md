@@ -1,4 +1,4 @@
-# Greedy
+# Greedy [Step-by-Step] [Loop]
 
 ## Description
 
@@ -15,7 +15,7 @@ Greedy algorithms are concise and efficient, and are widely used in many practic
 ## Advantages & Limitations
 
 **Greedy algorithms are not only straightforward and simple to implement, but they are also usually very efficient**.
-In the code above, if the smallest coin denomination is $\min(coins)$, the greedy choice loops at most $amt / \min(coins)$ times, giving a time complexity of $O(amt / \min(coins))$.
+In the Coin Change problem, if the smallest coin denomination is $\min(coins)$, the greedy choice loops at most $amt / \min(coins)$ times, giving a time complexity of $O(amt / \min(coins))$.
 This is an order of magnitude smaller than the time complexity of the dynamic programming solution, which is $O(n \times amt)$.
 
 However, **for some combinations of coin denominations, greedy algorithms cannot find the optimal solution**.
