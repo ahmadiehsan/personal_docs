@@ -1,4 +1,4 @@
-# Divide & Conquer
+# Divide & Conquer [Top-Down] [Recursion]
 
 ## Description
 
