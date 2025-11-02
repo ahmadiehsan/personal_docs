@@ -28,3 +28,33 @@ $$
 Correlation is the statistical measure that shows a relationship between two variables.
 When one changes, the other changes as well, positively or negatively.
 However, this doesn't mean that one variable causes the other to change. Causation means that one variable directly causes a change in the other. It implies a cause-and-effect relationship, not just an association. Proving causation requires deeper analysis and additional evidence.
+
+## Example
+
+=== "Simple"
+
+    ```python
+    corr_matrix = housing.corr(numeric_only=True)
+    corr_matrix["median_house_value"].sort_values(ascending=False)
+
+    # median_house_value  1.000000
+    # median_income       0.688380
+    # total_rooms         0.137455
+    # housing_median_age  0.102175
+    # households          0.071426
+    # total_bedrooms      0.054635
+    # population         -0.020153
+    # longitude          -0.050859
+    # latitude           -0.139584
+    # Name: median_house_value, dtype: float64
+    ```
+
+=== "Scatter Matrix"
+
+    ```python
+    from pandas.plotting import scatter_matrix
+
+    attributes = ["median_house_value", "median_income", "total_rooms", "housing_median_age"]
+    scatter_matrix(housing[attributes], figsize=(12, 8))
+    plt.show()
+    ```
