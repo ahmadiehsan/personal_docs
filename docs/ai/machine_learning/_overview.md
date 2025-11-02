@@ -4,7 +4,7 @@
 
 === "Supervised"
 
-    Involves training a model on labeled data, where each data point is associated with a target label or category.
+    Supervised learning involves training a model on labeled data, where each data point is associated with a target label or category.
     The model then uses this labeled data to learn the patterns and relationships between the input text and the target labels.
 
 === "Unsupervised"
@@ -13,7 +13,7 @@
 
 === "Semi-Supervised"
 
-    Combines both supervised and unsupervised learning approaches.
+    Semi-Supervised learning combines both supervised and unsupervised learning approaches.
     It involves using a small amount of labeled data to train a model and then using the model to classify the remaining unlabeled data.
     The model then uses the unlabeled data to improve its classification performance.
 
