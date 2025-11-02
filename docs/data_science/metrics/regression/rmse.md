@@ -1,8 +1,8 @@
-# Root Mean Squared Error (RMSE)
+# RMSE *
 
 ## Description
 
-RMSE is a regression metric that measures the square root of the average of the squared differences between predicted values and actual values.
+RMSE (Root Mean Squared Error) is a regression metric that measures the square root of the average of the squared differences between predicted values and actual values.
 It penalizes large errors more heavily than MAE due to the squaring of differences, making it sensitive to outliers.
 
 RMSE is directly derived from **Mean Squared Error (MSE)**, which is the average of squared errors.
