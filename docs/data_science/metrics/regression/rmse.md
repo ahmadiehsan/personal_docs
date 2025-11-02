@@ -11,6 +11,10 @@ RMSE is directly derived from **Mean Squared Error (MSE)**, which is the average
 - **Penalizes large errors** more than MAE, which makes it more useful when large errors are particularly undesirable
 - **Lower values** indicate better model performance.
 
+!!! info
+
+    RMSE is sensitive to outliers; when data contains many outliers, it is recommended to using mean absolute error (MAE) instead.
+
 ## Formula
 
 $$
