@@ -1,8 +1,8 @@
-# Mean Absolute Error (MAE)
+# MAE
 
 ## Description
 
-MAE is a regression metric that measures the average of the absolute differences between the predicted values and the actual values.
+MAE (Mean Absolute Error) is a regression metric that measures the average of the absolute differences between the predicted values and the actual values.
 
 It gives an idea of how far off the predictions are from the true values, regardless of direction.
 
