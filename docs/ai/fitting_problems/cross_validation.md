@@ -1,8 +1,8 @@
-# Splitting Data {Holdout} {K-Fold}
+# Cross-Validation {Holdout} {K-Fold}
 
 ## Description
 
-Splitting data means dividing a dataset into parts for training and testing a model, helping to evaluate its performance and avoid overfitting.
+Cross-Validation means dividing a dataset into parts for training and testing a model, helping to evaluate its performance and avoid overfitting.
 
 ## Varieties
 
