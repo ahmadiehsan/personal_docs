@@ -32,11 +32,6 @@ The tree can be explained by two entities, namely decision nodes, and leaves.
 
     <span dir="rtl">بر خلاف random forest که دیتاست های رندم میسازه، تو این الگو یک دیتا ست اولیه میسازه و بر اساسش یک decision tree میسازه و با تست کردن نتایج و پیدا کردن نقاط ضعفش این بار یک دیتاست دقیق تر رو انتخاب میکنه دوباره decision tree رو ایجاد میکنه، انقدر این کارو تکرار میکنه تا یه decision tree کامل و با کمترین اشکال ایجاد کنه.</span>
 
-## Random Forest Vs PCA
-
-- In each of the supervised learning use cases, random forest can be used to reduce the number of dimensions in data.
-- For unsupervised dimensionality reduction tasks, PCA can be helpful.
-
 ## Information Gain Technique
 
 ![](decision_trees/image1.png)
@@ -55,3 +50,41 @@ The tree can be explained by two entities, namely decision nodes, and leaves.
 <span dir="rtl">برای فیچر هایی که یک مقدار ثابت ندارن (مثلا وزن) با استفاده از تکنیک تصویر زیر اون هارو به حالت True و False ای تغییر میدیم:</span>
 
 ![](decision_trees/image5.png)
+
+## Example
+
+=== "Random Forest"
+
+    ```python
+    from sklearn.datasets import load_iris
+    from sklearn.ensemble import RandomForestClassifier
+    from sklearn.model_selection import train_test_split
+    from sklearn.metrics import f1_score
+
+    X, y = load_iris(return_X_y=True)  # Load sample data
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model.fit(X_train, y_train)
+
+    y_pred = model.predict(X_test)
+    print("F1 Score:", f1_score(y_test, y_pred, average="macro"))
+    ```
+
+=== "XGBoost"
+
+    ```python
+    from xgboost import XGBClassifier
+    from sklearn.datasets import load_iris
+    from sklearn.model_selection import train_test_split
+    from sklearn.metrics import f1_score
+
+    X, y = load_iris(return_X_y=True)  # Load sample data
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+    model = XGBClassifier(use_label_encoder=False, eval_metric="mlogloss", random_state=42)
+    model.fit(X_train, y_train)
+
+    y_pred = model.predict(X_test)
+    print("F1 Score:", f1_score(y_test, y_pred, average="macro"))
+    ```
