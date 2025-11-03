@@ -82,7 +82,7 @@ There are several types of regularization, including:
     from sklearn.linear_model import LogisticRegression
 
     # Train logistic regression with L1 (Lasso) penalty
-    model = LogisticRegression(solver='liblinear', penalty='l1', max_iter=1000)
+    model = LogisticRegression(solver="liblinear", penalty="l1", max_iter=1000)
     model.fit(X, y)
     ```
 
