@@ -10,28 +10,28 @@
     - Predicting whether an email is spam or not
     - Determining if a customer will churn (leave)
 
-## Formula (Training Shape)
+## Formula
 
-<img src="image1.png" style="width:3.00642in" />
+=== "Training Shape"
 
-<span dir="rtl">نمودار loss function:</span>
+    <img src="image1.png" style="width:4in" />
 
-<img src="image5.png" style="width:4.66298in" />
+    <span dir="rtl">نمودار loss function:</span>
 
-<img src="image6.png" style="width:4.36252in" />
+    <img src="image5.png" style="width:5.5in" />
 
-<span dir="rtl">چون مقادیر این مدل حتما بین 0 تا 1 است از بخش های بزرگتر از 1 در دو تصویر بالا صرف نظر شد</span>
+    <img src="image6.png" style="width:5.5in" />
 
-## Formula (Simplified Shape)
+    <span dir="rtl">چون مقادیر این مدل حتما بین 0 تا 1 است از بخش های بزرگتر از 1 در دو تصویر بالا صرف نظر شد</span>
 
-Normal:
+=== "Simplified Shape (Normal)"
 
-<img src="image3.png" style="width:3.57803in" />
+    <img src="image3.png" style="width:5in" />
 
-Regularized:
+=== "Simplified Shape (Regularized)"
 
-<img src="image4.jpg" style="width:4.17785in" />
+    <img src="image4.jpg" style="width:5.5in" />
 
 ## Gradient Descent
 
-<img src="image2.png" style="width:2.70486in" />
+<img src="image2.png" style="width:4in" />
