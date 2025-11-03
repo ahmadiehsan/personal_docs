@@ -32,3 +32,23 @@ However, unlike other regression models, this line is straight when plotted on a
 === "Polynomial"
 
     <img src="image4.png" style="width:5in" />
+
+## Example
+
+=== "Polynomial"
+
+```python
+from sklearn.datasets import load_diabetes
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import root_mean_squared_error
+
+X, y = load_diabetes(return_X_y=True)  # Load sample regression data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+print("RMSE:", root_mean_squared_error(y_test, y_pred))
+```
