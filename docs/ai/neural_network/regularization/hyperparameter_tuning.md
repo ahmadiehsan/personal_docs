@@ -1,4 +1,4 @@
-# Hyperparameters Tuning
+# Hyperparameter Tuning
 
 ## Description
 
