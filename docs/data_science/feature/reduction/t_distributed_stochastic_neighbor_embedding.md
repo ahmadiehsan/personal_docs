@@ -1,8 +1,8 @@
-# T-Distributed Stochastic Neighbor Embedding (T-SNE) [Manifold]
+# T-SNE [Manifold]
 
 ## Description
 
-Computes the probability that pairs of data points in the high-dimensional space are related and then chooses a low-dimensional embedding that produces a similar distribution.
+T-Distributed Stochastic Neighbor Embedding (T-SNE) computes the probability that pairs of data points in the high-dimensional space are related and then chooses a low-dimensional embedding that produces a similar distribution.
 
 The basic idea behind t-SNE is to preserve the pairwise similarities of data points in a low-dimensional space, as opposed to preserving the distances between them.
 In other words, it tries to retain the local structure of the data while discarding the global structure.

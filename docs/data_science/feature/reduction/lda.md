@@ -1,8 +1,8 @@
-# Linear Discriminant Analysis (LDA) [Linear]
+# LDA [Linear]
 
 ## Description
 
-It is often used in classification tasks to reduce the number of features by transforming them into a lower-dimensional space while retaining as much class-discriminatory information as possible.
+Linear Discriminant Analysis (LDA) is often used in classification tasks to reduce the number of features by transforming them into a lower-dimensional space while retaining as much class-discriminatory information as possible.
 
 In LDA, the goal is to find a linear combination of the original features that maximizes the separation between classes.
 **The input to LDA is a dataset of labeled examples**, where each example is a feature vector with a corresponding class label.

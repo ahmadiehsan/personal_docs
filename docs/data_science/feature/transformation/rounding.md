@@ -1,8 +1,4 @@
-# Rounding
-
-## Specifications
-
-- **Data Type**: Continuous numeric data
+# Rounding [Continuous]
 
 ## Description
 
@@ -25,10 +21,10 @@ items_popularity["popularity_scale_100"] = np.array(
     np.round((items_popularity["pop_percent"] * 100)),
     dtype="int"
 )
-
-items_popularity
 ```
 
-We tried two forms of rounding.
-The features depict the item popularities now both on a scale of 1–10 and on a scale of 1–100.
-You can use these values both as numerical or categorical features based on the scenario and problem.
+!!! info
+
+    We tried two forms of rounding.
+    The features depict the item popularities now both on a scale of 1–10 and on a scale of 1–100.
+    You can use these values both as numerical or categorical features based on the scenario and problem.

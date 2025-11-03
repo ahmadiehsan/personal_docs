@@ -1,8 +1,4 @@
-# Binning (Quantization)
-
-## Specifications
-
-- **Data Type**: Continuous numeric data
+# Binning (Quantization) [Continuous]
 
 ## Description
 
@@ -18,78 +14,76 @@ These discrete values or numbers can be thought of as categories or bins into wh
 Each bin represents a specific degree of intensity and hence a specific range of continuous numeric values fall into it.
 Specific strategies of binning data include fixed-width and adaptive binning.
 
-## Fixed-Width Binning
+## Varieties
 
-Description:
+=== "Fixed-Width"
 
-Just like the name indicates, in fixed-width binning, we have specific fixed widths for each of the bins which are usually pre-defined by the user analyzing the data.
-Each bin has a pre-fixed range of values which should be assigned to that bin on the basis of some domain knowledge, rules or constraints.
-Binning based on rounding is one of the ways, where you can use the rounding operation which we discussed earlier to bin raw values.
+    Just like the name indicates, in Fixed-Width binning, we have specific fixed widths for each of the bins which are usually pre-defined by the user analyzing the data.
+    Each bin has a pre-fixed range of values which should be assigned to that bin on the basis of some domain knowledge, rules or constraints.
+    Binning based on rounding is one of the ways, where you can use the rounding operation which we discussed earlier to bin raw values.
 
-Example:
+=== "Adaptive"
 
-| Age Range | Bin |
-| --------- | --- |
-| 0  –  15  | 1   |
-| 16 –  30  | 2   |
-| 31 –  45  | 3   |
-| 46 –  60  | 4   |
-| 61 –  75  | 5   |
-| 75 – 100  | 6   |
+    The drawback in using fixed-width binning is that due to us manually deciding the bin ranges, we can end up with irregular bins which are not uniform based on the number of data points or values which fall in each bin.
+    Some of the bins might be densely populated and some of them might be sparsely populated or even empty!
+    Adaptive binning is a safer strategy in these scenarios where we let the data speak for itself!
+    That's right, we use the data distribution itself to decide our bin ranges.
 
-```python
-bin_ranges = [0, 15, 30, 45, 60, 75, 100]
-bin_names = [1, 2, 3, 4, 5, 6]
+    Quantile based binning is a good strategy to use for adaptive binning.
+    Quantiles are specific values or cut-points which help in partitioning the continuous valued distribution of a specific numeric field into discrete contiguous bins or intervals.
+    Thus, q-Quantiles help in partitioning a numeric attribute into q equal partitions.
+    Popular examples of quantiles include the 2-Quantile known as the median which divides the data distribution into two equal bins, 4-Quantiles known as the quartiles which divide the data into 4 equal bins and 10-Quantiles also known as the deciles which create 10 equal width bins.
 
-fcc_survey_df["Age_bin_custom_range"] = pd.cut(
-    np.array(fcc_survey_df["Age"]),
-    bins=bin_ranges
-)
+## Example
 
-fcc_survey_df["Age_bin_custom_label"] = pd.cut(
-    np.array(fcc_survey_df["Age"]),
-    bins=bin_ranges,
-    labels=bin_names
-)
-```
+=== "Fixed-Width"
 
-## Adaptive Binning
+    | Age Range | Bin |
+    | --------- | --- |
+    | 0  –  15  | 1   |
+    | 16 –  30  | 2   |
+    | 31 –  45  | 3   |
+    | 46 –  60  | 4   |
+    | 61 –  75  | 5   |
+    | 75 – 100  | 6   |
 
-Description:
+    ```python
+    bin_ranges = [0, 15, 30, 45, 60, 75, 100]
+    bin_names = [1, 2, 3, 4, 5, 6]
 
-The drawback in using fixed-width binning is that due to us manually deciding the bin ranges, we can end up with irregular bins which are not uniform based on the number of data points or values which fall in each bin.
-Some of the bins might be densely populated and some of them might be sparsely populated or even empty!
-Adaptive binning is a safer strategy in these scenarios where we let the data speak for itself!
-That's right, we use the data distribution itself to decide our bin ranges.
+    fcc_survey_df["Age_bin_custom_range"] = pd.cut(
+        np.array(fcc_survey_df["Age"]),
+        bins=bin_ranges
+    )
 
-Quantile based binning is a good strategy to use for adaptive binning.
-Quantiles are specific values or cut-points which help in partitioning the continuous valued distribution of a specific numeric field into discrete contiguous bins or intervals.
-Thus, q-Quantiles help in partitioning a numeric attribute into q equal partitions.
-Popular examples of quantiles include the 2-Quantile known as the median which divides the data distribution into two equal bins, 4-Quantiles known as the quartiles which divide the data into 4 equal bins and 10-Quantiles also known as the deciles which create 10 equal width bins.
+    fcc_survey_df["Age_bin_custom_label"] = pd.cut(
+        np.array(fcc_survey_df["Age"]),
+        bins=bin_ranges,
+        labels=bin_names
+    )
+    ```
 
-Example:
+=== "Adaptive"
 
-```python
-fig, ax = plt.subplots()
-fcc_survey_df["Income"].hist(bins=30, color="#A9C5D3", edgecolor="black", grid=False)
-ax.set_title("Developer Income Histogram", fontsize=12)
-ax.set_xlabel("Developer Income", fontsize=12)
-ax.set_ylabel("Frequency", fontsize=12)
-```
+    ```python
+    fig, ax = plt.subplots()
+    fcc_survey_df["Income"].hist(bins=30, color="#A9C5D3", edgecolor="black", grid=False)
+    ax.set_title("Developer Income Histogram", fontsize=12)
+    ax.set_xlabel("Developer Income", fontsize=12)
+    ax.set_ylabel("Frequency", fontsize=12)
+    ```
 
-The above distribution depicts a right skew in the income with lesser developers earning more money and vice versa.
+    The above distribution depicts a right skew in the income with lesser developers earning more money and vice versa.
 
-```python
-quantile_list = [0, .25, .5, .75, 1.]
-quantiles = fcc_survey_df["Income"].quantile(quantile_list)
-quantiles
+    ```python
+    quantile_list = [0, .25, .5, .75, 1.]
+    quantiles = fcc_survey_df["Income"].quantile(quantile_list)
+    print(quantiles)
 
-# Output
-# ------
-# 0.00     6000.0
-# 0.25    20000.0
-# 0.50    37000.0
-# 0.75    60000.0
-# 1.00   200000.0
-# Name: Income, dtype: float64
-```
+    # 0.00     6000.0
+    # 0.25    20000.0
+    # 0.50    37000.0
+    # 0.75    60000.0
+    # 1.00   200000.0
+    # Name: Income, dtype: float64
+    ```

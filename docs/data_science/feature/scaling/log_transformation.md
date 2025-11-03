@@ -1,13 +1,8 @@
-# Log Transformation [Scaling]
-
-## Specifications
-
-- **Data Type**: Continuous numeric data
-- **Good For**: Non-Gaussian to Gaussian
+# Log Transformation * [To Gaussian]
 
 ## Description
 
-This technique is used when the **data is highly skewed** or **has a long tail**.
+Log Transformation technique is used when the **data is highly skewed** or **has a long tail**.
 By taking the logarithm of the feature values, the distribution can be made more normal or symmetric, which can improve the performance of some machine learning algorithms.
 
 This function has a prerequisite that **the numeric values to be transformed must be positive** (similar to what power transform (Box-Cox) expects).

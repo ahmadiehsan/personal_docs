@@ -1,4 +1,4 @@
-# Robust Scaling [Scaling]
+# Robust Scaling
 
 ## Description
 

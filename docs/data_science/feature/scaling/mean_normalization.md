@@ -1,4 +1,4 @@
-# Mean Normalization [Scaling]
+# Mean Normalization
 
 ## Formula
 

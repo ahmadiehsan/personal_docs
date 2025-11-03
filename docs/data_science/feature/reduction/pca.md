@@ -1,8 +1,8 @@
-# Principal Component Analysis (PCA) [Linear]
+# PCA * [Linear]
 
 ## Description
 
-The idea of PCA is simple — **reduce the number of variables of a data set, while preserving as much information as possible**.
+The idea of Principal Component Analysis (PCA) is simple — **reduce the number of variables of a data set, while preserving as much information as possible**.
 
 The basic idea of PCA is to transform a set of correlated variables into a set of uncorrelated variables known as principal components.
 
@@ -29,7 +29,7 @@ An important thing to realize here is that the principal components are less int
 
 As there are as many principal components as there are variables in the data, principal components are constructed in such a manner that the first principal component accounts for the largest possible variance in the data set.
 
-![](principal_component_analysis/image1.gif)
+![](pca/image1.gif)
 
 For example in the above image, the first principal component approximately is the line that matches the purple marks because it goes through the origin and it's the line in which the projection of the points (red dots) is the most spread out.
 
@@ -49,8 +49,3 @@ The PCA algorithm involves the following steps:
 3. Compute the eigenvectors and eigenvalues of the covariance matrix: The eigenvectors represent the primary directions of the highest variance within the dataset, while the eigenvalues quantify the extent of variance elucidated by each eigenvector.
 4. Select the number of principal components: The number of principal components to retain can be determined by analyzing the eigenvalues and selecting the top k eigenvectors that explain the most variance.
 5. Project the data onto the selected principal components: The original data is projected onto the selected principal components, resulting in a lower-dimensional representation of the data.
-
-## Vs Random Forest
-
-- In each of the supervised learning use cases, the random forest can be used to reduce the number of dimensions in data.
-- For unsupervised dimensionality reduction tasks, PCA can be helpful.
