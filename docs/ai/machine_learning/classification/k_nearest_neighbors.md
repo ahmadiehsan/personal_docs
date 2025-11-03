@@ -1,4 +1,4 @@
-# KNN [Sup]
+# KNN [Sup] [Multilabel]
 
 ## Description
 
@@ -7,6 +7,14 @@ K-Nearest Neighbors (KNN) a non-parametric, supervised learning classifier, whic
 <img src="image2.jpg" style="width:5.22689in" />
 
 For example in the above image, the big red circle at first was unclassified and by using KNN it was classified by the nearest old classified data.
+
+!!! info
+
+    KNN naturally supports multilabel classification, where each data point can belong to multiple classes simultaneously. This is useful in scenarios like:
+
+    - Document categorization (a document can belong to multiple topics)
+    - Image tagging (an image can have multiple objects)
+    - Gene function prediction (a gene can have multiple functions)
 
 !!! info
 
