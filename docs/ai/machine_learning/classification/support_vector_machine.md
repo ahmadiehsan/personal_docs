@@ -1,8 +1,8 @@
-# Support Vector Machine (SVM) [Sup]
+# SVM [Sup]
 
 ## Description
 
-The support vector machine is a model used for both classification and regression problems though it is mostly used to solve classification problems.
+Support Vector Machine (SVM) is a model used for both classification and regression problems though it is mostly used to solve classification problems.
 The algorithm creates a hyperplane or line (decision boundary) which separates data into classes.
 It uses the kernel trick to find the best line separator (decision boundary that has the same distance from the boundary point of both classes).
 
@@ -14,41 +14,61 @@ SVM tries to finds the maximal margin (distance between the line and the support
 - $H_2$ does, but only with a small margin.
 - $H_3$ separates them with the maximal margin.
 
-## Hyperplane
+## Workflow
 
-A hyperplane is a decision boundary that differentiates the two classes in SVM.
-A data point falling on either side of the hyperplane can be attributed to different classes.
-The dimension of the hyperplane depends on the number of input features in the dataset.
+=== "Hyperplane"
 
-<img src="image9.png" style="width:2.53833in" />
+    A hyperplane is a decision boundary that differentiates the two classes in SVM.
+    A data point falling on either side of the hyperplane can be attributed to different classes.
+    The dimension of the hyperplane depends on the number of input features in the dataset.
 
-In geometry, a hyperplane is a subspace whose dimension is one less than that of its ambient space.
-For example, if a space is 3-dimensional then its hyperplanes are the 2-dimensional planes, while if the space is 2-dimensional, its hyperplanes are the 1-dimensional lines.
+    <img src="image9.png" style="width:2.53833in" />
 
-## Soft Margin
+    In geometry, a hyperplane is a subspace whose dimension is one less than that of its ambient space.
+    For example, if a space is 3-dimensional then its hyperplanes are the 2-dimensional planes, while if the space is 2-dimensional, its hyperplanes are the 1-dimensional lines.
 
-Soft margin SVM allows some misclassification to happen by relaxing the hard constraints of Support Vector Machine.
+=== "Soft Margin"
 
-<img src="image3.jpg" style="width:3.54212in" />
+    Soft margin SVM allows some misclassification to happen by relaxing the hard constraints of Support Vector Machine.
 
-<img src="image1.jpg" style="width:3.48459in" />
+    <img src="image3.jpg" style="width:3.54212in" />
 
-<img src="image11.jpg" style="width:3.4371in" />
+    <img src="image1.jpg" style="width:3.48459in" />
 
-## SVM Functionality For Weird Shaped Data
+    <img src="image11.jpg" style="width:3.4371in" />
 
-SVM by using a **kernel function** will move the data into a higher dimension to make the classification possible.
+=== "Weird Shaped Data"
 
-<img src="image10.jpg" style="width:3.54322in" />
+    SVM by using a **kernel function** will move the data into a higher dimension to make the classification possible.
 
-<img src="image12.jpg" style="width:3.53186in" />
+    <img src="image10.jpg" style="width:3.54322in" />
 
-<img src="image8.jpg" style="width:3.59745in" />
+    <img src="image12.jpg" style="width:3.53186in" />
 
-## Kernel Function
+    <img src="image8.jpg" style="width:3.59745in" />
 
-<img src="image7.jpg" style="width:3.71837in" />
+=== "Kernel Function"
 
-<img src="image6.jpg" style="width:3.75761in" />
+    <img src="image7.jpg" style="width:3.71837in" />
 
-<img src="image5.jpg" style="width:2.97164in" />
+    <img src="image6.jpg" style="width:3.75761in" />
+
+    <img src="image5.jpg" style="width:2.97164in" />
+
+## Example
+
+```python
+from sklearn.datasets import load_iris
+from sklearn.svm import SVC
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score
+
+X, y = load_iris(return_X_y=True)  # Load sample data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+model = SVC(kernel="rbf", random_state=42)
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+print("F1 Score:", f1_score(y_test, y_pred, average="macro"))
+```
