@@ -61,3 +61,30 @@ Different layers in a transformer specialize in different linguistic properties:
 === "Convolutional NN"
 
     <img src="godfather_2.jpg" style="width:2.99608in" />
+
+## Scikit-Learn
+
+=== "Pipeline"
+
+    ```python
+    from sklearn.compose import ColumnTransformer, make_column_transformer, make_column_selector
+    from sklearn.pipeline import make_pipeline
+
+    num_pipeline = make_pipeline(SimpleImputer(strategy="median"), StandardScaler())
+    cat_pipeline = make_pipeline(SimpleImputer(strategy="most_frequent"), OneHotEncoder(handle_unknown="ignore"))
+
+    # Automatic approach
+    preprocessing = make_column_transformer(
+        (num_pipeline, make_column_selector(dtype_include=np.number)),  # Detects numerical columns
+        (cat_pipeline, make_column_selector(dtype_include=object)),  # Detects categorical columns
+    )
+
+    # Manual approach (to have more control)
+    num_attribs = ["longitude", "latitude", ...]
+    cat_attribs = ["ocean_proximity", ...]
+
+    preprocessing = ColumnTransformer([
+        ("num", num_pipeline, num_attribs),
+        ("cat", cat_pipeline, cat_attribs),
+    ])
+    ```
