@@ -23,3 +23,17 @@ The size of the confusion matrix will be determined by the number of things we w
 For example, in the below table, we will have a 3*3 matrix (Troll 2, Gore Police, Cool As Ice).
 
 <img src="image1.jpg" style="width:3.5in" />
+
+## Example
+
+```python
+from sklearn.metrics import ConfusionMatrixDisplay
+
+ConfusionMatrixDisplay.from_predictions(y, y_pred, normalize="true", values_format=".0%")
+plt.show()
+```
+
+!!! info
+
+    - **Matrix Normalization**: Since categories often have unequal sample sizes, it's important to normalize the matrix. This can be achieved by dividing each value by its row sum using the parameter `normalize="true"`
+    - **Display Formatting**: To improve readability, display the values as whole percentages (without decimal places) using `values_format=".0%"`
