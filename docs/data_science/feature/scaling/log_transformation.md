@@ -24,6 +24,20 @@ Here, $x$ is the original feature value.
 
 ## Example
 
-```python
-fcc_survey_df["Income_log"] = np.log((1 + fcc_survey_df["Income"]))
-```
+=== "scikit-learn"
+
+    ```python
+    from sklearn.preprocessing import FunctionTransformer
+    import numpy as np
+
+    log_transformer = FunctionTransformer(np.log, inverse_func=np.exp)
+    log_pop = log_transformer.transform(housing[["population"]])
+    ```
+
+=== "numpy"
+
+    ```python
+    import numpy as np
+
+    fcc_survey_df["Income_log"] = np.log((1 + fcc_survey_df["Income"]))
+    ```
