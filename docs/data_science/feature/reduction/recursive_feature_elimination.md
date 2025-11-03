@@ -1,8 +1,8 @@
-# Recursive Feature Elimination (RFE) [Wrapper]
+# RFE [Wrapper]
 
 ## Description
 
-Functioning as a backward elimination approach, RFE systematically removes the least important feature until a predetermined number of features remains.
+Recursive Feature Elimination (RFE) functioning as a backward elimination approach, RFE systematically removes the least important feature until a predetermined number of features remains.
 **During each iteration, a machine learning model is trained on the existing features**, and the least important feature is pruned based on its feature importance score.
 This sequential process persists until the specified number of features is attained.
 The feature importance score can be extracted from diverse methods, including coefficient values from linear models or feature importance scores derived from decision trees.

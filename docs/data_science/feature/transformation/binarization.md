@@ -1,8 +1,4 @@
-# Binarization
-
-## Specifications
-
-- **Data Type**: Continuous numeric data
+# Binarization [Continuous]
 
 ## Description
 
@@ -13,21 +9,21 @@ In this case, a binary feature is preferred as opposed to a count based feature.
 
 ## Example
 
-With numpy:
+=== "scikit-learn"
 
-```python
-watched = np.array(popsong_df["listen_count"])
-watched[watched >= 1] = 1
-popsong_df["watched"] = watched
-```
+    ```python
+    from sklearn.preprocessing import Binarizer
 
-With scikit-learn:
+    bn = Binarizer(threshold=0.9)
+    pd_watched = bn.transform([popsong_df["listen_count"]])[0]
+    popsong_df["pd_watched"] = pd_watched
+    popsong_df.head(11)
+    ```
 
-```python
-from sklearn.preprocessing import Binarizer
+=== "numpy"
 
-bn = Binarizer(threshold=0.9)
-pd_watched = bn.transform([popsong_df["listen_count"]])[0]
-popsong_df["pd_watched"] = pd_watched
-popsong_df.head(11)
-```
+    ```python
+    watched = np.array(popsong_df["listen_count"])
+    watched[watched >= 1] = 1
+    popsong_df["watched"] = watched
+    ```
