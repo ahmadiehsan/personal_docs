@@ -1,8 +1,8 @@
-# Receiver Operator Characteristic (ROC) [Categorical]
+# ROC [Categorical] {AUC}
 
 ## Description
 
-A receiver operating characteristic curve, or ROC curve, is a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied.
+A Receiver Operator Characteristic (ROC) curve, is a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied.
 
 The ROC curve is created by plotting the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings.
 The true-positive rate is also known as sensitivity, recall or probability of detection.
