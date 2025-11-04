@@ -34,7 +34,7 @@ The tree can be explained by two entities, namely decision nodes, and leaves.
 
 ## Workflow
 
-=== "1.1. CART Algorithm"
+=== "CART Algorithm"
 
     Classification and Regression Tree (CART) algorithm, trains decision trees (also called "growing" trees).
     The algorithm works by first splitting the training set into two subsets using a single feature $k$ and a threshold $t_k$.
@@ -58,22 +58,7 @@ The tree can be explained by two entities, namely decision nodes, and leaves.
 
         The CART algorithm is a greedy method that makes the best split at each level without considering future consequences. This approach produces a good, but not guaranteed optimal, solution.
 
-=== "1.2. Gini"
-
-    A node's Gini value represents its Gini impurity, which measures how mixed the classes are within that node.
-    A node is considered pure (Gini = 0) when all the data points it contains belong to the same class.
-    For instance, if a node includes only samples from one category, its impurity is zero.
-    In contrast, nodes that contain samples from multiple categories are impure, having higher Gini values.
-
-    $$
-    G_i = 1 - \sum_{k=1}^{n} p_{i,k}^2
-    $$
-
-    - $G_i$: Gini impurity of the $i$-th node
-    - $p_{i,k}$: Ratio of instances of class $k$ among the training samples in the $i$-th node
-    - $n$: Total number of classes
-
-=== "2.1. Information Gain"
+=== "Information Gain"
 
     ![](decision_trees/image1.png)
 
@@ -92,27 +77,11 @@ The tree can be explained by two entities, namely decision nodes, and leaves.
 
     ![](decision_trees/image5.png)
 
-=== "2.2. Entropy"
-
-    The concept of entropy originated in thermodynamics as a measure of molecular disorder: entropy approaches zero when molecules are still and well ordered.
-    Entropy later spread to a wide variety of domains, including in Shannon's information theory, where it measures the average information content of a message.
-    Entropy is zero when all messages are identical.
-    In machine learning, entropy is frequently used as an impurity measure: a set's entropy is zero when it contains instances of only one class.
-
-    $$
-    H_i = - \sum_{k=1}^{n} p_{i,k} \log_2(p_{i,k})
-    $$
-
-    - $H_i$: Entropy of the $i$-th node
-    - $p_{i,k}$: Ratio of instances of class $k$ among the training samples in the $i$-th node
-    - $n$: total number of classes
-    - The logarithm is base 2 (representing information measured in bits)
-
 === "VS"
 
     | Aspect               | CART                                                              | Information Gain                                                                          |
     | -------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-    | **Impurity measure** | Gini or MSE                                                       | Entropy                                                                                   |
+    | **Impurity measure** | Gini (for classification) or MSE (for regression)                 | Entropy                                                                                   |
     | **Splitting style**  | Binary only                                                       | Binary or multiway                                                                        |
     | **Used in**          | `sklearn.DecisionTreeClassifier`, `sklearn.DecisionTreeRegressor` | ID3, C4.5, C5.0                                                                           |
     | **Computation**      | Slightly faster                                                   | Slightly slower                                                                           |
