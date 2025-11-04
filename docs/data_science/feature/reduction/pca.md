@@ -64,7 +64,4 @@ X, y = load_iris(return_X_y=True)  # Load sample data
 
 pca_pipeline = make_pipeline(StandardScaler(), PCA())
 X_rotated = pca_pipeline.fit_transform(X)
-
-clf = DecisionTreeClassifier(max_depth=2, random_state=42)
-clf.fit(X_rotated, y)
 ```
