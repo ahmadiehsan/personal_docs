@@ -18,30 +18,30 @@ LDA is particularly useful when the number of features is large and the number o
 It can be used in a variety of applications, including image recognition, speech recognition, and NLP.
 However, it assumes that the classes are normally distributed and that the class covariance matrices are equal, which may not always be the case in practice.
 
-## LDA Steps
-
-To perform LDA, the first step is to compute the mean and covariance matrix of each class.
-The overall mean and covariance matrix are then calculated from the class means and covariance matrices.
-The goal is to project the data onto a lower-dimensional space while still retaining the class information.
-This is achieved by finding the eigenvectors and eigenvalues of the covariance matrix, sorting them in descending order of the eigenvalues, and selecting the top k eigenvectors that correspond to the k largest eigenvalues.
-The selected eigenvectors form the basis for the new feature space.
-
-The LDA algorithm can be summarized in the following steps:
-
-1. Compute the mean vector of each class.
-2. Compute the covariance matrix of each class.
-3. Compute the overall mean vector and overall covariance matrix.
-4. Compute the between-class scatter matrix.
-5. Compute the within-class scatter matrix.
-6. Compute the eigenvectors and eigenvalues of the matrix using the following equation:
-
-  $S_w^{-1} * S_b$
-
-  Here, $S_w$ is the within-class scatter matrix and $S_b$ is the between-class scatter matrix.
-
-7. Select the top k eigenvectors with the highest eigenvalues as the new feature space.
-
 ## Workflow
+
+=== "Steps"
+
+    To perform LDA, the first step is to compute the mean and covariance matrix of each class.
+    The overall mean and covariance matrix are then calculated from the class means and covariance matrices.
+    The goal is to project the data onto a lower-dimensional space while still retaining the class information.
+    This is achieved by finding the eigenvectors and eigenvalues of the covariance matrix, sorting them in descending order of the eigenvalues, and selecting the top k eigenvectors that correspond to the k largest eigenvalues.
+    The selected eigenvectors form the basis for the new feature space.
+
+    The LDA algorithm can be summarized in the following steps:
+
+    1. Compute the mean vector of each class.
+    2. Compute the covariance matrix of each class.
+    3. Compute the overall mean vector and overall covariance matrix.
+    4. Compute the between-class scatter matrix.
+    5. Compute the within-class scatter matrix.
+    6. Compute the eigenvectors and eigenvalues of the matrix using the following equation:
+
+        $S_w^{-1} * S_b$
+
+        Here, $S_w$ is the within-class scatter matrix and $S_b$ is the between-class scatter matrix.
+
+    7. Select the top k eigenvectors with the highest eigenvalues as the new feature space.
 
 === "Creates New Axis"
 
