@@ -27,7 +27,10 @@ $$
 
 Correlation is the statistical measure that shows a relationship between two variables.
 When one changes, the other changes as well, positively or negatively.
-However, this doesn't mean that one variable causes the other to change. Causation means that one variable directly causes a change in the other. It implies a cause-and-effect relationship, not just an association. Proving causation requires deeper analysis and additional evidence.
+However, this doesn't mean that one variable causes the other to change.
+Causation means that one variable directly causes a change in the other.
+It implies a cause-and-effect relationship, not just an association.
+Proving causation requires deeper analysis and additional evidence.
 
 ## Example
 

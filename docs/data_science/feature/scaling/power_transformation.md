@@ -17,7 +17,8 @@ Here, $x$ is the original feature value, and $\lambda$ is the power parameter th
 
 === "Box-Cox"
 
-    The Box-Cox transform is another popular function belonging to the power transform family of functions. **This function has a prerequisite that the numeric values to be transformed must be positive (similar to what log transform expects)**.
+    The Box-Cox transform is another popular function belonging to the power transform family of functions.
+    **This function has a prerequisite that the numeric values to be transformed must be positive (similar to what log transform expects)**.
     In case they are negative, shifting using a constant value helps.
 
     $$
@@ -37,15 +38,14 @@ Here, $x$ is the original feature value, and $\lambda$ is the power parameter th
 
 === "Box-Cox"
 
-    Let's now apply the Box-Cox transform on our developer income feature. First we get the optimal lambda value from the data distribution by removing the non-null values as follows.
+    Let's now apply the Box-Cox transform on our developer income feature.
+    First we get the optimal lambda value from the data distribution by removing the non-null values as follows.
 
     ```python
     income = np.array(fcc_survey_df["Income"])
     income_clean = income[~np.isnan(income)]
     l, opt_lambda = spstats.boxcox(income_clean)
-    print("Optimal lambda value:", opt_lambda)
-
-    # Optimal lambda value: 0.117991239456
+    print("Optimal lambda value:", opt_lambda)  # Optimal lambda value: 0.117991239456
     ```
 
     Now that we have obtained the optimal $\lambda$ value, let us use the Box-Cox transform for two values of $\lambda$ such that $\lambda = 0$ and $\lambda = \lambda_{optimal}$ and transform the developer Income feature.

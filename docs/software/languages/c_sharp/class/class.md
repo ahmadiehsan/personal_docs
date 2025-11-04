@@ -262,7 +262,8 @@
 
 === "Description"
 
-    Generic class is a class, which contains one or more "type parameters". You must pass any data type (standard data type/structure/class) while creating an object for the generic class.
+    Generic class is a class, which contains one or more "type parameters".
+    You must pass any data type (standard data type/structure/class) while creating an object for the generic class.
 
     ```csharp
     class ClassName<T> {
