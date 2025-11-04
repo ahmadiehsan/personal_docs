@@ -36,21 +36,27 @@ The loss is the mean overseen data of the squared differences between true and p
 
 ## Sample Derivative Calculation for Linear Regression
 
-=== "1. Cost Function"
+=== "1. Loss Function"
 
     The goal is to find the partial derivatives of the cost function $J(\vec{w}, b)$ with respect to $\vec{w}$ and $b$.
 
-    $$J(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})^2$$
+    $$
+    J(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})^2
+    $$
 
     Substituting $f_{\vec{w},b}(\vec{x}^{(i)}) = \vec{w} \cdot \vec{x}^{(i)} + b$:
 
-    $$J(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} (\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)})^2$$
+    $$
+    J(\vec{w}, b) = \frac{1}{2m} \sum_{i=1}^{m} (\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)})^2
+    $$
 
 === "2. Derivative With Respect to $\vec{w}$"
 
     We use the chain rule. Let $u = \vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)}$. We are finding $\frac{\partial}{\partial \vec{w}} [u^2]$.
 
-    $$\frac{\partial J}{\partial \vec{w}} = \frac{1}{2m} \sum_{i=1}^{m} \frac{\partial}{\partial \vec{w}} \left[ (\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)})^2 \right]$$
+    $$
+    \frac{\partial J}{\partial \vec{w}} = \frac{1}{2m} \sum_{i=1}^{m} \frac{\partial}{\partial \vec{w}} \left[ (\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)})^2 \right]
+    $$
 
     - **Apply Chain Rule:** $\frac{\partial (u^2)}{\partial \vec{w}} = 2u \cdot \frac{\partial u}{\partial \vec{w}}$
     - **Part 1:** $2u = 2(\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)})$
@@ -58,21 +64,29 @@ The loss is the mean overseen data of the squared differences between true and p
 
     **Combine:**
 
-    $$\frac{\partial J}{\partial \vec{w}} = \frac{1}{2m} \sum_{i=1}^{m} \left[ 2(\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)}) \cdot \vec{x}^{(i)} \right]$$
+    $$
+    \frac{\partial J}{\partial \vec{w}} = \frac{1}{2m} \sum_{i=1}^{m} \left[ 2(\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)}) \cdot \vec{x}^{(i)} \right]
+    $$
 
     **Simplify:** The $\frac{1}{2}$ and $2$ cancel.
 
-    $$\frac{\partial J}{\partial \vec{w}} = \frac{1}{m} \sum_{i=1}^{m} (\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)}) \vec{x}^{(i)}$$
+    $$
+    \frac{\partial J}{\partial \vec{w}} = \frac{1}{m} \sum_{i=1}^{m} (\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)}) \vec{x}^{(i)}
+    $$
 
     Or, substituting $f_{\vec{w},b}$ back in:
 
-    $$\frac{\partial J}{\partial \vec{w}} = \frac{1}{m} \sum_{i=1}^{m} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)}) \vec{x}^{(i)}$$
+    $$
+    \frac{\partial J}{\partial \vec{w}} = \frac{1}{m} \sum_{i=1}^{m} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)}) \vec{x}^{(i)}
+    $$
 
 === "3. Derivative with respect to $b$"
 
     We use the same chain rule setup. Let $u = \vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)}$. We are finding $\frac{\partial}{\partial b} [u^2]$.
 
-    $$\frac{\partial J}{\partial b} = \frac{1}{2m} \sum_{i=1}^{m} \frac{\partial}{\partial b} \left[ (\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)})^2 \right]$$
+    $$
+    \frac{\partial J}{\partial b} = \frac{1}{2m} \sum_{i=1}^{m} \frac{\partial}{\partial b} \left[ (\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)})^2 \right]
+    $$
 
     - **Apply Chain Rule:** $\frac{\partial (u^2)}{\partial b} = 2u \cdot \frac{\partial u}{\partial b}$
     - **Part 1:** $2u = 2(\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)})$
@@ -80,12 +94,18 @@ The loss is the mean overseen data of the squared differences between true and p
 
     **Combine:**
 
-    $$\frac{\partial J}{\partial b} = \frac{1}{2m} \sum_{i=1}^{m} \left[ 2(\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)}) \cdot 1 \right]$$
+    $$
+    \frac{\partial J}{\partial b} = \frac{1}{2m} \sum_{i=1}^{m} \left[ 2(\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)}) \cdot 1 \right]
+    $$
 
     **Simplify:** The $\frac{1}{2}$ and $2$ cancel.
 
-    $$\frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^{m} (\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)})$$
+    $$
+    \frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^{m} (\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)})
+    $$
 
     Or, substituting $f_{\vec{w},b}$ back in:
 
-    $$\frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^{m} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})$$
+    $$
+    \frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^{m} (f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})
+    $$

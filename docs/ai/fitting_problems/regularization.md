@@ -31,29 +31,59 @@ There are several types of regularization, including:
     The penalty term discourages the model from assigning large weights to individual features, leading to a simpler and more generalized model.
     By minimizing the combined loss function, which includes both the original loss and the penalty term, the model finds a balance between fitting the training data well and keeping the weights small, ultimately improving its ability to generalize to new, unseen data.
 
+=== "Elastic Net"
+
+    Elastic net regression is a middle ground between ridge regression and lasso regression.
+    The regularization term is a weighted sum of both ridge and lasso's regularization terms, and you can control the mix ratio $r$.
+    When $r = 0$, elastic net is equivalent to ridge regression, and when $r = 1$, it is equivalent to lasso regression.
+
 ## Formula
 
 === "L1 LASSO"
 
     $$
-    \min_{\beta} \sum_{i=1}^{n} (y_i - X_i \beta)^2 + \lambda \sum_{j=1}^{p} |\beta_j|
+    J(\vec{w}, b) = L(\vec{w}, b) + 2\lambda\sum_{i=1}^{n} |w_i|
     $$
 
-    - $y_i$ = target variable
-    - $X_i$ = feature vector
-    - $\beta$ = regression coefficients
-    - $\lambda$ = regularization parameter controlling sparsity
+    - $J(\vec{w}, b)$: Loss function to be minimized.
+    - $L(\vec{w}, b)$: Generic loss function (can be MSE, MAE, etc).
+    - $\vec{w}$: Model parameters (weights/coefficients).
+    - $n$: Number of features (or weights).
+    - $\lambda$: Regularization strength.
+    - $|w_i|$: Absolute value of the $i$-th parameter ($w_i$).
 
 === "L2 Ridge"
 
     $$
-    J(\mathbf{\beta}) = \sum_{i=1}^{n} (y_i - \mathbf{x}_i^T \mathbf{\beta})^2 + \lambda \sum_{j=1}^{p} \beta_j^2
+    J(\vec{w}, b) = L(\vec{w}, b) + \frac{\lambda}{m}\sum_{i=1}^{n} w_i^2
     $$
 
-    - $y_i$ is the target value
-    - $\mathbf{x}_i$ is the feature vector
-    - $\mathbf{\beta}$ are the coefficients
-    - $\lambda$ controls regularization strength
+    - $J(\vec{w}, b)$: Loss function to be minimized.
+    - $L(\vec{w}, b)$: Generic loss function (can be MSE, MAE, etc).
+    - $\vec{w}$: Model parameters (weights/coefficients).
+    - $n$: Number of features (or weights).
+    - $m$: Number of training examples.
+    - $\lambda$: Regularization strength.
+    - $w_i^2$: Squared value of the $i$-th parameter ($w_i$).
+
+=== "Elastic Net"
+
+    $$
+    J(\vec{w}, b) = L(\vec{w}, b) + r \left(2\lambda\sum_{i=1}^{n} |w_i|\right) + (1-r) \left(\frac{\lambda}{m}\sum_{i=1}^{n} w_i^2\right)
+    $$
+
+    - $J(\vec{w}, b)$: Loss function to be minimized.
+    - $L(\vec{w}, b)$: Generic loss function (can be MSE, MAE, etc).
+    - $\vec{w}$: Model parameters (weights/coefficients).
+    - $n$: Number of features (or weights).
+    - $m$: Number of training examples.
+    - $\lambda$: Regularization strength.
+    - $|w_i|$: Absolute value of the $i$-th parameter ($w_i$). Used in the L1 Norm (Lasso).
+    - $w_i^2$: Squared value of the $i$-th parameter ($w_i$). Used in the L2 Norm (Ridge).
+    - $r$: Mixing parameter for Elastic Net. This value, where $0 \le r \le 1$, determines the blend between L1 and L2 penalties.
+
+        - If $r=1$, the penalty is purely L1 (Lasso).
+        - If $r=0$, the penalty is purely L2 (Ridge).
 
 ## Workflow
 
