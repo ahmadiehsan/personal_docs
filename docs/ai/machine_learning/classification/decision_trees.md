@@ -32,24 +32,49 @@ The tree can be explained by two entities, namely decision nodes, and leaves.
 
     <span dir="rtl">بر خلاف random forest که دیتاست های رندم میسازه، تو این الگو یک دیتا ست اولیه میسازه و بر اساسش یک decision tree میسازه و با تست کردن نتایج و پیدا کردن نقاط ضعفش این بار یک دیتاست دقیق تر رو انتخاب میکنه دوباره decision tree رو ایجاد میکنه، انقدر این کارو تکرار میکنه تا یه decision tree کامل و با کمترین اشکال ایجاد کنه.</span>
 
-## Information Gain Technique
+## Workflow
 
-![](decision_trees/image1.png)
+=== "CART Algorithm"
 
-- <span dir="rtl">از این فرمول برای انتخاب ترتیب شکستن شاخه ها استفاده میشه</span>
-- <span dir="rtl">هر چقدر یک ویژگی (feature یا input) به ما entropy بهتری بده (نزدیکتر به ۰) به این معنیه که اول بر اساس اون ویژگی بشکنیم بعدش بریم سراغ ویژگی های بعدی</span>
+    Classification and Regression Tree (CART) algorithm, trains decision trees (also called "growing" trees).
+    The algorithm works by first splitting the training set into two subsets using a single feature $k$ and a threshold $t_k$.
+    How does it choose $k$ and $t_k$?
+    It searches for the pair $(k, t_k)$ that produces the purest subsets, weighted by their size.
 
-![](decision_trees/image4.png)
+    CART cost function for classification:
 
-<span dir="rtl">تو تصویر بالا جایی که هیچکدوم از حیوون ها گربه نیستن فرمول به ما ۰ داده و همینطور جایی که همه شون گربه هستن هم ۰ داده (فرقی نداره که همه باشن یا هیچکدوم نباشن، همین که purity رعایت بشه کافیه)</span>
+    $$
+    J(k, t_k) = \frac{m_{\text{left}}}{m} G_{\text{left}} + \frac{m_{\text{right}}}{m} G_{\text{right}}
+    $$
 
-![](decision_trees/image2.png)
+    - $G_{\text{left/right}}$ measures the impurity of the left/right subset
+    - $m_{\text{left/right}}$ is the number of instances in the left/right subset
+    - $m = m_{\text{left}} + m_{\text{right}}$
 
-<span dir="rtl">حالا وقتی میخوایم از فرمول entropy برای decision trees استفاده کنیم، باید entropy هر طرف رو حساب کنیم، میانگینش رو بدست بیاریم (میانگین بر اساس تعداد دیتاهای هر سمت) و آخرسر نتیجه رو از entropy اولیه دیتا ست کم کنیم، به این فرمول میگن فرمول information gain که هرچقدر حاصل فرمول information gain بیشتر باشه یعنی گزینه بهتریه. (تو تصویر چون information gain سمت چپی بیشتره پس بر اساس اون دیتا مون رو میشکنیم)</span>
+    Once the CART algorithm has successfully split the training set in two, it splits the subsets using the same logic, then the sub-subsets, and so on, recursively. It stops recursing once it reaches the maximum depth, or if it cannot find a split that will reduce impurity.
 
-<span dir="rtl">برای فیچر هایی که یک مقدار ثابت ندارن (مثلا وزن) با استفاده از تکنیک تصویر زیر اون هارو به حالت True و False ای تغییر میدیم:</span>
+    !!! warning
 
-![](decision_trees/image5.png)
+        The CART algorithm is a greedy method that makes the best split at each level without considering future consequences. This approach produces a good, but not guaranteed optimal, solution.
+
+=== "Information Gain Technique"
+
+    ![](decision_trees/image1.png)
+
+    - <span dir="rtl">از این فرمول برای انتخاب ترتیب شکستن شاخه ها استفاده میشه</span>
+    - <span dir="rtl">هر چقدر یک ویژگی (feature یا input) به ما entropy بهتری بده (نزدیکتر به ۰) به این معنیه که اول بر اساس اون ویژگی بشکنیم بعدش بریم سراغ ویژگی های بعدی</span>
+
+    ![](decision_trees/image4.png)
+
+    <span dir="rtl">تو تصویر بالا جایی که هیچکدوم از حیوون ها گربه نیستن فرمول به ما ۰ داده و همینطور جایی که همه شون گربه هستن هم ۰ داده (فرقی نداره که همه باشن یا هیچکدوم نباشن، همین که purity رعایت بشه کافیه)</span>
+
+    ![](decision_trees/image2.png)
+
+    <span dir="rtl">حالا وقتی میخوایم از فرمول entropy برای decision trees استفاده کنیم، باید entropy هر طرف رو حساب کنیم، میانگینش رو بدست بیاریم (میانگین بر اساس تعداد دیتاهای هر سمت) و آخرسر نتیجه رو از entropy اولیه دیتا ست کم کنیم، به این فرمول میگن فرمول information gain که هرچقدر حاصل فرمول information gain بیشتر باشه یعنی گزینه بهتریه. (تو تصویر چون information gain سمت چپی بیشتره پس بر اساس اون دیتا مون رو میشکنیم)</span>
+
+    <span dir="rtl">برای فیچر هایی که یک مقدار ثابت ندارن (مثلا وزن) با استفاده از تکنیک تصویر زیر اون هارو به حالت True و False ای تغییر میدیم:</span>
+
+    ![](decision_trees/image5.png)
 
 ## Example
 
