@@ -28,7 +28,7 @@ There are several types of regularization, including:
         To keep gradient descent from bouncing around the optimum at the end when using lasso regression, you need to gradually reduce the learning rate during training.
         It will still bounce around the optimum, but the steps will get smaller and smaller, so it will converge.
 
-=== "L2 Ridge"
+=== "L2 Ridge *"
 
     L2 regularization (Ridge) (Weight Decay), is a technique used to prevent overfitting in machine learning models.
     It works by adding a penalty term to the loss function, which is proportional to the square of the model's weights.
@@ -110,9 +110,6 @@ There are several types of regularization, including:
 
 === "L1 LASSO"
 
-    LASSO aids feature selection for house price prediction.
-    Given a dataset (e.g., bedrooms, lot size, year built, prices), LASSO identifies key features while fitting a linear model, enabling price forecasting for new houses.
-
     ```python
     from sklearn.linear_model import LogisticRegression
 
@@ -123,22 +120,29 @@ There are several types of regularization, including:
 
 === "L2 Ridge"
 
-    Ridge helps prevent overfitting in house price prediction.
-    Given a dataset (e.g., bedrooms, lot size, year built, prices), Ridge applies L2 regularization, ensuring stable coefficients while fitting a linear model for price forecasting.
-
     ```python
     from sklearn.linear_model import Ridge
 
-    # Train Ridge regression with L2 penalty
     model = Ridge(alpha=1.0)
     model.fit(X, y)
     ```
 
-## L1 Vs L2
+=== "Elastic Net"
 
-Both LASSO and Ridge prevent overfitting by penalizing coefficients but differ in approach.
+    ```python
+    from sklearn.linear_model import ElasticNet
 
-- **Ridge Regression** adds an SSE penalty proportional to the square of coefficients, shrinking them but **not setting them to zero**. It's useful for reducing the impact of irrelevant features while keeping all.
-- **LASSO** penalizes the absolute value of coefficients, with high regularization setting some exactly **to zero**. This makes LASSO useful for **feature selection**.
-- **LASSO is better** when few features matter, creating a simpler model.
-- **Ridge is better** when most features are relevant, preserving them but reducing their impact.
+    model = ElasticNet(alpha=0.1, l1_ratio=0.5)
+    model.fit(X, y)
+    ```
+
+    !!! info
+
+        `l1_ratio` corresponds to the mix ratio $r$
+
+## Vs
+
+- Regularization is generally recommended, even in small amounts, to improve model generalization.
+- Ridge regression serves as a reliable default choice for most cases.
+- Lasso or Elastic Net are preferable when only a few features are expected to be relevant, as they tend to reduce the weights of irrelevant features to zero.
+- Elastic Net is generally favored over Lasso, since Lasso may behave unpredictably when the number of features exceeds the number of training instances or when features are highly correlated.
