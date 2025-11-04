@@ -15,9 +15,9 @@ Choosing the right loss function is crucial for effectively optimizing your mode
 
 Popular functions:
 
-| Loss Function      | Typical Use Case                      | Notes                                                                 |
-| ------------------ | ------------------------------------- | --------------------------------------------------------------------- |
-| MSE                | Regression                            | Sensitive to outliers due to squaring                                 |
-| Log Loss           | Binary Classification                 | Optimized for probabilistic models and binary outcomes                |
-| Distortion         | Signal Processing/Compression Quality | Measures fidelity or degradation between inputs and outputs           |
-| Cross-Entropy Loss | Multi-Class Classification            | Focuses on probability distributions (often used with softmax output) |
+| Loss Function | Typical Use Case                      | Notes                                                                 |
+| ------------- | ------------------------------------- | --------------------------------------------------------------------- |
+| MSE           | Regression                            | Sensitive to outliers due to squaring                                 |
+| Log Loss      | Binary Classification                 | Optimized for probabilistic models and binary outcomes                |
+| Distortion    | Signal Processing/Compression Quality | Measures fidelity or degradation between inputs and outputs           |
+| Cross-Entropy | Multi-Class Classification            | Focuses on probability distributions (often used with softmax output) |

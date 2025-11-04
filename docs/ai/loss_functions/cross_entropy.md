@@ -1,4 +1,4 @@
-# Cross-Entropy Loss [Multi-Class Classification]
+# Cross-Entropy [Multi-Class Classification]
 
 ## Description
 
@@ -13,7 +13,7 @@
 ## Formula
 
 $$
-\text{Cross-Entropy Loss} = - \frac{1}{N} \sum_{i=1}^N \sum_{c=1}^C y_{i,c} \log(\hat{y}_{i,c})
+\text{Cross-Entropy} = - \frac{1}{N} \sum_{i=1}^N \sum_{c=1}^C y_{i,c} \log(\hat{y}_{i,c})
 $$
 
 - $C$ is the number of classes
