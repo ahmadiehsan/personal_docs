@@ -130,7 +130,23 @@ This can be done by using techniques such as:
 
 ## Example
 
-=== "Bagging"
+=== "Bagging 1"
+
+    ```python
+    from sklearn.ensemble import BaggingClassifier
+    from sklearn.tree import DecisionTreeClassifier
+
+    bag_clf = BaggingClassifier(
+        DecisionTreeClassifier(),
+        n_estimators=500,
+        max_samples=100,
+        n_jobs=-1,
+        random_state=42
+    )
+    bag_clf.fit(X_train, y_train)  # Soft voting
+    ```
+
+=== "Bagging 2"
 
     ```python
     from sklearn.datasets import make_moons
