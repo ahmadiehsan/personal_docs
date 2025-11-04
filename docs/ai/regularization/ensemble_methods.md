@@ -149,14 +149,7 @@ This can be done by using techniques such as:
 === "Bagging 2"
 
     ```python
-    from sklearn.datasets import make_moons
-    from sklearn.ensemble import RandomForestClassifier, VotingClassifier
-    from sklearn.linear_model import LogisticRegression
-    from sklearn.model_selection import train_test_split
-    from sklearn.svm import SVC
-
-    X, y = make_moons(n_samples=500, noise=0.30, random_state=42)  # Load sample data
-    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
+    from sklearn.ensemble import VotingClassifier
 
     voting_clf = VotingClassifier(
         estimators=[
@@ -166,4 +159,35 @@ This can be done by using techniques such as:
         ]
     )
     voting_clf.fit(X_train, y_train)  # Hard voting
+    ```
+
+=== "Stacking"
+
+    ```python
+    from sklearn.ensemble import StackingClassifier
+
+    stacking_clf = StackingClassifier(
+        estimators=[
+            ("lr", LogisticRegression(random_state=42)),
+            ("rf", RandomForestClassifier(random_state=42)),
+            ("svc", SVC(probability=True, random_state=42))
+        ],
+        final_estimator=RandomForestClassifier(random_state=43),
+        cv=5  # Number of cross-validation folds
+    )
+    stacking_clf.fit(X_train, y_train)
+    ```
+
+=== "Gradient Boosting"
+
+    ```python
+    from sklearn.ensemble import GradientBoostingRegressor
+
+    gbrt = GradientBoostingRegressor(
+        max_depth=2,
+        n_estimators=3,
+        learning_rate=1.0,
+        random_state=42
+    )
+    gbrt.fit(X, y)
     ```
