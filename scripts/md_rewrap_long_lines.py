@@ -44,14 +44,14 @@ class Command:
         is_inside_block = False
 
         for line in lines:
-            if is_inside_block:
-                output_lines.append(line)
-                continue
-
             if line.strip().startswith(self._md_blocks):
                 self._flush_paragraph(paragraph, output_lines)
                 output_lines.append(line)
                 is_inside_block = not is_inside_block
+                continue
+
+            if is_inside_block:
+                output_lines.append(line)
                 continue
 
             if self._is_text_line(line):
