@@ -47,15 +47,47 @@ The tree can be explained by two entities, namely decision nodes, and leaves.
     J(k, t_k) = \frac{m_{\text{left}}}{m} G_{\text{left}} + \frac{m_{\text{right}}}{m} G_{\text{right}}
     $$
 
-    - $G_{\text{left/right}}$ measures the impurity of the left/right subset
-    - $m_{\text{left/right}}$ is the number of instances in the left/right subset
-    - $m = m_{\text{left}} + m_{\text{right}}$
+    - $G_{\text{left/right}}$: Measures the impurity of the left/right subset
+    - $m_{\text{left/right}}$: Number of instances in the left/right subset
+    - $m$: $m_{\text{left}} + m_{\text{right}}$
 
-    Once the CART algorithm has successfully split the training set in two, it splits the subsets using the same logic, then the sub-subsets, and so on, recursively. It stops recursing once it reaches the maximum depth, or if it cannot find a split that will reduce impurity.
+    Once the CART algorithm has successfully split the training set in two, it splits the subsets using the same logic, then the sub-subsets, and so on, recursively.
+    It stops recursing once it reaches the maximum depth, or if it cannot find a split that will reduce impurity.
 
     !!! warning
 
         The CART algorithm is a greedy method that makes the best split at each level without considering future consequences. This approach produces a good, but not guaranteed optimal, solution.
+
+=== "Impurity Measure (Gini)"
+
+    A node's Gini value represents its Gini impurity, which measures how mixed the classes are within that node.
+    A node is considered pure (Gini = 0) when all the data points it contains belong to the same class.
+    For instance, if a node includes only samples from one category, its impurity is zero.
+    In contrast, nodes that contain samples from multiple categories are impure, having higher Gini values.
+
+    $$
+    G_i = 1 - \sum_{k=1}^{n} p_{i,k}^2
+    $$
+
+    - $G_i$: Gini impurity of the $i$-th node
+    - $p_{i,k}$: Ratio of instances of class $k$ among the training samples in the $i$-th node
+    - $n$: Total number of classes
+
+=== "Impurity Measure (Entropy)"
+
+    The concept of entropy originated in thermodynamics as a measure of molecular disorder: entropy approaches zero when molecules are still and well ordered.
+    Entropy later spread to a wide variety of domains, including in Shannon's information theory, where it measures the average information content of a message.
+    Entropy is zero when all messages are identical.
+    In machine learning, entropy is frequently used as an impurity measure: a set's entropy is zero when it contains instances of only one class.
+
+    $$
+    G_i = - \sum_{k=1}^{n} p_{i,k} \log_2(p_{i,k})
+    $$
+
+    - $G_i$: Entropy of the $i$-th node
+    - $p_{i,k}$: Ratio of instances of class $k$ among the training samples in the $i$-th node
+    - $n$: total number of classes
+    - The logarithm is base 2 (representing information measured in bits)
 
 === "Information Gain Technique"
 
