@@ -14,7 +14,9 @@ This can be done by using techniques such as:
 
 === "Bagging"
 
-    Bagging (Bootstrap Aggregating) is an ensemble method that reduces variance and improves generalization by combining multiple models trained on different bootstrap samples.
+    Bagging (Bootstrap Aggregating) trains multiple models (e.g., decision trees) **in parallel** on different random subsets (bootstrap samples) of the training data.
+    The final prediction is made by **averaging** (for regression) or **voting** (for classification) the results from all models.
+    Random Forest is a popular example.
 
     Advantages:
 
@@ -25,49 +27,43 @@ This can be done by using techniques such as:
     Disadvantages:
 
     - **Computationally expensive** due to multiple models.
-    - **Can overfit** if models are too complex.
     - **Less effective** if base models are highly correlated.
+
+    !!! info
+
+        **Hard voting** is like a basic election: every model gets one vote (e.g., "Class A" or "Class B"), and the class that gets the **most votes** wins. It only cares about the final decision.
+
+        **Soft voting** is about *confidence*: each model provides a probability (e.g., "I'm 90% sure it's A," "I'm 60% sure it's B"). We **average the probabilities** from all models, and the class with the highest average confidence wins.
+
+        Soft voting is usually preferred because it gives more weight to models that are highly confident in their predictions, rather than treating every model's vote as equal.
 
 === "Boosting"
 
-    Boosting is an **ensemble learning** technique that **iteratively improves weak classifiers** by focusing on misclassified examples.
-    Unlike bagging, it adjusts **training example weights** to enhance accuracy.
+    Boosting trains models **sequentially**, where each new model tries to correct the errors made by the previous ones.
+    It focuses on "hard" examples that were misclassified.
+    Models are weighted based on their performance, and their predictions are combined for the final result.
 
     Advantages:
 
     - **Boosts weak classifiers' accuracy** significantly.
-    - **Easy to implement & widely applicable**.
     - **Handles noisy data** & reduces overfitting.
 
     Disadvantages:
 
     - **Sensitive to outliers** (risk of overfitting).
     - **Computationally expensive** for large datasets.
-    - **Hard to interpret**, as it combines multiple classifiers.
 
 === "Stacking"
 
-    Stacking is a popular ensemble learning technique that improves predictive performance by combining the outputs of multiple base models.
-    It does this by training a higher-level model on the predictions of these base models.
+    Stacking trains multiple different types of models (called "level-0" or "base" models) on the same data.
+    Then, a new "level-1" model (or "meta-model") is trained using the **predictions** of the base models as its input features.
+    It learns how to best combine the outputs of the different base models.
 
 === "Gradient Boosting"
 
-    Gradient boosting is an ensemble model for **classification** and **regression**.
-    It starts with a **weak classifier** (e.g., a simple tree) and improves it iteratively by **focusing on errors** from previous steps.
-
-    Advantages:
-
-    - **High accuracy**
-    - Supports **regression & classification**
-    - Handles **missing data & outliers**
-    - Works with **various loss functions**
-    - Effective for **high-dimensional data**
-
-    Disadvantages:
-
-    - Prone to **overfitting** with too many trees
-    - **Computationally expensive** for large datasets
-    - Requires careful **hyperparameter tuning** (trees, learning rate, depth)
+    Gradient boosting is a specific type of boosting.
+    It builds models sequentially, like other boosting methods, but each new model is specifically trained to predict the **residual errors** (the difference between the true value and the current prediction) of the ensemble so far.
+    It iteratively minimizes a loss function by fitting models along the gradient of that loss.
 
 ## Workflow
 
@@ -131,3 +127,27 @@ This can be done by using techniques such as:
     $$
     Y_{\text{ensemble}} = \frac{1}{m} \sum_{i=1}^{m} y_i
     $$
+
+## Example
+
+=== "Bagging"
+
+    ```python
+    from sklearn.datasets import make_moons
+    from sklearn.ensemble import RandomForestClassifier, VotingClassifier
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.model_selection import train_test_split
+    from sklearn.svm import SVC
+
+    X, y = make_moons(n_samples=500, noise=0.30, random_state=42)  # Load sample data
+    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
+
+    voting_clf = VotingClassifier(
+        estimators=[
+            ("lr", LogisticRegression(random_state=42)),
+            ("rf", RandomForestClassifier(random_state=42)),
+            ("svc", SVC(random_state=42))
+        ]
+    )
+    voting_clf.fit(X_train, y_train)  # Hard voting
+    ```
