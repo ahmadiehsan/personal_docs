@@ -15,26 +15,31 @@ There are several types of regularization, including:
 
 === "L1 LASSO"
 
-    L1 regularization (LASSO - Least Absolute Shrinkage and Selection Operator) is a **linear regression technique** used for **feature selection**.
-    It adds a **penalty term** to shrink less important coefficients to zero, effectively removing them.
+    L1 regularization (LASSO - Least Absolute Shrinkage and Selection Operator) is a linear regression technique used for feature selection.
+    It adds a penalty term to **shrink less important coefficients to zero, effectively removing them**.
 
-    LASSO is **especially useful for high-dimensional data**, where features outnumber samples, helping identify key predictors.
+    LASSO is especially useful for high-dimensional data, where features outnumber samples, helping identify key predictors.
 
-    - **Advantages**: Handles correlated features, performs feature selection and regression simultaneously.
-    - **Limitations**: May select only one feature from correlated groups and struggle with very high-dimensional data.
+    - Advantages: Handles correlated features, performs feature selection and regression simultaneously.
+    - Limitations: May select only one feature from correlated groups and struggle with very high-dimensional data.
+
+    !!! info
+
+        To keep gradient descent from bouncing around the optimum at the end when using lasso regression, you need to gradually reduce the learning rate during training.
+        It will still bounce around the optimum, but the steps will get smaller and smaller, so it will converge.
 
 === "L2 Ridge"
 
     L2 regularization (Ridge) (Weight Decay), is a technique used to prevent overfitting in machine learning models.
     It works by adding a penalty term to the loss function, which is proportional to the square of the model's weights.
 
-    The penalty term discourages the model from assigning large weights to individual features, leading to a simpler and more generalized model.
+    **The penalty term discourages the model from assigning large weights to individual features**, leading to a simpler and more generalized model.
     By minimizing the combined loss function, which includes both the original loss and the penalty term, the model finds a balance between fitting the training data well and keeping the weights small, ultimately improving its ability to generalize to new, unseen data.
 
 === "Elastic Net"
 
     Elastic net regression is a middle ground between ridge regression and lasso regression.
-    The regularization term is a weighted sum of both ridge and lasso's regularization terms, and you can control the mix ratio $r$.
+    **The regularization term is a weighted sum of both ridge and lasso's regularization terms**, and you can control the mix ratio $r$.
     When $r = 0$, elastic net is equivalent to ridge regression, and when $r = 1$, it is equivalent to lasso regression.
 
 ## Formula
