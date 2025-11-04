@@ -34,7 +34,7 @@ The tree can be explained by two entities, namely decision nodes, and leaves.
 
 ## Workflow
 
-=== "CART Algorithm"
+=== "1.1. CART Algorithm"
 
     Classification and Regression Tree (CART) algorithm, trains decision trees (also called "growing" trees).
     The algorithm works by first splitting the training set into two subsets using a single feature $k$ and a threshold $t_k$.
@@ -58,7 +58,7 @@ The tree can be explained by two entities, namely decision nodes, and leaves.
 
         The CART algorithm is a greedy method that makes the best split at each level without considering future consequences. This approach produces a good, but not guaranteed optimal, solution.
 
-=== "Impurity Measure (Gini)"
+=== "1.2. Gini"
 
     A node's Gini value represents its Gini impurity, which measures how mixed the classes are within that node.
     A node is considered pure (Gini = 0) when all the data points it contains belong to the same class.
@@ -73,23 +73,7 @@ The tree can be explained by two entities, namely decision nodes, and leaves.
     - $p_{i,k}$: Ratio of instances of class $k$ among the training samples in the $i$-th node
     - $n$: Total number of classes
 
-=== "Impurity Measure (Entropy)"
-
-    The concept of entropy originated in thermodynamics as a measure of molecular disorder: entropy approaches zero when molecules are still and well ordered.
-    Entropy later spread to a wide variety of domains, including in Shannon's information theory, where it measures the average information content of a message.
-    Entropy is zero when all messages are identical.
-    In machine learning, entropy is frequently used as an impurity measure: a set's entropy is zero when it contains instances of only one class.
-
-    $$
-    G_i = - \sum_{k=1}^{n} p_{i,k} \log_2(p_{i,k})
-    $$
-
-    - $G_i$: Entropy of the $i$-th node
-    - $p_{i,k}$: Ratio of instances of class $k$ among the training samples in the $i$-th node
-    - $n$: total number of classes
-    - The logarithm is base 2 (representing information measured in bits)
-
-=== "Information Gain Technique"
+=== "2.1. Information Gain"
 
     ![](decision_trees/image1.png)
 
@@ -107,6 +91,32 @@ The tree can be explained by two entities, namely decision nodes, and leaves.
     <span dir="rtl">برای فیچر هایی که یک مقدار ثابت ندارن (مثلا وزن) با استفاده از تکنیک تصویر زیر اون هارو به حالت True و False ای تغییر میدیم:</span>
 
     ![](decision_trees/image5.png)
+
+=== "2.2. Entropy"
+
+    The concept of entropy originated in thermodynamics as a measure of molecular disorder: entropy approaches zero when molecules are still and well ordered.
+    Entropy later spread to a wide variety of domains, including in Shannon's information theory, where it measures the average information content of a message.
+    Entropy is zero when all messages are identical.
+    In machine learning, entropy is frequently used as an impurity measure: a set's entropy is zero when it contains instances of only one class.
+
+    $$
+    H_i = - \sum_{k=1}^{n} p_{i,k} \log_2(p_{i,k})
+    $$
+
+    - $H_i$: Entropy of the $i$-th node
+    - $p_{i,k}$: Ratio of instances of class $k$ among the training samples in the $i$-th node
+    - $n$: total number of classes
+    - The logarithm is base 2 (representing information measured in bits)
+
+=== "VS"
+
+    | Aspect               | CART                                                              | Information Gain                                                                          |
+    | -------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+    | **Impurity measure** | Gini or MSE                                                       | Entropy                                                                                   |
+    | **Splitting style**  | Binary only                                                       | Binary or multiway                                                                        |
+    | **Used in**          | `sklearn.DecisionTreeClassifier`, `sklearn.DecisionTreeRegressor` | ID3, C4.5, C5.0                                                                           |
+    | **Computation**      | Slightly faster                                                   | Slightly slower                                                                           |
+    | **Bias**             | Tends to prefer larger partitions with distinct classes           | Tends to prefer attributes with many distinct values (can be corrected with *Gain Ratio*) |
 
 ## Example
 
