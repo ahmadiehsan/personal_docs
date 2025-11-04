@@ -1,4 +1,4 @@
-# UMAP * [Manifold]
+# UMAP * [Manifold] [Unsup]
 
 ## Description
 

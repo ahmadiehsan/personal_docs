@@ -1,4 +1,4 @@
-# PCA * [Linear]
+# PCA * [Linear] [Unsup]
 
 ## Description
 

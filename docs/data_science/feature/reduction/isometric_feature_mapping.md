@@ -1,4 +1,4 @@
-# Isomap [Manifold]
+# Isomap [Manifold] [Unsup]
 
 ## Description
 

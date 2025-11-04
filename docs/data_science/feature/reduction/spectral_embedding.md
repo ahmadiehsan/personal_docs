@@ -1,4 +1,4 @@
-# Spectral Embedding (Laplacian Eigenmaps) [Manifold]
+# Spectral Embedding (Laplacian Eigenmaps) [Manifold] [Unsup]
 
 ## Description
 

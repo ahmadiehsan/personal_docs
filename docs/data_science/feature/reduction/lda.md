@@ -1,4 +1,4 @@
-# LDA [Linear]
+# LDA [Linear] [Sup]
 
 ## Description
 
