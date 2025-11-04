@@ -20,7 +20,7 @@ It's also important to consider the interpretability of the selected principal c
 
 ## Workflow
 
-=== "Detail"
+=== "Description"
 
     Principal components are new variables that are constructed as linear combinations or mixtures of the initial variables.
     These combinations are done in such a way that the new variables (i.e., principal components) are uncorrelated and most of the information within the initial variables is squeezed or compressed into the first components.
