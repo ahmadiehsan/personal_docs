@@ -1,4 +1,4 @@
-# T-SNE [Manifold]
+# T-SNE [Manifold] [Unsup]
 
 ## Description
 

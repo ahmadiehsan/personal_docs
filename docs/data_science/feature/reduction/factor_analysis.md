@@ -1,4 +1,4 @@
-# Factor Analysis [Linear]
+# Factor Analysis [Linear] [Unsup]
 
 ## Description
 

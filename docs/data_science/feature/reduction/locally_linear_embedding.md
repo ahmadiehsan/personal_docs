@@ -1,4 +1,4 @@
-# LLE [Manifold]
+# LLE [Manifold] [Unsup]
 
 ## Description
 
