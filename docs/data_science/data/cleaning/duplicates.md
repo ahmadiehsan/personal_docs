@@ -27,7 +27,8 @@ Eliminating duplicate records is a common preprocessing step to ensure data qual
 
 === "Shingling"
 
-    Breaks text into overlapping sequences (shingles) to represent documents. The sets of shingles are compared to measure similarity and detect near-duplicates in text data.
+    Breaks text into overlapping sequences (shingles) to represent documents.
+    The sets of shingles are compared to measure similarity and detect near-duplicates in text data.
 
     ```text
     Scenario: You want to compare the similarity of text documents:
@@ -50,7 +51,8 @@ Eliminating duplicate records is a common preprocessing step to ensure data qual
 
 === "Locality Sensitive Hashing (LSH)"
 
-    Uses special hash functions to group similar records into buckets, so only records within the same bucket are compared in detail. This technique is efficient for large datasets and scalable near-duplicate detection.
+    Uses special hash functions to group similar records into buckets, so only records within the same bucket are compared in detail.
+    This technique is efficient for large datasets and scalable near-duplicate detection.
 
     ```python
     from sklearn.feature_extraction.text import TfidfVectorizer

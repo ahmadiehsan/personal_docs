@@ -56,8 +56,7 @@ foreach (Student item in marks) {
 
 === "Pop"
 
-    Is used to remove and return the object at the top of the stack.
-    It modifies the stack by removing the top-most element.
+    Is used to remove and return the object at the top of the stack. It modifies the stack by removing the top-most element.
 
     - Will remove the returned element.
     - If the stack is empty, it throws an `InvalidOperationException`.

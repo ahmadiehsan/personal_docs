@@ -20,5 +20,5 @@ $$
 
 ## Example
 
-If the first relevant document for a query is retrieved at rank 3, the reciprocal
-rank is $1/3$. MRR averages these reciprocal ranks across multiple queries.
+If the first relevant document for a query is retrieved at rank 3, the reciprocal rank is $1/3$.
+MRR averages these reciprocal ranks across multiple queries.

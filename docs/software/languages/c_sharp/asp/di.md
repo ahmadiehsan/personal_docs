@@ -32,7 +32,8 @@ Then with one of the below approaches we can inject our class into the applicati
 
     A hosted service is more than just a singleton service.
 
-    The runtime "knows" about it, can tell it to start by calling StartAsync or stop by calling StopAsync() whenever eg the application pool is recycled. The runtime can wait for the hosted service to finish before the web application itself terminates.
+    The runtime "knows" about it, can tell it to start by calling StartAsync or stop by calling StopAsync() whenever eg the application pool is recycled.
+    The runtime can wait for the hosted service to finish before the web application itself terminates.
 
     - One huge difference is that AddSingleton() is lazy while AddHostedService() is eager.
     - A service added with AddSingleton() will be instantiated the first time it is injected into a class constructor. This is fine for most services, but if it really is a background service you want, you probably want it to start right away.

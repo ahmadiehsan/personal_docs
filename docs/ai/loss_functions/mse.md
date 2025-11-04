@@ -52,7 +52,9 @@ The loss is the mean overseen data of the squared differences between true and p
 
 === "2. Derivative With Respect to $\vec{w}$"
 
-    We use the chain rule. Let $u = \vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)}$. We are finding $\frac{\partial}{\partial \vec{w}} [u^2]$.
+    We use the chain rule.
+    Let $u = \vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)}$.
+    We are finding $\frac{\partial}{\partial \vec{w}} [u^2]$.
 
     $$
     \frac{\partial J}{\partial \vec{w}} = \frac{1}{2m} \sum_{i=1}^{m} \frac{\partial}{\partial \vec{w}} \left[ (\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)})^2 \right]
@@ -82,7 +84,9 @@ The loss is the mean overseen data of the squared differences between true and p
 
 === "3. Derivative with respect to $b$"
 
-    We use the same chain rule setup. Let $u = \vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)}$. We are finding $\frac{\partial}{\partial b} [u^2]$.
+    We use the same chain rule setup.
+    Let $u = \vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)}$.
+    We are finding $\frac{\partial}{\partial b} [u^2]$.
 
     $$
     \frac{\partial J}{\partial b} = \frac{1}{2m} \sum_{i=1}^{m} \frac{\partial}{\partial b} \left[ (\vec{w} \cdot \vec{x}^{(i)} + b - y^{(i)})^2 \right]
