@@ -2,18 +2,18 @@
 
 ## Description
 
-T-Distributed Stochastic Neighbor Embedding (T-SNE) computes the probability that pairs of data points in the high-dimensional space are related and then chooses a low-dimensional embedding that produces a similar distribution.
+T-Distributed Stochastic Neighbor Embedding (T-SNE) reduces dimensionality while trying to keep similar instances close and dissimilar instances apart.
 
 The basic idea behind t-SNE is to preserve the pairwise similarities of data points in a low-dimensional space, as opposed to preserving the distances between them.
 In other words, it tries to retain the local structure of the data while discarding the global structure.
-This can be useful in situations where the high-dimensional data is difficult to visualize, but there may be meaningful patterns and relationships among the data points.
 
-t-SNE is a powerful technique for visualizing high-dimensional data by reducing it to a low-dimensional space.
-However, it is not typically used for feature selection as its primary purpose is to create visualizations of complex datasets.
+!!! info
 
-t-SNE can be used to help identify clusters of data points that share similar features, which may be useful in identifying groups of features that are important for a particular task.
+    t-SNE can be used to help identify clusters of data points that share similar features, which may be useful in identifying groups of features that are important for a particular task.
 
-It's worth noting that **t-SNE is primarily a visualization tool and should not be used as the sole method for feature selection.** Instead, it can be used in conjunction with other techniques, such as LDA or PCA, to gain a more complete understanding of the underlying structure of your data.
+!!! warning
+
+    **t-SNE is primarily a visualization tool and should not be used as the sole method for feature selection.** Instead, it can be used in conjunction with other techniques, such as LDA or PCA, to gain a more complete understanding of the underlying structure of your data.
 
 ## Workflow
 
@@ -29,7 +29,9 @@ The t-distribution has heavier tails than the Gaussian distribution, which helps
 
 Suppose you have a dataset of customer demographics and purchase history, and you want to identify groups of customers that are similar based on their purchasing behavior.
 You could use t-SNE to reduce the high-dimensional feature space to two dimensions, and then plot the resulting data points on a scatter plot.
+
 By examining the plot, you might be able to identify clusters of customers with similar purchasing behavior, which could then inform your feature selection process.
+
 Here's a sample t-SNE for the MNIST dataset:
 
-<img src="image1.jpg" style="width:3.7583in" />
+<img src="image1.jpg" style="width:4in" />
