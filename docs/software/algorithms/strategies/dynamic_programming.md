@@ -135,7 +135,7 @@ Dynamic programming is commonly used to solve optimization problems, which not o
             dp[i] = dp[i - 1] + dp[i - 2]
         return dp[n]
 
-    print(fibonacci(10))  # Output: 55
+    print(fibonacci(10))  # 55
     ```
 
 === "Fibonacci (Simple)"
@@ -150,7 +150,7 @@ Dynamic programming is commonly used to solve optimization problems, which not o
             a, b = b, a + b
         return b
 
-    print(fibonacci(10))  # Output: 55
+    print(fibonacci(10))  # 55
     ```
 
     !!! info

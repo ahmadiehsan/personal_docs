@@ -185,5 +185,5 @@ There are two common efficiency optimization methods.
         memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)
         return memo[n]
 
-    print(fibonacci(10))  # Output: 55
+    print(fibonacci(10))  # 55
     ```
