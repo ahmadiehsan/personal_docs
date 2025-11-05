@@ -1,9 +1,5 @@
 # Anomaly [Unsup]
 
-## Specifications
-
-- **Cost Function**: Distortion
-
 ## Description
 
 Anomaly detection is any process that finds the outliers of a dataset; those items that don't belong.

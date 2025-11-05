@@ -1,4 +1,4 @@
-# KNN [Sup] [Multilabel]
+# KNN * [Sup] [Multilabel]
 
 ## Description
 
@@ -16,9 +16,9 @@ For example in the above image, the big red circle at first was unclassified and
     - Image tagging (an image can have multiple objects)
     - Gene function prediction (a gene can have multiple functions)
 
-!!! info
+## Workflow
 
-    Best Number For K:
+=== "Best Number For K"
 
     - There is no physical or biological way to determine the best value for "K", so you may have to try out a few values before settling on one. Do this by pretending part of the training data is "unknown".
     - Low values for K (like K=1 or K=2) can be noisy and subject to the effects of outliers.

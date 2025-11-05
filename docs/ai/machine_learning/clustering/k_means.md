@@ -1,10 +1,30 @@
-# K-Means [Unsup]
+# K-Means * [Unsup] [Centroid-Based]
 
 ## Description
 
 k-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean, serving as a prototype of the cluster.
 
-<span dir="rtl">نحوه عملکرد کلیش این مدلیه که دو یا چند centroid اولیه (k عدد) رو تو نمودار انتخاب میکنه، فاصله تمامی نقاط موجود رو با تک تک این centroid ها اندازه میگیره و به هر کدوم که نزدیک تر بود به اون اختصاصش میده، حالا میانگین همه اونایی که به یه centroid اختصاص پیدا کردن رو میگیره و اون centroid رو به اون نقطه میانگین جا به جا میکنه، این کارو برای همه centroid ها تکرار میکنه، بعدش با توجه به موقعیت جدید centroid ها، دوباره نقاط رو اختصاص میده و الی آخر، انقدر این کارو تکرار میکنه تا دیگه centroid ها جا به جا نشن.</span>
+## Workflow
+
+=== "Steps"
+
+    1. It picks two or more starting centroids (k of them) on the chart, measures the distance from every point to each centroid, and assigns each point to the closest centroid.
+    2. Then, it finds the average position of all points assigned to each centroid and moves the centroid to that average spot. It repeats this for all centroids.
+    3. After updating the centroids, it reassigns the points based on the new positions and keeps repeating these steps until the centroids stop moving.
+
+=== "Best Number For K"
+
+    How should I know which number is the best for the K (number of clusters)?
+
+    We will select multiple numbers for it and each time we will check how the variation within each cluster changes.
+
+    <img src="image1.jpg" style="width:4in" />
+
+    Then by creating the below diagram we can easily find the best point (the best number for K).
+
+    <img src="image3.jpg" style="width:4in" />
+
+    Importantly, every time we increase the number of K, the variation in each cluster decreases, but it does not mean that we should continue this approach, each time we should check whether the reduction of variation was reasonable or just decreased a little.
 
 ## Formula
 
@@ -17,41 +37,44 @@ k-means clustering is a method of vector quantization, originally from signal pr
 - <span dir="rtl">علامت $\mu$ مشخصات موقعیت centroid ها هستن</span>
 - <span dir="rtl">چون ممکنه این سیستم تو لوکال مینیموم هاش گیر کنه، یعنی یه حالت دسته بندی ای پیش بیاد که تعداد زیادی از نقاط به یه centroid وصلن اما یه تعداد کمی فقط به یه centroid دیگه رسیده، لازمه این الگوریتم رو بین 50 تا 1000 بار اجرا کنیم و آخر سر اونی که cost function با عدد کمتری داشت رو انتخاب کنیم</span>
 
-## Best Number For The K
-
-How should I know which number is the best for the K (number of clusters)?
-
-We will select multiple numbers for it and each time we will check how the variation within each cluster changes.
-
-<img src="image1.jpg" style="width:3.4651in" />
-
-Then by creating the below diagram we can easily find the best point (the best number for K).
-
-<img src="image3.jpg" style="width:3.33326in" />
-
-Importantly, every time we increase the number of K, the variation in each cluster decreases, but it does not mean that we should continue this approach, each time we should check whether the reduction of variation was reasonable or just decreased a little.
-
 ## Example
 
-```python
-import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
+=== "Standard"
 
-# Scale features
-X_scaled = StandardScaler().fit_transform(X)
+    ```python
+    import matplotlib.pyplot as plt
+    from sklearn.cluster import KMeans
+    from sklearn.preprocessing import StandardScaler
 
-# Use elbow method to find optimal k
-distortions = []
-K_range = range(1, 10)
-for k in K_range:
-    kmeans = KMeans(n_clusters=k, random_state=42)
-    kmeans.fit(X_scaled)
-    print(f"Labels for k={k}: {kmeans.labels_}")
-    distortions.append(kmeans.inertia_)
+    # Scale features
+    X_scaled = StandardScaler().fit_transform(X)
 
-# Plot elbow curve
-plt.plot(K_range, distortions)
-plt.xlabel("k")
-plt.ylabel("Distortion")
-plt.title("Elbow Method For Optimal k")
-```
+    # Use elbow method to find optimal k
+    distortions = []
+    K_range = range(1, 10)
+    for k in K_range:
+        kmeans = KMeans(n_clusters=k, random_state=42)
+        kmeans.fit(X_scaled)
+        print(f"Labels for k={k}: {kmeans.labels_}")
+        distortions.append(kmeans.inertia_)
+
+    # Plot elbow curve
+    plt.plot(K_range, distortions)
+    plt.xlabel("k")
+    plt.ylabel("Distortion")
+    plt.title("Elbow Method For Optimal k")
+    ```
+
+=== "Mini-Batch"
+
+    ```python
+    from sklearn.cluster import MiniBatchKMeans
+
+    minibatch_kmeans = MiniBatchKMeans(n_clusters=5, random_state=42)
+    minibatch_kmeans.fit(X)
+    ```
+
+    !!! info
+
+        Instead of using the full dataset at each iteration, the algorithm is capable of using mini-batches, moving the centroids just slightly at each iteration.
+        This speeds up the algorithm and makes it possible to cluster huge datasets that do not fit in memory.

@@ -1,4 +1,4 @@
-# Logistic Regression [Sup] {Multinomial}
+# Logistic Regression * [Sup] {Multinomial}
 
 ## Description
 
