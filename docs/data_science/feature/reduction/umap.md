@@ -1,8 +1,15 @@
-# UMAP * [Manifold] [Unsup]
+# UMAP * [Manifold] [Unsup] [Visualization]
 
 ## Description
 
-Uniform Manifold Approximation and Projection (UMAP) handles nonlinear relationships and structures a bit better than PCA.
+Uniform Manifold Approximation and Projection (UMAP) tries to preserve both the local and global structures.
+
+is another popular dimensionality reduction technique for visualization.
+While t-SNE is better at preserving the local structure, especially clusters, UMAP Moreover, it scales better to large datasets.
+
+!!! warning
+
+    UMAP is primarily a visualization tool and should not be used as the sole method for feature selection.
 
 ## Example
 

@@ -1,8 +1,8 @@
-# T-SNE [Manifold] [Unsup]
+# t-SNE [Manifold] [Unsup] [Visualization]
 
 ## Description
 
-T-Distributed Stochastic Neighbor Embedding (T-SNE) reduces dimensionality while trying to keep similar instances close and dissimilar instances apart.
+T-Distributed Stochastic Neighbor Embedding (t-SNE) reduces dimensionality while trying to keep similar instances close and dissimilar instances apart.
 
 The basic idea behind t-SNE is to preserve the pairwise similarities of data points in a low-dimensional space, as opposed to preserving the distances between them.
 In other words, it tries to retain the local structure of the data while discarding the global structure.
@@ -13,7 +13,7 @@ In other words, it tries to retain the local structure of the data while discard
 
 !!! warning
 
-    **t-SNE is primarily a visualization tool and should not be used as the sole method for feature selection.** Instead, it can be used in conjunction with other techniques, such as LDA or PCA, to gain a more complete understanding of the underlying structure of your data.
+    t-SNE is primarily a visualization tool and should not be used as the sole method for feature selection.
 
 ## Workflow
 
