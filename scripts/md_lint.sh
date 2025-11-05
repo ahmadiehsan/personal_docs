@@ -17,11 +17,11 @@ trap 'restore_tabs "$@"' EXIT
 # Temporarily disable Markdown tabs
 make --no-print-directory script.md_toggle_tabs "$@" -- --mode disable
 
-# Run markdownlint (mdl)
-docker run --rm -v "$(pwd)":/data markdownlint/markdownlint "$@"
-
 # Rewrap long lines
 make --no-print-directory script.md_rewrap_long_lines "$@"
 
 # Detect dangling images
 make --no-print-directory script.md_dangling_images "$@"
+
+# Run markdownlint (mdl)
+docker run --rm -v "$(pwd)":/data markdownlint/markdownlint "$@"
