@@ -1,4 +1,4 @@
-# LLE [Manifold] [Unsup]
+# LLE [Manifold] [Unsup] {HLLE}
 
 ## Description
 
@@ -8,6 +8,16 @@ This approach makes it particularly good at unrolling twisted manifolds, especia
 !!! info
 
     LLE does not scale well so it is mostly for small or medium sized datasets.
+
+## Varieties
+
+=== "Standard"
+
+    Is the standard LLE described earlier.
+
+=== "HLLE"
+
+    Hessian Eigenmapping (HLLE) projects data to a lower dimension while preserving the local neighborhood like LLE but uses the **Hessian operator** to better achieve this result and hence the name.
 
 ## Workflow
 
@@ -58,12 +68,14 @@ This approach makes it particularly good at unrolling twisted manifolds, especia
 
 ## Example
 
-```python
-from sklearn.datasets import make_swiss_roll
-from sklearn.manifold import LocallyLinearEmbedding
+=== "Standard"
 
-X_swiss, _ = make_swiss_roll(n_samples=1000, noise=0.2, random_state=42)  # A 3D dataset shaped like a spiral sheet
+    ```python
+    from sklearn.datasets import make_swiss_roll
+    from sklearn.manifold import LocallyLinearEmbedding
 
-lle = LocallyLinearEmbedding(n_components=2, n_neighbors=10, random_state=42)
-X_unrolled = lle.fit_transform(X_swiss)
-```
+    X_swiss, _ = make_swiss_roll(n_samples=1000, noise=0.2, random_state=42)  # A 3D dataset shaped like a spiral sheet
+
+    lle = LocallyLinearEmbedding(n_components=2, n_neighbors=10, random_state=42)
+    X_unrolled = lle.fit_transform(X_swiss)
+    ```
