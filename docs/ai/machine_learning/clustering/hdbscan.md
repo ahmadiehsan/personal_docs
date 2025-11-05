@@ -9,6 +9,13 @@ Hierarchical Density-Based Spatial Clustering of Applications with Noise (HDBSCA
     As a density-based method, HDBSCAN can also detect outliers in the data, which are data points that do not belong to any cluster.
     These outliers will not be assigned or forced to belong to any cluster.
 
+## Workflow
+
+1. For each instance, the algorithm counts how many instances are located within a small distance $\epsilon$ (epsilon) from it. This region is called the instance's $\epsilon$-neighborhood.
+2. If an instance has at least `min_samples` instances in its $\epsilon$-neighborhood (including itself), then it is considered a core instance. In other words, core instances are those that are located in dense regions.
+3. All instances in the neighborhood of a core instance belong to the same cluster. This neighborhood may include other core instances; therefore, a long sequence of neighboring core instances forms a single cluster.
+4. Any instance that is not a core instance and does not have one in its neighborhood is considered an anomaly.
+
 ## Example
 
 ```python
