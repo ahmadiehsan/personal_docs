@@ -2,10 +2,7 @@
 
 ## Description
 
-Locally Linear Embedding (LLE) is a Nonlinear Dimensionality Reduction (NLDR) technique.
-It is a manifold learning technique that does not rely on projections.
-
-In a nutshell, LLE first determines how each training instance linearly relates to its nearest neighbors, then it looks for a low-dimensional representation of the training set where these local relationships are best preserved.
+Locally Linear Embedding (LLE) first determines how each training instance linearly relates to its nearest neighbors, then it looks for a low-dimensional representation of the training set where these local relationships are best preserved.
 This approach makes it particularly good at unrolling twisted manifolds, especially when there is not too much noise.
 
 !!! info
