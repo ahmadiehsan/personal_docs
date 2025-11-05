@@ -1,4 +1,4 @@
-# t-SNE [Manifold] [Unsup] [Visualization]
+# t-SNE [Manifold] [Unsup]
 
 ## Description
 
@@ -10,10 +10,6 @@ In other words, it tries to retain the local structure of the data while discard
 !!! info
 
     t-SNE can be used to help identify clusters of data points that share similar features, which may be useful in identifying groups of features that are important for a particular task.
-
-!!! warning
-
-    t-SNE is primarily a visualization tool and should not be used as the sole method for feature selection.
 
 ## Workflow
 
