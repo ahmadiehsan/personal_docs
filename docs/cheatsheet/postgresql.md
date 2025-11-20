@@ -84,7 +84,7 @@
 
 ## User
 
-=== "Show all"
+=== "List"
 
     ```text
     \du
@@ -110,7 +110,7 @@
 
 ## Database
 
-=== "Show all"
+=== "List"
 
     ```text
     \l
@@ -142,7 +142,7 @@
 
 ## Tables
 
-=== "Show all"
+=== "List"
 
     ```text
     \dt
