@@ -9,51 +9,51 @@ This enables efficient parallelization and handling of long-range dependencies m
 
 ## Workflow
 
-Encoder Part:
+=== "Encoder Part"
 
-```text
-Token Encodings = (One Hot Encodings . Token Embeddings) + Position Encodings
+    ```text
+    Token Encodings = (One Hot Encodings . Token Embeddings) + Position Encodings
 
-Query = Token Encodings . Query Weights
-Key   = Token Encodings . Key Weights
-Value = Token Encodings . Value Weights
+    Query = Token Encodings . Query Weights
+    Key   = Token Encodings . Key Weights
+    Value = Token Encodings . Value Weights
 
-Token Similarities    = Query . Key
-Self Attention Scores = Tokens Similarities . Value
+    Token Similarities    = Query . Key
+    Self Attention Scores = Tokens Similarities . Value
 
-Encoder Part Output = Self Attention Scores + Token Encodings
-```
+    Encoder Part Output = Self Attention Scores + Token Encodings
+    ```
 
-Decoder Part:
+=== "Decoder Part"
 
-```text
-Token Encodings = (One Hot Encodings . Token Embeddings) + Position Encodings
+    ```text
+    Token Encodings = (One Hot Encodings . Token Embeddings) + Position Encodings
 
-Query = Token Encodings . Query Weights
-Key   = Token Encodings . Key Weights
-Value = Token Encodings . Value Weights
+    Query = Token Encodings . Query Weights
+    Key   = Token Encodings . Key Weights
+    Value = Token Encodings . Value Weights
 
-Token Similarities    = (Query . Key) + Next Tokens Mask
-Self Attention Scores = Tokens Similarities . Value
+    Token Similarities    = (Query . Key) + Next Tokens Mask
+    Self Attention Scores = Tokens Similarities . Value
 
-Decoder Part Output = Self Attention Scores + Token Encodings
-```
+    Decoder Part Output = Self Attention Scores + Token Encodings
+    ```
 
-Encoder-Decoder Part:
+=== "Encoder-Decoder Part"
 
-```text
-Query = Decoder Part Output . Query Weights
-Key   = Encoder Part Output . Key Weights
-Value = Encoder Part Output . Value Weights
+    ```text
+    Query = Decoder Part Output . Query Weights
+    Key   = Encoder Part Output . Key Weights
+    Value = Encoder Part Output . Value Weights
 
-Token Similarities               = Query . Key
-Encoder-Decoder Attention Scores = Tokens Similarities . Value
+    Token Similarities               = Query . Key
+    Encoder-Decoder Attention Scores = Tokens Similarities . Value
 
-Encoder-Decoder Part Output = Encoder-Decoder Attention Scores + Decoder Part Output
+    Encoder-Decoder Part Output = Encoder-Decoder Attention Scores + Decoder Part Output
 
-Fully Connected Layer Output = (Encoder-Decoder Part Output . Fully Connected Layer Weights) + Fully Connected Layer Bias
-Next Token Probabilities     = SoftMax(Fully Connected Layer Output)
-```
+    Fully Connected Layer Output = (Encoder-Decoder Part Output . Fully Connected Layer Weights) + Fully Connected Layer Bias
+    Next Token Probabilities     = SoftMax(Fully Connected Layer Output)
+    ```
 
 ## Varieties
 
@@ -77,37 +77,6 @@ Next Token Probabilities     = SoftMax(Fully Connected Layer Output)
     - **Efficient Hierarchical Modeling**: Excels at tasks requiring deep compositional reasoning, such as parsing, code analysis, and language understanding, by recursively combining information at multiple levels of abstraction.
     - **Scalable and Flexible**: Supports sparse activation and modular design, making it suitable for large-scale models and adaptable to various data modalities, including language, graphs, and structured documents.
     - **State-of-the-Art Potential**: MoR is a promising direction for advancing neural architectures in domains where recursive and hierarchical structures are fundamental.
-
-## Components
-
-=== "Self-Attention"
-
-    Self-Attention: The core mechanism that allows transformers to weigh the importance of different words in a sentence relative to each other.
-    Each word attends to all other words in the sentence to gather context.
-
-    Scaled Dot-Product Attention: This involves three matrices - Query (Q), Key (K), and Value (V).
-    The attention scores are calculated as the dot product of the query and key vectors, scaled, and passed through a softmax function to get weights.
-    These weights are then used to combine the value vectors.
-
-=== "Multi-Head Attention"
-
-    Instead of performing a single attention function, the model runs multiple attention mechanisms (heads) in parallel.
-    Each head focuses on different parts of the sentence, capturing various aspects of the relationships between words.
-
-=== "Feed-Forward NN"
-
-    After the attention mechanism, the output is passed through a position-wise fully connected feed-forward network, which is the same for each position.
-
-=== "Positional Encoding"
-
-    Since transformers do not have a sequential nature like RNNs, they need some way to capture the order of words.
-    Positional encodings are added to the input embeddings to give the model information about the position of each word in the sequence.
-
-=== "Layer Normalization and Residual Connections"
-
-    Each sub-layer (attention and feed-forward) is followed by a layer normalization and a residual connection to ensure stability during training.
-
-## Types
 
 === "Decoder-Only"
 
@@ -177,3 +146,80 @@ Next Token Probabilities     = SoftMax(Fully Connected Layer Output)
         - Data-to-text generation (e.g., converting tables into sentences).
         - Grammar correction (e.g., fixing spelling and grammatical errors).
         - Format transformation (e.g., converting JSON to text).
+
+## Components
+
+### Attention
+
+=== "Self-Attention"
+
+    Self-Attention: The core mechanism that allows transformers to weigh the importance of different words in a sentence relative to each other.
+    Each word attends to all other words in the sentence to gather context.
+
+    Scaled Dot-Product Attention: This involves three matrices - Query (Q), Key (K), and Value (V).
+    The attention scores are calculated as the dot product of the query and key vectors, scaled, and passed through a softmax function to get weights.
+    These weights are then used to combine the value vectors.
+
+=== "Multi-Head"
+
+    ![](transformers/multihead_attention.png)
+
+    Multi-Head Attention (MHA) instead of performing a single attention function, the model runs multiple attention mechanisms (heads) in parallel.
+    Each head focuses on different parts of the sentence, capturing various aspects of the relationships between words.
+
+    At inference time we don't need to recompute the KV values for past tokens and can reuse them.
+    The memory for past KV values is called the **KV-Cache**.
+    As context windows grow, this cache can quickly become an inference bottleneck and consume a large share of GPU memory.
+
+    Here's a simple calculation to estimate the KV-Cache memory $s_{KV}$ for the Llama 3 architecture with MHA and a sequence length of 8192:
+
+    $s_{KV} = 2 \times n_{\text{bytes}} \times seq \times n_{\text{layers}} \times n_{\text{heads}} \times dim_{\text{heads}}$
+
+    $s_{KV} = 2 \times 2 \times 8192 \times 32 \times 128 = 4\ \text{GB} \quad$ (Llama 3 8B)
+
+    $s_{KV} = 2 \times 2 \times 8192 \times 80 \times 64 \times 128 = 20\ \text{GB} \quad$ (Llama 3 70B)
+
+=== "Multi Query"
+
+    ![](transformers/multi_query_attention.png)
+
+    Multi Query Attention (MQA) uses a single shared Key and Value for all query heads, significantly reducing KV-Cache memory requirements.
+    This approach improves inference speed while maintaining competitive quality compared to Multi-Head Attention.
+
+=== "Grouped Query"
+
+    ![](transformers/grouped_query_attention.png)
+
+    Grouped Query Attention (GQA) divides query heads into groups that share the same Key and Value, balancing the trade-off between MHA and MQA.
+    It reduces KV-Cache memory and improves inference speed while maintaining better quality than MQA.
+
+=== "Multihead Latent"
+
+    ![](transformers/multihead_latent_attention.png)
+
+    Multihead Latent Attention (MLA) compresses Key and Value vectors into a shared latent space before computing attention, substantially reducing KV-Cache parameters.
+    This approach achieves quality comparable to MHA while enabling more efficient inference at scale.
+
+=== "Vs"
+
+    | **Attention Mechanism**              | **KV-Cache parameters per token**                                                                           |
+    | ------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+    | **Multi-Head Attention (MHA)**       | $= 2 \times n_{\text{heads}} \times n_{\text{layers}} \times dim_{\text{head}}$                             |
+    | **Multi Query Attention (MQA)**      | $= 2 \times 1 \times n_{\text{layers}} \times dim_{\text{head}}$                                            |
+    | **Grouped Query Attention (GQA)**    | $= 2 \times g \times n_{\text{layers}} \times dim_{\text{head}} \quad \text{(typically } g = 2,4,8\text{)}$ |
+    | **Multihead Latent Attention (MLA)** | $= 4.5 \times n_{\text{layers}} \times dim_{\text{head}}$                                                   |
+
+### Other
+
+=== "Feed-Forward NN"
+
+    After the attention mechanism, the output is passed through a position-wise fully connected feed-forward network, which is the same for each position.
+
+=== "Positional Encoding"
+
+    Since transformers do not have a sequential nature like RNNs, they need some way to capture the order of words.
+    Positional encodings are added to the input embeddings to give the model information about the position of each word in the sequence.
+
+=== "Layer Normalization and Residual Connections"
+
+    Each sub-layer (attention and feed-forward) is followed by a layer normalization and a residual connection to ensure stability during training.
