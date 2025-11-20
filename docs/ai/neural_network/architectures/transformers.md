@@ -175,7 +175,7 @@ This enables efficient parallelization and handling of long-range dependencies m
 
     $s_{KV} = 2 \times n_{\text{bytes}} \times seq \times n_{\text{layers}} \times n_{\text{heads}} \times dim_{\text{heads}}$
 
-    $s_{KV} = 2 \times 2 \times 8192 \times 32 \times 128 = 4\ \text{GB} \quad$ (Llama 3 8B)
+    $s_{KV} = 2 \times 2 \times 8192 \times 32 \times 32 \times 128 = 4\ \text{GB} \quad$ (Llama 3 8B)
 
     $s_{KV} = 2 \times 2 \times 8192 \times 80 \times 64 \times 128 = 20\ \text{GB} \quad$ (Llama 3 70B)
 
