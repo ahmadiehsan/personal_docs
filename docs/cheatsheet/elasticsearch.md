@@ -42,19 +42,19 @@
 
 ## Document
 
-=== "Query simple"
+=== "Query (simple)"
 
     ```shell
     curl -X GET "http://localhost:9200/_search?pretty" -u <username_and_password: elastic:pass123>
     ```
 
-=== "Query complex"
+=== "Query (complex)"
 
     ```shell
     curl -X GET "http://localhost:9200/<index_name>/<_search or _count>?pretty" -H 'Content-Type: application/json' -d '{
       "from": <offset: 5>,
       "size": <limit: 20>,
-      "_source": ["<field_1>", "<field_2>"],
+      "_source": ["<field1>", "<field2>"],
       "query": {
         "bool": {
           "must": {
@@ -83,11 +83,11 @@
     curl -X GET "http://localhost:9200/<index_name>/_search?pretty" -H 'Content-Type: application/json' -d '{
       "size": 0,  # will only return aggregate results
       "aggs": {
-        "<agg_name_1>": {"avg": {"field": "<field>"}},
-        "<agg_name_2>": {
+        "<agg_name1>": {"avg": {"field": "<field>"}},
+        "<agg_name2>": {
           "filter": {"match": {"<field>": "<value>"}},
           "aggs": {
-            "<nested_agg_name_1>": {"avg": {"field": "<field>"}}
+            "<nested_agg_name1>": {"avg": {"field": "<field>"}}
           }
         }
       }
@@ -151,25 +151,25 @@
 
 ## Index
 
-=== "Get all"
+=== "List"
 
     ```shell
     curl -X GET "http://localhost:9200/_aliases?pretty"
     ```
 
-=== "Get all with disk sizes"
+=== "List (with disk sizes)"
 
     ```shell
     curl -X GET "http://localhost:9200/_cat/indices?v&h=index,store.size"
     ```
 
-=== "Create simple"
+=== "Create (simple)"
 
     ```shell
     curl -X PUT "http://localhost:9200/<index_name>?pretty"
     ```
 
-=== "Create with mapping"
+=== "Create (with mapping)"
 
     ```shell
     curl -X PUT "http://localhost:9200/<index_name>?pretty" -H 'Content-Type: application/json' -d '{
@@ -250,7 +250,7 @@
 
 ## Mapping
 
-=== "Get current"
+=== "Get"
 
     ```shell
     curl -X GET "http://localhost:9200/<index_name>/_mapping?pretty"
@@ -277,7 +277,7 @@
 
 ## Node
 
-=== "Get all with disk sizes"
+=== "List (with disk sizes)"
 
     ```shell
     curl -X GET "http://localhost:9200/_cat/nodes?v&h=name,disk.total,disk.used,disk.avail"

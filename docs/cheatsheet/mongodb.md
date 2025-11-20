@@ -37,13 +37,13 @@
     show collections
     ```
 
-=== "Create simple"
+=== "Create (simple)"
 
     ```shell
     db.createCollection("<collection_name>")
     ```
 
-=== "Create advance"
+=== "Create (advance)"
 
     ```shell
     db.createCollection("<collection_name>", {capped: true, size: 10000000, max: 100, autoIndexId: false})
@@ -57,7 +57,7 @@
 
 ## Document
 
-=== "Query simple"
+=== "Query (simple)"
 
     ```shell
     # or findOne()
@@ -65,7 +65,7 @@
     db.<collection_name>.find({<query_field>: <value>}).sort({<sort_field>: 1}).limit(<limit_size: 3>)
     ```
 
-=== "Query complex"
+=== "Query (complex)"
 
     ```shell
     db.<collection_name>.find(
@@ -74,22 +74,22 @@
     ).pretty()
     ```
 
-=== "Insert one"
+=== "Insert (one)"
 
     ```shell
-    db.<collection_name>.insertOne({<field_1: name>: <value_1: "Patrick">, <field_2: age>: <value_2: 30>})
+    db.<collection_name>.insertOne({<field1: name>: <value1: "Patrick">, <field2: age>: <value2: 30>})
     ```
 
-=== "Insert many"
+=== "Insert (many)"
 
     ```shell
     db.<collection_name>.insertMany([
-        {<field_1: name>: <value_1: "Patrick">, <field_2: age>: <value_2: 30>},
-        {<field_1: name>: <value_1: "Sandy">, <field_2: age>: <value_2: 27>},
+        {<field1: name>: <value1: "Patrick">, <field2: age>: <value2: 30>},
+        {<field1: name>: <value1: "Sandy">, <field2: age>: <value2: 27>},
     ])
     ```
 
-=== "Insert complex"
+=== "Insert (complex)"
 
     ```shell
     db.<collection_name>.insertOne(
@@ -165,31 +165,31 @@
 === "In"
 
     ```shell
-    db.<collection_name>.find({<query_field>: {$in: [<value_1>, <value_2>, <value_3>] } })
+    db.<collection_name>.find({<query_field>: {$in: [<value1>, <value2>, <value3>] } })
     ```
 
 === "Not in"
 
     ```shell
-    db.<collection_name>.find({<query_field>: {$nin: [<value_1>, <value_2>, <value_3>] } })
+    db.<collection_name>.find({<query_field>: {$nin: [<value1>, <value2>, <value3>] } })
     ```
 
 === "&"
 
     ```shell
-    db.<collection_name>.find({$and: [{<query_field_1>: <value_1>}, {<query_field_2>: <value_2>}]})
+    db.<collection_name>.find({$and: [{<query_field1>: <value1>}, {<query_field2>: <value2>}]})
     ```
 
 === "|"
 
     ```shell
-    db.<collection_name>.find({$or: [{<query_field_1>: <value_1>}, {<query_field_2>: <value_2>}]})
+    db.<collection_name>.find({$or: [{<query_field1>: <value1>}, {<query_field2>: <value2>}]})
     ```
 
 === "neither"
 
     ```shell
-    db.<collection_name>.find({$nor: [{<query_field_1>: <value_1>}, {<query_field_2>: <value_2>}]})
+    db.<collection_name>.find({$nor: [{<query_field1>: <value1>}, {<query_field2>: <value2>}]})
     ```
 
 ## Index

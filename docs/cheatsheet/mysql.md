@@ -120,7 +120,7 @@ sudo mysql_secure_installation
 
 ## User
 
-=== "Show all"
+=== "List"
 
     ```sql
     SELECT user, host FROM mysql.user
