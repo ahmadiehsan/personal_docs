@@ -159,7 +159,7 @@ sudo mysql_secure_installation
 
 ## Database
 
-=== "Show all"
+=== "List"
 
     ```sql
     SHOW DATABASES
@@ -203,7 +203,7 @@ sudo mysql_secure_installation
 
 ## Tables
 
-=== "Show all"
+=== "List"
 
     ```sql
     SHOW TABLES
