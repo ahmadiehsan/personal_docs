@@ -170,9 +170,9 @@ model = nn.Sequential(
     nn.ReLU(),
     nn.Linear(40, 1)
 )
+learning_rate = 0.4
 optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
 mse = nn.MSELoss()
-learning_rate = 0.4
 n_epochs = 20
 
 for epoch in range(n_epochs):
