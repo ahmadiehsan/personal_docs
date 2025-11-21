@@ -1,4 +1,4 @@
-# Decision Trees * [Sup] {Random Forest} {XGBoost]}
+# Decision Trees * [Sup] {Random Forest} {XGBoost}
 
 ## Description
 
