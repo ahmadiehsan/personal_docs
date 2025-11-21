@@ -73,9 +73,9 @@ However, unlike other regression models, this line is straight when plotted on a
     torch.manual_seed(42)
     n_features = X_train.shape[1]
     model = nn.Linear(in_features=n_features, out_features=1)
+    learning_rate = 0.4
     optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
     mse = nn.MSELoss()
-    learning_rate = 0.4
     n_epochs = 20
 
     for epoch in range(n_epochs):

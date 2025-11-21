@@ -42,3 +42,53 @@ Uses part of examples at each iteration of the optimizer. Therefore, the batch s
 - <span dir="rtl">برای دیتا های زیر 2000 تا اصلا نیازی به استفاده از mini-batch نیست و خیلی راحت با همون تکنیک batch سریع و دقیق به هدفمون میرسیم.</span>
 - <span dir="rtl">معمولا تعداد دیتا های داخل هر mini-batch رو مضربی از 2 قرار میدن</span>
 - <span dir="rtl">برای انتخاب تعداد دیتا های داخل هر mini-batch حتما باید به منابع کامپیوتر توجه کنیم.</span>
+
+## Example
+
+```python
+import torch
+import torch.nn as nn
+from torch.utils.data import TensorDataset, DataLoader
+from sklearn.datasets import load_diabetes
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import root_mean_squared_error
+
+X, y = load_diabetes(return_X_y=True)  # Load sample regression data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+X_train = torch.FloatTensor(X_train)
+X_test = torch.FloatTensor(X_test)
+y_train = torch.FloatTensor(y_train).reshape(-1, 1)
+y_test = torch.FloatTensor(y_test).reshape(-1, 1)
+
+train_dataset = TensorDataset(X_train, y_train)
+train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+
+torch.manual_seed(42)
+model = nn.Sequential([...])  # Define the model
+learning_rate = 0.4
+optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
+mse = nn.MSELoss()
+n_epochs = 20
+
+model = model.to(device)
+model.train()
+
+for epoch in range(n_epochs):
+    total_loss = 0.
+    for X_batch, y_batch in train_loader:
+        X_batch, y_batch = X_batch.to(device), y_batch.to(device)
+        y_pred = model(X_batch)
+        loss = mse(y_pred, y_batch)
+        total_loss += loss.item()
+        loss.backward()
+        optimizer.step()
+        optimizer.zero_grad()
+        mean_loss = total_loss / len(train_loader)
+        print(f"Epoch {epoch + 1}/{n_epochs}, Loss: {mean_loss:.4f}")
+
+with torch.no_grad():
+    y_pred = model(X_test)
+
+print("RMSE:", root_mean_squared_error(y_test, y_pred))
+```
