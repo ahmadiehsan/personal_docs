@@ -143,3 +143,48 @@ $\tilde{z}^{(i)} = \gamma z_{norm}^{(i)} + \beta$
 
 - <span dir="rtl">علامت $\mu$ میانگین تمامی نتایج لایه هستش</span>
 - <span dir="rtl">فرمول خط چهارم در اصل نتیجه حاصل از Normalization هستش ولی چون ممکنه رنج این نتیجه مناسب لایه بعدی نباشه با استفاده از فرمول خط پنجم و دو متغیر ɣ و β یه سری تغییر توش میدیم که رنجش عوض بشه</span>
+
+## Example
+
+```python
+import torch
+import torch.nn as nn
+from sklearn.datasets import load_diabetes
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import root_mean_squared_error
+
+X, y = load_diabetes(return_X_y=True)  # Load sample regression data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+X_train = torch.FloatTensor(X_train)
+X_test = torch.FloatTensor(X_test)
+y_train = torch.FloatTensor(y_train).reshape(-1, 1)
+y_test = torch.FloatTensor(y_test).reshape(-1, 1)
+
+torch.manual_seed(42)
+n_features = X_train.shape[1]
+model = nn.Sequential(
+    nn.Linear(n_features, 50),
+    nn.ReLU(),
+    nn.Linear(50, 40),
+    nn.ReLU(),
+    nn.Linear(40, 1)
+)
+optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
+mse = nn.MSELoss()
+learning_rate = 0.4
+n_epochs = 20
+
+for epoch in range(n_epochs):
+    y_pred = model(X_train)
+    loss = mse(y_pred, y_train)
+    loss.backward()
+    optimizer.step()
+    optimizer.zero_grad()
+    print(f"Epoch {epoch + 1}/{n_epochs}, Loss: {loss.item()}")
+
+with torch.no_grad():
+    y_pred = model(X_test)
+
+print("RMSE:", root_mean_squared_error(y_test, y_pred))
+```
