@@ -58,9 +58,9 @@ However, unlike other regression models, this line is straight when plotted on a
     ```python
     import torch
     import torch.nn as nn
+    from torchmetrics import MeanSquaredError
     from sklearn.datasets import load_diabetes
     from sklearn.model_selection import train_test_split
-    from sklearn.metrics import root_mean_squared_error
 
     # =========================
     # Init
@@ -110,16 +110,18 @@ However, unlike other regression models, this line is straight when plotted on a
     with torch.no_grad():
         y_pred = model(X_test)
 
-    print("RMSE:", root_mean_squared_error(y_test.cpu().numpy(), y_pred.cpu().numpy()))
+    rmse_metric = MeanSquaredError(squared=False).to(device)
+    rmse = rmse_metric(y_pred, y_test)
+    print(f"RMSE: {rmse.item():.4f}")
     ```
 
 === "Polynomial (PyTorch - Low-Level API)"
 
     ```python
     import torch
+    from torchmetrics import MeanSquaredError
     from sklearn.datasets import load_diabetes
     from sklearn.model_selection import train_test_split
-    from sklearn.metrics import root_mean_squared_error
 
     # =========================
     # Init
@@ -169,5 +171,7 @@ However, unlike other regression models, this line is straight when plotted on a
     with torch.no_grad():
         y_pred = X_test @ w + b  # Use the trained parameters to make predictions
 
-    print("RMSE:", root_mean_squared_error(y_test, y_pred))
+    rmse_metric = MeanSquaredError(squared=False).to(device)
+    rmse = rmse_metric(y_pred, y_test)
+    print(f"RMSE: {rmse.item():.4f}")
     ```

@@ -49,9 +49,9 @@ Uses part of examples at each iteration of the optimizer. Therefore, the batch s
 import torch
 import torch.nn as nn
 from torch.utils.data import TensorDataset, DataLoader
+from torchmetrics import MeanSquaredError
 from sklearn.datasets import load_diabetes
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import root_mean_squared_error
 
 # =========================
 # Init
@@ -112,7 +112,9 @@ X_test = X_test.to(device)
 with torch.no_grad():
     y_pred = model(X_test)
 
-print("RMSE:", root_mean_squared_error(y_test.numpy(), y_pred.cpu().numpy()))
+rmse_metric = MeanSquaredError(squared=False).to(device)
+rmse = rmse_metric(y_pred, y_test.to(device))
+print(f"RMSE: {rmse.item():.4f}")
 ```
 
 !!! info

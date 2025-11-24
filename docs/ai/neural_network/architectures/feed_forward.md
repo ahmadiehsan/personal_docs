@@ -149,9 +149,9 @@ $\tilde{z}^{(i)} = \gamma z_{norm}^{(i)} + \beta$
 ```python
 import torch
 import torch.nn as nn
+from torchmetrics import MeanSquaredError
 from sklearn.datasets import load_diabetes
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import root_mean_squared_error
 
 # =========================
 # Init
@@ -205,5 +205,7 @@ model.eval()
 with torch.no_grad():
     y_pred = model(X_test)
 
-print("RMSE:", root_mean_squared_error(y_test.cpu().numpy(), y_pred.cpu().numpy()))
+rmse_metric = MeanSquaredError(squared=False).to(device)
+rmse = rmse_metric(y_pred, y_test)
+print(f"RMSE: {rmse.item():.4f}")
 ```
