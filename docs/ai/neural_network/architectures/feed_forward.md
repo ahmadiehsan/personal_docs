@@ -153,38 +153,57 @@ from sklearn.datasets import load_diabetes
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import root_mean_squared_error
 
+# =========================
+# Init
+# =====
+torch.manual_seed(42)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# =========================
+# Load Data
+# =====
 X, y = load_diabetes(return_X_y=True)  # Load sample regression data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-X_train = torch.FloatTensor(X_train)
-X_test = torch.FloatTensor(X_test)
-y_train = torch.FloatTensor(y_train).reshape(-1, 1)
-y_test = torch.FloatTensor(y_test).reshape(-1, 1)
+X_train = torch.tensor(X_train, dtype=torch.float32).to(device)
+X_test = torch.tensor(X_test, dtype=torch.float32).to(device)
+y_train = torch.tensor(y_train, dtype=torch.float32).reshape(-1, 1).to(device)
+y_test = torch.tensor(y_test, dtype=torch.float32).reshape(-1, 1).to(device)
 
-torch.manual_seed(42)
+# =========================
+# Model
+# =====
 n_features = X_train.shape[1]
 model = nn.Sequential(
-    nn.Linear(n_features, 50),
-    nn.ReLU(),
-    nn.Linear(50, 40),
-    nn.ReLU(),
+    nn.Linear(n_features, 50), nn.ReLU(),
+    nn.Linear(50, 40), nn.ReLU(),
     nn.Linear(40, 1)
-)
-learning_rate = 0.4
-optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
-mse = nn.MSELoss()
+).to(device)
+
+# =========================
+# Training Loop
+# =====
+model.train()
+optimizer = torch.optim.AdamW(model.parameters(), lr=0.01)
+criterion = nn.MSELoss()
 n_epochs = 20
 
 for epoch in range(n_epochs):
+    optimizer.zero_grad()
     y_pred = model(X_train)
-    loss = mse(y_pred, y_train)
+    loss = criterion(y_pred, y_train)
     loss.backward()
     optimizer.step()
-    optimizer.zero_grad()
+
     print(f"Epoch {epoch + 1}/{n_epochs}, Loss: {loss.item()}")
+
+# =========================
+# Evaluation
+# =====
+model.eval()
 
 with torch.no_grad():
     y_pred = model(X_test)
 
-print("RMSE:", root_mean_squared_error(y_test, y_pred))
+print("RMSE:", root_mean_squared_error(y_test.cpu().numpy(), y_pred.cpu().numpy()))
 ```

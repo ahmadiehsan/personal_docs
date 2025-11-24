@@ -53,42 +53,68 @@ from sklearn.datasets import load_diabetes
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import root_mean_squared_error
 
+# =========================
+# Init
+# =====
+torch.manual_seed(42)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# =========================
+# Load Data
+# =====
 X, y = load_diabetes(return_X_y=True)  # Load sample regression data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-X_train = torch.FloatTensor(X_train)
-X_test = torch.FloatTensor(X_test)
-y_train = torch.FloatTensor(y_train).reshape(-1, 1)
-y_test = torch.FloatTensor(y_test).reshape(-1, 1)
+X_train = torch.tensor(X_train, dtype=torch.float32)
+X_test = torch.tensor(X_test, dtype=torch.float32)
+y_train = torch.tensor(y_train, dtype=torch.float32).reshape(-1, 1)
+y_test = torch.tensor(y_test, dtype=torch.float32).reshape(-1, 1)
 
 train_dataset = TensorDataset(X_train, y_train)
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 
-torch.manual_seed(42)
-model = nn.Sequential([...])  # Define the model
-learning_rate = 0.4
-optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
-mse = nn.MSELoss()
+# =========================
+# Model
+# =====
+model = nn.Sequential([...]).to(device)  # Define the model
+
+# =========================
+# Training Loop
+# =====
+model.train()
+optimizer = torch.optim.AdamW(model.parameters(), lr=0.01)
+criterion = nn.MSELoss()
 n_epochs = 20
 
-model = model.to(device)
-model.train()
-
 for epoch in range(n_epochs):
-    total_loss = 0.
+    total_loss = 0.0
+
     for X_batch, y_batch in train_loader:
         X_batch, y_batch = X_batch.to(device), y_batch.to(device)
+
+        optimizer.zero_grad()
         y_pred = model(X_batch)
-        loss = mse(y_pred, y_batch)
-        total_loss += loss.item()
+        loss = criterion(y_pred, y_batch)
         loss.backward()
         optimizer.step()
-        optimizer.zero_grad()
-        mean_loss = total_loss / len(train_loader)
-        print(f"Epoch {epoch + 1}/{n_epochs}, Loss: {mean_loss:.4f}")
+
+        total_loss += loss.item()
+
+    mean_loss = total_loss / len(train_loader)
+    print(f"Epoch {epoch + 1}/{n_epochs}, Loss: {mean_loss:.4f}")
+
+# =========================
+# Evaluation
+# =====
+model.eval()
+X_test = X_test.to(device)
 
 with torch.no_grad():
     y_pred = model(X_test)
 
-print("RMSE:", root_mean_squared_error(y_test, y_pred))
+print("RMSE:", root_mean_squared_error(y_test.numpy(), y_pred.cpu().numpy()))
 ```
+
+!!! info
+
+    For better GPU memory efficiency and pinned memory optimization, it's recommended to move each batch to the device during training.
