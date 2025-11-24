@@ -2,34 +2,58 @@
 
 ## Description
 
-<span dir="rtl">با استفاده از تکنیک های زیر میتونیم یه عدد اولیه خوب برای w انتخاب کنیم که از exploding/vanishing تو deep neural network جلوگیری کنه.</span>
+Weight initialization is a crucial technique for training deep neural networks effectively.
+Proper initialization helps prevent problems like exploding or vanishing gradients, enabling faster convergence and better model performance.
 
-For RELU activation function:
+Different activation functions require different initialization strategies to maintain stable gradient flow through the network.
 
-$$
-\sqrt{\frac{2}{size^{[l-1]}}}
-$$
+## Formula
 
-```python
-W = np.random.randn(size_l, size_l-1) * np.sqrt(2/size_l-1)
-```
+=== "RELU"
 
-For tanh activation function :
+    $$
+    \sqrt{\frac{2}{size^{[l-1]}}}
+    $$
 
-$$
-\sqrt{\frac{1}{size^{[l-1]}}}
-$$
+    ```python
+    W = np.random.randn(size_l, size_l-1) * np.sqrt(2/size_l-1)
+    ```
 
-```python
-W = np.random.randn(size_l, size_l-1) * np.sqrt(1/size_l-1)
-```
+=== "TanH"
 
-Another commonly used heuristic is:
+    $$
+    \sqrt{\frac{1}{size^{[l-1]}}}
+    $$
 
-$$
-\sqrt{\frac{2}{size^{[l-1]} + size^{[l]}}}
-$$
+    ```python
+    W = np.random.randn(size_l, size_l-1) * np.sqrt(1/size_l-1)
+    ```
 
-```python
-W = np.random.randn(size_l, size_l-1) * np.sqrt(2 / (size_l-1 + size_l))
-```
+=== "Heuristic"
+
+    $$
+    \sqrt{\frac{2}{size^{[l-1]} + size^{[l]}}}
+    $$
+
+    ```python
+    W = np.random.randn(size_l, size_l-1) * np.sqrt(2 / (size_l-1 + size_l))
+    ```
+
+## Example
+
+=== "RELU"
+
+    ```python
+    import torch.nn as nn
+
+    def use_he_init(module):
+        if isinstance(module, nn.Linear):
+            nn.init.kaiming_uniform_(module.weight)
+            nn.init.zeros_(module.bias)
+
+    model = nn.Sequential(
+        nn.Linear(50, 40), nn.ReLU(),
+        nn.Linear(40, 1), nn.ReLU()
+    )
+    model.apply(use_he_init)
+    ```
