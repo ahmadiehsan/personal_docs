@@ -69,6 +69,9 @@ script.md_rewrap_long_lines:
 script.md_toggle_tabs:
 	PYTHONPATH=. uv run --no-sync scripts/md_toggle_tabs.py $(ARGS)
 
+script.img_optimizer:
+	PYTHONPATH=. uv run --no-sync scripts/img_optimizer.py $(ARGS)
+
 # =========================
 # Help
 # =====
