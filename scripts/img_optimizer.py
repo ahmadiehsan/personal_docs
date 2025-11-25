@@ -10,7 +10,7 @@ from scripts.utils.argument_validators import to_path_object
 class Command:
     _image_extensions = (".jpg", ".jpeg", ".png")
     _jpeg_quality = 85
-    _original_size_threshold_kb = 50
+    _original_size_threshold_kb = 20
     _reduction_threshold_percent = 1
 
     def __init__(self, arguments: argparse.Namespace) -> None:
