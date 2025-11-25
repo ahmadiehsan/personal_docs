@@ -12,11 +12,41 @@ Given an array `nums` of length $n$, where all elements are "non-negative intege
 2. **Use `counter` to count the occurrence of each number in `nums`**, where `counter[num]` corresponds to the occurrence of the number `num`. The counting method is simple, just traverse `nums` (suppose the current number is `num`), and increase `counter[num]` by $1$ each round.
 3. **Since the indices of `counter` are naturally ordered, all numbers are essentially sorted already**. Next, we traverse `counter`, and fill in `nums` in ascending order of occurrence.
 
-![](counting_sort/workflow.png)
-
 !!! info
 
     From the perspective of bucket sort, we can consider each index of the counting array `counter` in counting sort as a bucket, and the process of counting as distributing elements into the corresponding buckets. Essentially, counting sort is a special case of bucket sort for integer data.
+
+=== "Overview"
+
+    ![](counting_sort/workflow_overview.png)
+
+=== "<1>"
+
+    ![](counting_sort/workflow_step_1.png)
+
+=== "<2>"
+
+    ![](counting_sort/workflow_step_2.png)
+
+=== "<3>"
+
+    ![](counting_sort/workflow_step_3.png)
+
+=== "<4>"
+
+    ![](counting_sort/workflow_step_4.png)
+
+=== "<5>"
+
+    ![](counting_sort/workflow_step_5.png)
+
+=== "<6>"
+
+    ![](counting_sort/workflow_step_6.png)
+
+=== "<7>"
+
+    ![](counting_sort/workflow_step_7.png)
 
 ## Specifications
 
