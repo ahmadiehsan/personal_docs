@@ -23,5 +23,8 @@ make --no-print-directory script.md_rewrap_long_lines "$@"
 # Detect dangling images
 make --no-print-directory script.md_dangling_images "$@"
 
+# Optimize images
+make --no-print-directory script.img_optimizer "$@"
+
 # Run markdownlint (mdl)
 docker run --rm -v "$(pwd)":/data markdownlint/markdownlint "$@"
