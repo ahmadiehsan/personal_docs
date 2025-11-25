@@ -67,13 +67,13 @@ The common traversal methods for binary trees include:
 
     Traverses the binary tree from top to bottom, layer by layer. Within each level, it visits nodes from left to right.
 
-    Level-order traversal is essentially a type of breadth-first traversal, also known as breadth-first search (BFS), which embodies a "circumferentially outward expanding" layer-by-layer traversal method.
+    Level-order traversal is essentially a type of breadth-first traversal, also known as **breadth-first search (BFS)**, which embodies a "circumferentially outward expanding" layer-by-layer traversal method.
 
     <img src="breadth_first_traversal.png" style="width:5.5in" />
 
 === "Pre-Order, In-Order, and Post-Order"
 
-    Pre-order, in-order, and post-order traversal all belong to depth-first traversal, also known as depth-first search (DFS), which embodies a "proceed to the end first, then backtrack and continue" traversal method.
+    Pre-order, in-order, and post-order traversal all belong to depth-first traversal, also known as **depth-first search (DFS)**, which embodies a "proceed to the end first, then backtrack and continue" traversal method.
 
     Depth-first traversal is like "walking" around the entire binary tree, encountering three positions at each node, corresponding to pre-order, in-order, and post-order traversal.
 
