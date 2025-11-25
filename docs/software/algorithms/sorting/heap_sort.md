@@ -25,6 +25,54 @@ Suppose the array length is $n$, the heap sort process is as follows.
 
     In fact, the element extraction operation also includes steps `2.` and `3.`, with an additional step to pop (remove) the extracted element from the heap.
 
+=== "<1>"
+
+    ![](heap_sort/workflow_step_1.png)
+
+=== "<2>"
+
+    ![](heap_sort/workflow_step_2.png)
+
+=== "<3>"
+
+    ![](heap_sort/workflow_step_3.png)
+
+=== "<4>"
+
+    ![](heap_sort/workflow_step_4.png)
+
+=== "<5>"
+
+    ![](heap_sort/workflow_step_5.png)
+
+=== "<6>"
+
+    ![](heap_sort/workflow_step_6.png)
+
+=== "<7>"
+
+    ![](heap_sort/workflow_step_7.png)
+
+=== "<8>"
+
+    ![](heap_sort/workflow_step_8.png)
+
+=== "<9>"
+
+    ![](heap_sort/workflow_step_9.png)
+
+=== "<10>"
+
+    ![](heap_sort/workflow_step_10.png)
+
+=== "<11>"
+
+    ![](heap_sort/workflow_step_11.png)
+
+=== "<12>"
+
+    ![](heap_sort/workflow_step_12.png)
+
 ## Specifications
 
 - **Time complexity is** $O(n \log n)$, **non-adaptive sort**: The heap creation uses $O(n)$ time. Extracting the largest element from the heap takes $O(\log n)$ time, looping for $n - 1$ rounds.
