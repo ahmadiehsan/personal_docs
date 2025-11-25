@@ -8,13 +8,43 @@ It takes advantage of the **sorted order** of elements in an array by reducing t
 - **Time complexity**: $O(\log n)$ : In the binary loop, the interval decreases by half each round, hence the number of iterations is $\log_2 n$.
 - **Space complexity**: $O(1)$ : Pointers $i$ and $j$ occupies constant size of space.
 
-<img src="workflow.jpg" style="width:3in" />
+<img src="workflow_overview.jpg" style="width:3in" />
 
 !!! info
 
     Using this algorithm often requires data preprocessing.
     For example, requires sorting the array in advance.
     Maintaining these structures also requires more overhead in terms of time and space.
+
+## Workflow
+
+=== "<1>"
+
+    ![](binary_search/workflow_step_1.png)
+
+=== "<2>"
+
+    ![](binary_search/workflow_step_2.png)
+
+=== "<3>"
+
+    ![](binary_search/workflow_step_3.png)
+
+=== "<4>"
+
+    ![](binary_search/workflow_step_4.png)
+
+=== "<5>"
+
+    ![](binary_search/workflow_step_5.png)
+
+=== "<6>"
+
+    ![](binary_search/workflow_step_6.png)
+
+=== "<7>"
+
+    ![](binary_search/workflow_step_7.png)
 
 ## Advantages & Limitations
 
