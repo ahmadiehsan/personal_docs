@@ -18,6 +18,8 @@ The dynamic programming problem-solving process varies with the nature and diffi
 4. Derive state transition equations.
 5. Determine boundary conditions, etc.
 
+![](dynamic_programming/workflow.png)
+
 ## Use Cases
 
 Dynamic programming is commonly used to solve optimization problems, which not only include overlapping subproblems but also have two other major characteristics: optimal substructure and statelessness.
@@ -86,8 +88,6 @@ Dynamic programming is commonly used to solve optimization problems, which not o
 
         return dp[n]
     ```
-
-    ![](dynamic_programming/example_stairs.png)
 
 === "Minimum Path Sum"
 
