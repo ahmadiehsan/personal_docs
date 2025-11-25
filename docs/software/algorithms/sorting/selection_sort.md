@@ -14,6 +14,50 @@ Suppose the length of the array is $n$, the steps of selection sort are:
 4. Continue in this manner. After $n - 1$ rounds of selection and swapping, the first $n - 1$ elements are sorted.
 5. The only remaining element is subsequently the largest element and does not need sorting, thus the array is sorted.
 
+=== "<1>"
+
+    ![](selection_sort/workflow_step_1.png)
+
+=== "<2>"
+
+    ![](selection_sort/workflow_step_2.png)
+
+=== "<3>"
+
+    ![](selection_sort/workflow_step_3.png)
+
+=== "<4>"
+
+    ![](selection_sort/workflow_step_4.png)
+
+=== "<5>"
+
+    ![](selection_sort/workflow_step_5.png)
+
+=== "<6>"
+
+    ![](selection_sort/workflow_step_6.png)
+
+=== "<7>"
+
+    ![](selection_sort/workflow_step_7.png)
+
+=== "<8>"
+
+    ![](selection_sort/workflow_step_8.png)
+
+=== "<9>"
+
+    ![](selection_sort/workflow_step_9.png)
+
+=== "<10>"
+
+    ![](selection_sort/workflow_step_10.png)
+
+=== "<11>"
+
+    ![](selection_sort/workflow_step_11.png)
+
 ## Specifications
 
 - **Time complexity of $O(n^2)$, non-adaptive sort**: There are $n - 1$ iterations in the outer loop, with the length of the unsorted section starting at $n$ in the first iteration and decreasing to $2$ in the last iteration, i.e., each outer loop iteration contains $n, n - 1, \ldots, 3, 2$ inner loop iterations respectively, summing up to $\frac{(n-1)(n+2)}{2}$.
