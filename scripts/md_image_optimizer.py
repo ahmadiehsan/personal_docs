@@ -92,6 +92,8 @@ class Command:
             resized_img.save(temp_file_path, format="JPEG", quality=self._jpeg_quality, optimize=True)
         elif file_path.suffix.lower() == ".png":
             resized_img.save(temp_file_path, format="PNG", optimize=True)
+        elif file_path.suffix.lower() == ".gif":
+            resized_img.save(temp_file_path, format="GIF", optimize=True)
         else:
             err_msg = f"unsupported image format for resizing: {file_path.suffix}"
             raise ValueError(err_msg)
@@ -111,6 +113,8 @@ class Command:
             img.save(temp_file_path, format="JPEG", quality=self._jpeg_quality, optimize=True)
         elif file_path.suffix.lower() == ".png":
             img.save(temp_file_path, format="PNG", optimize=True)
+        elif file_path.suffix.lower() == ".gif":
+            img.save(temp_file_path, format="GIF", optimize=True)
         else:
             err_msg = f"unsupported image format for compression: {file_path.suffix}"
             raise ValueError(err_msg)
