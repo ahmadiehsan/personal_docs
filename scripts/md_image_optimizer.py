@@ -11,6 +11,7 @@ from scripts.utils.argument_validators import to_path_object
 class Command:
     _jpeg_quality = 85
     _reduction_threshold_percent = 1
+    _supported_formats = (".jpg", ".jpeg", ".png")
     _md_image_pattern = r"!\[.*?\]\(.*?/(.*)\)"
     _html_image_pattern = r'<img.*?src="(.*?)".*?>'
     _width_pattern = r"width\s*:\s*(\d+(?:\.\d+)?)(px|in|cm|mm|pt|em|rem)"
@@ -57,6 +58,9 @@ class Command:
 
     def _optimize_images(self, image_infos: list[dict]) -> None:
         for image_info in image_infos:
+            if image_info["path"].suffix.lower() not in self._supported_formats:
+                continue
+
             if image_info["is_html"] and image_info["width_px"]:
                 self._resize_image(image_info["path"], image_info["width_px"])
 
@@ -92,8 +96,6 @@ class Command:
             resized_img.save(temp_file_path, format="JPEG", quality=self._jpeg_quality, optimize=True)
         elif file_path.suffix.lower() == ".png":
             resized_img.save(temp_file_path, format="PNG", optimize=True)
-        elif file_path.suffix.lower() == ".gif":
-            resized_img.save(temp_file_path, format="GIF", optimize=True)
         else:
             err_msg = f"unsupported image format for resizing: {file_path.suffix}"
             raise ValueError(err_msg)
@@ -113,8 +115,6 @@ class Command:
             img.save(temp_file_path, format="JPEG", quality=self._jpeg_quality, optimize=True)
         elif file_path.suffix.lower() == ".png":
             img.save(temp_file_path, format="PNG", optimize=True)
-        elif file_path.suffix.lower() == ".gif":
-            img.save(temp_file_path, format="GIF", optimize=True)
         else:
             err_msg = f"unsupported image format for compression: {file_path.suffix}"
             raise ValueError(err_msg)
