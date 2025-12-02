@@ -54,7 +54,7 @@ $$
 
 ### Multiplication With Another Matrix
 
-<img src="image1.jpg" style="width:3in" />
+![](matrix/image1.jpg)
 
 We will use this for transformation composition, like this:
 
@@ -110,11 +110,11 @@ $$
 
 ### Reduced Row Echelon Form (RREF)
 
-<img src="image3.jpg" style="width:2.5in" />
+![](matrix/image3.jpg)
 
 ### Determinant
 
-<img src="image6.jpg" style="width:688px" />
+![](matrix/image6.jpg)
 
 The determinant of a $2 \times 2$ matrix is
 

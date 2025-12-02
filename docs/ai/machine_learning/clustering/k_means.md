@@ -18,17 +18,17 @@ k-means clustering is a method of vector quantization, originally from signal pr
 
     We will select multiple numbers for it and each time we will check how the variation within each cluster changes.
 
-    <img src="image1.jpg" style="width:4in" />
+    ![](k_means/image1.jpg)
 
     Then by creating the below diagram we can easily find the best point (the best number for K).
 
-    <img src="image3.jpg" style="width:4in" />
+    ![](k_means/image3.jpg)
 
     Importantly, every time we increase the number of K, the variation in each cluster decreases, but it does not mean that we should continue this approach, each time we should check whether the reduction of variation was reasonable or just decreased a little.
 
 ## Formula
 
-<img src="image2.jpg" style="width:550px" />
+![](k_means/image2.jpg)
 
 - <span dir="rtl">تو تصویر بالا میتونیم الگو ریاضیاتیشو ببینیم</span>
 - <span dir="rtl">علامت m هم نشون میده چنتا نقطه داریم</span>

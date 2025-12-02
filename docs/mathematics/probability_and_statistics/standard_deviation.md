@@ -19,4 +19,4 @@ $$
 
 ## Example
 
-<img src="image1.jpg" style="width:5.5in" />
+![](standard_deviation/image1.jpg)

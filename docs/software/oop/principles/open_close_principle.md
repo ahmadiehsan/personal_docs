@@ -2,4 +2,4 @@
 
 ## Description
 
-<img src="image1.jpg" style="width:4.20313in" />
+![](open_close_principle/image1.jpg)

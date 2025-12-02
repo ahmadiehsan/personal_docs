@@ -25,7 +25,7 @@ The figure below provides two examples.
 - **Negative example $coins = [1, 20, 50]$**: Suppose $amt = 60$, the greedy algorithm can only find the combination $50 + 1 \times 10$, totaling 11 coins, but dynamic programming can find the optimal solution of $20 + 20 + 20$, needing only 3 coins.
 - **Negative example $coins = [1, 49, 50]$**: Suppose $amt = 98$, the greedy algorithm can only find the combination $50 + 1 \times 48$, totaling 49 coins, but dynamic programming can find the optimal solution of $49 + 49$, needing only 2 coins.
 
-<img src="coin_change_greedy_vs_dp.png" style="width:5.5in" />
+![](greedy/coin_change_greedy_vs_dp.png)
 
 This means that for the coin change problem, greedy algorithms cannot guarantee finding the globally optimal solution, and they might find a very poor solution.
 They are better suited for dynamic programming.
@@ -83,7 +83,7 @@ Generally, the suitability of greedy algorithms falls into two categories.
         return count if amt == 0 else -1  # If no feasible solution is found, return -1
     ```
 
-    <img src="example_coin_change.png" style="width:5in" />
+    ![](greedy/example_coin_change.png)
 
 === "Fractional Knapsack"
 

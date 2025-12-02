@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image1.jpg" />
+![](singleton/image1.jpg)
 
 Ensures a class has only one instance, and provides a global point of access to it.
 

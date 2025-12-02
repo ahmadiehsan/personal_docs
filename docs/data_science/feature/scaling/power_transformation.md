@@ -32,7 +32,7 @@ Here, $x$ is the original feature value, and $\lambda$ is the power parameter th
     The resulting transformed output y is a function of input x and the transformation parameter $\lambda$ such that when $\lambda$ = 0, the resultant transform is the natural log transform which we discussed earlier.
     The optimal value of $\lambda$ is usually determined using a maximum likelihood or log-likelihood estimation.
 
-    <img src="image2.png" style="width:5in" />
+    ![](power_transformation/image2.png)
 
 ## Example
 

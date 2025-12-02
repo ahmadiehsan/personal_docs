@@ -4,7 +4,7 @@
 
 The curse of dimensionality refers to problems that arise when working with high-dimensional data, such as the need for exponentially more samples to represent all combinations of feature values.
 
-<img src="image1.jpg" style="width:4in" />
+![](_overview/image1.jpg)
 
 As the number of features increases, more samples are required to adequately represent the data.
 

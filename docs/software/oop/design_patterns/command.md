@@ -2,13 +2,13 @@
 
 ## Description
 
-<img src="image1.jpg" />
+![](command/image1.jpg)
 
-<img src="image2.jpg" style="width:4in" />
+![](command/image2.jpg)
 
 The Command Pattern allows you to decouple the requester of an action from the object that acts.
 
-<img src="image3.jpg" />
+![](command/image3.jpg)
 
 !!! info
 

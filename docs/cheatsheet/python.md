@@ -4,11 +4,11 @@
 
 === "Open modes"
 
-    <img src="file_open_modes.png" style="width:688px" />
+    ![](python/file_open_modes.png)
 
 === "Open modes decision tree"
 
-    <img src="file_open_modes_decision_tree.png" style="width:600px" />
+    ![](python/file_open_modes_decision_tree.png)
 
 ## Class & Function
 
@@ -64,7 +64,7 @@
 
 ## Operators
 
-<img src="operators.jpg" />
+![](python/operators.jpg)
 
 - The "i" symbol means "in place"
 - The "a" symbol means "asynchronous"
@@ -93,4 +93,4 @@
 
 - cProfile example:
 
-  <img src="cprofile_example.jpg" />
+  ![](python/cprofile_example.jpg)

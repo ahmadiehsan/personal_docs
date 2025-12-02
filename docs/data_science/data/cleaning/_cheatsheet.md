@@ -11,7 +11,7 @@ Noise in tabular data can be of three types:
 - Features that don't help in explaining the target (Noise2: irrelevant/weak features)
 - Records which don't follow the form or relation which rest of the records do (Noise3: noisy records)
 
-<img src="image7.png" style="width:688px" />
+![](_cheatsheet/image7.png)
 
 ## Varieties
 
@@ -19,7 +19,7 @@ Noise in tabular data can be of three types:
 
     We can analyse the features & target and identify the noise in terms of outliers.
 
-    <img src="image5.png" style="width:2.37473in" />
+    ![](_cheatsheet/image5.png)
 
     Techniques:
 
@@ -46,11 +46,11 @@ Noise in tabular data can be of three types:
         - backward elimination
         - recursive elimination
 
-        <img src="image6.png" style="width:4.5in" />
+        ![](_cheatsheet/image6.png)
 
     - **Embedded Methods (Regularisation)**: This method makes use of the filter & wrapper method, it is implemented using algos which have their own built-in feature selection methods.
 
-        <img src="image2.png" style="width:4.5in" />
+        ![](_cheatsheet/image2.png)
 
 === "Noise In Record"
 
@@ -60,8 +60,8 @@ Noise in tabular data can be of three types:
 
     - **K-fold Validation**: In this method, we can look at the cross validation score of each fold and analyse the folds which have poor CV scores, what are the common attributes of records having poor scores, etc.
 
-        <img src="image3.png" style="width:4.5in" />
+        ![](_cheatsheet/image3.png)
 
     - **Manual Method**: Here we can evaluate the CV of each record (predicted vs. actual) and filter/analyse the records having a poor CV score. This will help us in analysing why this is happening in the first place.
 
-        <img src="image4.png" style="width:4.5in" />
+        ![](_cheatsheet/image4.png)

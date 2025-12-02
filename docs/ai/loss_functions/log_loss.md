@@ -14,24 +14,24 @@
 
 === "Training Shape"
 
-    <img src="image1.png" style="width:4in" />
+    ![](log_loss/image1.png)
 
     <span dir="rtl">نمودار loss function:</span>
 
-    <img src="image5.png" style="width:5.5in" />
+    ![](log_loss/image5.png)
 
-    <img src="image6.png" style="width:5.5in" />
+    ![](log_loss/image6.png)
 
     <span dir="rtl">چون مقادیر این مدل حتما بین 0 تا 1 است از بخش های بزرگتر از 1 در دو تصویر بالا صرف نظر شد</span>
 
 === "Simplified Shape (Normal)"
 
-    <img src="image3.png" style="width:5in" />
+    ![](log_loss/image3.png)
 
 === "Simplified Shape (Regularized)"
 
-    <img src="image4.jpg" style="width:5.5in" />
+    ![](log_loss/image4.jpg)
 
 ## Gradient Descent
 
-<img src="image2.png" style="width:4in" />
+![](log_loss/image2.png)

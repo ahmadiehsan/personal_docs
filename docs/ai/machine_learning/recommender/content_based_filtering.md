@@ -2,22 +2,22 @@
 
 ## Description
 
-<img src="image4.jpg" style="width:4.5in" />
+![](content_based_filtering/image4.jpg)
 
-<img src="image6.jpg" style="width:4.8in" />
+![](content_based_filtering/image6.jpg)
 
-<img src="image5.jpg" style="width:4.4in" />
+![](content_based_filtering/image5.jpg)
 
 ## Specific Cost Function (Squared Error Loss)
 
-<img src="image1.jpg" style="width:4in" />
+![](content_based_filtering/image1.jpg)
 
 ## Collaborative vs Content-based Filtering
 
-<img src="image3.jpg" style="width:4.3in" />
+![](content_based_filtering/image3.jpg)
 
 <span dir="rtl">مهم ترین تفاوتشون اینه که تو اولی بسته به اینتراکشن کاربرها محصولات به هم وصل میشن و به کاربر ها ریکامند میشن، ولی تو دومی بسته به اطلاعات محصولات و کاربرا تصمیم گیری میشه که کدوم محصول به کدوم کاربر ریکامند بشه</span>
 
 ## Finding Related Items
 
-<img src="image2.jpg" style="width:4.8in" />
+![](content_based_filtering/image2.jpg)

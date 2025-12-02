@@ -8,7 +8,7 @@
 - Multiplicity notations (such as "1", "0..1", "\*", etc.) indicate the number of instances involved in the association.
 - Captures connections between classes without implying any specific type of relationship.
 
-<img src="image1.png" style="width:5.36197in" />
+![](association/image1.png)
 
 - The Food relation is a Dependency
 - The Address relation is the Association

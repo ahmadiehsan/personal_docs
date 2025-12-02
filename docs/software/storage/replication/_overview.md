@@ -10,7 +10,7 @@ A **slave database** gets copies of the data from the master database and only *
 All the data-modifying commands like insert, delete, or update must be sent to the master database.
 Most applications require a much higher ratio of reads to writes; thus, the number of slave databases in a system is usually larger than the number of master databases.
 
-<img src="image1.jpg" style="width:4in" />
+![](_overview/image1.jpg)
 
 Possible replication approaches:
 

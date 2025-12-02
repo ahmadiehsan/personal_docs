@@ -35,7 +35,7 @@ foreach (string message in messages) {
 1. **Generate index** based on the value (Example: `index = hash code % count`)
 2. **Add the element (value)** next to the linked list at the generated index.
 
-<img src="image40.jpg" style="width:3in" />
+![](hashset/image40.jpg)
 
 ## Features
 

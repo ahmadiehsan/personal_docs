@@ -6,7 +6,7 @@ A Log-Structured merge tree (LSM tree) is a data structure used in computer scie
 It is particularly well-suited for write-intensive workloads and is commonly employed in storage systems such as databases and distributed file systems.
 The LSM tree is designed to optimize write operations by minimizing disk I/O and ensuring efficient compaction. (LSM tree uses SSTable internally)
 
-<img src="image2.png" style="width:600px" />
+![](lsm_tree_storeage_structure/image2.png)
 
 - **Write-Ahead Log (WAL)**: Incoming write operations are first appended to a write-ahead log. This ensures durability and helps in recovering data in case of failures.
 - **Memtable**: Write operations are also stored in an in-memory data structure called a memtable for faster writes. Once the memtable is full, it is flushed to disk as an SSTable (Sorted String Table).
@@ -32,8 +32,8 @@ SSTables are designed for efficient read-and-write operations in scenarios where
 
     We only keep part of the keys in memory.
 
-    <img src="image1.png" style="width:600px" />
+    ![](lsm_tree_storeage_structure/image1.png)
 
 === "Compaction Scenario"
 
-    <img src="image3.png" style="width:600px" />
+    ![](lsm_tree_storeage_structure/image3.png)

@@ -2,9 +2,9 @@
 
 ## Description
 
-<img src="image16.jpg" style="width:5.6406in" />
+![](vector/image16.jpg)
 
-<img src="image6.jpg" style="width:1.82083in" />
+![](vector/image6.jpg)
 
 - Starting point doesn't mean for Vectors
 - Vectors will show by lowercase letters and an arrow on top of it or just with a bold lowercase letter
@@ -15,9 +15,9 @@
 
 ## N Dimensional Real Coordinate Space
 
-<img src="image3.jpg" style="width:3.61704in" />
+![](vector/image3.jpg)
 
-<img src="image8.jpg" style="width:2.73166in" />
+![](vector/image8.jpg)
 
 - **Tuple**: means a list of numbers.
 - **Cartesian coordinate system**: is the specific name for 2-tuples.
@@ -27,7 +27,7 @@
 
 ### Addition
 
-<img src="image24.jpg" style="width:5.41567in" />
+![](vector/image24.jpg)
 
 - All the purple arrows are the same
 - All the green arrows are the same
@@ -36,19 +36,19 @@
 
 ### Multiplication
 
-<img src="image13.jpg" style="width:5.60782in" />
+![](vector/image13.jpg)
 
 ### Subtraction
 
-<img src="image27.jpg" style="width:4.40898in" />
+![](vector/image27.jpg)
 
 ### Dot Product
 
 Will tell us how much our vectors are moving together.
 
-<img src="image26.jpg" style="width:3in" />
+![](vector/image26.jpg)
 
-<img src="image20.jpg" style="width:1.5in" />
+![](vector/image20.jpg)
 
 $\vec{w} \cdot \vec{x}$  = $w_1x_1 + w_2x_2 + w_3x_3 + \dots + w_nx_n$
 
@@ -61,7 +61,7 @@ $\vec{w} \cdot \vec{x}$  = $w_1x_1 + w_2x_2 + w_3x_3 + \dots + w_nx_n$
 
 ### Cross Product
 
-<img src="image10.jpg" style="width:4.5in" />
+![](vector/image10.jpg)
 
 Will give us the normal vector of the space (plane) of two other vectors ($\vec{a}$ and $\vec{b}$).
 
@@ -116,7 +116,7 @@ $$
 
 ### Unit Vector of Axes
 
-<img src="image15.jpg" style="width:5in" />
+![](vector/image15.jpg)
 
 ### Unit Vector of a Vector
 
@@ -150,13 +150,13 @@ $$
 
 ## Perpendicular Vectors (Orthogonal Vectors)
 
-<img src="image7.png" style="width:3in" />
+![](vector/image7.png)
 
 The vectors $\vec{x}$ and $\vec{y}$ are perpendicular if, and only if, their dot product is equal to zero: $\vec{x} . \vec{y} = 0$
 
 ## Normal Vector
 
-<img src="image5.jpg" style="width:1.5in" />
+![](vector/image5.jpg)
 
 A normal is an object such as a line, ray, or vector that is perpendicular to a given object.
 
@@ -165,8 +165,8 @@ A normal is an object such as a line, ray, or vector that is perpendicular to a 
 Is a nonzero vector that changes at most by a scalar factor when that linear transformation is applied to it.
 The corresponding eigenvalue, often denoted by lambda, is the factor by which the eigenvector is scaled.
 
-<img src="image12.jpg" style="width:3in" />
+![](vector/image12.jpg)
 
 Matrix $A$ acts by stretching the vector $\vec{x}$, not changing its direction, so $\vec{x}$ is an eigenvector of $A$.
 
-<img src="image21.jpg" style="width:3.5in" />
+![](vector/image21.jpg)

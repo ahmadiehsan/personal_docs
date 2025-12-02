@@ -2,12 +2,12 @@
 
 ## Description
 
-<img src="image2.jpg" style="width:4.19184in" />
+![](hollywood_principle/image2.jpg)
 
 Gives us a way to prevent "dependency rot." Dependency rot happens when you have high-level components depending on low-level components depending on high-level components depending on sideways components depending on low-level components, and so on.
 When rot sets in, no one can easily understand the way a system is designed.
 
-<img src="image1.jpg" style="width:688px" />
+![](hollywood_principle/image1.jpg)
 
 With the Hollywood Principle, we allow low-level components to hook themselves into a system, but the high-level components determine when they are needed, and how.
 In other words, the high-level components give the low-level components the "don't call us, we'll call you" treatment.

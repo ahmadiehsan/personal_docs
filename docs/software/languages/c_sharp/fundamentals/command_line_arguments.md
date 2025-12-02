@@ -2,6 +2,6 @@
 
 ## Description
 
-<img src="image1.jpg" style="width:688px" />
+![](command_line_arguments/image1.jpg)
 
 - By default all the C# top-level statments recives args as their pre defined variable

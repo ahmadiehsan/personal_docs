@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image1.jpg" style="width:550px" />
+![](prototype/image1.jpg)
 
 Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype
 

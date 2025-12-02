@@ -22,7 +22,7 @@ Taking the student ID data as an example, assume the least significant digit is 
 2. Perform "counting sort" on the $k^{th}$ digit of the student IDs. After completion, the data will be sorted from smallest to largest based on the $k^{th}$ digit.
 3. Increment $k$ by $1$, then return to step `2.` and continue iterating until all digits have been sorted, at which point the process ends.
 
-<img src="workflow.png" />
+![](radix_sort/workflow.png)
 
 ## Specifications
 

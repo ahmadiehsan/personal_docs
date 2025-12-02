@@ -14,12 +14,12 @@ Whether Spam is a subclass of this or that is irrelevant, all that matters is th
 The following example shows how the sequence protocol works.
 SequenceLikeClass implements the sequence protocol by duck typing: to equip with special methods __len__ and __getitem__, which are methods corresponding to the sequence protocol.
 
-<img src="image1.jpg" style="width:3.97083in" />
+![](duck_typing/image1.jpg)
 
 Although it does not inherit from a sequence class like a list, it behaves well like some sequence class.
 
-<img src="image3.jpg" style="width:3.95833in" />
+![](duck_typing/image3.jpg)
 
 Another example:
 
-<img src="image2.jpg" style="width:4.01667in" />
+![](duck_typing/image2.jpg)

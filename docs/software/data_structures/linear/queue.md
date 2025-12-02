@@ -4,7 +4,7 @@
 
 A First In, First Out (FIFO) data structure, where elements are added at the rear and removed from the front.
 
-<img src="image1.jpg" style="width:600px" />
+![](queue/image1.jpg)
 
 ## Varieties
 
@@ -12,7 +12,7 @@ A First In, First Out (FIFO) data structure, where elements are added at the rea
 
     Double-Ended (Deque) allows elements to be added or removed from both ends.
 
-    <img src="image2.jpg" style="width:600px" />
+    ![](queue/image2.jpg)
 
 === "Priority"
 

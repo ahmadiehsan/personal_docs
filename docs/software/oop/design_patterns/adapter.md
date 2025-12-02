@@ -12,8 +12,8 @@ The adapter lets classes work together that couldn't otherwise because of incomp
 
 Object adapter:
 
-<img src="image2.jpg" />
+![](adapter/image2.jpg)
 
 Class adapter:
 
-<img src="image1.jpg" />
+![](adapter/image1.jpg)

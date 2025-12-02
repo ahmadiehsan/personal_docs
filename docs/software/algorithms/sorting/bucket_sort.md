@@ -19,7 +19,7 @@ Consider an array of length $n$, with float numbers in the range $[0, 1)$.
 2. Sort each bucket individually (using the built-in sorting function of the programming language).
 3. Merge the results in the order from the smallest to the largest bucket.
 
-<img src="workflow.png" />
+![](bucket_sort/workflow.png)
 
 ## Specifications
 

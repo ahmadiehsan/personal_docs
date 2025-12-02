@@ -6,7 +6,7 @@ The weights of an LLM are numeric values with a given precision, which can be ex
 If we lower the amount of bits to represent a value, we get a less accurate result.
 However, if we lower the number of bits we also lower the memory requirements of that model.
 
-<img src="overview.png" style="width:4.5in" />
+![](quantization/overview.png)
 
 !!! info
 

@@ -14,4 +14,4 @@ Key features:
 
 Bar charts are ideal for comparing quantities across different categories, making them one of the most common types of charts used in data visualization.
 
-<img src="image1.jpg" style="width:3.28305in" />
+![](bar/image1.jpg)

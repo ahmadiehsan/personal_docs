@@ -9,7 +9,7 @@ It starts from one end of the data structure and accesses each element one by on
 
 **Time complexity:** $O(n)$, where $n$ is the number of elements, so the performance is poor with large data sets.
 
-<img src="workflow.jpg" style="width:3in" />
+![](linear_search/workflow.jpg)
 
 !!! info
 

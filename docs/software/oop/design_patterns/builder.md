@@ -2,11 +2,11 @@
 
 ## Description
 
-<img src="image2.jpg" style="width:688px" />
+![](builder/image2.jpg)
 
 Separate the construction of a complex object from its representation so that the same construction process can create different representations.
 
-<img src="image1.jpg" />
+![](builder/image1.jpg)
 
 !!! info
 

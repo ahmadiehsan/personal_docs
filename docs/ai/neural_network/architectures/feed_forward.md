@@ -6,7 +6,7 @@ This is the most straightforward type of neural network.
 Information in this network moves in one direction only, from the input layer through any hidden layers to the output layer.
 The network has no cycles or loops; it's a straight, "feedforward" path.
 
-<img src="image3.png" style="width:3.72396in" />
+![](feed_forward/image3.png)
 
 Multilayer perceptron (MLP) is a type of feedforward network that has at least one hidden layer in addition to its input and output layers.
 The layers are fully connected, meaning each neuron in a layer connects with every neuron in the next layer.
@@ -14,7 +14,7 @@ MLPs can model complex patterns and are widely used for tasks such as image reco
 The MLP is a feedforward network with layers of neurons arranged sequentially.
 Information flows from the input layer through hidden layers to the output layer in one direction.
 
-<img src="image4.jpg" style="width:3.5in" />
+![](feed_forward/image4.jpg)
 
 !!! info
 
@@ -25,9 +25,9 @@ Information flows from the input layer through hidden layers to the output layer
     - <span dir="rtl">به هر دایره یک neuron و یا unit می گن</span>
     - <span dir="rtl">به خروجی هر لایه activation میگن که با علامت a نشون داده میشه</span>
 
-<img src="image10.png" style="width:2in" />
+![](feed_forward/image10.png)
 
-<img src="image11.png" style="width:2in" />
+![](feed_forward/image11.png)
 
 !!! info
 
@@ -36,7 +36,7 @@ Information flows from the input layer through hidden layers to the output layer
 
 ## Life Cycle
 
-<img src="image8.jpg" style="width:5in" />
+![](feed_forward/image8.jpg)
 
 - <span dir="rtl">تو تصویر بالا به خوبی نحوه عملکرد شبکه عصبی برای یک ورودی x شرح داده شده</span>
 - <span dir="rtl">سیستم به صورت ریکرسیو عمل میکنه</span>

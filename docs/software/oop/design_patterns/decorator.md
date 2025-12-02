@@ -2,16 +2,16 @@
 
 ## Description
 
-<img src="image3.jpg" />
+![](decorator/image3.jpg)
 
 Attaches additional responsibilities to an object dynamically.
 Decorators provide a flexible alternative to subclassing for extending functionality.
 
 While that describes the role of the Decorator Pattern, it doesn't give us a lot of insight into how we'd apply the pattern to our implementation.
 
-<img src="image1.jpg" />
+![](decorator/image1.jpg)
 
-<img src="image2.jpg" />
+![](decorator/image2.jpg)
 
 !!! info
 

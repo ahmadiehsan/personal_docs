@@ -19,4 +19,4 @@ Collections are the standard way to store and manipulate a group of elements (pr
 
 ## Collection Hierarchy
 
-<img src="image3.jpg" style="width:688px" />
+![](_overview/image3.jpg)

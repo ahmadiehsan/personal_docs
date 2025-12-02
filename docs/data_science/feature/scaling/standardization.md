@@ -35,6 +35,6 @@ $$
 
 === "Text"
 
-    <img src="image1.png" style="width:500px" />
+    ![](standardization/image1.png)
 
     <span dir="rtl">مقدار $\sigma$ برابر است با انحراف از معیار (standard deviation)</span>

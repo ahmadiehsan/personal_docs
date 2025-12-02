@@ -16,7 +16,7 @@ The three main quartiles are as follows:
 - The second quartile ($Q2$) is the median of a data set; thus 50% of the data lies below this point.
 - The third quartile ($Q3$) is the middle value between the median and the highest value (maximum) of the data set. It is known as the upper or 75th empirical quartile, as 75% of the data lies below this point.
 
-<img src="image1.png" style="width:4in" />
+![](quantile/image1.png)
 
 Probability density of a normal distribution, with quartiles shown.
 The area below the red curve is the same in the intervals $(-\infty, Q1)$, $(Q1, Q2)$, $(Q2, Q3)$, and $(Q3, +\infty)$.
@@ -33,4 +33,4 @@ While there is no universal definition of percentile, it is commonly expressed a
 The 25th percentile is also known as the first quartile ($Q1$), the 50th percentile as the median or second quartile ($Q2$), and the 75th percentile as the third quartile ($Q3$).
 For example, the 50th percentile (median) is the score below (or at or below, depending on the definition) in which 50% of the scores in the distribution are found.
 
-<img src="image2.png" style="width:5in" />
+![](quantile/image2.png)

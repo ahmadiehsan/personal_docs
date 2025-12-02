@@ -4,7 +4,7 @@
 
 K-Nearest Neighbors (KNN) a non-parametric, supervised learning classifier, which uses proximity to make classifications or predictions about the grouping of an individual data point.
 
-<img src="image2.jpg" style="width:5.22689in" />
+![](knn/image2.jpg)
 
 For example in the above image, the big red circle at first was unclassified and by using KNN it was classified by the nearest old classified data.
 

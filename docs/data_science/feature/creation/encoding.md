@@ -11,7 +11,7 @@ Encoding is the process of converting categorical data into numerical formats so
     Considering we have the numeric representation of any categorical attribute with m labels (after transformation), the one-hot encoding scheme encodes or transforms the attribute into m binary features which can only contain a value of 1 or 0.
     Each observation in the categorical feature is thus converted into a vector of size m with only one of the values as 1 (indicating it as active).
 
-    <img src="one_hot_encoding.jpg" style="width:3.5in" />
+    ![](encoding/one_hot_encoding.jpg)
 
 === "Dummy Coding"
 
@@ -19,7 +19,7 @@ Encoding is the process of converting categorical data into numerical formats so
     Thus each value of the categorical variable gets converted into a vector of size m - 1.
     The extra feature is completely disregarded and thus if the category values range from {0, 1, …, m-1} the 0th or the m - 1th feature column is dropped and corresponding category values are usually represented by a vector of all zeros (0).
 
-    <img src="dummy_coding.jpg" style="width:3.5in" />
+    ![](encoding/dummy_coding.jpg)
 
 === "Effect Coding"
 
@@ -36,7 +36,7 @@ Encoding is the process of converting categorical data into numerical formats so
     - **TF (Term Frequency)**: Is the ratio of the number of target terms in the document to the total number of terms in the document.
     - **IDF (Inverse Document Frequency)**: Is the logarithm of the ratio of the total number of documents to the number of documents in which the target term occurs. At this stage, it does not matter how many times the term appears in the document. It is sufficient to determine whether it has passed or not.
 
-    <img src="tf_idf.png" style="width:4in" />
+    ![](encoding/tf_idf.png)
 
 === "Feature Hashing"
 

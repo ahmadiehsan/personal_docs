@@ -7,7 +7,7 @@ A heap is a complete binary tree that satisfies specific conditions and can be m
 - min heap : The value of any node ≤ the values of its child nodes.
 - max heap : The value of any node ≥ the values of its child nodes.
 
-<img src="min_heap_vs_max_heap.jpg" style="width:688px" />
+![](heap/min_heap_vs_max_heap.jpg)
 
 As a special case of a complete binary tree, a heap has the following characteristics:
 

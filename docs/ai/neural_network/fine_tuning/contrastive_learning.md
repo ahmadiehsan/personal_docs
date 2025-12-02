@@ -5,7 +5,7 @@
 One major technique for both training and fine-tuning text embedding models is called contrastive learning.
 Contrastive learning is a technique that aims to train an embedding model such that similar documents are closer in vector space while dissimilar documents are further apart.
 
-<img src="overview.png" style="width:5in" />
+![](contrastive_learning/overview.png)
 
 The underlying idea of contrastive learning is that the best way to learn and model similarity/dissimilarity between documents is by feeding a model examples of similar and dissimilar pairs.
 In order to accurately capture the semantic nature of a document, it often needs to be contrasted with another document for a model to learn what makes it different or similar.

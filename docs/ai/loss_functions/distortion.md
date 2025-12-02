@@ -17,4 +17,4 @@
 
 ## Formula
 
-<img src="image1.jpg" style="width:5in" />
+![](distortion/image1.jpg)

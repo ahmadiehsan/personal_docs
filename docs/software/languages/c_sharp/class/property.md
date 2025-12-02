@@ -2,7 +2,7 @@
 
 ## Syntax
 
-<img src="image2.jpg" style="width:5in" />
+![](property/image2.jpg)
 
 ## Set Accessor & Get Accessor
 

@@ -38,14 +38,14 @@ $A \times B = \{ (a, b) \mid a \in A \land b \in B \}$
 Let $A$ and $B$ be sets.
 The union of the sets $A$ and $B$, denoted by $A \cup B$, is the set that contains those elements that are either in $A$ or in $B$, or in both.
 
-<img src="image2.jpg" style="width:2.92413in" />
+![](sets/image2.jpg)
 
 ### Intersection
 
 Let $A$ and $B$ be sets.
 The intersection of the sets $A$ and $B$, denoted by $A \cap B$, is the set containing those elements in both $A$ and $B$.
 
-<img src="image1.jpg" style="width:2.73184in" />
+![](sets/image1.jpg)
 
 ### Diﬀerence
 

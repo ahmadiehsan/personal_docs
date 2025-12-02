@@ -2,4 +2,4 @@
 
 ## Description
 
-<img src="image1.png" style="width:4.6in" />
+![](bigger_neural_network/image1.png)

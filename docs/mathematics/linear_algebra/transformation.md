@@ -24,7 +24,7 @@ We can always show a linear transformation via a matrix-vector product, like thi
 
 ### Rotation Transformation
 
-<img src="image9.jpg" style="width:3in" />
+![](transformation/image9.jpg)
 
 $R = \begin{bmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{bmatrix}$
 

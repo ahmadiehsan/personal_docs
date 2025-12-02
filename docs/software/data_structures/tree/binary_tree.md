@@ -6,7 +6,7 @@ A binary tree is a hierarchical data structure in which each node has at most tw
 The topmost node is called the root.
 The structure is recursive, as each child of a node can be the root of its own subtree.
 
-<img src="overview.jpg" style="width:5.5in" />
+![](binary_tree/overview.jpg)
 
 - **Root node**: The node at the top level of the binary tree, which has no parent node.
 - **Leaf node**: A node with no children, both of its pointers point to None.
@@ -31,7 +31,7 @@ When the index is out of bounds, it signifies a null node or the node does not e
 
 === "Perfect Binary Tree"
 
-    <img src="perfect_binary_tree.jpg" style="width:3in" />
+    ![](binary_tree/perfect_binary_tree.jpg)
 
     As shown, in a perfect binary tree, all levels are completely filled with nodes.
 
@@ -42,7 +42,7 @@ When the index is out of bounds, it signifies a null node or the node does not e
 
 === "Complete Binary Tree"
 
-    <img src="complete_binary_tree.jpg" style="width:3in" />
+    ![](binary_tree/complete_binary_tree.jpg)
 
     As shown, a complete binary tree is a binary tree where only the bottom level is possibly not completely filled, and nodes at the bottom level must be filled continuously from left to right.
 
@@ -69,7 +69,7 @@ The common traversal methods for binary trees include:
 
     Level-order traversal is essentially a type of breadth-first traversal, also known as **breadth-first search (BFS)**, which embodies a "circumferentially outward expanding" layer-by-layer traversal method.
 
-    <img src="breadth_first_traversal.png" style="width:5.5in" />
+    ![](binary_tree/breadth_first_traversal.png)
 
 === "Pre-Order, In-Order, and Post-Order"
 
@@ -77,4 +77,4 @@ The common traversal methods for binary trees include:
 
     Depth-first traversal is like "walking" around the entire binary tree, encountering three positions at each node, corresponding to pre-order, in-order, and post-order traversal.
 
-    <img src="depth_first_traversal.png" style="width:688px" />
+    ![](binary_tree/depth_first_traversal.png)

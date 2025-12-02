@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image15.jpg" style="width:3.5in" />
+![](hashtable/image15.jpg)
 
 Hashtable collection contains a group of elements of key/value pairs stored at respective indexes (Full Path: `System.Collections.Hashtable`).
 

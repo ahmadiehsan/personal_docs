@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image2.jpg" />
+![](osi_model/image2.jpg)
 
 ## Layers
 

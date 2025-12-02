@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image1.png" style="width:4.2in" />
+![](hexagonal_architecture/image1.png)
 
 Facts:
 

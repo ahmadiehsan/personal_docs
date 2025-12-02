@@ -15,11 +15,11 @@ This means we can also perform vector arithmetic with the word vectors. For exam
 
 Queen = King - Man + Woman
 
-<img src="image1.jpg" style="width:2.5in" />
+![](word2vec/image1.jpg)
 
 It does so in one of two ways, either using context to predict a target word (a method known as continuous bag of words, or **CBOW**), or using a word to predict a target context, which is called **skip-gram**.
 
-<img src="image2.png" style="width:6in" />
+![](word2vec/image2.png)
 
 ## Varieties
 

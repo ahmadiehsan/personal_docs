@@ -7,7 +7,7 @@ It essentially indicates how spread out the data is.
 
 A higher variance suggests that the data points are more scattered, while a lower variance indicates that the data points are clustered closer to the mean.
 
-<img src="image1.jpg" style="width:4.5in" />
+![](variance/image1.jpg)
 
 !!! info
 

@@ -6,7 +6,7 @@ Logistic regression is a statistical model that transforms a linear regression m
 Unlike linear regression which predicts continuous values, logistic regression applies a logistic function to map predictions to probabilities in the range [0,1], making it suitable for classification tasks.
 This versatile algorithm can be used for both binary and multiclass classification problems.
 
-<img src="image2.png" style="width:3.5in" />
+![](logistic_regression/image2.png)
 
 ## Varieties
 

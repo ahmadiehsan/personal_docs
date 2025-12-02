@@ -17,19 +17,19 @@ ORM stands for:
 
 ### Core
 
-<img src="image1.jpg" style="width:1.65417in" />
+![](_overview_and_installation/image1.jpg)
 
 - Will add core functionality
 
 ### EF SQLServer Support
 
-<img src="image4.jpg" style="width:2.0875in" />
+![](_overview_and_installation/image4.jpg)
 
 - Will add SQLServer support
 - For other databases, there are other similar packages
 
 ### EF Migration Support
 
-<img src="image3.jpg" style="width:1.9125in" />
+![](_overview_and_installation/image3.jpg)
 
 - Will add migration functionality

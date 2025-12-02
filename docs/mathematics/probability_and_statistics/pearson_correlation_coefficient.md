@@ -34,7 +34,7 @@ $$
 The **coefficient of determination ($R^2$)** measures the percentage of variability within the values that can be explained by the regression model.
 Therefore, a value close to 100% means that the model is useful and a value close to zero indicates that the model is not useful.
 
-<img src="image4.jpg" style="width:6in" />
+![](pearson_correlation_coefficient/image4.jpg)
 
 ## $R$ vs $R^2$
 

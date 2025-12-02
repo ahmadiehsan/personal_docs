@@ -6,7 +6,7 @@ In a specific tree structure (such as a **binary search tree**), quickly elimina
 
 **Time complexity**: $O(\log n)$
 
-<img src="workflow.jpg" style="width:3in" />
+![](tree_search/workflow.jpg)
 
 !!! info
 

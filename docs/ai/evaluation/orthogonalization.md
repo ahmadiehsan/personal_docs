@@ -4,7 +4,7 @@
 
 <span dir="rtl">برای بهبود عملکرد سیستم بسته به مشکل راه های مختلفی وجود داره که فقط رو یه جنبه از الگوریتم تاثیر میذاره و با جنبه های دیگه کاری نداره، اول لازمه طبق تصویر زیر مشکل سیستم رو تشخیص بدین:</span>
 
-<img src="image1.jpg" style="width:3.5in" />
+![](orthogonalization/image1.jpg)
 
 <span dir="rtl">در زیر تمامی حالات زیاد بودن error بین دو موقعیت رو با راه حلش میبینیم:</span>
 
@@ -15,9 +15,9 @@
 
 <span dir="rtl">حالا بسته به تشخیص بالا تو دو تصویر زیر مشخص شده که برای هر مشکل سراغ چه راهی بریم:</span>
 
-<img src="image3.jpg" style="width:5in" />
+![](orthogonalization/image3.jpg)
 
-<img src="image2.jpg" style="width:4.5in" />
+![](orthogonalization/image2.jpg)
 
 - <span dir="rtl">برای فیت شدن بهتر training set از bigger network و Adam استفاده میکنیم</span>
 - <span dir="rtl">برای فیت شدن بهتر dev set از Regularization و bigger treating set استفاده میکنیم</span>

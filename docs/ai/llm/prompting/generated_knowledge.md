@@ -5,7 +5,7 @@
 Generated Knowledge Prompting enhances the ability of language models to provide accurate predictions by generating relevant knowledge beforehand.
 This technique improves tasks that require commonsense reasoning by integrating additional context.
 
-<img src="image1.png" style="width:500px" />
+![](generated_knowledge/image1.png)
 
 Methodology:
 

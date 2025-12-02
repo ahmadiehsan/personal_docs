@@ -4,14 +4,14 @@
 
 Enables complex reasoning capabilities through intermediate reasoning steps. (In the following image we can see an example of a Few-shot CoT Prompting)
 
-<img src="image2.png" style="width:688px" />
+![](chain_of_thought/image2.png)
 
 ## Few-Shot & Zero-Shot CoT Prompting
 
 - **Few-Shot**: Combining the original prompt with few-shot prompting.
 - **Zero-Shot**: Involves adding "Let's think step by step" to the original prompt.
 
-<img src="image1.png" style="width:688px" />
+![](chain_of_thought/image1.png)
 
 !!! info
 

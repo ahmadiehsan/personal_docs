@@ -2,6 +2,6 @@
 
 ## Description
 
-<img src="image2.jpg" style="width:4.23438in" />
+![](program_to_interface_principle/image2.jpg)
 
-<img src="image1.jpg" style="width:4.20313in" />
+![](program_to_interface_principle/image1.jpg)

@@ -8,7 +8,7 @@ It uses the kernel trick to find the best line separator (decision boundary that
 
 SVM tries to finds the maximal margin (distance between the line and the support vectors) that separates the classes and this reduces the risk of error on the data
 
-<img src="image4.jpg" style="width:3in" />
+![](svm/image4.jpg)
 
 - $H_1$ does not separate the classes.
 - $H_2$ does, but only with a small margin.
@@ -22,7 +22,7 @@ SVM tries to finds the maximal margin (distance between the line and the support
     A data point falling on either side of the hyperplane can be attributed to different classes.
     The dimension of the hyperplane depends on the number of input features in the dataset.
 
-    <img src="image9.png" style="width:3.2in" />
+    ![](svm/image9.png)
 
     In geometry, a hyperplane is a subspace whose dimension is one less than that of its ambient space.
     For example, if a space is 3-dimensional then its hyperplanes are the 2-dimensional planes, while if the space is 2-dimensional, its hyperplanes are the 1-dimensional lines.
@@ -31,29 +31,29 @@ SVM tries to finds the maximal margin (distance between the line and the support
 
     Soft margin SVM allows some misclassification to happen by relaxing the hard constraints of Support Vector Machine.
 
-    <img src="image3.jpg" style="width:3.54212in" />
+    ![](svm/image3.jpg)
 
-    <img src="image1.jpg" style="width:3.48459in" />
+    ![](svm/image1.jpg)
 
-    <img src="image11.jpg" style="width:3.4371in" />
+    ![](svm/image11.jpg)
 
 === "Weird Shaped Data"
 
     SVM by using a **kernel function** will move the data into a higher dimension to make the classification possible.
 
-    <img src="image10.jpg" style="width:3.54322in" />
+    ![](svm/image10.jpg)
 
-    <img src="image12.jpg" style="width:3.53186in" />
+    ![](svm/image12.jpg)
 
-    <img src="image8.jpg" style="width:3.59745in" />
+    ![](svm/image8.jpg)
 
 === "Kernel Function"
 
-    <img src="image7.jpg" style="width:3.71837in" />
+    ![](svm/image7.jpg)
 
-    <img src="image6.jpg" style="width:3.75761in" />
+    ![](svm/image6.jpg)
 
-    <img src="image5.jpg" style="width:2.97164in" />
+    ![](svm/image5.jpg)
 
 ## Example
 

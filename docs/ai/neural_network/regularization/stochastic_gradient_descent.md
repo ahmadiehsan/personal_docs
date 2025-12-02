@@ -4,7 +4,7 @@
 
 Uses part of examples at each iteration of the optimizer. Therefore, the batch size for SGD is $n$
 
-<img src="image4.jpg" style="width:6in" />
+![](stochastic_gradient_descent/image4.jpg)
 
 !!! info
 
@@ -19,15 +19,15 @@ Uses part of examples at each iteration of the optimizer. Therefore, the batch s
 
 <span dir="rtl">زمانی که تعداد دیتا هامون (m) خیلی زیاده بجای این که هر بار برای محاسبه j از کل دیتا های استفاده کنیم، میایم دیتا هارو به بخش های کوچکتر (mini-batch) تقسیم میکنیم و هر بار j رو بر اساس یکی از این بخش های کوچیک حساب میکنیم.</span>
 
-<img src="image1.jpg" style="width:5in" />
+![](stochastic_gradient_descent/image1.jpg)
 
 <span dir="rtl">همینطور تو تصویر بالا میتونیم تاثیر این تغییر در نمودار j رو ببینیم، از اونجایی که تصمیم درباره مقدار بعدی w و b رو هر بار بر اساس یک تکه ای از دیتا (یعنی یک mini-batch) میگیریم، ممکنه در بعضی از مواقع نمودار j همواره نزولی نباشد، اما در کل نزولی خواهد بود.</span>
 
-<img src="image5.jpg" style="width:5in" />
+![](stochastic_gradient_descent/image5.jpg)
 
 <span dir="rtl">تو تصویر بالا X که ماتریکسی از تمامی دیتاهای (m) ما هست رو به ماتریس های کوچکتر 1000 تایی شکستیم و هر کدوم از این mini-batch های 1000 تایی رو با نماد {i} نشون میدیم.</span>
 
-<img src="image2.jpg" style="width:688px" />
+![](stochastic_gradient_descent/image2.jpg)
 
 <span dir="rtl">تو تصویر بالا:</span>
 
@@ -35,7 +35,7 @@ Uses part of examples at each iteration of the optimizer. Therefore, the batch s
 - <span dir="rtl">رنگ بنفش به این اشاره داره که ما سایز های mini-batch هامون رو هم اندازه 1 بگیریم که در این صورت هر دونه از دیتا های ما در اصل یه mini-batch خواهد شد که در اصل بهش Stochastic و اصلا بهینه نیستش و عملا هیچوقت به گلوبال مینیمم نمیرسه، یه نکته دیگه که اینجا مهمه اینه که با این ویژگی جون به ازای هر دونه از دیتا هامون داریم j رو حساب میکنیم عملا نمیتونیم از خاصیت وکتوریزیشن استفاده کنیم و باید حلقه دستی بنویسیم.</span>
 - <span dir="rtl">رنگ سبز به این اشاره داره که ما سایز های mini-batch هامون رو یه چیزی بین 1 و m بگیریم که در این صورت به هدفمون خواهیم رسید.</span>
 
-<img src="image3.jpg" style="width:4in" />
+![](stochastic_gradient_descent/image3.jpg)
 
 <span dir="rtl">تو تصویر بالا هم میبینیم که:</span>
 

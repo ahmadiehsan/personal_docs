@@ -2,4 +2,4 @@
 
 ## Formula
 
-<img src="image1.jpg" style="width:3.63519in" />
+![](threshold/image1.jpg)

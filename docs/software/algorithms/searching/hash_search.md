@@ -6,7 +6,7 @@ Uses a hash table to establish a key-value mapping between search data and targe
 
 **Time complexity**: $O(1)$
 
-<img src="workflow.jpg" style="width:4in" />
+![](hash_search/workflow.jpg)
 
 !!! info
 

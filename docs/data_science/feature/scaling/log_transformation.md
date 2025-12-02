@@ -10,7 +10,7 @@ This function has a prerequisite that **the numeric values to be transformed mus
 Log transforms are useful when applied to skewed distributions as they tend to expand the values that fall in the range of lower magnitudes and tend to compress or reduce the values that fall in the range of higher magnitudes.
 This tends to make the skewed distribution as normal as possible.
 
-<img src="image1.jpg" style="width:5.5in" />
+![](log_transformation/image1.jpg)
 
 It's important to note that the logarithmic transformation is not appropriate for all types of data.
 For example, **if the data includes zero or negative values**, the logarithmic transformation cannot be applied directly.

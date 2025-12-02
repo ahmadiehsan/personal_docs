@@ -23,7 +23,7 @@ The image of a function is the set of all output values it may produce.
 
 $f$ is a function from domain $X$ to codomain $Y$. The yellow oval inside $Y$ is the image of $f$.
 
-<img src="image5.jpg" style="width:2.5in" />
+![](functions/image5.jpg)
 
 ### Preimage
 
@@ -39,7 +39,7 @@ A function $f$ is said to be one-to-one, or an injection, if and only if $f(x) =
 
 A function is said to be injective if it is one-to-one.
 
-<img src="image1.png" />
+![](functions/image1.png)
 
 ### Increasing and Decreasing Function
 
@@ -51,7 +51,7 @@ A function $f$ from $X$ to $Y$ is called onto, or a surjection, if and only if f
 
 A function $f$ is called surjective if it is onto.
 
-<img src="image2.png" />
+![](functions/image2.png)
 
 ### Identity Function
 
@@ -71,4 +71,4 @@ The composition of the functions $f$ and $g$, denoted for all $a \in A$ by $f \c
 
 $(f \circ g)(a) = f(g(a))$
 
-<img src="image4.jpg" style="width:5.83498in" />
+![](functions/image4.jpg)

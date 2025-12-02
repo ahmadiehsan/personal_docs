@@ -12,7 +12,7 @@ The `System.String` is a class that represents an array of Unicode characters.
 string referenceVariable = "Hello123";
 ```
 
-<img src="image18.jpg" style="width:688px" />
+![](string/image18.jpg)
 
 ## Methods
 

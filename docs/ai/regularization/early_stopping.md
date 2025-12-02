@@ -12,7 +12,7 @@ This point is where the model starts overfitting.
 
 By visualizing the training and validation error of the model during training, we can identify and stop the model at this point.
 
-<img src="image1.jpg" style="width:4in" />
+![](early_stopping/image1.jpg)
 
 !!! info
 

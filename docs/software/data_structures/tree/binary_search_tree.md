@@ -7,7 +7,7 @@ The sorted version of a Binary Tree is called Binary Search Tree, which means:
 1. For the root node, the value of all nodes in the left subtree < the value of the root node < the value of all nodes in the right subtree.
 2. The left and right subtrees of any node are also binary search trees, i.e., they satisfy condition 1. as well.
 
-<img src="image4.jpg" style="width:3.5in" />
+![](binary_search_tree/image4.jpg)
 
 ## Operations
 
@@ -30,7 +30,7 @@ The sorted version of a Binary Tree is called Binary Search Tree, which means:
     - If `cur.val > num`, it means the target node is in cur's left subtree.
     - If `cur.val = num`, it means the target node is found, exit the loop, and return the node.
 
-    <img src="image1.jpg" style="width:3in" />
+    ![](binary_search_tree/image1.jpg)
 
 === "Inserting a Node"
 
@@ -39,14 +39,14 @@ The sorted version of a Binary Tree is called Binary Search Tree, which means:
     - **Finding insertion position**: Similar to the search operation, start from the root node, loop downwards according to the size relationship between the current node value and num, until the leaf node is passed (traversed to None), then exit the loop.
     - **Insert the node at this position**: Initialize the node num and place it where None was.
 
-    <img src="image2.jpg" style="width:7in" />
+    ![](binary_search_tree/image2.jpg)
 
 === "Removing a Node"
 
     First, find the target node in the binary tree, then remove it.
     Similar to inserting a node, we need to ensure that after the removal operation is completed, the property of the binary search tree "left subtree < root node < right subtree" is still satisfied.
 
-    <img src="image5.jpg" style="width:7in" />
+    ![](binary_search_tree/image5.jpg)
 
 ## Vs Binary Tree
 

@@ -5,7 +5,7 @@
 SAML (Security Assertion Markup Language) is an XML-based protocol designed for exchanging authentication and authorization data between parties in a secure and standardized manner.
 It facilitates Single Sign-On (SSO) and enables the secure exchange of user information between an Identity Provider (IdP) and a Service Provider (SP).
 
-<img src="image1.png" />
+![](saml/image1.png)
 
 ## Key Components
 

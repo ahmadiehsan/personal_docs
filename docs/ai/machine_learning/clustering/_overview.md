@@ -4,7 +4,7 @@
 
 Centroid-based clustering and density-based clustering are two popular approaches used for grouping data into clusters:
 
-<img src="centroid_vs_density_based.png" style="width:500px" />
+![](_overview/centroid_vs_density_based.png)
 
 Centroid-Based Clustering:
 

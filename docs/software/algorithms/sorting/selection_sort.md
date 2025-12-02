@@ -16,47 +16,47 @@ Suppose the length of the array is $n$, the steps of selection sort are:
 
 === "<1>"
 
-    <img src="workflow_step_1.png"  />
+    ![](selection_sort/workflow_step_1.png)
 
 === "<2>"
 
-    <img src="workflow_step_2.png"  />
+    ![](selection_sort/workflow_step_2.png)
 
 === "<3>"
 
-    <img src="workflow_step_3.png"  />
+    ![](selection_sort/workflow_step_3.png)
 
 === "<4>"
 
-    <img src="workflow_step_4.png"  />
+    ![](selection_sort/workflow_step_4.png)
 
 === "<5>"
 
-    <img src="workflow_step_5.png"  />
+    ![](selection_sort/workflow_step_5.png)
 
 === "<6>"
 
-    <img src="workflow_step_6.png"  />
+    ![](selection_sort/workflow_step_6.png)
 
 === "<7>"
 
-    <img src="workflow_step_7.png"  />
+    ![](selection_sort/workflow_step_7.png)
 
 === "<8>"
 
-    <img src="workflow_step_8.png"  />
+    ![](selection_sort/workflow_step_8.png)
 
 === "<9>"
 
-    <img src="workflow_step_9.png"  />
+    ![](selection_sort/workflow_step_9.png)
 
 === "<10>"
 
-    <img src="workflow_step_10.png"  />
+    ![](selection_sort/workflow_step_10.png)
 
 === "<11>"
 
-    <img src="workflow_step_11.png"  />
+    ![](selection_sort/workflow_step_11.png)
 
 ## Specifications
 
@@ -64,4 +64,4 @@ Suppose the length of the array is $n$, the steps of selection sort are:
 - **Space complexity of $O(1)$, in-place sort**: Uses constant extra space with pointers $i$ and $j$.
 - **Non-stable sort**: As shown in the following picture, an element `nums[i]` may be swapped to the right of an equal element, causing their relative order to change.
 
-<img src="non_stable.jpg" style="width:4.5in" />
+![](selection_sort/non_stable.jpg)

@@ -4,7 +4,7 @@
 
 Dropout is a powerful regularization technique that randomly "drops out" a portion of neurons during training.
 
-<img src="image1.png" style="width:2in" />
+![](dropout/image1.png)
 
 It helps combat overfitting by randomly deactivating a fraction of neurons during each training iteration, **forcing the network to develop redundant pathways for information flow**.
 This technique **prevents neurons from becoming overly dependent** on each other by creating a form of ensemble learning within a single network, where different subnetworks handle similar tasks.

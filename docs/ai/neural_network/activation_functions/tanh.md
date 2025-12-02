@@ -19,4 +19,4 @@ $$
 \tanh(\Sigma) = \frac{e^{\Sigma} - e^{-\Sigma}}{e^{\Sigma} + e^{-\Sigma}}
 $$
 
-<img src="image1.png" style="width:2.73813in" />
+![](tanh/image1.png)

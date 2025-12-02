@@ -7,7 +7,7 @@
 - However, the challenge lies in securely distributing and managing the shared key, especially when parties are not physically close.
 - Common symmetric encryption algorithms include Advanced Encryption Standard (AES) and Data Encryption Standard (DES).
 
-<img src="image2.jpg" style="width:5.6in" />
+![](symmetric_and_asymmetric_encryption/image2.jpg)
 
 ## Asymmetric
 
@@ -17,4 +17,4 @@
 - It is computationally more expensive than symmetric encryption, making it less efficient for large volumes of data.
 - Common asymmetric encryption algorithms include RSA (Rivest-Shamir-Adleman) and ECC (Elliptic Curve Cryptography).
 
-<img src="image1.jpg" style="width:5.8in" />
+![](symmetric_and_asymmetric_encryption/image1.jpg)

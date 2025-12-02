@@ -7,7 +7,7 @@ The read model is optimized for querying data, while the write model is optimize
 
 Separates the read and write operations for data, allowing independent optimization and scaling.
 
-<img src="image2.jpg" />
+![](cqrs/image2.jpg)
 
 !!! info
 
@@ -17,4 +17,4 @@ Separates the read and write operations for data, allowing independent optimizat
 
 ## Architecture
 
-<img src="image1.png" style="width:4.3in" />
+![](cqrs/image1.png)

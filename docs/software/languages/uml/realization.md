@@ -7,7 +7,7 @@
 - Shown as a dashed line with a hollow triangle arrowhead pointing from the class realizing the interface to the interface itself.
 - Indicates that the realizing class provides the actual implementation for the operations defined in the interface.
 
-<img src="image2.png" style="width:3.53125in" />
+![](realization/image2.png)
 
 ## Example
 

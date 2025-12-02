@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image6.jpg" style="width:5.5in" />
+![](reinforcement_learning/image6.jpg)
 
 <span dir="rtl">تو این مدل از یادگیری چیزی تحت عنوان دیتای اولیه نداریم، در اصل یک سری شرایط تعریف میکنیم به اضافه فانکشن تصمیم گیری برای reward و بسته به حرکت به اون حرکت نمره میدیم.</span>
 
@@ -15,22 +15,22 @@
 
 ## Formula (Bellman Equation)
 
-<img src="image4.jpg" style="width:5.5in" />
+![](reinforcement_learning/image4.jpg)
 
-<img src="image2.jpg" style="width:4.5in" />
+![](reinforcement_learning/image2.jpg)
 
 - <span dir="rtl">با استفاده از این معادله reward حاصل از حرکت از یک state به یک state دیگه با استفاده از action خاص رو میشه محاسبه کرد.</span>
 - <span dir="rtl">به بیان دیگه reward بر اساس این معادله به هر action اختصاص پیدا میکنه.</span>
 - <span dir="rtl">چون تو این معادله، محاسبه reward هر action نیازمند داشتن reward حرکت های بعدیه، یه جورایی میشه بهش به شکل فانکشن recursive نگاه کرد.</span>
 
-<img src="image3.jpg" style="width:4in" />
+![](reinforcement_learning/image3.jpg)
 
 ## Random (Stochastic) Environment
 
-<img src="image5.jpg" style="width:4in" />
+![](reinforcement_learning/image5.jpg)
 
 <span dir="rtl">بعضی اوقات سیستم اون مدلی که ما میخوایم عمل نمیکنه و ممکنه به هر علتی ربات تصمیم گرفته بره سمت چپ ولی پاش سر میخوره و میره سمت راست، حالا اتفاقای که میفته ممکنه کلا عوض بشه، مثلا ممکنه میخواسته به سمت 100 بره ولی کلا مسیر عوض بشه بره سمت 40 یا نه همون سمت 100 بره ولی با چند مرحله بیشتر از حالت عادی، تو این حالت برای محاسبه مقدار return از یک حالت استفاده نمیکینم، بلکه میانگین تمامی حالاتش رو حساب میکینم.</span>
 
-<img src="image1.jpg" style="width:4.2in" />
+![](reinforcement_learning/image1.jpg)
 
 <span dir="rtl">تو تصویر بالا حالت بروز شده فرمول Bellman Equation رو با در نظر گرفتن حالت میانگین میبینیم.</span>

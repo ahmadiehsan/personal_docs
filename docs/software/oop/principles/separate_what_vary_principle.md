@@ -2,4 +2,4 @@
 
 ## Description
 
-<img src="image1.jpg" style="width:4.21354in" />
+![](separate_what_vary_principle/image1.jpg)

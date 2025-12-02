@@ -2,11 +2,11 @@
 
 ## Description
 
-<img src="image1.jpg" />
+![](observer/image1.jpg)
 
 Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
 
-<img src="image2.jpg" />
+![](observer/image2.jpg)
 
 !!! info
 

@@ -30,4 +30,4 @@ The kernel of a linear map, also known as the null space, is the linear subspace
 
 Kernel and image of a linear map $L$ from $V$ to $W$:
 
-<img src="image3.png" style="width:3in" />
+![](subspace/image3.png)

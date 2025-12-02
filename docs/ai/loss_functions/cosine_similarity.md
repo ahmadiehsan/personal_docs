@@ -11,7 +11,7 @@ Instead of strictly positive or negative pairs of sentences, we assume pairs of 
 Cosine similarity loss is straightforward—it calculates the cosine similarity between the two embeddings of the two texts and compares that to the labeled similarity score.
 The model will learn to recognize the degree of similarity between sentences.
 
-<img src="diagram.png" style="width:3.5in" />
+![](cosine_similarity/diagram.png)
 
 ## Formula
 

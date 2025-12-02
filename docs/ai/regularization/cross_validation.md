@@ -10,7 +10,7 @@ Cross-Validation means dividing a dataset into parts for training and testing a 
 
     Holdout (Train/Test Split) is removing a part of the training data and using it to get predictions from the model trained on the rest of the data.
 
-    <img src="holdout_overview.jpg" style="width:3.5in" />
+    ![](cross_validation/holdout_overview.jpg)
 
     This is a simple kind of cross validation technique, also known as the holdout method.
 
@@ -28,7 +28,7 @@ Cross-Validation means dividing a dataset into parts for training and testing a 
     Now the **holdout method** is repeated k times, such that each time, one of the k subsets is used as the test-set/validation-set and the other k-1 subsets are put together to form a training set.
     The error estimation is averaged over all k trials to get total effectiveness of our model.
 
-    <img src="k_fold_overview.png" style="width:5in" />
+    ![](cross_validation/k_fold_overview.png)
 
     As can be seen, every data point gets to be in a validation set exactly once, and gets to be in a training set k-1 times.
     This significantly reduces **bias** as we are using most of the data for fitting, and also significantly reduces **variance** as most of the data is also being used in validation sets.
@@ -44,14 +44,14 @@ Cross-Validation means dividing a dataset into parts for training and testing a 
     For such problems, a slight variation in the K Fold cross validation technique is made, such that each fold contains approximately the same percentage of samples of each target class as the complete set, or in case of prediction problems, the mean response value is approximately equal in all the folds.
     This variation is also known as Stratified K Fold.
 
-    <img src="stratified_k_fold_overview.jpg" style="width:3in" />
+    ![](cross_validation/stratified_k_fold_overview.jpg)
 
 === "Leave-P-Out"
 
     This approach leaves p data points out of training data, i.e. if there are n data points in the original sample then, n-p samples are used to train the model and p points are used as the validation set.
     This is repeated for all combinations in which the original sample can be separated this way, and then the error is averaged for all trials, to give overall effectiveness.
 
-    <img src="leave_p_out_overview.png" style="width:5.5in" />
+    ![](cross_validation/leave_p_out_overview.png)
 
     This method is exhaustive in the sense that it needs to train and validate the model for all possible combinations, and for moderately large p, it can become computationally infeasible.
 
@@ -67,7 +67,7 @@ Cross-Validation means dividing a dataset into parts for training and testing a 
     The model is then trained on the past data and tested on the future data.
     This helps to evaluate the performance of the model in real-world scenarios.
 
-    <img src="time_series_cross_validation_overview.jpg" style="width:4in" />
+    ![](cross_validation/time_series_cross_validation_overview.jpg)
 
     In all cases, it's important to ensure that the split is done randomly but with the same random seed each time to ensure the reproducibility of the results.
     It's also important to ensure that the split is representative of the underlying data – that is, the distribution of the target variable should be consistent across all sets.

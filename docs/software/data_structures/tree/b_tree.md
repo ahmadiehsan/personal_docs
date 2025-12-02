@@ -4,7 +4,7 @@
 
 A B-Tree is a self-balancing search tree that maintains sorted data and allows searches, insertions, deletions, and sequential access in logarithmic time.
 
-<img src="image1.png" style="width:3in" />
+![](b_tree/image1.png)
 
 - Each node can have multiple keys and child pointers.
 - A balanced structure ensures efficient search operations.

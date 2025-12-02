@@ -8,13 +8,13 @@ The ROC curve is created by plotting the true positive rate (TPR) against the fa
 The true-positive rate is also known as sensitivity, recall or probability of detection.
 The false-positive rate is also known as probability of false alarm and can be calculated as (1 − specificity).
 
-<img src="image3.jpg" style="width:3.98915in" />
+![](receiver_operator_characteristic/image3.jpg)
 
 ## Formula
 
-<img src="image2.jpg" style="width:4.2in" />
+![](receiver_operator_characteristic/image2.jpg)
 
-<img src="image1.jpg" style="width:4.2in" />
+![](receiver_operator_characteristic/image1.jpg)
 
 - The table is calculated by the **confusion matrix** technique
 - **True Positives**: numbere of experiments that the algorithm classified them **correctly**
@@ -24,4 +24,4 @@ The false-positive rate is also known as probability of false alarm and can be c
 
 AUC makes it easy to compare one ROC curve to another.
 
-<img src="image4.jpg" style="width:4in" />
+![](receiver_operator_characteristic/image4.jpg)

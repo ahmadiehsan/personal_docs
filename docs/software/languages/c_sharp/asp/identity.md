@@ -99,7 +99,7 @@
 
 === "IAuthenticationService"
 
-    <img src="image8.jpg" style="width:5in" />
+    ![](identity/image8.jpg)
 
     Every class that wants to implement a new authentication service, should implement this interface, for example by using the AddCookie method, APS.NET will add a cookie based authentication service into its authentication services.
 
@@ -123,7 +123,7 @@
 
 === "Authorization Service & Policy"
 
-    <img src="image23.jpg" style="width:3.5in" />
+    ![](identity/image23.jpg)
 
     ```csharp
     builder.services.AddAuthorization(options => {
@@ -204,7 +204,7 @@
 
 === "IAuthorizationService"
 
-    <img src="image14.jpg" style="width:688px" />
+    ![](identity/image14.jpg)
 
 === "Authorization Middleware"
 
@@ -216,7 +216,7 @@
 
 === "Overview"
 
-    <img src="image25.jpg" style="width:450px" />
+    ![](identity/image25.jpg)
 
     Microsoft package for easier work with user and its related actions like sign-in, sign-out, change password, and etc.
 

@@ -30,7 +30,7 @@ As the name suggests, the algorithm is typically implemented recursively and con
     O(n + (\frac{n}{2})^2 \times 2 + n) = O(\frac{n^2}{2} + 2n)
     $$
 
-    <img src="bubble_sort.png" style="width:688px" />
+    ![](divide_and_conquer/bubble_sort.png)
 
     Let's calculate the following inequality, where the left side represents the total number of operations before division and the right side represents the total number of operations after division, respectively:
 
@@ -64,7 +64,7 @@ As the name suggests, the algorithm is typically implemented recursively and con
     The jobs of sorting each bucket can be allocated to available computing units.
     Once all jobs are done, all sorted buckets are merged to produce the final result.
 
-    <img src="parallel_computing.png" style="width:600px" />
+    ![](divide_and_conquer/parallel_computing.png)
 
 ## Use Cases
 
@@ -118,4 +118,4 @@ def binary_search(nums: list[int], target: int) -> int:
     return dfs(nums, target, 0, n - 1)  # Solve problem f(0, n-1)
 ```
 
-<img src="example_binary_search.png" style="width:4.5in" />
+![](divide_and_conquer/example_binary_search.png)

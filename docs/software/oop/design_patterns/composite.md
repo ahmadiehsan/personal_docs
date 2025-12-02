@@ -2,14 +2,14 @@
 
 ## Description
 
-<img src="image1.jpg" />
+![](composite/image1.jpg)
 
 Allows you to compose objects into tree structures to represent part-whole hierarchies.
 Composite lets clients treat individual objects and compositions of objects uniformly.
 
-<img src="image3.jpg" style="width:4in" />
+![](composite/image3.jpg)
 
-<img src="image2.jpg" />
+![](composite/image2.jpg)
 
 !!! info
 

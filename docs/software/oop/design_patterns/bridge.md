@@ -2,11 +2,11 @@
 
 ## Description
 
-<img src="image2.jpg" style="width:688px" />
+![](bridge/image2.jpg)
 
 Decouple an abstraction from its implementation so that the two can vary independently.
 
-<img src="image1.jpg" />
+![](bridge/image1.jpg)
 
 !!! info
 

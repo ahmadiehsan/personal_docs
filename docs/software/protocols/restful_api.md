@@ -80,4 +80,4 @@ REST doesn't have any relation with HTTP, which means we can have a RESTful API 
 Leonard Richardson analyzed a hundred different web service designs and divided these designs into four categories.
 These categories are based on how much the web services are REST compliant.
 
-<img src="image1.jpg" style="width:5in" />
+![](restful_api/image1.jpg)

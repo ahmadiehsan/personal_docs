@@ -2,7 +2,7 @@
 
 ## Syntax
 
-<img src="image9.jpg" style="width:688px" />
+![](method/image9.jpg)
 
 ## Parameters
 
@@ -292,7 +292,7 @@
 
 === "Indexer Method"
 
-    <img src="image28.jpg" style="width:4.4in" />
+    ![](method/image28.jpg)
 
     - Indexers are always created with the `this` keyword.
     - Indexers are generally used to access a group of elements (items).

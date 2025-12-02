@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image3.jpg" style="width:4.23438in" />
+![](least_knowledge_principle/image3.jpg)
 
 The Principle of Least Knowledge guides us to reduce the interactions between objects to just a few close "friends."
 
@@ -14,13 +14,13 @@ When you build a lot of dependencies between many classes, you are building a fr
 but how do you keep from doing this?
 The principle provides some guidelines: take any object, and from any method in that object, invoke only methods that belong to:
 
-<img src="image1.jpg" style="width:688px" />
+![](least_knowledge_principle/image1.jpg)
 
 The principle forces us to ask the object to request us; that way, we don't have to know about its component objects (and we keep our circle of friends small).
 For example:
 
-<img src="image2.jpg" />
+![](least_knowledge_principle/image2.jpg)
 
 Here's a Car class that demonstrates all the ways you can call methods and still adhere to the Principle of Least Knowledge:
 
-<img src="image4.jpg" />
+![](least_knowledge_principle/image4.jpg)

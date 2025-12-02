@@ -18,4 +18,4 @@ Some important principles:
 
 ## Principles vs Design Patterns
 
-<img src="image1.jpg" style="width:5.82813in" />
+![](_overview/image1.jpg)

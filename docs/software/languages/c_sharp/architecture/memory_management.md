@@ -2,7 +2,7 @@
 
 ## Schema
 
-<img src="image5.jpg" style="width:4in" />
+![](memory_management/image5.jpg)
 
 ## Stack
 

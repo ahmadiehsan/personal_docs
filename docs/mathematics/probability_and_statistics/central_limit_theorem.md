@@ -5,7 +5,7 @@
 The Central Limit Theorem (CLT) states that if you take enough random samples from any dataset, even if the data is skewed or messy, the average of those samples will start to form a bell-shaped or normal distribution.
 This only holds if the samples are random, independent, and large enough, usually 30 or more.
 
-<img src="image1.jpg" style="width:4.2984in" />
+![](central_limit_theorem/image1.jpg)
 
 !!! info
 

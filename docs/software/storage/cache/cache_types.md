@@ -2,4 +2,4 @@
 
 ## Description
 
-<img src="image1.jpg" />
+![](cache_types/image1.jpg)

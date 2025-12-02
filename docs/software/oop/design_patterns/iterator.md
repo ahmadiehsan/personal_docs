@@ -2,13 +2,13 @@
 
 ## Description
 
-<img src="image1.jpg" style="width:3.91711in" />
+![](iterator/image1.jpg)
 
 The Iterator Pattern provides a way to access the elements of an aggregate (data collection) object sequentially without exposing its underlying representation.
 
 This makes a lot of sense: the pattern gives you a way to step through the elements of an aggregate without having to know how things are represented under the covers.
 
-<img src="image2.jpg" />
+![](iterator/image2.jpg)
 
 The Iterator Pattern allows traversal (iterating) of the elements of an aggregate without exposing the underlying implementation.
 

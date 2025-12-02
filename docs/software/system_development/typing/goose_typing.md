@@ -9,4 +9,4 @@ ABCs introduce virtual subclasses, which are classes that don't inherit from a c
 
 What goose typing means is: isinstance(obj, cls) is now just fine… as long as cls is an Abstract Base Class.
 
-<img src="image1.jpg" style="width:3.99167in" />
+![](goose_typing/image1.jpg)

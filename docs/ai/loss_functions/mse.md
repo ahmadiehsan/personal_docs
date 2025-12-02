@@ -18,21 +18,21 @@ The loss is the mean overseen data of the squared differences between true and p
 
 === "Normal"
 
-    <img src="image8.jpg" style="width:4.5in" />
+    ![](mse/image8.jpg)
 
 === "Regularized"
 
-    <img src="image6.png" style="width:3.5in" />
+    ![](mse/image6.png)
 
 ## Gradient Descent
 
 === "Normal"
 
-    <img src="image1.jpg" style="width:3.5in" />
+    ![](mse/image1.jpg)
 
 === "Regularized"
 
-    <img src="image3.png" style="width:3.5in" />
+    ![](mse/image3.png)
 
 ## Sample Derivative Calculation for Linear Regression
 

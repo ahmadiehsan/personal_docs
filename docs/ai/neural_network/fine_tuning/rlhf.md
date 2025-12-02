@@ -35,7 +35,7 @@ Cons:
     Unlike static datasets, Online RL allows a model to learn from **its own deployed outputs**, incorporating fresh human (or synthetic) feedback into the training process.
     This enables adaptive alignment with evolving user preferences and tasks.
 
-    <img src="online_rl_overview.png" style="width:4.5in" />
+    ![](rlhf/online_rl_overview.png)
 
 ## Workflow
 
@@ -128,11 +128,11 @@ Cons:
 - **PPO (Proximal Policy Optimization)**: A stable, widely-used RL algorithm that prevents large policy updates, reducing training instability.
 - **GRPO (Generalized Reward Policy Optimization)**: Extends PPO by incorporating reward generalization techniques, making it more robust to sparse, delayed, or shifting feedback.
 
-<img src="ppo_and_grpo.png" style="width:6in" />
+![](rlhf/ppo_and_grpo.png)
 
 ## Online RL Vs SFT
 
-<img src="online_rl_vs_sft.png" style="width:688px" />
+![](rlhf/online_rl_vs_sft.png)
 
 SFT learns from **static, external examples** curated by humans, while online RL generates its own training data from the model's interactions.
 This makes online RL **self-driven, adaptive, and less likely to ruin other aspects of the model** since its examples come from the model itself.

@@ -30,4 +30,4 @@ By examining the plot, you might be able to identify clusters of customers with 
 
 Here's a sample t-SNE for the MNIST dataset:
 
-<img src="image1.jpg" style="width:5in" />
+![](tsne/image1.jpg)

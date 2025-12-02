@@ -22,13 +22,13 @@
     The method proposes a set of additional modular components inside the Transformer that can be fine-tuned to improve the model's performance on a specific task without having to fine-tune all the model weights.
     This saves a lot of time and compute.
 
-    <img src="transformer_block.png" style="width:3in" />
+    ![](peft/transformer_block.png)
 
     !!! info
 
         Adapters that specialize in specific tasks can be swapped into the same architecture (if they share the same original model architecture and weights).
 
-    <img src="stack_of_transformer_blocks.png" style="width:688px" />
+    ![](peft/stack_of_transformer_blocks.png)
 
     !!! info
 
@@ -59,14 +59,14 @@
 
     Instead of 150 million parameters, let's reproduce the flow with a 10 times 10 matrix (100 parameters):
 
-    <img src="full_rank.png" style="width:3.5in" />
+    ![](peft/full_rank.png)
 
     We can come up with two smaller matrices, which when multiplied, reconstruct a 10 times 10 matrix.
     This is a major efficiency win because instead of using 100 weights (10 times 10) we now only have 20 weights (10 plus 10).
 
-    <img src="low_rank.png" />
+    ![](peft/low_rank.png)
 
     During training, we only need to update these smaller matrices instead of the full weight changes.
     The updated change matrices (smaller matrices) are then combined with the full (frozen) weights.
 
-    <img src="full_vs_lora.png" />
+    ![](peft/full_vs_lora.png)

@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image2.png" style="width:2.0327in" />
+![](graph/image2.png)
 
 - A collection of nodes connected by edges, representing relationships between nodes.
 - many-to-many relationships in DB.
@@ -12,7 +12,7 @@
 
 Graphs are not limited to only homogeneous data: an equally powerful use of graphs is to provide a consistent way of storing completely different types of objects in a single datastore.
 
-<img src="image1.jpg" style="width:688px" />
+![](graph/image1.jpg)
 
 ## Representation (Implementation)
 
@@ -20,7 +20,7 @@ Graphs are not limited to only homogeneous data: an equally powerful use of grap
 
     Let the number of vertices in the graph be $n$, the adjacency matrix uses an $n \times n$ matrix to represent the graph, where each row (column) represents a vertex, and the matrix elements represent edges, with 1 or 0 indicating whether there is an edge between two vertices.
 
-    <img src="adjacency_matrix.jpg" style="width:600px" />
+    ![](graph/adjacency_matrix.jpg)
 
     When representing graphs with adjacency matrices, it is possible to directly access matrix elements to obtain edges, resulting in efficient operations of addition, deletion, lookup, and modification, all with a time complexity of $O(1)$.
     However, the space complexity of the matrix is $O(n^2)$, which consumes more memory.
@@ -30,7 +30,7 @@ Graphs are not limited to only homogeneous data: an equally powerful use of grap
     The adjacency list uses $n$ linked lists to represent the graph, with each linked list node representing a vertex.
     The $i$-th linked list corresponds to vertex $i$ and contains all adjacent vertices (vertices connected to that vertex).
 
-    <img src="adjacency_list.jpg" style="width:575px" />
+    ![](graph/adjacency_list.jpg)
 
 ## Operations
 
@@ -94,10 +94,10 @@ Graphs are not limited to only homogeneous data: an equally powerful use of grap
 
     Breadth-first search is a near-to-far traversal method, starting from a certain node, always prioritizing the visit to the nearest vertices and expanding outwards layer by layer.
 
-    <img src="bfs_traversal.jpg" style="width:600px" />
+    ![](graph/bfs_traversal.jpg)
 
 === "Depth-first search (DFS)"
 
     Depth-first search is a traversal method that prioritizes going as far as possible and then backtracks when no further path is available.
 
-    <img src="dfs_traversal.jpg" style="width:620px" />
+    ![](graph/dfs_traversal.jpg)

@@ -19,7 +19,7 @@ There are three types of the Factory pattern:
 
 === "Simple Factory"
 
-    <img src="image3.jpg" />
+    ![](factory/image3.jpg)
 
     !!! info
 
@@ -27,12 +27,12 @@ There are three types of the Factory pattern:
 
 === "Factory Method"
 
-    <img src="image7.jpg" />
+    ![](factory/image7.jpg)
 
     Defines an interface for creating an object, but lets subclasses decide which class to instantiate.
     Factory Method lets a class defer instantiation to subclasses.
 
-    <img src="image1.jpg" style="width:550px" />
+    ![](factory/image1.jpg)
 
     !!! info
 
@@ -40,11 +40,11 @@ There are three types of the Factory pattern:
 
 === "Abstract Factory"
 
-    <img src="image6.jpg" style="width:688px" />
+    ![](factory/image6.jpg)
 
     Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 
-    <img src="image4.jpg" style="width:688px" />
+    ![](factory/image4.jpg)
 
     !!! info
 
@@ -63,6 +63,6 @@ Compare that with Simple Factory, which gives you a way to encapsulate object cr
 
 ## Factory Method VS Abstract Factory
 
-<img src="image2.jpg" />
+![](factory/image2.jpg)
 
-<img src="image5.jpg" />
+![](factory/image5.jpg)

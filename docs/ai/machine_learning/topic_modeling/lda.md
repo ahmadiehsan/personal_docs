@@ -11,13 +11,13 @@ It helps if we have **unlabeled data**, we can attempt to "discover" labels.
 - Latent topics can then be found by searching for groups of words that frequently occur together in documents across the corpus
 - Documents are probability distributions over latent topics
 
-    <img src="image2.jpg" style="width:2.9in" />
+    ![](lda/image2.jpg)
 
-    <img src="image1.jpg" style="width:2.9in" />
+    ![](lda/image1.jpg)
 
 - Topics themselves are probability distributions over words
 
-    <img src="image3.jpg" style="width:4.3in" />
+    ![](lda/image3.jpg)
 
 - LDA represents documents as mixtures of topics that spit out words with certain probabilities
 

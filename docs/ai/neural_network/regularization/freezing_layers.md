@@ -6,7 +6,7 @@ Researchers have shown that training only the first five encoder blocks is enoug
 
 Effect of frozen training blocks on training performance:
 
-<img src="effect.png" style="width:5in" />
+![](freezing_layers/effect.png)
 
 ## Example
 

@@ -12,7 +12,7 @@ The output of LDA is a set of linear combinations of the original features, whic
 - Examples from the same class are put closely together by the projection.
 - Examples from different classes are placed far apart by the projection.
 
-<img src="image8.jpg" style="width:3.5in" />
+![](lda/image8.jpg)
 
 LDA is particularly useful when the number of features is large and the number of examples is small.
 It can be used in a variety of applications, including image recognition, speech recognition, and NLP.
@@ -47,7 +47,7 @@ However, it assumes that the classes are normally distributed and that the class
 
     The new axis created according to two criteria (considered simultaneously)
 
-    <img src="image6.jpg" style="width:5in" />
+    ![](lda/image6.jpg)
 
 === "Distance & Scatter Are Important"
 
@@ -55,20 +55,20 @@ However, it assumes that the classes are normally distributed and that the class
 
     **Scatter**: Minimizing the variation of each category
 
-    <img src="image5.jpg" style="width:5in" />
+    ![](lda/image5.jpg)
 
 === "With 3 Features"
 
     LDA will reduce the number of features to: **Number of categories - 1**
 
-    <img src="image4.jpg" style="width:4in" />
+    ![](lda/image4.jpg)
 
-    <img src="image7.jpg" style="width:4in" />
+    ![](lda/image7.jpg)
 
 === "With 3 Categories"
 
     LDA will reduce the dimensionality to: **Number of categories - 1**
 
-    <img src="image2.jpg" style="width:4.2in" />
+    ![](lda/image2.jpg)
 
-    <img src="image1.jpg" style="width:4.2in" />
+    ![](lda/image1.jpg)

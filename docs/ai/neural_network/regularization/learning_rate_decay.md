@@ -4,7 +4,7 @@
 
 <span dir="rtl">این تکنیک کمک میکنه رفته رفته مقدار α کم بشه تا دقیق تر و بدون پرش بتونه به گلوبال مینیمم برسه.</span>
 
-<img src="image1.jpg" style="width:4.90676in" />
+![](learning_rate_decay/image1.jpg)
 
 <span dir="rtl">تو تصویر بالا:</span>
 

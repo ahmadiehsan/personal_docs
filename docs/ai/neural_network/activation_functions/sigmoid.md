@@ -17,4 +17,4 @@ However, it has two major drawbacks:
 
 ## Formula
 
-<img src="image1.jpg" style="width:3.82609in" />
+![](sigmoid/image1.jpg)

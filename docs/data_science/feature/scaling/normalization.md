@@ -33,10 +33,10 @@ $$
 
 === "Text"
 
-    <img src="image3.png" style="width:5in" />
+    ![](normalization/image3.png)
 
     <span dir="rtl">برای اینپوت هایی (فیچر هایی) که خیلی دامنه متفاوتی با هم دارن از این تکنیک استفاده میکنیم.</span>
 
-    <img src="image4.jpg" style="width:5in" />
+    ![](normalization/image4.jpg)
 
     <span dir="rtl">تو تصویر بالا با استفاده از این تکنیک فیچر ها تو رنج های مشابه هم در اومدن که تو تصویر با اسم Normalized مشخص شده، تو این حالت سیستم خیلی سریع تر آموزش میبینه.</span>

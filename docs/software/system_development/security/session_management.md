@@ -2,6 +2,6 @@
 
 ## Overview
 
-<img src="image1.jpg" style="width:688px" />
+![](session_management/image1.jpg)
 
 - We'll save the refresh token in the database to make it invalid at anytime

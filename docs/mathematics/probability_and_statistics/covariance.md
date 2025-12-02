@@ -29,12 +29,12 @@ $$
 
 === "Positive"
 
-    <img src="image4.jpg" style="width:4in" />
+    ![](covariance/image4.jpg)
 
 === "Negative"
 
-    <img src="image1.jpg" style="width:4in" />
+    ![](covariance/image1.jpg)
 
 === "No Relation"
 
-    <img src="image3.jpg" style="width:4.1in" />
+    ![](covariance/image3.jpg)

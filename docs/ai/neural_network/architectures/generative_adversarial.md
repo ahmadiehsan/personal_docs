@@ -7,4 +7,4 @@ The generator creates data instances that aim to come from the same distribution
 The discriminator's goal is to distinguish between instances from the true distribution and instances from the generator.
 The generator and the discriminator are trained together, with the goal that the generator produces better instances as training progresses, whereas the discriminator becomes better at distinguishing true instances from generated ones.
 
-<img src="image1.png" style="width:650px" />
+![](generative_adversarial/image1.png)

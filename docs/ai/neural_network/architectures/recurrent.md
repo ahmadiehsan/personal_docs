@@ -7,7 +7,7 @@ Recurrent Neural Networks (RNNs) are a class of artificial neural networks uniqu
 Unlike feedforward networks, RNNs have connections that form directed cycles.
 This architecture allows them to use information from their previous outputs as inputs, making them ideal for tasks involving sequential data, such as time series prediction or NLP.
 
-<img src="image2.png" style="width:3.73164in" />
+![](recurrent/image2.png)
 
 Examples of sequences:
 
@@ -17,7 +17,7 @@ Examples of sequences:
 - Car Trajectories
 - Music
 
-<img src="image1.png" style="width:5.29688in" />
+![](recurrent/image1.png)
 
 ## Long Short-Term Memory (LSTM)
 

@@ -16,7 +16,7 @@ The core operation of quick sort is "pivot partitioning," which aims to select a
 
     After the pivot partitioning, the original array is divided into three parts: left sub-array, pivot, and right sub-array:
 
-    <img src="pivot_partitioning.jpg" style="width:2.5in" />
+    ![](quick_sort/pivot_partitioning.jpg)
 
     !!! info
 
@@ -28,7 +28,7 @@ The core operation of quick sort is "pivot partitioning," which aims to select a
     2. Then, recursively perform "pivot partitioning" on the left and right sub-arrays separately.
     3. Continue recursively until the length of sub-array is 1, thus completing the sorting of the entire array.
 
-    <img src="workflow.jpg" style="width:688px" />
+    ![](quick_sort/workflow.jpg)
 
 ## Specifications
 

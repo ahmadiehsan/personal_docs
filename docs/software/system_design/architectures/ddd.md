@@ -2,9 +2,9 @@
 
 ## Description
 
-<img src="image2.jpg" style="width:2.64908in" />
+![](ddd/image2.jpg)
 
-<img src="image3.jpg" style="width:4.47917in" />
+![](ddd/image3.jpg)
 
 Types of Domain:
 
@@ -26,7 +26,7 @@ Glossary:
 
 ### Aggregate
 
-<img src="image10.jpg" />
+![](ddd/image10.jpg)
 
 - <span dir="rtl">یک سلسله انتیتی هایی که با هم ساخته و تغییر میکنند</span>
 - <span dir="rtl">تا جایی که میشه باید کوچیک باشه</span>
@@ -38,7 +38,7 @@ Glossary:
 
 ### Value Object
 
-<img src="image1.jpg" style="width:4.42239in" />
+![](ddd/image1.jpg)
 
 - Should be immutable
 - <span dir="rtl">ولیو های انتیتی ما هستن ولی چون لاجیک در خودشون دارن براشون یه کلاس جدا می سازیم تا ولیدیت و یا مثلا ترکیبشون با هم روی قواعد خودشون باشه و به اشتباه با ولیو آبجکت های دیگه جمع و یا منها نشن</span>
@@ -57,7 +57,7 @@ Glossary:
 
 ### Event
 
-<img src="image11.jpg" />
+![](ddd/image11.jpg)
 
 Where to fire the event? In Application service. Domain layer should not know about how to fire the event.
 
@@ -82,13 +82,13 @@ Where to fire the event? In Application service. Domain layer should not know ab
 
 ### Domain Service
 
-<img src="image7.jpg" style="width:4.81342in" />
+![](ddd/image7.jpg)
 
 ### Application Service
 
 Can handle validations, data mappings, transaction management and security
 
-<img src="image9.jpg" />
+![](ddd/image9.jpg)
 
 ### Domain vs Application
 
@@ -96,6 +96,6 @@ Domain services hold domain logic whereas application services don't
 
 ## Sample Project Architecture
 
-<img src="image6.jpg" />
+![](ddd/image6.jpg)
 
-<img src="image4.png" />
+![](ddd/image4.png)

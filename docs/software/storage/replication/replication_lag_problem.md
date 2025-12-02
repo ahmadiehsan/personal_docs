@@ -15,7 +15,7 @@ In database replication setups, where data is copied from one database server (t
     This can happen if a user makes several reads from different replicas.
     For example, the following picture shows user 2345 making the same query twice, first to a follower with little lag, and then to a follower with greater lag. (This scenario is quite likely if the user refreshes a web page, and each request is routed to a random server.)
 
-    <img src="image1.png" style="width:688px" />
+    ![](replication_lag_problem/image1.png)
 
     **Monotonic reads** is a guarantee that this kind of anomaly does not happen.
     It's a lesser guarantee than strong consistency, but a stronger guarantee than eventual consistency.
@@ -51,7 +51,7 @@ In database replication setups, where data is copied from one database server (t
     Poons has even asked it.
     Such psychic powers are impressive but very confusing!
 
-    <img src="image2.png" style="width:688px" />
+    ![](replication_lag_problem/image2.png)
 
     Preventing this kind of anomaly requires another type of guarantee: **consistent prefix reads**.
     This guarantee says that if a sequence of writes happens in a certain order, then anyone reading those writes will see them appear in the same order.

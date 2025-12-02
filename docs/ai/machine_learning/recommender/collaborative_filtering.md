@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image3.jpg" style="width:5.5in" />
+![](collaborative_filtering/image3.jpg)
 
 - <span dir="rtl">این الگوریتم دقیقا مشابه با Simple Recommendation هستش با این تفاوت که اینجا مقادیر x رو نداریم.</span>
 - <span dir="rtl">این الگوریتم اصلی هستش و الگوریتم Simple Recommendation فقط برای فهم بهتر این الگوریتم مطرح شده</span>
@@ -17,26 +17,26 @@
 
 Formula:
 
-<img src="image4.jpg" style="width:5.5in" />
+![](collaborative_filtering/image4.jpg)
 
-<img src="image6.jpg" style="width:5.8in" />
+![](collaborative_filtering/image6.jpg)
 
 Gradient Descent:
 
-<img src="image2.jpg" style="width:4.5in" />
+![](collaborative_filtering/image2.jpg)
 
 <span dir="rtl">همونطور که تو عکس پیداس، مشابه با Linear Regression هستش با این تفاوت که چون x هم اینجا جزو مجهولاته سه تا فانکشن داریم جای دوتا.</span>
 
 ## Binary Classification
 
-<img src="image5.jpg" style="width:3.5in" />
+![](collaborative_filtering/image5.jpg)
 
-<img src="image1.jpg" style="width:5in" />
+![](collaborative_filtering/image1.jpg)
 
 <span dir="rtl">با استفاده از این شیوه خروجی این الگوریتم رو از حالت یک عدد، به حالت boolean تغییر میدیم (در اصل از حالت Linear regression به حالت Logistic regression تغییر میدیمش)</span>
 
 ## Finding Related Items
 
-<img src="image7.jpg" style="width:4.5in" />
+![](collaborative_filtering/image7.jpg)
 
 <span dir="rtl">بعد از این که مقادیر x برای هر محصول با استفاده از تکنیک های قبلی بدست اومد، به راحتی با چک کردن این x ها و پیدا کردن اون هایی که به هم نزدیک هستن (به وسیله فرمول تو تصویر) میتونیم یه سیستم ریکامندر داشته باشیم که مشابهت سنجی میکنه و پیشنهاد میده</span>

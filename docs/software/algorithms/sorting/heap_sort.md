@@ -27,51 +27,51 @@ Suppose the array length is $n$, the heap sort process is as follows.
 
 === "<1>"
 
-    <img src="workflow_step_1.png"  />
+    ![](heap_sort/workflow_step_1.png)
 
 === "<2>"
 
-    <img src="workflow_step_2.png"  />
+    ![](heap_sort/workflow_step_2.png)
 
 === "<3>"
 
-    <img src="workflow_step_3.png"  />
+    ![](heap_sort/workflow_step_3.png)
 
 === "<4>"
 
-    <img src="workflow_step_4.png"  />
+    ![](heap_sort/workflow_step_4.png)
 
 === "<5>"
 
-    <img src="workflow_step_5.png"  />
+    ![](heap_sort/workflow_step_5.png)
 
 === "<6>"
 
-    <img src="workflow_step_6.png"  />
+    ![](heap_sort/workflow_step_6.png)
 
 === "<7>"
 
-    <img src="workflow_step_7.png"  />
+    ![](heap_sort/workflow_step_7.png)
 
 === "<8>"
 
-    <img src="workflow_step_8.png"  />
+    ![](heap_sort/workflow_step_8.png)
 
 === "<9>"
 
-    <img src="workflow_step_9.png"  />
+    ![](heap_sort/workflow_step_9.png)
 
 === "<10>"
 
-    <img src="workflow_step_10.png"  />
+    ![](heap_sort/workflow_step_10.png)
 
 === "<11>"
 
-    <img src="workflow_step_11.png"  />
+    ![](heap_sort/workflow_step_11.png)
 
 === "<12>"
 
-    <img src="workflow_step_12.png"  />
+    ![](heap_sort/workflow_step_12.png)
 
 ## Specifications
 

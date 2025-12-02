@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image1.png" style="width:5.20833in" />
+![](kafka/image1.png)
 
 - **Kafka brokers**: Servers run in a cluster
 - **Topics**: Logical data unit that holds multiple partitions

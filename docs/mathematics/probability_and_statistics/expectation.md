@@ -19,4 +19,4 @@ $$
 
 The below shows the expectation value of a dice:
 
-<img src="image2.jpg" style="width:5in" />
+![](expectation/image2.jpg)

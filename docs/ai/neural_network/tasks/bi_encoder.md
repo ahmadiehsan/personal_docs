@@ -6,7 +6,7 @@ Dense retrieval systems rely on the concept of embeddings and turn the search pr
 
 The following picture shows how dense retrieval takes a search query, consults its archive of texts, and outputs a set of relevant results.
 
-<img src="overview.png" style="width:4.5in" />
+![](bi_encoder/overview.png)
 
 !!! info
 
@@ -20,7 +20,7 @@ These models are fed the sentences from which embeddings are generated through t
 Then, models are optimized through the similarity of the sentence embeddings.
 Since the weights are identical for both BERT models, we can use a single model and feed it the sentences one after the other.
 
-<img src="architecture.png" style="width:3.5in" />
+![](bi_encoder/architecture.png)
 
 ## Vs RAG
 
