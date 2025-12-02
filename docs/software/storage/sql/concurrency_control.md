@@ -6,7 +6,7 @@
 
     Pessimistic locking achieves this goal by taking a shared or read lock on the account so Bob is prevented from changing the account.
 
-    ![](concurrency_control/image2.png)
+    <img src="image2.png" style="width:688px" />
 
     In the diagram above, both Alice and Bob will acquire a read lock on the account table row that both users have read.
     The database acquires these locks on SQL Server when using Repeatable Read or Serializable.
@@ -21,7 +21,7 @@
 
     Optimistic Locking allows the conflict to occur but detects it upon applying Alice's UPDATE as the version has changed.
 
-    ![](concurrency_control/image1.png)
+    <img src="image1.png" style="width:688px" />
 
     This time, we have an additional version column.
     The version column is incremented every time an UPDATE or DELETE is executed, and it is also used in the WHERE clause of the UPDATE and DELETE statements.
@@ -36,7 +36,7 @@ Nowadays, over the Internet, we no longer execute reads and writes in the contex
 
 For instance, consider the following use case:
 
-![](concurrency_control/image3.png)
+<img src="image3.png" />
 
 Without optimistic locking, there is no way this Lost Update would have been caught even if the database transactions used Serializable.
 This is because reads and writes are executed in separate HTTP requests, hence on different database transactions.

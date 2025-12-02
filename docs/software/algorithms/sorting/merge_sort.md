@@ -23,47 +23,47 @@ It is important to note that, merging starts with sub-arrays of length 1, and ea
 
 === "Overview"
 
-    ![](merge_sort/workflow_overview.png)
+    <img src="workflow_overview.png"  />
 
 === "<1>"
 
-    ![](merge_sort/workflow_step_1.png)
+    <img src="workflow_step_1.png"  />
 
 === "<2>"
 
-    ![](merge_sort/workflow_step_2.png)
+    <img src="workflow_step_2.png"  />
 
 === "<3>"
 
-    ![](merge_sort/workflow_step_3.png)
+    <img src="workflow_step_3.png"  />
 
 === "<4>"
 
-    ![](merge_sort/workflow_step_4.png)
+    <img src="workflow_step_4.png"  />
 
 === "<5>"
 
-    ![](merge_sort/workflow_step_5.png)
+    <img src="workflow_step_5.png"  />
 
 === "<6>"
 
-    ![](merge_sort/workflow_step_6.png)
+    <img src="workflow_step_6.png"  />
 
 === "<7>"
 
-    ![](merge_sort/workflow_step_7.png)
+    <img src="workflow_step_7.png"  />
 
 === "<8>"
 
-    ![](merge_sort/workflow_step_8.png)
+    <img src="workflow_step_8.png"  />
 
 === "<9>"
 
-    ![](merge_sort/workflow_step_9.png)
+    <img src="workflow_step_9.png"  />
 
 === "<10>"
 
-    ![](merge_sort/workflow_step_10.png)
+    <img src="workflow_step_10.png"  />
 
 ## Specifications
 

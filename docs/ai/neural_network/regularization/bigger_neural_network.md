@@ -2,4 +2,4 @@
 
 ## Description
 
-<img src="image1.png" style="width:4.42261in" />
+<img src="image1.png" style="width:4.6in" />

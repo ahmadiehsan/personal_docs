@@ -2,12 +2,12 @@
 
 ## Description
 
-![](chain_of_responsibility/image2.jpg)
+<img src="image2.jpg" style="width:688px" />
 
 Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request.
 Chain the receiving objects and pass the request along the chain until an object handles it.
 
-![](chain_of_responsibility/image1.jpg)
+<img src="image1.jpg" />
 
 !!! info
 

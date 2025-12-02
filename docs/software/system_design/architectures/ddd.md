@@ -26,7 +26,7 @@ Glossary:
 
 ### Aggregate
 
-<img src="image10.jpg" style="width:5.44675in" />
+<img src="image10.jpg" />
 
 - <span dir="rtl">یک سلسله انتیتی هایی که با هم ساخته و تغییر میکنند</span>
 - <span dir="rtl">تا جایی که میشه باید کوچیک باشه</span>
@@ -57,7 +57,7 @@ Glossary:
 
 ### Event
 
-![](ddd/image11.jpg)
+<img src="image11.jpg" />
 
 Where to fire the event? In Application service. Domain layer should not know about how to fire the event.
 
@@ -88,7 +88,7 @@ Where to fire the event? In Application service. Domain layer should not know ab
 
 Can handle validations, data mappings, transaction management and security
 
-![](ddd/image9.jpg)
+<img src="image9.jpg" />
 
 ### Domain vs Application
 
@@ -96,6 +96,6 @@ Domain services hold domain logic whereas application services don't
 
 ## Sample Project Architecture
 
-![](ddd/image6.jpg)
+<img src="image6.jpg" />
 
-![](ddd/image4.png)
+<img src="image4.png" />

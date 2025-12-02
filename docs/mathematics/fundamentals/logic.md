@@ -71,7 +71,7 @@ Precedence of logical operators:
 
 ### Logic Circuits
 
-![](logic/image6.jpg)
+<img src="image6.jpg" style="width:688px" />
 
 ## Propositional Equivalences
 

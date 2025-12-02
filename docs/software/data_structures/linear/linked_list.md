@@ -7,7 +7,7 @@ These references hold the memory addresses of subsequent nodes, enabling navigat
 
 The design of linked lists allows for their nodes to be distributed across memory locations **without requiring contiguous memory addresses**.
 
-![](linked_list/image1.jpg)
+<img src="image1.jpg" style="width:688px" />
 
 - The first node in a linked list is the "head node", and the final one is the "tail node".
 - The tail node points to "null".

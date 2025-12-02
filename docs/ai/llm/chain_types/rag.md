@@ -12,7 +12,7 @@ This combination enables models to access external knowledge sources, improving 
 
 === "Naive (Standard)"
 
-    ![](rag/naive_rag.jpg)
+    <img src="naive_rag.jpg" />
 
     Naive RAG is the simplest form of retrieval-augmented generation, where a language model retrieves documents based on the user's query and generates a response using the retrieved information.
     This approach typically relies on basic similarity search (such as vector embeddings or keyword matching) to find relevant passages, without incorporating advanced reasoning, feedback loops, or multi-hop retrieval.
@@ -25,7 +25,7 @@ This combination enables models to access external knowledge sources, improving 
 
 === "Corrective"
 
-    ![](rag/corrective_rag.png)
+    <img src="corrective_rag.png" />
 
     Is designed to refine and improve the outputs of language models by incorporating corrective feedback loops.
     Unlike standard RAG systems that generate responses based solely on initial retrievals, Corrective RAG iteratively evaluates and adjusts its answers, leveraging additional retrievals or user feedback to address inaccuracies or incomplete information.
@@ -34,7 +34,7 @@ This combination enables models to access external knowledge sources, improving 
 
 === "Adaptive"
 
-    ![](rag/adaptive_rag.png)
+    <img src="adaptive_rag.png" />
 
     Is an advanced framework that enhances language models by integrating dynamic retrieval and reasoning processes.
     Unlike traditional RAG systems that use a fixed number of retrieval steps, Adaptive RAG intelligently determines how many retrieval and generation cycles are needed based on the complexity of the task.
@@ -56,7 +56,7 @@ This combination enables models to access external knowledge sources, improving 
 
 === "Graph"
 
-    ![](rag/graph_rag.png)
+    <img src="graph_rag.png" />
 
     Is a retrieval-augmented generation framework that leverages graph-based structures to enhance information retrieval and reasoning.
     Unlike traditional RAG systems that operate in a linear fashion, Graph RAG organizes retrieved knowledge as interconnected nodes and edges, enabling the model to traverse, aggregate, and reason over complex relationships between pieces of information.
@@ -65,14 +65,14 @@ This combination enables models to access external knowledge sources, improving 
 
 === "Multimodal"
 
-    ![](rag/multimodal_rag.jpg)
+    <img src="multimodal_rag.jpg" />
 
     Multimodal RAG is a retrieval-augmented generation framework that integrates multiple data modalities—such as text, images, audio, and video—into the retrieval and generation process.
     Unlike traditional RAG systems that focus solely on textual information, Multimodal RAG leverages embeddings and retrieval techniques across diverse formats, enabling richer and more contextually relevant responses.
 
 === "Agentic"
 
-    ![](rag/agentic_rag.png)
+    <img src="agentic_rag.png" />
 
     Is an advanced retrieval-augmented generation framework that empowers language models with agent-like capabilities.
     Unlike standard RAG systems, Agentic RAG enables the model to autonomously plan, decide, and execute multiple retrieval and reasoning steps, adapting its strategy based on the evolving context and task requirements.
@@ -86,7 +86,7 @@ This combination enables models to access external knowledge sources, improving 
 
 === "Hybrid"
 
-    ![](rag/hybrid_rag.jpg)
+    <img src="hybrid_rag.jpg" />
 
     Is a retrieval-augmented generation framework that combines multiple retrieval strategies—such as dense and sparse retrieval—to enhance the quality and relevance of information provided to language models.
     Unlike traditional RAG systems that rely on a single retrieval method, Hybrid RAG dynamically selects or fuses results from different retrieval approaches, leveraging their complementary strengths.
@@ -95,7 +95,7 @@ This combination enables models to access external knowledge sources, improving 
 
 === "HyDE"
 
-    ![](rag/hyde.jpg)
+    <img src="hyde.jpg" />
 
     HyDE (Hypothetical Document Embeddings) is a retrieval-augmented generation framework that enhances language models by generating hypothetical answers to a query before retrieving supporting documents.
     Instead of directly searching for relevant passages, HyDE first prompts the model to create a plausible answer to the user's question.

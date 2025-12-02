@@ -12,17 +12,17 @@ The `System.String` is a class that represents an array of Unicode characters.
 string referenceVariable = "Hello123";
 ```
 
-![](string/image18.jpg)
+<img src="image18.jpg" style="width:688px" />
 
 ## Methods
 
 | Property                    | Description                                                                 |
-|-----------------------------|-----------------------------------------------------------------------------|
+| --------------------------- | --------------------------------------------------------------------------- |
 | `int Length { get; }`       | This property returns the no. of characters of the string.                  |
 | `char [int index] { get; }` | This indexer returns the single character at the specified character index. |
 
 | Method                                                                | Description                                                                                                                                                                                                                                                                                                      |
-|-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `string ToUpper()`                                                    | Returns the same string in upper case.                                                                                                                                                                                                                                                                           |
 | `string ToLower()`                                                    | Returns the same string in lower case.                                                                                                                                                                                                                                                                           |
 | `string Substring(int startIndex, int length)`                        | Returns a string with a set of characters starting from the "startIndex" up to the "length" no. of characters. The "length" parameter is optional.                                                                                                                                                               |
@@ -67,21 +67,21 @@ sb.Append("additional string");
 Features:
 
 | **Constructor**                             | **Description**                                                                          |
-|---------------------------------------------|------------------------------------------------------------------------------------------|
+| ------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `StringBuilder()`                           | It initializes the `StringBuilder` type of object with the default capacity (16).        |
 | `StringBuilder(int capacity)`               | It initializes the `StringBuilder` type of object with the specified capacity.           |
 | `StringBuilder(string value)`               | It initializes the `StringBuilder` type of object with the specified value.              |
 | `StringBuilder(string value, int capacity)` | It initializes the `StringBuilder` type of object with the specified value and capacity. |
 
 | **Property**                     | **Description**                                                                                                                    |
-|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | `int Length { get; set; }`       | This property gets/sets the length (number of characters) in the string builder.                                                   |
 | `char [int index] { get; set; }` | This indexer gets/sets the single character at the specified character index.                                                      |
 | `int Capacity { get; set; }`     | This property returns the number of characters that can be stored (memory allocated) in the current string builder. Default is 16. |
 | `int MaxCapacity { get; }`       | This property represents the maximum number of characters up to which the capacity can be extended. Default is `int.MaxValue`.     |
 
 | **Method**                                           | **Description**                                                                                                                           |
-|------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | `string Append(string value)`                        | Adds the given string value at the end of the current value of string builder.                                                            |
 | `string Insert(int startIndex, string value)`        | Returns a new string object which inserts the new string value at the specified index in the existing string object.                      |
 | `string Remove(int startIndex, int count)`           | Returns a new string object after removing the specified count of characters at the specified start index from the current string object. |
@@ -91,7 +91,7 @@ Features:
 vs Normal String:
 
 | When to use 'String'                                                                                                 | When to use 'String Builder'                                                                                                                          |
-|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | When you would like to make fewer changes to the string.                                                             | When you would like to have an unknown or extensive number of changes to a string (e.g., making changes/concatenations to the string through a loop). |
 | When you perform a limited number of concatenation operations.                                                       | When you perform extensive concatenation operations.                                                                                                  |
 | When you want to perform extensive search operations using methods such as `IndexOf`, `Contains`, `StartsWith`, etc. | When you perform fewer search operations on strings.                                                                                                  |

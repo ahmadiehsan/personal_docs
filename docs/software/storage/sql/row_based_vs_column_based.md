@@ -6,7 +6,7 @@ Databases come in two fundamental structures: row-based and column-based.
 This crucial decision determines how your data is stored – in rows or columns.
 The performance and scaling implications are significant.
 
-![](row_based_vs_column_based/image1.jpg)
+<img src="image1.jpg" style="width:688px" />
 
 - **Row-Based**: Store data in rows. All the information related to one record is stored together, making it easy to retrieve the full row.
 - **Column-Based**: Store information by columns instead of rows. So a column will contain all values from the field across many rows and records.

@@ -4,12 +4,12 @@
 
 The "Tree of Thoughts" (ToT) framework enhances complex problem-solving by maintaining a tree of thoughts, allowing language models to explore and evaluate intermediate steps.
 
-![](tree_of_thoughts/image2.png)
+<img src="image2.png" style="width:600px" />
 
 It combines thought generation with search algorithms like breadth-first and Depth-First Search for systematic exploration.
 This approach helps identify potential solutions by categorizing thoughts as "sure," "maybe," or "impossible," promoting effective partial solutions while eliminating unfeasible ones.
 
-![](tree_of_thoughts/image1.png)
+<img src="image1.png" style="width:688px" />
 
 ## Varieties
 

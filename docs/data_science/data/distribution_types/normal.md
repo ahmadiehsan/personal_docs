@@ -6,4 +6,4 @@ The classic bell-shaped curve, symmetric around the mean, where data clusters ar
 
 It's fundamental in statistics because many natural processes and measurement errors approximate this shape due to the Central Limit Theorem.
 
-![](normal/diagram.png)
+<img src="diagram.png" style="width:500px" />

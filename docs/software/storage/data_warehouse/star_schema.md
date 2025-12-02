@@ -9,7 +9,7 @@ At the center of the schema is a so-called **fact table** (in this example, it i
 Each row of the fact table represents an event that occurred at a particular time (here, each row represents a customer's purchase of a product).
 If we were analyzing website traffic rather than retail sales, each row might represent a page view or a click by a user.
 
-<img src="image1.png" style="width:4.20139in" />
+<img src="image1.png" style="width:5.2in" />
 
 Usually, facts are captured as individual events, because this allows maximum flexibility of analysis later.
 

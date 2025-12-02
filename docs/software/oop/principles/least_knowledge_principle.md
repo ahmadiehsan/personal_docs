@@ -14,13 +14,13 @@ When you build a lot of dependencies between many classes, you are building a fr
 but how do you keep from doing this?
 The principle provides some guidelines: take any object, and from any method in that object, invoke only methods that belong to:
 
-![](least_knowledge_principle/image1.jpg)
+<img src="image1.jpg" style="width:688px" />
 
 The principle forces us to ask the object to request us; that way, we don't have to know about its component objects (and we keep our circle of friends small).
 For example:
 
-<img src="image2.jpg" style="width:5.87477in" />
+<img src="image2.jpg" />
 
 Here's a Car class that demonstrates all the ways you can call methods and still adhere to the Principle of Least Knowledge:
 
-![](least_knowledge_principle/image4.jpg)
+<img src="image4.jpg" />

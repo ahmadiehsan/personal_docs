@@ -27,7 +27,7 @@ Uses part of examples at each iteration of the optimizer. Therefore, the batch s
 
 <span dir="rtl">تو تصویر بالا X که ماتریکسی از تمامی دیتاهای (m) ما هست رو به ماتریس های کوچکتر 1000 تایی شکستیم و هر کدوم از این mini-batch های 1000 تایی رو با نماد {i} نشون میدیم.</span>
 
-![](stochastic_gradient_descent/image2.jpg)
+<img src="image2.jpg" style="width:688px" />
 
 <span dir="rtl">تو تصویر بالا:</span>
 

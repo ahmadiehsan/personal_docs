@@ -17,7 +17,7 @@
 - Provides an identity layer for obtaining user profile information.
 - Uses JWTs for transmitting user information in a compact, standardized format.
 
-![](oauth2/image1.png)
+<img src="image1.png" style="width:688px" />
 
 ## Use Cases
 

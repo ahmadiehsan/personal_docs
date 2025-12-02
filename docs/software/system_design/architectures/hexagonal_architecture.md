@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image1.png" style="width:3.69792in" />
+<img src="image1.png" style="width:4.2in" />
 
 Facts:
 

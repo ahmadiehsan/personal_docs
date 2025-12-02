@@ -37,4 +37,4 @@ In short, the Outbox Pattern helps maintain data consistency and reliability in 
 
 ## Example
 
-![](outbox/image1.jpg)
+<img src="image1.jpg" />

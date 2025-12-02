@@ -17,7 +17,7 @@ Backtracking typically employs "depth-first search" to traverse the solution spa
 - **Trial and retreat**: It is called a backtracking algorithm because it uses a "trial" and "retreat" strategy when searching the solution space. During the search, whenever it encounters a state where it can no longer proceed to obtain a satisfying solution, it undoes the previous choice and reverts to the previous state so that other possible choices can be chosen for the next attempt.
 - **Prune**: Complex backtracking problems usually involve one or more constraints, which are often used for "pruning".
 
-![](backtracking/workflow.png)
+<img src="workflow.png" style="width:688px" />
 
 ## Advantages & Limitations
 
@@ -169,7 +169,7 @@ There are two common efficiency optimization methods.
         return res
     ```
 
-    ![](backtracking/example_permutation.png)
+    <img src="example_permutation.png" style="width:688px" />
 
 === "Fibonacci"
 

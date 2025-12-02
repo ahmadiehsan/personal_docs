@@ -11,7 +11,7 @@ Dealing with missing data is important because ML models cannot handle missing d
 
 ## Types of Missing Data
 
-![](missing_values/types.png)
+<img src="types.png" style="width:400px" />
 
 Understanding why data is missing is crucial before choosing a handling strategy.
 Missing values typically fall into three categories:

@@ -2,14 +2,14 @@
 
 ## Description
 
-<img src="image1.jpg" style="width:5.89994in" />
+<img src="image1.jpg" />
 
 Allows you to compose objects into tree structures to represent part-whole hierarchies.
 Composite lets clients treat individual objects and compositions of objects uniformly.
 
-<img src="image3.jpg" style="width:4.95063in" />
+<img src="image3.jpg" style="width:4in" />
 
-<img src="image2.jpg" style="width:5.83104in" />
+<img src="image2.jpg" />
 
 !!! info
 

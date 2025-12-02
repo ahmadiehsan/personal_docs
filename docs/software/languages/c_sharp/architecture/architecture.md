@@ -24,11 +24,11 @@
 - CLR: Runner of IL code in the Linux, Windows, etc
 - FCL: All the predefined codes inside of .Net
 
-![](architecture/image9.jpg)
+<img src="image9.jpg" style="width:688px" />
 
 ### Common Language Infrastructure (CLI)
 
-![](architecture/image2.jpg)
+<img src="image2.jpg" style="width:688px" />
 
 ## Common Language Specification (CLS)
 

@@ -77,4 +77,4 @@ The common traversal methods for binary trees include:
 
     Depth-first traversal is like "walking" around the entire binary tree, encountering three positions at each node, corresponding to pre-order, in-order, and post-order traversal.
 
-    ![](binary_tree/depth_first_traversal.png)
+    <img src="depth_first_traversal.png" style="width:688px" />

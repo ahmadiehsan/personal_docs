@@ -18,7 +18,7 @@ The dynamic programming problem-solving process varies with the nature and diffi
 4. Derive state transition equations.
 5. Determine boundary conditions, etc.
 
-![](dynamic_programming/workflow.png)
+<img src="workflow.png" style="width:688px" />
 
 ## Use Cases
 

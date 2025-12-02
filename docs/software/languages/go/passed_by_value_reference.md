@@ -2,7 +2,7 @@
 
 ## Overview
 
-![](passed_by_value_reference/image2.jpg)
+<img src="image2.jpg" style="width:688px" />
 
 ## Why Slices Will Passed by Reference
 

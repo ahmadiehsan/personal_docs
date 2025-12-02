@@ -2,7 +2,7 @@
 
 ## Description
 
-![](facade/image1.jpg)
+<img src="image1.jpg" />
 
 provides a unified interface to a set of interfaces in a subsystem.
 Facade defines a higher-level interface that makes the subsystem easier to use.
@@ -13,4 +13,4 @@ A facade not only simplifies an interface, it decouples a client from a subsyste
 
 ## The Facade Pattern and the Principle of Least Knowledge
 
-![](facade/image2.jpg)
+<img src="image2.jpg" />

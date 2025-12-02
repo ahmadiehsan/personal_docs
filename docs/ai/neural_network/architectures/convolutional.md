@@ -4,7 +4,7 @@
 
 A convolutional neural network (CNN) is a regularized type of feed-forward neural network that learns feature engineering by itself via filter (or kernel) optimization.
 
-![](convolutional/image12.jpg)
+<img src="image12.jpg" style="width:688px" />
 
 - <span dir="rtl">به شبکه عصبی ای که لایه هاش با تمام دیتای مرحله قبلی کاری نداشته باشن و فقط با یک بخشی ازش کار کنن گفته میشه</span>
 - <span dir="rtl">تو این الگو لایه ها اصطلاحا fully-connected نیستن، یعنی هر unite به تمامی unite های لایه بعدی متصل نیست</span>
@@ -34,7 +34,7 @@ Fully connected layers get the output of the pooling layer and conduct high-leve
 - <span dir="rtl">مرحله Polling: این مرحله هم مثل مرحله قبله ولی با این تفاوت که عملکرد فیلتر هاش متفاوته</span>
 - <span dir="rtl">مرحله Fully connected: تو این مرحله سیستم از حالت Convolutional خارج میشه و لایه ها با هم fully connected میشن</span>
 
-![](convolutional/image6.jpg)
+<img src="image6.jpg" style="width:688px" />
 
 ## Convolution Step
 
@@ -48,7 +48,7 @@ Fully connected layers get the output of the pooling layer and conduct high-leve
 
 <span dir="rtl">تمامی پارامترهایی که یک لایه شبکه عصبی CNN ممکنه باهاش سروکار داشته باشه تو تصویر زیر اومده:</span>
 
-![](convolutional/image2.jpg)
+<img src="image2.jpg" style="width:480px" />
 
 - <span dir="rtl">پارامتر f: اندازه فیلتر رو مشخص میکنه، فیلتر ها همیشه اعداد مفرد هستن و معمولا هم 3 در 3 هستن</span>
 - <span dir="rtl">پارامتر p: برای این که توی فرایند اعمال فیلترها روی تصویر، تصویر ما کوچیکتر نشه میتونیم قبل از دادن تصویر به فیلتر با استفاده از padding به اطراف تصویر فضا اضافه کنیم</span>

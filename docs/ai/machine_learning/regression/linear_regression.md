@@ -8,7 +8,7 @@ As the number of independent variables increases, it is referred to as multiple 
 For each type of linear regression, it seeks to plot a line of best fit, which is calculated through the method of least squares.
 However, unlike other regression models, this line is straight when plotted on a graph.
 
-<img src="image1.png" style="width:2.5in" />
+<img src="image1.png" style="width:2.8in" />
 
 ## Varieties
 

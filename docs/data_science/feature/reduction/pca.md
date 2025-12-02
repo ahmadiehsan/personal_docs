@@ -31,7 +31,7 @@ It's also important to consider the interpretability of the selected principal c
 
     As there are as many principal components as there are variables in the data, principal components are constructed in such a manner that the first principal component accounts for the largest possible variance in the data set.
 
-    ![](pca/image1.gif)
+    <img src="image1.gif" style="width:688px" />
 
     For example in the above image, the first principal component approximately is the line that matches the purple marks because it goes through the origin and it's the line in which the projection of the points (red dots) is the most spread out.
 

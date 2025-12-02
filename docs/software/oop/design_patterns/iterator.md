@@ -8,7 +8,7 @@ The Iterator Pattern provides a way to access the elements of an aggregate (data
 
 This makes a lot of sense: the pattern gives you a way to step through the elements of an aggregate without having to know how things are represented under the covers.
 
-![](iterator/image2.jpg)
+<img src="image2.jpg" />
 
 The Iterator Pattern allows traversal (iterating) of the elements of an aggregate without exposing the underlying implementation.
 

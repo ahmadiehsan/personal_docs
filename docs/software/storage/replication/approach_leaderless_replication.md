@@ -9,7 +9,7 @@ Let's say that it's sufficient for two out of three replicas to acknowledge the 
 - After user 1234 has received two ok responses, we consider the write to be successful.
 - The client simply ignores the fact that one of the replicas missed the write.
 
-![](approach_leaderless_replication/image2.jpg)
+<img src="image2.jpg" style="width:688px" />
 
 Now imagine that the unavailable node comes back online, and clients start reading from it.
 Any writes that happened while the node was down are missing from that node.
@@ -36,7 +36,7 @@ For example:
 
 For example when $n=5$, $w=3$, and $r=3$:
 
-![](approach_leaderless_replication/image1.jpg)
+<img src="image1.jpg" style="width:600px" />
 
 ## Eventual Consistency
 

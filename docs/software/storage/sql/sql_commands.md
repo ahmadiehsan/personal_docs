@@ -2,7 +2,7 @@
 
 ## Overview
 
-![](sql_commands/image1.jpg)
+<img src="image1.jpg" style="width:688px" />
 
 - **DML**: Data manipulation language
 - **DCL**: Data control language
@@ -11,4 +11,4 @@
 
 ## Joins
 
-![](sql_commands/image2.jpg)
+<img src="image2.jpg" />

@@ -2,7 +2,7 @@
 
 ## Syntax
 
-![](class/image11.jpg)
+<img src="image11.jpg" style="width:688px" />
 
 - Default access modifier: `internal`
 - Properties: `getter` and `setter`

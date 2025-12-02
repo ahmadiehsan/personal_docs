@@ -11,7 +11,7 @@ Noise in tabular data can be of three types:
 - Features that don't help in explaining the target (Noise2: irrelevant/weak features)
 - Records which don't follow the form or relation which rest of the records do (Noise3: noisy records)
 
-![](_cheatsheet/image7.png)
+<img src="image7.png" style="width:688px" />
 
 ## Varieties
 

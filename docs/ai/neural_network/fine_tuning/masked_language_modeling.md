@@ -9,7 +9,7 @@ It is like going from a general BERT model to a BioBERT model specialized for th
 Instead of having to pretrain an entire model from scratch, we can simply continue pretraining before fine-tuning it for classification.
 This also helps the model to adapt to a certain domain or even the lingo of a specific organization.
 
-![](masked_language_modeling/workflow.png)
+<img src="workflow.png" style="width:688px" />
 
 !!! info
 

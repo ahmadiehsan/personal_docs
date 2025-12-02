@@ -22,7 +22,7 @@ SVM tries to finds the maximal margin (distance between the line and the support
     A data point falling on either side of the hyperplane can be attributed to different classes.
     The dimension of the hyperplane depends on the number of input features in the dataset.
 
-    <img src="image9.png" style="width:2.53833in" />
+    <img src="image9.png" style="width:3.2in" />
 
     In geometry, a hyperplane is a subspace whose dimension is one less than that of its ambient space.
     For example, if a space is 3-dimensional then its hyperplanes are the 2-dimensional planes, while if the space is 2-dimensional, its hyperplanes are the 1-dimensional lines.

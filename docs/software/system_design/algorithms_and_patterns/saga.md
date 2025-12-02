@@ -7,4 +7,4 @@ It involves breaking the transaction into smaller, individual steps and using co
 
 Manages transactions spanning multiple services by breaking them into steps and providing compensating actions if something goes wrong.
 
-![](saga/image1.jpg)
+<img src="image1.jpg" />

@@ -7,4 +7,4 @@ A reranking language model is one of these steps and is tasked with scoring the 
 
 The following picture shows how rerankers are different from dense retrieval (bi-encoders) in that they take an additional input: a set of search results from a previous step in the search pipeline.
 
-![](cross_encoder/overview.png)
+<img src="overview.png" style="width:688px" />

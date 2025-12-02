@@ -20,31 +20,31 @@ It takes advantage of the **sorted order** of elements in an array by reducing t
 
 === "<1>"
 
-    ![](binary_search/workflow_step_1.png)
+    <img src="workflow_step_1.png"  />
 
 === "<2>"
 
-    ![](binary_search/workflow_step_2.png)
+    <img src="workflow_step_2.png"  />
 
 === "<3>"
 
-    ![](binary_search/workflow_step_3.png)
+    <img src="workflow_step_3.png"  />
 
 === "<4>"
 
-    ![](binary_search/workflow_step_4.png)
+    <img src="workflow_step_4.png"  />
 
 === "<5>"
 
-    ![](binary_search/workflow_step_5.png)
+    <img src="workflow_step_5.png"  />
 
 === "<6>"
 
-    ![](binary_search/workflow_step_6.png)
+    <img src="workflow_step_6.png"  />
 
 === "<7>"
 
-    ![](binary_search/workflow_step_7.png)
+    <img src="workflow_step_7.png"  />
 
 ## Advantages & Limitations
 

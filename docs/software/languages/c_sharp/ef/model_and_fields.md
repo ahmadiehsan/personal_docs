@@ -4,7 +4,7 @@
 
 This means mapping one class and its properties to the database table and its fields
 
-![](model_and_fields/image31.jpg)
+<img src="image31.jpg" style="width:688px" />
 
 === "Conventions"
 

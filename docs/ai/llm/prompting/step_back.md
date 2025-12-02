@@ -15,28 +15,29 @@ This activates background reasoning processes that often remain unused in direct
 
 ## Example
 
-**Prompt (general question):**
+!!! info "Prompt (General Question)"
 
-> Based on popular first-person shooter action games, what are 5 fictional key settings that contribute to a challenging and engaging level storyline in a first-person shooter video game?
+    Based on popular first-person shooter action games, what are 5 fictional key settings that contribute to a challenging and engaging level storyline in a first-person shooter video game?
 
-**Output:**
+LLM Output:
 
-1. **Abandoned Military Base**
-2. **Cyberpunk City**
-3. **Alien Spaceship**
-4. **Zombie-Infested Town**
-5. **Underwater Research Facility**
+1. Abandoned Military Base
+2. Cyberpunk City
+3. Alien Spaceship
+4. Zombie-Infested Town
+5. Underwater Research Facility
 
-**Prompt (primary prompt):**
 
-> 1. Abandoned Military Base
-> 2. Cyberpunk City
-> 3. Alien Spaceship
-> 4. Zombie-Infested Town
-> 5. Underwater Research Facility
->
-> Take one of the themes and write a one-paragraph storyline for a new level of a first-person shooter video game that is challenging and engaging.
+!!! info "Prompt (Primary Prompt)"
 
-**Output:**
+    1. Abandoned Military Base
+    2. Cyberpunk City
+    3. Alien Spaceship
+    4. Zombie-Infested Town
+    5. Underwater Research Facility
+
+    Take one of the themes and write a one-paragraph storyline for a new level of a first-person shooter video game that is challenging and engaging.
+
+LLM Output:
 
 A richly detailed, atmospheric narrative centered on the **Underwater Research Facility**, involving mutated sea creatures, malfunctioning tech, and intense underwater survival elements, showcasing a deeper and more immersive response.

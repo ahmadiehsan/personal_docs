@@ -30,7 +30,7 @@ As the name suggests, the algorithm is typically implemented recursively and con
     O(n + (\frac{n}{2})^2 \times 2 + n) = O(\frac{n^2}{2} + 2n)
     $$
 
-    ![](divide_and_conquer/bubble_sort.png)
+    <img src="bubble_sort.png" style="width:688px" />
 
     Let's calculate the following inequality, where the left side represents the total number of operations before division and the right side represents the total number of operations after division, respectively:
 
@@ -64,7 +64,7 @@ As the name suggests, the algorithm is typically implemented recursively and con
     The jobs of sorting each bucket can be allocated to available computing units.
     Once all jobs are done, all sorted buckets are merged to produce the final result.
 
-    ![](divide_and_conquer/parallel_computing.png)
+    <img src="parallel_computing.png" style="width:600px" />
 
 ## Use Cases
 

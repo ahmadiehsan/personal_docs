@@ -21,6 +21,6 @@ Common database categories include:
 
 ## Storage Selection Diagrams
 
-![](storage_selection/image1.jpg)
+<img src="image1.jpg" style="width:688px" />
 
-![](storage_selection/image2.png)
+<img src="image2.png" style="width:688px" />

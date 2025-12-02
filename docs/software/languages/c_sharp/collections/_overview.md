@@ -11,7 +11,7 @@ Collections are the standard way to store and manipulate a group of elements (pr
 - You can search, sort, copy collections using various built-in methods.
 
 | Index | Collection |
-|-------|------------|
+| ----- | ---------- |
 | [0]   | value0     |
 | [1]   | value1     |
 | [2]   | value2     |
@@ -19,4 +19,4 @@ Collections are the standard way to store and manipulate a group of elements (pr
 
 ## Collection Hierarchy
 
-![](_overview/image3.jpg)
+<img src="image3.jpg" style="width:688px" />

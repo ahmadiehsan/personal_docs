@@ -5,7 +5,7 @@
 Transformers rely on a mechanism called self-attention, which allows the model to weigh the importance of different parts of the input data dynamically.
 This enables efficient parallelization and handling of long-range dependencies more effectively than previous models, such as RNNs and LSTMs.
 
-![](transformers/image1.jpg)
+<img src="image1.jpg" style="width:688px" />
 
 ## Workflow
 
@@ -162,7 +162,7 @@ This enables efficient parallelization and handling of long-range dependencies m
 
 === "Multi-Head"
 
-    ![](transformers/multihead_attention.png)
+    <img src="multihead_attention.png" style="width:688px" />
 
     Multi-Head Attention (MHA) instead of performing a single attention function, the model runs multiple attention mechanisms (heads) in parallel.
     Each head focuses on different parts of the sentence, capturing various aspects of the relationships between words.
@@ -181,21 +181,21 @@ This enables efficient parallelization and handling of long-range dependencies m
 
 === "Multi Query"
 
-    ![](transformers/multi_query_attention.png)
+    <img src="multi_query_attention.png" style="width:688px" />
 
     Multi Query Attention (MQA) uses a single shared Key and Value for all query heads, significantly reducing KV-Cache memory requirements.
     This approach improves inference speed while maintaining competitive quality compared to Multi-Head Attention.
 
 === "Grouped Query"
 
-    ![](transformers/grouped_query_attention.png)
+    <img src="grouped_query_attention.png" style="width:688px" />
 
     Grouped Query Attention (GQA) divides query heads into groups that share the same Key and Value, balancing the trade-off between MHA and MQA.
     It reduces KV-Cache memory and improves inference speed while maintaining better quality than MQA.
 
 === "Multihead Latent"
 
-    ![](transformers/multihead_latent_attention.png)
+    <img src="multihead_latent_attention.png" style="width:688px" />
 
     Multihead Latent Attention (MLA) compresses Key and Value vectors into a shared latent space before computing attention, substantially reducing KV-Cache parameters.
     This approach achieves quality comparable to MHA while enabling more efficient inference at scale.

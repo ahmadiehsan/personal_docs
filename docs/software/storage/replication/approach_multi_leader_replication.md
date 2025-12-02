@@ -8,7 +8,7 @@ If you can't connect to the leader for any reason, for example, due to a network
 A natural extension of the leader-based replication (**Multi-Leader Replication**) model is to allow **more than one node to accept writes**.
 Replication still happens in the same way: each node that processes a write must forward that data change to all the other nodes.
 
-![](approach_multi_leader_replication/image2.png)
+<img src="image2.png" style="width:600px" />
 
 As multi-leader replication is a somewhat retrofitted feature in many databases, there are often subtle configuration pitfalls and surprising interactions with other database features.
 For example, auto-incrementing keys, triggers, and integrity constraints can be problematic.
@@ -18,4 +18,4 @@ For example, auto-incrementing keys, triggers, and integrity constraints can be 
 
 Although multi-leader replication has advantages, it also has a big downside: the same data may be concurrently modified in two different data centers, and those write conflicts must be resolved (indicated as "conflict resolution" in the above picture)
 
-![](approach_multi_leader_replication/image1.png)
+<img src="image1.png" style="width:688px" />

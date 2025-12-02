@@ -287,8 +287,8 @@
 
 - Clustering:
 
-  ![](elasticsearch/elasticsearch_cluster.jpg)
+  <img src="elasticsearch_cluster.jpg" />
 
 - Elasticsearch DSL & Django ORM:
 
-  ![](elasticsearch/django_orm_map_to_elasticsearch_dsl.jpg)
+  <img src="django_orm_map_to_elasticsearch_dsl.jpg" />

@@ -12,9 +12,9 @@ The false-positive rate is also known as probability of false alarm and can be c
 
 ## Formula
 
-<img src="image2.jpg" style="width:3.87226in" />
+<img src="image2.jpg" style="width:4.2in" />
 
-<img src="image1.jpg" style="width:3.88105in" />
+<img src="image1.jpg" style="width:4.2in" />
 
 - The table is calculated by the **confusion matrix** technique
 - **True Positives**: numbere of experiments that the algorithm classified them **correctly**
@@ -24,4 +24,4 @@ The false-positive rate is also known as probability of false alarm and can be c
 
 AUC makes it easy to compare one ROC curve to another.
 
-<img src="image4.jpg" style="width:3.60185in" />
+<img src="image4.jpg" style="width:4in" />

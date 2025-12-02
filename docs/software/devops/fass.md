@@ -7,7 +7,7 @@
 - **SAAS**: Software as a service
 - **FAAS**: Function as a service
 
-![](fass/image1.png)
+<img src="image1.png" />
 
 ## References
 

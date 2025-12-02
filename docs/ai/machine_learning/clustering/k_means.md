@@ -28,7 +28,7 @@ k-means clustering is a method of vector quantization, originally from signal pr
 
 ## Formula
 
-![](k_means/image2.jpg)
+<img src="image2.jpg" style="width:550px" />
 
 - <span dir="rtl">تو تصویر بالا میتونیم الگو ریاضیاتیشو ببینیم</span>
 - <span dir="rtl">علامت m هم نشون میده چنتا نقطه داریم</span>

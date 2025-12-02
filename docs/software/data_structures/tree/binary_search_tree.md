@@ -7,7 +7,7 @@ The sorted version of a Binary Tree is called Binary Search Tree, which means:
 1. For the root node, the value of all nodes in the left subtree < the value of the root node < the value of all nodes in the right subtree.
 2. The left and right subtrees of any node are also binary search trees, i.e., they satisfy condition 1. as well.
 
-<img src="image4.jpg" style="width:3in" />
+<img src="image4.jpg" style="width:3.5in" />
 
 ## Operations
 

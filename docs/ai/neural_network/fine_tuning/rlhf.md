@@ -132,7 +132,7 @@ Cons:
 
 ## Online RL Vs SFT
 
-![](rlhf/online_rl_vs_sft.png)
+<img src="online_rl_vs_sft.png" style="width:688px" />
 
 SFT learns from **static, external examples** curated by humans, while online RL generates its own training data from the model's interactions.
 This makes online RL **self-driven, adaptive, and less likely to ruin other aspects of the model** since its examples come from the model itself.

@@ -114,7 +114,7 @@ $$
 
 ### Determinant
 
-![](matrix/image6.jpg)
+<img src="image6.jpg" style="width:688px" />
 
 The determinant of a $2 \times 2$ matrix is
 

@@ -204,7 +204,7 @@
 
 === "IAuthorizationService"
 
-    ![](identity/image14.jpg)
+    <img src="image14.jpg" style="width:688px" />
 
 === "Authorization Middleware"
 
@@ -216,7 +216,7 @@
 
 === "Overview"
 
-    ![](identity/image25.jpg)
+    <img src="image25.jpg" style="width:450px" />
 
     Microsoft package for easier work with user and its related actions like sign-in, sign-out, change password, and etc.
 

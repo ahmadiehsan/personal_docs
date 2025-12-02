@@ -35,10 +35,10 @@ That means the implementation and the client should be loosely coupled to avoid 
 
 ## Class Patterns & Object Patterns
 
-![](_overview/image2.png)
+<img src="image2.png" />
 
 | **Scope**  | **Creational**   | **Structural**   | **Behavioral**          |
-|------------|------------------|------------------|-------------------------|
+| ---------- | ---------------- | ---------------- | ----------------------- |
 | **Class**  | Factory Method   | Adapter (class)  | Interpreter             |
 | "          |                  |                  | Template Method         |
 | **Object** | Abstract Factory | Adapter (object) | Chain of Responsibility |
@@ -53,12 +53,12 @@ That means the implementation and the client should be loosely coupled to avoid 
 
 ## Design Pattern Relationships
 
-![](_overview/image1.jpg)
+<img src="image1.jpg" />
 
 ## Each Pattet for What Aspect
 
 | **Purpose**    | **Design Pattern**      | **Aspect(s) That Can Vary**                                                                |
-|----------------|-------------------------|--------------------------------------------------------------------------------------------|
+| -------------- | ----------------------- | ------------------------------------------------------------------------------------------ |
 | **Creational** | Abstract Factory        | families of product objects                                                                |
 | "              | Builder                 | how a composite object gets created                                                        |
 | "              | Factory Method          | subclass of object that is instantiated                                                    |

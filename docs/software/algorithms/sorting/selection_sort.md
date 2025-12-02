@@ -16,47 +16,47 @@ Suppose the length of the array is $n$, the steps of selection sort are:
 
 === "<1>"
 
-    ![](selection_sort/workflow_step_1.png)
+    <img src="workflow_step_1.png"  />
 
 === "<2>"
 
-    ![](selection_sort/workflow_step_2.png)
+    <img src="workflow_step_2.png"  />
 
 === "<3>"
 
-    ![](selection_sort/workflow_step_3.png)
+    <img src="workflow_step_3.png"  />
 
 === "<4>"
 
-    ![](selection_sort/workflow_step_4.png)
+    <img src="workflow_step_4.png"  />
 
 === "<5>"
 
-    ![](selection_sort/workflow_step_5.png)
+    <img src="workflow_step_5.png"  />
 
 === "<6>"
 
-    ![](selection_sort/workflow_step_6.png)
+    <img src="workflow_step_6.png"  />
 
 === "<7>"
 
-    ![](selection_sort/workflow_step_7.png)
+    <img src="workflow_step_7.png"  />
 
 === "<8>"
 
-    ![](selection_sort/workflow_step_8.png)
+    <img src="workflow_step_8.png"  />
 
 === "<9>"
 
-    ![](selection_sort/workflow_step_9.png)
+    <img src="workflow_step_9.png"  />
 
 === "<10>"
 
-    ![](selection_sort/workflow_step_10.png)
+    <img src="workflow_step_10.png"  />
 
 === "<11>"
 
-    ![](selection_sort/workflow_step_11.png)
+    <img src="workflow_step_11.png"  />
 
 ## Specifications
 

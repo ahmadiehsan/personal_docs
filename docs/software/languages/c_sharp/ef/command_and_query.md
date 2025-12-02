@@ -4,7 +4,7 @@
 
 ### Deferred Execution
 
-![](command_and_query/image6.jpg)
+<img src="image6.jpg" style="width:688px" />
 
 ### Projection
 
@@ -27,7 +27,7 @@ In this example, the customer data is projected to an anonymous type which conta
 
 ### IQueryable vs IEnumerable
 
-![](command_and_query/image8.jpg)
+<img src="image8.jpg" />
 
 ### Entity States
 

@@ -2,12 +2,12 @@
 
 ## Description
 
-![](osi_model/image2.jpg)
+<img src="image2.jpg" />
 
 ## Layers
 
 | Layer              | Key Protocols/Concepts                                                                              | Key Function                              |
-|--------------------|-----------------------------------------------------------------------------------------------------|-------------------------------------------|
+| ------------------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------- |
 | **7.Application**  | DNS, WWW/HTTP, P2P, EMAIL/POP, SMTP, Telnet, FTP                                                    | Network Process to Application            |
 | **6.Presentation** | Recognizing Data: HTML, DOC, JPEG, MP3, AVI, Sockets                                                | Data Representation and Encryption        |
 | **5.Session**      | Session Establishment in TCP, SIP, RTP, RPC-Named Pipes                                             | Interhost Communication                   |

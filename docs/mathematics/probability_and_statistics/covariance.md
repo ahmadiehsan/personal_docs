@@ -25,10 +25,16 @@ $$
 - $\bar{y}$ = mean of $y$
 - $N$ = number of data values
 
-## 3 Types of Covariance
+## Types
 
-<img src="image4.jpg" style="width:3.22517in" />
+=== "Positive"
 
-<img src="image1.jpg" style="width:3.26181in" />
+    <img src="image4.jpg" style="width:4in" />
 
-<img src="image3.jpg" style="width:3.45235in" />
+=== "Negative"
+
+    <img src="image1.jpg" style="width:4in" />
+
+=== "No Relation"
+
+    <img src="image3.jpg" style="width:4.1in" />

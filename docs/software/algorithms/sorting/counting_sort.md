@@ -18,35 +18,39 @@ Given an array `nums` of length $n$, where all elements are "non-negative intege
 
 === "Overview"
 
-    ![](counting_sort/workflow_overview.png)
+    <img src="workflow_overview.png"  />
 
 === "<1>"
 
-    ![](counting_sort/workflow_step_1.png)
+    <img src="workflow_step_1.png"  />
 
 === "<2>"
 
-    ![](counting_sort/workflow_step_2.png)
+    <img src="workflow_step_2.png"  />
 
 === "<3>"
 
-    ![](counting_sort/workflow_step_3.png)
+    <img src="workflow_step_3.png"  />
 
 === "<4>"
 
-    ![](counting_sort/workflow_step_4.png)
+    <img src="workflow_step_4.png"  />
 
 === "<5>"
 
-    ![](counting_sort/workflow_step_5.png)
+    <img src="workflow_step_5.png"  />
 
 === "<6>"
 
-    ![](counting_sort/workflow_step_6.png)
+    <img src="workflow_step_6.png"  />
 
 === "<7>"
 
-    ![](counting_sort/workflow_step_7.png)
+    <img src="workflow_step_7.png"  />
+
+=== "<8>"
+
+    <img src="workflow_step_8.png"  />
 
 ## Specifications
 

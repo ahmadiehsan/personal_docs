@@ -2,4 +2,4 @@
 
 ## Description
 
-![](polymorphism/image1.jpg)
+<img src="image1.jpg" style="width:688px" />

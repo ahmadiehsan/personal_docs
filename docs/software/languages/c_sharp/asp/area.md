@@ -6,7 +6,7 @@
 - It's useful when we have different functionalities for admins and regular users
 - In the bellow we can see a project with two areas:
 
-    <img src="image1.jpg" style="width:2in" />
+    <img src="image1.jpg" style="width:3in" />
 
 - By adding area feature into the project, we should change our default url pattern to something like this:
 

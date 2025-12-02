@@ -17,4 +17,4 @@ Only a few labeled examples are needed for this framework to be competitive with
 2. **Fine-tuning embeddings**: Fine-tuning a pre-trained embedding model based on the previously generated training data.
 3. **Training a classifier**: Create a classification head on top of the embedding model and train it using the previously generated training data
 
-![](setfit/workflow.png)
+<img src="workflow.png" style="width:688px" />

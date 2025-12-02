@@ -13,7 +13,7 @@ How we scale our system to support millions of users:
 - Split tiers into individual services
 - Monitor your system and use automation tools
 
-<img src="image1.jpg" style="width:4.7198in" />
+<img src="image1.jpg" />
 
 ## One cache cluster to rule them all
 

@@ -12,7 +12,7 @@ We can use these page references to construct a tree of pages,
 
 === "Primary Structure"
 
-    ![](b_tree_storeage_structure/image1.png)
+    <img src="image1.png" style="width:688px" />
 
 === "After Add/Update"
 
@@ -21,4 +21,4 @@ We can use these page references to construct a tree of pages,
     If you want to add a new key, you need to find the page whose range encompasses the new key and add it to that page.
     If there isn't enough free space on the page to accommodate the new key, it is split into two half-full pages, and the parent page is updated to account for the new subdivision of key ranges
 
-    ![](b_tree_storeage_structure/image2.png)
+    <img src="image2.png" style="width:688px" />

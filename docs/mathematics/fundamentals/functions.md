@@ -39,7 +39,7 @@ A function $f$ is said to be one-to-one, or an injection, if and only if $f(x) =
 
 A function is said to be injective if it is one-to-one.
 
-![](functions/image1.png)
+<img src="image1.png" />
 
 ### Increasing and Decreasing Function
 
@@ -51,7 +51,7 @@ A function $f$ from $X$ to $Y$ is called onto, or a surjection, if and only if f
 
 A function $f$ is called surjective if it is onto.
 
-![](functions/image2.png)
+<img src="image2.png" />
 
 ### Identity Function
 

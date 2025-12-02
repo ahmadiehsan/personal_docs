@@ -28,7 +28,7 @@
 
         Adapters that specialize in specific tasks can be swapped into the same architecture (if they share the same original model architecture and weights).
 
-    ![](peft/stack_of_transformer_blocks.png)
+    <img src="stack_of_transformer_blocks.png" style="width:688px" />
 
     !!! info
 
@@ -49,10 +49,6 @@
 
 ## Workflow
 
-=== "PEFT"
-
-=== "Adapters"
-
 === "LoRA"
 
     We create this subset of parameters by approximating large matrices that accompany the original LLM with smaller matrices.
@@ -68,9 +64,9 @@
     We can come up with two smaller matrices, which when multiplied, reconstruct a 10 times 10 matrix.
     This is a major efficiency win because instead of using 100 weights (10 times 10) we now only have 20 weights (10 plus 10).
 
-    ![](peft/low_rank.png)
+    <img src="low_rank.png" />
 
     During training, we only need to update these smaller matrices instead of the full weight changes.
     The updated change matrices (smaller matrices) are then combined with the full (frozen) weights.
 
-    ![](peft/full_vs_lora.png)
+    <img src="full_vs_lora.png" />

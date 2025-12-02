@@ -56,11 +56,11 @@ Different layers in a transformer specialize in different linguistic properties:
 
 === "AI"
 
-    <img src="godfather_1.jpg" style="width:3.02139in" />
+    <img src="godfather_2.jpg" style="width:2.99608in" />    
 
 === "Convolutional NN"
 
-    <img src="godfather_2.jpg" style="width:2.99608in" />
+    <img src="godfather_1.jpg" style="width:3.02139in" />
 
 ## Scikit-Learn
 

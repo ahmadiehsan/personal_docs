@@ -60,15 +60,15 @@
 
 === "Standard"
 
-    ![](relu/relu_diagram.jpg)
+    <img src="relu_diagram.jpg" style="width:688px" />
 
 === "Leaky"
 
-    ![](relu/leaky_diagram.png)
+    <img src="leaky_diagram.png" style="width:688px" />
 
 === "ELU"
 
-    ![](relu/elu_diagram.jpg)
+    <img src="elu_diagram.jpg" style="width:688px" />
 
     Here alpha (α) is a constant that defines function smoothness when inputs are negative.
     ELU tends to converge cost to zero faster and produce more accurate results.
@@ -80,7 +80,7 @@
     f(x) = \ln(1 + e^x)
     $$
 
-    ![](relu/softplus_diagram.png)
+    <img src="softplus_diagram.png" style="width:688px" />
 
 === "GELU"
 
@@ -88,7 +88,7 @@
 
     where $\Phi(x)$ is the cumulative distribution function of the standard Gaussian.
 
-    ![](relu/gelu_diagram.png)
+    <img src="gelu_diagram.png" style="width:688px" />
 
 === "Swish"
 
@@ -96,7 +96,7 @@
 
     where $\sigma$ is the sigmoid function and $\beta$ is a learnable parameter.
 
-    ![](relu/swish_diagram.png)
+    <img src="swish_diagram.png" style="width:688px" />
 
 === "SwiGLU"
 
@@ -110,7 +110,7 @@
 
     A smooth, self-regularizing activation combining tanh and softplus.
 
-    ![](relu/mish_diagram.png)
+    <img src="mish_diagram.png" style="width:688px" />
 
 === "ReLU$^2$"
 
@@ -118,7 +118,7 @@
 
     Squares the ReLU output, amplifying positive activations while maintaining sparsity.
 
-    ![](relu/relu_2_diagram.png)
+    <img src="relu_2_diagram.png" style="width:688px" />
 
 ## VS
 

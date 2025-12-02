@@ -2,12 +2,12 @@
 
 ## Description
 
-![](strategy/image1.jpg)
+<img src="image1.jpg" style="width:600px" />
 
 Defines a family of algorithms, encapsulates each one, and makes them interchangeable.
 Strategy lets the algorithm vary independently from clients that use it.
 
-![](strategy/image2.jpg)
+<img src="image2.jpg" />
 
 !!! info
 

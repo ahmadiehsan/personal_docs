@@ -2,7 +2,7 @@
 
 ## Syntax
 
-![](method/image9.jpg)
+<img src="image9.jpg" style="width:688px" />
 
 ## Parameters
 

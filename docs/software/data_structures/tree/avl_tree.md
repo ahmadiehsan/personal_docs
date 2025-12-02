@@ -7,12 +7,12 @@ In such cases, the time complexity of all operations degrades from $O(\log n)$ t
 
 For example, in the following picture, after two node removal operations, this binary search tree will degrade into a linked list:
 
-<img src="image2.jpg" style="width:5.15733in" />
+<img src="image2.jpg" style="width:6in" />
 
 AVL tree is using the "rotation" operation to restore balance to an unbalanced node without affecting the in-order traversal sequence of the binary tree.
 In other words, the rotation operation can maintain the property of a "binary search tree" while also turning the tree back into a "balanced binary tree".
 
-![](avl_tree/image1.jpg)
+<img src="image1.jpg" style="width:600px" />
 
 Typical applications of AVL trees:
 

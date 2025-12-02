@@ -2,7 +2,7 @@
 
 ## Description
 
-<img src="image2.jpg" style="width:5.77565in" />
+<img src="image2.jpg" />
 
 Provides a surrogate or placeholder for another object to control access to it.
 

@@ -15,7 +15,7 @@ Conversely, those based on linked lists are called "**Dynamic Data Structures**"
 
 Logical structures define relationships between data elements.
 
-![](_overview/image1.png)
+<img src="image1.png" style="width:688px" />
 
 **Linear structures**, like arrays and linked lists, organize data in a sequence, while **non-linear structures** like trees and graphs use hierarchical or network relationships.
 

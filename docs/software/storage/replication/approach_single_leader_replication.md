@@ -7,7 +7,7 @@ Each follower takes the log from the leader and updates its local copy of the da
 
 The most common solution for this is called **leader-based** replication (also known as **active/passive** or **master-slave** replication) and is illustrated in the following picture:
 
-![](approach_single_leader_replication/image2.png)
+<img src="image2.png" style="width:688px" />
 
 - Each node that stores a copy of the database is called a **replica**
 - Every write to the database needs to be processed by every replica
@@ -22,7 +22,7 @@ An important detail of a replicated system is whether the replication happens sy
 
 In the following picture we can see a leader-based replication with **one synchronous** and **one asynchronous** follower:
 
-![](approach_single_leader_replication/image1.png)
+<img src="image1.png" style="width:688px" />
 
 ## Failover
 

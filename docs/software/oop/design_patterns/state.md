@@ -2,12 +2,12 @@
 
 ## Description
 
-![](state/image2.jpg)
+<img src="image2.jpg" />
 
 The State Pattern allows an object to alter its behavior when its internal state changes.
 The object will appear to change its class.
 
-![](state/image1.jpg)
+<img src="image1.jpg" />
 
 !!! info
 

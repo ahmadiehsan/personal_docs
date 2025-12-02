@@ -12,7 +12,7 @@ They enable models to capture semantic relationships and similarities between en
     Dense embeddings use low-dimensional, continuous-valued vectors to represent entities.
     Learned through neural networks (e.g., Word2Vec, GloVe), dense embeddings capture semantic relationships and are widely used in modern NLP applications.
 
-    ![](embedding/dense.jpg)
+    <img src="dense.jpg" />
 
     !!! info
 
@@ -25,7 +25,7 @@ They enable models to capture semantic relationships and similarities between en
     Traditional **one-hot encoding** and **bag-of-words models** are examples of sparse embeddings.
     They are simple but can be memory-inefficient and do not capture semantic similarity.
 
-    ![](embedding/sparse.jpg)
+    <img src="sparse.jpg" />
 
     !!! info
 
@@ -37,7 +37,7 @@ They enable models to capture semantic relationships and similarities between en
     Binary embeddings represent entities using vectors of binary values (0s and 1s).
     These are useful for efficient storage and fast similarity computations, often used in large-scale retrieval systems.
 
-    ![](embedding/binary.jpg)
+    <img src="binary.jpg" />
 
     !!! info
 
@@ -49,7 +49,7 @@ They enable models to capture semantic relationships and similarities between en
     Quantized embeddings reduce the precision of vector elements (e.g., from float32 to int8) to save memory and speed up computation.
     Quantization is commonly applied to dense embeddings for deployment on resource-constrained devices.
 
-    ![](embedding/quantized.jpg)
+    <img src="quantized.jpg" />
 
     !!! info
 
@@ -61,7 +61,7 @@ They enable models to capture semantic relationships and similarities between en
     Variable dimension embeddings allow different entities to have vectors of different lengths, adapting the representation size to the complexity or frequency of the entity.
     This can improve efficiency and expressiveness in certain applications.
 
-    ![](embedding/variable_dimension.jpg)
+    <img src="variable_dimension.jpg" />
 
     !!! info
 
@@ -73,7 +73,7 @@ They enable models to capture semantic relationships and similarities between en
     Multi-vector embeddings represent a single entity with multiple vectors, capturing different aspects or contexts.
     This approach is used in advanced models to better encode polysemy or multi-faceted information.
 
-    ![](embedding/multi_vector.jpg)
+    <img src="multi_vector.jpg" />
 
     !!! info
 

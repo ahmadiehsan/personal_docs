@@ -16,35 +16,35 @@ Assume the array has length $n$. The steps of bubble sort are:
 
 === "Overview"
 
-    ![](bubble_sort/workflow_overview.png)
+    <img src="workflow_overview.png"  />
 
 === "<1>"
 
-    ![](bubble_sort/workflow_step_1.png)
+    <img src="workflow_step_1.png"  />
 
 === "<2>"
 
-    ![](bubble_sort/workflow_step_2.png)
+    <img src="workflow_step_2.png"  />
 
 === "<3>"
 
-    ![](bubble_sort/workflow_step_3.png)
+    <img src="workflow_step_3.png"  />
 
 === "<4>"
 
-    ![](bubble_sort/workflow_step_4.png)
+    <img src="workflow_step_4.png"  />
 
 === "<5>"
 
-    ![](bubble_sort/workflow_step_5.png)
+    <img src="workflow_step_5.png"  />
 
 === "<6>"
 
-    ![](bubble_sort/workflow_step_6.png)
+    <img src="workflow_step_6.png"  />
 
 === "<7>"
 
-    ![](bubble_sort/workflow_step_7.png)
+    <img src="workflow_step_7.png"  />
 
 ## Specifications
 

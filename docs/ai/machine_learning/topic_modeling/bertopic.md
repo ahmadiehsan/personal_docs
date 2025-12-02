@@ -4,7 +4,7 @@ BERTopic is a topic modeling technique that leverages transformers and c-TF-IDF 
 
 BERTopic is popular for its modularity, which means we can use any desired algorithm inside it:
 
-![](bertopic/bertopic_modularity.png)
+<img src="bertopic_modularity.png" style="width:350px" />
 
 ## Example
 

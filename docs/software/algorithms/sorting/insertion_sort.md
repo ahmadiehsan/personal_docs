@@ -13,7 +13,7 @@ Specifically, we select a base element from the unsorted interval, compare it wi
 3. Select the third element as `base`, insert it into its correct position, **leaving the first three elements sorted**.
 4. Continuing in this manner, in the final iteration, the last element is taken as `base`, and after inserting it into the correct position, **all elements are sorted**.
 
-<img src="workflow.jpg" style="width:5in" />
+<img src="workflow.jpg" style="width:5.25in" />
 
 ## Specifications
 
