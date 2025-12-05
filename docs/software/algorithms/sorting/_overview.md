@@ -2,23 +2,23 @@
 
 ## Vs
 
-| Algorithm     |  Time (Best)  | Time (Average) | Time (Worst)  | Space (Worst) | Stable | In-place | Adaptive | Comparison |
-| ------------- | :-----------: | :------------: | :-----------: | :-----------: | :----: | :------: | :------: | :--------: |
-| **Selection** |   $O(n^2)$    |    $O(n^2)$    |   $O(n^2)$    |    $O(1)$     |   No   |   Yes    |    No    |    Yes     |
-| **Bubble**    |    $O(n)$     |    $O(n^2)$    |   $O(n^2)$    |    $O(1)$     |  Yes   |   Yes    |   Yes    |    Yes     |
-| **Insertion** |    $O(n)$     |    $O(n^2)$    |   $O(n^2)$    |    $O(1)$     |  Yes   |   Yes    |   Yes    |    Yes     |
-| **Quick**     | $O(n \log n)$ | $O(n \log n)$  |   $O(n^2)$    |  $O(\log n)$  |   No   |   Yes    |    No    |    Yes     |
-| **Merge**     | $O(n \log n)$ | $O(n \log n)$  | $O(n \log n)$ |    $O(n)$     |  Yes   |    No    |    No    |    Yes     |
-| **Heap**      | $O(n \log n)$ | $O(n \log n)$  | $O(n \log n)$ |    $O(1)$     |   No   |   Yes    |    No    |    Yes     |
-| **Bucket**    |   $O(n+k)$    |    $O(n+k)$    |   $O(n^2)$    |   $O(n+k)$    |  Yes   |    No    |   Yes    |     No     |
-| **Counting**  |   $O(n+m)$    |    $O(n+m)$    |   $O(n+m)$    |   $O(n+m)$    |  Yes   |    No    |    No    |     No     |
-| **Radix**     |    $O(nk)$    |    $O(nk)$     |    $O(nk)$    |   $O(n+b)$    |  Yes   |    No    |    No    |     No     |
+| Algorithm     | Time (Best)   | Time (Average) | Time (Worst)  | Space (Worst) | Stable | In-place | Adaptive | Comparison |
+| ------------- | ------------- | -------------- | ------------- | ------------- | ------ | -------- | -------- | ---------- |
+| **Selection** | $O(n^2)$      | $O(n^2)$       | $O(n^2)$      | $O(1)$        | No     | Yes      | No       | Yes        |
+| **Bubble**    | $O(n)$        | $O(n^2)$       | $O(n^2)$      | $O(1)$        | Yes    | Yes      | Yes      | Yes        |
+| **Insertion** | $O(n)$        | $O(n^2)$       | $O(n^2)$      | $O(1)$        | Yes    | Yes      | Yes      | Yes        |
+| **Quick**     | $O(n \log n)$ | $O(n \log n)$  | $O(n^2)$      | $O(\log n)$   | No     | Yes      | No       | Yes        |
+| **Merge**     | $O(n \log n)$ | $O(n \log n)$  | $O(n \log n)$ | $O(n)$        | Yes    | No       | No       | Yes        |
+| **Heap**      | $O(n \log n)$ | $O(n \log n)$  | $O(n \log n)$ | $O(1)$        | No     | Yes      | No       | Yes        |
+| **Bucket**    | $O(n+k)$      | $O(n+k)$       | $O(n^2)$      | $O(n+k)$      | Yes    | No       | Yes      | No         |
+| **Counting**  | $O(n+m)$      | $O(n+m)$       | $O(n+m)$      | $O(n+m)$      | Yes    | No       | No       | No         |
+| **Radix**     | $O(nk)$       | $O(nk)$        | $O(nk)$       | $O(n+b)$      | Yes    | No       | No       | No         |
 
 ## Glossary
 
 - **Execution efficiency**: We expect the time complexity of sorting algorithms to be as low as possible, as well as a lower number of overall operations (lowering the constant term of time complexity). For large data volumes, execution efficiency is particularly important.
 - **In-place property**: As the name implies, in-place sorting is achieved by directly manipulating the original array, without the need for additional helper arrays, thus saving memory. Generally, in-place sorting involves fewer data moving operations and is faster.
-- **Adaptability**: Adaptive sorting leverages existing order information within the input data to reduce computational effort, achieving more optimal time efficiency. The best-case time complexity of adaptive sorting algorithms is typically better than their average-case time complexity.
+- **Adaptability**: An adaptive algorithm is faster when the input is already partially sorted. If some elements are already in order, the algorithm takes advantage of this to work more efficiently.
 - **Comparison**: Comparison-based sorting relies on comparison operators (<, =, >) to determine the relative order of elements and thus sort the entire array, with the theoretical optimal time complexity being $O(n \log n)$.
 - **Non-Comparison**: Non-Comparison sorting does not use comparison operators and can achieve a time complexity of $O(n)$, but its versatility is relatively poor.
 - **Stability**: Stable sorting ensures that the relative order of equal elements in the array does not change after sorting.

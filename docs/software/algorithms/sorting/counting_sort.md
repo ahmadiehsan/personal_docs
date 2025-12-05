@@ -54,7 +54,13 @@ Given an array `nums` of length $n$, where all elements are "non-negative intege
 
 ## Specifications
 
-- **Time complexity is $O(n + m)$, non-adaptive sort**: It involves traversing `nums` and `counter`, both using linear time. Generally, $n \gg m$, and the time complexity tends towards $O(n)$.
+- **Time complexity is $O(n + m)$, non-adaptive sort**:
+
+    - Counting phase: traverse `nums` to count occurrences, taking $O(n)$ time
+    - Filling phase: traverse `counter` and fill `nums`, taking $O(m)$ time
+    - Both phases are necessary and sequential, so costs add: $O(n) + O(m) = O(n + m)$
+    - When $n \gg m$, complexity tends towards $O(n)$
+
 - **Space complexity is $O(n + m)$, non-in-place sort**: It uses array `res` of lengths $n$ and array `counter` of length $m$ respectively.
 - **Stable sort**: Since elements are filled into `res` in a "right-to-left" order, reversing the traversal of `nums` can prevent changing the relative position between equal elements, thereby achieving a stable sort. Actually, traversing `nums` in order can also produce the correct sorting result, but the outcome is unstable.
 

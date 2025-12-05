@@ -48,6 +48,11 @@ Assume the array has length $n$. The steps of bubble sort are:
 
 ## Specifications
 
-- **Time complexity of $O(n^2)$, adaptive sorting.** Each round of "bubbling" traverses array segments of length $n - 1, n - 2, \ldots, 2, 1$, which sums to $\frac{(n - 1)n}{2}$. With a `flag` optimization, the best-case time complexity can reach $O(n)$ when the array is already sorted.
-- **Space complexity of $O(1)$, in-place sorting.** Only a constant amount of extra space is used by pointers $i$ and $j$.
-- **Stable sorting.** Because equal elements are not swapped during "bubbling," their original order is preserved, making this a stable sort.
+- **Time complexity of $O(n^2)$, adaptive sorting**:
+
+    - Each round of "bubbling" traverses array segments of length $n - 1, n - 2, \ldots, 2, 1$, summing to $\frac{(n - 1)n}{2}$
+    - The expression $\frac{(n - 1)n}{2} = \frac{n^2 - n}{2}$ is dominated by the $n^2$ term, so we denote it as $O(n^2)$ time
+    - With a `flag` optimization, best-case complexity reaches $O(n)$ when the array is already sorted
+
+- **Space complexity of $O(1)$, in-place sorting**: Only a constant amount of extra space is used by pointers $i$ and $j$.
+- **Stable sorting**: Because equal elements are not swapped during "bubbling," their original order is preserved, making this a stable sort.

@@ -23,6 +23,14 @@ Consider an array of length $n$, with float numbers in the range $[0, 1)$.
 
 ## Specifications
 
-- **Time complexity is $O(n + k)$**: Assuming the elements are evenly distributed across the buckets, the number of elements in each bucket is $n/k$. Assuming sorting a single bucket takes $O(n/k \log(n/k))$ time, sorting all buckets takes $O(n \log(n/k))$ time. **When the number of buckets $k$ is relatively large, the time complexity approaches $O(n)$**. Merging the results requires traversing all buckets and elements, taking $O(n + k)$ time. In the worst case, all data is distributed into a single bucket, and sorting that bucket takes $O(n^2)$ time.
+- **Time complexity is $O(n + k)$**:
+
+    - Assuming elements are evenly distributed, each bucket contains $\frac{n}{k}$ elements
+    - Sorting a single bucket takes $O(\frac{n}{k} \log(\frac{n}{k}))$ time
+    - Sorting all buckets takes $O(k \cdot \frac{n}{k} \log(\frac{n}{k})) = O(n \log(\frac{n}{k}))$ time
+    - When $k$ is large, complexity approaches $O(n)$
+    - Merging the results requires traversing all buckets and elements, taking $O(n + k)$ time
+    - Worst case: all data in one bucket, taking $O(n^2)$ time
+
 - **Space complexity is $O(n + k)$, non-in-place sorting**: It requires additional space for $k$ buckets and a total of $n$ elements.
 - **Stable sorting**: Whether bucket sort is stable depends on whether the sorting algorithm used within each bucket is stable.

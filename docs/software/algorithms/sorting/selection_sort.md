@@ -60,7 +60,13 @@ Suppose the length of the array is $n$, the steps of selection sort are:
 
 ## Specifications
 
-- **Time complexity of $O(n^2)$, non-adaptive sort**: There are $n - 1$ iterations in the outer loop, with the length of the unsorted section starting at $n$ in the first iteration and decreasing to $2$ in the last iteration, i.e., each outer loop iteration contains $n, n - 1, \ldots, 3, 2$ inner loop iterations respectively, summing up to $\frac{(n-1)(n+2)}{2}$.
+- **Time complexity is $O(n^2)$, non-adaptive sorting**:
+
+    - Total of $n - 1$ outer loop iterations (the unsorted section shrinks by 1 per round)
+    - Each outer loop iteration contains $n, n-1, \ldots, 3, 2$ inner loop iterations respectively
+    - Summing up to $\frac{(n-1)(n+2)}{2}$
+    - The expression $\frac{(n-1)(n+2)}{2} = \frac{n^2 + n - 2}{2}$ is dominated by the $n^2$ term, so we denote it as $O(n^2)$ time
+
 - **Space complexity of $O(1)$, in-place sort**: Uses constant extra space with pointers $i$ and $j$.
 - **Non-stable sort**: As shown in the following picture, an element `nums[i]` may be swapped to the right of an equal element, causing their relative order to change.
 

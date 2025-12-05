@@ -75,6 +75,15 @@ Suppose the array length is $n$, the heap sort process is as follows.
 
 ## Specifications
 
-- **Time complexity is** $O(n \log n)$, **non-adaptive sort**: The heap creation uses $O(n)$ time. Extracting the largest element from the heap takes $O(\log n)$ time, looping for $n - 1$ rounds.
-- **Space complexity is** $O(1)$, **in-place sort**: A few pointer variables use $O(1)$ space. The element swapping and heapifying operations are performed on the original array.
+- **Time complexity is** $O(n \log n)$, **non-adaptive sort**:
+
+    - The heap creation uses $O(n)$ time
+    - Extracting the largest element from the heap takes $O(\log n)$ time
+    - Looping for $n - 1$ rounds yields total time complexity of $O(n \log n)$
+
+- **Space complexity is** $O(1)$, **in-place sort**:
+
+    - A few pointer variables use $O(1)$ space
+    - The element swapping and heapifying operations are performed on the original array
+
 - **Non-stable sort**: The relative positions of equal elements may change during the swapping of the heap's top and bottom elements.

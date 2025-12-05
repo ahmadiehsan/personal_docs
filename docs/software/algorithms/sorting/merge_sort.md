@@ -67,6 +67,15 @@ It is important to note that, merging starts with sub-arrays of length 1, and ea
 
 ## Specifications
 
-- **Time complexity of $O(n \log n)$, non-adaptive sort**: The division creates a recursion tree of height $\log n$, with each layer merging a total of $n$ operations, resulting in an overall time complexity of $O(n \log n)$.
-- **Space complexity of $O(n)$, non-in-place sort**: The recursion depth is $\log n$, using $O(\log n)$ stack frame space. The merging operation requires auxiliary arrays, using an additional space of $O(n)$.
+- **Time complexity of $O(n \log n)$, non-adaptive sort**:
+
+    - The division creates a recursion tree of height $\log n$
+    - Each layer of the recursion tree merges a total of $n$ operations
+    - Overall time complexity is $O(n \log n)$
+
+- **Space complexity of $O(n)$, non-in-place sort**:
+
+    - The recursion depth is $\log n$, using $O(\log n)$ stack frame space
+    - The merging operation requires auxiliary arrays, using an additional space of $O(n)$
+
 - **Stable sort**: During the merging process, the order of equal elements remains unchanged.

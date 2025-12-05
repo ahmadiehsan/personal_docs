@@ -8,6 +8,50 @@ The core operation of quick sort is "pivot partitioning," which aims to select a
 
 ## Workflow
 
+=== "Overview"
+
+    1. First, perform a "pivot partitioning" on the original array to obtain the unsorted left and right sub-arrays.
+    2. Then, recursively perform "pivot partitioning" on the left and right sub-arrays separately.
+    3. Continue recursively until the length of sub-array is 1, thus completing the sorting of the entire array.
+
+    ![](quick_sort/workflow_overview.png)
+
+=== "<1>"
+
+    ![](quick_sort/workflow_step_1.png)
+
+=== "<2>"
+
+    ![](quick_sort/workflow_step_2.png)
+
+=== "<3>"
+
+    ![](quick_sort/workflow_step_3.png)
+
+=== "<4>"
+
+    ![](quick_sort/workflow_step_4.png)
+
+=== "<5>"
+
+    ![](quick_sort/workflow_step_5.png)
+
+=== "<6>"
+
+    ![](quick_sort/workflow_step_6.png)
+
+=== "<7>"
+
+    ![](quick_sort/workflow_step_7.png)
+
+=== "<8>"
+
+    ![](quick_sort/workflow_step_8.png)
+
+=== "<9>"
+
+    ![](quick_sort/workflow_step_9.png)
+
 === "Pivot Partitioning"
 
     1. Select the leftmost element of the array as the pivot, and initialize two pointers `i` and `j` to point to the two ends of the array respectively.
@@ -16,22 +60,24 @@ The core operation of quick sort is "pivot partitioning," which aims to select a
 
     After the pivot partitioning, the original array is divided into three parts: left sub-array, pivot, and right sub-array:
 
-    ![](quick_sort/pivot_partitioning.jpg)
+    ![](quick_sort/workflow_pivot_partitioning.jpg)
 
     !!! info
 
         The essence of pivot partitioning is to simplify the sorting problem of a longer array into two shorter arrays.
 
-=== "Algorithm Process"
-
-    1. First, perform a "pivot partitioning" on the original array to obtain the unsorted left and right sub-arrays.
-    2. Then, recursively perform "pivot partitioning" on the left and right sub-arrays separately.
-    3. Continue recursively until the length of sub-array is 1, thus completing the sorting of the entire array.
-
-    ![](quick_sort/workflow.jpg)
-
 ## Specifications
 
-- **Time complexity of $O(n \log n)$, non-adaptive sorting**: In average cases, the recursive levels of pivot partitioning are $\log n$, and the total number of loops per level is $n$, using $O(n \log n)$ time overall. In the worst case, each round of pivot partitioning divides an array of length $n$ into two sub-arrays of lengths $0$ and $n - 1$, when the number of recursive levels reaches $n$, the number of loops in each level is $n$, and the total time used is $O(n^2)$.
-- **Space complexity of $O(n)$, in-place sorting**: In the case where the input array is completely reversed, the worst recursive depth reaches $n$, using $O(n)$ stack frame space. The sorting operation is performed on the original array without the aid of additional arrays.
+- **Time complexity of $O(n \log n)$, non-adaptive sorting**:
+
+    - The recursive levels of pivot partitioning are $O(\log n)$
+    - The total number of loops per level is $O(n)$
+    - With $O(\log n)$ levels and $O(n)$ loops at each level, the total is $O(n \log n)$ time
+
+- **Space complexity of $O(n)$, in-place sorting**:
+
+    - Worst case: When the input array is completely reversed, the worst recursive depth reaches $n$
+    - Space usage: This uses $O(n)$ stack frame space
+    - In-place operations: The sorting operation is performed on the original array without additional arrays
+
 - **Non-stable sorting**: In the final step of pivot partitioning, the pivot may be swapped to the right of equal elements.

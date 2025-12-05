@@ -17,7 +17,12 @@ Specifically, we select a base element from the unsorted interval, compare it wi
 
 ## Specifications
 
-- **Time complexity is** $O(n^2)$, **adaptive sorting**: In the worst case, each insertion operation requires $n - 1, n - 2, ..., 2, 1$ loops, summing up to $(n - 1)n / 2$, thus the time complexity is $O(n^2)$. In the case of ordered data, the insertion operation will terminate early. When the input array is completely ordered, insertion sort achieves the best time complexity of $O(n)$.
-- **Space complexity is** $O(1)$, **in-place sorting**: Pointers $i$ and $j$ use a constant amount of extra space.
-- **Stable sorting**: During the insertion operation, we insert elements to the right of equal elements,
-  not changing their order.
+- **Time complexity is $O(n^2)$, adaptive sorting**:
+
+    - In the worst case, each insertion operation requires $n - 1, n - 2, \ldots, 2, 1$ loops, summing up to $\frac{(n - 1)n}{2}$
+    - The expression $\frac{(n - 1)n}{2} = \frac{n^2 - n}{2}$ is dominated by the $n^2$ term, so we denote it as $O(n^2)$ time
+    - In the case of ordered data, the insertion operation will terminate early
+    - When the input array is completely ordered, insertion sort achieves the best time complexity of $O(n)$
+
+- **Space complexity is $O(1)$, in-place sorting**: Pointers $i$ and $j$ use a constant amount of extra space.
+- **Stable sorting**: During the insertion operation, we insert elements to the right of equal elements, not changing their order.

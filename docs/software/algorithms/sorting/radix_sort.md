@@ -26,6 +26,13 @@ Taking the student ID data as an example, assume the least significant digit is 
 
 ## Specifications
 
-- **Time complexity is $O(nk)$, non-adaptive sorting**: Assuming the data size is $n$, the data is in base $d$, and the maximum number of digits is $k$, then sorting a single digit takes $O(n + d)$ time, and sorting all $k$ digits takes $O((n + d)k)$ time. Generally, both $d$ and $k$ are relatively small, leading to a time complexity approaching $O(n)$.
+- **Time complexity is $O(nk)$, non-adaptive sorting**:
+
+    - Assume data size is $n$, data is in base $d$, and maximum number of digits is $k$
+    - Sorting a single digit takes $O(n + d)$ time
+    - Sorting all $k$ digits takes $O((n + d)k)$ time
+    - When $d = O(1)$ (e.g., base 10, base 256), this simplifies to $O(nk)$
+    - Best case: $d$ and $k$ are relatively small, leading to time complexity approaching $O(n)$
+
 - **Space complexity is $O(n + d)$, non-in-place sorting**: Like counting sort, radix sort relies on arrays `res` and `counter` of lengths $n$ and $d$ respectively.
 - **Stable sorting**: When counting sort is stable, radix sort is also stable; if counting sort is unstable, radix sort cannot ensure a correct sorting order.
