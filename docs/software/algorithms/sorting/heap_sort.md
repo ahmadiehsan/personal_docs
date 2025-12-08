@@ -78,8 +78,9 @@ Suppose the array length is $n$, the heap sort process is as follows.
 - **Time complexity is** $O(n \log n)$, **non-adaptive sort**:
 
     - The heap creation uses $O(n)$ time
-    - Extracting the largest element from the heap takes $O(\log n)$ time
+    - Extracting the largest element and reheapify takes $O(\log n)$ time
     - Looping for $n - 1$ rounds yields total time complexity of $O(n \log n)$
+    - Combined complexity: $O(n) + O(n \log n) = O(n \log n)$
 
 - **Space complexity is** $O(1)$, **in-place sort**:
 

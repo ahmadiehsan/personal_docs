@@ -29,6 +29,7 @@ Consider an array of length $n$, with float numbers in the range $[0, 1)$.
     - Sorting a single bucket takes $O(\frac{n}{k} \log(\frac{n}{k}))$ time
     - Sorting all buckets takes $O(k \cdot \frac{n}{k} \log(\frac{n}{k})) = O(n \log(\frac{n}{k}))$ time
     - When $k$ is large, complexity approaches $O(n)$
+    - For example, $\frac{n}{k} = 10$ takes $O(n \log(10)) = O(n)$
     - Merging the results requires traversing all buckets and elements, taking $O(n + k)$ time
     - Worst case: all data in one bucket, taking $O(n^2)$ time
 

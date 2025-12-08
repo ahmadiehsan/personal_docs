@@ -70,7 +70,7 @@ It is important to note that, merging starts with sub-arrays of length 1, and ea
 - **Time complexity of $O(n \log n)$, non-adaptive sort**:
 
     - The division creates a recursion tree of height $\log n$
-    - Each layer of the recursion tree merges a total of $n$ operations
+    - At each level, merging uses the two-pointer method and processes all $n$ elements once
     - Overall time complexity is $O(n \log n)$
 
 - **Space complexity of $O(n)$, non-in-place sort**:
