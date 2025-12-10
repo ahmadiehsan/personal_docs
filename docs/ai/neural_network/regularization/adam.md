@@ -2,7 +2,10 @@
 
 ## Description
 
-<span dir="rtl">طبق یه الگوریتمی تشخیص میده اگر حرکت به سمت نقطه minimum داره صورت میگیره سرعت حرکت رو با افزایش مقدار α بیشتر میکنه در غیر این صورت سرعت رو با کاهش مقدار α کمتر میکنه.</span>
+It uses an algorithm to check whether the update is moving toward the minimum.
+
+- If the step is going in the right direction, it increases the learning rate ($\alpha$) to move faster.
+- If the step is not going toward the minimum, it decreases the learning rate ($\alpha$) to slow down.
 
 ![](adam/image2.jpg)
 
@@ -24,7 +27,7 @@ $W := W - \alpha \frac{V_{dw}^{\text{corrected}}}{\sqrt{S_{dw}^{\text{corrected}
 
 !!! info
 
-    <span dir="rtl">در اصل این تکنیک ترکیبی از تکنیک های Gradient Descent With Momentum و RMS-prop هستش.</span>
+    It basically combines the ideas of **Gradient Descent with Momentum** and **RMSProp** into one technique.
 
 ## Varieties
 
@@ -78,6 +81,5 @@ $W := W - \alpha \frac{V_{dw}^{\text{corrected}}}{\sqrt{S_{dw}^{\text{corrected}
     ```python
     from adopt import ADOPT
 
-    #optimizer = Adam(model.parameters(), lr=1e-3)  # We don't need Adam anymore!
     optimizer = ADOPT(model.parameters(), lr=1e-3)
     ```

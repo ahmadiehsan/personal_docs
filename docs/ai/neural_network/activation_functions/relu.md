@@ -70,7 +70,7 @@
 
     ![](relu/elu_diagram.jpg)
 
-    Here alpha (α) is a constant that defines function smoothness when inputs are negative.
+    Here alpha ($\alpha$) is a constant that defines function smoothness when inputs are negative.
     ELU tends to converge cost to zero faster and produce more accurate results.
     However, it can be slower to compute because of the use of the exponential operation.
 
