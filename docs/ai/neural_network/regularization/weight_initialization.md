@@ -1,4 +1,4 @@
-# Weight Initialization
+# Weight Initialization *
 
 ## Description
 

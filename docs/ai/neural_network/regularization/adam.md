@@ -1,4 +1,4 @@
-# Adam {AdamW} {ADOPT}
+# Adam * {AdamW} {ADOPT}
 
 ## Description
 

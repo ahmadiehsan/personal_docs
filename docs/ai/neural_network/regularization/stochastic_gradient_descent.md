@@ -1,4 +1,4 @@
-# Stochastic Gradient Descent (SGD) {Mini-Batch}
+# Stochastic Gradient Descent (SGD) * {Mini-Batch}
 
 ## Description
 
