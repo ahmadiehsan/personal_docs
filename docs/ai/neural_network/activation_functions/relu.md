@@ -1,4 +1,4 @@
-# ReLU [$0$ to $+\infty$] {Leaky} {Swish}
+# ReLU * [$0$ to $+\infty$] {Leaky} {Swish}
 
 ## Description
 

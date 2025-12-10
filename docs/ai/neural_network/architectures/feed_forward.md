@@ -129,21 +129,6 @@ $$
 | <span dir="rtl">چند عصب، نشان: j<br />چند فیچر، نشان: x<br />یک نمونه، نشان: 1</span>  | (j, 1) | (j, x) | (x, 1) | (j, 1) |
 | <span dir="rtl">چند عصب، نشان: j<br />چند فیچر، نشان: x<br />چند نمونه، نشان: m</span> | (j, m) | (j, x) | (x, m) | (j, 1) |
 
-## Batch Normalization
-
-<span dir="rtl">این تکنیک دقیقا تکنیک Z-score normalization هستش ولی فقط تو قالب شبکه عصبی پیاده میشه.</span>
-
-$\mu = \frac{1}{m} \sum_i z^{(i)}$
-
-$\sigma^2 = \frac{1}{m} \sum_i (z^{(i)} - \mu)^2$
-
-$z_{norm}^{(i)} = \frac{z^{(i)} - \mu}{\sqrt{\sigma^2 + \epsilon}}$
-
-$\tilde{z}^{(i)} = \gamma z_{norm}^{(i)} + \beta$
-
-- <span dir="rtl">علامت $\mu$ میانگین تمامی نتایج لایه هستش</span>
-- <span dir="rtl">فرمول خط چهارم در اصل نتیجه حاصل از Normalization هستش ولی چون ممکنه رنج این نتیجه مناسب لایه بعدی نباشه با استفاده از فرمول خط پنجم و دو متغیر ɣ و β یه سری تغییر توش میدیم که رنجش عوض بشه</span>
-
 ## Example
 
 ```python
