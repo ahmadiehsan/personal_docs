@@ -75,9 +75,10 @@ Where:
 import torch.nn as nn
 
 model = nn.Sequential(
-    nn.BatchNorm1d(784), nn.Linear(784, 300), nn.ReLU(),
-    nn.BatchNorm1d(300), nn.Linear(300, 100), nn.ReLU(),
-    nn.BatchNorm1d(100), nn.Linear(100, 10)
+    nn.BatchNorm1d(784),  # Input normalization
+    nn.Linear(784, 300), nn.ReLU(), nn.BatchNorm1d(300),
+    nn.Linear(300, 100), nn.ReLU(), nn.BatchNorm1d(100),
+    nn.Linear(100, 10)
 )
 ```
 
