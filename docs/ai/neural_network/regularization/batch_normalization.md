@@ -84,7 +84,4 @@ model = nn.Sequential(
 
 !!! warning
 
-    Since batch norm behaves differently during training and during evaluation,
-    it's critical to switch to training mode during training (using
-    `model.train()`), and switch to evaluation mode during evaluation (using
-    `model.eval()`). Forgetting to do so is one of the most common mistakes.
+    Since batch norm behaves differently during training and during evaluation, it's critical to switch to training mode during training (using `model.train()`), and switch to evaluation mode during evaluation (using `model.eval()`). Forgetting to do so is one of the most common mistakes.
