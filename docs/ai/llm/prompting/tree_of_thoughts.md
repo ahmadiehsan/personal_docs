@@ -1,4 +1,4 @@
-# Tree-of-Thoughts (ToT)
+# Tree-of-Thoughts (ToT) *
 
 ## Descriptions
 

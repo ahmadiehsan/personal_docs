@@ -1,4 +1,4 @@
-# ReAct {ReWOO}
+# ReAct * {ReWOO}
 
 ## Description
 

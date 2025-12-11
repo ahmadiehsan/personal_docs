@@ -1,4 +1,4 @@
-# PEFT [Sup] {Adapters} {LoRA}
+# PEFT * [Sup] {Adapters} {LoRA}
 
 ## Description
 

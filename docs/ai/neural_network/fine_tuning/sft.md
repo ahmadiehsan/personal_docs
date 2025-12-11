@@ -1,4 +1,4 @@
-# Supervised Fine-Tuning (SFT) [Sup]
+# SFT * [Sup]
 
 ## Description
 

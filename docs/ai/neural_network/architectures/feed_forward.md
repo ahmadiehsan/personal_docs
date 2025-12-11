@@ -1,4 +1,4 @@
-# Feed Forward (FFNN)
+# Feed Forward *
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Chain-of-Thought (CoT)
+# Chain-of-Thought (CoT) *
 
 ## Description
 
