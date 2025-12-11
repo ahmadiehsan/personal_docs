@@ -103,7 +103,7 @@ In the image above:
     import torch.optim as optim
 
     model = ...
-    optimizer = optim.AdamW(model.parameters(), lr=0.001, weight_decay=0.01)
+    optimizer = optim.AdamW(model.parameters(), lr=1e-3, weight_decay=0.01)
     scheduler = optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.9)
 
     for epoch in range(n_epochs):
@@ -119,8 +119,8 @@ In the image above:
     import torch.optim as optim
 
     model = ...
-    optimizer = optim.AdamW(model.parameters(), lr=0.001, weight_decay=0.01)
-    scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=20, eta_min=0.001)
+    optimizer = optim.AdamW(model.parameters(), lr=1e-3, weight_decay=0.01)
+    scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=20, eta_min=1e-3)
 
     for epoch in range(n_epochs):
         for X_batch, y_batch in train_loader:
@@ -180,7 +180,7 @@ In the image above:
     # Training Loop
     # =====
     model.train()
-    optimizer = optim.AdamW(model.parameters(), lr=0.001, weight_decay=0.01)
+    optimizer = optim.AdamW(model.parameters(), lr=1e-3, weight_decay=0.01)
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode="max", patience=2, factor=0.1)
     accuracy_metric = torchmetrics.Accuracy(task="multiclass", num_classes=10).to(device)
     n_epochs = 20
@@ -207,7 +207,7 @@ In the image above:
     import torch.optim as optim
 
     model = ...
-    optimizer = optim.AdamW(model.parameters(), lr=0.001, weight_decay=0.01)
+    optimizer = optim.AdamW(model.parameters(), lr=1e-3, weight_decay=0.01)
     n_epochs = 20
     scheduler = optim.lr_scheduler.OneCycleLR(
         optimizer,

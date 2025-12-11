@@ -1,4 +1,4 @@
-# RLHF * [RL] {DPO} {Online RL}
+# RLHF [RL] {DPO} {Online RL}
 
 ## Description
 

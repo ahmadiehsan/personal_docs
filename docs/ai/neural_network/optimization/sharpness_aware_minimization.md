@@ -2,7 +2,7 @@
 
 ## Description
 
-SAM seeks parameters that lie in neighborhoods with uniformly low loss values, leading to better generalization.
+Sharpness-Aware Minimization (SAM) seeks parameters that lie in neighborhoods with uniformly low loss values, leading to better generalization.
 
 Its key features are the following:
 

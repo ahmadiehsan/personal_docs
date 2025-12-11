@@ -1,16 +1,14 @@
-# Stochastic Gradient Descent (SGD) * {Mini-Batch}
+# Mini-Batch
 
 ## Description
 
-Uses part of examples at each iteration of the optimizer. Therefore, the batch size for SGD is $n$
+Mini-Batch uses part of examples at each iteration of the optimizer.
 
-![](stochastic_gradient_descent/image4.jpg)
+The batch size can significantly impact the learning process.
+Larger batch sizes result in faster progress in training but don't always converge as fast.
+Smaller batch sizes update the model frequently but the progress in training is slower.
 
 !!! info
-
-    The batch size can significantly impact the learning process.
-    Larger batch sizes result in faster progress in training but don't always converge as fast.
-    Smaller batch sizes update the model frequently but the progress in training is slower.
 
     Moreover, smaller batch sizes have a regularizing effect and can help the model generalize better, leading to better performance on unseen data.
     However, using a batch size that is too small can lead to unstable training, less accurate estimates of the gradient, and, ultimately, a model with worse performance.
@@ -19,15 +17,15 @@ Uses part of examples at each iteration of the optimizer. Therefore, the batch s
 
 <span dir="rtl">زمانی که تعداد دیتا هامون (m) خیلی زیاده بجای این که هر بار برای محاسبه j از کل دیتا های استفاده کنیم، میایم دیتا هارو به بخش های کوچکتر (mini-batch) تقسیم میکنیم و هر بار j رو بر اساس یکی از این بخش های کوچیک حساب میکنیم.</span>
 
-![](stochastic_gradient_descent/image1.jpg)
+![](mini_batch/image1.jpg)
 
 <span dir="rtl">همینطور تو تصویر بالا میتونیم تاثیر این تغییر در نمودار j رو ببینیم، از اونجایی که تصمیم درباره مقدار بعدی w و b رو هر بار بر اساس یک تکه ای از دیتا (یعنی یک mini-batch) میگیریم، ممکنه در بعضی از مواقع نمودار j همواره نزولی نباشد، اما در کل نزولی خواهد بود.</span>
 
-![](stochastic_gradient_descent/image5.jpg)
+![](mini_batch/image5.jpg)
 
 <span dir="rtl">تو تصویر بالا X که ماتریکسی از تمامی دیتاهای (m) ما هست رو به ماتریس های کوچکتر 1000 تایی شکستیم و هر کدوم از این mini-batch های 1000 تایی رو با نماد {i} نشون میدیم.</span>
 
-![](stochastic_gradient_descent/image2.jpg)
+![](mini_batch/image2.jpg)
 
 <span dir="rtl">تو تصویر بالا:</span>
 
@@ -35,7 +33,7 @@ Uses part of examples at each iteration of the optimizer. Therefore, the batch s
 - <span dir="rtl">رنگ بنفش به این اشاره داره که ما سایز های mini-batch هامون رو هم اندازه 1 بگیریم که در این صورت هر دونه از دیتا های ما در اصل یه mini-batch خواهد شد که در اصل بهش Stochastic و اصلا بهینه نیستش و عملا هیچوقت به گلوبال مینیمم نمیرسه، یه نکته دیگه که اینجا مهمه اینه که با این ویژگی جون به ازای هر دونه از دیتا هامون داریم j رو حساب میکنیم عملا نمیتونیم از خاصیت وکتوریزیشن استفاده کنیم و باید حلقه دستی بنویسیم.</span>
 - <span dir="rtl">رنگ سبز به این اشاره داره که ما سایز های mini-batch هامون رو یه چیزی بین 1 و m بگیریم که در این صورت به هدفمون خواهیم رسید.</span>
 
-![](stochastic_gradient_descent/image3.jpg)
+![](mini_batch/image3.jpg)
 
 <span dir="rtl">تو تصویر بالا هم میبینیم که:</span>
 
