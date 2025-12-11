@@ -4,7 +4,7 @@
 
 Optimizers use algorithms to determine whether each update is moving toward the minimum.
 
-![](adam/image2.jpg)
+![](optimizers/image2.jpg)
 
 ## Varieties
 

@@ -56,7 +56,7 @@ Different layers in a transformer specialize in different linguistic properties:
 
 === "AI"
 
-    ![](ai/godfather_2.jpg)    
+    ![](ai/godfather_2.jpg)
 
 === "Convolutional NN"
 

@@ -27,7 +27,6 @@ LLM Output:
 4. Zombie-Infested Town
 5. Underwater Research Facility
 
-
 !!! info "Prompt (Primary Prompt)"
 
     1. Abandoned Military Base
