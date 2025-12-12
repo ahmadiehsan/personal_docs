@@ -39,9 +39,9 @@ The result is a more robust model that relies on distributed representations rat
     import torch.nn as nn
 
     model = nn.Sequential(
-        nn.Dropout(p=0.2), nn.Linear(784, 100), nn.ReLU(),
-        nn.Dropout(p=0.2), nn.Linear(100, 100), nn.ReLU(),
-        nn.Dropout(p=0.2), nn.Linear(100, 100), nn.ReLU(),
+        nn.Linear(784, 100), nn.ReLU(), nn.Dropout(p=0.2),
+        nn.Linear(100, 100), nn.ReLU(), nn.Dropout(p=0.2),
+        nn.Linear(100, 100), nn.ReLU(), nn.Dropout(p=0.2),
         nn.Linear(100, 10)
     )
     ```
