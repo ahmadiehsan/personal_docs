@@ -36,31 +36,22 @@ The result is a more robust model that relies on distributed representations rat
 === "Standard"
 
     ```python
-    import torch
     import torch.nn as nn
 
-    class SimpleTransformer(nn.Module):
-        def __init__(self, vocab_size, d_model, nhead, num_layers, dropout=0.1, max_len=1000):
-            super().__init__()
-            self.embedding = nn.Embedding(vocab_size, d_model)
-            self.pos_embedding = nn.Embedding(max_len, d_model)
-            encoder_layer = nn.TransformerEncoderLayer(d_model, nhead, 4*d_model, dropout)
-            self.transformer = nn.TransformerEncoder(encoder_layer, num_layers)
-            self.fc_out = nn.Linear(d_model, vocab_size)
-            self.dropout = nn.Dropout(dropout)
-
-        def forward(self, x):
-            seq_len = x.size(1)
-            pos = torch.arange(seq_len, device=x.device)
-            x = self.embedding(x) + self.pos_embedding(pos)
-            x = self.dropout(x)
-            x = self.transformer(x.transpose(0, 1)).transpose(0, 1)
-            return self.fc_out(x)
+    model = nn.Sequential(
+        nn.Dropout(p=0.2), nn.Linear(784, 100), nn.ReLU(),
+        nn.Dropout(p=0.2), nn.Linear(100, 100), nn.ReLU(),
+        nn.Dropout(p=0.2), nn.Linear(100, 100), nn.ReLU(),
+        nn.Linear(100, 10)
+    )
     ```
 
     !!! info
 
-        In this implementation, dropout is applied after the embedding layer and within each transformer layer.
+        It's important to switch to training mode during training, and to evaluation mode during evaluation.
+
+        In training mode, the layer randomly drops some inputs (setting them to 0) and divides the remaining inputs by the keep probability.
+        In evaluation mode, it does nothing at all; it just passes the inputs to the next layer.
 
 === "Adaptive"
 
