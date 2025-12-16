@@ -1,4 +1,4 @@
-# Greedy [Step-by-Step] [Loop]
+# Greedy [Fastest] [Step-by-Step] [Loop]
 
 ## Description
 

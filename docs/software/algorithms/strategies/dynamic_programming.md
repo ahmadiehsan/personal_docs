@@ -1,4 +1,4 @@
-# Dynamic Programming [Bottom-Up] [Loop]
+# Dynamic Programming [Medium] [Bottom-Up] [Loop]
 
 ## Description
 
