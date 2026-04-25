@@ -10,21 +10,21 @@ fi
 
 # Re-enable Markdown tabs
 function restore_tabs {
-  make --no-print-directory script.md_toggle_tabs "$@" -- --mode enable
+  just script md_toggle_tabs "$@" --mode enable
 }
 trap 'restore_tabs "$@"' EXIT
 
 # Temporarily disable Markdown tabs
-make --no-print-directory script.md_toggle_tabs "$@" -- --mode disable
+just script md_toggle_tabs "$@" --mode disable
 
 # Rewrap long lines
-make --no-print-directory script.md_rewrap_long_lines "$@"
+just script md_rewrap_long_lines "$@"
 
 # Detect dangling images
-make --no-print-directory script.md_dangling_images "$@"
+just script md_dangling_images "$@"
 
 # Optimize images
-make --no-print-directory script.md_image_optimizer "$@"
+just script md_image_optimizer "$@"
 
 # Run markdownlint (mdl)
 docker run --rm -v "$(pwd)":/data markdownlint/markdownlint "$@"
