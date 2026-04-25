@@ -141,7 +141,7 @@ class Command:
 
         dpi = 96
         conversions = {
-            "px": lambda v: int(v),  # pylint: disable=unnecessary-lambda
+            "px": lambda v: int(v),  # noqa: PLW0108
             "in": lambda v: int(v * dpi),
             "cm": lambda v: int(v * dpi / 2.54),
             "mm": lambda v: int(v * dpi / 25.4),
