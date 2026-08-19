@@ -131,8 +131,8 @@ wheels = [
 
 [[package]]
 name = "fixmate"
-version = "2.1.0"
-source = { git = "https://github.com/ahmadiehsan/fixmate.git?rev=2.1.0#4e1d64bbd4a24db468987a1d57fac218a3ad837a" }
+version = "2.2.0"
+source = { git = "https://github.com/ahmadiehsan/fixmate.git?rev=2.2.0#ebb52307f9fca1430c139702e681cf13bc8ef9d0" }
 dependencies = [
     { name = "tomli" },
 ]
@@ -510,7 +510,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "fixmate", git = "https://github.com/ahmadiehsan/fixmate.git?rev=2.1.0" },
+    { name = "fixmate", git = "https://github.com/ahmadiehsan/fixmate.git?rev=2.2.0" },
     { name = "mypy", specifier = ">=1.20.2,<2" },
     { name = "pillow", specifier = ">=12.2.0,<13" },
     { name = "pre-commit", specifier = ">=4.6.0,<5" },
