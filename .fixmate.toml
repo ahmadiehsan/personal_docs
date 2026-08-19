@@ -1,0 +1,5 @@
+# =========================
+# Python Checker
+# =====
+[python_checker.per-file-ignores]
+"scripts/utils" = ["func_validator"]

@@ -125,9 +125,3 @@ disable = [
     "broad-exception-caught",       # Ruff will handle it
     "unnecessary-lambda",           # Ruff will handle it
 ]
-
-# =========================
-# Python Checker
-# =====
-[tool.python_checker.per-file-ignores]
-"scripts/utils" = ["func_validator"]

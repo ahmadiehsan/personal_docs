@@ -16,7 +16,7 @@
     "explorer.fileNesting.patterns": {
         ".gitignore": ".gitattributes",
         "pyproject.toml": "uv.lock",
-        ".pre-commit-config.yaml": ".mdlrc.style.rb, .mdlrc",
+        ".pre-commit-config.yaml": ".mdlrc.style.rb, .mdlrc, .fixmate.toml",
     },
     "cSpell.words": [
         "Agentic",
